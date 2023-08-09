@@ -7,7 +7,7 @@ const WebpackWatchedGlobEntries = require("webpack-watched-glob-entries-plugin")
 const mode =
   process.env.NODE_ENV == "production" ? "production" : "development";
 
-const buildDir = "dist";
+const buildDir = "build";
 const devDir = "src";
 const pagesDir = path.resolve(__dirname, `./src/pages/`);
 const pages = fs
