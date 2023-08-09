@@ -12,7 +12,7 @@ const devDir = "src";
 const pagesDir = path.resolve(__dirname, `./src/pages/`);
 const pages = fs
 .readdirSync(pagesDir)
-.filter((fileName) => fileName.endsWith(".html"));
+.filter((fileName) => fileName.endsWith(".pug"));
 
 console.log(mode + " mode");
 
@@ -52,7 +52,7 @@ module.exports = {
           favicon: `${devDir}/shared/images/favicon.png`,
           hash: true,
           template: `${pagesDir}/${page}`,
-          filename: page,
+          filename: `${page.replace(/\.pug/, '.html')}`,
         })
     ),
   ],

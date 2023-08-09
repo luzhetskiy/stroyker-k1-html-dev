@@ -1,1 +1,2 @@
-import './index.html'
+import './index.pug'
+import './basket.pug'
