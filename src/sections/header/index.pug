@@ -1,0 +1,143 @@
+doctype
+html(lang='en')
+  include ../../components/head/index.pug
+
+body
+  header
+    .top-header
+      .container
+        .top-header__content
+          .top-header__content-left
+            a.logo(href='/')
+              img.mobile-hide(src='./shared/libs/img/logo.svg', alt)
+              img.mobile-show(src='./shared/libs/img/logo.svg', alt)
+            .main-menu
+              ul
+          .top-header__content-right
+            .header-phones.top-header__phones
+              .header-phones__inner
+                a.header-phones__phone(href='tel:7(846) 970-71-55') +7 (846) 970-71-55
+            a.btn-border.callme-button.mobile-hide.button-theme.button-theme_callme(data-fancybox='callme-modal', data-src='#callme-modal', href='javascript:;') Заказать звонок
+          .burger-menu
+            .burger
+          .mobile-menu
+            .mobile-menu__item.mobile-show
+              .header-user
+                a.header-user__link(href='/user/profile/')
+                  span.icon
+                    svg(width='32', height='32', viewBox='0 0 32 32', fill='none', xmlns='http://www.w3.org/2000/svg')
+                      path(d='M15.9987 13.3346C17.0535 13.3346 18.0847 13.0218 18.9617 12.4358C19.8388 11.8498 20.5224 11.0168 20.9261 10.0423C21.3297 9.06774 21.4353 7.99539 21.2296 6.96082C21.0238 5.92626 20.5158 4.97595 19.7699 4.23007C19.0241 3.48419 18.0737 2.97624 17.0392 2.77045C16.0046 2.56466 14.9323 2.67028 13.9577 3.07395C12.9832 3.47761 12.1502 4.1612 11.5642 5.03826C10.9782 5.91533 10.6654 6.94647 10.6654 8.0013C10.6654 9.41579 11.2273 10.7723 12.2275 11.7725C13.2277 12.7727 14.5842 13.3346 15.9987 13.3346ZM26.2787 21.6013C23.5494 18.8802 19.8527 17.3522 15.9987 17.3522C12.1447 17.3522 8.44796 18.8802 5.7187 21.6013L5.33203 22.0013V28.0013H26.6654V22.0013L26.2787 21.6013Z')
+                  | info@stroyker.pro
+
+
+            .mobile-menu__item.mobile-show
+            .mobile-menu__item.mobile-show
+              .header-search.search--box
+                input.search_input_mobile(name='q', type='text', autocomplete='off', data-min-chars='3', data-search-url='/search', placeholder='Введите название, артикул, бренд...')
+                button
+                  svg.icon-svg
+                    use(href='#search-icon')
+                .header-search-results#search-result-mob(style='display: none')
+            .mobile-ul
+              ul.catalog-menu-mobile
+                li.catalog-opened.mobile-show
+                  a
+                    | Каталог
+
+
+                    svg.icon
+                      use(href='#tab-arrow')
+                  ul.submenu
+                    li.menu-item
+                      a(href='/catalog/osveshenie-dlya-ban/')
+                        | Освещение для бань
+
+
+                        svg.icon
+                          use(href='#tab-arrow')
+                    li.menu-item
+                      a(href='/catalog/oformlenie-ban/')
+                        | Оформление бань
+
+
+                        svg.icon
+                          use(href='#tab-arrow')
+                    li.menu-item
+                      a(href='/catalog/pechi-dlya-bani-i-sauny/')
+                        | Печи для бани и сауны
+
+
+                        svg.icon
+                          use(href='#tab-arrow')
+                    li.menu-item
+                      a(href='/catalog/pilomaterialy/')
+                        | Отделочные материалы
+
+
+                        svg.icon
+                          use(href='#tab-arrow')
+                    li.menu-item
+                      a(href='/catalog/dveri-i-okna-dlya-bani/')
+                        | Двери и окна для бани
+
+
+                        svg.icon
+                          use(href='#tab-arrow')
+              ul
+            .mobile-phone.mobile-show
+              span.icon
+                img(src='http://box6.stroyker.pro/static/images/phone-mobile-icon.svg', alt)
+              a(href='tel:7(846) 970-71-55') +7 (846) 970-71-55
+            .mobile-btn.mobile-show
+              a.btn.btn--rubber.button-theme.button-theme_primary(data-fancybox='callme-modal-mobile', data-src='#callme-modal', href='javascript:;').
+                Заказать звонок
+                
+    .header-body
+      .container
+        .header-body__content
+          a.catalog-inner-btn
+            .burger-catalog
+              .burger
+            | Каталог
+
+          .header-search.mobile-hide.header-search--inner
+            input.search_input(name='q', type='text', autocomplete='off', data-min-chars='3', data-search-url='/search', placeholder='Введите название, артикул, бренд...')
+            button
+              svg.icon-svg
+                use(href='#search-icon')
+            #search-result-container.header-search-results(style='display: none')
+          .header-body__content-right
+            .header-user.mobile-hide
+              a.header-user__link(href='/user/profile/')
+                span.icon
+                  svg(width='32', height='32', viewBox='0 0 32 32', fill='none', xmlns='http://www.w3.org/2000/svg')
+                    path(d='M15.9987 13.3346C17.0535 13.3346 18.0847 13.0218 18.9617 12.4358C19.8388 11.8498 20.5224 11.0168 20.9261 10.0423C21.3297 9.06774 21.4353 7.99539 21.2296 6.96082C21.0238 5.92626 20.5158 4.97595 19.7699 4.23007C19.0241 3.48419 18.0737 2.97624 17.0392 2.77045C16.0046 2.56466 14.9323 2.67028 13.9577 3.07395C12.9832 3.47761 12.1502 4.1612 11.5642 5.03826C10.9782 5.91533 10.6654 6.94647 10.6654 8.0013C10.6654 9.41579 11.2273 10.7723 12.2275 11.7725C13.2277 12.7727 14.5842 13.3346 15.9987 13.3346ZM26.2787 21.6013C23.5494 18.8802 19.8527 17.3522 15.9987 17.3522C12.1447 17.3522 8.44796 18.8802 5.7187 21.6013L5.33203 22.0013V28.0013H26.6654V22.0013L26.2787 21.6013Z')
+                | info@stroyker.pro
+
+            a.header-cart(href='/cart/')
+              i.icon
+                svg.icon-svg
+                  use(href='#shopping-cart')
+              span.cart-number 1
+          .header-fixed-content
+            .header-phones.top-header__phones
+              .header-phones__inner
+                a.header-phones__phone(href='tel:7(846) 970-71-55') +7 (846) 970-71-55
+            a.btn-border.callme-button.mobile-hide.button-theme.button-theme_callme(data-fancybox='callme-modal-1', data-src='#callme-modal', href='javascript:;').
+              
+              Заказать звонок
+              
+      .catalog-header-content
+        .catalog-box
+          .container
+            ul.link--arrow-left
+              li
+                a(href='/catalog/osveshenie-dlya-ban/') Освещение для бань
+              li
+                a(href='/catalog/oformlenie-ban/') Оформление бань
+              li
+                a(href='/catalog/pechi-dlya-bani-i-sauny/') Печи для бани и сауны
+              li
+                a(href='/catalog/pilomaterialy/') Отделочные материалы
+              li
+                a(href='/catalog/dveri-i-okna-dlya-bani/') Двери и окна для бани
