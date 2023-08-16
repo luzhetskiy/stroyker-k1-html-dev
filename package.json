@@ -38,6 +38,7 @@
     "webpack-watched-glob-entries-plugin": "^2.2.6"
   },
   "dependencies": {
-    "html-loader": "^4.2.0"
+    "html-loader": "^4.2.0",
+    "node-sass-glob-importer": "^5.3.3"
   }
 }

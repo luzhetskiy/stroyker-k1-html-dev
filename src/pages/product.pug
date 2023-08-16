@@ -1,0 +1,667 @@
+include ../sections/header/index.pug
+
+main
+  section.section.mobile-show.header-top-bg-color
+    .container
+      .catalog-side.mobile-show
+        span.catalog-side__title
+          span.icon
+            svg(width='16' height='14' viewbox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z' fill='currentColor')
+          |               &Kcy;&acy;&tcy;&acy;&lcy;&ocy;&gcy; &pcy;&rcy;&ocy;&dcy;&ucy;&kcy;&tscy;&icy;&icy;
+        .catalog-side__content
+          ul
+            li.menu-item.current
+              a(href='/catalog/krovelnye-materialy/') &Kcy;&rcy;&ocy;&vcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &tcy;&ocy;&vcy;&acy;&rcy;&ycy;
+            li.menu-item.current
+              a(href='/catalog/utepliteli/') &Ucy;&tcy;&iecy;&pcy;&lcy;&icy;&tcy;&iecy;&lcy;&icy;
+            li.menu-item.current
+              a(href='/catalog/fasadnye-materialy/') &Fcy;&acy;&scy;&acy;&dcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+            li.menu-item.current
+              a(href='/catalog/gidroizolyaciya/') &Gcy;&icy;&dcy;&rcy;&ocy;&icy;&zcy;&ocy;&lcy;&yacy;&tscy;&icy;&yacy;
+            li.menu-item.current
+              a(href='/catalog/listovye-materialy/') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+            li.menu-item.current
+              a(href='/catalog/obshestroitelnye-materialy/') &Ocy;&bcy;&shchcy;&iecy;&scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy;
+            li.menu-item.current
+              a(href='/catalog/kanalizaciya/') &Kcy;&ocy;&mcy;&mcy;&ucy;&ncy;&icy;&kcy;&acy;&tscy;&icy;&icy;
+            li.menu-item.current
+              a(href='/catalog/chernovaya-otdelka/') &CHcy;&iecy;&rcy;&ncy;&ocy;&vcy;&acy;&yacy; &ocy;&tcy;&dcy;&iecy;&lcy;&kcy;&acy;
+            li.menu-item.current
+              a(href='/catalog/peny-germetiki-zhidkie-gvozdi/') &Pcy;&iecy;&ncy;&ycy;, &gcy;&iecy;&rcy;&mcy;&iecy;&tcy;&icy;&kcy;&icy;
+            li.menu-item.current
+              a(href='/catalog/krepezh/') &Kcy;&rcy;&iecy;&pcy;&iecy;&zhcy;
+            li.menu-item.current
+              a(href='/catalog/rashodnye-materialy/') &Rcy;&acy;&scy;&khcy;&ocy;&dcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+            li.menu-item.current
+              a(href='/catalog/lakokrasochnye-materialy/') &Lcy;&acy;&kcy;&ocy;&kcy;&rcy;&acy;&scy;&ocy;&chcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+            li.menu-item.current
+              a(href='/catalog/instrument/') &Icy;&ncy;&scy;&tcy;&rcy;&ucy;&mcy;&iecy;&ncy;&tcy;
+            li.menu-item.current
+              a(href='/catalog/elektrika/') &Ecy;&lcy;&iecy;&kcy;&tcy;&rcy;&icy;&kcy;&acy;
+            li.menu-item.current
+              a(href='/catalog/rasprodazha/') &Rcy;&acy;&scy;&pcy;&rcy;&ocy;&dcy;&acy;&zhcy;&acy;
+  section.section-dark
+    .container
+      .page-head
+        .breadcrumbs.breadcrumbs--lk(itemscope='' itemtype='http://schema.org/BreadcrumbList')
+          span(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+            a(itemprop='item' title='Главная' href='/')
+              | &Gcy;&lcy;&acy;&vcy;&ncy;&acy;&yacy;
+              meta(itemprop='name' content='Главная')
+            meta(itemprop='position' content='1')
+          svg.breadcrumbs__sep
+            use(xlink:href='#tab-arrow')
+          span(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+            a(itemprop='item' title='Каталог' href='/catalog/')
+              | &Kcy;&acy;&tcy;&acy;&lcy;&ocy;&gcy;
+              meta(itemprop='name' content='Каталог')
+            meta(itemprop='position' content='2')
+          svg.breadcrumbs__sep
+            use(xlink:href='#tab-arrow')
+          span(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+            a(itemprop='item' title='Кровельные товары' href='/catalog/krovelnye-materialy/')
+              | &Kcy;&rcy;&ocy;&vcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &tcy;&ocy;&vcy;&acy;&rcy;&ycy;
+              meta(itemprop='name' content='Кровельные товары')
+            meta(itemprop='position' content='3')
+          svg.breadcrumbs__sep
+            use(xlink:href='#tab-arrow')
+          span(itemprop='itemListElement' itemscope='' itemtype='http://schema.org/ListItem')
+            a(itemprop='item' title='Гибкая черепица' href='/catalog/category/krovelnye-materialy/gibkaya-cherepica/')
+              | &Gcy;&icy;&bcy;&kcy;&acy;&yacy; &chcy;&iecy;&rcy;&iecy;&pcy;&icy;&tscy;&acy;
+              meta(itemprop='name' content='Гибкая черепица')
+            meta(itemprop='position' content='4')
+      .content-block
+        div(itemscope='' itemtype='http://schema.org/Product')
+          .product-card
+            .product-card__navigation
+              a.product-card__nav-prev.single(href='/catalog/product/tekhnonikol-gibkaia-cherepitsa-fokstrot-sandal-4a4e21-3303rus/')
+                span.icon
+                  svg.icon-svg
+                    use(xlink:href='#product-nav-arrow')
+                |                     &Pcy;&rcy;&iecy;&dcy;&ycy;&dcy;&ucy;&shchcy;&icy;&jcy; &tcy;&ocy;&vcy;&acy;&rcy;
+            .product-card__head
+              h1.product-card__title(itemprop='name')
+                | &Gcy;&icy;&bcy;&kcy;&acy;&yacy; &chcy;&iecy;&rcy;&iecy;&pcy;&icy;&tscy;&acy; &SHcy;&icy;&ncy;&gcy;&lcy;&acy;&scy; Shinglas, &Fcy;&ocy;&kcy;&scy;&tcy;&rcy;&ocy;&tcy;, &Ecy;&vcy;&kcy;&acy;&lcy;&icy;&pcy;&tcy; &amp;
+                | 4A4E21-3305RUS - &kcy;&ucy;&pcy;&icy;&tcy;&softcy; &pcy;&ocy; &vcy;&ycy;&gcy;&ocy;&dcy;&ncy;&ocy;&jcy; &tscy;&iecy;&ncy;&iecy; &vcy; &Scy;&acy;&mcy;&acy;&rcy;&iecy;
+              span.product-card__artikul(itemprop='sku') 818114
+            .product-card__container
+              .product-card__slideshow
+                #sync1.owl-carousel.owl-theme
+                  a.item(href='/media/products/images/Frame_1_haOZrec.png' data-fancybox='images' target='_blank')
+                    img(itemprop='image' src='/media/products/images/Frame_1_haOZrec.png' alt='Гибкая черепица Шинглас Shinglas, Фокстрот, Эвкалипт & 4A4E21-3305RUS (фото 1)')
+                    span.product-item__flag-content
+                      span.product-item__flag.product-item__flag--hit &khcy;&icy;&tcy;
+                #sync2.owl-carousel.owl-theme
+                  .item
+                    img(src='/media/products/images/Frame_1_haOZrec.png' alt='')
+              .product-card__content
+                .product-card__left
+                  .product-card__personal-cost.with-online-price
+                    span &tscy;&iecy;&ncy;&acy; &zcy;&acy; &mcy;2:
+                    |                         710,00 &#x20BD;
+                  .product-card__main-cost(itemprop='offers' itemtype='http://schema.org/Offer' itemscope='')
+                    meta(itemprop='price' content='710')
+                    meta(itemprop='priceCurrency' content='RUB')
+                    link(itemprop='availability' href='http://schema.org/InStock')
+                  .product-card__personal-cost
+                    span &TScy;&iecy;&ncy;&acy; &ocy;&ncy;&lcy;&acy;&jcy;&ncy;:
+                    strong.online-price 695,80 &#x20BD;
+                  // Размер
+                  .product-card__radio-options
+                    span &Rcy;&acy;&zcy;&mcy;&iecy;&rcy;
+                    a(href='#') 25 &mcy;&mcy;
+                    a(href='#') 20 &mcy;&mcy;
+                    a(href='#') 18 &mcy;&mcy;
+                  // Цвет
+                  .product-card__select-options
+                    span &TScy;&vcy;&iecy;&tcy;
+                    select(name='' id='')
+                      option(value='') &Kcy;&rcy;&acy;&scy;&ncy;&ycy;&jcy;
+                      option(value='') &Scy;&icy;&ncy;&icy;&jcy;
+                      option(value='') &Zcy;&iecy;&lcy;&iecy;&ncy;&ycy;&jcy;
+                      option(value='') &Bcy;&iecy;&lcy;&ycy;&jcy;
+                  .shopping-cart-product
+                    .input-number.input-number--lg
+                      .order-down
+                      input#number(type='number' min='0' step='1' value='1' required='')
+                      .order-up
+                    a.shopping-cart-btn.shopping-cart-btn--lg.add-to-cart.button-theme.button-theme_cart.custom-icon(href='/cart/add/5364')
+                      img.cart-icon.custom-cart-icon(src='/media/Group 148 (1).svg')
+                      |                           &Vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+                  .product-card__btns.ya-share-block
+                    a.btn-radius.share-btn
+                      span.icon-svg
+                        svg.icon
+                          use(xlink:href='#share-icon')
+                      | &Pcy;&ocy;&dcy;&iecy;&lcy;&icy;&tcy;&softcy;&scy;&yacy;
+                    .share-block__show
+                      p
+                        | &CHcy;&tcy;&ocy;&bcy;&ycy; &pcy;&ocy;&dcy;&iecy;&lcy;&icy;&tcy;&softcy;&scy;&yacy; &scy;&scy;&ycy;&lcy;&kcy;&ocy;&jcy;, &ncy;&acy;&zhcy;&mcy;&icy;&tcy;&iecy; &ncy;&acy; &icy;&kcy;&ocy;&ncy;&kcy;&ucy; &vcy;&acy;&shcy;&iecy;&jcy;
+                        | &scy;&ocy;&tscy;&scy;&iecy;&tcy;&icy;
+                      script(src='https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js')
+                      script(src='https://yastatic.net/share2/share.js')
+                      .ya-share2(data-services='vkontakte,twitter,odnoklassniki,telegram,whatsapp,viber')
+                  .product-card__rating
+                .product-card__right
+                  .product-card__discription
+                    span.product-card__discription-title &Ocy;&pcy;&lcy;&acy;&tcy;&acy;:
+                    ul
+                      li &mdash; &Ncy;&acy;&lcy;&icy;&chcy;&ncy;&ycy;&mcy;&icy; &pcy;&rcy;&icy; &pcy;&ocy;&lcy;&ucy;&chcy;&iecy;&ncy;&icy;&icy;
+                      li &mdash; &Kcy;&acy;&rcy;&tcy;&ocy;&jcy; &vcy; &ocy;&fcy;&icy;&scy;&iecy; &pcy;&rcy;&ocy;&dcy;&acy;&zhcy;
+                      li &mdash; &Ocy;&ncy;&lcy;&acy;&jcy;&ncy; &ncy;&acy; &scy;&acy;&jcy;&tcy;&iecy;
+                      li &mdash; &Ocy;&pcy;&lcy;&acy;&tcy;&acy; &vcy; &kcy;&rcy;&iecy;&dcy;&icy;&tcy;
+                      li &mdash; &Bcy;&iecy;&zcy;&ncy;&acy;&lcy;&ocy;&mcy; &pcy;&ocy; &scy;&chcy;&iocy;&tcy;&ucy;
+                    a.btn-get-an-account-min(href='/cart/')
+                      span.icon
+                        svg.icon
+                          use(xlink:href='#check-btn')
+                      | &Scy;&kcy;&icy;&dcy;&kcy;&icy; &vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&iecy;
+          .product-card-container
+            .product-card-content
+              .tabs-content
+                ul.tabs
+                  li.active(rel='tab2') &KHcy;&acy;&rcy;&acy;&kcy;&tcy;&iecy;&rcy;&icy;&scy;&tcy;&icy;&kcy;&icy;
+                .tabsgroup
+                  // #tab1
+                  span.tab_drawer_heading(rel='tab2')
+                    span.icon
+                      svg.icon-svg
+                        use(xlink:href='#tab-arrow')
+                    |                         &KHcy;&acy;&rcy;&acy;&kcy;&tcy;&iecy;&rcy;&icy;&scy;&tcy;&icy;&kcy;&icy;
+                  #tab2.tab-content(style='display: none')
+                    ul.char
+                      li
+                        span.char-text
+                          span.char-text__mask &Kcy;&ocy;&lcy;&icy;&chcy;&iecy;&scy;&tcy;&vcy;&ocy; &scy;&lcy;&ocy;&iecy;&vcy;
+                        span.char-text  &Ocy;&dcy;&ncy;&ocy;&scy;&lcy;&ocy;&jcy;&ncy;&acy;&yacy; 
+                      li
+                        span.char-text
+                          span.char-text__mask &Scy;&iecy;&rcy;&icy;&yacy;
+                        span.char-text  &Fcy;&ocy;&kcy;&scy;&tcy;&rcy;&ocy;&tcy; 
+                      li
+                        span.char-text
+                          span.char-text__mask &TScy;&vcy;&iecy;&tcy;
+                        span.char-text  &Ecy;&vcy;&kcy;&acy;&lcy;&icy;&pcy;&tcy; 
+                      li
+                        span.char-text
+                          span.char-text__mask &Kcy;&ocy;&ecy;&fcy;&fcy;&icy;&tscy;&icy;&iecy;&ncy;&tcy; &pcy;&iecy;&rcy;&iecy;&khcy;&lcy;&iocy;&scy;&tcy;&acy;
+                        span.char-text 1.85
+                      li
+                        span.char-text
+                          span.char-text__mask &Mcy;&acy;&scy;&scy;&acy; 1 &mcy;&sup2;, &kcy;&gcy;
+                        span.char-text 8.8
+                      li
+                        span.char-text
+                          span.char-text__mask &Mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy; &ocy;&scy;&ncy;&ocy;&vcy;&ycy;
+                        span.char-text &Scy;&tcy;&iecy;&kcy;&lcy;&ocy;&khcy;&ocy;&lcy;&scy;&tcy;
+                      li
+                        span.char-text
+                          span.char-text__mask &Ncy;&acy;&zcy;&ncy;&acy;&chcy;&iecy;&ncy;&icy;&iecy;
+                        span.char-text &Ucy;&scy;&tcy;&rcy;&ocy;&jcy;&scy;&tcy;&vcy;&ocy; &kcy;&rcy;&ocy;&vcy;&iecy;&lcy;&softcy;&ncy;&ocy;&gcy;&ocy; &kcy;&ocy;&vcy;&rcy;&acy;
+                      li
+                        span.char-text
+                          span.char-text__mask &Ocy;&bcy;&hardcy;&iecy;&kcy;&tcy;&ycy; &pcy;&rcy;&icy;&mcy;&iecy;&ncy;&iecy;&ncy;&icy;&yacy;
+                        span.char-text
+                          | &Bcy;&iecy;&scy;&iecy;&dcy;&kcy;&icy;, &Kcy;&rcy;&ucy;&pcy;&ncy;&ycy;&iecy; &kcy;&ocy;&tcy;&tcy;&iecy;&dcy;&zhcy;&icy;, &Mcy;&acy;&lcy;&ycy;&iecy; &kcy;&ocy;&tcy;&tcy;&iecy;&dcy;&zhcy;&icy;,
+                          | &Scy;&rcy;&iecy;&dcy;&ncy;&icy;&iecy; &kcy;&ocy;&tcy;&tcy;&iecy;&dcy;&zhcy;&icy;, &CHcy;&acy;&scy;&tcy;&ncy;&ycy;&iecy; &dcy;&ocy;&mcy;&acy;
+                      li
+                        span.char-text
+                          span.char-text__mask &Ocy;&tcy;&tcy;&iecy;&ncy;&ocy;&kcy;
+                        span.char-text &Ecy;&vcy;&kcy;&acy;&lcy;&icy;&pcy;&tcy;
+                      li
+                        span.char-text
+                          span.char-text__mask &Pcy;&lcy;&ocy;&shchcy;&acy;&dcy;&softcy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&acy; &vcy; &ucy;&pcy;&acy;&kcy;&ocy;&vcy;&kcy;&iecy;, &mcy;&sup2;
+                        span.char-text 3
+                      li
+                        span.char-text
+                          span.char-text__mask &Pcy;&ocy;&vcy;&iecy;&rcy;&khcy;&ncy;&ocy;&scy;&tcy;&ncy;&acy;&yacy; &pcy;&lcy;&ocy;&tcy;&ncy;&ocy;&scy;&tcy;&softcy; &ocy;&scy;&ncy;&ocy;&vcy;&ycy;, &gcy;/&mcy;&sup2;
+                        span.char-text 110
+                      li
+                        span.char-text
+                          span.char-text__mask &Pcy;&ocy;&tcy;&iecy;&rcy;&yacy; &pcy;&ocy;&scy;&ycy;&pcy;&kcy;&icy;, &gcy;/&ocy;&bcy;&rcy;&acy;&zcy;&iecy;&tscy;
+                        span.char-text 1.2
+                      li
+                        span.char-text
+                          span.char-text__mask
+                            | &Rcy;&acy;&zcy;&rcy;&ycy;&vcy;&ncy;&acy;&yacy; &scy;&icy;&lcy;&acy; &vcy; &pcy;&ocy;&pcy;&iecy;&rcy;&iecy;&chcy;&ncy;&ocy;&mcy; &ncy;&acy;&pcy;&rcy;&acy;&vcy;&lcy;&iecy;&ncy;&icy;&icy;, &Ncy;/50
+                            | &mcy;&mcy;
+                        span.char-text 600
+                      li
+                        span.char-text
+                          span.char-text__mask
+                            | &Rcy;&acy;&zcy;&rcy;&ycy;&vcy;&ncy;&acy;&yacy; &scy;&icy;&lcy;&acy; &vcy; &pcy;&rcy;&ocy;&dcy;&ocy;&lcy;&softcy;&ncy;&ocy;&mcy; &ncy;&acy;&pcy;&rcy;&acy;&vcy;&lcy;&iecy;&ncy;&icy;&icy;, &Ncy;/50
+                            | &mcy;&mcy;
+                        span.char-text 400
+                      li
+                        span.char-text
+                          span.char-text__mask &Scy;&iecy;&rcy;&icy;&yacy;
+                        span.char-text &Ucy;&lcy;&softcy;&tcy;&rcy;&acy;
+                      li
+                        span.char-text
+                          span.char-text__mask &Scy;&ocy;&pcy;&rcy;&ocy;&tcy;&icy;&vcy;&lcy;&iecy;&ncy;&icy;&iecy; &rcy;&acy;&zcy;&dcy;&icy;&rcy;&ucy;, &Ncy;, &ncy;&iecy; &mcy;&iecy;&ncy;&iecy;&iecy;
+                        span.char-text 100
+                      li
+                        span.char-text
+                          span.char-text__mask &Scy;&rcy;&ocy;&kcy; &khcy;&rcy;&acy;&ncy;&iecy;&ncy;&icy;&yacy;, &mcy;&iecy;&scy;
+                        span.char-text 18
+                      li
+                        span.char-text
+                          span.char-text__mask &Tcy;&icy;&pcy;
+                        span.char-text &Gcy;&ocy;&ncy;&tcy;
+                      li
+                        span.char-text
+                          span.char-text__mask &Tcy;&icy;&pcy; &ncy;&acy;&rcy;&iecy;&zcy;&kcy;&icy; (&kcy;&lcy;&acy;&scy;&scy;&icy;&fcy;&icy;&kcy;&acy;&tscy;&icy;&yacy; &pcy;&rcy;&ocy;&icy;&zcy;&vcy;&ocy;&dcy;&icy;&tcy;&iecy;&lcy;&yacy;)
+                        span.char-text &Acy;&kcy;&kcy;&ocy;&rcy;&dcy;
+                      li
+                        span.char-text
+                          span.char-text__mask &Tcy;&icy;&pcy; &pcy;&ocy;&kcy;&rcy;&ycy;&tcy;&icy;&yacy;
+                        span.char-text &Bcy;&acy;&zcy;&acy;&lcy;&softcy;&tcy;
+                      li
+                        span.char-text
+                          span.char-text__mask &Tcy;&ocy;&lcy;&shchcy;&icy;&ncy;&acy;, &mcy;&mcy;
+                        span.char-text 3
+                      li
+                        span.char-text
+                          span.char-text__mask &TScy;&vcy;&iecy;&tcy;
+                        span.char-text &Zcy;&iecy;&lcy;&iecy;&ncy;&ycy;&jcy;
+                      li
+                        span.char-text
+                          span.char-text__mask &SHcy;&icy;&rcy;&icy;&ncy;&acy;, &mcy;&mcy;
+                        span.char-text 1000
+                      li
+                        span.char-text
+                          span.char-text__mask &Ecy;&lcy;&iecy;&mcy;&iecy;&ncy;&tcy;&ycy; &zcy;&dcy;&acy;&ncy;&icy;&jcy; &icy; &scy;&ocy;&ocy;&rcy;&ucy;&zhcy;&iecy;&ncy;&icy;&jcy;
+                        span.char-text &Mcy;&acy;&ncy;&scy;&acy;&rcy;&dcy;&ycy;, &Scy;&kcy;&acy;&tcy;&ncy;&acy;&yacy; &kcy;&rcy;&ocy;&vcy;&lcy;&yacy;
+                  // #tab2
+                  span.tab_drawer_heading(rel='tab3')
+                    span.icon
+                      svg.icon-svg
+                        use(xlink:href='#tab-arrow')
+                    |                         &Ocy;&tcy;&zcy;&ycy;&vcy;&ycy;
+                  #tab3.tab-content(style='display: none')
+                    p
+                      | &Dcy;&lcy;&yacy; &vcy;&ocy;&zcy;&mcy;&ocy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy; &ocy;&scy;&tcy;&acy;&vcy;&lcy;&yacy;&tcy;&softcy; &scy;&vcy;&ocy;&icy; &ocy;&tcy;&zcy;&ycy;&vcy;&ycy; &ncy;&acy; &tcy;&ocy;&vcy;&acy;&rcy;&ycy; &scy;&acy;&jcy;&tcy;&acy;
+                      | &ncy;&iecy;&ocy;&bcy;&khcy;&ocy;&dcy;&icy;&mcy;&ocy;
+                      a(href='/account/login/?next=/catalog/product/tekhnonikol-gibkaia-cherepitsa-fokstrot-evkalipt-4a4e21-3305rus/') &acy;&vcy;&tcy;&ocy;&rcy;&icy;&zcy;&icy;&rcy;&ocy;&vcy;&acy;&tcy;&softcy;&scy;&yacy;
+                      | .
+                    h2 &Ocy;&tcy;&zcy;&ycy;&vcy;&ycy; &ncy;&acy; &tcy;&ocy;&vcy;&acy;&rcy;
+                    p &Ocy;&tcy;&zcy;&ycy;&vcy;&ocy;&vcy; &dcy;&lcy;&yacy; &dcy;&acy;&ncy;&ncy;&ocy;&gcy;&ocy; &tcy;&ocy;&vcy;&acy;&rcy;&acy; &pcy;&ocy;&kcy;&acy; &iecy;&shchcy;&iecy; &ncy;&iecy;&tcy;.
+                  // #tab3
+              section.conditional-section
+                .container
+                  h2.mb-25 &Scy; &ecy;&tcy;&icy;&mcy; &tcy;&ocy;&vcy;&acy;&rcy;&ocy;&mcy; &ocy;&bcy;&ycy;&chcy;&ncy;&ocy; &pcy;&ocy;&kcy;&ucy;&pcy;&acy;&yucy;&tcy;
+                  .slider-constructor(data-slides='1' data-rows='2' data-sm-slides='2' data-sm-rows='1' data-md-slides='3' data-lg-slides='4')
+                    .product-card-v2.product-card-v2_type-1(data-custom-interaction='data-custom-interaction')
+                      a.product-card-v2__link(href='/catalog/product/knauf-mineralnaya-teploizolyaciya-tisma-038-plita-100h600h1300-8plit624m20624m3/')
+                      .product-card-v2__image
+                        .image.image_contain
+                          img(src='/media/sambuild_cache/58/d6/58d64a705bdafc7acf501470d8341146.jpg' alt='КНАУФ Минеральная теплоизоляция TИСМА 038 плита 100х600х1300 (8плит/6,24м2/0,624м3)')
+                        .product-card-v2__rating
+                        .product-card-v2__labels
+                          .card-label.card-label_style-new.product-card-v2__label
+                            | &Ncy;&ocy;&vcy;&icy;&ncy;&kcy;&acy;
+                      .product-card-v2__content
+                        .product-card-v2__title
+                          | &Kcy;&Ncy;&Acy;&Ucy;&Fcy; &Mcy;&icy;&ncy;&iecy;&rcy;&acy;&lcy;&softcy;&ncy;&acy;&yacy; &tcy;&iecy;&pcy;&lcy;&ocy;&icy;&zcy;&ocy;&lcy;&yacy;&tscy;&icy;&yacy; T&Icy;&Scy;&Mcy;&Acy; 038 &pcy;&lcy;&icy;&tcy;&acy;
+                          | 100&khcy;600&khcy;1300 (8&pcy;&lcy;&icy;&tcy;/6,24&mcy;2/0,624&mcy;3)
+                        .product-card-v2__content-bottom
+                          .product-card-v2__pricing
+                            .product-card-v2__price.text-color-accent
+                              | 935,00
+                              span &#x20BD;/&shcy;&tcy;
+                            .product-card-v2__pricing-txt
+                              | &ocy;&ncy;&lcy;&acy;&jcy;&ncy; &tscy;&iecy;&ncy;&acy;
+                            .product-card-v2__price
+                              | 916,30
+                              span &#x20BD;/&shcy;&tcy;
+                          .product-card-v2__buttons
+                            a.button.button_style-2.button_xl.product-card-v2__cart-button.add-to-cart.no-bg-image.button-theme.button-theme_cart(href='/cart/add/10189')
+                              img.custom-cart-icon(src='/media/Group 148 (1).svg')
+                              span
+                                span  
+                                span &Vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+                    .product-card-v2.product-card-v2_type-1(data-custom-interaction='data-custom-interaction')
+                      a.product-card-v2__link(href='/catalog/product/plita-mineralovatnaya-tehnonikol-tehnoblok-standart-1200h600h50-mm-8-sht/')
+                      .product-card-v2__image
+                        .image.image_contain
+                          img(src='/media/sambuild_cache/f5/16/f5169fe5132791bbe9c916f69430676c.jpg' alt='Утеплитель ТЕХНОНИКОЛЬ Техноблок Стандарт 1200х600х50 мм, 8 шт')
+                        .product-card-v2__rating
+                        .product-card-v2__labels
+                      .product-card-v2__content
+                        .product-card-v2__title
+                          | &Ucy;&tcy;&iecy;&pcy;&lcy;&icy;&tcy;&iecy;&lcy;&softcy; &Tcy;&IEcy;&KHcy;&Ncy;&Ocy;&Ncy;&Icy;&Kcy;&Ocy;&Lcy;&SOFTcy; &Tcy;&iecy;&khcy;&ncy;&ocy;&bcy;&lcy;&ocy;&kcy; &Scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy;
+                          | 1200&khcy;600&khcy;50 &mcy;&mcy;, 8 &shcy;&tcy;
+                        .product-card-v2__content-bottom
+                          .product-card-v2__pricing
+                            .product-card-v2__price.text-color-accent
+                              | 990,00
+                              span &#x20BD;/&ucy;&pcy;
+                            .product-card-v2__pricing-txt
+                              | &ocy;&ncy;&lcy;&acy;&jcy;&ncy; &tscy;&iecy;&ncy;&acy;
+                            .product-card-v2__price
+                              | 970,20
+                              span &#x20BD;/&ucy;&pcy;
+                          .product-card-v2__buttons
+                            a.button.button_style-2.button_xl.product-card-v2__cart-button.add-to-cart.no-bg-image.button-theme.button-theme_cart(href='/cart/add/6984')
+                              img.custom-cart-icon(src='/media/Group 148 (1).svg')
+                              span
+                                span  
+                                span &Vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+                    .product-card-v2.product-card-v2_type-1(data-custom-interaction='data-custom-interaction')
+                      a.product-card-v2__link(href='/catalog/product/knauf-teplo-i-zvukoiz-mineral-greenterm-ts-037-aquastatik-100kh610kh1230mm/')
+                      .product-card-v2__image
+                        .image.image_contain
+                          img(src='/media/sambuild_cache/d5/f6/d5f6f2b53e9c86836b10d9556d1f2f10.jpg' alt='Утеплитель Кнауф тепло- и звукоиз. минерал. GreenTERM TS 037 Aquastatik 100х610х1230мм')
+                        .product-card-v2__rating
+                        .product-card-v2__labels
+                          .card-label.card-label_style-hit.product-card-v2__label
+                            | &KHcy;&icy;&tcy;
+                      .product-card-v2__content
+                        .product-card-v2__title
+                          | &Ucy;&tcy;&iecy;&pcy;&lcy;&icy;&tcy;&iecy;&lcy;&softcy; &Kcy;&ncy;&acy;&ucy;&fcy; &tcy;&iecy;&pcy;&lcy;&ocy;- &icy; &zcy;&vcy;&ucy;&kcy;&ocy;&icy;&zcy;. &mcy;&icy;&ncy;&iecy;&rcy;&acy;&lcy;.
+                          | GreenTERM TS 037 Aquastatik 100&khcy;610&khcy;1230&mcy;&mcy;
+                        .product-card-v2__content-bottom
+                          .product-card-v2__pricing
+                            .product-card-v2__price.text-color-accent
+                              | 1 127,00
+                              span &#x20BD;/&ucy;&pcy;
+                            .product-card-v2__pricing-txt
+                              | &ocy;&ncy;&lcy;&acy;&jcy;&ncy; &tscy;&iecy;&ncy;&acy;
+                            .product-card-v2__price
+                              | 1 104,46
+                              span &#x20BD;/&ucy;&pcy;
+                          .product-card-v2__buttons
+                            a.button.button_style-2.button_xl.product-card-v2__cart-button.add-to-cart.no-bg-image.button-theme.button-theme_cart(href='/cart/add/5439')
+                              img.custom-cart-icon(src='/media/Group 148 (1).svg')
+                              span
+                                span  
+                                span &Vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+                    .product-card-v2.product-card-v2_type-1(data-custom-interaction='data-custom-interaction')
+                      a.product-card-v2__link(href='/catalog/product/skotch-dvustoronnii-dlia-paroizoliatsii/')
+                      .product-card-v2__image
+                        .image.image_contain
+                          img(src='/media/sambuild_cache/07/42/0742d1cccb2c0be0e14071948e26fd85.jpg' alt='Скотч двусторонний для пароизоляции')
+                        .product-card-v2__rating
+                        .product-card-v2__labels
+                      .product-card-v2__content
+                        .product-card-v2__title
+                          | &Scy;&kcy;&ocy;&tcy;&chcy; &dcy;&vcy;&ucy;&scy;&tcy;&ocy;&rcy;&ocy;&ncy;&ncy;&icy;&jcy; &dcy;&lcy;&yacy; &pcy;&acy;&rcy;&ocy;&icy;&zcy;&ocy;&lcy;&yacy;&tscy;&icy;&icy;
+                        .product-card-v2__content-bottom
+                          .product-card-v2__pricing
+                            .product-card-v2__price.text-color-accent
+                              | 270,00
+                              span &#x20BD;/&rcy;&ucy;&lcy;
+                            .product-card-v2__pricing-txt
+                              | &ocy;&ncy;&lcy;&acy;&jcy;&ncy; &tscy;&iecy;&ncy;&acy;
+                            .product-card-v2__price
+                              | 264,60
+                              span &#x20BD;/&rcy;&ucy;&lcy;
+                          .product-card-v2__buttons
+                            a.button.button_style-2.button_xl.product-card-v2__cart-button.add-to-cart.no-bg-image.button-theme.button-theme_cart(href='/cart/add/6742')
+                              img.custom-cart-icon(src='/media/Group 148 (1).svg')
+                              span
+                                span  
+                                span &Vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+                    .product-card-v2.product-card-v2_type-1(data-custom-interaction='data-custom-interaction')
+                      a.product-card-v2__link(href='/catalog/product/germetik-pu-tekhnonikol-logicflex-dlia-ploskikh-krovel-sht/')
+                      .product-card-v2__image
+                        .image.image_contain
+                          img(src='/media/sambuild_cache/f9/df/f9dff6019ff336413f7cf2974d1731f9.jpg' alt='Герметик ПУ ТехноНИКОЛЬ Logicflex для плоских кровель')
+                        .product-card-v2__rating
+                        .product-card-v2__labels
+                      .product-card-v2__content
+                        .product-card-v2__title
+                          | &Gcy;&iecy;&rcy;&mcy;&iecy;&tcy;&icy;&kcy; &Pcy;&Ucy; &Tcy;&iecy;&khcy;&ncy;&ocy;&Ncy;&Icy;&Kcy;&Ocy;&Lcy;&SOFTcy; Logicflex &dcy;&lcy;&yacy; &pcy;&lcy;&ocy;&scy;&kcy;&icy;&khcy;
+                          | &kcy;&rcy;&ocy;&vcy;&iecy;&lcy;&softcy;
+                        .product-card-v2__content-bottom
+                          .product-card-v2__pricing
+                            .product-card-v2__price.text-color-accent
+                              | 628,00
+                              span &#x20BD;/&shcy;&tcy;
+                            .product-card-v2__pricing-txt
+                              | &ocy;&ncy;&lcy;&acy;&jcy;&ncy; &tscy;&iecy;&ncy;&acy;
+                            .product-card-v2__price
+                              | 615,44
+                              span &#x20BD;/&shcy;&tcy;
+                          .product-card-v2__buttons
+                            a.button.button_style-2.button_xl.product-card-v2__cart-button.add-to-cart.no-bg-image.button-theme.button-theme_cart(href='/cart/add/6704')
+                              img.custom-cart-icon(src='/media/Group 148 (1).svg')
+                              span
+                                span  
+                                span &Vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+                    .product-card-v2.product-card-v2_type-1(data-custom-interaction='data-custom-interaction')
+                      a.product-card-v2__link(href='/catalog/product/izoboks-insajd-6-plit-1200h600h100-mm-0432m3-upak432m26912m3-pod/')
+                      .product-card-v2__image
+                        .image.image_contain
+                          img(src='/media/sambuild_cache/7f/ab/7fab36a627d96095e0ae4cec811eebdd.jpg' alt='ИЗОБОКС ИНСАЙД (6 плит) 1200х600х100 мм/ 0.432м3 упак/4.32м2/6,912м3 под')
+                        .product-card-v2__rating
+                        .product-card-v2__labels
+                          .card-label.card-label_style-hit.product-card-v2__label
+                            | &KHcy;&icy;&tcy;
+                      .product-card-v2__content
+                        .product-card-v2__title
+                          | &Icy;&Zcy;&Ocy;&Bcy;&Ocy;&Kcy;&Scy; &Icy;&Ncy;&Scy;&Acy;&Jcy;&Dcy; (6 &pcy;&lcy;&icy;&tcy;) 1200&khcy;600&khcy;100 &mcy;&mcy;/ 0.432&mcy;3
+                          | &ucy;&pcy;&acy;&kcy;/4.32&mcy;2/6,912&mcy;3 &pcy;&ocy;&dcy;
+                        .product-card-v2__content-bottom
+                          .product-card-v2__pricing
+                            .product-card-v2__price.text-color-accent
+                              | 1 555,00
+                              span &#x20BD;/&ucy;&pcy;
+                            .product-card-v2__pricing-txt
+                              | &ocy;&ncy;&lcy;&acy;&jcy;&ncy; &tscy;&iecy;&ncy;&acy;
+                            .product-card-v2__price
+                              | 1 523,90
+                              span &#x20BD;/&ucy;&pcy;
+                          .product-card-v2__buttons
+                            a.button.button_style-2.button_xl.product-card-v2__cart-button.add-to-cart.no-bg-image.button-theme.button-theme_cart(href='/cart/add/10185')
+                              img.custom-cart-icon(src='/media/Group 148 (1).svg')
+                              span
+                                span  
+                                span &Vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+                    .product-card-v2.product-card-v2_type-1(data-custom-interaction='data-custom-interaction')
+                      a.product-card-v2__link(href='/catalog/product/vysokotemperaturnyj-germetik-gasketsil-300ml/')
+                      .product-card-v2__image
+                        .image.image_contain
+                          img(src='/media/sambuild_cache/ae/90/ae90ea1fea3f442ef9a88b2af913ae2f.png' alt='Высокотемпературный герметик Гаскетсил 300мл')
+                        .product-card-v2__rating
+                        .product-card-v2__labels
+                      .product-card-v2__content
+                        .product-card-v2__title
+                          | &Vcy;&ycy;&scy;&ocy;&kcy;&ocy;&tcy;&iecy;&mcy;&pcy;&iecy;&rcy;&acy;&tcy;&ucy;&rcy;&ncy;&ycy;&jcy; &gcy;&iecy;&rcy;&mcy;&iecy;&tcy;&icy;&kcy; &Gcy;&acy;&scy;&kcy;&iecy;&tcy;&scy;&icy;&lcy; 300&mcy;&lcy;
+                        .product-card-v2__content-bottom
+                          .product-card-v2__pricing
+                            .product-card-v2__price.text-color-accent
+                              | 460,00
+                              span &#x20BD;/&shcy;&tcy;
+                            .product-card-v2__pricing-txt
+                              | &ocy;&ncy;&lcy;&acy;&jcy;&ncy; &tscy;&iecy;&ncy;&acy;
+                            .product-card-v2__price
+                              | 450,80
+                              span &#x20BD;/&shcy;&tcy;
+                          .product-card-v2__buttons
+                            a.button.button_style-2.button_xl.product-card-v2__cart-button.add-to-cart.no-bg-image.button-theme.button-theme_cart(href='/cart/add/5797')
+                              img.custom-cart-icon(src='/media/Group 148 (1).svg')
+                              span
+                                span  
+                                span &Vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+                    .product-card-v2.product-card-v2_type-1(data-custom-interaction='data-custom-interaction')
+                      a.product-card-v2__link(href='/catalog/product/plita-mineralovatnaya-izoboks-ekstralajt-50-kompressiya-800h600h50-mm-15-sht/')
+                      .product-card-v2__image
+                        .image.image_contain
+                          img(src='/media/sambuild_cache/7e/91/7e9151cd20c32a92eb8be383d4ebcc2c.jpg' alt='Плита минераловатная ИЗОБОКС Экстралайт 50 % компрессия 800х600х50 мм, 15 шт')
+                        .product-card-v2__rating
+                        .product-card-v2__labels
+                          .card-label.card-label_style-new.product-card-v2__label
+                            | &Ncy;&ocy;&vcy;&icy;&ncy;&kcy;&acy;
+                          .card-label.card-label_style-hit.product-card-v2__label
+                            | &KHcy;&icy;&tcy;
+                      .product-card-v2__content
+                        .product-card-v2__title
+                          | &Pcy;&lcy;&icy;&tcy;&acy; &mcy;&icy;&ncy;&iecy;&rcy;&acy;&lcy;&ocy;&vcy;&acy;&tcy;&ncy;&acy;&yacy; &Icy;&Zcy;&Ocy;&Bcy;&Ocy;&Kcy;&Scy; &Ecy;&kcy;&scy;&tcy;&rcy;&acy;&lcy;&acy;&jcy;&tcy; 50 %
+                          | &kcy;&ocy;&mcy;&pcy;&rcy;&iecy;&scy;&scy;&icy;&yacy; 800&khcy;600&khcy;50 &mcy;&mcy;, 15 &shcy;&tcy;
+                        .product-card-v2__content-bottom
+                          .product-card-v2__pricing
+                            .product-card-v2__price.text-color-accent
+                              | 1 210,00
+                              span &#x20BD;/&shcy;&tcy;
+                            .product-card-v2__pricing-txt
+                              | &ocy;&ncy;&lcy;&acy;&jcy;&ncy; &tscy;&iecy;&ncy;&acy;
+                            .product-card-v2__price
+                              | 1 185,80
+                              span &#x20BD;/&shcy;&tcy;
+                          .product-card-v2__buttons
+                            a.button.button_style-2.button_xl.product-card-v2__cart-button.add-to-cart.no-bg-image.button-theme.button-theme_cart(href='/cart/add/10192')
+                              img.custom-cart-icon(src='/media/Group 148 (1).svg')
+                              span
+                                span  
+                                span &Vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+                    .product-card-v2.product-card-v2_type-1(data-custom-interaction='data-custom-interaction')
+                      a.product-card-v2__link(href='/catalog/product/plita-mineralovatnaya-tehnonikol-tehnoblok-standart-1200h600h100-mm-4-sht/')
+                      .product-card-v2__image
+                        .image.image_contain
+                          img(src='/media/sambuild_cache/5b/f7/5bf7e14bf323c1a538570ed5534bab36.jpg' alt='Утеплитель ТЕХНОНИКОЛЬ Техноблок Стандарт 1200х600х100 мм, 4 шт')
+                        .product-card-v2__rating
+                        .product-card-v2__labels
+                      .product-card-v2__content
+                        .product-card-v2__title
+                          | &Ucy;&tcy;&iecy;&pcy;&lcy;&icy;&tcy;&iecy;&lcy;&softcy; &Tcy;&IEcy;&KHcy;&Ncy;&Ocy;&Ncy;&Icy;&Kcy;&Ocy;&Lcy;&SOFTcy; &Tcy;&iecy;&khcy;&ncy;&ocy;&bcy;&lcy;&ocy;&kcy; &Scy;&tcy;&acy;&ncy;&dcy;&acy;&rcy;&tcy;
+                          | 1200&khcy;600&khcy;100 &mcy;&mcy;, 4 &shcy;&tcy;
+                        .product-card-v2__content-bottom
+                          .product-card-v2__pricing
+                            .product-card-v2__price.text-color-accent
+                              | 990,00
+                              span &#x20BD;/&shcy;&tcy;
+                            .product-card-v2__pricing-txt
+                              | &ocy;&ncy;&lcy;&acy;&jcy;&ncy; &tscy;&iecy;&ncy;&acy;
+                            .product-card-v2__price
+                              | 970,20
+                              span &#x20BD;/&shcy;&tcy;
+                          .product-card-v2__buttons
+                            a.button.button_style-2.button_xl.product-card-v2__cart-button.add-to-cart.no-bg-image.button-theme.button-theme_cart(href='/cart/add/6985')
+                              img.custom-cart-icon(src='/media/Group 148 (1).svg')
+                              span
+                                span  
+                                span &Vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+                    .product-card-v2.product-card-v2_type-1(data-custom-interaction='data-custom-interaction')
+                      a.product-card-v2__link(href='/catalog/product/2165-drel/')
+                      .product-card-v2__image
+                        .image.image_contain
+                          img(src='/media/sambuild_cache/14/7a/147afe2d32384da3fddf62b355d47dbb.jpg' alt='2165 Дрель -шуруповерт Союз')
+                        .product-card-v2__rating
+                        .product-card-v2__labels
+                      .product-card-v2__content
+                        .product-card-v2__title
+                          | 2165 &Dcy;&rcy;&iecy;&lcy;&softcy; -&shcy;&ucy;&rcy;&ucy;&pcy;&ocy;&vcy;&iecy;&rcy;&tcy; &Scy;&ocy;&yucy;&zcy;
+                        .product-card-v2__content-bottom
+                          .product-card-v2__pricing
+                            .product-card-v2__price.text-color-accent
+                              | 2 672,00
+                              span &#x20BD;/&shcy;&tcy;
+                            .product-card-v2__pricing-txt
+                              | &ocy;&ncy;&lcy;&acy;&jcy;&ncy; &tscy;&iecy;&ncy;&acy;
+                            .product-card-v2__price
+                              | 2 618,56
+                              span &#x20BD;/&shcy;&tcy;
+                          .product-card-v2__buttons
+                            a.button.button_style-2.button_xl.product-card-v2__cart-button.add-to-cart.no-bg-image.button-theme.button-theme_cart(href='/cart/add/10170')
+                              img.custom-cart-icon(src='/media/Group 148 (1).svg')
+                              span
+                                span  
+                                span &Vcy; &kcy;&ocy;&rcy;&zcy;&icy;&ncy;&ucy;
+            .product-card-side
+              .product-slider__banners
+                .item
+                  .product-item.product-item--banner
+                    a(href='/catalog/category/utepliteli/bazaltovyj-uteplitel/' title='АКЦИЯ ФАСАД')
+                      img.bnr-image-for-page(data-bnr-pk='7' src='/media/bnrs/images/akcia_na_fasad.jpg' alt='АКЦИЯ ФАСАД')
+                .item
+                  .product-item.product-item--banner
+                    a(href='https://ostore.stroyker.pro/?faq' title='Promo Stroyker.pro')
+                      img.bnr-image-for-page(data-bnr-pk='1' src='/media/bnrs/images/promo.jpg' alt='Promo Stroyker.pro')
+                .item
+                  .product-item.product-item--banner
+                    a(href='/roof-calc/' title='Кровельный калькулятор')
+                      img.bnr-image-for-page(data-bnr-pk='6' src='/media/bnrs/images/krovelnui_kalkylator.jpg' alt='Кровельный калькулятор')
+          .product-card-bottom
+            span.product-card-bottom__artikul 818114
+            .product-card__navigation
+              a.product-card__nav-prev.single(href='/catalog/product/tekhnonikol-gibkaia-cherepitsa-fokstrot-sandal-4a4e21-3303rus/')
+                span.icon
+                  svg.icon-svg
+                    use(xlink:href='#product-nav-arrow')
+                | &Pcy;&rcy;&iecy;&dcy;&ycy;&dcy;&ucy;&shchcy;&icy;&jcy; &tcy;&ocy;&vcy;&acy;&rcy;
+  section.section-dark.feedback-form
+    .container
+      #question-main.question-main
+        .question-form
+          span.content-title.center.h2 &Ocy;&scy;&tcy;&acy;&lcy;&icy;&scy;&softcy; &vcy;&ocy;&pcy;&rcy;&ocy;&scy;&ycy;?
+          form#feedback-message-request-form(action='/crm/message/' method='post')
+            input(type='hidden' name='csrfmiddlewaretoken' value='rG3fUSBdlKxjT7NqrapRg34tljnL3Y0j4Uo0FZcTMUycZ71EFr9QF1jug3e9sUZE')
+            .question-form__column
+              .form-group
+                input.form-control(type='text' name='name' autocomplete='off' required='')
+                label.label-name(for='name')
+                  span.content-name  &Icy;&mcy;&yacy;* 
+              .form-group
+                input.form-control.phone(type='phone' name='phone' autocomplete='off' required='')
+                label.label-name(for='phone')
+                  span.content-name  &Tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy; 
+              .form-group
+                input.form-control(type='mail' name='email' autocomplete='off' required='')
+                label.label-name(for='text')
+                  span.content-name  e-mail 
+            .question-form__column
+              .form-group
+                textarea.form-control(name='message' autocomplete='off' required='')
+                label.label-name(for='message')
+                  span.content-name  &Kcy;&ocy;&mcy;&mcy;&iecy;&ncy;&tcy;&acy;&rcy;&icy;&jcy; 
+              input#id_url(type='hidden' name='url')
+              script(src='https://www.google.com/recaptcha/api.js?onload=recaptchaCallback_f0bba60857b244418dd3fa07e5f78cdd&render=explicit')
+              script(type='text/javascript').
+                var recaptchaCallback_f0bba60857b244418dd3fa07e5f78cdd =
+                function () {
+                var el = document.querySelector(
+                '.g-recaptcha[data-widget-uuid="f0bba60857b244418dd3fa07e5f78cdd"]'
+                );
+                var form_f0bba60857b244418dd3fa07e5f78cdd =
+                el.closest("form");
+                var recaptcha_f0bba60857b244418dd3fa07e5f78cdd =
+                grecaptcha.render(el, {
+                sitekey: el.dataset.sitekey,
+                callback: el.dataset.callback,
+                });
+                var verifyCaptcha_f0bba60857b244418dd3fa07e5f78cdd =
+                function (e) {
+                e.preventDefault();
+                grecaptcha.execute(
+                recaptcha_f0bba60857b244418dd3fa07e5f78cdd
+                );
+                };
+                form_f0bba60857b244418dd3fa07e5f78cdd.addEventListener(
+                "submit",
+                verifyCaptcha_f0bba60857b244418dd3fa07e5f78cdd
+                );
+                };
+                // Submit function to be called, after reCAPTCHA was successful.
+                var onSubmit_f0bba60857b244418dd3fa07e5f78cdd = function (
+                token
+                ) {
+                console.log(
+                "reCAPTCHA validated for 'data-widget-uuid=\\"f0bba60857b244418dd3fa07e5f78cdd\"'. Submitting form..."
+                );
+                document
+                .querySelector(
+                '.g-recaptcha[data-widget-uuid="f0bba60857b244418dd3fa07e5f78cdd"]'
+                )
+                .closest("form")
+                .submit();
+                };
+              #cap-feedbackmessageform.g-recaptcha(data-callback='feedback_form_ajax_submit' data-sitekey='6LcNqf8hAAAAAABJUmg6-HHOj8AfrIA26SM5oRe4' required='' data-widget-uuid='f0bba60857b244418dd3fa07e5f78cdd' data-size='invisible')
+              button.btn.btn--main-min(type='submit')
+                | &Ocy;&tcy;&pcy;&rcy;&acy;&vcy;&icy;&tcy;&softcy;
+          p
+            | &Ncy;&acy;&zhcy;&icy;&mcy;&acy;&yacy; &ncy;&acy; &kcy;&ncy;&ocy;&pcy;&kcy;&ucy;, &vcy;&ycy; &dcy;&acy;&iecy;&tcy;&iecy; &scy;&ocy;&gcy;&lcy;&acy;&scy;&icy;&iecy; &ncy;&acy; &ocy;&bcy;&rcy;&acy;&bcy;&ocy;&tcy;&kcy;&ucy; &pcy;&iecy;&rcy;&scy;&ocy;&ncy;&acy;&lcy;&softcy;&ncy;&ycy;&khcy;
+            | &dcy;&acy;&ncy;&ncy;&ycy;&khcy; &icy; &scy;&ocy;&gcy;&lcy;&acy;&shcy;&acy;&iecy;&tcy;&iecy;&scy;&softcy; &scy; &ncy;&acy;&shcy;&iecy;&jcy; &pcy;&ocy;&lcy;&icy;&tcy;&icy;&kcy;&ocy;&jcy; &kcy;&ocy;&ncy;&fcy;&icy;&dcy;&iecy;&ncy;&tscy;&icy;&acy;&lcy;&softcy;&ncy;&ocy;&scy;&tcy;&icy;
+
+include ../sections/footer/index.pug

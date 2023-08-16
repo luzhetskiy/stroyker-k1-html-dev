@@ -1,0 +1,1300 @@
+include ../sections/header/index.pug
+
+main
+  section.conditional-section.bg-color.mb-0
+    .container
+      .catalog-side.mobile-show
+        span.catalog-side__title
+          span.icon
+            svg(width='16' height='14' viewbox='0 0 16 14' fill='none' xmlns='http://www.w3.org/2000/svg')
+              path(d='M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z' fill='currentColor')
+          |               &Kcy;&acy;&tcy;&acy;&lcy;&ocy;&gcy; &pcy;&rcy;&ocy;&dcy;&ucy;&kcy;&tscy;&icy;&icy;
+        // аккордеон вариант (классу catalog-side__content добавилось класс -accordeon чтобы css конфликты не были, в scripts.js добавилось одна строка - $('.catalog-side__content-accordeon').toggle(0); )
+        .catalog-side__content-accordeon
+          ul.custom__accordion.v-arrow.mb-0
+            // Утепление
+            li
+              a.acc__toggle(href='javascript:void(0);') &Ucy;&tcy;&iecy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy;
+              ul.inner
+                li
+                  a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+                  .inner
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                li
+                  a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                  .inner
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                li
+                  a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                  .inner
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                li
+                  a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                  .inner
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+            // Утепление
+            li
+              a.acc__toggle(href='javascript:void(0);') &Ucy;&tcy;&iecy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy;
+              ul.inner
+                li
+                  a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+                  .inner
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                li
+                  a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                  .inner
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                li
+                  a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                  .inner
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                li
+                  a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                  .inner
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                    p
+                      a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+  section.section.section-first
+    .container
+      .page-head
+        .breadcrumbs.breadcrumbs--lk
+          a(href='') &Gcy;&Lcy;&Acy;&Vcy;&Ncy;&Acy;&YAcy;
+          span.sep
+          a(href='') &Kcy;&Acy;&Tcy;&Acy;&Lcy;&Ocy;&Gcy;
+          span.sep
+      .content-block
+        span.h1 &Kcy;&acy;&tcy;&acy;&lcy;&ocy;&gcy; 
+        .catalog__links-block
+          a(href='#') &Ucy;&tcy;&iecy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy;
+          a(href='#') &Icy;&zcy;&ocy;&lcy;&yacy;&tscy;&icy;&yacy;
+          a(href='#') &Vcy;&ocy;&dcy;&ocy;&scy;&tcy;&ocy;&chcy;&ncy;&ycy;&iecy; &icy; &dcy;&rcy;&iecy;&ncy;&acy;&zhcy;&ncy;&ycy;&iecy; &scy;&icy;&scy;&tcy;&iecy;&mcy;&ycy;
+          a(href='#') &Kcy;&rcy;&ocy;&vcy;&lcy;&yacy;
+        .comparison
+          .comparison__side
+            // v-underline - аккордеон с полосками
+            // v-arrow - аккордеон с стрелками
+            span
+              b &Scy;&tcy;&rcy;&iecy;&lcy;&kcy;&acy;&mcy;&icy; (&Scy; &dcy;&ocy;&chcy;&iecy;&rcy;&acy;&mcy;&icy; &icy; &bcy;&iecy;&zcy;)
+            ul.custom__accordion.v-arrow
+              // Утепление
+              li
+                a.acc__toggle(href='javascript:void(0);') &Ucy;&tcy;&iecy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy;
+                ul.inner
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='http://box1.stroyker.pro/catalog/category/napolniay/plitka/')
+                      | &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy; 
+                      b (&ncy;&iecy;&tcy; &dcy;&ocy;&chcy;&iecy;&kcy;)
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+            span
+              b &Scy; &pcy;&ocy;&lcy;&ocy;&scy;&kcy;&acy;&mcy;&icy; (&Scy; &dcy;&ocy;&chcy;&iecy;&rcy;&acy;&mcy;&icy; &icy; &bcy;&iecy;&zcy;)
+            ul.custom__accordion.v-underline
+              // Утепление
+              li
+                a.acc__toggle(href='javascript:void(0);') &Ucy;&tcy;&iecy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy;
+                ul.inner
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='http://box1.stroyker.pro/catalog/category/napolniay/plitka/')
+                      | &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy; 
+                      b (&ncy;&iecy;&tcy; &dcy;&ocy;&chcy;&iecy;&kcy;)
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+            span &scy;&tcy;&rcy;&iecy;&lcy;&kcy;&acy;&mcy;&icy; (&Ocy;&tcy;&kcy;&rcy;&ycy;&vcy;&acy;&iecy;&tcy;&scy;&yacy; &dcy;&ocy; &fcy;&acy;&ncy;&iecy;&rcy;&ycy;
+            ul.custom__accordion.v-arrow
+              // Утепление
+              li
+                a.acc__toggle(href='javascript:void(0);') &Ucy;&tcy;&iecy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy;
+                ul.inner
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+              // Утепление
+              li
+                a.acc__toggle(href='javascript:void(0);') &Ucy;&tcy;&iecy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy;
+                ul.inner
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+            span &scy;&tcy;&rcy;&iecy;&lcy;&kcy;&acy;&mcy;&icy; (&Ocy;&tcy;&kcy;&rcy;&ycy;&vcy;&acy;&iecy;&tcy;&scy;&yacy; &dcy;&ocy; &lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&khcy;
+            ul.custom__accordion.v-arrow
+              // Утепление
+              li
+                a.acc__toggle(href='javascript:void(0);') &Ucy;&tcy;&iecy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy;
+                .inner.last_inner
+                  p
+                    a(href='#') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+                  p
+                    a(href='#') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+                  p
+                    a(href='#') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+                  p
+                    a(href='#') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+            span &Ncy;&iecy; &ocy;&tcy;&kcy;&rcy;&ycy;&vcy;&acy;&iecy;&tcy;&scy;&yacy;
+            ul.custom__accordion.v-arrow
+              // Утепление
+              li
+                a.acc__toggle.not_toggle(href='#') &Ucy;&tcy;&iecy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy;
+                a.acc__toggle.not_toggle(href='#') &Ucy;&tcy;&iecy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy; 2
+                a.acc__toggle.not_toggle(href='#') &Ucy;&tcy;&iecy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy; 3
+            span &pcy;&ocy;&lcy;&ocy;&scy;&kcy;&acy;&mcy;&icy;
+            ul.custom__accordion.v-underline
+              // Утепление
+              li
+                a.acc__toggle(href='javascript:void(0);') &Ucy;&tcy;&iecy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy;
+                ul.inner
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+              // Утепление
+              li
+                a.acc__toggle(href='javascript:void(0);') &Ucy;&tcy;&iecy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy;
+                ul.inner
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                  li
+                    a.acc__toggle.acc__toggle-inner(href='javascript:void(0);') &Dcy;&rcy;&iecy;&vcy;&iecy;&scy;&icy;&ncy;&acy;
+                    .inner
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+                      p
+                        a(href='#') &Fcy;&acy;&ncy;&iecy;&rcy;&acy;
+            span &pcy;&ocy;&lcy;&ocy;&scy;&kcy;&acy;&mcy;&icy; (&Ocy;&tcy;&kcy;&rcy;&ycy;&vcy;&acy;&iecy;&tcy;&scy;&yacy; &dcy;&ocy; &lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&khcy;
+            ul.custom__accordion.v-underline
+              // Утепление
+              li
+                a.acc__toggle(href='javascript:void(0);') &Ucy;&tcy;&iecy;&pcy;&lcy;&iecy;&ncy;&icy;&iecy;
+                .inner.last_inner
+                  p
+                    a(href='#') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+                  p
+                    a(href='#') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+                  p
+                    a(href='#') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+                  p
+                    a(href='#') &Lcy;&icy;&scy;&tcy;&ocy;&vcy;&ycy;&iecy; &scy;&tcy;&rcy;&ocy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&ycy;
+            .comparison__side-content
+              span.comparison-category__title &Pcy;&ocy;&kcy;&acy;&zcy;&acy;&tcy;&softcy; &pcy;&acy;&rcy;&acy;&mcy;&iecy;&tcy;&rcy;&ycy;
+              .comparison__radios
+                .radio
+                  input#comparison1(type='radio' name='comparison' checked='')
+                  label(for='comparison1')
+                    span &Vcy;&scy;&iecy; &pcy;&acy;&rcy;&acy;&mcy;&iecy;&tcy;&rcy;&ycy;
+                  .radio-content.radio-content--sm
+                .radio
+                  input#comparison2(type='radio' name='comparison')
+                  label(for='comparison2')
+                    span &Rcy;&acy;&zcy;&lcy;&icy;&chcy;&acy;&yucy;&shchcy;&icy;&iecy;&scy;&yacy;
+                  .radio-content.radio-content--sm
+              .comparison-product__description
+                .dep-item &Bcy;&rcy;&iecy;&ncy;&dcy;
+                .dep-item.dep-item--text
+                  p &Scy;&ocy;&rcy;&tcy;
+                .dep-item &Tcy;&iecy;&kcy;&scy;&tcy;&ocy;&vcy;&ocy;&iecy; &pcy;&ocy;&lcy;&iecy;
+                .dep-item &Pcy;&acy;&rcy;&acy;&mcy;&iecy;&tcy;&rcy; &scy; &pcy;&rcy;&ocy;&chcy;&iecy;&rcy;&kcy;&ocy;&mcy;
+                .dep-item &Vcy;&iecy;&scy; (&lcy;&icy;&scy;&tcy;), &kcy;&gcy;
+                .dep-item &Mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;
+          .comparison__content
+            // КЛАСС item__fixed-height ДАЕТ ФИКСИРОВАННУЮ ВЫСОТУ ТОВАРАМ В САЛЙДЕРЕ, ЧТОБЫ НИЖНЫЕ ПАРАМЕТРИ С ЛЕВА И ТО ЧТО В ТОВАРЕ БЫЛИ НА ОДНОМ ЛИНИИ
+            .catalog-body
+              .d-grid.gap-grid.row-gap-sm-20.grid-columns-1.grid-columns-lg-3.grid-columns-xl-4
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25kh100kh3000mm-gost-1sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25х100х3000мм ГОСТ/1сорт (естественной влажности)')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM00012025
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&khcy;100&khcy;3000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;/1&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 75,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 73,50
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/87548')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25kh75kh6000mm-gost-1sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25х75х6000мм ГОСТ/1сорт (естественной влажности)')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM000005020
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&khcy;75&khcy;6000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;/1&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 149,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 146,02
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/87452')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-50kh150kh6000mm-gost-1sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 50х150х6000мм ГОСТ/1сорт (естественной влажности)')
+                      span.product-item__flag-content
+                        span.product-item__flag.product-item__flag--hit &khcy;&icy;&tcy;
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM0000496
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 50&khcy;150&khcy;6000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;/1&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 599,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 587,02
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/4400')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-50kh120kh6000mm-gost-1sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 50х120х6000мм ГОСТ/1сорт (естественной влажности)')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM000005021
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 50&khcy;120&khcy;6000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;/1&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 479,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 469,42
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/87453')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25x150x5000mm-gost-1sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25×150×5000мм ГОСТ/1сорт (естественной влажности)')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM000005019
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&times;150&times;5000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;/1&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 248,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 243,04
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/87451')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-sort-2-sechenie-0030kh0150kh6m-1918/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная сорт 2 сечение 0,030х0,150х6м')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art 00001670
+                      span.product-item__name &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; &scy;&ocy;&rcy;&tcy; 2 &scy;&iecy;&chcy;&iecy;&ncy;&icy;&iecy; 0,030&khcy;0,150&khcy;6&mcy;
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 324,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 317,52
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/1670')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-sort-1-sechenie-0040kh0200kh6m-614/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная сорт 1 сечение 0,040х0,200х6м')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art 00000456
+                      span.product-item__name &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; &scy;&ocy;&rcy;&tcy; 1 &scy;&iecy;&chcy;&iecy;&ncy;&icy;&iecy; 0,040&khcy;0,200&khcy;6&mcy;
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 672,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 658,56
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/456')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25kh100kh3000mm-gost-2sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25х100х3000мм ГОСТ/2сорт (естественной влажности)')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM0000800
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&khcy;100&khcy;3000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;/2&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 68,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 66,64
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/4382')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-sort-1-sechenie-0050kh0150kh6m-530/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная сорт 1 сечение 0,050х0,150х6м')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art 00000387
+                      span.product-item__name &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; &scy;&ocy;&rcy;&tcy; 1 &scy;&iecy;&chcy;&iecy;&ncy;&icy;&iecy; 0,050&khcy;0,150&khcy;6&mcy;
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 576,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 564,48
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/387')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-sort-1-sechenie-0050kh0200kh6m-613/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная сорт 1 сечение 0,050х0,200х6м')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art 00000455
+                      span.product-item__name &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; &scy;&ocy;&rcy;&tcy; 1 &scy;&iecy;&chcy;&iecy;&ncy;&icy;&iecy; 0,050&khcy;0,200&khcy;6&mcy;
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 840,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 823,20
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/455')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-50kh150kh6000mm-gost-2sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 50х150х6000мм ГОСТ/2сорт (естественной влажности)')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM0000867
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 50&khcy;150&khcy;6000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;/2&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 405,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 396,90
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/4401')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-sort-2-sechenie-005kh0150kh6m-682/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная сорт 2 сечение 0,050х0,150х6м')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art 00000519
+                      span.product-item__name &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; &scy;&ocy;&rcy;&tcy; 2 &scy;&iecy;&chcy;&iecy;&ncy;&icy;&iecy; 0,050&khcy;0,150&khcy;6&mcy;
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 495,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 485,10
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/519')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25x100x6000mm-gost-1-2-sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25×100×6000мм ГОСТ(1-2 сорт) (естественной влажности)')
+                      span.product-item__flag-content
+                        span.product-item__flag.product-item__flag--hit &khcy;&icy;&tcy;
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM0000797
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&times;100&times;6000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;(1-2 &scy;&ocy;&rcy;&tcy;)
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 180,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 176,40
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/4380')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25x150x6000mm-gost-1-2-sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25×150×6000мм ГОСТ(1-2 сорт) (естественной влажности)')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM0000791
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&times;150&times;6000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;(1-2 &scy;&ocy;&rcy;&tcy;)
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 270,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 264,60
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/4381')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25kh100kh6000mm-gost-1sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25х100х6000мм ГОСТ/1сорт (естественной влажности)')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM0000609
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&khcy;100&khcy;6000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;/1&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 200,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 196,00
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/4383')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25kh100kh6000mm-gost-2sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25х100х6000мм ГОСТ/2сорт (естественной влажности)')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM0000641
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&khcy;100&khcy;6000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;/2&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 135,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 132,30
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/4384')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25kh120kh6000mm-gost-1sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25х120х6000мм ГОСТ/1сорт (естественной влажности)')
+                      span.product-item__flag-content
+                        span.product-item__flag.product-item__flag--hit &khcy;&icy;&tcy;
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM0000761
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&khcy;120&khcy;6000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;/1&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 240,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 235,20
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/4385')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-osina-30x150x6000mm-2sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная ОСИНА 30×150×6000мм 2сорт (естественной влажности)')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM-0000808
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; &Ocy;&Scy;&Icy;&Ncy;&Acy; 30&times;150&times;6000&mcy;&mcy; 2&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 405,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 396,90
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/85702')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25kh150kh3000mm-gost-1sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25х150х3000мм ГОСТ/1сорт (естественной влажности)')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM0000798
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&khcy;150&khcy;3000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;/1&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 149,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 146,02
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/4386')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25kh150kh3000mm-gost-2sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25х150х3000мм ГОСТ/2сорт (естественной влажности)')
+                      span.product-item__flag-content
+                        span.product-item__flag.product-item__flag--sale sale
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM0000799
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&khcy;150&khcy;3000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;/2&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 57,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 55,86
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/4387')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25kh150kh6000mm-gost-1sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25х150х6000мм ГОСТ/1сорт (естественной влажности)')
+                      span.product-item__flag-content
+                        span.product-item__flag.product-item__flag--hit &khcy;&icy;&tcy;
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM0000502
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&khcy;150&khcy;6000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;/1&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 300,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 294,00
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/4388')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25x120x6000mm-2sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25×120×6000мм 2сорт (естественной влажности)')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM-0000750
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&times;120&times;6000&mcy;&mcy; 2&scy;&ocy;&rcy;&tcy; (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy;
+                        | &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 198,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 194,04
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/85704')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25x150x3000mm-1sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25×150×3000мм 1сорт (естественной влажности)')
+                      span.product-item__flag-content  
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM-0000818
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&times;150&times;3000&mcy;&mcy; 1&scy;&ocy;&rcy;&tcy; (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy;
+                        | &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 158,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 154,84
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/85705')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+                .product-item
+                  a.product-item__link(href='/catalog/product/doska-obreznaia-25kh150kh6000mm-gost-2sort-estestvennoi-vlazhnosti/')
+                    .product-item__image
+                      .product-item__image-inner
+                        img(src='../images/catalog-product.jpg' alt='Доска обрезная 25х150х6000мм ГОСТ/2сорт (естественной влажности)')
+                      span.product-item__flag-content
+                        span.product-item__flag.product-item__flag--hit &khcy;&icy;&tcy;
+                    span.product-item__content-top
+                      span.product-item__head
+                        span.product-item__art LM0000503
+                      span.product-item__name
+                        | &Dcy;&ocy;&scy;&kcy;&acy; &ocy;&bcy;&rcy;&iecy;&zcy;&ncy;&acy;&yacy; 25&khcy;150&khcy;6000&mcy;&mcy; &Gcy;&Ocy;&Scy;&Tcy;/2&scy;&ocy;&rcy;&tcy;
+                        | (&iecy;&scy;&tcy;&iecy;&scy;&tcy;&vcy;&iecy;&ncy;&ncy;&ocy;&jcy; &vcy;&lcy;&acy;&zhcy;&ncy;&ocy;&scy;&tcy;&icy;)
+                      .product-item__status.product-item__status--many.common-status
+                        | &Vcy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy;
+                      span.product-item__cost.with-online-price
+                        span.product-item__cost-product
+                          | 180,00
+                          span  &#x20BD;/&shcy;&tcy;
+                      span.product-item__cost.product-item__online-cost
+                        span.product-item__cost-product
+                          | 176,40
+                          span  &#x20BD;/&shcy;&tcy;
+                        span.product-item__cost-label (&ocy;&ncy;&lcy;&acy;&jcy;&ncy;)
+                  .product-item__content-bottom
+                    .product-item__btns
+                      .shopping-cart-product
+                        .input-number
+                          .order-down
+                          input#number(type='number' min='0' step='1' value='1' required='')
+                          .order-up
+                        a.shopping-cart-btn.add-to-cart.button-theme.button-theme_cart(href='/cart/add/4389')
+                          svg.icon
+                            use(xlink:href='#shopping-cart')
+              .pagination
+                span 1
+                span ...
+                span
+                  a(href='?page=3')  3 
+                a.next(href='?page=2')  
+  section.section-dark.feedback-form
+    .container
+      #question-main.question-main
+        .question-form
+          span.content-title.center.h2 &Ocy;&scy;&tcy;&acy;&lcy;&icy;&scy;&softcy; &vcy;&ocy;&pcy;&rcy;&ocy;&scy;&ycy;?
+          form#feedback-message-request-form(action='/crm/message/' method='post')
+            input(type='hidden' name='csrfmiddlewaretoken' value='WwB6ZXS83VuYP0PmIstLZgczmIM5DdefM2YaEFI5dCRJPl3Wlqy2tHiO0TbhwDZ9')
+            .question-form__column
+              .form-group
+                input.form-control(type='text' name='name' autocomplete='off' required='')
+                label.label-name(for='name')
+                  span.content-name  &Icy;&mcy;&yacy;* 
+              .form-group
+                input.form-control.phone(type='phone' name='phone' autocomplete='off' required='')
+                label.label-name(for='phone')
+                  span.content-name  &Tcy;&iecy;&lcy;&iecy;&fcy;&ocy;&ncy; 
+              .form-group
+                input.form-control(type='mail' name='email' autocomplete='off' required='')
+                label.label-name(for='text')
+                  span.content-name  e-mail 
+            .question-form__column
+              .form-group
+                textarea.form-control(name='message' autocomplete='off' required='')
+                label.label-name(for='message')
+                  span.content-name  &Kcy;&ocy;&mcy;&mcy;&iecy;&ncy;&tcy;&acy;&rcy;&icy;&jcy; 
+              input#id_url(type='hidden' name='url')
+              button.btn.btn--main-min(type='submit')
+                | &Ocy;&tcy;&pcy;&rcy;&acy;&vcy;&icy;&tcy;&softcy;
+          p
+            | &Ncy;&acy;&zhcy;&icy;&mcy;&acy;&yacy; &ncy;&acy; &kcy;&ncy;&ocy;&pcy;&kcy;&ucy;, &vcy;&ycy; &dcy;&acy;&iecy;&tcy;&iecy; &scy;&ocy;&gcy;&lcy;&acy;&scy;&icy;&iecy; &ncy;&acy; &ocy;&bcy;&rcy;&acy;&bcy;&ocy;&tcy;&kcy;&ucy; &pcy;&iecy;&rcy;&scy;&ocy;&ncy;&acy;&lcy;&softcy;&ncy;&ycy;&khcy;
+            | &dcy;&acy;&ncy;&ncy;&ycy;&khcy; &icy; &scy;&ocy;&gcy;&lcy;&acy;&shcy;&acy;&iecy;&tcy;&iecy;&scy;&softcy; &scy; &ncy;&acy;&shcy;&iecy;&jcy; &pcy;&ocy;&lcy;&icy;&tcy;&icy;&kcy;&ocy;&jcy; &kcy;&ocy;&ncy;&fcy;&icy;&dcy;&iecy;&ncy;&tscy;&icy;&acy;&lcy;&softcy;&ncy;&ocy;&scy;&tcy;&icy;
+
+include ../sections/footer/index.pug

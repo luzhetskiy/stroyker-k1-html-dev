@@ -23,12 +23,13 @@ module.exports = {
     path.resolve(__dirname, `${devDir}/*.js`),
   ]),
   output: {
-    filename: "js/[name].[hash].js",
-    chunkFilename: "js/[id].[chunkhash].js",
-    assetModuleFilename: "assets/[hash][ext][query]",
+    filename: "js/[name].js", // [hash]
+    chunkFilename: "js/[id].js", // [chunkhash]
+    assetModuleFilename: "assets/[hash][ext][query]", // [hash]
     path: path.resolve(__dirname, `./${buildDir}`),
     clean: true,
   },
+  devtool: 'source-map',
   devServer: {
     open: true,
     static: {
@@ -44,7 +45,7 @@ module.exports = {
   plugins: [
     new WebpackWatchedGlobEntries(),
     new MiniCssExtractPlugin({
-      filename: "css/[name].[contenthash].css",
+      filename: "css/[name].css", // [contenthash]
     }),
     ...pages.map(
       (page) =>
@@ -89,14 +90,14 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
         generator: {
-          filename: "shared/images/[hash][ext][query]",
+          filename: "shared/images/[hash][ext][query]", // [hash]
         },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
         generator: {
-          filename: "shared/fonts/[hash][ext][query]",
+          filename: "shared/fonts/[hash][ext][query]", // [hash]
         },
       },
       {
