@@ -3,11 +3,13 @@ const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WebpackWatchedGlobEntries = require("webpack-watched-glob-entries-plugin");
+const webpack = require('webpack')
 
 const mode =
   process.env.NODE_ENV == "production" ? "production" : "development";
 
 const buildDir = "build";
+const publicDir = 'public'
 const devDir = "src";
 const pagesDir = path.resolve(__dirname, `./src/pages/`);
 const pages = fs
@@ -24,8 +26,8 @@ module.exports = {
   ]),
   output: {
     filename: "js/[name].js", // [hash]
-    chunkFilename: "js/[id].js", // [chunkhash]
-    assetModuleFilename: "assets/[hash][ext][query]", // [hash]
+    chunkFilename: "js/[name].js", // [chunkhash]
+    assetModuleFilename: "assets/[name][ext][query]", // [hash]
     path: path.resolve(__dirname, `./${buildDir}`),
     clean: true,
   },
@@ -33,9 +35,10 @@ module.exports = {
   devServer: {
     open: true,
     static: {
-      directory: "./src",
+      directory: `./${publicDir}`,
       watch: true,
     },
+    port: 3000,
   },
   optimization: {
     splitChunks: {
@@ -43,6 +46,11 @@ module.exports = {
     },
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      'window.jQuery': 'jquery'
+    }),
     new WebpackWatchedGlobEntries(),
     new MiniCssExtractPlugin({
       filename: "css/[name].css", // [contenthash]
@@ -50,7 +58,7 @@ module.exports = {
     ...pages.map(
       (page) =>
         new HtmlWebpackPlugin({
-          favicon: `${devDir}/shared/images/favicon.png`,
+          favicon: `${publicDir}/favicon.png`,
           hash: true,
           template: `${pagesDir}/${page}`,
           filename: `${page.replace(/\.pug/, '.html')}`,
@@ -90,14 +98,14 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
         generator: {
-          filename: "shared/images/[hash][ext][query]", // [hash]
+          filename: "images/[hash][ext][query]", // [hash]
         },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
         generator: {
-          filename: "shared/fonts/[hash][ext][query]", // [hash]
+          filename: "fonts/[name][ext][query]", // [hash]
         },
       },
       {

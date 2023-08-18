@@ -617,46 +617,6 @@ main
                 label.label-name(for='message')
                   span.content-name  &Kcy;&ocy;&mcy;&mcy;&iecy;&ncy;&tcy;&acy;&rcy;&icy;&jcy; 
               input#id_url(type='hidden' name='url')
-              script(src='https://www.google.com/recaptcha/api.js?onload=recaptchaCallback_f0bba60857b244418dd3fa07e5f78cdd&render=explicit')
-              script(type='text/javascript').
-                var recaptchaCallback_f0bba60857b244418dd3fa07e5f78cdd =
-                function () {
-                var el = document.querySelector(
-                '.g-recaptcha[data-widget-uuid="f0bba60857b244418dd3fa07e5f78cdd"]'
-                );
-                var form_f0bba60857b244418dd3fa07e5f78cdd =
-                el.closest("form");
-                var recaptcha_f0bba60857b244418dd3fa07e5f78cdd =
-                grecaptcha.render(el, {
-                sitekey: el.dataset.sitekey,
-                callback: el.dataset.callback,
-                });
-                var verifyCaptcha_f0bba60857b244418dd3fa07e5f78cdd =
-                function (e) {
-                e.preventDefault();
-                grecaptcha.execute(
-                recaptcha_f0bba60857b244418dd3fa07e5f78cdd
-                );
-                };
-                form_f0bba60857b244418dd3fa07e5f78cdd.addEventListener(
-                "submit",
-                verifyCaptcha_f0bba60857b244418dd3fa07e5f78cdd
-                );
-                };
-                // Submit function to be called, after reCAPTCHA was successful.
-                var onSubmit_f0bba60857b244418dd3fa07e5f78cdd = function (
-                token
-                ) {
-                console.log(
-                "reCAPTCHA validated for 'data-widget-uuid=\\"f0bba60857b244418dd3fa07e5f78cdd\"'. Submitting form..."
-                );
-                document
-                .querySelector(
-                '.g-recaptcha[data-widget-uuid="f0bba60857b244418dd3fa07e5f78cdd"]'
-                )
-                .closest("form")
-                .submit();
-                };
               #cap-feedbackmessageform.g-recaptcha(data-callback='feedback_form_ajax_submit' data-sitekey='6LcNqf8hAAAAAABJUmg6-HHOj8AfrIA26SM5oRe4' required='' data-widget-uuid='f0bba60857b244418dd3fa07e5f78cdd' data-size='invisible')
               button.btn.btn--main-min(type='submit')
                 | &Ocy;&tcy;&pcy;&rcy;&acy;&vcy;&icy;&tcy;&softcy;
