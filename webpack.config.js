@@ -12,9 +12,21 @@ const buildDir = "build";
 const publicDir = 'public'
 const devDir = "src";
 const pagesDir = path.resolve(__dirname, `./src/pages/`);
-const pages = fs
-.readdirSync(pagesDir)
-.filter((fileName) => fileName.endsWith(".pug"));
+let files  = [];
+
+function throughDirectory(directory) {
+    fs.readdirSync(directory).forEach(File => {
+        const absolute = path.join(directory, File);
+        if (fs.statSync(absolute).isDirectory()) return throughDirectory(absolute);
+        else return files.push(absolute);
+    });
+}
+
+throughDirectory(pagesDir)
+
+const pages = files.map(page => page.replace(pagesDir, '')).map(page => page.replace(/\\/g, "/")).map(page => page.slice(1));
+
+console.log(pages);
 
 console.log(mode + " mode");
 
