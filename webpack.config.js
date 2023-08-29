@@ -33,21 +33,27 @@ console.log(mode + " mode");
 module.exports = {
   mode: mode,
   stats: "minimal",
+  target: 'web',
+  resolve: {
+    alias: {
+      public: path.resolve(__dirname, '/public'),
+    },
+  },
   entry: WebpackWatchedGlobEntries.getEntries([
     path.resolve(__dirname, `${devDir}/*.js`),
   ]),
   output: {
     filename: "js/[name].js", // [hash]
     chunkFilename: "js/[name].js", // [chunkhash]
-    assetModuleFilename: "assets/[name][ext][query]", // [hash]
+    assetModuleFilename: "[name][ext][query]", // [hash]
     path: path.resolve(__dirname, `./${buildDir}`),
     clean: true,
   },
-  devtool: 'source-map',
+  devtool: mode === 'development' ? 'source-map' : false,
   devServer: {
-    open: true,
+    open: false,
+    hot: true,
     static: {
-      directory: `./${publicDir}`,
       watch: true,
     },
     port: 3000,
@@ -73,15 +79,25 @@ module.exports = {
           favicon: `${publicDir}/favicon.png`,
           hash: true,
           template: `${pagesDir}/${page}`,
-          filename: `${page.replace(/\.pug/, '.html')}`,
+          filename: page,
         })
     ),
   ],
   module: {
     rules: [
       {
-        test: /\.html$/i,
-        loader: "html-loader",
+        test: /\.html?$/,
+        use: [
+          {
+            loader: 'html-loader', // Used to output as html
+          },
+          {
+            loader: 'webpack-ssi-include-loader',
+            options: {
+              localPath: path.join(__dirname, '/src'),
+            },
+          },
+        ],
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -110,7 +126,7 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
         generator: {
-          filename: "images/[hash][ext][query]", // [hash]
+          filename: "images/[name][ext][query]", // [hash]
         },
       },
       {
@@ -119,11 +135,6 @@ module.exports = {
         generator: {
           filename: "fonts/[name][ext][query]", // [hash]
         },
-      },
-      {
-        test: /\.pug$/,
-        loader: "pug-loader",
-        exclude: /(node_modules|bower_components)/,
       },
       {
         test: /\.m?js$/,

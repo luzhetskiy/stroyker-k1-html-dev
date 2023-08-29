@@ -1,0 +1,62 @@
+<div id="callme-modal" class="modal" style="display: none">
+  <div class="modal-content">
+    <span class="content-title content-title--min center h2"
+      >Заказать обратный звонок</span
+    >
+    <form
+      id="crm-callme-request-form"
+      class="card-body form-inline callme-request-form"
+      method="post"
+      action="/crm/callme-request/"
+    >
+      <input
+        type="hidden"
+        name="csrfmiddlewaretoken"
+        value="WwB6ZXS83VuYP0PmIstLZgczmIM5DdefM2YaEFI5dCRJPl3Wlqy2tHiO0TbhwDZ9"
+      />
+
+      <input type="hidden" name="url" value="/" />
+
+      <div class="form-group">
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          autocomplete="off"
+          required
+        />
+        <label for="name" class="label-name">
+          <span class="content-name"> Как Вас зовут </span>
+        </label>
+      </div>
+
+      <div class="form-group">
+        <input
+          type="tel"
+          class="form-control phone"
+          name="phone"
+          autocomplete="off"
+          required
+        />
+        <label for="phone" class="label-name">
+          <span class="content-name"> Ваш Телефон </span>
+        </label>
+      </div>
+
+      <div class="form-group-inline">
+        <button
+          type="submit"
+          class="btn btn--main-min button-theme button-theme_primary"
+        >
+          Отправить
+        </button>
+        <a class="form-close btn-close" data-fancybox-close>Закрыть</a>
+      </div>
+
+      <p>
+        Нажимая на кнопку, вы даете согласие на обработку персональных
+        данных и соглашаетесь с нашей политикой конфиденциальности
+      </p>
+    </form>
+  </div>
+</div>
