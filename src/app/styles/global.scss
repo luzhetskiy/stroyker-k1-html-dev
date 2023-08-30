@@ -243,12 +243,6 @@ p:last-child {
   }
 }
 
-/* @media (max-width: 767px) {
-        header {
-            padding-top: 60px;
-        }
-    } */
-
 .top-header {
   background-color: var(--header-top-bg-color, #fff);
 }
@@ -16054,7 +16048,6 @@ input, textarea {
   position: fixed; }
 
 header {
-  position: absolute;
   z-index: 100;
   width: 100%; }
   header .header-fixed-content {
@@ -18581,3 +18574,5 @@ footer > .container {
       }
     }
     
+
+
