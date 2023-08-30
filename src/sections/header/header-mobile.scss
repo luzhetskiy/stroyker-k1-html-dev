@@ -3,20 +3,22 @@
 
 @media only screen and (max-width: 991px) {
   header.header--mob{
-      display: flex;
+      display: block;
   }
 }
 
 
 header.header--mob{
   background: #fff;
-  height: 60px;
-  flex-wrap: wrap;
-  align-items: center;
-  position: fixed;
   z-index: 999;
   top: 0;
   left: 0;
+}
+
+.header--mob .default-header-mob-section {
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .header--mob .row{
