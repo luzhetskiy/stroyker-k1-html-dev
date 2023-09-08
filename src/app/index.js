@@ -1,5 +1,3 @@
-import './styles/index.sass'
-
 import './libs/jquery'
 import './libs/mmenu'
 import './libs/owl-carousel'

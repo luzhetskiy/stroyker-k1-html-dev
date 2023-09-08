@@ -1,21 +1,21 @@
 /* Montserrat-SemiBold */
 @font-face {
   font-family: "Montserrat-SemiBold";
-  src: url("../../../public/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  src: url("../../../../public/fonts/Montserrat-SemiBold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 /* Roboto-Regular */
 @font-face {
   font-family: "Roboto-Regular";
-  src: url("../../../public/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../../../../public/fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 /* Roboto-Bold */
 @font-face {
   font-family: "Roboto-Bold";
-  src: url("../../../public/fonts/Roboto-Bold.ttf") format("truetype");
+  src: url("../../../../public/fonts/Roboto-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -32,6 +32,12 @@
 
 .pr--0{
   padding-right: 0!important;
+}
+
+.header-wrapper, .header-wrapper-default {
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
 
 @media (min-width: 991px){

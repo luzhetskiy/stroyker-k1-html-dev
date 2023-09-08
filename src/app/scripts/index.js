@@ -9,6 +9,7 @@ $(document).ready(function () {
     return false;
   });
 });
+
 $('.like-btn').on('click', function (event) {
   event.preventDefault();
   $(this).toggleClass('active');
