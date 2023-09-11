@@ -80,7 +80,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(ico|png|jp?g|webp|svg)$/,
+        test: /\.(ico|png|jpg|jpeg|webp|svg)$/,
         type: 'asset/resource',
         generator: {
           filename: 'images/[name][id][ext][query]',
