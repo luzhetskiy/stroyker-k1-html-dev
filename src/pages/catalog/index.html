@@ -1,0 +1,2679 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Корзина</title>
+
+    <link rel="icon" type="image/x-icon" href="public/favicon.png">
+
+    <link rel="stylesheet" href="src/app/index.sass">
+    <link rel="stylesheet" href="src/app/styles/headers/header-catalog.scss">
+
+    <script defer src="src/app/index.js"></script>
+    
+  </head>
+
+  <body class="wide-mode wide-mode-alter">
+
+    <%~ include('headers/header-default.html') %>
+
+    <main>
+      <section class="conditional-section bg-color mb-0">
+        <div class="container">
+          <div class="catalog-side mobile-show">
+            <span class="catalog-side__title">
+              <span class="icon">
+                <svg
+                  width="16"
+                  height="14"
+                  viewBox="0 0 16 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              Каталог продукции
+            </span>
+
+            <!-- аккордеон вариант (классу catalog-side__content добавилось класс -accordeon чтобы css конфликты не были, в scripts.js добавилось одна строка - $('.catalog-side__content-accordeon').toggle(0); ) -->
+            <div class="catalog-side__content-accordeon">
+              <ul class="custom__accordion v-arrow mb-0">
+                <!-- Утепление -->
+                <li>
+                  <a class="acc__toggle" href="javascript:void(0);"
+                    >Утепление</a
+                  >
+                  <ul class="inner">
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="acc__toggle acc__toggle-inner"
+                        >Листовые строительные материалы</a
+                      >
+                      <div class="inner">
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="acc__toggle acc__toggle-inner"
+                        >Древесина</a
+                      >
+                      <div class="inner">
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="acc__toggle acc__toggle-inner"
+                        >Древесина</a
+                      >
+                      <div class="inner">
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="acc__toggle acc__toggle-inner"
+                        >Древесина</a
+                      >
+                      <div class="inner">
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <!-- Утепление -->
+                <li>
+                  <a class="acc__toggle" href="javascript:void(0);"
+                    >Утепление</a
+                  >
+                  <ul class="inner">
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="acc__toggle acc__toggle-inner"
+                        >Листовые строительные материалы</a
+                      >
+                      <div class="inner">
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="acc__toggle acc__toggle-inner"
+                        >Древесина</a
+                      >
+                      <div class="inner">
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="acc__toggle acc__toggle-inner"
+                        >Древесина</a
+                      >
+                      <div class="inner">
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                      </div>
+                    </li>
+                    <li>
+                      <a
+                        href="javascript:void(0);"
+                        class="acc__toggle acc__toggle-inner"
+                        >Древесина</a
+                      >
+                      <div class="inner">
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                        <p><a href="#">Фанера</a></p>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-first">
+        <div class="container">
+          <div class="page-head">
+            <div class="breadcrumbs breadcrumbs--lk">
+              <a href="">ГЛАВНАЯ</a>
+              <span class="sep"></span>
+              <a href="">КАТАЛОГ</a>
+              <span class="sep"></span>
+            </div>
+          </div>
+
+          <div class="content-block">
+            <span class="h1">Каталог </span>
+
+            <div class="catalog__links-block">
+              <a href="#">Утепление</a>
+              <a href="#">Изоляция</a>
+              <a href="#">Водосточные и дренажные системы</a>
+              <a href="#">Кровля</a>
+            </div>
+
+            <div class="comparison">
+              <div class="comparison__side">
+                <!-- v-underline - аккордеон с полосками  -->
+                <!-- v-arrow - аккордеон с стрелками  -->
+
+                <span><b>Стрелками (С дочерами и без)</b></span>
+                <ul class="custom__accordion v-arrow">
+                  <!-- Утепление -->
+                  <li>
+                    <a class="acc__toggle" href="javascript:void(0);"
+                      >Утепление</a
+                    >
+                    <ul class="inner">
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Листовые строительные материалы</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="http://box1.stroyker.pro/catalog/category/napolniay/plitka/"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина <b>(нет дочек)</b></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <span><b>С полосками (С дочерами и без)</b></span>
+                <ul class="custom__accordion v-underline">
+                  <!-- Утепление -->
+                  <li>
+                    <a class="acc__toggle" href="javascript:void(0);"
+                      >Утепление</a
+                    >
+                    <ul class="inner">
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Листовые строительные материалы</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="http://box1.stroyker.pro/catalog/category/napolniay/plitka/"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина <b>(нет дочек)</b></a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <span>стрелками (Открывается до фанеры</span>
+                <ul class="custom__accordion v-arrow">
+                  <!-- Утепление -->
+                  <li>
+                    <a class="acc__toggle" href="javascript:void(0);"
+                      >Утепление</a
+                    >
+                    <ul class="inner">
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Листовые строительные материалы</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Утепление -->
+                  <li>
+                    <a class="acc__toggle" href="javascript:void(0);"
+                      >Утепление</a
+                    >
+                    <ul class="inner">
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Листовые строительные материалы</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <span>стрелками (Открывается до листовых</span>
+                <ul class="custom__accordion v-arrow">
+                  <!-- Утепление -->
+                  <li>
+                    <a class="acc__toggle" href="javascript:void(0);"
+                      >Утепление</a
+                    >
+                    <div class="inner last_inner">
+                      <p><a href="#">Листовые строительные материалы</a></p>
+                      <p><a href="#">Листовые строительные материалы</a></p>
+                      <p><a href="#">Листовые строительные материалы</a></p>
+                      <p><a href="#">Листовые строительные материалы</a></p>
+                    </div>
+                  </li>
+                </ul>
+
+                <span>Не открывается</span>
+                <ul class="custom__accordion v-arrow">
+                  <!-- Утепление -->
+                  <li>
+                    <a class="acc__toggle not_toggle" href="#">Утепление</a>
+                    <a class="acc__toggle not_toggle" href="#">Утепление 2</a>
+                    <a class="acc__toggle not_toggle" href="#">Утепление 3</a>
+                  </li>
+                </ul>
+
+                <span>полосками</span>
+                <ul class="custom__accordion v-underline">
+                  <!-- Утепление -->
+                  <li>
+                    <a class="acc__toggle" href="javascript:void(0);"
+                      >Утепление</a
+                    >
+                    <ul class="inner">
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Листовые строительные материалы</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Утепление -->
+                  <li>
+                    <a class="acc__toggle" href="javascript:void(0);"
+                      >Утепление</a
+                    >
+                    <ul class="inner">
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Листовые строительные материалы</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                      <li>
+                        <a
+                          href="javascript:void(0);"
+                          class="acc__toggle acc__toggle-inner"
+                          >Древесина</a
+                        >
+                        <div class="inner">
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                          <p><a href="#">Фанера</a></p>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <span>полосками (Открывается до листовых</span>
+                <ul class="custom__accordion v-underline">
+                  <!-- Утепление -->
+                  <li>
+                    <a class="acc__toggle" href="javascript:void(0);"
+                      >Утепление</a
+                    >
+                    <div class="inner last_inner">
+                      <p><a href="#">Листовые строительные материалы</a></p>
+                      <p><a href="#">Листовые строительные материалы</a></p>
+                      <p><a href="#">Листовые строительные материалы</a></p>
+                      <p><a href="#">Листовые строительные материалы</a></p>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="comparison__side-content">
+                  <span class="comparison-category__title"
+                    >Показать параметры</span
+                  >
+                  <div class="comparison__radios">
+                    <div class="radio">
+                      <input
+                        type="radio"
+                        id="comparison1"
+                        name="comparison"
+                        checked
+                      />
+                      <label for="comparison1"
+                        ><span>Все параметры</span></label
+                      >
+                      <div class="radio-content radio-content--sm"></div>
+                    </div>
+                    <div class="radio">
+                      <input type="radio" id="comparison2" name="comparison" />
+                      <label for="comparison2"
+                        ><span>Различающиеся</span></label
+                      >
+                      <div class="radio-content radio-content--sm"></div>
+                    </div>
+                  </div>
+                  <div class="comparison-product__description">
+                    <div class="dep-item">Бренд</div>
+                    <div class="dep-item dep-item--text">
+                      <p>Сорт</p>
+                    </div>
+                    <div class="dep-item">Текстовое поле</div>
+                    <div class="dep-item">Параметр с прочерком</div>
+                    <div class="dep-item">Вес (лист), кг</div>
+                    <div class="dep-item">Материал</div>
+                  </div>
+                </div>
+              </div>
+              <div class="comparison__content">
+                <!-- КЛАСС item__fixed-height ДАЕТ ФИКСИРОВАННУЮ ВЫСОТУ ТОВАРАМ В САЛЙДЕРЕ, ЧТОБЫ НИЖНЫЕ ПАРАМЕТРИ С ЛЕВА И ТО ЧТО В ТОВАРЕ БЫЛИ НА ОДНОМ ЛИНИИ -->
+                <div class="catalog-body">
+                  <div
+                    class="d-grid gap-grid row-gap-sm-20 grid-columns-1 grid-columns-lg-3 grid-columns-xl-4"
+                  >
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25kh100kh3000mm-gost-1sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25х100х3000мм ГОСТ/1сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM00012025</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25х100х3000мм ГОСТ/1сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              75,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >73,50
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/87548"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25kh75kh6000mm-gost-1sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25х75х6000мм ГОСТ/1сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM000005020</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25х75х6000мм ГОСТ/1сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              149,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >146,02
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/87452"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-50kh150kh6000mm-gost-1sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 50х150х6000мм ГОСТ/1сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content">
+                            <span
+                              class="product-item__flag product-item__flag--hit"
+                              >хит</span
+                            >
+                          </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM0000496</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 50х150х6000мм ГОСТ/1сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              599,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >587,02
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/4400"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-50kh120kh6000mm-gost-1sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 50х120х6000мм ГОСТ/1сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM000005021</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 50х120х6000мм ГОСТ/1сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              479,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >469,42
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/87453"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25x150x5000mm-gost-1sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25×150×5000мм ГОСТ/1сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM000005019</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25×150×5000мм ГОСТ/1сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              248,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >243,04
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/87451"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-sort-2-sechenie-0030kh0150kh6m-1918/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная сорт 2 сечение 0,030х0,150х6м"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">00001670</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная сорт 2 сечение 0,030х0,150х6м</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              324,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >317,52
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/1670"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-sort-1-sechenie-0040kh0200kh6m-614/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная сорт 1 сечение 0,040х0,200х6м"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">00000456</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная сорт 1 сечение 0,040х0,200х6м</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              672,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >658,56
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/456"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25kh100kh3000mm-gost-2sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25х100х3000мм ГОСТ/2сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM0000800</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25х100х3000мм ГОСТ/2сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              68,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >66,64
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/4382"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-sort-1-sechenie-0050kh0150kh6m-530/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная сорт 1 сечение 0,050х0,150х6м"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">00000387</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная сорт 1 сечение 0,050х0,150х6м</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              576,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >564,48
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/387"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-sort-1-sechenie-0050kh0200kh6m-613/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная сорт 1 сечение 0,050х0,200х6м"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">00000455</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная сорт 1 сечение 0,050х0,200х6м</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              840,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >823,20
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/455"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-50kh150kh6000mm-gost-2sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 50х150х6000мм ГОСТ/2сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM0000867</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 50х150х6000мм ГОСТ/2сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              405,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >396,90
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/4401"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-sort-2-sechenie-005kh0150kh6m-682/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная сорт 2 сечение 0,050х0,150х6м"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">00000519</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная сорт 2 сечение 0,050х0,150х6м</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              495,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >485,10
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/519"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25x100x6000mm-gost-1-2-sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25×100×6000мм ГОСТ(1-2 сорт) (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content">
+                            <span
+                              class="product-item__flag product-item__flag--hit"
+                              >хит</span
+                            >
+                          </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM0000797</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25×100×6000мм ГОСТ(1-2 сорт)
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              180,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >176,40
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/4380"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25x150x6000mm-gost-1-2-sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25×150×6000мм ГОСТ(1-2 сорт) (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM0000791</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25×150×6000мм ГОСТ(1-2 сорт)
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              270,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >264,60
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/4381"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25kh100kh6000mm-gost-1sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25х100х6000мм ГОСТ/1сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM0000609</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25х100х6000мм ГОСТ/1сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              200,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >196,00
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/4383"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25kh100kh6000mm-gost-2sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25х100х6000мм ГОСТ/2сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM0000641</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25х100х6000мм ГОСТ/2сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              135,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >132,30
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/4384"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25kh120kh6000mm-gost-1sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25х120х6000мм ГОСТ/1сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content">
+                            <span
+                              class="product-item__flag product-item__flag--hit"
+                              >хит</span
+                            >
+                          </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM0000761</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25х120х6000мм ГОСТ/1сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              240,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >235,20
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/4385"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-osina-30x150x6000mm-2sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная ОСИНА 30×150×6000мм 2сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM-0000808</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная ОСИНА 30×150×6000мм 2сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              405,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >396,90
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/85702"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25kh150kh3000mm-gost-1sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25х150х3000мм ГОСТ/1сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM0000798</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25х150х3000мм ГОСТ/1сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              149,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >146,02
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/4386"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25kh150kh3000mm-gost-2sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25х150х3000мм ГОСТ/2сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content">
+                            <span
+                              class="product-item__flag product-item__flag--sale"
+                              >sale</span
+                            >
+                          </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM0000799</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25х150х3000мм ГОСТ/2сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              57,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >55,86
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/4387"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25kh150kh6000mm-gost-1sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25х150х6000мм ГОСТ/1сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content">
+                            <span
+                              class="product-item__flag product-item__flag--hit"
+                              >хит</span
+                            >
+                          </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM0000502</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25х150х6000мм ГОСТ/1сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              300,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >294,00
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/4388"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25x120x6000mm-2sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25×120×6000мм 2сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM-0000750</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25×120×6000мм 2сорт (естественной
+                            влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              198,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >194,04
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/85704"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25x150x3000mm-1sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25×150×3000мм 1сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content"> </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM-0000818</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25×150×3000мм 1сорт (естественной
+                            влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              158,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >154,84
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/85705"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="product-item">
+                      <a
+                        href="/catalog/product/doska-obreznaia-25kh150kh6000mm-gost-2sort-estestvennoi-vlazhnosti/"
+                        class="product-item__link"
+                      >
+                        <div class="product-item__image">
+                          <div class="product-item__image-inner">
+                            <img
+                              src="public/images/catalog-product.jpg"
+                              alt="Доска обрезная 25х150х6000мм ГОСТ/2сорт (естественной влажности)"
+                            />
+                          </div>
+
+                          <span class="product-item__flag-content">
+                            <span
+                              class="product-item__flag product-item__flag--hit"
+                              >хит</span
+                            >
+                          </span>
+                        </div>
+                        <span class="product-item__content-top">
+                          <span class="product-item__head">
+                            <span class="product-item__art">LM0000503</span>
+                          </span>
+                          <span class="product-item__name"
+                            >Доска обрезная 25х150х6000мм ГОСТ/2сорт
+                            (естественной влажности)</span
+                          >
+
+                          <div
+                            class="product-item__status product-item__status--many common-status"
+                          >
+                            В наличии
+                          </div>
+
+                          <span class="product-item__cost with-online-price">
+                            <span class="product-item__cost-product">
+                              180,00
+                              <span> ₽/шт</span>
+                            </span>
+                          </span>
+
+                          <span
+                            class="product-item__cost product-item__online-cost"
+                          >
+                            <span class="product-item__cost-product"
+                              >176,40
+                              <span> ₽/шт</span>
+                            </span>
+                            <span class="product-item__cost-label"
+                              >(онлайн)</span
+                            >
+                          </span>
+                        </span>
+                      </a>
+                      <div class="product-item__content-bottom">
+                        <div class="product-item__btns">
+                          <div class="shopping-cart-product">
+                            <div class="input-number">
+                              <div class="order-down"></div>
+                              <input
+                                type="number"
+                                min="0"
+                                step="1"
+                                value="1"
+                                id="number"
+                                required=""
+                              />
+                              <div class="order-up"></div>
+                            </div>
+
+                            <a
+                              href="/cart/add/4389"
+                              class="shopping-cart-btn add-to-cart button-theme button-theme_cart"
+                            >
+                              <svg class="icon">
+                                <use xlink:href="#shopping-cart"></use>
+                              </svg>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pagination">
+                    <span>1</span>
+
+                    <span>...</span>
+
+                    <span>
+                      <a href="?page=3"> 3 </a>
+                    </span>
+                    <a class="next" href="?page=2"> </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-dark feedback-form">
+        <div class="container">
+          <div class="question-main" id="question-main">
+            <div class="question-form">
+              <span class="content-title center h2">Остались вопросы?</span>
+              <form
+                action="/crm/message/"
+                method="post"
+                id="feedback-message-request-form"
+              >
+                <input
+                  type="hidden"
+                  name="csrfmiddlewaretoken"
+                  value="WwB6ZXS83VuYP0PmIstLZgczmIM5DdefM2YaEFI5dCRJPl3Wlqy2tHiO0TbhwDZ9"
+                />
+                <div class="question-form__column">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="name"
+                      autocomplete="off"
+                      required
+                    />
+                    <label for="name" class="label-name">
+                      <span class="content-name"> Имя* </span>
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="phone"
+                      class="form-control phone"
+                      name="phone"
+                      autocomplete="off"
+                      required
+                    />
+                    <label for="phone" class="label-name">
+                      <span class="content-name"> Телефон </span>
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="mail"
+                      class="form-control"
+                      name="email"
+                      autocomplete="off"
+                      required
+                    />
+                    <label for="text" class="label-name">
+                      <span class="content-name"> e-mail </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="question-form__column">
+                  <div class="form-group">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      autocomplete="off"
+                      required
+                    ></textarea>
+                    <label for="message" class="label-name">
+                      <span class="content-name"> Комментарий </span>
+                    </label>
+                  </div>
+                  <input type="hidden" name="url" id="id_url" />
+
+                  <button type="submit" class="btn btn--main-min">
+                    Отправить
+                  </button>
+                </div>
+              </form>
+
+              <p>
+                Нажимая на кнопку, вы даете согласие на обработку персональных
+                данных и соглашаетесь с нашей политикой конфиденциальности
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <%~ include('footer/footer.html') %>
+
+    <%~ include('fixed-button/index.html') %>
+
+    <%~ include('safety-message-fixed/index.html') %>
+
+    <%~ include('callme-modal/index.html') %>
+   
+  </body>
+</html>

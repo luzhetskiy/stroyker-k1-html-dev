@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Корзина</title>
+
+    <link rel="icon" type="image/x-icon" href="public/favicon.png">
+
+    <link rel="stylesheet" href="src/app/index.sass">
+    <link rel="stylesheet" href="src/app/styles/headers/header-catalog.scss">
+
+    <script defer src="src/app/index.js"></script>
+    
+  </head>
+
+  <body class="wide-mode wide-mode-alter">
+
+    <%~ include('headers/header-default.html') %>
+
+    <main>
+      <section class="conditional-section bg-color mb-0">
+        <div class="container">
+          <div class="catalog-side mobile-show">
+            <span class="catalog-side__title">
+              <span class="icon">
+                <svg
+                  width="16"
+                  height="14"
+                  viewBox="0 0 16 14"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              Каталог продукции
+            </span>
+            <div class="catalog-side__content">
+              <ul>
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/vagonka-i-evrovagonka/"
+                    >Вагонка и Евровагонка</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/category/vagonka-i-evrovagonka/evrovagonka-olha/"
+                    >Евровагонка (ольха)</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a href="https://vagonka-brus-doska.ru/catalog/blok-haus/"
+                    >Блок Хаус</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/imitaciya-brusa/"
+                    >Имитация бруса</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/doska-pola-hvoya/"
+                    >Доска пола шпунтованная</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/terrasnaya-doska-listvennica/"
+                    >Террасная доска</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a href="https://vagonka-brus-doska.ru/catalog/planken/"
+                    >Планкен</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/palubnaya-doska/"
+                    >Палубная доска</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a href="https://vagonka-brus-doska.ru/catalog/polok/"
+                    >Полок</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/brus-i-doska-suhie-strogannye/"
+                    >Брус и Доска</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/brevno-ocilindrovannoe/"
+                    >Бревно оцилиндрованное</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/derevianniy-dekor/"
+                    >Деревянный декор</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/elementy-lestnic/"
+                    >Элементы лестниц</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a href="https://vagonka-brus-doska.ru/catalog/dveri-i-okna/"
+                    >Двери и окна</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/fanera-osb-dsp-dvp-tssp/"
+                    >Фанера, ОСБ, ДСП, ДВП</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a href="https://vagonka-brus-doska.ru/catalog/utepliteli/"
+                    >Утеплители</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/rulonnie-izoliyzionnie-materialy/"
+                    >Рулонные изоляционные материалы</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/propitki-dlya-drevesiny/"
+                    >Пропитки для древесины</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/derevyannye-igrushki/"
+                    >Постройки и деревянные игрушки</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/karkasnye-minibani/"
+                    >Каркасные минибани</a
+                  >
+                </li>
+
+                <li class="menu-item current">
+                  <a href="https://vagonka-brus-doska.ru/catalog/rasprodazha/"
+                    >РАСПРОДАЖА</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-first">
+        <div class="container">
+          <div class="page-head">
+            <div class="breadcrumbs breadcrumbs--lk">
+              <a href="">ГЛАВНАЯ</a>
+              <span class="sep"></span>
+              <a href="">КАТАЛОГ</a>
+              <span class="sep"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-first">
+        <div class="container">
+          <div class="content-block root-category-slider">
+            <span class="content-title product-set-title h2"
+              >Категории товаров</span
+            >
+            <div class="category-slider">
+              <div class="owl-carousel">
+                <div class="item">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/vagonka-i-evrovagonka/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Вагонка и Евровагонка'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/evrovagonka_banner.jpg"
+                        alt="Вагонка и Евровагонка"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name"
+                      >Вагонка и Евровагонка</span
+                    >
+                  </a>
+
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/category/vagonka-i-evrovagonka/evrovagonka-olha/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Евровагонка (ольха)'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/%D0%BE%D0%BB%D1%8C%D1%85%D0%B0_TAvlQsE.jpg"
+                        alt="Евровагонка (ольха)"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name"
+                      >Евровагонка (ольха)</span
+                    >
+                  </a>
+                </div>
+
+                <div class="item">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/blok-haus/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Блок Хаус'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/blok-house_%D0%A0%D0%95%D0%94.jpg"
+                        alt="Блок Хаус"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name">Блок Хаус</span>
+                  </a>
+
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/imitaciya-brusa/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Имитация бруса'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/%D0%98%D0%BC.%D0%91%D1%80%D1%83%D1%81%D0%B0_-_%D0%9A%D0%B0%D1%82.jpg"
+                        alt="Имитация бруса"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name">Имитация бруса</span>
+                  </a>
+                </div>
+
+                <div class="item">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/doska-pola-hvoya/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Доска пола шпунтованная'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/%D0%94%D0%BE%D1%81%D0%BA%D0%B0_%D0%BF%D0%BE%D0%BB%D0%B0_%D1%80%D0%B5%D0%B4_GswSP0L.jpg"
+                        alt="Доска пола шпунтованная"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name"
+                      >Доска пола шпунтованная</span
+                    >
+                  </a>
+
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/terrasnaya-doska-listvennica/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Террасная доска'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/%D0%92%D0%B5%D0%BB%D1%8C%D0%B2%D0%B5%D1%82.jpg"
+                        alt="Террасная доска"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name">Террасная доска</span>
+                  </a>
+                </div>
+
+                <div class="item">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/planken/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Планкен'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/%D0%9F%D0%BB%D0%B0%D0%BD%D0%BA%D0%B5%D0%BD_2.jpg"
+                        alt="Планкен"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name">Планкен</span>
+                  </a>
+
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/palubnaya-doska/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Палубная доска'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/%D0%9F%D0%B0%D0%BB%D1%83%D0%B1%D0%BD%D0%B0%D1%8F.jpg"
+                        alt="Палубная доска"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name">Палубная доска</span>
+                  </a>
+                </div>
+
+                <div class="item">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/polok/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Полок'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/Screenshot_1_4.png"
+                        alt="Полок"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name">Полок</span>
+                  </a>
+
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/brus-i-doska-suhie-strogannye/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Брус и Доска'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/brus_copy_NR95Dd8.jpeg"
+                        alt="Брус и Доска"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name">Брус и Доска</span>
+                  </a>
+                </div>
+
+                <div class="item">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/brevno-ocilindrovannoe/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Бревно оцилиндрованное'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/%D0%B1%D1%80%D0%B5%D0%B2%D0%BD%D0%B0_1.jpg"
+                        alt="Бревно оцилиндрованное"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name"
+                      >Бревно оцилиндрованное</span
+                    >
+                  </a>
+
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/derevianniy-dekor/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Деревянный декор'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/1_%D1%80%D0%B5%D0%B4.jpg"
+                        alt="Деревянный декор"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name"
+                      >Деревянный декор</span
+                    >
+                  </a>
+                </div>
+
+                <div class="item">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/elementy-lestnic/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Элементы лестниц'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/%D0%9D%D0%B0%D0%BB_%D0%A5%D0%B2%D0%BE%D1%8F_PnVw6xz.jpg"
+                        alt="Элементы лестниц"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name"
+                      >Элементы лестниц</span
+                    >
+                  </a>
+
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/dveri-i-okna/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Двери и окна'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/derevjannye-okna-moskva5.jpg"
+                        alt="Двери и окна"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name">Двери и окна</span>
+                  </a>
+                </div>
+
+                <div class="item">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/fanera-osb-dsp-dvp-tssp/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Фанера, ОСБ, ДСП, ДВП'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/%D0%BB%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B5.jpg"
+                        alt="Фанера, ОСБ, ДСП, ДВП"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name"
+                      >Фанера, ОСБ, ДСП, ДВП</span
+                    >
+                  </a>
+
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/utepliteli/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Утеплители'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/%D0%A3%D1%82%D0%B5%D0%BF%D0%BB%D0%B8%D1%82%D0%B5%D0%BB%D0%B8.jpg"
+                        alt="Утеплители"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name">Утеплители</span>
+                  </a>
+                </div>
+
+                <div class="item">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/rulonnie-izoliyzionnie-materialy/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Рулонные изоляционные материалы'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/Screenshot_2_VPO1utx.png"
+                        alt="Рулонные изоляционные материалы"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name"
+                      >Рулонные изоляционные материалы</span
+                    >
+                  </a>
+
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/propitki-dlya-drevesiny/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Пропитки для древесины'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/widen_960_crop_1000_667_0_0_q90_1083691_cc2477772b.jpeg"
+                        alt="Пропитки для древесины"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name"
+                      >Пропитки для древесины</span
+                    >
+                  </a>
+                </div>
+
+                <div class="item">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/derevyannye-igrushki/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Постройки и деревянные игрушки'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/%D0%A2%D0%B5%D1%80%D0%BC%D0%BE%D0%B0%D0%B1%D0%B0%D1%88%D0%B8_3_38P6y7h.jpg"
+                        alt="Постройки и деревянные игрушки"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name"
+                      >Постройки и деревянные игрушки</span
+                    >
+                  </a>
+
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/karkasnye-minibani/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'Каркасные минибани'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        src="https://vagonka-brus-doska.ru/media/categories/images/%D0%BC%D0%B8%D0%BD%D0%B8%D0%B1%D0%B0%D0%BD%D1%8F_3.jpg"
+                        alt="Каркасные минибани"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name"
+                      >Каркасные минибани</span
+                    >
+                  </a>
+                </div>
+
+                <div class="item">
+                  <a
+                    href="https://vagonka-brus-doska.ru/catalog/rasprodazha/"
+                    class="catalog-menu-item"
+                    title="Перейти на страницу раздела 'РАСПРОДАЖА'"
+                  >
+                    <span class="catalog-menu-item__image">
+                      <img
+                        width="250"
+                        height="200"
+                        src="https://vagonka-brus-doska.ru/media/categories/images/Frame_68.svg"
+                        alt="РАСПРОДАЖА"
+                      />
+                    </span>
+                    <span class="catalog-menu-item__name">РАСПРОДАЖА</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-dark feedback-form">
+        <div class="container">
+          <div class="question-main" id="question-main">
+            <div class="question-form">
+              <span class="content-title center h2">Остались вопросы?</span>
+              <form
+                action="/crm/message/"
+                method="post"
+                id="feedback-message-request-form"
+              >
+                <input
+                  type="hidden"
+                  name="csrfmiddlewaretoken"
+                  value="WwB6ZXS83VuYP0PmIstLZgczmIM5DdefM2YaEFI5dCRJPl3Wlqy2tHiO0TbhwDZ9"
+                />
+                <div class="question-form__column">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="name"
+                      autocomplete="off"
+                      required
+                    />
+                    <label for="name" class="label-name">
+                      <span class="content-name"> Имя* </span>
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="phone"
+                      class="form-control phone"
+                      name="phone"
+                      autocomplete="off"
+                      required
+                    />
+                    <label for="phone" class="label-name">
+                      <span class="content-name"> Телефон </span>
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="mail"
+                      class="form-control"
+                      name="email"
+                      autocomplete="off"
+                      required
+                    />
+                    <label for="text" class="label-name">
+                      <span class="content-name"> e-mail </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="question-form__column">
+                  <div class="form-group">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      autocomplete="off"
+                      required
+                    ></textarea>
+                    <label for="message" class="label-name">
+                      <span class="content-name"> Комментарий </span>
+                    </label>
+                  </div>
+                  <input type="hidden" name="url" id="id_url" />
+
+                  <button type="submit" class="btn btn--main-min">
+                    Отправить
+                  </button>
+                </div>
+              </form>
+
+              <p>
+                Нажимая на кнопку, вы даете согласие на обработку персональных
+                данных и соглашаетесь с нашей политикой конфиденциальности
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <%~ include('footer/footer.html') %>
+
+    <%~ include('fixed-button/index.html') %>
+
+    <%~ include('safety-message-fixed/index.html') %>
+
+    <%~ include('callme-modal/index.html') %>
+
+  </body>
+</html>

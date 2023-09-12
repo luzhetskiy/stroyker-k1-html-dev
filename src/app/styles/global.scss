@@ -243,6 +243,12 @@ p:last-child {
   }
 }
 
+.header-wrapper-default {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
 .top-header {
   background-color: var(--header-top-bg-color, #fff);
 }

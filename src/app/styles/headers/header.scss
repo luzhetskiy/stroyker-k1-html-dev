@@ -34,12 +34,6 @@
   padding-right: 0!important;
 }
 
-.header-wrapper, .header-wrapper-default {
-  position: absolute;
-  width: 100%;
-  top: 0;
-}
-
 @media (min-width: 991px){
   .__header .row .col-lg-2{width: 16.66667%;}
   .__header .row .col-lg-6{width: 50%;}
