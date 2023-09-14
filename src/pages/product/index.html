@@ -6,17 +6,15 @@
 
     <title>Страница продукта</title>
 
-    <link rel="icon" type="image/x-icon" href="public/favicon.png">
+    <link rel="icon" type="image/x-icon" href="public/favicon.png" />
 
-    <link rel="stylesheet" href="src/app/index.sass">
-    <link rel="stylesheet" href="src/app/styles/headers/header-catalog.scss">
+    <link rel="stylesheet" href="src/app/index.sass" />
+    <link rel="stylesheet" href="src/app/styles/headers/header-catalog.scss" />
 
     <script defer src="src/app/index.js"></script>
-    
   </head>
 
   <body class="inner-page">
-
     <%~ include('headers/header-default.html') %>
 
     <main>
@@ -35,96 +33,41 @@
                   <path
                     d="M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z"
                     fill="currentColor"
-                  />
+                  ></path>
                 </svg>
               </span>
-              Каталог продукции
+              Проекты домов
             </span>
             <div class="catalog-side__content">
               <ul>
-                <li class="menu-item current">
-                  <a href="/catalog/krovelnye-materialy/">Кровельные товары</a>
-                </li>
-
-                <li class="menu-item current">
-                  <a href="/catalog/utepliteli/">Утеплители</a>
-                </li>
-
-                <li class="menu-item current">
-                  <a href="/catalog/fasadnye-materialy/">Фасадные материалы</a>
-                </li>
-
-                <li class="menu-item current">
-                  <a href="/catalog/gidroizolyaciya/">Гидроизоляция</a>
-                </li>
-
-                <li class="menu-item current">
-                  <a href="/catalog/listovye-materialy/">Листовые материалы</a>
-                </li>
-
-                <li class="menu-item current">
-                  <a href="/catalog/obshestroitelnye-materialy/"
-                    >Общестроительные</a
+                <li class="menu-item">
+                  <a href="/catalog/kategoriya-tovarov-1/"
+                    >Проекты домов до 150м2</a
                   >
                 </li>
 
-                <li class="menu-item current">
-                  <a href="/catalog/kanalizaciya/">Коммуникации</a>
-                </li>
-
-                <li class="menu-item current">
-                  <a href="/catalog/chernovaya-otdelka/">Черновая отделка</a>
-                </li>
-
-                <li class="menu-item current">
-                  <a href="/catalog/peny-germetiki-zhidkie-gvozdi/"
-                    >Пены, герметики</a
+                <li class="menu-item">
+                  <a href="/catalog/kategoriya-tovarov-2/"
+                    >Проекты домов до 300м2</a
                   >
-                </li>
-
-                <li class="menu-item current">
-                  <a href="/catalog/krepezh/">Крепеж</a>
-                </li>
-
-                <li class="menu-item current">
-                  <a href="/catalog/rashodnye-materialy/"
-                    >Расходные материалы</a
-                  >
-                </li>
-
-                <li class="menu-item current">
-                  <a href="/catalog/lakokrasochnye-materialy/"
-                    >Лакокрасочные материалы</a
-                  >
-                </li>
-
-                <li class="menu-item current">
-                  <a href="/catalog/instrument/">Инструмент</a>
-                </li>
-
-                <li class="menu-item current">
-                  <a href="/catalog/elektrika/">Электрика</a>
-                </li>
-
-                <li class="menu-item current">
-                  <a href="/catalog/rasprodazha/">Распродажа</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </section>
+
       <section class="section-dark">
         <div class="container">
           <div class="page-head">
             <div
               class="breadcrumbs breadcrumbs--lk"
-              itemscope
+              itemscope=""
               itemtype="http://schema.org/BreadcrumbList"
             >
               <span
                 itemprop="itemListElement"
-                itemscope
+                itemscope=""
                 itemtype="http://schema.org/ListItem"
               >
                 <a itemprop="item" title="Главная" href="/">
@@ -140,7 +83,7 @@
 
               <span
                 itemprop="itemListElement"
-                itemscope
+                itemscope=""
                 itemtype="http://schema.org/ListItem"
               >
                 <a itemprop="item" title="Каталог" href="/catalog/">
@@ -156,16 +99,16 @@
 
               <span
                 itemprop="itemListElement"
-                itemscope
+                itemscope=""
                 itemtype="http://schema.org/ListItem"
               >
                 <a
                   itemprop="item"
-                  title="Кровельные товары"
-                  href="/catalog/krovelnye-materialy/"
+                  title="Проекты домов до 150м2"
+                  href="/catalog/kategoriya-tovarov-1/"
                 >
-                  Кровельные товары
-                  <meta itemprop="name" content="Кровельные товары" />
+                  Проекты домов до 150м2
+                  <meta itemprop="name" content="Проекты домов до 150м2" />
                 </a>
                 <meta itemprop="position" content="3" />
               </span>
@@ -176,16 +119,16 @@
 
               <span
                 itemprop="itemListElement"
-                itemscope
+                itemscope=""
                 itemtype="http://schema.org/ListItem"
               >
                 <a
                   itemprop="item"
-                  title="Гибкая черепица"
-                  href="/catalog/category/krovelnye-materialy/gibkaya-cherepica/"
+                  title="Одноэтажные дома до 150м2"
+                  href="/catalog/category/kategoriya-tovarov-1/podkategoriya-tovarov-1/"
                 >
-                  Гибкая черепица
-                  <meta itemprop="name" content="Гибкая черепица" />
+                  Одноэтажные дома до 150м2
+                  <meta itemprop="name" content="Одноэтажные дома до 150м2" />
                 </a>
                 <meta itemprop="position" content="4" />
               </span>
@@ -193,134 +136,195 @@
           </div>
 
           <div class="content-block">
-            <div itemscope itemtype="http://schema.org/Product">
+            <div itemscope="" itemtype="http://schema.org/Product">
               <div class="product-card">
-                <div class="product-card__navigation">
-                  <a
-                    href="/catalog/product/tekhnonikol-gibkaia-cherepitsa-fokstrot-sandal-4a4e21-3303rus/"
-                    class="product-card__nav-prev single"
-                  >
-                    <span class="icon">
-                      <svg class="icon-svg">
-                        <use xlink:href="#product-nav-arrow"></use>
-                      </svg>
-                    </span>
-                    Предыдущий товар
-                  </a>
-                </div>
+                <div class="product-card__navigation"></div>
 
                 <div class="product-card__head">
-                  <h1 class="product-card__title" itemprop="name">
-                    Гибкая черепица Шинглас Shinglas, Фокстрот, Эвкалипт &
-                    4A4E21-3305RUS - купить по выгодной цене в Самаре
-                  </h1>
-                  <span class="product-card__artikul" itemprop="sku"
-                    >818114</span
-                  >
+                  <h1 class="product-card__title" itemprop="name">Товар 1</h1>
+                  <span class="product-card__artikul" itemprop="sku">001</span>
                 </div>
                 <div class="product-card__container">
                   <div class="product-card__slideshow">
-                    <div id="sync1" class="owl-carousel owl-theme">
-                      <a
-                        class="item"
-                        href="/media/products/images/Frame_1_haOZrec.png"
-                        data-fancybox="images"
-                        target="_blank"
-                      >
-                        <img
-                          itemprop="image"
-                          src="/media/products/images/Frame_1_haOZrec.png"
-                          alt="Гибкая черепица Шинглас Shinglas, Фокстрот, Эвкалипт &amp; 4A4E21-3305RUS (фото 1)"
-                        />
-                        <span class="product-item__flag-content">
-                          <span
-                            class="product-item__flag product-item__flag--hit"
-                            >хит</span
+                    <div
+                      id="sync1"
+                      class="owl-carousel owl-theme owl-loaded owl-drag"
+                    >
+                      <div class="owl-stage-outer">
+                        <div
+                          class="owl-stage"
+                          style="
+                            transform: translate3d(-660px, 0px, 0px);
+                            transition: all 0s ease 0s;
+                            width: 1650px;
+                          "
+                        >
+                          <div
+                            class="owl-item cloned"
+                            style="width: 320px; margin-right: 10px"
                           >
-                        </span>
-                      </a>
+                            <a
+                              class="item"
+                              href="public/images/banner-content-1.png"
+                              data-fancybox="images"
+                              target="_blank"
+                            >
+                              <img
+                                itemprop="image"
+                                src="public/images/banner-content-1.png"
+                                alt="Товар 1 (фото 1)"
+                              />
+                              <span class="product-item__flag-content"> </span>
+                            </a>
+                          </div>
+                          <div
+                            class="owl-item cloned"
+                            style="width: 320px; margin-right: 10px"
+                          >
+                            <a
+                              class="item"
+                              href="public/images/banner-content-1.png"
+                              data-fancybox="images"
+                              target="_blank"
+                            >
+                              <img
+                                itemprop="image"
+                                src="public/images/banner-content-1.png"
+                                alt="Товар 1 (фото 1)"
+                              />
+                              <span class="product-item__flag-content"> </span>
+                            </a>
+                          </div>
+                          <div
+                            class="owl-item active"
+                            style="width: 320px; margin-right: 10px"
+                          >
+                            <a
+                              class="item"
+                              href="public/images/banner-content-1.png"
+                              data-fancybox="images"
+                              target="_blank"
+                            >
+                              <img
+                                itemprop="image"
+                                src="public/images/banner-content-1.png"
+                                alt="Товар 1 (фото 1)"
+                              />
+                              <span class="product-item__flag-content"> </span>
+                            </a>
+                          </div>
+                          <div
+                            class="owl-item cloned"
+                            style="width: 320px; margin-right: 10px"
+                          >
+                            <a
+                              class="item"
+                              href="public/images/banner-content-1.png"
+                              data-fancybox="images"
+                              target="_blank"
+                            >
+                              <img
+                                itemprop="image"
+                                src="public/images/banner-content-1.png"
+                                alt="Товар 1 (фото 1)"
+                              />
+                              <span class="product-item__flag-content"> </span>
+                            </a>
+                          </div>
+                          <div
+                            class="owl-item cloned"
+                            style="width: 320px; margin-right: 10px"
+                          >
+                            <a
+                              class="item"
+                              href="public/images/banner-content-1.png"
+                              data-fancybox="images"
+                              target="_blank"
+                            >
+                              <img
+                                itemprop="image"
+                                src="public/images/banner-content-1.png"
+                                alt="Товар 1 (фото 1)"
+                              />
+                              <span class="product-item__flag-content"> </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="owl-nav disabled">
+                        <div class="owl-prev">prev</div>
+                        <div class="owl-next">next</div>
+                      </div>
+                      <div class="owl-dots disabled">
+                        <div class="owl-dot active"><span></span></div>
+                      </div>
                     </div>
 
-                    <div id="sync2" class="owl-carousel owl-theme">
-                      <div class="item">
-                        <img
-                          src="/media/products/images/Frame_1_haOZrec.png"
-                          alt=""
-                        />
+                    <div
+                      id="sync2"
+                      class="owl-carousel owl-theme owl-loaded owl-drag"
+                    >
+                      <div class="owl-stage-outer">
+                        <div
+                          class="owl-stage"
+                          style="
+                            transform: translate3d(0px, 0px, 0px);
+                            transition: all 0s ease 0s;
+                            width: 78px;
+                          "
+                        >
+                          <div
+                            class="owl-item active current"
+                            style="width: 68px; margin-right: 10px"
+                          >
+                            <div class="item">
+                              <img
+                                src="public/images/banner-content-1.png"
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="owl-nav disabled">
+                        <div class="owl-prev disabled">prev</div>
+                        <div class="owl-next disabled">next</div>
+                      </div>
+                      <div class="owl-dots disabled">
+                        <div class="owl-dot active"><span></span></div>
                       </div>
                     </div>
                   </div>
                   <div class="product-card__content">
                     <div class="product-card__left">
-                      <div
-                        class="product-card__personal-cost with-online-price"
-                      >
-                        <span>цена за м2:</span>
-                        710,00 ₽
+                      <div class="product-card__personal-cost">
+                        <span>цена за шт:</span>
+                        1&nbsp;000,00 ₽/шт.
                       </div>
                       <div
                         class="product-card__main-cost"
                         itemprop="offers"
                         itemtype="http://schema.org/Offer"
-                        itemscope
+                        itemscope=""
                       >
-                        <meta itemprop="price" content="710" />
+                        <meta itemprop="price" content="1000" />
                         <meta itemprop="priceCurrency" content="RUB" />
 
                         <link
                           itemprop="availability"
-                          href="http://schema.org/InStock"
+                          href="http://schema.org/OutOfStock"
                         />
                       </div>
 
-                      <div class="product-card__personal-cost">
-                        <span>Цена онлайн:</span>
-                        <strong class="online-price">695,80 ₽</strong>
-                      </div>
-
-                      <!-- Размер -->
-                      <div class="product-card__radio-options">
-                        <span>Размер</span>
-                        <a href="#">25 мм</a>
-                        <a href="#">20 мм</a>
-                        <a href="#">18 мм</a>
-                      </div>
-
-                      <!-- Цвет -->
-                      <div class="product-card__select-options">
-                        <span>Цвет</span>
-                        <select name="" id="">
-                          <option value="">Красный</option>
-                          <option value="">Синий</option>
-                          <option value="">Зеленый</option>
-                          <option value="">Белый</option>
-                        </select>
-                      </div>
-
-                      <div class="shopping-cart-product">
-                        <div class="input-number input-number--lg">
-                          <div class="order-down"></div>
-                          <input
-                            type="number"
-                            min="0"
-                            step="1"
-                            value="1"
-                            id="number"
-                            required=""
-                          />
-                          <div class="order-up"></div>
-                        </div>
-
+                      <div class="shopping-cart-product not-available">
                         <a
-                          href="/cart/add/5364"
-                          class="shopping-cart-btn shopping-cart-btn--lg add-to-cart button-theme button-theme_cart custom-icon"
+                          href="#question-main"
+                          data-product-code="001"
+                          data-product-name="Товар 1"
+                          class="btn-border btn--empty-main-min not-for-sale not-available button-theme button-theme_muted"
                         >
-                          <img
-                            class="cart-icon custom-cart-icon"
-                            src="/media/Group 148 (1).svg"
-                          />
-                          В корзину
-                        </a>
+                          Узнать о наличии</a
+                        >
                       </div>
 
                       <div class="product-card__btns ya-share-block">
@@ -339,9 +343,126 @@
                           <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
                           <script src="https://yastatic.net/share2/share.js"></script>
                           <div
-                            class="ya-share2"
+                            class="ya-share2 ya-share2_inited"
                             data-services="vkontakte,twitter,odnoklassniki,telegram,whatsapp,viber"
-                          ></div>
+                          >
+                            <div
+                              class="ya-share2__container ya-share2__container_size_m ya-share2__container_color-scheme_normal ya-share2__container_shape_normal"
+                            >
+                              <ul
+                                class="ya-share2__list ya-share2__list_direction_horizontal"
+                              >
+                                <li
+                                  class="ya-share2__item ya-share2__item_service_vkontakte"
+                                >
+                                  <a
+                                    class="ya-share2__link"
+                                    href="https://vk.com/share.php?url=http%3A%2F%2Fbox5.stroyker.pro%2Fcatalog%2Fproduct%2Ftovar-1%2F&amp;title=%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%201&amp;utm_source=share2"
+                                    rel="nofollow noopener"
+                                    target="_blank"
+                                    title="ВКонтакте"
+                                    ><span class="ya-share2__badge"
+                                      ><span
+                                        class="ya-share2__icon"
+                                      ></span></span
+                                    ><span class="ya-share2__title"
+                                      >ВКонтакте</span
+                                    ></a
+                                  >
+                                </li>
+                                <li
+                                  class="ya-share2__item ya-share2__item_service_twitter"
+                                >
+                                  <a
+                                    class="ya-share2__link"
+                                    href="https://twitter.com/intent/tweet?text=%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%201&amp;url=http%3A%2F%2Fbox5.stroyker.pro%2Fcatalog%2Fproduct%2Ftovar-1%2F&amp;utm_source=share2"
+                                    rel="nofollow noopener"
+                                    target="_blank"
+                                    title="Twitter"
+                                    ><span class="ya-share2__badge"
+                                      ><span
+                                        class="ya-share2__icon"
+                                      ></span></span
+                                    ><span class="ya-share2__title"
+                                      >Twitter</span
+                                    ></a
+                                  >
+                                </li>
+                                <li
+                                  class="ya-share2__item ya-share2__item_service_odnoklassniki"
+                                >
+                                  <a
+                                    class="ya-share2__link"
+                                    href="https://connect.ok.ru/offer?url=http%3A%2F%2Fbox5.stroyker.pro%2Fcatalog%2Fproduct%2Ftovar-1%2F&amp;title=%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%201&amp;utm_source=share2"
+                                    rel="nofollow noopener"
+                                    target="_blank"
+                                    title="Одноклассники"
+                                    ><span class="ya-share2__badge"
+                                      ><span
+                                        class="ya-share2__icon"
+                                      ></span></span
+                                    ><span class="ya-share2__title"
+                                      >Одноклассники</span
+                                    ></a
+                                  >
+                                </li>
+                                <li
+                                  class="ya-share2__item ya-share2__item_service_telegram"
+                                >
+                                  <a
+                                    class="ya-share2__link"
+                                    href="https://t.me/share/url?url=http%3A%2F%2Fbox5.stroyker.pro%2Fcatalog%2Fproduct%2Ftovar-1%2F&amp;text=%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%201&amp;utm_source=share2"
+                                    rel="nofollow noopener"
+                                    target="_blank"
+                                    title="Telegram"
+                                    ><span class="ya-share2__badge"
+                                      ><span
+                                        class="ya-share2__icon"
+                                      ></span></span
+                                    ><span class="ya-share2__title"
+                                      >Telegram</span
+                                    ></a
+                                  >
+                                </li>
+                                <li
+                                  class="ya-share2__item ya-share2__item_service_whatsapp"
+                                >
+                                  <a
+                                    class="ya-share2__link"
+                                    href="https://api.whatsapp.com/send?text=%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%201%20http%3A%2F%2Fbox5.stroyker.pro%2Fcatalog%2Fproduct%2Ftovar-1%2F&amp;utm_source=share2"
+                                    rel="nofollow noopener"
+                                    target="_blank"
+                                    title="WhatsApp"
+                                    ><span class="ya-share2__badge"
+                                      ><span
+                                        class="ya-share2__icon"
+                                      ></span></span
+                                    ><span class="ya-share2__title"
+                                      >WhatsApp</span
+                                    ></a
+                                  >
+                                </li>
+                                <li
+                                  class="ya-share2__item ya-share2__item_service_viber"
+                                >
+                                  <a
+                                    class="ya-share2__link"
+                                    href="viber://forward?text=%D0%A2%D0%BE%D0%B2%D0%B0%D1%80%201%20http%3A%2F%2Fbox5.stroyker.pro%2Fcatalog%2Fproduct%2Ftovar-1%2F&amp;utm_source=share2"
+                                    rel="nofollow"
+                                    target="_blank"
+                                    title="Viber"
+                                    ><span class="ya-share2__badge"
+                                      ><span
+                                        class="ya-share2__icon"
+                                      ></span></span
+                                    ><span class="ya-share2__title"
+                                      >Viber</span
+                                    ></a
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
                         </div>
                       </div>
 
@@ -350,22 +471,19 @@
                     <div class="product-card__right">
                       <div class="product-card__discription">
                         <span class="product-card__discription-title"
-                          >Оплата:</span
+                          >Наличие:</span
                         >
                         <ul>
-                          <li>— Наличными при получении</li>
-                          <li>— Картой в офисе продаж</li>
-                          <li>— Онлайн на сайте</li>
-                          <li>— Оплата в кредит</li>
-                          <li>— Безналом по счёту</li>
+                          <li>
+                            <span class="green-color">
+                              <div
+                                class="product-item__status product-item__status--none"
+                              >
+                                нет в наличии
+                              </div>
+                            </span>
+                          </li>
                         </ul>
-                        <a href="/cart/" class="btn-get-an-account-min">
-                          <span class="icon">
-                            <svg class="icon">
-                              <use xlink:href="#check-btn"></use>
-                            </svg> </span
-                          >Скидки в корзине
-                        </a>
                       </div>
                     </div>
                   </div>
@@ -376,9 +494,59 @@
                 <div class="product-card-content">
                   <div class="tabs-content">
                     <ul class="tabs">
-                      <li class="active" rel="tab2">Характеристики</li>
+                      <li class="active" rel="tab1">Описание</li>
+
+                      <li rel="tab2" class="tab_last">Характеристики</li>
                     </ul>
                     <div class="tabsgroup">
+                      <span class="tab_drawer_heading d_active" rel="tab1">
+                        <span class="icon"
+                          ><svg class="icon-svg">
+                            <use xlink:href="#tab-arrow"></use></svg
+                        ></span>
+                        Описание
+                      </span>
+                      <div id="tab1" class="tab-content" style="display: block">
+                        <div class="text-page" itemprop="description">
+                          <div class="row">
+                            <div class="col-lg-6 col-md-12">
+                              <img
+                                alt=""
+                                src="public/images/banner-content-1.png"
+                              />
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                              <h2 style="color: #1e1e1e">
+                                Пример расположения контента
+                              </h2>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-lg-4 col-md-12">
+                              <h2 style="color: #1e1e1e">
+                                Пример расположения контента
+                              </h2>
+                            </div>
+
+                            <div class="col-lg-4 col-md-12">
+                              <img
+                                alt=""
+                                src="public/images/banner-content-1.png"
+                              />
+                            </div>
+
+                            <div class="col-lg-4 col-md-12">
+                              <img
+                                alt=""
+                                src="public/images/banner-content-1.png"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                       <!-- #tab1 -->
                       <span class="tab_drawer_heading" rel="tab2">
                         <span class="icon"
@@ -392,192 +560,15 @@
                           <li>
                             <span class="char-text"
                               ><span class="char-text__mask"
-                                >Количество слоев</span
+                                >Материал</span
                               ></span
-                            ><span class="char-text"> Однослойная </span>
+                            ><span class="char-text"> Сталь </span>
                           </li>
 
                           <li>
                             <span class="char-text"
-                              ><span class="char-text__mask">Серия</span></span
-                            ><span class="char-text"> Фокстрот </span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask">Цвет</span></span
-                            ><span class="char-text"> Эвкалипт </span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Коэффициент перехлёста</span
-                              ></span
-                            ><span class="char-text">1.85</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Масса 1 м², кг</span
-                              ></span
-                            ><span class="char-text">8.8</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Материал основы</span
-                              ></span
-                            ><span class="char-text">Стеклохолст</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Назначение</span
-                              ></span
-                            ><span class="char-text"
-                              >Устройство кровельного ковра</span
-                            >
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Объекты применения</span
-                              ></span
-                            ><span class="char-text"
-                              >Беседки, Крупные коттеджи, Малые коттеджи,
-                              Средние коттеджи, Частные дома</span
-                            >
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Оттенок</span
-                              ></span
-                            ><span class="char-text">Эвкалипт</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Площадь материала в упаковке, м²</span
-                              ></span
-                            ><span class="char-text">3</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Поверхностная плотность основы, г/м²</span
-                              ></span
-                            ><span class="char-text">110</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Потеря посыпки, г/образец</span
-                              ></span
-                            ><span class="char-text">1.2</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Разрывная сила в поперечном направлении, Н/50
-                                мм</span
-                              ></span
-                            ><span class="char-text">600</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Разрывная сила в продольном направлении, Н/50
-                                мм</span
-                              ></span
-                            ><span class="char-text">400</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask">Серия</span></span
-                            ><span class="char-text">Ультра</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Сопротивление раздиру, Н, не менее</span
-                              ></span
-                            ><span class="char-text">100</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Срок хранения, мес</span
-                              ></span
-                            ><span class="char-text">18</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask">Тип</span></span
-                            ><span class="char-text">Гонт</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Тип нарезки (классификация производителя)</span
-                              ></span
-                            ><span class="char-text">Аккорд</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Тип покрытия</span
-                              ></span
-                            ><span class="char-text">Базальт</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Толщина, мм</span
-                              ></span
-                            ><span class="char-text">3</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask">Цвет</span></span
-                            ><span class="char-text">Зеленый</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Ширина, мм</span
-                              ></span
-                            ><span class="char-text">1000</span>
-                          </li>
-
-                          <li>
-                            <span class="char-text"
-                              ><span class="char-text__mask"
-                                >Элементы зданий и сооружений</span
-                              ></span
-                            ><span class="char-text"
-                              >Мансарды, Скатная кровля</span
-                            >
+                              ><span class="char-text__mask">Размер</span></span
+                            ><span class="char-text"> 5 </span>
                           </li>
                         </ul>
                       </div>
@@ -594,7 +585,7 @@
                           Для возможности оставлять свои отзывы на товары сайта
                           необходимо
                           <a
-                            href="/account/login/?next=/catalog/product/tekhnonikol-gibkaia-cherepitsa-fokstrot-evkalipt-4a4e21-3305rus/"
+                            href="/account/login/?next=/catalog/product/tovar-1/"
                             >авторизироваться</a
                           >.
                         </p>
@@ -607,743 +598,14 @@
                     </div>
                   </div>
 
-                  <section class="conditional-section">
-                    <div class="container">
-                      <h2 class="mb-25">С этим товаром обычно покупают</h2>
-
-                      <div
-                        class="slider-constructor"
-                        data-slides="1"
-                        data-rows="2"
-                        data-sm-slides="2"
-                        data-sm-rows="1"
-                        data-md-slides="3"
-                        data-lg-slides="4"
-                      >
-                        <div
-                          class="product-card-v2 product-card-v2_type-1"
-                          data-custom-interaction="data-custom-interaction"
-                        >
-                          <a
-                            class="product-card-v2__link"
-                            href="/catalog/product/knauf-mineralnaya-teploizolyaciya-tisma-038-plita-100h600h1300-8plit624m20624m3/"
-                          ></a>
-                          <div class="product-card-v2__image">
-                            <div class="image image_contain">
-                              <img
-                                src="/media/sambuild_cache/58/d6/58d64a705bdafc7acf501470d8341146.jpg"
-                                alt="КНАУФ Минеральная теплоизоляция TИСМА 038 плита 100х600х1300 (8плит/6,24м2/0,624м3)"
-                              />
-                            </div>
-
-                            <div class="product-card-v2__rating"></div>
-
-                            <div class="product-card-v2__labels">
-                              <div
-                                class="card-label card-label_style-new product-card-v2__label"
-                              >
-                                Новинка
-                              </div>
-                            </div>
-                          </div>
-                          <div class="product-card-v2__content">
-                            <div class="product-card-v2__title">
-                              КНАУФ Минеральная теплоизоляция TИСМА 038 плита
-                              100х600х1300 (8плит/6,24м2/0,624м3)
-                            </div>
-                            <div class="product-card-v2__content-bottom">
-                              <div class="product-card-v2__pricing">
-                                <div
-                                  class="product-card-v2__price text-color-accent"
-                                >
-                                  935,00
-                                  <span>₽/шт</span>
-                                </div>
-
-                                <div class="product-card-v2__pricing-txt">
-                                  онлайн цена
-                                </div>
-                                <div class="product-card-v2__price">
-                                  916,30
-                                  <span>₽/шт</span>
-                                </div>
-                              </div>
-
-                              <div class="product-card-v2__buttons">
-                                <a
-                                  href="/cart/add/10189"
-                                  class="button button_style-2 button_xl product-card-v2__cart-button add-to-cart no-bg-image button-theme button-theme_cart"
-                                >
-                                  <img
-                                    class="custom-cart-icon"
-                                    src="/media/Group 148 (1).svg"
-                                  />
-
-                                  <span>
-                                    <span> </span>
-                                    <span>В корзину</span>
-                                  </span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          class="product-card-v2 product-card-v2_type-1"
-                          data-custom-interaction="data-custom-interaction"
-                        >
-                          <a
-                            class="product-card-v2__link"
-                            href="/catalog/product/plita-mineralovatnaya-tehnonikol-tehnoblok-standart-1200h600h50-mm-8-sht/"
-                          ></a>
-                          <div class="product-card-v2__image">
-                            <div class="image image_contain">
-                              <img
-                                src="/media/sambuild_cache/f5/16/f5169fe5132791bbe9c916f69430676c.jpg"
-                                alt="Утеплитель ТЕХНОНИКОЛЬ Техноблок Стандарт 1200х600х50 мм, 8 шт"
-                              />
-                            </div>
-
-                            <div class="product-card-v2__rating"></div>
-
-                            <div class="product-card-v2__labels"></div>
-                          </div>
-                          <div class="product-card-v2__content">
-                            <div class="product-card-v2__title">
-                              Утеплитель ТЕХНОНИКОЛЬ Техноблок Стандарт
-                              1200х600х50 мм, 8 шт
-                            </div>
-                            <div class="product-card-v2__content-bottom">
-                              <div class="product-card-v2__pricing">
-                                <div
-                                  class="product-card-v2__price text-color-accent"
-                                >
-                                  990,00
-                                  <span>₽/уп</span>
-                                </div>
-
-                                <div class="product-card-v2__pricing-txt">
-                                  онлайн цена
-                                </div>
-                                <div class="product-card-v2__price">
-                                  970,20
-                                  <span>₽/уп</span>
-                                </div>
-                              </div>
-
-                              <div class="product-card-v2__buttons">
-                                <a
-                                  href="/cart/add/6984"
-                                  class="button button_style-2 button_xl product-card-v2__cart-button add-to-cart no-bg-image button-theme button-theme_cart"
-                                >
-                                  <img
-                                    class="custom-cart-icon"
-                                    src="/media/Group 148 (1).svg"
-                                  />
-
-                                  <span>
-                                    <span> </span>
-                                    <span>В корзину</span>
-                                  </span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          class="product-card-v2 product-card-v2_type-1"
-                          data-custom-interaction="data-custom-interaction"
-                        >
-                          <a
-                            class="product-card-v2__link"
-                            href="/catalog/product/knauf-teplo-i-zvukoiz-mineral-greenterm-ts-037-aquastatik-100kh610kh1230mm/"
-                          ></a>
-                          <div class="product-card-v2__image">
-                            <div class="image image_contain">
-                              <img
-                                src="/media/sambuild_cache/d5/f6/d5f6f2b53e9c86836b10d9556d1f2f10.jpg"
-                                alt="Утеплитель Кнауф тепло- и звукоиз. минерал. GreenTERM TS 037 Aquastatik 100х610х1230мм"
-                              />
-                            </div>
-
-                            <div class="product-card-v2__rating"></div>
-
-                            <div class="product-card-v2__labels">
-                              <div
-                                class="card-label card-label_style-hit product-card-v2__label"
-                              >
-                                Хит
-                              </div>
-                            </div>
-                          </div>
-                          <div class="product-card-v2__content">
-                            <div class="product-card-v2__title">
-                              Утеплитель Кнауф тепло- и звукоиз. минерал.
-                              GreenTERM TS 037 Aquastatik 100х610х1230мм
-                            </div>
-                            <div class="product-card-v2__content-bottom">
-                              <div class="product-card-v2__pricing">
-                                <div
-                                  class="product-card-v2__price text-color-accent"
-                                >
-                                  1 127,00
-                                  <span>₽/уп</span>
-                                </div>
-
-                                <div class="product-card-v2__pricing-txt">
-                                  онлайн цена
-                                </div>
-                                <div class="product-card-v2__price">
-                                  1 104,46
-                                  <span>₽/уп</span>
-                                </div>
-                              </div>
-
-                              <div class="product-card-v2__buttons">
-                                <a
-                                  href="/cart/add/5439"
-                                  class="button button_style-2 button_xl product-card-v2__cart-button add-to-cart no-bg-image button-theme button-theme_cart"
-                                >
-                                  <img
-                                    class="custom-cart-icon"
-                                    src="/media/Group 148 (1).svg"
-                                  />
-
-                                  <span>
-                                    <span> </span>
-                                    <span>В корзину</span>
-                                  </span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          class="product-card-v2 product-card-v2_type-1"
-                          data-custom-interaction="data-custom-interaction"
-                        >
-                          <a
-                            class="product-card-v2__link"
-                            href="/catalog/product/skotch-dvustoronnii-dlia-paroizoliatsii/"
-                          ></a>
-                          <div class="product-card-v2__image">
-                            <div class="image image_contain">
-                              <img
-                                src="/media/sambuild_cache/07/42/0742d1cccb2c0be0e14071948e26fd85.jpg"
-                                alt="Скотч двусторонний для пароизоляции"
-                              />
-                            </div>
-
-                            <div class="product-card-v2__rating"></div>
-
-                            <div class="product-card-v2__labels"></div>
-                          </div>
-                          <div class="product-card-v2__content">
-                            <div class="product-card-v2__title">
-                              Скотч двусторонний для пароизоляции
-                            </div>
-                            <div class="product-card-v2__content-bottom">
-                              <div class="product-card-v2__pricing">
-                                <div
-                                  class="product-card-v2__price text-color-accent"
-                                >
-                                  270,00
-                                  <span>₽/рул</span>
-                                </div>
-
-                                <div class="product-card-v2__pricing-txt">
-                                  онлайн цена
-                                </div>
-                                <div class="product-card-v2__price">
-                                  264,60
-                                  <span>₽/рул</span>
-                                </div>
-                              </div>
-
-                              <div class="product-card-v2__buttons">
-                                <a
-                                  href="/cart/add/6742"
-                                  class="button button_style-2 button_xl product-card-v2__cart-button add-to-cart no-bg-image button-theme button-theme_cart"
-                                >
-                                  <img
-                                    class="custom-cart-icon"
-                                    src="/media/Group 148 (1).svg"
-                                  />
-
-                                  <span>
-                                    <span> </span>
-                                    <span>В корзину</span>
-                                  </span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          class="product-card-v2 product-card-v2_type-1"
-                          data-custom-interaction="data-custom-interaction"
-                        >
-                          <a
-                            class="product-card-v2__link"
-                            href="/catalog/product/germetik-pu-tekhnonikol-logicflex-dlia-ploskikh-krovel-sht/"
-                          ></a>
-                          <div class="product-card-v2__image">
-                            <div class="image image_contain">
-                              <img
-                                src="/media/sambuild_cache/f9/df/f9dff6019ff336413f7cf2974d1731f9.jpg"
-                                alt="Герметик ПУ ТехноНИКОЛЬ Logicflex для плоских кровель"
-                              />
-                            </div>
-
-                            <div class="product-card-v2__rating"></div>
-
-                            <div class="product-card-v2__labels"></div>
-                          </div>
-                          <div class="product-card-v2__content">
-                            <div class="product-card-v2__title">
-                              Герметик ПУ ТехноНИКОЛЬ Logicflex для плоских
-                              кровель
-                            </div>
-                            <div class="product-card-v2__content-bottom">
-                              <div class="product-card-v2__pricing">
-                                <div
-                                  class="product-card-v2__price text-color-accent"
-                                >
-                                  628,00
-                                  <span>₽/шт</span>
-                                </div>
-
-                                <div class="product-card-v2__pricing-txt">
-                                  онлайн цена
-                                </div>
-                                <div class="product-card-v2__price">
-                                  615,44
-                                  <span>₽/шт</span>
-                                </div>
-                              </div>
-
-                              <div class="product-card-v2__buttons">
-                                <a
-                                  href="/cart/add/6704"
-                                  class="button button_style-2 button_xl product-card-v2__cart-button add-to-cart no-bg-image button-theme button-theme_cart"
-                                >
-                                  <img
-                                    class="custom-cart-icon"
-                                    src="/media/Group 148 (1).svg"
-                                  />
-
-                                  <span>
-                                    <span> </span>
-                                    <span>В корзину</span>
-                                  </span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          class="product-card-v2 product-card-v2_type-1"
-                          data-custom-interaction="data-custom-interaction"
-                        >
-                          <a
-                            class="product-card-v2__link"
-                            href="/catalog/product/izoboks-insajd-6-plit-1200h600h100-mm-0432m3-upak432m26912m3-pod/"
-                          ></a>
-                          <div class="product-card-v2__image">
-                            <div class="image image_contain">
-                              <img
-                                src="/media/sambuild_cache/7f/ab/7fab36a627d96095e0ae4cec811eebdd.jpg"
-                                alt="ИЗОБОКС ИНСАЙД (6 плит) 1200х600х100 мм/ 0.432м3 упак/4.32м2/6,912м3 под"
-                              />
-                            </div>
-
-                            <div class="product-card-v2__rating"></div>
-
-                            <div class="product-card-v2__labels">
-                              <div
-                                class="card-label card-label_style-hit product-card-v2__label"
-                              >
-                                Хит
-                              </div>
-                            </div>
-                          </div>
-                          <div class="product-card-v2__content">
-                            <div class="product-card-v2__title">
-                              ИЗОБОКС ИНСАЙД (6 плит) 1200х600х100 мм/ 0.432м3
-                              упак/4.32м2/6,912м3 под
-                            </div>
-                            <div class="product-card-v2__content-bottom">
-                              <div class="product-card-v2__pricing">
-                                <div
-                                  class="product-card-v2__price text-color-accent"
-                                >
-                                  1 555,00
-                                  <span>₽/уп</span>
-                                </div>
-
-                                <div class="product-card-v2__pricing-txt">
-                                  онлайн цена
-                                </div>
-                                <div class="product-card-v2__price">
-                                  1 523,90
-                                  <span>₽/уп</span>
-                                </div>
-                              </div>
-
-                              <div class="product-card-v2__buttons">
-                                <a
-                                  href="/cart/add/10185"
-                                  class="button button_style-2 button_xl product-card-v2__cart-button add-to-cart no-bg-image button-theme button-theme_cart"
-                                >
-                                  <img
-                                    class="custom-cart-icon"
-                                    src="/media/Group 148 (1).svg"
-                                  />
-
-                                  <span>
-                                    <span> </span>
-                                    <span>В корзину</span>
-                                  </span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          class="product-card-v2 product-card-v2_type-1"
-                          data-custom-interaction="data-custom-interaction"
-                        >
-                          <a
-                            class="product-card-v2__link"
-                            href="/catalog/product/vysokotemperaturnyj-germetik-gasketsil-300ml/"
-                          ></a>
-                          <div class="product-card-v2__image">
-                            <div class="image image_contain">
-                              <img
-                                src="/media/sambuild_cache/ae/90/ae90ea1fea3f442ef9a88b2af913ae2f.png"
-                                alt="Высокотемпературный герметик Гаскетсил 300мл"
-                              />
-                            </div>
-
-                            <div class="product-card-v2__rating"></div>
-
-                            <div class="product-card-v2__labels"></div>
-                          </div>
-                          <div class="product-card-v2__content">
-                            <div class="product-card-v2__title">
-                              Высокотемпературный герметик Гаскетсил 300мл
-                            </div>
-                            <div class="product-card-v2__content-bottom">
-                              <div class="product-card-v2__pricing">
-                                <div
-                                  class="product-card-v2__price text-color-accent"
-                                >
-                                  460,00
-                                  <span>₽/шт</span>
-                                </div>
-
-                                <div class="product-card-v2__pricing-txt">
-                                  онлайн цена
-                                </div>
-                                <div class="product-card-v2__price">
-                                  450,80
-                                  <span>₽/шт</span>
-                                </div>
-                              </div>
-
-                              <div class="product-card-v2__buttons">
-                                <a
-                                  href="/cart/add/5797"
-                                  class="button button_style-2 button_xl product-card-v2__cart-button add-to-cart no-bg-image button-theme button-theme_cart"
-                                >
-                                  <img
-                                    class="custom-cart-icon"
-                                    src="/media/Group 148 (1).svg"
-                                  />
-
-                                  <span>
-                                    <span> </span>
-                                    <span>В корзину</span>
-                                  </span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          class="product-card-v2 product-card-v2_type-1"
-                          data-custom-interaction="data-custom-interaction"
-                        >
-                          <a
-                            class="product-card-v2__link"
-                            href="/catalog/product/plita-mineralovatnaya-izoboks-ekstralajt-50-kompressiya-800h600h50-mm-15-sht/"
-                          ></a>
-                          <div class="product-card-v2__image">
-                            <div class="image image_contain">
-                              <img
-                                src="/media/sambuild_cache/7e/91/7e9151cd20c32a92eb8be383d4ebcc2c.jpg"
-                                alt="Плита минераловатная ИЗОБОКС Экстралайт 50 % компрессия 800х600х50 мм, 15 шт"
-                              />
-                            </div>
-
-                            <div class="product-card-v2__rating"></div>
-
-                            <div class="product-card-v2__labels">
-                              <div
-                                class="card-label card-label_style-new product-card-v2__label"
-                              >
-                                Новинка
-                              </div>
-
-                              <div
-                                class="card-label card-label_style-hit product-card-v2__label"
-                              >
-                                Хит
-                              </div>
-                            </div>
-                          </div>
-                          <div class="product-card-v2__content">
-                            <div class="product-card-v2__title">
-                              Плита минераловатная ИЗОБОКС Экстралайт 50 %
-                              компрессия 800х600х50 мм, 15 шт
-                            </div>
-                            <div class="product-card-v2__content-bottom">
-                              <div class="product-card-v2__pricing">
-                                <div
-                                  class="product-card-v2__price text-color-accent"
-                                >
-                                  1 210,00
-                                  <span>₽/шт</span>
-                                </div>
-
-                                <div class="product-card-v2__pricing-txt">
-                                  онлайн цена
-                                </div>
-                                <div class="product-card-v2__price">
-                                  1 185,80
-                                  <span>₽/шт</span>
-                                </div>
-                              </div>
-
-                              <div class="product-card-v2__buttons">
-                                <a
-                                  href="/cart/add/10192"
-                                  class="button button_style-2 button_xl product-card-v2__cart-button add-to-cart no-bg-image button-theme button-theme_cart"
-                                >
-                                  <img
-                                    class="custom-cart-icon"
-                                    src="/media/Group 148 (1).svg"
-                                  />
-
-                                  <span>
-                                    <span> </span>
-                                    <span>В корзину</span>
-                                  </span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          class="product-card-v2 product-card-v2_type-1"
-                          data-custom-interaction="data-custom-interaction"
-                        >
-                          <a
-                            class="product-card-v2__link"
-                            href="/catalog/product/plita-mineralovatnaya-tehnonikol-tehnoblok-standart-1200h600h100-mm-4-sht/"
-                          ></a>
-                          <div class="product-card-v2__image">
-                            <div class="image image_contain">
-                              <img
-                                src="/media/sambuild_cache/5b/f7/5bf7e14bf323c1a538570ed5534bab36.jpg"
-                                alt="Утеплитель ТЕХНОНИКОЛЬ Техноблок Стандарт 1200х600х100 мм, 4 шт"
-                              />
-                            </div>
-
-                            <div class="product-card-v2__rating"></div>
-
-                            <div class="product-card-v2__labels"></div>
-                          </div>
-                          <div class="product-card-v2__content">
-                            <div class="product-card-v2__title">
-                              Утеплитель ТЕХНОНИКОЛЬ Техноблок Стандарт
-                              1200х600х100 мм, 4 шт
-                            </div>
-                            <div class="product-card-v2__content-bottom">
-                              <div class="product-card-v2__pricing">
-                                <div
-                                  class="product-card-v2__price text-color-accent"
-                                >
-                                  990,00
-                                  <span>₽/шт</span>
-                                </div>
-
-                                <div class="product-card-v2__pricing-txt">
-                                  онлайн цена
-                                </div>
-                                <div class="product-card-v2__price">
-                                  970,20
-                                  <span>₽/шт</span>
-                                </div>
-                              </div>
-
-                              <div class="product-card-v2__buttons">
-                                <a
-                                  href="/cart/add/6985"
-                                  class="button button_style-2 button_xl product-card-v2__cart-button add-to-cart no-bg-image button-theme button-theme_cart"
-                                >
-                                  <img
-                                    class="custom-cart-icon"
-                                    src="/media/Group 148 (1).svg"
-                                  />
-
-                                  <span>
-                                    <span> </span>
-                                    <span>В корзину</span>
-                                  </span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div
-                          class="product-card-v2 product-card-v2_type-1"
-                          data-custom-interaction="data-custom-interaction"
-                        >
-                          <a
-                            class="product-card-v2__link"
-                            href="/catalog/product/2165-drel/"
-                          ></a>
-                          <div class="product-card-v2__image">
-                            <div class="image image_contain">
-                              <img
-                                src="/media/sambuild_cache/14/7a/147afe2d32384da3fddf62b355d47dbb.jpg"
-                                alt="2165 Дрель -шуруповерт Союз"
-                              />
-                            </div>
-
-                            <div class="product-card-v2__rating"></div>
-
-                            <div class="product-card-v2__labels"></div>
-                          </div>
-                          <div class="product-card-v2__content">
-                            <div class="product-card-v2__title">
-                              2165 Дрель -шуруповерт Союз
-                            </div>
-                            <div class="product-card-v2__content-bottom">
-                              <div class="product-card-v2__pricing">
-                                <div
-                                  class="product-card-v2__price text-color-accent"
-                                >
-                                  2 672,00
-                                  <span>₽/шт</span>
-                                </div>
-
-                                <div class="product-card-v2__pricing-txt">
-                                  онлайн цена
-                                </div>
-                                <div class="product-card-v2__price">
-                                  2 618,56
-                                  <span>₽/шт</span>
-                                </div>
-                              </div>
-
-                              <div class="product-card-v2__buttons">
-                                <a
-                                  href="/cart/add/10170"
-                                  class="button button_style-2 button_xl product-card-v2__cart-button add-to-cart no-bg-image button-theme button-theme_cart"
-                                >
-                                  <img
-                                    class="custom-cart-icon"
-                                    src="/media/Group 148 (1).svg"
-                                  />
-
-                                  <span>
-                                    <span> </span>
-                                    <span>В корзину</span>
-                                  </span>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
+                  <div class="product-card__extra-text"></div>
                 </div>
-                <div class="product-card-side">
-                  <div class="product-slider__banners">
-                    <div class="item">
-                      <div class="product-item product-item--banner">
-                        <a
-                          href="/catalog/category/utepliteli/bazaltovyj-uteplitel/"
-                          title="АКЦИЯ ФАСАД"
-                        >
-                          <img
-                            data-bnr-pk="7"
-                            class="bnr-image-for-page"
-                            src="/media/bnrs/images/akcia_na_fasad.jpg"
-                            alt="АКЦИЯ ФАСАД"
-                          />
-                        </a>
-                      </div>
-                    </div>
-
-                    <div class="item">
-                      <div class="product-item product-item--banner">
-                        <a
-                          href="https://ostore.stroyker.pro/?faq"
-                          title="Promo Stroyker.pro"
-                        >
-                          <img
-                            data-bnr-pk="1"
-                            class="bnr-image-for-page"
-                            src="/media/bnrs/images/promo.jpg"
-                            alt="Promo Stroyker.pro"
-                          />
-                        </a>
-                      </div>
-                    </div>
-
-                    <div class="item">
-                      <div class="product-item product-item--banner">
-                        <a href="/roof-calc/" title="Кровельный калькулятор">
-                          <img
-                            data-bnr-pk="6"
-                            class="bnr-image-for-page"
-                            src="/media/bnrs/images/krovelnui_kalkylator.jpg"
-                            alt="Кровельный калькулятор"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div class="product-card-side"></div>
               </div>
 
               <div class="product-card-bottom">
-                <span class="product-card-bottom__artikul">818114</span>
-                <div class="product-card__navigation">
-                  <a
-                    class="product-card__nav-prev single"
-                    href="/catalog/product/tekhnonikol-gibkaia-cherepitsa-fokstrot-sandal-4a4e21-3303rus/"
-                  >
-                    <span class="icon">
-                      <svg class="icon-svg">
-                        <use xlink:href="#product-nav-arrow"></use>
-                      </svg> </span
-                    >Предыдущий товар
-                  </a>
-                </div>
+                <span class="product-card-bottom__artikul">001</span>
+                <div class="product-card__navigation"></div>
               </div>
             </div>
           </div>
@@ -1359,11 +621,12 @@
                 action="/crm/message/"
                 method="post"
                 id="feedback-message-request-form"
+                onsubmit=""
               >
                 <input
                   type="hidden"
                   name="csrfmiddlewaretoken"
-                  value="rG3fUSBdlKxjT7NqrapRg34tljnL3Y0j4Uo0FZcTMUycZ71EFr9QF1jug3e9sUZE"
+                  value="DtJuANKn2MSysTlPxt9NEeJlEcWKwPeTPu9fdWRJ8tlknLIWJI7AG1MCxKtrbzg8"
                 />
                 <div class="question-form__column">
                   <div class="form-group">
@@ -1372,7 +635,7 @@
                       class="form-control"
                       name="name"
                       autocomplete="off"
-                      required
+                      required=""
                     />
                     <label for="name" class="label-name">
                       <span class="content-name"> Имя* </span>
@@ -1384,7 +647,8 @@
                       class="form-control phone"
                       name="phone"
                       autocomplete="off"
-                      required
+                      required=""
+                      maxlength="18"
                     />
                     <label for="phone" class="label-name">
                       <span class="content-name"> Телефон </span>
@@ -1396,7 +660,7 @@
                       class="form-control"
                       name="email"
                       autocomplete="off"
-                      required
+                      required=""
                     />
                     <label for="text" class="label-name">
                       <span class="content-name"> e-mail </span>
@@ -1409,7 +673,7 @@
                       class="form-control"
                       name="message"
                       autocomplete="off"
-                      required
+                      required=""
                     ></textarea>
                     <label for="message" class="label-name">
                       <span class="content-name"> Комментарий </span>
@@ -1417,85 +681,24 @@
                   </div>
                   <input type="hidden" name="url" id="id_url" />
 
-                  <script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback_f0bba60857b244418dd3fa07e5f78cdd&render=explicit"></script>
-
-                  <script type="text/javascript">
-                    var recaptchaCallback_f0bba60857b244418dd3fa07e5f78cdd =
-                      function () {
-                        var el = document.querySelector(
-                          '.g-recaptcha[data-widget-uuid="f0bba60857b244418dd3fa07e5f78cdd"]'
-                        );
-                        var form_f0bba60857b244418dd3fa07e5f78cdd =
-                          el.closest("form");
-
-                        var recaptcha_f0bba60857b244418dd3fa07e5f78cdd =
-                          grecaptcha.render(el, {
-                            sitekey: el.dataset.sitekey,
-                            callback: el.dataset.callback,
-                          });
-
-                        var verifyCaptcha_f0bba60857b244418dd3fa07e5f78cdd =
-                          function (e) {
-                            e.preventDefault();
-                            grecaptcha.execute(
-                              recaptcha_f0bba60857b244418dd3fa07e5f78cdd
-                            );
-                          };
-
-                        form_f0bba60857b244418dd3fa07e5f78cdd.addEventListener(
-                          "submit",
-                          verifyCaptcha_f0bba60857b244418dd3fa07e5f78cdd
-                        );
-                      };
-                    // Submit function to be called, after reCAPTCHA was successful.
-                    var onSubmit_f0bba60857b244418dd3fa07e5f78cdd = function (
-                      token
-                    ) {
-                      console.log(
-                        "reCAPTCHA validated for 'data-widget-uuid=\"f0bba60857b244418dd3fa07e5f78cdd\"'. Submitting form..."
-                      );
-                      document
-                      .querySelector(
-                        '.g-recaptcha[data-widget-uuid="f0bba60857b244418dd3fa07e5f78cdd"]'
-                      )
-                      .closest("form")
-                      .submit();
-                    };
-                  </script>
-
-                  <div
-                    class="g-recaptcha"
-                    id="cap-feedbackmessageform"
-                    data-callback="feedback_form_ajax_submit"
-                    data-sitekey="6LcNqf8hAAAAAABJUmg6-HHOj8AfrIA26SM5oRe4"
-                    required
-                    data-widget-uuid="f0bba60857b244418dd3fa07e5f78cdd"
-                    data-size="invisible"
-                  ></div>
-
                   <button type="submit" class="btn btn--main-min">
                     Отправить
                   </button>
                 </div>
               </form>
 
-              <p>
-                Нажимая на кнопку, вы даете согласие на обработку персональных
-                данных и соглашаетесь с нашей политикой конфиденциальности
-              </p>
+              <span class="form-text"
+                >Нажимая на кнопку, вы даете согласие на обработку персональных
+                данных и соглашаетесь с нашей политикой конфиденциальности</span
+              >
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <%~ include('footer/footer.html') %>
-
-    <%~ include('fixed-button/index.html') %>
-
-    <%~ include('safety-message-fixed/index.html') %>
-
-    <%~ include('callme-modal/index.html') %>
-   
+    <%~ include('footer/footer.html') %> <%~ include('fixed-button/index.html')
+    %> <%~ include('safety-message-fixed/index.html') %> <%~
+    include('callme-modal/index.html') %>
   </body>
 </html>
