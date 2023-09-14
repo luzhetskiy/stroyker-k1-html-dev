@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../css/header-mobile.css">
     <link rel="stylesheet" href="../css/header-bottom-mobile.css">
     <link rel="stylesheet" href="../css/header-v3.css">
+    <link rel="stylesheet" href="../css/custom-mmenu-styles.css">
   
     <script defer src="../js/index.js"></script>
     
@@ -148,8 +149,6 @@
         </div>
         <div class="col-lg-2">
           <div class="options-box">
-            <!-- --v3--  -->
-
             <div class="v3-variant">
               <button class="btn menu-btn">
                 <img
@@ -173,18 +172,6 @@
                   </li>
                 </ul>
               </div>
-
-              <!-- Образец выделения активного пункта 1 (цвет) = hover--color   -->
-              <!-- Образец выделения активного пункта 2 (подчеркивание) = hover--underline   -->
-              <!-- Образец выделения активного пункта 3 (стрелка) = hover--arrow   -->
-
-              <!-- Пример, когда иконка слева от текста = link--arrow-left-->
-              <!-- Пример, когда иконка справа от текста = link--arrow-right-->
-
-              <!-- все класси для 1ого варианта ховера = hover--color link--arrow-right -->
-              <!-- все класси для 2ого варианта ховера = hover--color hover--underline link--arrow-right -->
-              <!-- все класси для 3ого варианта ховера = hover--color link--arrow-right hover--arrow -->
-
               <div class="menu-box">
                 <ul class="hover--color link--arrow-right">
                   <li>
@@ -410,7 +397,13 @@
 </header>
 
 <header class="header--mob">
-  <section class="default-header-mob-section">
+  <section class="additional-section">
+    <div class="container">
+      custom section example
+    </div>
+  </section>
+
+  <section class="header-mob-content-section">
     <div class="container">
       <div class="row">
         <div class="col-3">
@@ -423,8 +416,6 @@
         <div class="col-8">
           <div class="search--box">
             <div id="overlay_mob" onclick="javascript: close_all_mob();"></div>
-            <!-- s-icon-left = кнопка submit было слево  -->
-            <!-- s-icon-right = кнопка submit было справо  -->
             <form action="" class="s-icon-right">
               <input
                 type="text"
@@ -534,13 +525,12 @@
       </div>
     </div>
   </section>
-
-  <!-- Кастомная дополнительная секция для телефонной шапки -->
-  <section>
-    <div class="container">content</div>
+  
+  <section class="additional-section">
+    <div class="container">
+      custom section example
+    </div>
   </section>
-  <!-- mmenujs (mobile menu)  -->
-
   <nav id="my-menu">
     <ul>
       <li>
@@ -606,7 +596,6 @@
         </li>
       </ul>
 
-      <!-- Личный кабинет  -->
       <li>
         <a class="login" href="#"
           ><img
@@ -617,9 +606,7 @@
         >
       </li>
     </ul>
-    <!-- меню  -->
   </nav>
 </header>
-<!-- ---  -->
 </body>
 </html>

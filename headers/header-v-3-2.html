@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../css/header-mobile.css">
     <link rel="stylesheet" href="../css/header-bottom-mobile.css">
     <link rel="stylesheet" href="../css/header-v3.css">
+    <link rel="stylesheet" href="../css/custom-mmenu-styles.css">
   
     <script defer src="../js/index.js"></script>
     
@@ -147,8 +148,6 @@
         </div>
         <div class="col-lg-2">
           <div class="options-box">
-            <!-- --v3--  -->
-
             <div class="v3-variant">
               <button class="btn menu-btn">
                 <img
@@ -408,7 +407,13 @@
 </header>
 
 <header class="header--mob">
-  <section class="default-header-mob-section">
+  <section class="additional-section">
+    <div class="container">
+      custom section example
+    </div>
+  </section>
+
+  <section class="header-mob-content-section">
     <div class="container">
       <div class="row">
         <div class="col-3">
@@ -421,8 +426,6 @@
         <div class="col-8">
           <div class="search--box">
             <div id="overlay_mob" onclick="javascript: close_all_mob();"></div>
-            <!-- s-icon-left = кнопка submit было слево  -->
-            <!-- s-icon-right = кнопка submit было справо  -->
             <form action="" class="s-icon-right">
               <input
                 type="text"
@@ -533,11 +536,11 @@
     </div>
   </section>
 
-  <!-- Кастомная дополнительная секция для телефонной шапки -->
-  <section>
-    <div class="container">content</div>
+  <section class="additional-section">
+    <div class="container">
+      custom section example
+    </div>
   </section>
-  <!-- mmenujs (mobile menu)  -->
 
   <nav id="my-menu">
     <ul>
@@ -604,7 +607,6 @@
         </li>
       </ul>
 
-      <!-- Личный кабинет  -->
       <li>
         <a class="login" href="#"
           ><img
@@ -615,9 +617,6 @@
         >
       </li>
     </ul>
-    <!-- меню  -->
   </nav>
-</header>
-<!-- ---  -->
-</body>
+</header></body>
 </html>
