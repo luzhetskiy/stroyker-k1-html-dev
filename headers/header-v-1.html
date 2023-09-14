@@ -24,399 +24,400 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/header-media.css">
     <link rel="stylesheet" href="../css/header-mobile.css">
+    <link rel="stylesheet" href="../css/custom-mmenu-styles.css">
   
     <script defer src="../js/index.js"></script>
     
   </head>
   <body style="min-height: 200vh">
 
-    <!--#include virtual="/sections/header/header-v-1.html" -->
-    <section class="header-wrapper">
-  <!-- Кастомная дополнительная секция -->
+    
+<header class="__header">
   <section class="additional-section">
     <div class="container">
-      content
+      custom section example
     </div>
   </section>
 
-  <header class="__header">
-    <section class="default-header-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-2">
-            <div class="logo">
-              <a href="#"
-                ><img src="../images/logo4419.svg" alt=""
-              /></a>
-            </div>
+  <section class="header-content-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-2">
+          <div class="logo">
+            <a href="#"
+              ><img src="../images/logo4419.svg" alt=""
+            /></a>
           </div>
-          <div class="col-lg-6 pl--0">
-            <div class="custom-block">
-              <button class="btn catalog-btn">
-                <span></span> Каталог товаров
-              </button>
-              <div class="search-box general--width">
-                <div id="overlay" onclick="javascript: close_all();"></div>
-                <form action="">
-                  <input
-                    type="text"
-                    autocomplete="off"
-                    id="edit_search"
-                    onkeyup="javascript: find_my_div();"
-                    placeholder="Название магазина"
+        </div>
+        <div class="col-lg-6 pl--0">
+          <div class="custom-block">
+            <button class="btn catalog-btn">
+              <span></span> Каталог товаров
+            </button>
+            <div class="search-box general--width">
+              <div id="overlay" onclick="javascript: close_all();"></div>
+              <form action="">
+                <input
+                  type="text"
+                  autocomplete="off"
+                  id="edit_search"
+                  onkeyup="javascript: find_my_div();"
+                  placeholder="Название магазина"
+                />
+                <button class="btn submit">
+                  <img
+                    src="../images/search-icon4273.svg"
+                    alt=""
                   />
-                  <button class="btn submit">
+                </button>
+              </form>
+              <div id="search-result">
+                <a href="#" id="user_0" class="s-item-link">
+                  <div class="s-item-img">
                     <img
-                      src="../images/search-icon4273.svg"
+                      src="../images/30851ff8e294859c3b812fef189cce5b8628.jpeg"
                       alt=""
                     />
-                  </button>
-                </form>
-                <div id="search-result">
-                  <a href="#" id="user_0" class="s-item-link">
-                    <div class="s-item-img">
-                      <img
-                        src="../images/30851ff8e294859c3b812fef189cce5b8628.jpeg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="s-item-info">
-                      <span class="s-item-title">Золотое яблоко</span>
-                      <span class="s-item-price">247$</span>
-                    </div>
-                  </a>
-                  <a href="#" id="user_1" class="s-item-link">
-                    <div class="s-item-img">
-                      <img
-                        src="../images/30851ff8e294859c3b812fef189cce5b8628.jpeg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="s-item-info">
-                      <span class="s-item-title"
-                        >доска asd asd asd asdas
-                      </span>
-                      <span class="s-item-price">247$</span>
-                    </div>
-                  </a>
-                  <a href="#" id="user_2" class="s-item-link">
-                    <div class="s-item-img">
-                      <img
-                        src="../images/30851ff8e294859c3b812fef189cce5b8628.jpeg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="s-item-info">
-                      <span class="s-item-title">корзина</span>
-                      <span class="s-item-price">247$</span>
-                    </div>
-                  </a>
-                  <a href="#" id="user_3" class="s-item-link">
-                    <div class="s-item-img">
-                      <img
-                        src="../images/30851ff8e294859c3b812fef189cce5b8628.jpeg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="s-item-info">
-                      <span class="s-item-title">Золотое яблоко</span>
-                      <span class="s-item-price">247$</span>
-                    </div>
-                  </a>
-                  <a href="#" id="user_4" class="s-item-link">
-                    <div class="s-item-img">
-                      <img
-                        src="../images/30851ff8e294859c3b812fef189cce5b8628.jpeg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="s-item-info">
-                      <span class="s-item-title"
-                        >доска asd asd asd asdas
-                      </span>
-                      <span class="s-item-price">247$</span>
-                    </div>
-                  </a>
-                  <a href="#" id="user_5" class="s-item-link">
-                    <div class="s-item-img">
-                      <img
-                        src="../images/30851ff8e294859c3b812fef189cce5b8628.jpeg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="s-item-info">
-                      <span class="s-item-title">корзина</span>
-                      <span class="s-item-price">247$</span>
-                    </div>
-                  </a>
+                  </div>
+                  <div class="s-item-info">
+                    <span class="s-item-title">Золотое яблоко</span>
+                    <span class="s-item-price">247$</span>
+                  </div>
+                </a>
+                <a href="#" id="user_1" class="s-item-link">
+                  <div class="s-item-img">
+                    <img
+                      src="../images/30851ff8e294859c3b812fef189cce5b8628.jpeg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="s-item-info">
+                    <span class="s-item-title"
+                      >доска asd asd asd asdas
+                    </span>
+                    <span class="s-item-price">247$</span>
+                  </div>
+                </a>
+                <a href="#" id="user_2" class="s-item-link">
+                  <div class="s-item-img">
+                    <img
+                      src="../images/30851ff8e294859c3b812fef189cce5b8628.jpeg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="s-item-info">
+                    <span class="s-item-title">корзина</span>
+                    <span class="s-item-price">247$</span>
+                  </div>
+                </a>
+                <a href="#" id="user_3" class="s-item-link">
+                  <div class="s-item-img">
+                    <img
+                      src="../images/30851ff8e294859c3b812fef189cce5b8628.jpeg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="s-item-info">
+                    <span class="s-item-title">Золотое яблоко</span>
+                    <span class="s-item-price">247$</span>
+                  </div>
+                </a>
+                <a href="#" id="user_4" class="s-item-link">
+                  <div class="s-item-img">
+                    <img
+                      src="../images/30851ff8e294859c3b812fef189cce5b8628.jpeg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="s-item-info">
+                    <span class="s-item-title"
+                      >доска asd asd asd asdas
+                    </span>
+                    <span class="s-item-price">247$</span>
+                  </div>
+                </a>
+                <a href="#" id="user_5" class="s-item-link">
+                  <div class="s-item-img">
+                    <img
+                      src="../images/30851ff8e294859c3b812fef189cce5b8628.jpeg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="s-item-info">
+                    <span class="s-item-title">корзина</span>
+                    <span class="s-item-price">247$</span>
+                  </div>
+                </a>
 
-                  <a href="#" class="all-items-link">Все каталоги</a>
-                </div>
+                <a href="#" class="all-items-link">Все каталоги</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-2">
-            <div class="options-box">
-              <!-- --v1--  -->
-              <ul class="nav-items">
-                <li><a href="#">Пункт меню</a></li>
-                <li>
-                  <a class="active" href="#">Пункт меню 2</a>
-                </li>
-              </ul>
-              <ul class="option-items">
-                <li>
-                  <a href="#"
-                    ><img
-                      src="../images/item1454.svg"
-                      alt=""
-                    />
-                    3</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><img
-                      src="../images/cart-icon-orange3130.svg"
-                      alt=""
-                    />
-                    123 456</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    ><img
-                      src="../images/profile-icon-black5060.svg"
-                      alt=""
-                    />
-                    Выйти</a
-                  >
-                </li>
-              </ul>
-            </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="options-box">
+            <!-- --v1--  -->
+            <ul class="nav-items">
+              <li><a href="#">Пункт меню</a></li>
+              <li>
+                <a class="active" href="#">Пункт меню 2</a>
+              </li>
+            </ul>
+            <ul class="option-items">
+              <li>
+                <a href="#"
+                  ><img
+                    src="../images/item1454.svg"
+                    alt=""
+                  />
+                  3</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="../images/cart-icon-orange3130.svg"
+                    alt=""
+                  />
+                  123 456</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="../images/profile-icon-black5060.svg"
+                    alt=""
+                  />
+                  Выйти</a
+                >
+              </li>
+            </ul>
           </div>
-          <div class="col-lg-2">
-            <div class="contact-box">
-              <p>
-                <span class="circle"></span
-                ><span class="show-number">Показать .. 10-53-28</span
-                ><a href="#">+7(960) 810-53-28</a>
-              </p>
-              <a
-                href="#"
-                data-fancybox="callme-modal"
-                data-src="#callme-modal"
-                href="javascript:;"
-                ><img
-                  src="../images/order-call-arrow4081.svg"
-                  alt=""
-                />
-                Запросить звонок</a
-              >
-            </div>
+        </div>
+        <div class="col-lg-2">
+          <div class="contact-box">
+            <p>
+              <span class="circle"></span
+              ><span class="show-number">Показать .. 10-53-28</span
+              ><a href="#">+7(960) 810-53-28</a>
+            </p>
+            <a
+              href="#"
+              data-fancybox="callme-modal"
+              data-src="#callme-modal"
+              href="javascript:;"
+              ><img
+                src="../images/order-call-arrow4081.svg"
+                alt=""
+              />
+              Запросить звонок</a
+            >
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="catalog-header-section">
-      <div class="catalog-box">
-        <div class="container">
-          <ul class="hover--color hover--underline link--arrow-left">
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Образец выделения активного пункта 1</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Образец выделения активного пункта 2</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Образец выделения активного пункта 3</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">В одну строку название</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Название пункта меню в 2 строки</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Пример, когда иконка слева от текста</a>
-            </li>
+    <div class="catalog-box">
+      <div class="container">
+        <ul class="hover--color hover--underline link--arrow-left">
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Образец выделения активного пункта 1</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Образец выделения активного пункта 2</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Образец выделения активного пункта 3</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">В одну строку название</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Название пункта меню в 2 строки</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Пример, когда иконка слева от текста</a>
+          </li>
 
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Образец выделения активного пункта 1</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Образец выделения активного пункта 2</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Образец выделения активного пункта 3</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">В одну строку название</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Название пункта меню в 2 строки</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Название пункта меню в 2 строки</a>
-            </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Образец выделения активного пункта 1</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Образец выделения активного пункта 2</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Образец выделения активного пункта 3</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">В одну строку название</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Название пункта меню в 2 строки</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Название пункта меню в 2 строки</a>
+          </li>
 
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Категория товара или раздел сайта Три стр...</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Категория товара или раздел сайта Три стр...</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Категория товара или раздел сайта Три стр...</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Категория товара или раздел сайта Три стр...</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Категория товара или раздел сайта Три стр...</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Категория товара или раздел сайта Три стр...</a>
-            </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Категория товара или раздел сайта Три стр...</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Категория товара или раздел сайта Три стр...</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Категория товара или раздел сайта Три стр...</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Категория товара или раздел сайта Три стр...</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Категория товара или раздел сайта Три стр...</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Категория товара или раздел сайта Три стр...</a>
+          </li>
 
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Категория товара или раздел сайта Три стр...</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Категория товара или раздел сайта Три стр...</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Категория товара или раздел сайта Три стр...</a>
-            </li>
-            <li>
-              <span
-                ><img
-                  src="../images/link-arrow7722.svg"
-                  alt=""
-              /></span>
-              <a href="#">Категория товара или раздел сайта Три стр...</a>
-            </li>
-          </ul>
-        </div>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Категория товара или раздел сайта Три стр...</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Категория товара или раздел сайта Три стр...</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Категория товара или раздел сайта Три стр...</a>
+          </li>
+          <li>
+            <span
+              ><img
+                src="../images/link-arrow7722.svg"
+                alt=""
+            /></span>
+            <a href="#">Категория товара или раздел сайта Три стр...</a>
+          </li>
+        </ul>
       </div>
-    </section>
-  </header>
-
-  <!-- Кастомная дополнительная секция -->
-  <section class="additional-section">
-    <div class="container">
-      content
     </div>
   </section>
-</section>
+
+  <section class="additional-section">
+    <div class="container">
+      custom section example
+    </div>
+  </section>
+</header>
 
 <header class="header--mob">
+  <section class="additional-section">
+    <div class="container">
+      custom section example
+    </div>
+  </section>
+  
   <section class="default-header-mob-section">
     <div class="container">
       <div class="row">
@@ -555,10 +556,9 @@
     </div>
   </section>
 
-  <!-- Кастомная дополнительная секция для телефонной шапки -->
-  <section>
+  <section class="additional-section">
     <div class="container">
-      content
+      custom section example
     </div>
   </section>
 
