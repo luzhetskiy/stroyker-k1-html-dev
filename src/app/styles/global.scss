@@ -274,12 +274,6 @@ p:last-child {
 @media (max-width: 767px) {
   .top-header__content {
     height: 60px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: calc(100% + 30px);
-    margin: 0 -15px;
-    padding: 0 30px;
     z-index: 999;
     background-color: var(--header-top-bg-color, #fff);
   }
@@ -16061,10 +16055,22 @@ input, textarea {
   position: relative;
 }
 
+header .header-mob-content-section {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
 header {
   width: 100%;
   position: absolute;
   top: 0;
+}
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
 }
 
 @media (max-width: 767px) {
