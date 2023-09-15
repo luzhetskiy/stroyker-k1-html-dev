@@ -50,12 +50,12 @@ module.exports = {
       entry: 'src/pages',
       js: {
         // output filename of compiled JavaScript, used if `inline` option is false (defaults)
-        filename: 'js/[name].js',
+        filename: 'components_page/scripts/[name].js',
         //inline: true, // inlines JS into HTML
       },
       css: {
         // output filename of extracted CSS, used if `inline` option is false (defaults)
-        filename: 'css/[name].css',
+        filename: 'components_page/styles/[name].css',
         //inline: true, // inlines CSS into HTML
       },
       loaderOptions: {
@@ -76,14 +76,14 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: "asset/resource",
         generator: {
-          filename: "fonts/[name][ext][query]",
+          filename: "components_page/font/[name][ext][query]",
         },
       },
       {
         test: /\.(ico|png|jpg|jpeg|webp|svg)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'images/[name][id][ext][query]',
+          filename: 'components_page/img/[name][id][ext][query]',
         },
       },
     ],

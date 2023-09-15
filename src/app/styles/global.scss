@@ -16045,30 +16045,6 @@ input, textarea {
   display: none;
 }
 
-@media (min-width: 992px) {
-  .mobile-header {
-    display: none;
-  }
-  .desktop-header {
-    display: block;
-  }
-}
-
-.mobile-header {
-  width: 100%;
-  background: #fff;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  position: fixed;
-}
-
-header .header-mob-content-section {
-  height: 60px;
-  display: flex;
-  align-items: center;
-}
-
 header {
   width: 100%;
   position: absolute;
