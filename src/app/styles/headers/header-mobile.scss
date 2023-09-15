@@ -1,19 +1,10 @@
 
 /* header--mob GLOBAL styles  */
 
-@media only screen and (max-width: 991px) {
-  header.header--mob{
-      display: block;
-  }
-}
-
-
-header.header--mob{
-  background: #fff;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  position: fixed;
+.header--mob{
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
 .header--mob .row{
@@ -50,12 +41,12 @@ header.header--mob{
   margin-top: 8px;
 }
 
-header.header--mob .cart-mob{
+.header--mob .cart-mob{
   position: relative;
   margin-right: 5px;
 }
 
-header.header--mob .cart--counter{
+.header--mob .cart--counter{
   width: 17px;
   height: 17px;
   border-radius: 100%;

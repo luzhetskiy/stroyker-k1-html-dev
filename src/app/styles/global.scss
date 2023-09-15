@@ -243,12 +243,6 @@ p:last-child {
   }
 }
 
-.header-wrapper-default {
-  position: absolute;
-  width: 100%;
-  top: 0;
-}
-
 .top-header {
   background-color: var(--header-top-bg-color, #fff);
 }
@@ -16047,12 +16041,26 @@ input, textarea {
 .header_landing {
   position: fixed; }
 
-.__header .header-content-section {
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
+.desktop-header {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
+  .desktop-header {
+    display: block;
+  }
+}
+
+.mobile-header {
+  width: 100%;
+  background: #fff;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  position: fixed;
 }
 
 header .header-mob-content-section {
@@ -16069,6 +16077,9 @@ header {
 
 @media (min-width: 768px) {
   .mobile-menu {
+    display: none !important;
+  }
+  .burger-menu {
     display: none !important;
   }
 }

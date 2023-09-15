@@ -43,6 +43,11 @@
 .__header{
   background: #fff;
   width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 .__header .default-header-section {
