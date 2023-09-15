@@ -6,23 +6,20 @@
 
     <title>Страница продукта</title>
 
-    <link rel="icon" type="image/x-icon" href="../images/favicon3559.png" />
+    <link rel="icon" type="image/x-icon" href="../components_page/img/favicon3559.png" />
 
-    <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/header-catalog.css" />
+    <link rel="stylesheet" href="../components_page/styles/index.css" />
+    <link rel="stylesheet" href="../components_page/styles/header-catalog.css" />
 
-    <script defer src="../js/index.js"></script>
+    <script defer src="../components_page/scripts/index.js"></script>
   </head>
 
   <body class="inner-page">
-    
-<header class="desktop-header">
+    <header>
   <section class="additional-section">
-    <div class="container">
-      custom section example
-    </div>
+    <div class="container">custom section example</div>
   </section>
-  
+
   <section class="header-default">
     <div class="top-header">
       <div class="container">
@@ -31,10 +28,10 @@
             <a class="logo" href="/"
               ><img
                 class="mobile-hide"
-                src="../images/logo3298.svg"
+                src="../components_page/img/logo3298.svg"
                 alt="" /><img
                 class="mobile-show"
-                src="../images/logo3298.svg"
+                src="../components_page/img/logo3298.svg"
                 alt=""
             /></a>
             <div class="main-menu"><ul></ul></div>
@@ -140,7 +137,7 @@
             <div class="mobile-phone mobile-show">
               <span class="icon"
                 ><img
-                  src="../images/tel-mob-icon7868.svg"
+                  src="../components_page/img/tel-mob-icon7868.svg"
                   alt="" /></span
               ><a href="tel:7(846) 970-71-55">+7 (846) 970-71-55</a>
             </div>
@@ -200,7 +197,8 @@
             </div>
             <a class="header-cart" href="/cart/"
               ><i class="icon"
-                ><svg class="icon-svg"><use href="#shopping-cart"></use></svg></i
+                ><svg class="icon-svg">
+                  <use href="#shopping-cart"></use></svg></i
               ><span class="cart-number">1</span></a
             >
           </div>
@@ -219,7 +217,9 @@
                   >Печи для бани и сауны</a
                 >
               </li>
-              <li><a href="/catalog/pilomaterialy/">Отделочные материалы</a></li>
+              <li>
+                <a href="/catalog/pilomaterialy/">Отделочные материалы</a>
+              </li>
               <li>
                 <a href="/catalog/dveri-i-okna-dlya-bani/"
                   >Двери и окна для бани</a
@@ -233,159 +233,7 @@
   </section>
 
   <section class="additional-section">
-    <div class="container">
-      custom section example
-    </div>
-  </section>
-</header>
-
-<header class="mobile-header">
-  <section class="additional-section">
-    <div class="container">
-      custom section example
-    </div>
-  </section>
-
-  <section class="header-default">
-    <div class="top-header">
-      <div class="container">
-        <div class="top-header__content">
-          <div class="top-header__content-left">
-            <a class="logo" href="/"
-              ><img
-                class="mobile-hide"
-                src="../images/logo3298.svg"
-                alt="" /><img
-                class="mobile-show"
-                src="../images/logo3298.svg"
-                alt=""
-            /></a>
-            <div class="main-menu"><ul></ul></div>
-          </div>
-          <div class="top-header__content-right">
-            <div class="header-phones top-header__phones">
-              <div class="header-phones__inner">
-                <a class="header-phones__phone" href="tel:7(846) 970-71-55"
-                  >+7 (846) 970-71-55</a
-                >
-              </div>
-            </div>
-            <a
-              class="btn-border callme-button mobile-hide button-theme button-theme_callme"
-              data-fancybox="callme-modal"
-              data-src="#callme-modal"
-              href="javascript:;"
-              >Заказать звонок</a
-            >
-          </div>
-          <div class="burger-menu"><div class="burger"></div></div>
-          <div class="mobile-menu">
-            <div class="mobile-menu__item mobile-show">
-              <div class="header-user">
-                <a class="header-user__link" href="/user/profile/"
-                  ><span class="icon"
-                    ><svg
-                      width="32"
-                      height="32"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M15.9987 13.3346C17.0535 13.3346 18.0847 13.0218 18.9617 12.4358C19.8388 11.8498 20.5224 11.0168 20.9261 10.0423C21.3297 9.06774 21.4353 7.99539 21.2296 6.96082C21.0238 5.92626 20.5158 4.97595 19.7699 4.23007C19.0241 3.48419 18.0737 2.97624 17.0392 2.77045C16.0046 2.56466 14.9323 2.67028 13.9577 3.07395C12.9832 3.47761 12.1502 4.1612 11.5642 5.03826C10.9782 5.91533 10.6654 6.94647 10.6654 8.0013C10.6654 9.41579 11.2273 10.7723 12.2275 11.7725C13.2277 12.7727 14.5842 13.3346 15.9987 13.3346ZM26.2787 21.6013C23.5494 18.8802 19.8527 17.3522 15.9987 17.3522C12.1447 17.3522 8.44796 18.8802 5.7187 21.6013L5.33203 22.0013V28.0013H26.6654V22.0013L26.2787 21.6013Z"
-                      ></path></svg></span
-                  >info@stroyker.pro</a
-                >
-              </div>
-            </div>
-            <div class="mobile-menu__item mobile-show"></div>
-            <div class="mobile-menu__item mobile-show">
-              <div class="header-search search--box">
-                <input
-                  class="search_input_mobile"
-                  name="q"
-                  autocomplete="off"
-                  data-min-chars="3"
-                  data-search-url="/search"
-                  placeholder="Введите название, артикул, бренд..."
-                /><button>
-                  <svg class="icon-svg"><use href="#search-icon"></use></svg>
-                </button>
-                <div
-                  class="header-search-results"
-                  id="search-result-mob"
-                  style="display: none"
-                ></div>
-              </div>
-            </div>
-            <div class="mobile-ul">
-              <ul class="catalog-menu-mobile">
-                <li class="catalog-opened mobile-show">
-                  <a
-                    >Каталог<svg class="icon"><use href="#tab-arrow"></use></svg
-                  ></a>
-                  <ul class="submenu">
-                    <li class="menu-item">
-                      <a href="/catalog/osveshenie-dlya-ban/"
-                        >Освещение для бань<svg class="icon">
-                          <use href="#tab-arrow"></use></svg
-                      ></a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/catalog/oformlenie-ban/"
-                        >Оформление бань<svg class="icon">
-                          <use href="#tab-arrow"></use></svg
-                      ></a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/catalog/pechi-dlya-bani-i-sauny/"
-                        >Печи для бани и сауны<svg class="icon">
-                          <use href="#tab-arrow"></use></svg
-                      ></a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/catalog/pilomaterialy/"
-                        >Отделочные материалы<svg class="icon">
-                          <use href="#tab-arrow"></use></svg
-                      ></a>
-                    </li>
-                    <li class="menu-item">
-                      <a href="/catalog/dveri-i-okna-dlya-bani/"
-                        >Двери и окна для бани<svg class="icon">
-                          <use href="#tab-arrow"></use></svg
-                      ></a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <ul></ul>
-            </div>
-            <div class="mobile-phone mobile-show">
-              <span class="icon"
-                ><img
-                  src="../images/tel-mob-icon7868.svg"
-                  alt="" /></span
-              ><a href="tel:7(846) 970-71-55">+7 (846) 970-71-55</a>
-            </div>
-            <div class="mobile-btn mobile-show">
-              <a
-                class="btn btn--rubber button-theme button-theme_primary"
-                data-fancybox="callme-modal-mobile"
-                data-src="#callme-modal"
-                href="javascript:;"
-                >Заказать звонок</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="additional-section">
-    <div class="container">
-      custom section example
-    </div>
+    <div class="container">custom section example</div>
   </section>
 </header>
     <main>
@@ -542,7 +390,7 @@
                             >
                               <img
                                 itemprop="image"
-                                src="../images/banner-content-14978.png"
+                                src="../components_page/img/banner-content-14978.png"
                                 alt="Товар 1 (фото 1)"
                               />
                               <span class="product-item__flag-content"> </span>
@@ -560,7 +408,7 @@
                             >
                               <img
                                 itemprop="image"
-                                src="../images/banner-content-14978.png"
+                                src="../components_page/img/banner-content-14978.png"
                                 alt="Товар 1 (фото 1)"
                               />
                               <span class="product-item__flag-content"> </span>
@@ -578,7 +426,7 @@
                             >
                               <img
                                 itemprop="image"
-                                src="../images/banner-content-14978.png"
+                                src="../components_page/img/banner-content-14978.png"
                                 alt="Товар 1 (фото 1)"
                               />
                               <span class="product-item__flag-content"> </span>
@@ -596,7 +444,7 @@
                             >
                               <img
                                 itemprop="image"
-                                src="../images/banner-content-14978.png"
+                                src="../components_page/img/banner-content-14978.png"
                                 alt="Товар 1 (фото 1)"
                               />
                               <span class="product-item__flag-content"> </span>
@@ -614,7 +462,7 @@
                             >
                               <img
                                 itemprop="image"
-                                src="../images/banner-content-14978.png"
+                                src="../components_page/img/banner-content-14978.png"
                                 alt="Товар 1 (фото 1)"
                               />
                               <span class="product-item__flag-content"> </span>
@@ -650,7 +498,7 @@
                           >
                             <div class="item">
                               <img
-                                src="../images/banner-content-14978.png"
+                                src="../components_page/img/banner-content-14978.png"
                                 alt=""
                               />
                             </div>
@@ -883,7 +731,7 @@
                             <div class="col-lg-6 col-md-12">
                               <img
                                 alt=""
-                                src="../images/banner-content-14978.png"
+                                src="../components_page/img/banner-content-14978.png"
                               />
                             </div>
 
@@ -904,14 +752,14 @@
                             <div class="col-lg-4 col-md-12">
                               <img
                                 alt=""
-                                src="../images/banner-content-14978.png"
+                                src="../components_page/img/banner-content-14978.png"
                               />
                             </div>
 
                             <div class="col-lg-4 col-md-12">
                               <img
                                 alt=""
-                                src="../images/banner-content-14978.png"
+                                src="../components_page/img/banner-content-14978.png"
                               />
                             </div>
                           </div>
@@ -1076,7 +924,7 @@
           Контактные данные сайта (нужно настроить)
         </span>
         <a href="/" class="logo">
-          <img src="../images/footer-logo5667.svg" alt="" />
+          <img src="../components_page/img/footer-logo5667.svg" alt="" />
         </a>
         <div class="mobile-show">
           <div class="developer-link">
@@ -1184,26 +1032,26 @@
       <div class="footer-social">
         <span>
           <a href="#">
-            <img src="../images/instagram-icon6.svg" alt="Мы в Instagram" />
+            <img src="../components_page/img/instagram-icon6.svg" alt="Мы в Instagram" />
           </a>
         </span>
 
         <span>
           <a href="#">
-            <img src="../images/twitter-icon2203.svg" alt="Мы в Twitter" />
+            <img src="../components_page/img/twitter-icon2203.svg" alt="Мы в Twitter" />
           </a>
         </span>
 
         <span>
           <a href="#">
-            <img src="../images/youtube-icon2854.svg" alt="Мы на YouTube" />
+            <img src="../components_page/img/youtube-icon2854.svg" alt="Мы на YouTube" />
           </a>
         </span>
 
         <span>
           <a href="#">
             <img
-              src="../images/vk-icon2768.svg"
+              src="../components_page/img/vk-icon2768.svg"
               alt="Наша страница ВКонтакте"
             />
           </a>
