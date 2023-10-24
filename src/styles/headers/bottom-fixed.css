@@ -1,0 +1,42 @@
+
+
+.header--bottom-mob.bottom-fixed{
+    display: flex;
+    height: 40px;
+    background-color: #000;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 998;
+    border-top: 1px solid rgb(32, 32, 32);
+    align-items: center;
+}
+
+
+.header--bottom-mob.bottom-fixed #search-result-mob{
+    top: auto;
+    bottom: 100%;
+}
+
+
+@media only screen and (max-width: 991px) {
+    
+    footer{
+        padding-bottom: 80px;
+    }
+
+    .header--bottom-mob.bottom-fixed ~ main{
+        padding-top: 60px!important;
+    }
+
+    .js-up{
+        bottom: 90px!important;
+    }
+    .safety-message-fixed{
+        bottom: 45px!important;
+    }
+
+}
+
