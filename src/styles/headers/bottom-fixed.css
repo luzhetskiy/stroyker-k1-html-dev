@@ -27,10 +27,6 @@
         padding-bottom: 80px;
     }
 
-    .header--bottom-mob.bottom-fixed ~ main{
-        padding-top: 60px!important;
-    }
-
     .js-up{
         bottom: 90px!important;
     }
