@@ -10,19 +10,20 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="./libs/fancy-box/fancy-box.css" />
-    <link rel="stylesheet" href="./libs/mmenu/mmenu.css" />
-    <script defer src="./libs/jquery/jquery.js"></script>
-    <script defer src="./libs/owl-carousel/owl-carousel.js"></script>
-    <script defer src="./libs/slick/slick.js"></script>
-    <script defer src="./libs/mmenu/mmenu.js"></script>
+    <link rel="stylesheet" href="/libs/fancy-box/fancy-box.css" />
+    <link rel="stylesheet" href="/libs/mmenu/mmenu.css" />
+    <script defer src="/libs/jquery/jquery.js"></script>
+    <script defer src="/libs/owl-carousel/owl-carousel.js"></script>
+    <script defer src="/libs/slick/slick.js"></script>
+    <script defer src="/libs/mmenu/mmenu.js"></script>
 
-    <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/headers-custom.css" />
-    <script defer src="./js/scripts.js"></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/headers-custom.css" />
+    <script defer src="/js/scripts.js"></script>
+    <script defer src="/js/headers-custom.js"></script>
   </head>
 
-  <body class="inner-page">
+  <body class="frontpage">
     <header>
       <!-- new header v2 -->
       <section class="__header">
@@ -31,7 +32,7 @@
             <div class="col-lg-2">
               <div class="logo">
                 <a href="/">
-                  <img src="./images/logo.svg" />
+                  <img src="/images/logo.svg" />
                 </a>
               </div>
             </div>
@@ -53,7 +54,7 @@
                     />
 
                     <button class="btn submit">
-                      <img src="./images/header-icons/search-icon.svg" alt="" />
+                      <img src="/images/header-icons/search-icon.svg" alt="" />
                     </button>
                   </form>
                   <div id="search-result" style="display: none" class="header-search-results"></div>
@@ -66,7 +67,7 @@
                 <ul class="option-items v-white">
                   <li>
                     <a href="/cart/">
-                      <img src="./images/header-icons/cart-icon-orange.svg" alt="" />
+                      <img src="/images/header-icons/cart-icon-orange.svg" alt="" />
 
                       <span class="cart-number">0</span>
                     </a>
@@ -87,7 +88,7 @@
             <div class="col-lg-2">
               <div class="contact-box">
                 <a href="javascript:;" data-fancybox="callme-modal" data-src="#callme-modal">
-                  <img src="./images/header-icons/order-call-arrow.svg" alt="" />
+                  <img src="/images/header-icons/order-call-arrow.svg" alt="" />
                   Заказать звонок
                 </a>
               </div>
@@ -131,7 +132,7 @@
                   data-src="#callme-modal"
                   href="#"
                 >
-                  <img src="./images/header-icons/tel-mob-icon.svg" alt="" />
+                  <img src="/images/header-icons/tel-mob-icon.svg" alt="" />
                   Заказать звонок
                 </a>
                 <button class="btn" id="my-button">
@@ -234,7 +235,6 @@
       </section>
     </header>
 
-    <!-- Нельзя менять section в div иначе mmenu (#my-menu) не будет работать корректно  -->
     <section class="header--bottom-mob">
       <div class="container">
         <div class="row">
@@ -254,7 +254,7 @@
                   placeholder="Поиск..."
                 />
                 <button class="btn submit">
-                  <img src="./images/header-icons/s-icon-mob.svg" alt="" />
+                  <img src="/images/header-icons/s-icon-mob.svg" alt="" />
                 </button>
               </form>
               <div id="search-result-mob"></div>
@@ -266,7 +266,7 @@
             <a href="/cart/" class="custom-mob-cart">
               <span class="cart-number">0</span>
 
-              <img src="./images/header-icons/cart-icon-white.svg" alt="" />
+              <img src="/images/header-icons/cart-icon-white.svg" alt="" />
             </a>
           </div>
         </div>
@@ -274,138 +274,197 @@
     </section>
 
     <main>
-      <section class="section section-first mobile-show">
+      <section class="section-dark">
         <div class="container">
-          <div class="catalog-side mobile-show">
-            <span class="catalog-side__title">
-              <span class="icon">
-                <svg
-                  width="16"
-                  height="14"
-                  viewBox="0 0 16 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z" fill="currentColor" />
-                </svg>
+          <div class="page-head">
+            <div
+              class="breadcrumbs breadcrumbs--lk"
+              itemscope=""
+              itemtype="http://schema.org/BreadcrumbList"
+            >
+              <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a itemprop="item" title="Главная" href="/">
+                  Главная
+                  <meta itemprop="name" content="Главная" />
+                </a>
+                <meta itemprop="position" content="1" />
               </span>
-              Проекты домов
-            </span>
-            <div class="catalog-side__content">
-              <ul>
-                <li class="menu-item">
-                  <a href="/catalog/kategoriya-tovarov-1/">Проекты домов до 150м2</a>
-                </li>
 
-                <li class="menu-item">
-                  <a href="/catalog/kategoriya-tovarov-2/">Проекты домов до 300м2</a>
-                </li>
-              </ul>
+              <svg class="breadcrumbs__sep">
+                <use xlink:href="#tab-arrow"></use>
+              </svg>
+
+              <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a itemprop="item" title="Каталог" href="/catalog/">
+                  Каталог
+                  <meta itemprop="name" content="Каталог" />
+                </a>
+                <meta itemprop="position" content="2" />
+              </span>
+
+              <svg class="breadcrumbs__sep">
+                <use xlink:href="#tab-arrow"></use>
+              </svg>
+
+              <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a
+                  itemprop="item"
+                  title="Проекты домов до 150м2"
+                  href="/catalog/kategoriya-tovarov-1/"
+                >
+                  Проекты домов до 150м2
+                  <meta itemprop="name" content="Проекты домов до 150м2" />
+                </a>
+                <meta itemprop="position" content="3" />
+              </span>
+
+              <svg class="breadcrumbs__sep">
+                <use xlink:href="#tab-arrow"></use>
+              </svg>
+
+              <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a
+                  itemprop="item"
+                  title="Одноэтажные дома до 150м2"
+                  href="/catalog/category/kategoriya-tovarov-1/podkategoriya-tovarov-1/"
+                >
+                  Одноэтажные дома до 150м2
+                  <meta itemprop="name" content="Одноэтажные дома до 150м2" />
+                </a>
+                <meta itemprop="position" content="4" />
+              </span>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section class="conditional-section offer-big-slider big_banners wide-container">
-        <div class="container">
-          <!-- это ширина на весь экран  -->
-
-          <!-- обрезка влево -  cropped--left -->
-          <!-- обрезка вправо - cropped--right -->
-          <!-- без обрезки - убираем классы cropped--left и cropped--right -->
-          <div class="home-banner cropped--nocrop inner-block__active">
-            <div class="owl-carousel" data-autoplay-timeout="5">
-              <!--slide-->
-
-              <div class="home-banner__slide">
-                <!--image-->
-
-                <div class="image image_cover" title="Оффер">
-                  <img src="./images/offer-img.svg" alt="Оффер" />
+          <div class="content-block">
+            <div class="order-status-block">
+              <h2 class="order-status-block__title mb-30">
+                <p class="content-title order-status-block__title-text mb-0">
+                  Заказ <span class="order-status-block__title-highlight">№111111</span> от 29 сен
+                  2023 г
+                </p>
+                <span class="order-status-block__badge order-status-block__badge_blue">Новый</span>
+              </h2>
+              <div class="order-status-block__info-block mb-30">
+                <p class="order-status-block__sub-title">Информация о доставке:</p>
+                <div class="order-status-block__grid">
+                  <span class="order-status-block__grid-element">Способ доставки:</span>
+                  <span class="order-status-block__grid-element">По адресу</span>
                 </div>
-
-                <div class="container content-container">
-                  <div class="slide-content align--right">
-                    <div>
-                      <p style="font-weight: 800; font-size: 30px; line-height: 100%">
-                        Оффер - большой слайдер
-                      </p>
-
-                      <li>
-                        можно выбрать варианты - широкий баннер, до 1180px, баннер с каталогом слева
-                      </li>
-                      <li>высота настраивается в зависимости от контента</li>
-                      <li>
-                        загружается фон (изображение, возможно, текст, который нет возможности
-                        внедрить в рамках админки)
-                      </li>
-                      <br />
-                      <li>можно выбрать расположение информации в левой или правой колонке</li>
-                      <li>можно выбрать пагинацию кружками снизу или стрелками по сторонам</li>
-                      <br />
-                      <li>
-                        в блоке можно уместить: изображение; текст; кнопки; внутреннее разделение на
-                        колонки; любые сочетания вышеперечисленного контента
-                      </li>
-                    </div>
-                  </div>
+                <div class="order-status-block__grid">
+                  <span class="order-status-block__grid-element">Адрес доставки:</span>
+                  <span class="order-status-block__grid-element"
+                    >г. Самара, пр. Кирова, д.3, кв.1</span
+                  >
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="conditional-section offer-banner-two-col multirow_banner_set">
-        <div class="container">
-          <div
-            class="b-multirows-row d-grid row-gap-25 column-gap-grid grid-columns-md-2 grid-columns-lg-2"
-          >
-            <div class="content-standard-box">
-              <div class="content-standard-box__container">
-                <div class="content-background-box__text-content">
-                  <div>
-                    <p style="font-weight: 800; font-size: 30px; line-height: 100%">
-                      Оффер - набор строк с баннерами - 2 колонки
-                    </p>
-
-                    <li>ширина колонки 580px</li>
-                    <li>высота любая</li>
-                    <br />
-                    <p>в колонке можно уместить:</p>
-
-                    <li>изображение</li>
-                    <li>текст</li>
-                    <li>кнопки</li>
-                    <li>внутреннее разделение на колонки</li>
-                    <li>оставить одну из колонок пустой</li>
-                    <li>любые сочетания вышеперечисленного контента</li>
-                    <li>колонки могут быть разной высоты</li>
-                    <br />
-                    <p>
-                      Изначально, если изображение загружается через админку, оно автоматически
-                      будет отображаться выше контента, прописываемого в поле “Текст”, на таких фото
-                      стоит зум, но есть проблемы с вставлением ссылок на фото
-                    </p>
-
-                    <p>
-                      Кодом можно поправить отображение текста, например, сделать его на фото снизу
-                    </p>
-
-                    <p>
-                      Если положение фото должно быть другим - его внутри контента вставить ссылкой,
-                      предварительно добавив в менеджер файлов
-                    </p>
-                  </div>
+              <div class="order-status-block__info-block mb-30">
+                <p class="order-status-block__sub-title">Оплата заказа:</p>
+                <div class="order-status-block__grid">
+                  <span class="order-status-block__grid-element">Сумма:</span>
+                  <span class="order-status-block__grid-element">21 322,00 ₽</span>
+                </div>
+                <div class="order-status-block__grid">
+                  <span class="order-status-block__grid-element">Способ оплаты:</span>
+                  <span class="order-status-block__grid-element">Онлайн</span>
+                </div>
+                <div class="order-status-block__grid">
+                  <span class="order-status-block__grid-element">Статус оплаты</span>
+                  <span
+                    class="order-status-block__grid-element order-status-block__grid-element_red"
+                  >
+                    <img class="order-status-block__icon" src="/images/cross.svg" alt="" />Не
+                    оплачено
+                  </span>
                 </div>
               </div>
-            </div>
-
-            <div class="content-standard-box">
-              <div class="content-standard-box__container">
-                <div class="content-image image-zoom">
-                  <div class="image">
-                    <img src="./images/example-banner.svg" />
+              <div class="order-status-block__info-block mb-30">
+                <p class="order-status-block__sub-title">Комментарий к заказу:</p>
+                <p class="order-status-block__info-text">
+                  Отследить заказ на сайте CDEK можно по номеру: <a href="#">4559699590000</a>
+                </p>
+              </div>
+              <p class="order-status-block__sub-title order-status-block__sub-title_table">
+                Состав заказа:
+              </p>
+              <div class="order-status-block__table">
+                <div class="order-status-block__table-row order-status-block__table-row_head">
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-title">Артикул</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-title">Наименование</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-title">Кол-во</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-title">Цена</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-title">Сумма</span>
+                  </div>
+                </div>
+                <div class="order-status-block__table-row">
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">767</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text"
+                      >Retro DW9RET11 Декор 249*500*8,5 (8 шт в уп)</span
+                    >
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">15</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">1 350,00 ₽</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">20 250,00 ₽</span>
+                  </div>
+                </div>
+                <div class="order-status-block__table-row">
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">767</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text"
+                      >Retro DW9RET11 Декор 249*500*8,5 (8 шт в уп)</span
+                    >
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">15</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">1 350,00 ₽</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">20 250,00 ₽</span>
+                  </div>
+                </div>
+                <div class="order-status-block__table-row order-status-block__table-row_post-head">
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">Доставка</span>
+                  </div>
+                  <div class="order-status-block__table-cell"></div>
+                  <div class="order-status-block__table-cell"></div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">300,00 ₽</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">300,00 ₽</span>
+                  </div>
+                </div>
+                <div class="order-status-block__table-row">
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-title">Итоговая сумма:</span>
+                  </div>
+                  <div class="order-status-block__table-cell"></div>
+                  <div class="order-status-block__table-cell"></div>
+                  <div class="order-status-block__table-cell"></div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-title">21 322,00 ₽</span>
                   </div>
                 </div>
               </div>
@@ -512,25 +571,25 @@
           <div class="footer-social">
             <span>
               <a href="#">
-                <img src="./images/instagram-icon.svg" alt="Мы в Instagram" />
+                <img src="/images/instagram-icon.svg" alt="Мы в Instagram" />
               </a>
             </span>
 
             <span>
               <a href="#">
-                <img src="./images/twitter-icon.svg" alt="Мы в Twitter" />
+                <img src="/images/twitter-icon.svg" alt="Мы в Twitter" />
               </a>
             </span>
 
             <span>
               <a href="#">
-                <img src="./images/youtube-icon.svg" alt="Мы на YouTube" />
+                <img src="/images/youtube-icon.svg" alt="Мы на YouTube" />
               </a>
             </span>
 
             <span>
               <a href="#">
-                <img src="./images/vk-icon.svg" alt="Наша страница ВКонтакте" />
+                <img src="/images/vk-icon.svg" alt="Наша страница ВКонтакте" />
               </a>
             </span>
           </div>
