@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".reveal").each(function(){var e=$(this),a=e.attr("data-reveal-delay");setTimeout(function(){e.addClass("item-revealed")},a)})});

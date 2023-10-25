@@ -24,7 +24,6 @@ function sync() {
 function scripts() {
   return gulp
   .src(["src/scripts/*.js"])
-  .pipe(concat("scripts.js"))
   .pipe(sourcemaps.init())
   .pipe(uglify())
   .pipe(sourcemaps.write())
@@ -35,7 +34,6 @@ function scripts() {
 function scriptsBuild() {
   return gulp
   .src(["src/scripts/*.js"])
-  .pipe(concat("build.js"))
   .pipe(uglify())
   .pipe(gulp.dest("public/js"))
   .pipe(browserSync.stream());
