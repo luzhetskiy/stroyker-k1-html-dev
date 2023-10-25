@@ -8,8 +8,7 @@
 }
 
 
-header.header--mob{
-    background: #fff;
+.header--mob{
     height: 60px;
     flex-wrap: wrap;
     align-items: center;
@@ -53,12 +52,12 @@ header.header--mob{
     margin-top: 8px;
 }
 
-header.header--mob .cart-mob{
+.header--mob .cart-mob{
     position: relative;
     margin-right: 5px;
 }
 
-header.header--mob .cart--counter{
+.header--mob .cart--counter{
     width: 17px;
     height: 17px;
     border-radius: 100%;
