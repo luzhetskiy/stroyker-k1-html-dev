@@ -35,7 +35,7 @@ function scriptsBuild() {
   return gulp
   .src(["src/scripts/*.js"])
   .pipe(uglify())
-  .pipe(gulp.dest("public/js"))
+  .pipe(gulp.dest("build/js"))
   .pipe(browserSync.stream());
 }
 
