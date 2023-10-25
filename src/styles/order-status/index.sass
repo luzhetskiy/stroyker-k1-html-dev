@@ -1,0 +1,92 @@
+@use './form'
+
+.order-status-block
+  background-color: #fff
+  padding: 40px 100px
+  &__title-highlight
+    color: var(--main-elements-color, #2363d1)
+    padding: 0 7px
+
+  &__title
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: 30px
+    justify-content: flex-start
+
+  &__badge
+    display: inline-block
+    padding: 0 15px
+    border-radius: 2px
+    font-size: 14px
+    font-weight: 400
+    &_green
+      background: #4FA22E1A
+      color: #4FA22E !important
+      border: 1px solid #4FA22E
+
+    &_blue
+      background-color: #1C52AC1A
+      color: #1C52AC !important
+      border: 1px solid #1C52AC
+
+    &_red
+      background-color: #C432281A
+      color: #C43228 !important
+      border: 1px solid #C43228
+
+  &__sub-title
+    font-size: 18px
+    font-weight: bold
+    &_table
+      border-top: 1px solid #E5E5EA
+      padding-top: 20px
+
+  &__grid
+    display: grid
+    grid-template-columns: 130px 1fr
+
+  &__grid-element:nth-child(2n)
+    padding-left: 13px
+
+  &__grid-element
+    display: flex
+    align-items: center
+    gap: 5px
+    margin-bottom: 20px !important
+    &_green
+      color: #4FA22E
+    &_red
+      color: #C43228
+
+  &__icon
+    width: 15px
+    height: 15px
+
+  &__table
+    overflow: auto
+
+  &__table-row
+    display: grid
+    grid-template-columns: 10% 40% 20% 15% 15%
+    min-width: 1180px
+    &_head
+      border-bottom: 1px solid #E5E5EA
+    &_post-head
+      border-top: 1px solid #E5E5EA
+
+  &__table-title
+    font-size: 14px
+    font-weight: bold
+
+  &__table-cell
+    margin: 0
+    padding: 15px 0
+
+  &__info-text
+    max-width: 380px
+
+@media (max-width: 767px)
+  .order-status-block
+    padding-inline: 15px
+    margin: 0 -15px
