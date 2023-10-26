@@ -5,7 +5,6 @@
   padding: 40px 100px
   &__title-highlight
     color: var(--main-elements-color, #2363d1)
-    padding: 0 7px
 
   &__title
     display: flex
@@ -14,12 +13,20 @@
     gap: 30px
     justify-content: flex-start
 
+  &__title-text
+    font-size: 22px
+    font-weight: bold
+
   &__badge
     display: inline-block
     padding: 0 15px
     border-radius: 2px
     font-size: 14px
     font-weight: 400
+    min-height: 40px
+    display: inline-flex
+    align-items: center
+    justify-content: center
     &_green
       background: #4FA22E1A
       color: #4FA22E !important
@@ -50,10 +57,12 @@
     padding-left: 13px
 
   &__grid-element
+    margin-bottom: 20px !important
     display: flex
     align-items: center
     gap: 5px
-    margin-bottom: 20px !important
+    font-size: 14px
+    font-weight: 400
     &_green
       color: #4FA22E
     &_red
@@ -68,8 +77,9 @@
 
   &__table-row
     display: grid
-    grid-template-columns: 10% 40% 20% 15% 15%
-    min-width: 1180px
+    grid-template-columns: 15% 40% 15% 15% 15%
+    min-width: 980px
+    padding: 15px 0
     &_head
       border-bottom: 1px solid #E5E5EA
     &_post-head
@@ -78,13 +88,32 @@
   &__table-title
     font-size: 14px
     font-weight: bold
-
-  &__table-cell
     margin: 0
-    padding: 15px 0
+    padding: 0
+
+  &__table-text
+    font-size: 14px
+    font-weight: 400
+    margin: 0
+    padding: 0
 
   &__info-text
     max-width: 380px
+    font-size: 14px
+    font-weight: 400
+
+  &__row
+    display: grid
+    grid-template-columns: 85% 15%
+    padding-top: 15px
+    &_top
+      border-top: 1px solid #E5E5EA
+
+@media (max-width: 1279px)
+  .order-status-block
+    &__row
+      display: flex
+      justify-content: space-between
 
 @media (max-width: 767px)
   .order-status-block

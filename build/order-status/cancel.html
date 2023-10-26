@@ -10,16 +10,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="/libs/fancy-box/fancy-box.css" />
-    <link rel="stylesheet" href="/libs/mmenu/mmenu.css" />
-    <script defer src="/libs/jquery/jquery.js"></script>
-    <script defer src="/libs/owl-carousel/owl-carousel.js"></script>
-    <script defer src="/libs/slick/slick.js"></script>
-    <script defer src="/libs/mmenu/mmenu.js"></script>
+    <link rel="stylesheet" href="../libs/fancy-box/fancy-box.css" />
+    <link rel="stylesheet" href="../libs/mmenu/mmenu.css" />
+    <script defer src="../libs/jquery/jquery.js"></script>
+    <script defer src="../libs/owl-carousel/owl-carousel.js"></script>
+    <script defer src="../libs/slick/slick.js"></script>
+    <script defer src="../libs/mmenu/mmenu.js"></script>
 
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/headers-custom.css" />
-    <script defer src="/js/scripts.js"></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/headers-custom.css" />
+    <script defer src="../js/scripts.js"></script>
+    <script defer src="../js/headers-custom.js"></script>
   </head>
 
   <body class="frontpage">
@@ -31,7 +32,7 @@
             <div class="col-lg-2">
               <div class="logo">
                 <a href="/">
-                  <img src="/images/logo.svg" />
+                  <img src="../images/logo.svg" />
                 </a>
               </div>
             </div>
@@ -53,7 +54,7 @@
                     />
 
                     <button class="btn submit">
-                      <img src="/images/header-icons/search-icon.svg" alt="" />
+                      <img src="../images/header-icons/search-icon.svg" alt="" />
                     </button>
                   </form>
                   <div id="search-result" style="display: none" class="header-search-results"></div>
@@ -66,7 +67,7 @@
                 <ul class="option-items v-white">
                   <li>
                     <a href="/cart/">
-                      <img src="/images/header-icons/cart-icon-orange.svg" alt="" />
+                      <img src="../images/header-icons/cart-icon-orange.svg" alt="" />
 
                       <span class="cart-number">0</span>
                     </a>
@@ -87,7 +88,7 @@
             <div class="col-lg-2">
               <div class="contact-box">
                 <a href="javascript:;" data-fancybox="callme-modal" data-src="#callme-modal">
-                  <img src="/images/header-icons/order-call-arrow.svg" alt="" />
+                  <img src="../images/header-icons/order-call-arrow.svg" alt="" />
                   Заказать звонок
                 </a>
               </div>
@@ -117,7 +118,7 @@
             <div class="col-3">
               <div class="logo">
                 <a href="/">
-                  <img src="/images/logo.svg" alt="" />
+                  <img src="../images/logo.svg" alt="" />
                 </a>
               </div>
             </div>
@@ -265,7 +266,7 @@
             <a href="/cart/" class="custom-mob-cart">
               <span class="cart-number">0</span>
 
-              <img src="/images/header-icons/cart-icon-white.svg" alt="" />
+              <img src="../images/header-icons/cart-icon-white.svg" alt="" />
             </a>
           </div>
         </div>
@@ -336,40 +337,118 @@
           </div>
 
           <div class="content-block">
-            <div class="order-status-form">
-              <div class="order-status-form__wrapper">
-                <p class="content-title h2 order-status-form__title">Узнать статус заказа</p>
-                <p class="form-text order-status-form__text">
-                  Введите данные, которые были указаны при оформлении заказа, чтобы посмотреть его
-                  статус.
+            <div class="order-status-block">
+              <h2 class="order-status-block__title mb-30">
+                <p class="order-status-block__title-text mb-0">
+                  Заказ <span class="order-status-block__title-highlight">№111111</span> от 29 сен
+                  2023 г
                 </p>
-                <form class="order-status-form__form" action="">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="name"
-                      autocomplete="off"
-                      required=""
-                    />
-                    <label for="name" class="label-name">
-                      <span class="content-name">Номер заказа*</span>
-                    </label>
+                <span class="order-status-block__badge order-status-block__badge_red"
+                  >Отменено</span
+                >
+              </h2>
+              <div class="order-status-block__info-block mb-30">
+                <p class="order-status-block__sub-title">Информация о доставке:</p>
+                <div class="order-status-block__grid">
+                  <p class="order-status-block__grid-element">Способ доставки:</p>
+                  <p class="order-status-block__grid-element">По адресу</p>
+                </div>
+                <div class="order-status-block__grid">
+                  <p class="order-status-block__grid-element">Адрес доставки:</p>
+                  <p class="order-status-block__grid-element">г. Самара, пр. Кирова, д.3, кв.1</p>
+                </div>
+              </div>
+              <div class="order-status-block__info-block mb-30">
+                <p class="order-status-block__sub-title">Оплата заказа:</p>
+                <div class="order-status-block__grid">
+                  <p class="order-status-block__grid-element">Сумма:</p>
+                  <p class="order-status-block__grid-element">21 322,00 ₽</p>
+                </div>
+                <div class="order-status-block__grid">
+                  <p class="order-status-block__grid-element">Способ оплаты:</p>
+                  <p class="order-status-block__grid-element">Онлайн</p>
+                </div>
+                <div class="order-status-block__grid">
+                  <p class="order-status-block__grid-element">Статус оплаты</p>
+                  <p class="order-status-block__grid-element order-status-block__grid-element_red">
+                    <img class="order-status-block__icon" src="../images/cross.svg" alt="" />Не
+                    оплачено
+                  </p>
+                </div>
+              </div>
+              <div class="order-status-block__info-block mb-30">
+                <p class="order-status-block__sub-title">Комментарий к заказу:</p>
+                <p class="order-status-block__info-text">
+                  Отследить заказ на сайте CDEK можно по номеру: <a href="#">4559699590000</a>
+                </p>
+              </div>
+              <p class="order-status-block__sub-title order-status-block__sub-title_table">
+                Состав заказа:
+              </p>
+              <div class="order-status-block__table">
+                <div class="order-status-block__table-row order-status-block__table-row_head">
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-title">Артикул</span>
                   </div>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="name"
-                      autocomplete="off"
-                      required=""
-                    />
-                    <label for="name" class="label-name">
-                      <span class="content-name">Email*</span>
-                    </label>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-title">Наименование</span>
                   </div>
-                  <button type="submit" class="btn btn--main-min">Отследить</button>
-                </form>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-title">Кол-во</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-title">Цена</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-title">Сумма</span>
+                  </div>
+                </div>
+                <div class="order-status-block__table-row">
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">767</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text"
+                      >Retro DW9RET11 Декор 249*500*8,5 (8 шт в уп)</span
+                    >
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">15</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">1 350,00 ₽</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">20 250,00 ₽</span>
+                  </div>
+                </div>
+                <div class="order-status-block__table-row">
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">767</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text"
+                      >Retro DW9RET11 Декор 249*500*8,5 (8 шт в уп)</span
+                    >
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">15</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">1 350,00 ₽</span>
+                  </div>
+                  <div class="order-status-block__table-cell">
+                    <span class="order-status-block__table-text">20 250,00 ₽</span>
+                  </div>
+                </div>
+              </div>
+              <div class="order-status-block__row order-status-block__row_top">
+                <p class="order-status-block__table-text">Доставка</p>
+                <p class="order-status-block__table-text">300,00 ₽</p>
+              </div>
+              <div class="order-status-block__row">
+                <p class="order-status-block__table-title">Итоговая сумма:</p>
+                <p class="order-status-block__table-title">21 322,00 ₽</p>
               </div>
             </div>
           </div>
@@ -383,7 +462,7 @@
           <div class="footer-first-column">
             <span class="footer-contact"> Контактные данные сайта (нужно настроить) </span>
             <a href="/" class="logo">
-              <img src="/images/footer-logo.svg" alt="" />
+              <img src="../images/footer-logo.svg" alt="" />
             </a>
             <div class="mobile-show">
               <div class="developer-link">
@@ -474,25 +553,25 @@
           <div class="footer-social">
             <span>
               <a href="#">
-                <img src="/images/instagram-icon.svg" alt="Мы в Instagram" />
+                <img src="../images/instagram-icon.svg" alt="Мы в Instagram" />
               </a>
             </span>
 
             <span>
               <a href="#">
-                <img src="/images/twitter-icon.svg" alt="Мы в Twitter" />
+                <img src="../images/twitter-icon.svg" alt="Мы в Twitter" />
               </a>
             </span>
 
             <span>
               <a href="#">
-                <img src="/images/youtube-icon.svg" alt="Мы на YouTube" />
+                <img src="../images/youtube-icon.svg" alt="Мы на YouTube" />
               </a>
             </span>
 
             <span>
               <a href="#">
-                <img src="/images/vk-icon.svg" alt="Наша страница ВКонтакте" />
+                <img src="../images/vk-icon.svg" alt="Наша страница ВКонтакте" />
               </a>
             </span>
           </div>
