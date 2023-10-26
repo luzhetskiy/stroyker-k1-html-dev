@@ -124,7 +124,7 @@ header ul.hover--arrow li:before {
   bottom: 0;
   top: -7px;
   margin: auto;
-  background-image: url(../img/icons/small-arrow.svg);
+  background-image: url(../images/icons/small-arrow.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
