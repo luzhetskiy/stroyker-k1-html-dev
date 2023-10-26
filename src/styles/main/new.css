@@ -4994,8 +4994,9 @@ body {
   align-items: center;
   text-align: center;
   font-size: 14px;
-  transition: color 0.15s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out,
-    opacity 0.15s ease-out, visibility 0.15s ease-out;
+  transition: color 0.15s ease-out, border-color 0.15s ease-out,
+    background-color 0.15s ease-out, opacity 0.15s ease-out,
+    visibility 0.15s ease-out;
   height: 40px;
   line-height: 38px;
   padding: 0 15px;
@@ -5071,7 +5072,8 @@ body {
 }
 
 .button-theme {
-  transition: color var(--trs-1), background-color var(--trs-1), border-color var(--trs-1) !important;
+  transition: color var(--trs-1), background-color var(--trs-1),
+    border-color var(--trs-1) !important;
   border-style: solid !important;
   border-width: 1px !important;
   color: var(--color-text) !important;
@@ -5082,7 +5084,10 @@ body {
 .button-theme[data-touch],
 .button-theme[data-hover] {
   color: var(--color-text-hover, var(--color-text)) !important;
-  background-color: var(--color-background-hover, var(--color-background-hover)) !important;
+  background-color: var(
+    --color-background-hover,
+    var(--color-background-hover)
+  ) !important;
   border-color: var(--color-border-hover, var(--color-border)) !important;
 }
 .button-theme_primary {
@@ -5114,7 +5119,10 @@ body {
   --color-background: var(--color-button-callme-background, #fff);
   --color-border: var(--color-button-callme-border, #b7cbe5);
   --color-text-hover: var(--color-button-callme-text-hover, var(--color-text));
-  --color-background-hover: var(--color-button-callme-background-hover, var(--color-background));
+  --color-background-hover: var(
+    --color-button-callme-background-hover,
+    var(--color-background)
+  );
   --color-border-hover: var(--color-button-callme-border-hover, var(--color-border));
 }
 .button-theme_cart {
@@ -5502,7 +5510,8 @@ body {
   position: relative;
   padding: 10px;
   object-fit: contain;
-  transition: opacity 0.15s ease-out, visibility 0.15s ease-out, transform 0.15s ease-out;
+  transition: opacity 0.15s ease-out, visibility 0.15s ease-out,
+    transform 0.15s ease-out;
   will-change: transform;
 }
 .product-item__image img:not(:first-child) {
@@ -5740,7 +5749,8 @@ img.lazyloading {
 img.lazyloaded {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.25s ease-out, visibility 0.25s ease-out, transform 0.15s ease-out;
+  transition: opacity 0.25s ease-out, visibility 0.25s ease-out,
+    transform 0.15s ease-out;
 }
 
 .image {
@@ -5836,7 +5846,8 @@ img.lazyloaded {
 }
 .product-card-v2__image .image img {
   padding: var(--pd);
-  transition: opacity 0.15s ease-out, visibility 0.15s ease-out, transform 0.15s ease-out;
+  transition: opacity 0.15s ease-out, visibility 0.15s ease-out,
+    transform 0.15s ease-out;
   will-change: transform;
 }
 .product-card-v2__image .image img:not(:first-child) {
@@ -8280,7 +8291,7 @@ main {
   display: none !important;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 767px) {
   .catalog-side {
     display: block !important;
   }
