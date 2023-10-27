@@ -1073,16 +1073,6 @@ p:last-child {
   color: #fff;
 }
 
-.mobile-show {
-  display: none !important;
-}
-
-@media (max-width: 991px) {
-  .mobile-show {
-    display: block !important;
-  }
-}
-
 .mobile-show-flex {
   display: none !important;
 }
@@ -1095,9 +1085,16 @@ p:last-child {
   }
 }
 
-@media (max-width: 991px) {
+.mobile-show {
+  display: none !important;
+}
+
+@media (max-width: 776px) {
   .mobile-hide {
     display: none !important;
+  }
+  .mobile-show {
+    display: block !important;
   }
 }
 

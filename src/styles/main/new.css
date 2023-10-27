@@ -8275,13 +8275,3 @@ main {
     height: 80px;
   }
 }
-
-.catalog-side {
-  display: none !important;
-}
-
-@media (max-width: 767px) {
-  .catalog-side {
-    display: block !important;
-  }
-}
