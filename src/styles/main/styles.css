@@ -5087,6 +5087,7 @@ p:last-child {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  text-wrap: nowrap;
 }
 
 .shopping-cart-btn .icon {
