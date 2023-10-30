@@ -24,205 +24,280 @@
   </head>
 
   <body class="inner-page">
-    <header>
-      <!-- new header v2 -->
-      <section class="__header">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-2">
-              <div class="logo">
-                <a href="/">
-                  <img src="../images/logo.svg" />
+    <header class="">
+      <section class="header-default">
+        <div class="top-header">
+          <div class="container">
+            <div class="top-header__content">
+              <div class="top-header__content-left">
+                <a href="/" class="logo">
+                  <img
+                    src="/media/logo_shapka.svg"
+                    alt="Домант - строительство современных домов под ключ в Казани"
+                  />
                 </a>
-              </div>
-            </div>
-            <div class="col-lg-6 pl--0">
-              <div class="custom-block">
-                <button class="btn catalog-btn"><span></span>Проекты домов</button>
+                <div class="main-menu">
+                  <ul>
+                    <li>
+                      <a title="О нас" href="/about/"> О нас </a>
+                    </li>
 
-                <div class="search-box general--width">
-                  <form action="/search">
+                    <li>
+                      <a title="Проекты" href="/catalog/"> Проекты </a>
+                    </li>
+
+                    <li>
+                      <a title="Портфолио" href="/portfolio/"> Портфолио </a>
+                    </li>
+
+                    <li>
+                      <a title="Акции" href="/news/"> Акции </a>
+                    </li>
+
+                    <li>
+                      <a title="Контакты" href="/contacts/"> Контакты </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="top-header__content-right">
+                <div class="header-phones top-header__phones">
+                  <div class="header-phones__inner">
+                    <a onclick="" class="header-phones__phone" href="tel:49,130336"
+                      >+7 (987) 215-33-11</a
+                    >
+                  </div>
+                </div>
+
+                <a
+                  data-fancybox="callme-modal"
+                  data-src="#callme-modal"
+                  href="javascript:;"
+                  class="btn-border callme-button mobile-hide button-theme button-theme_callme"
+                  >Заказать звонок</a
+                >
+              </div>
+              <div class="burger-menu">
+                <div class="burger"></div>
+              </div>
+              <div class="mobile-menu">
+                <div class="mobile-menu__item mobile-show">
+                  <div class="header-user">
+                    <a href="/user/profile/" class="header-user__link">
+                      <span class="icon">
+                        <img src="/media/icon_lk_domant_SugscTx.svg" />
+                      </span>
+
+                      info@nastroyker.ru
+                    </a>
+                  </div>
+                </div>
+
+                <div class="mobile-menu__item mobile-show"></div>
+                <div class="mobile-menu__item mobile-show">
+                  <div class="header-search search--box">
                     <input
                       name="q"
                       type="text"
                       autocomplete="off"
-                      class="search_input"
+                      class="search_input_mobile"
                       value=""
                       data-min-chars="3"
                       data-search-url="/search"
                       placeholder="Поиск..."
                     />
-
-                    <button class="btn submit">
-                      <img src="../images/header-icons/search-icon.svg" alt="" />
+                    <button>
+                      <svg class="icon-svg">
+                        <use xlink:href="#search-icon"></use>
+                      </svg>
                     </button>
-                  </form>
-                  <div id="search-result" style="display: none" class="header-search-results"></div>
+                    <div
+                      class="header-search-results"
+                      id="search-result-mob"
+                      style="display: none"
+                    ></div>
+                  </div>
+                </div>
+                <div class="mobile-ul">
+                  <ul class="catalog-menu-mobile">
+                    <li class="catalog-opened mobile-show">
+                      <a>
+                        Каталог проектов
+                        <svg class="icon">
+                          <use xlink:href="#tab-arrow"></use>
+                        </svg>
+                      </a>
+                      <ul class="submenu">
+                        <li class="menu-item">
+                          <a href="/catalog/proekty-domov/">
+                            Проекты домов
+                            <svg class="icon">
+                              <use xlink:href="#tab-arrow"></use>
+                            </svg>
+                          </a>
+                        </li>
+
+                        <li class="menu-item">
+                          <a href="/catalog/proekty-ban/">
+                            Проекты бань
+                            <svg class="icon">
+                              <use xlink:href="#tab-arrow"></use>
+                            </svg>
+                          </a>
+                        </li>
+
+                        <li class="menu-item">
+                          <a href="/catalog/proekty-garazhej/">
+                            Проекты гаражей
+                            <svg class="icon">
+                              <use xlink:href="#tab-arrow"></use>
+                            </svg>
+                          </a>
+                        </li>
+
+                        <li class="menu-item">
+                          <a href="/catalog/proekty-taunhausa/">
+                            Проекты таунхауса
+                            <svg class="icon">
+                              <use xlink:href="#tab-arrow"></use>
+                            </svg>
+                          </a>
+                        </li>
+
+                        <li class="menu-item">
+                          <a href="/catalog/proekty-dupleks/">
+                            Проекты дуплекс
+                            <svg class="icon">
+                              <use xlink:href="#tab-arrow"></use>
+                            </svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+
+                  <ul></ul>
+                </div>
+
+                <div class="mobile-phone mobile-show">
+                  <span class="icon">
+                    <img src="/static/images/phone-mobile-icon.svg" alt="" />
+                  </span>
+
+                  <a onclick="" href="tel:49,130336">+7 (987) 215-33-11</a>
+                </div>
+
+                <div class="mobile-btn mobile-show">
+                  <a
+                    class="btn btn--rubber button-theme button-theme_primary"
+                    data-fancybox="callme-modal-mobile"
+                    data-src="#callme-modal"
+                    href="javascript:;"
+                  >
+                    Заказать звонок
+                  </a>
                 </div>
               </div>
             </div>
-            <div class="col-lg-2">
-              <div class="options-box">
-                <!-- --v2--  -->
-                <ul class="option-items v-white">
-                  <li>
-                    <a href="/cart/">
-                      <img src="../images/header-icons/cart-icon-orange.svg" alt="" />
-
-                      <span class="cart-number">0</span>
-                    </a>
-                  </li>
-                </ul>
-
-                <ul class="nav-items">
-                  <li>
-                    <a title="Покупателям" href="/clients/"> Покупателям </a>
-                  </li>
-
-                  <li>
-                    <a title="Контакты" href="/contacts/"> Контакты </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-lg-2">
-              <div class="contact-box">
-                <a href="javascript:;" data-fancybox="callme-modal" data-src="#callme-modal">
-                  <img src="../images/header-icons/order-call-arrow.svg" alt="" />
-                  Заказать звонок
-                </a>
-              </div>
-            </div>
           </div>
         </div>
-        <!-- catalog  -->
-        <div class="catalog-box">
+        <div class="header-body">
           <div class="container">
-            <ul class="link--arrow-left">
-              <li>
-                <a href="/catalog/kategoriya-tovarov-1/">Проекты домов до 150м2</a>
-              </li>
-
-              <li>
-                <a href="/catalog/kategoriya-tovarov-2/">Проекты домов до 300м2</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- header mobile  -->
-      <section class="header--mob">
-        <div class="container">
-          <div class="row">
-            <div class="col-3">
-              <div class="logo">
-                <a href="/">
-                  <img src="../images/logo.svg" alt="" />
-                </a>
-              </div>
-            </div>
-            <div class="col-5"></div>
-            <div class="col-4">
-              <div class="burger-box">
-                <!-- phone  -->
-                <a
-                  class="tel-mob"
-                  data-fancybox="callme-modal-mob"
-                  data-src="#callme-modal"
-                  href="#"
-                >
-                  <img src="../images/header-icons/tel-mob-icon.svg" alt="" />
-                  Заказать звонок
-                </a>
-                <button class="btn" id="my-button">
-                  <svg
-                    width="17"
-                    height="14"
-                    viewBox="0 0 17 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <rect width="17" height="2" rx="1" fill="currentColor" />
-                    <rect y="6" width="17" height="2" rx="1" fill="currentColor" />
-                    <rect y="12" width="17" height="2" rx="1" fill="currentColor" />
+            <div class="header-body__content">
+              <a class="catalog-inner-btn">
+                <div class="burger-catalog">
+                  <div class="burger"></div>
+                </div>
+                Каталог проектов
+              </a>
+              <div class="header-search mobile-hide header-search--inner">
+                <input
+                  name="q"
+                  type="text"
+                  autocomplete="off"
+                  class="search_input"
+                  value=""
+                  data-min-chars="3"
+                  data-search-url="/search"
+                  placeholder="Поиск..."
+                />
+                <button>
+                  <svg class="icon-svg">
+                    <use xlink:href="#search-icon"></use>
                   </svg>
                 </button>
+                <div
+                  id="search-result-container"
+                  style="display: none"
+                  class="header-search-results"
+                ></div>
+              </div>
+              <div class="header-body__content-right">
+                <div class="header-user mobile-hide">
+                  <a href="/user/profile/" class="header-user__link">
+                    <span class="icon">
+                      <img src="/media/icon_lk_domant_SugscTx.svg" />
+                    </span>
+
+                    info@nastroyker.ru
+                  </a>
+                </div>
+
+                <a href="/cart/" class="header-cart">
+                  <i class="icon">
+                    <img class="icon-svg" src="/media/icon_backet_shop_domant_V79KM7B.svg" />
+                  </i>
+                  <span class="cart-number">0</span>
+                </a>
+              </div>
+              <div class="header-fixed-content">
+                <div class="header-phones top-header__phones">
+                  <div class="header-phones__inner">
+                    <a onclick="" class="header-phones__phone" href="tel:49,130336"
+                      >+7 (987) 215-33-11</a
+                    >
+                  </div>
+                </div>
+
+                <a
+                  class="btn-border callme-button mobile-hide button-theme button-theme_callme"
+                  data-fancybox="callme-modal-1"
+                  data-src="#callme-modal"
+                  href="javascript:;"
+                >
+                  Заказать звонок
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-header-content">
+            <div class="catalog-box">
+              <div class="container">
+                <ul class="link--arrow-left">
+                  <li>
+                    <a href="/catalog/proekty-domov/">Проекты домов</a>
+                  </li>
+
+                  <li>
+                    <a href="/catalog/proekty-ban/">Проекты бань</a>
+                  </li>
+
+                  <li>
+                    <a href="/catalog/proekty-garazhej/">Проекты гаражей</a>
+                  </li>
+
+                  <li>
+                    <a href="/catalog/proekty-taunhausa/">Проекты таунхауса</a>
+                  </li>
+
+                  <li>
+                    <a href="/catalog/proekty-dupleks/">Проекты дуплекс</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-        <!-- mmenujs (mobile menu)  -->
-
-        <nav id="my-menu">
-          <ul>
-            <li>
-              <a href="#">Проекты домов</a>
-              <ul>
-                <li>
-                  <a href="/catalog/kategoriya-tovarov-1/">Проекты домов до 150м2</a>
-
-                  <ul>
-                    <li>
-                      <a href="/catalog/category/kategoriya-tovarov-1/podkategoriya-tovarov-1/"
-                        >Одноэтажные дома до 150м2</a
-                      >
-                    </li>
-
-                    <li>
-                      <a href="/catalog/category/kategoriya-tovarov-1/podkategoriya-tovarov-2/"
-                        >Двухэтажные дома до 150м2</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-
-                <li>
-                  <a href="/catalog/kategoriya-tovarov-2/">Проекты домов до 300м2</a>
-                </li>
-              </ul>
-            </li>
-
-            <ul class="mm_navbar_mob">
-              <li>
-                <a title="Покупателям" href="/clients/"> Покупателям </a>
-              </li>
-
-              <li>
-                <a title="Контакты" href="/contacts/"> Контакты </a>
-              </li>
-            </ul>
-
-            <ul class="mm-other-options">
-              <li>
-                <a href="/cart/">
-                  <img src="./images/header-icons/item-orange.svg" alt="" />
-
-                  <span class="cart-number">0</span>
-                </a>
-              </li>
-
-              <li>
-                <a href="#" data-fancybox="callme-modal-mob-menu" data-src="#callme-modal">
-                  <img src="./images/header-icons/tel-mob-icon.svg" alt="" />
-                  Заказать звонок
-                </a>
-              </li>
-            </ul>
-
-            <!-- Личный кабинет  -->
-
-            <li>
-              <a class="login" href="/account/login/">
-                <img src="./images/header-icons/profile-icon-t1.svg" alt="" />
-
-                Авторизация
-              </a>
-            </li>
-          </ul>
-          <!-- меню  -->
-        </nav>
-        <!-- ---  -->
       </section>
     </header>
 
