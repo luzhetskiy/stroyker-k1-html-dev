@@ -96,16 +96,10 @@
   color: var(--color-button-primary-text, #fff);
 }
 .st-button_primary:hover {
-  fill: var(
-    --color-button-primary-text-hover,
-    var(--color-button-primary-text, #fff)
-  );
+  fill: var(--color-button-primary-text-hover, var(--color-button-primary-text, #fff));
   background-color: var(--color-button-primary-background-hover, #1c52ac);
   border-color: var(--color-button-primary-border-hover, #1c52ac);
-  color: var(
-    --color-button-primary-text-hover,
-    var(--color-button-primary-text, #fff)
-  );
+  color: var(--color-button-primary-text-hover, var(--color-button-primary-text, #fff));
 }
 .st-button_secondary {
   fill: var(--color-button-secondary-text, #2363d1);
@@ -126,16 +120,10 @@
   color: var(--color-button-muted-text, #fff);
 }
 .st-button_muted:hover {
-  fill: var(
-    --color-button-muted-text-hover,
-    var(--color-button-muted-text, #fff)
-  );
+  fill: var(--color-button-muted-text-hover, var(--color-button-muted-text, #fff));
   background-color: var(--color-button-muted-background-hover, #818181);
   border-color: var(--color-button-muted-border-hover, #818181);
-  color: var(
-    --color-button-muted-text-hover,
-    var(--color-button-muted-text, #fff)
-  );
+  color: var(--color-button-muted-text-hover, var(--color-button-muted-text, #fff));
 }
 @media (max-width: 767px) {
   .st-button,
@@ -738,6 +726,7 @@
   margin: 0;
   padding: 0 14px;
   width: auto;
+  text-wrap: nowrap;
 }
 .shopping-cart-btn__icon {
   fill: var(--color-button-cart-text, #fff);
@@ -877,26 +866,14 @@
 }
 .product-card-v2 .input-number input[type="number"]::-webkit-inner-spin-button,
 .product-card-v2 .input-number input[type="number"]::-webkit-outer-spin-button,
-.product-item_max-heigth
-  .input-number
-  input[type="number"]::-webkit-inner-spin-button,
-.product-item_max-heigth
-  .input-number
-  input[type="number"]::-webkit-outer-spin-button,
-.product-item_max-width
-  .input-number
-  input[type="number"]::-webkit-inner-spin-button,
-.product-item_max-width
-  .input-number
-  input[type="number"]::-webkit-outer-spin-button,
+.product-item_max-heigth .input-number input[type="number"]::-webkit-inner-spin-button,
+.product-item_max-heigth .input-number input[type="number"]::-webkit-outer-spin-button,
+.product-item_max-width .input-number input[type="number"]::-webkit-inner-spin-button,
+.product-item_max-width .input-number input[type="number"]::-webkit-outer-spin-button,
 .product-item_new .input-number input[type="number"]::-webkit-inner-spin-button,
 .product-item_new .input-number input[type="number"]::-webkit-outer-spin-button,
-.product-item_wide
-  .input-number
-  input[type="number"]::-webkit-inner-spin-button,
-.product-item_wide
-  .input-number
-  input[type="number"]::-webkit-outer-spin-button {
+.product-item_wide .input-number input[type="number"]::-webkit-inner-spin-button,
+.product-item_wide .input-number input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
