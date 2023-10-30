@@ -1,21 +1,21 @@
 /* Montserrat-SemiBold */
 @font-face {
   font-family: "Montserrat-SemiBold";
-  src: url("../font/Montserrat-SemiBold.ttf") format("truetype");
+  src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 /* Roboto-Regular */
 @font-face {
   font-family: "Roboto-Regular";
-  src: url("../font/Roboto-Regular.ttf") format("truetype");
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 /* Roboto-Bold */
 @font-face {
   font-family: "Roboto-Bold";
-  src: url("../font/Roboto-Bold.ttf") format("truetype");
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -124,7 +124,7 @@ header ul.hover--arrow li:before {
   bottom: 0;
   top: -7px;
   margin: auto;
-  background-image: url(../img/icons/small-arrow.svg);
+  background-image: url(../images/icons/small-arrow.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
