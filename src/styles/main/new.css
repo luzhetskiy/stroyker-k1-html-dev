@@ -5320,7 +5320,6 @@ body {
 }
 @media (max-width: 575.98px) {
   .slider-constructor {
-    padding: 0 var(--container-padding-x);
     overflow: hidden;
   }
   .slider-constructor .slick-list {
