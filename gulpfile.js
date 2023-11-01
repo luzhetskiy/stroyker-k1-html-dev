@@ -17,7 +17,6 @@ function sync() {
       baseDir: "public/",
     },
     online: true,
-    open: false,
   });
 }
 
@@ -44,8 +43,8 @@ function styles() {
   .src([`src/styles/*.sass`])
   .pipe(sourcemaps.init())
   .pipe(sass({ "include css": true }))
-  .pipe(sourcemaps.write())
   .pipe(cleanCSS())
+  .pipe(sourcemaps.write())
   .pipe(gulp.dest("public/css"))
   .pipe(browserSync.stream());
 }
