@@ -313,18 +313,6 @@ li.more .btn-border {
 #check-lombard-ticket button {
   margin-bottom: 1.5rem;
 }
-/* СТАРЫЕ СТИЛИ  */
-/* .catalog-header-content {
-    background-color: var(--color-main-dropdown-menu-bg, #333);
-}
-.catalog-header-content a {
-    color: var(--color-main-dropdown-menu-text, #fff);
-}
-.catalog-header-content a::before {
-    background: var(--color-main-dropdown-menu-text, #fff);
-    -webkit-mask-image: url(../images/arrow-catalog-white.svg);
-    mask-image: url(../images/arrow-catalog-white.svg);
-} */
 .header-cart .icon img {
   position: relative;
   right: 1.3rem;
