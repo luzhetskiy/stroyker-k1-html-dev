@@ -13,3 +13,6 @@
 
 Для сборки проекта в production режиме:
 ### `npm run build`
+
+Для запуска скриншот тестов
+### `backstop test`
