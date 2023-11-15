@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_homepage_0_document_0_phone.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_homepage_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_homepage_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_k1_homepage_0_document_0_phone.png",
         "label": "k1 homepage",
@@ -28,7 +28,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_homepage_0_document_1_tablet.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_homepage_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_homepage_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_k1_homepage_0_document_1_tablet.png",
         "label": "k1 homepage",
@@ -52,7 +52,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_homepage_0_document_2_desktop.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_homepage_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_homepage_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_k1_homepage_0_document_2_desktop.png",
         "label": "k1 homepage",
@@ -76,7 +76,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_catalog_1-level_0_document_0_phone.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_catalog_1-level_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_catalog_1-level_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_k1_catalog_1-level_0_document_0_phone.png",
         "label": "k1 catalog 1-level",
@@ -100,7 +100,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_catalog_1-level_0_document_1_tablet.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_catalog_1-level_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_catalog_1-level_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_k1_catalog_1-level_0_document_1_tablet.png",
         "label": "k1 catalog 1-level",
@@ -116,18 +116,15 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.15441792294807372,
-          "misMatchPercentage": "0.15",
-          "analysisTime": 92
-        },
-        "diffImage": "..\\bitmaps_test\\20231109-150512\\failed_diff_backstop_default_k1_catalog_1-level_0_document_1_tablet.png"
+          "misMatchPercentage": "0.00"
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_catalog_1-level_0_document_2_desktop.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_catalog_1-level_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_catalog_1-level_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_k1_catalog_1-level_0_document_2_desktop.png",
         "label": "k1 catalog 1-level",
@@ -143,9 +140,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.009727456728084869,
+          "rawMisMatchPercentage": 0.00819493006993007,
           "misMatchPercentage": "0.01",
-          "analysisTime": 94
+          "analysisTime": 85
         }
       },
       "status": "pass"
@@ -153,7 +150,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_catalog_2-level_0_document_0_phone.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_catalog_2-level_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_catalog_2-level_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_k1_catalog_2-level_0_document_0_phone.png",
         "label": "k1 catalog 2-level",
@@ -177,7 +174,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_catalog_2-level_0_document_1_tablet.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_catalog_2-level_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_catalog_2-level_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_k1_catalog_2-level_0_document_1_tablet.png",
         "label": "k1 catalog 2-level",
@@ -193,18 +190,15 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.2440117908970976,
-          "misMatchPercentage": "0.24",
-          "analysisTime": 140
-        },
-        "diffImage": "..\\bitmaps_test\\20231109-150512\\failed_diff_backstop_default_k1_catalog_2-level_0_document_1_tablet.png"
+          "misMatchPercentage": "0.00"
+        }
       },
-      "status": "fail"
+      "status": "pass"
     },
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_catalog_2-level_0_document_2_desktop.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_catalog_2-level_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_catalog_2-level_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_k1_catalog_2-level_0_document_2_desktop.png",
         "label": "k1 catalog 2-level",
@@ -220,9 +214,7 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.007661334652594547,
-          "misMatchPercentage": "0.01",
-          "analysisTime": 165
+          "misMatchPercentage": "0.00"
         }
       },
       "status": "pass"
@@ -230,7 +222,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_product_0_document_0_phone.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_product_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_product_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_k1_product_0_document_0_phone.png",
         "label": "k1 product",
@@ -254,7 +246,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_product_0_document_1_tablet.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_product_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_product_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_k1_product_0_document_1_tablet.png",
         "label": "k1 product",
@@ -270,7 +262,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "misMatchPercentage": "0.00"
+          "rawMisMatchPercentage": 0.09602864583333333,
+          "misMatchPercentage": "0.10",
+          "analysisTime": 105
         }
       },
       "status": "pass"
@@ -278,7 +272,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_product_0_document_2_desktop.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_product_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_product_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_k1_product_0_document_2_desktop.png",
         "label": "k1 product",
@@ -294,9 +288,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0,
-          "misMatchPercentage": "0.00",
-          "analysisTime": 89
+          "rawMisMatchPercentage": 0.007644849785407725,
+          "misMatchPercentage": "0.01",
+          "analysisTime": 123
         }
       },
       "status": "pass"
@@ -304,7 +298,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_order-status_form_0_document_0_phone.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_order-status_form_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_order-status_form_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_k1_order-status_form_0_document_0_phone.png",
         "label": "k1 order-status form",
@@ -328,7 +322,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_order-status_form_0_document_1_tablet.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_order-status_form_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_order-status_form_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_k1_order-status_form_0_document_1_tablet.png",
         "label": "k1 order-status form",
@@ -352,7 +346,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_order-status_form_0_document_2_desktop.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_order-status_form_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_order-status_form_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_k1_order-status_form_0_document_2_desktop.png",
         "label": "k1 order-status form",
@@ -376,7 +370,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_order-status_0_document_0_phone.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_order-status_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_order-status_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_k1_order-status_0_document_0_phone.png",
         "label": "k1 order-status",
@@ -400,7 +394,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_order-status_0_document_1_tablet.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_order-status_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_order-status_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_k1_order-status_0_document_1_tablet.png",
         "label": "k1 order-status",
@@ -424,7 +418,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_order-status_0_document_2_desktop.png",
-        "test": "..\\bitmaps_test\\20231109-150512\\backstop_default_k1_order-status_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231115-163638\\backstop_default_k1_order-status_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_k1_order-status_0_document_2_desktop.png",
         "label": "k1 order-status",
