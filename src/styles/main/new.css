@@ -5479,14 +5479,6 @@ body {
 .product-item__link:hover .product-item__image img {
   transform: scale(1.05);
 }
-.product-item__link:hover .product-item__image img:not(:last-child) {
-  opacity: 0;
-  visibility: hidden;
-}
-.product-item__link:hover .product-item__image img:not(:first-child) {
-  opacity: 1;
-  visibility: visible;
-}
 
 .product-item__image {
   background: transparent;

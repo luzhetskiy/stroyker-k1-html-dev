@@ -25,6 +25,15 @@ $(document).ready(function () {
     $(this).parent().toggleClass("active");
     return false;
   });
+
+  $(".product-item__image-sector").on("mousemove", (event) => {
+    const target = $(event.currentTarget);
+    const id = target.attr("data-sector");
+    const parent = target.parent().parent();
+    const img = parent.find(`[data-sector-image="${id}"]`);
+    parent.find(".product-item__image-img_active").removeClass("product-item__image-img_active");
+    img.addClass("product-item__image-img_active");
+  });
 });
 $(".like-btn").on("click", function (event) {
   event.preventDefault();
