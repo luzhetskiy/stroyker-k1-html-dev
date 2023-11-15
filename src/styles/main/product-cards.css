@@ -143,9 +143,6 @@
 }
 .product-item_wide {
   border: 1px solid var(--color-card-border, #d9d9de) !important;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
   height: auto !important;
   margin: -0.5px;
   padding-bottom: 60px !important;
