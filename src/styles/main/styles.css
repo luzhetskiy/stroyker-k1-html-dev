@@ -502,12 +502,6 @@ p:last-child {
   }
 }
 
-/* @media (max-width: 767px) {
-        header {
-            padding-top: 60px;
-        }
-    } */
-
 .top-header {
   background-color: var(--header-top-bg-color, #fff);
 }
@@ -527,7 +521,6 @@ p:last-child {
   -ms-flex-align: center;
   align-items: center;
   height: 80px;
-  position: relative;
 }
 
 @media (max-width: 991px) {
@@ -1349,7 +1342,7 @@ p:last-child {
 
 .burger-menu {
   position: absolute;
-  right: 0px;
+  right: 15px;
   width: 16px;
   height: 14px;
   cursor: pointer;
