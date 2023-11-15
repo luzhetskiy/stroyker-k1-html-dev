@@ -30,9 +30,48 @@ $(document).ready(function () {
     const target = $(event.currentTarget);
     const id = target.attr("data-sector");
     const parent = target.parent().parent();
-    const img = parent.find(`[data-sector-image="${id}"]`);
     parent.find(".product-item__image-img_active").removeClass("product-item__image-img_active");
-    img.addClass("product-item__image-img_active");
+    parent.find(".product-item__image-dot_active").removeClass("product-item__image-dot_active");
+    parent.find(`[data-sector-image="${id}"]`).addClass("product-item__image-img_active");
+    parent.find(`[data-sector-dot="${id}"]`).addClass("product-item__image-dot_active");
+  });
+
+  let touchstartX = 0;
+  let touchendX = 0;
+
+  $(".product-item__image-sectors").on("touchstart", (event) => {
+    touchstartX = event.changedTouches[0].screenX;
+  });
+
+  $(".product-item__image-sectors").on("touchend", (event) => {
+    touchendX = event.changedTouches[0].screenX;
+    const parent = $(event.currentTarget).parent();
+    const img = parent.find(".product-item__image-img_active");
+    const id = Number(img.attr("data-sector-image"));
+    const length = parent.find(".product-item__image-img").length;
+
+    if (touchendX < touchstartX) {
+      parent.find(".product-item__image-img_active").removeClass("product-item__image-img_active");
+      parent.find(".product-item__image-dot_active").removeClass("product-item__image-dot_active");
+      if (id >= length) {
+        parent.find(`[data-sector-image="${1}"]`).addClass("product-item__image-img_active");
+        parent.find(`[data-sector-dot="${1}"]`).addClass("product-item__image-dot_active");
+        return;
+      }
+      parent.find(`[data-sector-image="${id + 1}"]`).addClass("product-item__image-img_active");
+      parent.find(`[data-sector-dot="${id + 1}"]`).addClass("product-item__image-dot_active");
+    }
+    if (touchendX > touchstartX) {
+      parent.find(".product-item__image-img_active").removeClass("product-item__image-img_active");
+      parent.find(".product-item__image-dot_active").removeClass("product-item__image-dot_active");
+      if (id <= 1) {
+        parent.find(`[data-sector-image="${length}"]`).addClass("product-item__image-img_active");
+        parent.find(`[data-sector-dot="${length}"]`).addClass("product-item__image-dot_active");
+        return;
+      }
+      parent.find(`[data-sector-image="${id - 1}"]`).addClass("product-item__image-img_active");
+      parent.find(`[data-sector-dot="${id - 1}"]`).addClass("product-item__image-dot_active");
+    }
   });
 });
 $(".like-btn").on("click", function (event) {
