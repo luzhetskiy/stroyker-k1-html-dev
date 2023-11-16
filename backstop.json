@@ -23,7 +23,7 @@
   "scenarios": [
     {
       "label": "k1 homepage",
-      "url": "https://luzhetskiy.github.io/stroyker-k1-html-dev/main/",
+      "url": "http://localhost:3000/main/",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
@@ -41,7 +41,7 @@
     },
     {
       "label": "k1 catalog 1-level",
-      "url": "https://luzhetskiy.github.io/stroyker-k1-html-dev/catalog/level-1.html",
+      "url": "http://localhost:3000/catalog/level-1.html",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
@@ -59,7 +59,7 @@
     },
     {
       "label": "k1 catalog 2-level",
-      "url": "https://luzhetskiy.github.io/stroyker-k1-html-dev/catalog/level-2.html",
+      "url": "http://localhost:3000/catalog/level-2.html",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
@@ -77,7 +77,7 @@
     },
     {
       "label": "k1 product",
-      "url": "https://luzhetskiy.github.io/stroyker-k1-html-dev/product/",
+      "url": "http://localhost:3000/product/",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
@@ -95,7 +95,7 @@
     },
     {
       "label": "k1 order-status form",
-      "url": "https://luzhetskiy.github.io/stroyker-k1-html-dev/order-status/default.html",
+      "url": "http://localhost:3000/order-status/default.html",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
@@ -113,7 +113,7 @@
     },
     {
       "label": "k1 order-status",
-      "url": "https://luzhetskiy.github.io/stroyker-k1-html-dev/order-status/seccess.html",
+      "url": "http://localhost:3000/order-status/seccess.html",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",

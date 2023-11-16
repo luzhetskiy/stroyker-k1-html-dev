@@ -3,33 +3,37 @@
 	"version": "0.1.0",
 	"description": "k1 gulp builder",
 	"author": "Nikita Shkutyak",
+
 	"browserslist": [
 		"last 3 versions"
 	],
 	"license": "ISC",
 	"scripts": {
 		"start": "cross-env NODE_ENV=development gulp",
-		"build": "cross-env NODE_ENV=production gulp build"
+		"build": "cross-env NODE_ENV=production gulp build",
+		"test": "backstop test",
+		"test-approve": "backstop approve",
+		"test-init": "backstop init",
+		"test-reference": "backstop reference"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.23.2",
 		"@babel/preset-env": "^7.23.2",
 		"@babel/register": "^7.22.15",
+		"autoprefixer": "^10.4.16",
 		"backstopjs": "^6.2.2",
 		"browser-sync": "^2.29.3",
 		"cross-env": "^7.0.3",
+		"cssnano": "^6.0.1",
+		"dart-sass": "^1.25.0",
 		"del": "^7.1.0",
 		"gulp": "^4.0.2",
 		"gulp-babel": "^8.0.0",
 		"gulp-clean": "^0.4.0",
-		"gulp-clean-css": "^4.3.0",
 		"gulp-concat": "^2.6.1",
-		"gulp-minify": "^3.1.0",
 		"gulp-postcss": "^9.0.1",
 		"gulp-sass": "^5.1.0",
 		"gulp-sourcemaps": "^3.0.0",
-		"gulp-uglify": "^3.0.2",
-		"postcss": "^8.4.23",
-		"sass": "^1.69.4"
+		"gulp-terser": "^2.1.0"
 	}
 }
