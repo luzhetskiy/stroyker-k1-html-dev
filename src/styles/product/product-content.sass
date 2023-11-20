@@ -4,6 +4,14 @@
   &__inner
     padding: 42px 68px
 
+@media ( max-width: 767px )
+  .product-content
+    &__inner
+      padding: 42px 20px
+
+  #sync1 .owl-nav
+    display: none
+
 .product-content-slideshow
   padding: 0 20px 20px 20px
   #sync1 .owl-nav
@@ -54,6 +62,10 @@
   width: 15px
   &_full
     background-image: url('../images/star-full.svg')
+  &_half
+    background-image: url(../images/star-half.svg)
+  &_empty
+    background-image: url(../images/star-empty.svg)
 
 .product-rating
   display: flex
@@ -62,18 +74,10 @@
 
 .product-price-group
   margin-bottom: 20px
-  &__text
-    font-family: Golos
-    font-size: 14px
-    font-weight: 400
-    line-height: 20px
-    color: #333333
-    margin: 0
-    &_small
-      font-size: 10px
-      font-weight: 400
-      line-height: 14px
-      color: #BDBDBD
+  &__percent
+    display: flex
+    gap: 5px
+    fill: #2363d1
 
   &__row
     display: flex
@@ -142,6 +146,7 @@
   &__text-button
     display: inline-flex
     gap: 10px
+    fill: #2363d1
 
 .product-banner-group
   &__image
@@ -175,8 +180,71 @@
 
 .product-file
   display: grid
-  grid-template-columns: 60% 40%
+  grid-template-columns: 55% 45%
+  padding: 15px 0
+  border-bottom: 1px solid #E5E5EA
+  &:last-child
+    border-bottom: none
   &__info
     display: grid
-    grid-template-columns: 20% 30% 50%
+    grid-template-columns: 25% 30% 45%
     align-items: center
+
+@media (max-width: 767px)
+  .product-file
+    grid-template-columns: repeat(1, 1fr)
+    grid-template-rows: repeat(2, auto)
+
+.input-number_new
+  width: 100%
+  max-width: 80px
+  min-width: 80px
+  height: 40px
+  display: flex
+  border: 1px solid var(--color-button-secondary-border, #B7CBE5)
+  border-radius: 2px
+  justify-content: center
+  overflow: hidden
+  padding: 0
+  margin-right: 0
+
+  input[type="number"]
+    width: 40px
+    -webkit-appearance: none
+    text-align: center
+    border: none
+    height: 100%
+    color: var(--color-button-secondary-text)
+    font-size: 12px
+    font-weight: 400
+    line-height: 18px
+    padding-bottom: 2px
+    color: #1C52AC
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+
+  .order-down, .order-up
+    width: 23px
+    border: none
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 0
+    &:hover
+      background: var(--color-button-secondary-background-hover, #e7eef6)
+
+  .order-up:after, .order-up:before, .order-down:before
+    top: auto
+    left: auto
+
+  .order-up:before
+    width: 1px
+    height: 7px
+
+  .order-up:after, .order-down:before
+    width: 7px
+    height: 1px
