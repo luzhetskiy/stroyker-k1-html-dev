@@ -1,6 +1,18 @@
 .product-content
   background-color: #fff
   border: 1px solid #E5E5EA
+  &__inner
+    padding: 42px 68px
+
+.product-content-slideshow
+  padding: 0 20px 20px 20px
+  #sync1 .owl-nav
+    max-width: 360px
+    margin: 0 auto
+    position: relative
+
+.product-card-navigation
+  display: flex
 
 .product-sidebar
   background-color: #fff
@@ -87,8 +99,84 @@
       text-decoration: line-through
 
 .product-size-group
+  margin-bottom: 20px
   &__text
     margin-bottom: 5px
 
   &__row
     gap: 10px
+
+.product-select-group
+  margin-bottom: 20px
+  &__text
+    margin-bottom: 5px
+
+.product-select
+  border-radius: 2px
+  border: 1px solid #B7CBE5
+  font-size: 12px
+  font-weight: 400
+  line-height: 20px
+  color: #1C52AC
+  width: 100%
+  max-width: 260px
+  height: 40px
+  padding: 0 20px
+  appearance: none
+  background-image: url(../images/angle.svg)
+  background-repeat: no-repeat
+  background-size: 15px 15px
+  background-position: right 1rem center
+
+.product-accessibility-group
+  margin-bottom: 20px
+  &__text
+    margin-bottom: 5px
+  &__row
+    gap: 10px
+
+.product-button-group
+  &__row
+    gap: 10px
+
+  &__text-button
+    display: inline-flex
+    gap: 10px
+
+.product-banner-group
+  &__image
+    max-width: 220px
+    margin: 0 auto
+
+.product-haracteristic-table
+  &__row
+    display: grid
+    grid-template-columns: 60% 40%
+
+  &__item-name-text
+    background-color: #fff
+    position: relative
+    z-index: 1
+    display: inline-block
+    padding-right: 10px
+  &__item-name
+    position: relative
+    margin-right: 10px
+    &::after
+      content: ''
+      display: block
+      background-image: url(../images/dot.png)
+      background-repeat-y: no-repeat
+      background-position: bottom
+      width: 100%
+      height: 100%
+      position: absolute
+      bottom: 0
+
+.product-file
+  display: grid
+  grid-template-columns: 60% 40%
+  &__info
+    display: grid
+    grid-template-columns: 20% 30% 50%
+    align-items: center

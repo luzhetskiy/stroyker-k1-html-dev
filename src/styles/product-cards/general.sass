@@ -43,3 +43,207 @@
 @media ( max-width: 767px )
   .product-item__image-sector
     display: none !important
+
+.button_disabled
+  &__text
+    color: var(--color-button-muted-text, #fff)
+    font-size: 14px
+    display: flex
+    flex-direction: column
+
+  &__title
+    color: var(--color-button-muted-text, #fff)
+    font-weight: 400
+    font-size: 14px
+    line-height: 18px
+    text-align: left
+
+  &__sub-title
+    color: var(--color-button-muted-text, #fff)
+    font-weight: 400
+    font-size: 10px
+    line-height: 12px
+    text-align: left
+
+.product-card-v2__buttons > *
+  height: 48px
+
+.product-card-v2__buttons
+  flex-direction: row
+  justify-content: flex-start
+
+.shopping-cart-product
+  width: 100%
+  gap: 7px
+
+.product-item__btns
+  justify-content: flex-start
+  gap: 7px
+  width: 100%
+
+.product-comparison
+  width: 100%
+  max-width: 52px
+  &__icon
+    transition: var(--trs-1)
+    fill: var(--color-button-secondary-text, #2363D1)
+  &:hover &__icon
+    fill: var(--color-button-secondary-text-hover, #1C52AC)
+
+.shopping-cart-btn
+  width: auto
+  padding: 0 14px
+  border-radius: 2px
+  background-image: none
+  margin: 0
+  &__icon
+    min-width: 22px
+    height: auto
+    fill: var(--color-button-cart-text, #fff)
+    transition: var(--trs-1)
+
+  &:hover &__icon
+    fill: var(--color-button-cart-text-hover, #fff)
+
+  &__sub-title, &__title
+    color: var(--color-button-cart-text, #fff)
+    font-size: 16px
+    font-weight: 400
+    line-height: 27px
+    margin-left: 7px
+    &:empty
+      margin-left: 0
+
+  &__text
+    display: flex
+    flex-direction: column
+
+  &__title
+    color: #FFF
+    font-weight: 400
+    font-size: 14px
+    line-height: 18px
+
+  &__sub-title
+    color: #fff
+    font-weight: 400
+    font-size: 10px
+    line-height: 12px
+
+@media ( max-width: 767px )
+  .shopping-cart-btn
+
+    &__text
+      font-size: 14px
+
+.product-card-v2
+  .shopping-cart-btn
+    width: 100%
+
+    &__sub-title, &__title
+      margin-left: 11px
+      white-space: nowrap
+
+.product-favorite
+  width: auto
+  padding: 0 14px
+  height: 40px
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: .5s
+  border-radius: 2px
+  font-size: 14px
+  gap: 7px
+
+  &__text
+    font-size: 14px
+    font-weight: 400
+    line-height: 18px
+    color: var(--color-button-secondary-text, #2363D1)
+    &:empty
+      margin-left: -7px
+
+  &__icon
+    min-width: 22px
+    height: auto
+    transition: var(--trs-1)
+    fill: var(--color-button-secondary-text, #2363D1)
+
+  &:hover &__icon
+    fill: var(--color-button-secondary-text-hover, #1C52AC)
+
+@media ( max-width: 767px )
+  .product-favorite__text
+    width: auto
+
+.product-item_new,
+.product-item_wide,
+.product-item_max-heigth,
+.product-item_max-width,
+.product-card-v2
+  .input-number
+    width: 100%
+    max-width: 80px
+    min-width: 80px
+    height: 40px
+    display: flex
+    border: 1px solid var(--color-button-secondary-border, #B7CBE5)
+    border-radius: 2px
+    justify-content: center
+    overflow: hidden
+    padding: 0
+    margin-right: 0
+
+    input[type="number"]
+      width: 40px
+      -webkit-appearance: none
+      text-align: center
+      border: none
+      height: 100%
+      color: var(--color-button-secondary-text)
+      font-size: 12px
+      font-weight: 400
+      line-height: 18px
+      padding-bottom: 2px
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+
+    .order-down, .order-up
+      width: 23px
+      border: none
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 0
+      &:hover
+        background: var(--color-button-secondary-background-hover, #e7eef6)
+
+    .order-up:after, .order-up:before, .order-down:before
+      top: auto
+      left: auto
+
+    .order-up:before
+      width: 1px
+      height: 7px
+
+    .order-up:after, .order-down:before
+      width: 7px
+      height: 1px
+
+@media ( max-width: 767px )
+  .product-item_new,
+  .product-item_wide,
+  .product_max-height,
+  .product_max-width,
+  .product-card-v2
+    .input-number
+      display: none
+
+  .product-item
+    border-left: 1px solid var(--color-card-border, #D9D9DE)
+    border-right: 1px solid var(--color-card-border, #D9D9DE)

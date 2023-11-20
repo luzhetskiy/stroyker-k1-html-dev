@@ -13,6 +13,10 @@
   margin: 0
   &_grey
     color: #767676
+  &_green
+    color: #4FA22E
+  &_accent
+    color: #2363D1
   &_small
     font-size: 10px
     font-weight: 400
@@ -26,12 +30,41 @@
   transition: .3s
   padding: 10px 17.5px
   display: inline-block
+  height: 40px
   &:hover
     color: #fff
     background-color: #2363D1
     border: 1px solid #2363D1
 
+  &_fill
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    padding: 12px 24px
+    background-color: #2363D1
+    color: #fff
+    border-radius: 2px
+    width: 100%
+    border: 1px solid #2363D1
+
+  &_frame
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    padding: 12px 24px
+    color: #fff
+    border-radius: 2px
+    width: 100%
+    border: 1px solid #B7CBE5
+    color: #2363D1
+
 .g-row
   display: flex
   align-items: center
   gap: 15px
+  &_space-between
+    justify-content: space-between
+
+.g-image
+  width: 100%
+  height: auto
