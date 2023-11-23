@@ -1,47 +1,35 @@
 .product-content
   background-color: #fff
   border: 1px solid #E5E5EA
-  &__inner
-    padding: 42px 68px
+  &_inner
+    padding: 40px 80px
+  &_frameless
+    border: none
 
-@media ( max-width: 767px )
-  .product-content
-    &__inner
-      padding: 42px 20px
+.product-content-main
+  padding: 30px 80px
 
-  #sync1 .owl-nav
-    display: none
+.product-content-inner
+  padding: 0 60px
+
+.product-content-inner-dark
+  background-color: #F5F5F5
+  padding: 20px 30px
 
 .product-content-slideshow
-  padding: 0 20px 20px 20px
-  #sync1 .owl-nav
-    max-width: 360px
-    margin: 0 auto
-    position: relative
-
-.product-card-navigation
-  display: flex
-
-.product-sidebar
-  background-color: #fff
-  border: 1px solid #E5E5EA
-
-.product-sidebar-top
-  display: flex
-  align-items: center
-  justify-content: space-between
-  padding: 10px 20px
-  border-bottom: 1px solid #E5E5EA
-  &__item
-    display: flex
-    gap: 15px
-
-.product-sidebar-content
-  padding: 20px
+  &_inner
+    padding: 0 20px 30px 20px
+  #sync1
+    .owl-nav
+      max-width: 360px
+      margin: 0 auto
+      position: relative
 
 .product-articul
   margin: 0
   color: #BDBDBD
+  font-size: 12px
+  display: inline
 
 .product-title
   font-family: Golos
@@ -57,194 +45,40 @@
   line-height: 20px
   color: #333333
 
-.star
-  height: 15px
-  width: 15px
-  &_full
-    background-image: url('../images/star-full.svg')
-  &_half
-    background-image: url(../images/star-half.svg)
-  &_empty
-    background-image: url(../images/star-empty.svg)
+@media (max-width: 1279px)
+  .product-content-inner
+    padding: 0 25px
 
-.product-rating
-  display: flex
-  align-items: center
-  gap: 3px
+@media (max-width: 1023px)
+  .product-content
+    &_inner
+      padding: 20px 0
+  .product-content-main
+    padding: 20px
+  .product-content-inner
+    padding: 20px 0
 
-.product-price-group
-  margin-bottom: 20px
-  &__percent
-    display: flex
-    gap: 5px
-    fill: #2363d1
+@media ( max-width: 767px )
+  .product-content
+    &_inner
+      padding: 40px 80px
 
-  &__row
-    display: flex
-    align-items: center
-    gap: 15px
-    margin-bottom: 10px
-  &__personal-price
-    font-family: Golos
-    font-size: 28px
-    font-weight: 700
-    line-height: 36px
-    color: #000
-    margin: 0
-  &__price
-    font-family: Golos
-    font-size: 14px
-    font-weight: 400
-    line-height: 20px
-    color: #767676
-    margin: 0
-    &_old
-      color: #C43228
-      text-decoration: line-through
+  .product-content-slideshow
+    padding-bottom: 40px
+    #sync1
+      .owl-nav
+        top: 18px
+        z-index: 1
+      .owl-dots
+        top: 18px
 
-.product-size-group
-  margin-bottom: 20px
-  &__text
-    margin-bottom: 5px
-
-  &__row
-    gap: 10px
-
-.product-select-group
-  margin-bottom: 20px
-  &__text
-    margin-bottom: 5px
-
-.product-select
-  border-radius: 2px
-  border: 1px solid #B7CBE5
-  font-size: 12px
-  font-weight: 400
-  line-height: 20px
-  color: #1C52AC
-  width: 100%
-  max-width: 260px
-  height: 40px
-  padding: 0 20px
-  appearance: none
-  background-image: url(../images/angle.svg)
-  background-repeat: no-repeat
-  background-size: 15px 15px
-  background-position: right 1rem center
-
-.product-accessibility-group
-  margin-bottom: 20px
-  &__text
-    margin-bottom: 5px
-  &__row
-    gap: 10px
-
-.product-button-group
-  &__row
-    gap: 10px
-
-  &__text-button
-    display: inline-flex
-    gap: 10px
-    fill: #2363d1
-
-.product-banner-group
-  &__image
-    max-width: 220px
-    margin: 0 auto
-
-.product-haracteristic-table
-  &__row
-    display: grid
-    grid-template-columns: 60% 40%
-
-  &__item-name-text
-    background-color: #fff
-    position: relative
-    z-index: 1
-    display: inline-block
-    padding-right: 10px
-  &__item-name
-    position: relative
-    margin-right: 10px
-    &::after
-      content: ''
-      display: block
-      background-image: url(../images/dot.png)
-      background-repeat-y: no-repeat
-      background-position: bottom
-      width: 100%
-      height: 100%
-      position: absolute
-      bottom: 0
-
-.product-file
-  display: grid
-  grid-template-columns: 55% 45%
-  padding: 15px 0
-  border-bottom: 1px solid #E5E5EA
-  &:last-child
-    border-bottom: none
-  &__info
-    display: grid
-    grid-template-columns: 25% 30% 45%
-    align-items: center
-
-@media (max-width: 767px)
-  .product-file
-    grid-template-columns: repeat(1, 1fr)
-    grid-template-rows: repeat(2, auto)
-
-.input-number_new
-  width: 100%
-  max-width: 80px
-  min-width: 80px
-  height: 40px
-  display: flex
-  border: 1px solid var(--color-button-secondary-border, #B7CBE5)
-  border-radius: 2px
-  justify-content: center
-  overflow: hidden
-  padding: 0
-  margin-right: 0
-
-  input[type="number"]
-    width: 40px
-    -webkit-appearance: none
-    text-align: center
+@media (max-width: 575px)
+  .product-content-main
+    padding: 30px 0
+  .product-content
     border: none
-    height: 100%
-    color: var(--color-button-secondary-text)
-    font-size: 12px
-    font-weight: 400
-    line-height: 18px
-    padding-bottom: 2px
-    color: #1C52AC
+    &_inner
+      padding: 20px 0
 
-    &::-webkit-outer-spin-button,
-    &::-webkit-inner-spin-button
-      -webkit-appearance: none
-      margin: 0
-
-  .order-down, .order-up
-    width: 23px
-    border: none
-    height: 100%
-    display: flex
-    align-items: center
-    justify-content: center
-    border-radius: 0
-    &:hover
-      background: var(--color-button-secondary-background-hover, #e7eef6)
-
-  .order-up:after, .order-up:before, .order-down:before
-    top: auto
-    left: auto
-
-  .order-up:before
-    width: 1px
-    height: 7px
-
-  .order-up:after, .order-down:before
-    width: 7px
-    height: 1px
+  .product-content-inner-dark
+    margin: 0 -16px

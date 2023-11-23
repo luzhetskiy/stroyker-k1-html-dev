@@ -1,0 +1,30 @@
+.product-sidebar
+  background-color: #fff
+  border: 1px solid #E5E5EA
+
+.product-sidebar-top
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 10px 20px
+  border-bottom: 1px solid #E5E5EA
+  &__item
+    display: flex
+    gap: 15px
+    min-width: 185px
+
+.product-sidebar-content
+  padding: 20px
+
+@media ( max-width: 575px )
+  .product-sidebar-content
+    padding: 20px 0
+
+  .product-sidebar, .product-sidebar-top
+    border: none
+
+  .product-sidebar-top
+    padding: 10px 0
+
+  .section-dark
+    background-color: #fff !important

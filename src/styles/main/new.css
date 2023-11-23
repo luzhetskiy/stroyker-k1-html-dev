@@ -322,6 +322,10 @@
   margin-bottom: 0 !important;
 }
 
+.mb-5 {
+  margin-bottom: 5px !important;
+}
+
 .mb-10 {
   margin-bottom: 10px !important;
 }
@@ -5482,7 +5486,6 @@ body {
 
 .product-item__image {
   background: transparent;
-  overflow: hidden;
 }
 .product-item__image-inner {
   position: relative;
@@ -5523,10 +5526,6 @@ body {
   color: #333;
   font-weight: 400;
   margin-left: 5px;
-}
-
-.product-item__cost {
-  margin: 0;
 }
 
 .product-item__cost-product {
@@ -5818,12 +5817,12 @@ img.lazyloaded {
 .product-card-v2__image {
   position: relative;
   z-index: 3;
-  pointer-events: none;
   height: 170px;
   flex: 0 0 auto;
 }
 .product-card-v2__image .image {
   height: 100%;
+  padding-bottom: 15px;
 }
 .product-card-v2__image .image img {
   padding: var(--pd);

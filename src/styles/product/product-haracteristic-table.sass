@@ -1,0 +1,24 @@
+.product-haracteristic-table
+  &__row
+    display: grid
+    grid-template-columns: 60% 40%
+
+  &__item-name-text
+    background-color: #fff
+    position: relative
+    z-index: 1
+    display: inline-block
+    padding-right: 10px
+  &__item-name
+    position: relative
+    margin-right: 10px
+    &::after
+      content: ''
+      display: block
+      background-image: url(../images/dot.png)
+      background-repeat-y: no-repeat
+      background-position: bottom
+      width: 100%
+      height: 100%
+      position: absolute
+      bottom: 0

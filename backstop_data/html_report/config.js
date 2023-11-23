@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_homepage_0_document_0_phone.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_homepage_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_k1_homepage_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_k1_homepage_0_document_0_phone.png",
         "label": "k1 homepage",
@@ -28,7 +28,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_homepage_0_document_1_tablet.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_homepage_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_k1_homepage_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_k1_homepage_0_document_1_tablet.png",
         "label": "k1 homepage",
@@ -52,7 +52,7 @@ report({
     {
       "pair": {
         "reference": "..\\bitmaps_reference\\backstop_default_k1_homepage_0_document_2_desktop.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_homepage_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_k1_homepage_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_k1_homepage_0_document_2_desktop.png",
         "label": "k1 homepage",
@@ -75,11 +75,11 @@ report({
     },
     {
       "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_catalog_1-level_0_document_0_phone.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_catalog_1-level_0_document_0_phone.png",
+        "reference": "..\\bitmaps_reference\\backstop_default_catalog_1-level_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_catalog_1-level_0_document_0_phone.png",
         "selector": "document",
-        "fileName": "backstop_default_k1_catalog_1-level_0_document_0_phone.png",
-        "label": "k1 catalog 1-level",
+        "fileName": "backstop_default_catalog_1-level_0_document_0_phone.png",
+        "label": "catalog 1-level",
         "requireSameDimensions": true,
         "misMatchThreshold": 0.1,
         "url": "http://localhost:3000/catalog/level-1.html",
@@ -99,11 +99,11 @@ report({
     },
     {
       "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_catalog_1-level_0_document_1_tablet.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_catalog_1-level_0_document_1_tablet.png",
+        "reference": "..\\bitmaps_reference\\backstop_default_catalog_1-level_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_catalog_1-level_0_document_1_tablet.png",
         "selector": "document",
-        "fileName": "backstop_default_k1_catalog_1-level_0_document_1_tablet.png",
-        "label": "k1 catalog 1-level",
+        "fileName": "backstop_default_catalog_1-level_0_document_1_tablet.png",
+        "label": "catalog 1-level",
         "requireSameDimensions": true,
         "misMatchThreshold": 0.1,
         "url": "http://localhost:3000/catalog/level-1.html",
@@ -116,200 +116,492 @@ report({
             "width": 0,
             "height": 0
           },
-          "misMatchPercentage": "0.00"
-        }
-      },
-      "status": "pass"
-    },
-    {
-      "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_catalog_1-level_0_document_2_desktop.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_catalog_1-level_0_document_2_desktop.png",
-        "selector": "document",
-        "fileName": "backstop_default_k1_catalog_1-level_0_document_2_desktop.png",
-        "label": "k1 catalog 1-level",
-        "requireSameDimensions": true,
-        "misMatchThreshold": 0.1,
-        "url": "http://localhost:3000/catalog/level-1.html",
-        "referenceUrl": "",
-        "expect": 0,
-        "viewportLabel": "desktop",
-        "diff": {
-          "isSameDimensions": true,
-          "dimensionDifference": {
-            "width": 0,
-            "height": 0
-          },
-          "rawMisMatchPercentage": 0.04261363636363636,
-          "misMatchPercentage": "0.04",
-          "analysisTime": 161
-        }
-      },
-      "status": "pass"
-    },
-    {
-      "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_catalog_2-level_0_document_0_phone.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_catalog_2-level_0_document_0_phone.png",
-        "selector": "document",
-        "fileName": "backstop_default_k1_catalog_2-level_0_document_0_phone.png",
-        "label": "k1 catalog 2-level",
-        "requireSameDimensions": true,
-        "misMatchThreshold": 0.1,
-        "url": "http://localhost:3000/catalog/level-2.html",
-        "referenceUrl": "",
-        "expect": 0,
-        "viewportLabel": "phone",
-        "diff": {
-          "isSameDimensions": true,
-          "dimensionDifference": {
-            "width": 0,
-            "height": 0
-          },
-          "misMatchPercentage": "0.00"
-        }
-      },
-      "status": "pass"
-    },
-    {
-      "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_catalog_2-level_0_document_1_tablet.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_catalog_2-level_0_document_1_tablet.png",
-        "selector": "document",
-        "fileName": "backstop_default_k1_catalog_2-level_0_document_1_tablet.png",
-        "label": "k1 catalog 2-level",
-        "requireSameDimensions": true,
-        "misMatchThreshold": 0.1,
-        "url": "http://localhost:3000/catalog/level-2.html",
-        "referenceUrl": "",
-        "expect": 0,
-        "viewportLabel": "tablet",
-        "diff": {
-          "isSameDimensions": true,
-          "dimensionDifference": {
-            "width": 0,
-            "height": 0
-          },
-          "rawMisMatchPercentage": 0.1606338986599665,
-          "misMatchPercentage": "0.16",
-          "analysisTime": 149
-        },
-        "diffImage": "..\\bitmaps_test\\20231117-141956\\failed_diff_backstop_default_k1_catalog_2-level_0_document_1_tablet.png"
-      },
-      "status": "fail"
-    },
-    {
-      "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_catalog_2-level_0_document_2_desktop.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_catalog_2-level_0_document_2_desktop.png",
-        "selector": "document",
-        "fileName": "backstop_default_k1_catalog_2-level_0_document_2_desktop.png",
-        "label": "k1 catalog 2-level",
-        "requireSameDimensions": true,
-        "misMatchThreshold": 0.1,
-        "url": "http://localhost:3000/catalog/level-2.html",
-        "referenceUrl": "",
-        "expect": 0,
-        "viewportLabel": "desktop",
-        "diff": {
-          "isSameDimensions": true,
-          "dimensionDifference": {
-            "width": 0,
-            "height": 0
-          },
-          "misMatchPercentage": "0.00"
-        }
-      },
-      "status": "pass"
-    },
-    {
-      "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_product_0_document_0_phone.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_product_0_document_0_phone.png",
-        "selector": "document",
-        "fileName": "backstop_default_k1_product_0_document_0_phone.png",
-        "label": "k1 product",
-        "requireSameDimensions": true,
-        "misMatchThreshold": 0.1,
-        "url": "http://localhost:3000/product/",
-        "referenceUrl": "",
-        "expect": 0,
-        "viewportLabel": "phone",
-        "diff": {
-          "isSameDimensions": false,
-          "dimensionDifference": {
-            "width": 0,
-            "height": -3359
-          },
-          "rawMisMatchPercentage": 1.6664495962490231,
-          "misMatchPercentage": "1.67",
-          "analysisTime": 115
-        },
-        "diffImage": "..\\bitmaps_test\\20231117-141956\\failed_diff_backstop_default_k1_product_0_document_0_phone.png"
-      },
-      "status": "fail"
-    },
-    {
-      "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_product_0_document_1_tablet.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_product_0_document_1_tablet.png",
-        "selector": "document",
-        "fileName": "backstop_default_k1_product_0_document_1_tablet.png",
-        "label": "k1 product",
-        "requireSameDimensions": true,
-        "misMatchThreshold": 0.1,
-        "url": "http://localhost:3000/product/",
-        "referenceUrl": "",
-        "expect": 0,
-        "viewportLabel": "tablet",
-        "diff": {
-          "isSameDimensions": false,
-          "dimensionDifference": {
-            "width": 0,
-            "height": -1332
-          },
-          "rawMisMatchPercentage": 6.907877604166666,
-          "misMatchPercentage": "6.91",
-          "analysisTime": 199
-        },
-        "diffImage": "..\\bitmaps_test\\20231117-141956\\failed_diff_backstop_default_k1_product_0_document_1_tablet.png"
-      },
-      "status": "fail"
-    },
-    {
-      "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_product_0_document_2_desktop.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_product_0_document_2_desktop.png",
-        "selector": "document",
-        "fileName": "backstop_default_k1_product_0_document_2_desktop.png",
-        "label": "k1 product",
-        "requireSameDimensions": true,
-        "misMatchThreshold": 0.1,
-        "url": "http://localhost:3000/product/",
-        "referenceUrl": "",
-        "expect": 0,
-        "viewportLabel": "desktop",
-        "diff": {
-          "isSameDimensions": false,
-          "dimensionDifference": {
-            "width": 0,
-            "height": -1250
-          },
-          "rawMisMatchPercentage": 5.514216738197425,
-          "misMatchPercentage": "5.51",
+          "rawMisMatchPercentage": 0.11421683784965035,
+          "misMatchPercentage": "0.11",
           "analysisTime": 209
         },
-        "diffImage": "..\\bitmaps_test\\20231117-141956\\failed_diff_backstop_default_k1_product_0_document_2_desktop.png"
+        "diffImage": "..\\bitmaps_test\\20231123-164338\\failed_diff_backstop_default_catalog_1-level_0_document_1_tablet.png"
       },
       "status": "fail"
     },
     {
       "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_order-status_form_0_document_0_phone.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_order-status_form_0_document_0_phone.png",
+        "reference": "..\\bitmaps_reference\\backstop_default_catalog_1-level_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_catalog_1-level_0_document_2_desktop.png",
         "selector": "document",
-        "fileName": "backstop_default_k1_order-status_form_0_document_0_phone.png",
-        "label": "k1 order-status form",
+        "fileName": "backstop_default_catalog_1-level_0_document_2_desktop.png",
+        "label": "catalog 1-level",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/catalog/level-1.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.060915646853146856,
+          "misMatchPercentage": "0.06",
+          "analysisTime": 249
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_catalog_2-level_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_catalog_2-level_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_catalog_2-level_0_document_0_phone.png",
+        "label": "catalog 2-level",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/catalog/level-2.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_catalog_2-level_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_catalog_2-level_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_catalog_2-level_0_document_1_tablet.png",
+        "label": "catalog 2-level",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/catalog/level-2.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_catalog_2-level_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_catalog_2-level_0_document_2_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_catalog_2-level_0_document_2_desktop.png",
+        "label": "catalog 2-level",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/catalog/level-2.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_catalog_3-level_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_catalog_3-level_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_catalog_3-level_0_document_0_phone.png",
+        "label": "catalog 3-level",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/catalog/level-3.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_catalog_3-level_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_catalog_3-level_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_catalog_3-level_0_document_1_tablet.png",
+        "label": "catalog 3-level",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/catalog/level-3.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.24684614116094986,
+          "misMatchPercentage": "0.25",
+          "analysisTime": 168
+        },
+        "diffImage": "..\\bitmaps_test\\20231123-164338\\failed_diff_backstop_default_catalog_3-level_0_document_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_catalog_3-level_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_catalog_3-level_0_document_2_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_catalog_3-level_0_document_2_desktop.png",
+        "label": "catalog 3-level",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/catalog/level-3.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_product_with_sidebar_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_product_with_sidebar_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_product_with_sidebar_0_document_0_phone.png",
+        "label": "product with sidebar",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/product/product-sidebar.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_product_with_sidebar_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_product_with_sidebar_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_product_with_sidebar_0_document_1_tablet.png",
+        "label": "product with sidebar",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/product/product-sidebar.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_product_with_sidebar_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_product_with_sidebar_0_document_2_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_product_with_sidebar_0_document_2_desktop.png",
+        "label": "product with sidebar",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/product/product-sidebar.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_product_with_sidebar_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_product_with_sidebar_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_product_with_sidebar_0_document_0_phone.png",
+        "label": "product with sidebar",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/product/default-new.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_product_with_sidebar_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_product_with_sidebar_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_product_with_sidebar_0_document_1_tablet.png",
+        "label": "product with sidebar",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/product/default-new.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_product_with_sidebar_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_product_with_sidebar_0_document_2_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_product_with_sidebar_0_document_2_desktop.png",
+        "label": "product with sidebar",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/product/default-new.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_default_right_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_default_right_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_default_right_0_document_0_phone.png",
+        "label": "default right",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/product/default-right-version.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_default_right_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_default_right_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_default_right_0_document_1_tablet.png",
+        "label": "default right",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/product/default-right-version.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.17239159303018267,
+          "misMatchPercentage": "0.17",
+          "analysisTime": 260
+        },
+        "diffImage": "..\\bitmaps_test\\20231123-164338\\failed_diff_backstop_default_default_right_0_document_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_default_right_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_default_right_0_document_2_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_default_right_0_document_2_desktop.png",
+        "label": "default right",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/product/default-right-version.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.07666029087400054,
+          "misMatchPercentage": "0.08",
+          "analysisTime": 270
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_default_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_default_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_default_0_document_0_phone.png",
+        "label": "default",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/product/default.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "phone",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "misMatchPercentage": "0.00"
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_default_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_default_0_document_1_tablet.png",
+        "selector": "document",
+        "fileName": "backstop_default_default_0_document_1_tablet.png",
+        "label": "default",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/product/default.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "tablet",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.2158203125,
+          "misMatchPercentage": "0.22",
+          "analysisTime": 145
+        },
+        "diffImage": "..\\bitmaps_test\\20231123-164338\\failed_diff_backstop_default_default_0_document_1_tablet.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_default_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_default_0_document_2_desktop.png",
+        "selector": "document",
+        "fileName": "backstop_default_default_0_document_2_desktop.png",
+        "label": "default",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "http://localhost:3000/product/default.html",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "desktop",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 0.058252861230329044,
+          "misMatchPercentage": "0.06",
+          "analysisTime": 235
+        }
+      },
+      "status": "pass"
+    },
+    {
+      "pair": {
+        "reference": "..\\bitmaps_reference\\backstop_default_order-status_form_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_order-status_form_0_document_0_phone.png",
+        "selector": "document",
+        "fileName": "backstop_default_order-status_form_0_document_0_phone.png",
+        "label": "order-status form",
         "requireSameDimensions": true,
         "misMatchThreshold": 0.1,
         "url": "http://localhost:3000/order-status/default.html",
@@ -329,11 +621,11 @@ report({
     },
     {
       "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_order-status_form_0_document_1_tablet.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_order-status_form_0_document_1_tablet.png",
+        "reference": "..\\bitmaps_reference\\backstop_default_order-status_form_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_order-status_form_0_document_1_tablet.png",
         "selector": "document",
-        "fileName": "backstop_default_k1_order-status_form_0_document_1_tablet.png",
-        "label": "k1 order-status form",
+        "fileName": "backstop_default_order-status_form_0_document_1_tablet.png",
+        "label": "order-status form",
         "requireSameDimensions": true,
         "misMatchThreshold": 0.1,
         "url": "http://localhost:3000/order-status/default.html",
@@ -346,20 +638,18 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.01808847850055127,
-          "misMatchPercentage": "0.02",
-          "analysisTime": 84
+          "misMatchPercentage": "0.00"
         }
       },
       "status": "pass"
     },
     {
       "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_order-status_form_0_document_2_desktop.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_order-status_form_0_document_2_desktop.png",
+        "reference": "..\\bitmaps_reference\\backstop_default_order-status_form_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_order-status_form_0_document_2_desktop.png",
         "selector": "document",
-        "fileName": "backstop_default_k1_order-status_form_0_document_2_desktop.png",
-        "label": "k1 order-status form",
+        "fileName": "backstop_default_order-status_form_0_document_2_desktop.png",
+        "label": "order-status form",
         "requireSameDimensions": true,
         "misMatchThreshold": 0.1,
         "url": "http://localhost:3000/order-status/default.html",
@@ -379,11 +669,11 @@ report({
     },
     {
       "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_order-status_0_document_0_phone.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_order-status_0_document_0_phone.png",
+        "reference": "..\\bitmaps_reference\\backstop_default_order-status_0_document_0_phone.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_order-status_0_document_0_phone.png",
         "selector": "document",
-        "fileName": "backstop_default_k1_order-status_0_document_0_phone.png",
-        "label": "k1 order-status",
+        "fileName": "backstop_default_order-status_0_document_0_phone.png",
+        "label": "order-status",
         "requireSameDimensions": true,
         "misMatchThreshold": 0.1,
         "url": "http://localhost:3000/order-status/seccess.html",
@@ -403,11 +693,11 @@ report({
     },
     {
       "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_order-status_0_document_1_tablet.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_order-status_0_document_1_tablet.png",
+        "reference": "..\\bitmaps_reference\\backstop_default_order-status_0_document_1_tablet.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_order-status_0_document_1_tablet.png",
         "selector": "document",
-        "fileName": "backstop_default_k1_order-status_0_document_1_tablet.png",
-        "label": "k1 order-status",
+        "fileName": "backstop_default_order-status_0_document_1_tablet.png",
+        "label": "order-status",
         "requireSameDimensions": true,
         "misMatchThreshold": 0.1,
         "url": "http://localhost:3000/order-status/seccess.html",
@@ -427,11 +717,11 @@ report({
     },
     {
       "pair": {
-        "reference": "..\\bitmaps_reference\\backstop_default_k1_order-status_0_document_2_desktop.png",
-        "test": "..\\bitmaps_test\\20231117-141956\\backstop_default_k1_order-status_0_document_2_desktop.png",
+        "reference": "..\\bitmaps_reference\\backstop_default_order-status_0_document_2_desktop.png",
+        "test": "..\\bitmaps_test\\20231123-164338\\backstop_default_order-status_0_document_2_desktop.png",
         "selector": "document",
-        "fileName": "backstop_default_k1_order-status_0_document_2_desktop.png",
-        "label": "k1 order-status",
+        "fileName": "backstop_default_order-status_0_document_2_desktop.png",
+        "label": "order-status",
         "requireSameDimensions": true,
         "misMatchThreshold": 0.1,
         "url": "http://localhost:3000/order-status/seccess.html",

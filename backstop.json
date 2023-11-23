@@ -10,8 +10,7 @@
       "label": "tablet",
       "width": 1024,
       "height": 768
-    }
-    ,
+    },
     {
       "label": "desktop",
       "width": 1920,
@@ -40,7 +39,7 @@
       "requireSameDimensions": true
     },
     {
-      "label": "k1 catalog 1-level",
+      "label": "catalog 1-level",
       "url": "http://localhost:3000/catalog/level-1.html",
       "referenceUrl": "",
       "readyEvent": "",
@@ -58,7 +57,7 @@
       "requireSameDimensions": true
     },
     {
-      "label": "k1 catalog 2-level",
+      "label": "catalog 2-level",
       "url": "http://localhost:3000/catalog/level-2.html",
       "referenceUrl": "",
       "readyEvent": "",
@@ -76,8 +75,8 @@
       "requireSameDimensions": true
     },
     {
-      "label": "k1 product",
-      "url": "http://localhost:3000/product/",
+      "label": "catalog 3-level",
+      "url": "http://localhost:3000/catalog/level-3.html",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",
@@ -94,7 +93,79 @@
       "requireSameDimensions": true
     },
     {
-      "label": "k1 order-status form",
+      "label": "product with sidebar",
+      "url": "http://localhost:3000/product/product-sidebar.html",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "product with sidebar",
+      "url": "http://localhost:3000/product/default-new.html",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "default right",
+      "url": "http://localhost:3000/product/default-right-version.html",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "default",
+      "url": "http://localhost:3000/product/default.html",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0.1,
+      "requireSameDimensions": true
+    },
+    {
+      "label": "order-status form",
       "url": "http://localhost:3000/order-status/default.html",
       "referenceUrl": "",
       "readyEvent": "",
@@ -112,7 +183,7 @@
       "requireSameDimensions": true
     },
     {
-      "label": "k1 order-status",
+      "label": "order-status",
       "url": "http://localhost:3000/order-status/seccess.html",
       "referenceUrl": "",
       "readyEvent": "",

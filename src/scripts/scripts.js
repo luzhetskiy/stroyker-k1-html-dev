@@ -26,51 +26,85 @@ $(document).ready(function () {
     return false;
   });
 
-  $(".product-item__image-sector").on("mousemove", (event) => {
+  $("[data-expand]").on("click", (event) => {
+    const target = $(event.currentTarget);
+    const parent = target.parent();
+    parent.find("[data-collapse-content]").removeClass("d-none");
+    parent.find("[data-collapse]").removeClass("d-none");
+    target.addClass("d-none");
+  });
+
+  $("[data-collapse]").on("click", (event) => {
+    const target = $(event.currentTarget);
+    const parent = target.parent();
+    parent.find("[data-collapse-content]").addClass("d-none");
+    parent.find("[data-expand]").removeClass("d-none");
+    target.addClass("d-none");
+  });
+
+  $(".product-card-slideshow__sector").on("mousemove", (event) => {
     const target = $(event.currentTarget);
     const id = target.attr("data-sector");
     const parent = target.parent().parent();
-    parent.find(".product-item__image-img_active").removeClass("product-item__image-img_active");
-    parent.find(".product-item__image-dot_active").removeClass("product-item__image-dot_active");
-    parent.find(`[data-sector-image="${id}"]`).addClass("product-item__image-img_active");
-    parent.find(`[data-sector-dot="${id}"]`).addClass("product-item__image-dot_active");
+    parent
+    .find(".product-card-slideshow__image_active")
+    .removeClass("product-card-slideshow__image_active");
+    parent
+    .find(".product-card-slideshow__dot_active")
+    .removeClass("product-card-slideshow__dot_active");
+    parent.find(`[data-sector-image="${id}"]`).addClass("product-card-slideshow__image_active");
+    parent.find(`[data-sector-dot="${id}"]`).addClass("product-card-slideshow__dot_active");
   });
 
   let touchstartX = 0;
   let touchendX = 0;
 
-  $(".product-item__image-sectors").on("touchstart", (event) => {
+  $(".product-card-slideshow__sectors").on("touchstart", (event) => {
     touchstartX = event.changedTouches[0].screenX;
   });
 
-  $(".product-item__image-sectors").on("touchend", (event) => {
+  $(".product-card-slideshow__sectors").on("touchend", (event) => {
     touchendX = event.changedTouches[0].screenX;
     const parent = $(event.currentTarget).parent();
-    const img = parent.find(".product-item__image-img_active");
+    const img = parent.find(".product-card-slideshow__image_active");
     const id = Number(img.attr("data-sector-image"));
-    const length = parent.find(".product-item__image-img").length;
+    const length = parent.find(".product-card-slideshow__image").length;
 
     if (touchendX < touchstartX) {
-      parent.find(".product-item__image-img_active").removeClass("product-item__image-img_active");
-      parent.find(".product-item__image-dot_active").removeClass("product-item__image-dot_active");
+      parent
+      .find(".product-card-slideshow__image_active")
+      .removeClass("product-card-slideshow__image_active");
+      parent
+      .find(".product-card-slideshow__dot_active")
+      .removeClass("product-card-slideshow__dot_active");
       if (id >= length) {
-        parent.find(`[data-sector-image="${1}"]`).addClass("product-item__image-img_active");
-        parent.find(`[data-sector-dot="${1}"]`).addClass("product-item__image-dot_active");
+        parent.find(`[data-sector-image="${1}"]`).addClass("product-card-slideshow__image_active");
+        parent.find(`[data-sector-dot="${1}"]`).addClass("product-card-slideshow__dot_active");
         return;
       }
-      parent.find(`[data-sector-image="${id + 1}"]`).addClass("product-item__image-img_active");
-      parent.find(`[data-sector-dot="${id + 1}"]`).addClass("product-item__image-dot_active");
+      parent
+      .find(`[data-sector-image="${id + 1}"]`)
+      .addClass("product-card-slideshow__image_active");
+      parent.find(`[data-sector-dot="${id + 1}"]`).addClass("product-card-slideshow__dot_active");
     }
     if (touchendX > touchstartX) {
-      parent.find(".product-item__image-img_active").removeClass("product-item__image-img_active");
-      parent.find(".product-item__image-dot_active").removeClass("product-item__image-dot_active");
+      parent
+      .find(".product-card-slideshow__image_active")
+      .removeClass("product-card-slideshow__image_active");
+      parent
+      .find(".product-card-slideshow__dot_active")
+      .removeClass("product-card-slideshow__dot_active");
       if (id <= 1) {
-        parent.find(`[data-sector-image="${length}"]`).addClass("product-item__image-img_active");
-        parent.find(`[data-sector-dot="${length}"]`).addClass("product-item__image-dot_active");
+        parent
+        .find(`[data-sector-image="${length}"]`)
+        .addClass("product-card-slideshow__image_active");
+        parent.find(`[data-sector-dot="${length}"]`).addClass("product-card-slideshow__dot_active");
         return;
       }
-      parent.find(`[data-sector-image="${id - 1}"]`).addClass("product-item__image-img_active");
-      parent.find(`[data-sector-dot="${id - 1}"]`).addClass("product-item__image-dot_active");
+      parent
+      .find(`[data-sector-image="${id - 1}"]`)
+      .addClass("product-card-slideshow__image_active");
+      parent.find(`[data-sector-dot="${id - 1}"]`).addClass("product-card-slideshow__dot_active");
     }
   });
 });
