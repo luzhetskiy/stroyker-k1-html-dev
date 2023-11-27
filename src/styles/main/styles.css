@@ -1,9 +1,8 @@
 @font-face {
-  font-display: swap;
   font-family: "Golos";
   font-weight: 400;
   font-style: normal;
-  src: url("../fonts/GolosText-Regular.woff") format("woff");
+  src: url("../fonts/GolosText-Regular.woff");
 }
 
 html,
@@ -107,7 +106,7 @@ html {
 }
 
 body {
-  font-family: "Golos", sans-serif;
+  font-family: "Golos";
   width: 100%;
   -webkit-overflow-scrolling: touch;
   color: #333;
@@ -117,6 +116,11 @@ body {
   height: auto;
   display: flex;
   flex-direction: column;
+}
+
+button {
+  font-family: "Golos";
+  font-weight: 400;
 }
 
 .center {
@@ -6387,7 +6391,7 @@ footer {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 12px;
   color: var(--breadcrumb-item-color, #2363d1);
   text-transform: uppercase;

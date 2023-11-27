@@ -9,6 +9,7 @@ const autoprefixer = require("autoprefixer");
 const cssNano = require("cssnano");
 const babel = require("gulp-babel");
 const clean = require("gulp-clean");
+const include = require("gulp-include");
 
 const sass = gulpSass(dartSass);
 const mode = process.env.NODE_ENV === "production" ? "production" : "development";
@@ -34,6 +35,7 @@ const scripts = () => {
   return gulp
   .src(["src/scripts/*.js"])
   .pipe(sourcemaps.init())
+  .pipe(include())
   .pipe(babel(babelConfig))
   .pipe(terser())
   .pipe(sourcemaps.write())
@@ -44,6 +46,7 @@ const scripts = () => {
 const scriptsBuild = () => {
   return gulp
   .src(["src/scripts/*.js"])
+  .pipe(include())
   .pipe(babel(babelConfig))
   .pipe(terser())
   .pipe(gulp.dest("build/js"))
