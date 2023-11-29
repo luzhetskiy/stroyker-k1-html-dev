@@ -21,6 +21,27 @@ $(document).ready(function () {
     target.addClass("d-none");
   });
 
+  $("[data-expand-menu]").on("click", () => {
+    $(".mobile-side-menu__background").addClass("d-block");
+    $(".mobile-side-menu-content").addClass("mobile-side-menu-content_active");
+  });
+
+  $("[data-collapse-menu]").on("click", () => {
+    $(".mobile-side-menu__background").removeClass("d-block");
+    $(".mobile-side-menu-content").removeClass("mobile-side-menu-content_active");
+    $(`[data-menu-page]:not(:first-child)`).removeClass("mobile-side-menu-content__page_active");
+  });
+
+  $("[data-menu-page-expand]").on("click", (event) => {
+    const id = $(event.currentTarget).attr("data-menu-page-expand");
+    $(`[data-menu-page="${id}"]`).addClass("mobile-side-menu-content__page_active");
+  });
+
+  $("[data-menu-page-collapse]").on("click", (event) => {
+    const id = $(event.currentTarget).attr("data-menu-page-collapse");
+    $(`[data-menu-page="${id}"]`).removeClass("mobile-side-menu-content__page_active");
+  });
+
   $(".product-card-slideshow__sector").on("mousemove", (event) => {
     const target = $(event.currentTarget);
     const id = target.attr("data-sector");

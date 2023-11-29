@@ -962,7 +962,7 @@ p:last-child {
     background-size: 20px 20px;
     width: 48px;
     height: 40px;
-    background-color: var(--main-elements-color, #2363d1);
+    background-color: var(--main-elements-color, #2363d1) !important;
   }
 }
 
