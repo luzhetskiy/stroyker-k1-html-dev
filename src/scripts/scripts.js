@@ -14,7 +14,6 @@
 //=require ./features/gallery.js
 //=require ./features/header.js
 //=require ./features/homeBanner.js
-//=require ./features/mmenu.js
 
 (function ($) {
   var pluginName = "cscrlb";

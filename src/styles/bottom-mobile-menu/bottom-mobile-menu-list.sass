@@ -1,0 +1,38 @@
+.bottom-mobile-menu-list
+  position: absolute
+  background-color: #fff
+  bottom: 0
+  left: 0
+  width: 100%
+  padding-bottom: 95px
+  transition: .3s
+  transform: translateY(100%)
+
+  &_plates
+    padding: 10px 20px
+    padding-bottom: 95px
+    display: flex
+    gap: 8px
+    flex-wrap: wrap
+    .bottom-mobile-menu-list
+      &__link
+        display: inline-flex
+        background-color: #E5EFFF
+        height: 40px
+        text-align: center
+        border: none
+        border-radius: 6px
+
+  &_active
+    transform: translateY(0%)
+
+  &__icon-arrow-fill
+    fill: #CCCCCC
+
+  &__link
+    padding: 10px 20px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    color: #1C52AC
+    border: 1px solid #E9E9E9

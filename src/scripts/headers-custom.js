@@ -42,22 +42,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// $("#my-menu").mmenu({
-//     "extensions": [
-//         "position-front"
-//         ]
-// });
+$("#my-menu").mmenu({
+  extensions: ["position-front"],
+});
 
-// var API = $("#my-menu").data( "mmenu" );
-// // открыть mmenu
-// $("#my-button").click(function() {
-//     API.open();
-// });
-// // закрыть mmenu
-// $(".close_mm_menu").click(function() {
-//     API.close();
-//     $(this).hide();
-// });
+var API = $("#my-menu").data("mmenu");
+// открыть mmenu
+$("#my-button").click(function () {
+  API.open();
+});
+// закрыть mmenu
+$(".close_mm_menu").click(function () {
+  API.close();
+  $(this).hide();
+});
 
 // close button append in mmenu
 function addButton() {
@@ -69,6 +67,6 @@ function addButton() {
 }
 addButton();
 
-// $(document).on("click", ".mm-panel #my-button-close", function () {
-//   API.close();
-// });
+$(document).on("click", ".mm-panel #my-button-close", function () {
+  API.close();
+});

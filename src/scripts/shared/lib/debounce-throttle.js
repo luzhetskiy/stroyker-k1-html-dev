@@ -86,12 +86,3 @@ function debounce(delay, callback, options) {
     debounceMode: atBegin !== false,
   });
 }
-
-const trotleFunc = debounce(1000, () => {
-  console.log(123);
-});
-
-window.addEventListener("scroll", () => {
-  trotleFunc();
-  console.log(523);
-});
