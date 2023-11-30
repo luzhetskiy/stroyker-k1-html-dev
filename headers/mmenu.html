@@ -16,247 +16,177 @@
   <script defer src="../libs/mmenu/mmenu.js"></script>
 
   <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="../css/headers-custom.css" />
+
+  <link rel="stylesheet" href="../css/mmenu.css">
   <script defer src="../js/scripts.js"></script>
   <script defer src="../js/headers-custom.js"></script>
 </head>
 
 <body class="inner-page">
   <header>
-    <!-- new header v2 -->
-    <section class="__header">
+
+    <section class="mobile-header d-flex d-lg-none">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-2">
-            <div class="logo">
-              <a href="/">
-                <img src="../images/logo.svg" />
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-6 pl--0">
-            <div class="custom-block">
-              <button class="btn catalog-btn"><span></span>Проекты домов</button>
-
-              <div class="search-box general--width">
-                <form action="/search">
-                  <input name="q" type="text" autocomplete="off" class="search_input" value="" data-min-chars="3"
-                    data-search-url="/search" placeholder="Поиск..." />
-
-                  <button class="btn submit">
-                    <img src="../images/header-icons/search-icon.svg" alt="" />
-                  </button>
-                </form>
-                <div id="search-result" style="display: none" class="header-search-results"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <div class="options-box">
-              <!-- --v2--  -->
-              <ul class="option-items v-white">
-                <li>
-                  <a href="/cart/">
-                    <img src="../images/header-icons/cart-icon-orange.svg" alt="" />
-
-                    <span class="cart-number">0</span>
-                  </a>
-                </li>
-              </ul>
-
-              <ul class="nav-items">
-                <li>
-                  <a title="Покупателям" href="/clients/"> Покупателям </a>
-                </li>
-
-                <li>
-                  <a title="Контакты" href="/contacts/"> Контакты </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-lg-2">
-            <div class="contact-box">
-              <a href="javascript:;" data-fancybox="callme-modal" data-src="#callme-modal">
-                <img src="../images/header-icons/order-call-arrow.svg" alt="" />
-                Заказать звонок
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- catalog  -->
-      <div class="catalog-box">
-        <div class="container">
-          <ul class="link--arrow-left">
-            <li>
-              <a href="/catalog/kategoriya-tovarov-1/">Проекты домов до 150м2</a>
-            </li>
-
-            <li>
-              <a href="/catalog/kategoriya-tovarov-2/">Проекты домов до 300м2</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- header mobile  -->
-    <section class="header--mob">
-      <div class="container">
-        <div class="row">
-          <div class="col-3">
-            <div class="logo">
-              <a href="/">
-                <img src="../images/logo.svg" alt="" />
-              </a>
-            </div>
-          </div>
-          <div class="col-5"></div>
-          <div class="col-4">
-            <div class="burger-box">
-              <!-- phone  -->
-              <a class="tel-mob" data-fancybox="callme-modal-mob" data-src="#callme-modal" href="#">
-                <img src="../images/header-icons/tel-mob-icon.svg" alt="" />
-                Заказать звонок
-              </a>
-              <button class="btn" id="my-button">
-                <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect width="17" height="2" rx="1" fill="currentColor" />
-                  <rect y="6" width="17" height="2" rx="1" fill="currentColor" />
-                  <rect y="12" width="17" height="2" rx="1" fill="currentColor" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- mmenujs (mobile menu)  -->
-
-      <nav id="my-menu">
-        <ul>
-          <li>
-            <a href="#">Проекты домов</a>
-            <ul>
-              <li>
-                <a href="/catalog/kategoriya-tovarov-1/">Проекты домов до 150м2</a>
-
-                <ul>
-                  <li>
-                    <a href="/catalog/category/kategoriya-tovarov-1/podkategoriya-tovarov-1/">Одноэтажные дома до
-                      150м2</a>
-                  </li>
-
-                  <li>
-                    <a href="/catalog/category/kategoriya-tovarov-1/podkategoriya-tovarov-2/">Двухэтажные дома до
-                      150м2</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="/catalog/kategoriya-tovarov-2/">Проекты домов до 300м2</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Проекты домов</a>
-            <ul>
-              <li>
-                <a href="/catalog/kategoriya-tovarov-1/">Проекты домов до 150м2</a>
-
-                <ul>
-                  <li>
-                    <a href="/catalog/category/kategoriya-tovarov-1/podkategoriya-tovarov-1/">Одноэтажные дома до
-                      150м2</a>
-                  </li>
-
-                  <li>
-                    <a href="/catalog/category/kategoriya-tovarov-1/podkategoriya-tovarov-2/">Двухэтажные дома до
-                      150м2</a>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="/catalog/kategoriya-tovarov-2/">Проекты домов до 300м2</a>
-              </li>
-            </ul>
-          </li>
-
-          <ul class="mm_navbar_mob">
-            <li>
-              <a title="Покупателям" href="/clients/"> Покупателям </a>
-            </li>
-
-            <li>
-              <a title="Контакты" href="/contacts/"> Контакты </a>
-            </li>
-          </ul>
-
-          <ul class="mm-other-options">
-            <li>
-              <a href="/cart/">
-                <img src="../images/header-icons/item-orange.svg" alt="" />
-
-                <span class="cart-number">0</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" data-fancybox="callme-modal-mob-menu" data-src="#callme-modal">
-                <img src="../images/header-icons/tel-mob-icon.svg" alt="" />
-                Заказать звонок
-              </a>
-            </li>
-          </ul>
-
-          <!-- Личный кабинет  -->
-
-          <li>
-            <a class="login" href="/account/login/">
-              <img src="../images/header-icons/profile-icon-t1.svg" alt="" />
-
-              Авторизация
-            </a>
-          </li>
-        </ul>
-        <!-- меню  -->
-      </nav>
-      <!-- ---  -->
-    </section>
-  </header>
-
-  <!-- Нельзя менять section в div иначе mmenu (#my-menu) не будет работать корректно  -->
-  <section class="header--bottom-mob">
-    <div class="container">
-      <div class="row">
-        <div class="col-8">
-          <div class="search--box">
-            <!-- s-icon-left = кнопка submit было слево  -->
-            <!-- s-icon-right = кнопка submit было справо  -->
-            <form action="/search" class="s-icon-right">
-              <input name="q" type="text" autocomplete="off" class="search_input_mobile" value="" data-min-chars="3"
-                data-search-url="/search" placeholder="Поиск..." />
-              <button class="btn submit">
-                <img src="../images/header-icons/s-icon-mob.svg" alt="" />
-              </button>
-            </form>
-            <div id="search-result-mob"></div>
-          </div>
-        </div>
-
-        <div class="col-4">
-          <!-- если добавить класс bordered у custom-mob-cart то у корзини будет оранжевая граница  -->
-          <a href="/cart/" class="custom-mob-cart">
-            <span class="cart-number">0</span>
-
-            <img src="../images/header-icons/cart-icon-white.svg" alt="" />
+        <div class="mobile-header__row">
+          <a class="logo-link" href="#">
+            <img class="logo-link__image" src="../images/logo.svg" alt="">
           </a>
+          <div class="mobile-header__item">
+            <button class="search-button">
+              <svg class="search-button__icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1.26564 6.42777C1.26564 9.29027 3.5638 11.5925 6.37631 11.5925C9.18882 11.5925 11.487 9.29027 11.487 6.42777C11.487 3.56527 9.18882 1.26301 6.37631 1.26301C3.5638 1.26301 1.26564 3.56527 1.26564 6.42777Z"
+                  stroke="black" stroke-width="2.52602" />
+                <line y1="-1.26301" x2="7.5559" y2="-1.26301"
+                  transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.3359 10.001)" stroke="black"
+                  stroke-width="2.52602" />
+              </svg>
+            </button>
+            <button id="my-button" data-open-menu class="hamburger-button">
+              <div class="hamburger-button__line"></div>
+            </button>
+
+            <nav class="d-none" id="menu-navbar">
+              <div class="mobile-side-menu-content__header mb-10">
+                <div class="g-row g-row_space-between mobile-side-menu-content__row">
+                  <a class="logo-link" href="#">
+                    <img class="logo-link__image" src="../images/logo.svg" alt="">
+                  </a>
+                  <button data-close-menu class="cross-button"></button>
+                </div>
+              </div>
+              <div class="search-input-group mb-10">
+                <div class="search-input-group__row">
+                  <input class="search-input-group__input" placeholder="Поиск" type="text">
+                  <button class="search-input-group__button"><svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M1.26564 6.42777C1.26564 9.29027 3.5638 11.5925 6.37631 11.5925C9.18882 11.5925 11.487 9.29027 11.487 6.42777C11.487 3.56527 9.18882 1.26301 6.37631 1.26301C3.5638 1.26301 1.26564 3.56527 1.26564 6.42777Z"
+                        stroke-width="2.52602" />
+                      <line y1="-1.26301" x2="7.5559" y2="-1.26301"
+                        transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.3359 10.001)"
+                        stroke-width="2.52602" />
+                    </svg></button>
+                </div>
+              </div>
+            </nav>
+
+            <nav id="menu">
+              <ul>
+                <li class="menu-list__item">
+                  <a href="#" class="menu-list__link">Каталог</a>
+                  <ul class="menu-list__inner-list">
+                    <li class="menu-list__item">
+                      <a class="menu-list__link" href="#">Строительные материалы</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a class="menu-list__link" href="#">Строительные материалы</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a class="menu-list__link" href="#">Строительные материалы</a>
+                    </li>
+                    <li class="menu-list__item">
+                      <a href="#" class="menu-list__link">Строительные материалы
+                      </a>
+                      <ul class="menu-list__inner-list">
+                        <li class="menu-list__item">
+                          <a class="menu-list__link" href="#">Строительные материалы</a>
+                        </li>
+                        <li class="menu-list__item">
+                          <a class="menu-list__link" href="#">Строительные материалы</a>
+                        </li>
+                        <li class="menu-list__item">
+                          <a class="menu-list__link" href="#">Строительные материалы</a>
+                        </li>
+                        <li class="menu-list__item">
+                          <a href="#" class="menu-list__link">Строительные материалы
+                          </a>
+                          <ul class="menu-list__inner-list">
+                            <li class="menu-list__item">
+                              <a class="menu-list__link" href="#">Строительные материалы</a>
+                            </li>
+                            <li class="menu-list__item">
+                              <a class="menu-list__link" href="#">Строительные материалы</a>
+                            </li>
+                            <li class="menu-list__item">
+                              <a class="menu-list__link" href="#">Строительные материалы</a>
+                            </li>
+                            <li class="menu-list__item">
+                              <a class="menu-list__link" href="#">Строительные материалы</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-list__item">
+                  <a class="menu-list__link" href="#">Услуги</a>
+                </li>
+                <li class="menu-list__item">
+                  <a class="menu-list__link" href="#">Реквизиты</a>
+                </li>
+                <li class="menu-list__item">
+                  <a class="menu-list__link" href="#">Контакты</a>
+                </li>
+
+                <div class="mobile-side-menu-footer">
+                  <div class="g-row mobile-side-menu-footer__row mb-20">
+                    <a class="g-link mobile-side-menu-footer__link" href="#">
+                      <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M6.24701 0C2.80237 0 0 2.80246 0 6.2468C0 9.56227 5.66802 17.3084 5.90936 17.6364L6.13459 17.943C6.16094 17.9789 6.20288 18 6.24701 18C6.29182 18 6.33349 17.9789 6.36011 17.943L6.5852 17.6364C6.82669 17.3084 12.4945 9.56227 12.4945 6.2468C12.4945 2.80246 9.69175 0 6.24701 0ZM6.24701 4.00921C7.48124 4.00921 8.48486 5.01276 8.48486 6.2468C8.48486 7.4802 7.48119 8.48439 6.24701 8.48439C5.01351 8.48439 4.00916 7.4802 4.00916 6.2468C4.00916 5.01276 5.01346 4.00921 6.24701 4.00921Z"
+                          fill="#2363D1" />
+                      </svg>
+                      Самара
+                    </a>
+                  </div>
+                  <div class="phone-block mb-20">
+                    <a class="g-link phone-block__primary-link" href="#">+7 (999) 999-00-00</a>
+                    <a class="g-link phone-block__secondary-link" href="#">Заказать звонок</a>
+                  </div>
+                  <div class="g-row mobile-side-menu-footer__row mb-20">
+                    <a class="g-link mobile-side-menu-footer__link" href="#"><svg width="16" height="18"
+                        viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M7.76938 7.84653C8.49965 7.84653 9.21352 7.62998 9.82072 7.22427C10.4279 6.81855 10.9012 6.24189 11.1806 5.56721C11.4601 4.89253 11.5332 4.15013 11.3907 3.43389C11.2483 2.71765 10.8966 2.05975 10.3802 1.54337C9.86386 1.02699 9.20595 0.675331 8.48971 0.532862C7.77348 0.390394 7.03108 0.463514 6.3564 0.742976C5.68171 1.02244 5.10506 1.49569 4.69934 2.10289C4.29362 2.71008 4.07707 3.42395 4.07707 4.15422C4.07707 5.13348 4.46608 6.07264 5.15852 6.76508C5.85097 7.45752 6.79012 7.84653 7.76938 7.84653ZM14.8863 13.5696C12.9968 11.6858 10.4375 10.6279 7.76938 10.6279C5.10124 10.6279 2.54195 11.6858 0.652458 13.5696L0.384766 13.8465V18.0004H15.154V13.8465L14.8863 13.5696Z"
+                          fill="#2363D1" />
+                      </svg>
+                      Войти</a>
+                  </div>
+                  <div class="g-row mobile-side-menu-footer__row">
+                    <a class="g-link mobile-side-menu-footer__link" href="#"><svg width="18" height="18"
+                        viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5 9H14.5V18H17.5V9Z" fill="#2363D1" />
+                        <path d="M3.5 4.5H0.5V18H3.5V4.5Z" fill="#2363D1" />
+                        <path d="M10.5 0H7.5V18H10.5V0Z" fill="#2363D1" />
+                      </svg>
+                      555</a>
+                    <a class="g-link mobile-side-menu-footer__link" href="#"><svg width="21" height="18"
+                        viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.6721 1.48886C12.9595 -0.564802 16.4942 -0.496639 18.6978 1.71088C20.9005 3.91938 20.9764 7.43661 18.9276 9.7308L10.6702 18L2.41468 9.7308C0.3659 7.43661 0.442827 3.91354 2.64449 1.71088C4.85004 -0.493718 8.37796 -0.567724 10.6721 1.48886Z"
+                          fill="#2363D1" />
+                      </svg>
+                      555</a>
+                    <a class="g-link mobile-side-menu-footer__link" href="#"><svg width="21" height="18"
+                        viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M6.59005 15.5879C6.35151 15.5879 6.11832 15.6586 5.91998 15.7911C5.72164 15.9237 5.56705 16.112 5.47576 16.3324C5.38447 16.5528 5.36059 16.7953 5.40713 17.0292C5.45367 17.2632 5.56853 17.4781 5.73721 17.6468C5.90589 17.8154 6.12079 17.9303 6.35475 17.9768C6.58871 18.0234 6.83122 17.9995 7.0516 17.9082C7.27199 17.8169 7.46036 17.6623 7.59288 17.464C7.72541 17.2657 7.79615 17.0325 7.79615 16.7939C7.79615 16.4741 7.66908 16.1673 7.44289 15.9411C7.2167 15.715 6.90993 15.5879 6.59005 15.5879ZM17.2037 15.5879C16.9652 15.5879 16.732 15.6586 16.5336 15.7911C16.3353 15.9237 16.1807 16.112 16.0894 16.3324C15.9981 16.5528 15.9743 16.7953 16.0208 17.0292C16.0673 17.2632 16.1822 17.4781 16.3509 17.6468C16.5195 17.8154 16.7345 17.9303 16.9684 17.9768C17.2024 18.0234 17.4449 17.9995 17.6653 17.9082C17.8856 17.8169 18.074 17.6623 18.2065 17.464C18.3391 17.2657 18.4098 17.0325 18.4098 16.7939C18.4098 16.4741 18.2827 16.1673 18.0566 15.9411C17.8304 15.715 17.5236 15.5879 17.2037 15.5879ZM18.1686 14.623V12.6934H7.8058L7.49704 11.4391L20.0983 9.18133V2.08008H5.17168L4.66029 0.150391H0.800781V2.08008H3.18403L6.30059 14.623H18.1686Z"
+                          fill="#2363D1" />
+                      </svg>
+                      555</a>
+                  </div>
+                </div>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </header>
 
   <main>
     <section class="section section-first mobile-show">
@@ -505,41 +435,6 @@
     </div>
   </footer>
 
-  <!--кнопка вверх-->
-  <a class="js-up fixed-btn" href="javascript:void(0);">
-    <svg class="icon" fill="currentColor" viewBox="0 0 22.1 19.5" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M12.1,0.4c-0.6-0.6-1.5-0.6-2.1,0L0.4,10c-0.6,0.6-0.6,1.5,0,2.1c0.6,0.6,1.5,0.6,2.1,0L11,3.6l8.5,8.5c0.6,0.6,1.5,0.6,2.1,0s0.6-1.5,0-2.1L12.1,0.4z M12.5,19.5v-18h-3v18H12.5z">
-      </path>
-    </svg>
-  </a>
-  <!--кнопка инфо-->
-
-  <div class="safety-message-fixed toggle-section">
-    <a class="fixed-btn toggle-section__trigger safety-message-fixed__btn" href="javascript:void(0);">
-      <svg class="icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.2 32.6">
-        <path
-          d="M13.2,9.6c5.6-0.6,11.2,2.8,12.7,8.3c0.6,2.3,0.6,4.2-1,5.3c-1.9,1.3-4,0.5-4.9-0.9c-0.8-1.3-0.1-2.3-1.2-4.1          c-2.5-3.8-8.7-2.6-9.3,1.9c-0.3,1.9,0.4,4.3,1.1,5.8c1.5,3.1,4.2,5.4,7.5,6.5c0.4,0.1,1,0.4,1.4,0.2c0.4-0.2,0.6-0.7,0.4-1.1          c-0.2-0.5-1.5-0.6-2.4-1.1c-3-1.3-5.5-3.9-6.3-7.8c-0.2-1-0.3-2.3,0.1-3.2c1.2-2.7,5.4-2.6,6.4,0.2c0.4,1.1-0.1,3.2,2.2,4.9          c1.5,1.1,3.7,1.3,5.5,0.3c3.7-2.1,2.7-6.9,1.1-10C25,12,22.3,9.7,18.7,8.5c-4-1.3-8.4-0.5-11.4,1.4c-2.6,1.6-5.1,4.2-5.9,8.1          c-0.5,2.6-0.1,6.8,1,9.2c0.4,0.9,1.9,0.6,1.4-0.9C2.3,22.4,2.3,18,4.4,14.8C6,12.3,9,10.1,13.2,9.6z">
-        </path>
-        <path
-          d="M13.7,13.6c3.9-0.5,7.1,2.1,8,4.8c0.5,1.4,0.3,2.4,0.5,2.7c0.3,0.5,1.6,0.8,1.5-1c-0.1-1.9-0.9-3.5-1.8-4.6          c-4.8-6-13.9-4.1-16.2,2.4c-0.6,1.8-0.6,3.8-0.2,5.7c0.6,3.4,2.4,6.1,4.6,8.3c0.9,0.9,1.9-0.1,1.5-0.8c-0.1-0.2-0.6-0.6-0.7-0.8          c-0.3-0.3-0.5-0.5-0.7-0.8C7.3,26.2,5,19.2,9.3,15.5C10.5,14.5,11.6,13.8,13.7,13.6z">
-        </path>
-        <path
-          d="M0,11.3v1c1,0.7,1.2,0.2,1.7-0.6c0.7-0.9,1.8-2,2.7-2.8c5.4-4.2,13.2-4.5,19-0.8c2,1.2,2.9,2.4,4.2,4.1          c0.5,0.6,1.5,0.3,1.5-0.5c0-0.7-2.1-2.7-2.5-3.1c-0.9-0.8-1.9-1.6-3.2-2.3C20.9,4.9,18.3,4,14.8,4c-3.4,0-6.4,0.8-8.9,2.1          C4.8,6.7,3.3,7.6,2.6,8.4C2.1,8.9,1.7,9.3,1.2,9.8C0.8,10.2,0.2,11.1,0,11.3z">
-        </path>
-        <path
-          d="M13.6,0c-2,0.1-3.9,0.5-5.7,1.1c-0.6,0.2-3,1.1-3.4,1.6C4,3.2,4.4,4.5,5.8,3.8c1-0.5,2.6-1.2,3.6-1.4          c4.8-1.3,9.7-0.8,14,1.5c1.2,0.6,1.8-0.7,1.1-1.3C23.8,2,20.9,1,19.7,0.6C17.8,0.1,15.7-0.1,13.6,0z">
-        </path>
-        <path
-          d="M13.7,21.3c0.4,4.4,3.8,7.5,7.9,7.9c0.7,0.1,2.9,0.1,3.4-0.4c0.2-0.3,0.3-0.7,0.1-1c-0.4-0.6-1.4-0.2-2.2-0.2          c-3.7,0.1-6.8-2.2-7.5-5.7c-0.1-0.8,0.1-1.7-0.6-2C13.7,19.6,13.6,20.5,13.7,21.3z">
-        </path>
-      </svg>
-    </a>
-    <div class="safety-message-fixed__popup toggle-section__content">
-      <span>Наш сайт использует cookie, данные об IP-адресе, местоположении. Если Вы не хотите, чтобы
-        эти данные обрабатывались, то должны покинуть сайт.</span>
-    </div>
-  </div>
 
   <svg width="0" height="0" class="hidden">
     <symbol id="exit" stroke="none" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 21.4 18">
@@ -722,6 +617,117 @@
       </form>
     </div>
   </div>
+
+  <div class="bottom-mobile-menu bottom-mobile-menu_radius d-block d-lg-none">
+    <div class="bottom-mobile-menu-list">
+      <ul class="bottom-mobile-menu-list__list">
+        <li class="container-fluid bottom-mobile-menu-list__item">
+          <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12"
+              viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z" fill="#CCCCCC" />
+            </svg>
+          </a>
+        </li>
+        <li class="container-fluid bottom-mobile-menu-list__item">
+          <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12"
+              viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z" fill="#CCCCCC" />
+            </svg>
+          </a>
+        </li>
+        <li class="container-fluid bottom-mobile-menu-list__item">
+          <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12"
+              viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z" fill="#CCCCCC" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bottom-mobile-menu__content">
+      <div class="bottom-mobile-menu__row">
+        <a class="bottom-mobile-menu-button bottom-mobile-menu-button_active" href="#">
+          <svg class="bottom-mobile-menu-button__icon" fill="none" width="29" height="25" viewBox="0 0 29 25"
+            xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1024_344)">
+              <path
+                d="M23.3239 14.2559V23.9801H18.3081V17.9757V16.9552H17.2877H11.4199H10.3995V17.9757V23.9801H5.38371V14.2559L14.3538 7.23161L23.3239 14.2559Z"
+                stroke-width="2.04085" class="stroke" />
+              <path class="fill"
+                d="M0 11.4251L14.3555 0L28.7109 11.4251L27.0404 12.8204L14.3555 2.72485L1.67051 12.8204L0 11.4251Z" />
+            </g>
+            <defs>
+              <clipPath id="clip0_1024_344">
+                <rect width="29" height="25" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="bottom-mobile-menu-button__text">Главная</span>
+        </a>
+        <a class="bottom-mobile-menu-button" href="#">
+          <svg width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1024_138)">
+              <g clip-path="url(#clip1_1024_138)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.05049 7.69995H1.125V10.0529H7.88622C7.87877 9.89451 7.875 9.73517 7.875 9.57495C7.875 8.93408 7.93529 8.3073 8.05049 7.69995ZM11.3032 17.1125C10.5284 16.4364 9.85884 15.6428 9.32225 14.7595H1.125V17.1125H11.3032ZM1.125 21.8191H21.125V24.172H1.125V21.8191Z"
+                  class="fill" />
+                <path
+                  d="M24.0259 15.8363L23.6459 16.1334L23.8961 16.5458L28.3111 23.8224L27.3752 24.3891L22.9726 17.1051L22.7231 16.6922L22.2837 16.8913C20.6371 17.6375 18.787 17.8068 17.0324 17.3718L17.0312 17.3715C15.4667 16.9871 14.0512 16.1475 12.9638 14.9587C11.8765 13.7699 11.166 12.2853 10.9224 10.6927C10.6787 9.10017 10.9128 7.47112 11.595 6.01159C12.2772 4.55205 13.3769 3.32759 14.755 2.49304C16.1331 1.6585 17.7277 1.25135 19.3372 1.32308C20.9467 1.39481 22.4988 1.9422 23.7972 2.89603C25.0956 3.84986 26.082 5.16729 26.6317 6.68173C27.1813 8.19616 27.2695 9.83958 26.8852 11.4042L26.8849 11.4053C26.4574 13.1618 25.4501 14.7228 24.0259 15.8363ZM13.7652 14.2256C14.7076 15.2559 15.9344 15.9836 17.2903 16.3167C19.1086 16.7634 21.0299 16.4695 22.6315 15.4996C24.2331 14.5297 25.3838 12.9633 25.8304 11.145C26.1635 9.78908 26.0871 8.36479 25.6107 7.05228C25.1343 5.73977 24.2795 4.59799 23.1542 3.77134C22.0289 2.94469 20.6838 2.47028 19.2889 2.40811C17.894 2.34595 16.512 2.69881 15.3176 3.42209C14.1232 4.14536 13.1702 5.20656 12.579 6.47149C11.9877 7.73642 11.7848 9.14826 11.996 10.5285C12.2072 11.9087 12.8229 13.1953 13.7652 14.2256Z"
+                  class="fill stroke" stroke-width="1.08611" />
+              </g>
+            </g>
+            <defs>
+              <clipPath id="clip0_1024_138">
+                <rect width="30" height="25" fill="white" />
+              </clipPath>
+              <clipPath id="clip1_1024_138">
+                <rect width="30" height="25" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="bottom-mobile-menu-button__text">Поиск</span>
+        </a>
+        <a class="bottom-mobile-menu-button" href="#">
+          <svg class="bottom-mobile-menu-button__icon" fill="none" width="27" height="25" viewBox="0 0 27 25"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M3.33776 1.7027H1V1H4.63575L5.15484 2.95886L5.35195 3.7027H6.12147H26.0264V11.8119L9.20178 14.8265L8.1523 15.0145L8.40713 16.0498L8.83956 17.8066L9.02687 18.5676H9.81057H23.3237V19.2703H8.48446L4.30825 2.46158L4.1197 1.7027H3.33776ZM7.72505 22.7378C7.83838 22.662 7.97162 22.6216 8.10791 22.6216C8.29068 22.6216 8.46596 22.6942 8.5952 22.8235C8.72444 22.9527 8.79706 23.128 8.79706 23.3108C8.79706 23.4471 8.75664 23.5804 8.68091 23.6937C8.60518 23.8071 8.49755 23.8954 8.37162 23.9475C8.24571 23.9997 8.10715 24.0133 7.97347 23.9868C7.83979 23.9602 7.717 23.8945 7.62062 23.7981C7.52424 23.7018 7.4586 23.579 7.432 23.4453C7.40541 23.3116 7.41906 23.173 7.47122 23.0471C7.52339 22.9211 7.61172 22.8135 7.72505 22.7378ZM22.5895 22.7378C22.7029 22.662 22.8361 22.6216 22.9724 22.6216C23.1552 22.6216 23.3305 22.6942 23.4597 22.8235C23.5889 22.9527 23.6616 23.128 23.6616 23.3108C23.6616 23.4471 23.6211 23.5804 23.5454 23.6937C23.4697 23.807 23.3621 23.8954 23.2361 23.9475C23.1102 23.9997 22.9717 24.0133 22.838 23.9868C22.7043 23.9602 22.5815 23.8945 22.4851 23.7982C22.3887 23.7018 22.3231 23.579 22.2965 23.4453C22.2699 23.3116 22.2836 23.173 22.3357 23.0471C22.3879 22.9211 22.4762 22.8135 22.5895 22.7378Z"
+              stroke-width="2" class="stroke" />
+          </svg>
+          <span class="bottom-mobile-menu-button__text">Корзина</span>
+        </a>
+        <a class="bottom-mobile-menu-button" href="#">
+          <svg width="29" height="25" viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_1033_49348)">
+              <path
+                d="M14.4848 2.06787C17.6617 -0.784448 22.5711 -0.689776 25.6317 2.37623C28.691 5.44358 28.7965 10.3286 25.9509 13.515L14.4821 25L3.01607 13.515C0.170514 10.3286 0.277358 5.43547 3.33525 2.37623C6.39854 -0.685719 11.2985 -0.788505 14.4848 2.06787V2.06787ZM23.7167 4.28724C21.688 2.25586 18.4151 2.17336 16.2917 4.08031L14.4862 5.70055L12.6793 4.08167C10.5492 2.17201 7.28305 2.25586 5.24896 4.28994C3.23381 6.30509 3.13238 9.53068 4.98929 11.6621L14.4835 21.1712L23.9777 11.6635C25.836 9.53068 25.7345 6.30915 23.7167 4.28724V4.28724Z"
+                class="fill" />
+            </g>
+            <defs>
+              <clipPath id="clip0_1033_49348">
+                <rect width="29" height="25" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <span class="bottom-mobile-menu-button__text">Избранное</span>
+        </a>
+        <button data-open-bottom-dropdown class="bottom-mobile-menu-button">
+          <svg class="bottom-mobile-menu-button__icon" fill="none" width="24" height="24" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="9" height="9" class="stroke" stroke-width="2" />
+            <rect x="14" y="1" width="9" height="9" class="stroke" stroke-width="2" />
+            <rect x="14" y="14" width="9" height="9" class="stroke" stroke-width="2" />
+            <rect x="1" y="14" width="9" height="9" class="stroke" stroke-width="2" />
+          </svg>
+          <span class="bottom-mobile-menu-button__text">Остальное</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+
 </body>
 
 </html>
