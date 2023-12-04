@@ -348,15 +348,15 @@
       <div class="container">
         <div class="g-row search-modal-window__row">
           <form class="search-modal-window__input-form">
-            <input class="search-modal-window__input" type="text">
-            <button class="search-modal-window__clear-input"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+            <input data-input class="search-modal-window__input" type="text">
+            <button type="button" data-clear-input class="search-modal-window__clear-input"><svg width="9" height="9"
+                viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 8L7.99998 1" stroke="#E5E5EA" stroke-width="0.991667" stroke-linecap="round" />
                 <path d="M8 8L1 1" stroke="#E5E5EA" stroke-width="0.991667" stroke-linecap="round" />
               </svg>
             </button>
           </form>
-          <button data-close-search-modal class="g-link search-modal-window__cancel">Отмена</button>
+          <button type="button" data-close-search-modal class="g-link search-modal-window__cancel">Отмена</button>
         </div>
       </div>
     </div>
@@ -371,7 +371,8 @@
               transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.334 10.5007)"
               class="search-modal-window__search-icon" stroke-width="2.52602" />
           </svg>
-          <span class="search-modal-window__search-result-text">строительная смесь</span>
+          <span class="search-modal-window__search-result-text">Затирка для швов (плитки), гидроизоляционная
+            смесь</span>
         </a>
         <a href="#" class="search-modal-window__search-result">
           <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -382,7 +383,7 @@
               transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.334 10.5007)"
               class="search-modal-window__search-icon" stroke-width="2.52602" />
           </svg>
-          <span class="search-modal-window__search-result-text">строительная смесь</span>
+          <span class="search-modal-window__search-result-text">Блоки для строительства</span>
         </a>
         <a href="#" class="search-modal-window__search-result">
           <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -393,31 +394,46 @@
               transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.334 10.5007)"
               class="search-modal-window__search-icon" stroke-width="2.52602" />
           </svg>
-          <span class="search-modal-window__search-result-text">строительная смесь</span>
+          <span class="search-modal-window__search-result-text">Затирка для швов (плитки), гидроизоляционная
+            смесь</span>
         </a>
       </div>
     </div>
   </div>
 
   <div class="bottom-mobile-menu d-block d-lg-none">
-    <div class="bottom-mobile-menu-list">
-      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
-          fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
-            class="bottom-mobile-menu-list__icon-arrow-fill" />
-        </svg>
+    <div class="bottom-mobile-menu-list bottom-mobile-menu-list_plates">
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании
       </a>
-      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
-          fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
-            class="bottom-mobile-menu-list__icon-arrow-fill" />
-        </svg>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">Портфолио
       </a>
-      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
-          fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
-            class="bottom-mobile-menu-list__icon-arrow-fill" />
-        </svg>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">Реквизиты
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">Контакты
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">Портфолио
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">Реквизиты
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">Контакты
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">Портфолио
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">Реквизиты
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">Контакты
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">Портфолио
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">Реквизиты
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">Контакты
       </a>
     </div>
 
@@ -531,46 +547,64 @@
         <a href="#" class="menu-list__link">Каталог</a>
         <ul class="menu-list__inner-list">
           <li class="menu-list__item">
-            <a class="menu-list__link" href="#">Строительные материалы</a>
+            <a class="menu-list__link" href="#">Металлопрокат</a>
           </li>
           <li class="menu-list__item">
-            <a class="menu-list__link" href="#">Строительные материалы</a>
+            <a class="menu-list__link" href="#">Сухие смеси</a>
           </li>
           <li class="menu-list__item">
-            <a class="menu-list__link" href="#">Строительные материалы</a>
+            <a class="menu-list__link" href="#">Теплоизоляционные материалы</a>
           </li>
           <li class="menu-list__item">
             <a href="#" class="menu-list__link">Строительные материалы
             </a>
             <ul class="menu-list__inner-list">
               <li class="menu-list__item">
-                <a class="menu-list__link" href="#">Строительные материалы</a>
+                <a class="menu-list__link" href="#">Затирка для швов (плитки), гидроизоляционная смесь</a>
               </li>
               <li class="menu-list__item">
-                <a class="menu-list__link" href="#">Строительные материалы</a>
+                <a class="menu-list__link" href="#">Блоки для строительства</a>
               </li>
               <li class="menu-list__item">
-                <a class="menu-list__link" href="#">Строительные материалы</a>
+                <a class="menu-list__link" href="#">Затирка для швов (плитки), гидроизоляционная смесь</a>
               </li>
               <li class="menu-list__item">
-                <a href="#" class="menu-list__link">Строительные материалы
+                <a href="#" class="menu-list__link">Сетка фасадная, стеклотканевая, стеклохолст
                 </a>
                 <ul class="menu-list__inner-list">
                   <li class="menu-list__item">
-                    <a class="menu-list__link" href="#">Строительные материалы</a>
+                    <a class="menu-list__link" href="#">Затирка для швов (плитки), гидроизоляционная смесь</a>
                   </li>
                   <li class="menu-list__item">
-                    <a class="menu-list__link" href="#">Строительные материалы</a>
+                    <a class="menu-list__link" href="#">Блоки для строительства</a>
                   </li>
                   <li class="menu-list__item">
-                    <a class="menu-list__link" href="#">Строительные материалы</a>
-                  </li>
-                  <li class="menu-list__item">
-                    <a class="menu-list__link" href="#">Строительные материалы</a>
+                    <a class="menu-list__link" href="#">Затирка для швов (плитки), гидроизоляционная смесь</a>
                   </li>
                 </ul>
               </li>
             </ul>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Листовые материалы</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Инженерная сантехника</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Гидроизоляционные материалы</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Вентиляция</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Водоснабжение</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Водосточные и дренажные системы</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Двери</a>
           </li>
         </ul>
       </li>
