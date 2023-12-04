@@ -1,0 +1,183 @@
+/* Montserrat-SemiBold */
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Roboto-Regular */
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Roboto-Bold */
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --msb: "Montserrat-SemiBold";
+  --rr: "Roboto-Regular";
+  --rb: "Roboto-Bold";
+}
+
+/* СТИЛИ КАТАЛОГА В ШАПКЕ  */
+
+.catalog-box.show {
+  transform: translateY(0px);
+  z-index: 1;
+  visibility: visible;
+  opacity: 1;
+}
+
+.catalog-box {
+  width: 100%;
+  background: #333333;
+  padding-top: 33px;
+  padding-bottom: 33px;
+  margin-top: 40px;
+  transform: translateY(-50px);
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.__header .catalog-box {
+  margin-top: 18px;
+}
+
+.catalog-box ul {
+  width: 100%;
+  max-height: 485px;
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  gap: 10px;
+  grid-auto-flow: column;
+  margin-bottom: 0;
+}
+
+.catalog-box li {
+  position: relative;
+  max-width: 224px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  min-height: 33px;
+}
+
+.catalog-box ul a {
+  font-family: var(--rr);
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  display: inline-block;
+  width: 100%;
+  transition: 0.2s;
+  padding-right: 60px;
+  position: relative;
+}
+
+/* ТИПИ И ХОВЕРЫ ЛИСТОВ КАТАЛОГА  */
+
+/* hover--color  */
+header ul.hover--color a:hover {
+  color: #2363d1;
+}
+
+/* hover--underline  */
+header ul.hover--underline a:hover {
+  color: #fff;
+}
+header ul.hover--underline li:hover::after {
+  transform: scaleX(1);
+  transform-origin: center left;
+}
+header ul.hover--underline li::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -7px;
+  left: 0px;
+  border-bottom: 1px solid #2363d1;
+  transform: scaleX(0);
+  transform-origin: center right;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0, 1);
+}
+
+/* hover--arrow  */
+
+header ul.hover--arrow a:hover {
+  color: #fff;
+}
+header ul.hover--arrow li:before {
+  content: "";
+  width: 14px;
+  height: 8px;
+  position: absolute;
+  right: -30px;
+  bottom: 0;
+  top: -7px;
+  margin: auto;
+  background-image: url(../images/icons/small-arrow.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: 0.4s;
+}
+header ul.hover--arrow li:hover:before {
+  opacity: 1;
+  transform: none;
+}
+
+/* link arrow position ( left or right ) */
+header ul.link--arrow-right li span img,
+header ul.link--arrow-left li span img {
+  max-width: 33px;
+  max-height: 33px;
+}
+
+header ul.link--arrow-right li span,
+header ul.link--arrow-left li span {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  display: flex;
+  margin: auto;
+  max-width: 33px;
+  max-height: 33px;
+}
+
+/* right  */
+header ul.link--arrow-right li span {
+  right: 0;
+}
+
+/* left  */
+header ul.link--arrow-left li span {
+  left: 0;
+}
+
+header ul.link--arrow-left span + a {
+  padding-left: 58px;
+  padding-right: 0 !important;
+}
+
+@media only screen and (max-width: 1280px) {
+  .catalog-box li {
+    max-width: 180px;
+    margin-bottom: 20px;
+  }
+
+  .catalog-box ul a {
+    font-size: 12px;
+    padding-right: 42px;
+  }
+}
