@@ -1,20 +1,20 @@
 ("use strict");
 
-//=require ./shared/config/index.js
-//=require ./shared/lib/debounce-throttle.js
-//=require ./features/sliderConstructor.js
-//=require ./features/clickEvents.js
-//=require ./features/smoothScroll.js
-//=require ./features/bigSlides.js
-//=require ./features/customSelect.js
-//=require ./features/tabs.js
-//=require ./features/syncSliders.js
-//=require ./features/catalogViewMode.js
-//=require ./features/rangeSlider.js
-//=require ./features/gallery.js
-//=require ./features/header.js
-//=require ./features/homeBanner.js
-//=require ./features/catalogCardSlideshow.js
+//@include ./shared/config/index.js
+//@include ./shared/lib/debounce-throttle.js
+//@include ./features/sliderConstructor.js
+//@include ./features/clickEvents.js
+//@include ./features/smoothScroll.js
+//@include ./features/bigSlides.js
+//@include ./features/customSelect.js
+//@include ./features/tabs.js
+//@include ./features/syncSliders.js
+//@include ./features/catalogViewMode.js
+//@include ./features/rangeSlider.js
+//@include ./features/gallery.js
+//@include ./features/header.js
+//@include ./features/homeBanner.js
+//@include ./features/catalogCardSlideshow.js
 
 (function ($) {
   var pluginName = "cscrlb";
