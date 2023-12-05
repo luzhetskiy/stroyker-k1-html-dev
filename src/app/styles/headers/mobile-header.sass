@@ -11,18 +11,48 @@
   &__item
     display: flex
     gap: 15px
+    min-width: 59px
+
+  &__item:has(&__phones)
+    min-width: 184px
 
   &__phones
     display: flex
     flex-direction: column
     gap: 3px
     justify-content: center
+    min-width: 108px
 
   &__phone
     font-size: 14px
     font-weight: 600
     line-height: 16px
     color: #000000
+
+  &__hamburger-button
+    padding: 5px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    min-width: 27px
+    width: 27px
+    gap: 4px
+    &::after, &::before
+      content: ''
+      display: block
+      background-color: #000
+      height: 2px
+      width: 100%
+      border-radius: 1px
+
+  &__hamburger-line
+    height: 2px
+    width: 100%
+    background-color: #000
+    border-radius: 1px
+
+  &__search-button
+    min-width: 27px
 
 .logo-link
   display: inline-flex
@@ -34,5 +64,6 @@
 
 @media (max-width: 575px)
   .mobile-header
-    &__phones
-      display: none
+
+    &__row
+      gap: 40px

@@ -36,8 +36,8 @@
                 <a class="mobile-header__phone" href="#">+7-927-711-9393</a>
                 <a class="mobile-header__phone" href="#">+7-927-711-9393</a>
               </div>
-              <button data-open-search-modal class="search-button">
-                <svg class="search-button__icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+              <button data-open-search-modal class="mobile-header__search-button">
+                <svg class="mobile-header__search-icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M1.26564 6.42777C1.26564 9.29027 3.5638 11.5925 6.37631 11.5925C9.18882 11.5925 11.487 9.29027 11.487 6.42777C11.487 3.56527 9.18882 1.26301 6.37631 1.26301C3.5638 1.26301 1.26564 3.56527 1.26564 6.42777Z"
@@ -47,8 +47,8 @@
                     stroke-width="2.52602" />
                 </svg>
               </button>
-              <a href="#menu" id="my-button" data-open-menu class="hamburger-button">
-                <div class="hamburger-button__line"></div>
+              <a href="#menu" id="my-button" data-open-menu class="mobile-header__hamburger-button">
+                <div class="mobile-header__hamburger-line"></div>
               </a>
             </div>
           </div>
@@ -348,33 +348,36 @@
       <div class="container">
         <div class="g-row search-modal-window__row">
           <form class="search-modal-window__input-form">
-            <input class="search-modal-window__input" type="text">
-            <button class="search-modal-window__clear-input"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+            <input data-input class="search-modal-window__input" type="text">
+            <button type="button" data-clear-input class="search-modal-window__clear-input"><svg width="9" height="9"
+                viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 8L7.99998 1" stroke="#E5E5EA" stroke-width="0.991667" stroke-linecap="round" />
                 <path d="M8 8L1 1" stroke="#E5E5EA" stroke-width="0.991667" stroke-linecap="round" />
               </svg>
             </button>
           </form>
-          <button data-close-search-modal class="g-link search-modal-window__cancel">Отмена</button>
+          <button type="button" data-close-search-modal class="g-link search-modal-window__cancel">Отмена</button>
         </div>
       </div>
     </div>
     <div class="search-modal-window__search-results">
       <div class="container">
         <a href="#" class="search-modal-window__search-result">
-          <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="search-modal-window__search-icon" width="17" height="18" viewBox="0 0 17 18"
+            xmlns="http://www.w3.org/2000/svg" fill="none">
             <path
               d="M1.26368 6.92753C1.26368 9.79003 3.56185 12.0923 6.37436 12.0923C9.18687 12.0923 11.485 9.79003 11.485 6.92753C11.485 4.06502 9.18687 1.76276 6.37436 1.76276C3.56185 1.76276 1.26368 4.06502 1.26368 6.92753Z"
-              class="search-modal-window__search-icon" stroke-width="2.52602" />
+              class="search-modal-window__search-icon-stroke" stroke-width="2.52602" />
             <line y1="-1.26301" x2="7.5559" y2="-1.26301"
               transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.334 10.5007)"
-              class="search-modal-window__search-icon" stroke-width="2.52602" />
+              class="search-modal-window__search-icon-stroke" stroke-width="2.52602" />
           </svg>
-          <span class="search-modal-window__search-result-text">строительная смесь</span>
+          <span class="search-modal-window__search-result-text">Затирка для швов (плитки), гидроизоляционная
+            смесь</span>
         </a>
         <a href="#" class="search-modal-window__search-result">
-          <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="search-modal-window__search-icon" width="17" height="18" viewBox="0 0 17 18" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M1.26368 6.92753C1.26368 9.79003 3.56185 12.0923 6.37436 12.0923C9.18687 12.0923 11.485 9.79003 11.485 6.92753C11.485 4.06502 9.18687 1.76276 6.37436 1.76276C3.56185 1.76276 1.26368 4.06502 1.26368 6.92753Z"
               class="search-modal-window__search-icon" stroke-width="2.52602" />
@@ -382,10 +385,11 @@
               transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.334 10.5007)"
               class="search-modal-window__search-icon" stroke-width="2.52602" />
           </svg>
-          <span class="search-modal-window__search-result-text">строительная смесь</span>
+          <span class="search-modal-window__search-result-text">Блоки для строительства</span>
         </a>
         <a href="#" class="search-modal-window__search-result">
-          <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="search-modal-window__search-icon" width="17" height="18" viewBox="0 0 17 18" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <path
               d="M1.26368 6.92753C1.26368 9.79003 3.56185 12.0923 6.37436 12.0923C9.18687 12.0923 11.485 9.79003 11.485 6.92753C11.485 4.06502 9.18687 1.76276 6.37436 1.76276C3.56185 1.76276 1.26368 4.06502 1.26368 6.92753Z"
               class="search-modal-window__search-icon" stroke-width="2.52602" />
@@ -393,7 +397,8 @@
               transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.334 10.5007)"
               class="search-modal-window__search-icon" stroke-width="2.52602" />
           </svg>
-          <span class="search-modal-window__search-result-text">строительная смесь</span>
+          <span class="search-modal-window__search-result-text">Затирка для швов (плитки), гидроизоляционная
+            смесь</span>
         </a>
       </div>
     </div>
@@ -419,80 +424,201 @@
             class="bottom-mobile-menu-list__icon-arrow-fill" />
         </svg>
       </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
+      <a class="g-link bottom-mobile-menu-list__link" href="#">О компании <svg width="6" height="12" viewBox="0 0 6 12"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6L1.70635e-07 11.1962L8.97455e-07 0.803848L6 6Z"
+            class="bottom-mobile-menu-list__icon-arrow-fill" />
+        </svg>
+      </a>
     </div>
 
     <div class="bottom-mobile-menu__content">
       <div class="bottom-mobile-menu__row">
         <a class="bottom-mobile-menu-button bottom-mobile-menu-button_active" href="#">
-
-          <div class="bottom-mobile-menu-button__icon-wrapper">
-            <svg class="bottom-mobile-menu-button__icon" fill="none" width="29" height="25" viewBox="0 0 29 25"
-              xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_1024_344)">
-                <path
-                  d="M23.3239 14.2559V23.9801H18.3081V17.9757V16.9552H17.2877H11.4199H10.3995V17.9757V23.9801H5.38371V14.2559L14.3538 7.23161L23.3239 14.2559Z"
-                  stroke-width="2.04085" class="stroke" />
-                <path class="fill"
-                  d="M0 11.4251L14.3555 0L28.7109 11.4251L27.0404 12.8204L14.3555 2.72485L1.67051 12.8204L0 11.4251Z" />
-              </g>
-              <defs>
-                <clipPath id="clip0_1024_344">
-                  <rect width="29" height="25" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
-          <span class="bottom-mobile-menu-button__text">Главная</span>
-        </a>
-        <button class="bottom-mobile-menu-button" data-open-search-modal>
-          <div class="bottom-mobile-menu-button__icon-wrapper">
-            <svg width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_1024_138)">
-                <g clip-path="url(#clip1_1024_138)">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M8.05049 7.69995H1.125V10.0529H7.88622C7.87877 9.89451 7.875 9.73517 7.875 9.57495C7.875 8.93408 7.93529 8.3073 8.05049 7.69995ZM11.3032 17.1125C10.5284 16.4364 9.85884 15.6428 9.32225 14.7595H1.125V17.1125H11.3032ZM1.125 21.8191H21.125V24.172H1.125V21.8191Z"
-                    class="fill" />
+          <div class="bottom-mobile-menu-button__inner">
+            <div class="bottom-mobile-menu-button__icon-wrapper">
+              <svg class="bottom-mobile-menu-button__icon" fill="none" width="29" height="25" viewBox="0 0 29 25"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1024_344)">
                   <path
-                    d="M24.0259 15.8363L23.6459 16.1334L23.8961 16.5458L28.3111 23.8224L27.3752 24.3891L22.9726 17.1051L22.7231 16.6922L22.2837 16.8913C20.6371 17.6375 18.787 17.8068 17.0324 17.3718L17.0312 17.3715C15.4667 16.9871 14.0512 16.1475 12.9638 14.9587C11.8765 13.7699 11.166 12.2853 10.9224 10.6927C10.6787 9.10017 10.9128 7.47112 11.595 6.01159C12.2772 4.55205 13.3769 3.32759 14.755 2.49304C16.1331 1.6585 17.7277 1.25135 19.3372 1.32308C20.9467 1.39481 22.4988 1.9422 23.7972 2.89603C25.0956 3.84986 26.082 5.16729 26.6317 6.68173C27.1813 8.19616 27.2695 9.83958 26.8852 11.4042L26.8849 11.4053C26.4574 13.1618 25.4501 14.7228 24.0259 15.8363ZM13.7652 14.2256C14.7076 15.2559 15.9344 15.9836 17.2903 16.3167C19.1086 16.7634 21.0299 16.4695 22.6315 15.4996C24.2331 14.5297 25.3838 12.9633 25.8304 11.145C26.1635 9.78908 26.0871 8.36479 25.6107 7.05228C25.1343 5.73977 24.2795 4.59799 23.1542 3.77134C22.0289 2.94469 20.6838 2.47028 19.2889 2.40811C17.894 2.34595 16.512 2.69881 15.3176 3.42209C14.1232 4.14536 13.1702 5.20656 12.579 6.47149C11.9877 7.73642 11.7848 9.14826 11.996 10.5285C12.2072 11.9087 12.8229 13.1953 13.7652 14.2256Z"
-                    class="fill stroke" stroke-width="1.08611" />
+                    d="M23.3239 14.2559V23.9801H18.3081V17.9757V16.9552H17.2877H11.4199H10.3995V17.9757V23.9801H5.38371V14.2559L14.3538 7.23161L23.3239 14.2559Z"
+                    stroke-width="2.04085" class="stroke" />
+                  <path class="fill"
+                    d="M0 11.4251L14.3555 0L28.7109 11.4251L27.0404 12.8204L14.3555 2.72485L1.67051 12.8204L0 11.4251Z" />
                 </g>
-              </g>
-              <defs>
-                <clipPath id="clip0_1024_138">
-                  <rect width="30" height="25" fill="white" />
-                </clipPath>
-                <clipPath id="clip1_1024_138">
-                  <rect width="30" height="25" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
+                <defs>
+                  <clipPath id="clip0_1024_344">
+                    <rect width="29" height="25" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <span class="bottom-mobile-menu-button__text">Главная</span>
           </div>
-          <span class="bottom-mobile-menu-button__text">Поиск</span>
-
-        </button>
+        </a>
         <a class="bottom-mobile-menu-button" href="#">
-          <div class="bottom-mobile-menu-button__icon-wrapper">
-            <span class="bottom-mobile-menu-button__counter">99</span>
-            <svg class="bottom-mobile-menu-button__icon" fill="none" width="27" height="25" viewBox="0 0 27 25"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M3.33776 1.7027H1V1H4.63575L5.15484 2.95886L5.35195 3.7027H6.12147H26.0264V11.8119L9.20178 14.8265L8.1523 15.0145L8.40713 16.0498L8.83956 17.8066L9.02687 18.5676H9.81057H23.3237V19.2703H8.48446L4.30825 2.46158L4.1197 1.7027H3.33776ZM7.72505 22.7378C7.83838 22.662 7.97162 22.6216 8.10791 22.6216C8.29068 22.6216 8.46596 22.6942 8.5952 22.8235C8.72444 22.9527 8.79706 23.128 8.79706 23.3108C8.79706 23.4471 8.75664 23.5804 8.68091 23.6937C8.60518 23.8071 8.49755 23.8954 8.37162 23.9475C8.24571 23.9997 8.10715 24.0133 7.97347 23.9868C7.83979 23.9602 7.717 23.8945 7.62062 23.7981C7.52424 23.7018 7.4586 23.579 7.432 23.4453C7.40541 23.3116 7.41906 23.173 7.47122 23.0471C7.52339 22.9211 7.61172 22.8135 7.72505 22.7378ZM22.5895 22.7378C22.7029 22.662 22.8361 22.6216 22.9724 22.6216C23.1552 22.6216 23.3305 22.6942 23.4597 22.8235C23.5889 22.9527 23.6616 23.128 23.6616 23.3108C23.6616 23.4471 23.6211 23.5804 23.5454 23.6937C23.4697 23.807 23.3621 23.8954 23.2361 23.9475C23.1102 23.9997 22.9717 24.0133 22.838 23.9868C22.7043 23.9602 22.5815 23.8945 22.4851 23.7982C22.3887 23.7018 22.3231 23.579 22.2965 23.4453C22.2699 23.3116 22.2836 23.173 22.3357 23.0471C22.3879 22.9211 22.4762 22.8135 22.5895 22.7378Z"
-                stroke-width="2" class="stroke" />
-            </svg>
+          <div class="bottom-mobile-menu-button__inner">
+            <div class="bottom-mobile-menu-button__icon-wrapper">
+              <span class="bottom-mobile-menu-button__counter">99</span>
+              <svg class="bottom-mobile-menu-button__icon" width="25" height="25" viewBox="0 0 25 25" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.6675 12.5H19.8342V24H23.6675V12.5Z" class="stroke" stroke-width="2"
+                  stroke-linecap="round" />
+                <path d="M5.77865 6.75H1.94531V24H5.77865V6.75Z" class="stroke" stroke-width="2"
+                  stroke-linecap="round" />
+                <path d="M14.7231 1H10.8898V24H14.7231V1Z" class="stroke" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <span class="bottom-mobile-menu-button__text">Сравнить</span>
           </div>
-          <span class="bottom-mobile-menu-button__text">Корзина</span>
+        </a>
+        <a class="bottom-mobile-menu-button" href="#">
+          <div class="bottom-mobile-menu-button__inner">
+            <div class="bottom-mobile-menu-button__icon-wrapper">
+              <span class="bottom-mobile-menu-button__counter">99</span>
+              <svg class="bottom-mobile-menu-button__icon" fill="none" width="27" height="25" viewBox="0 0 27 25"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.33776 1.7027H1V1H4.63575L5.15484 2.95886L5.35195 3.7027H6.12147H26.0264V11.8119L9.20178 14.8265L8.1523 15.0145L8.40713 16.0498L8.83956 17.8066L9.02687 18.5676H9.81057H23.3237V19.2703H8.48446L4.30825 2.46158L4.1197 1.7027H3.33776ZM7.72505 22.7378C7.83838 22.662 7.97162 22.6216 8.10791 22.6216C8.29068 22.6216 8.46596 22.6942 8.5952 22.8235C8.72444 22.9527 8.79706 23.128 8.79706 23.3108C8.79706 23.4471 8.75664 23.5804 8.68091 23.6937C8.60518 23.8071 8.49755 23.8954 8.37162 23.9475C8.24571 23.9997 8.10715 24.0133 7.97347 23.9868C7.83979 23.9602 7.717 23.8945 7.62062 23.7981C7.52424 23.7018 7.4586 23.579 7.432 23.4453C7.40541 23.3116 7.41906 23.173 7.47122 23.0471C7.52339 22.9211 7.61172 22.8135 7.72505 22.7378ZM22.5895 22.7378C22.7029 22.662 22.8361 22.6216 22.9724 22.6216C23.1552 22.6216 23.3305 22.6942 23.4597 22.8235C23.5889 22.9527 23.6616 23.128 23.6616 23.3108C23.6616 23.4471 23.6211 23.5804 23.5454 23.6937C23.4697 23.807 23.3621 23.8954 23.2361 23.9475C23.1102 23.9997 22.9717 24.0133 22.838 23.9868C22.7043 23.9602 22.5815 23.8945 22.4851 23.7982C22.3887 23.7018 22.3231 23.579 22.2965 23.4453C22.2699 23.3116 22.2836 23.173 22.3357 23.0471C22.3879 22.9211 22.4762 22.8135 22.5895 22.7378Z"
+                  stroke-width="2" class="stroke" />
+              </svg>
+            </div>
+            <span class="bottom-mobile-menu-button__text">Корзина</span>
+          </div>
         </a>
         <button data-open-bottom-dropdown class="bottom-mobile-menu-button">
-          <div class="bottom-mobile-menu-button__icon-wrapper">
-            <svg class="bottom-mobile-menu-button__icon" fill="none" width="24" height="24" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <rect x="1" y="1" width="9" height="9" class="stroke" stroke-width="2" />
-              <rect x="14" y="1" width="9" height="9" class="stroke" stroke-width="2" />
-              <rect x="14" y="14" width="9" height="9" class="stroke" stroke-width="2" />
-              <rect x="1" y="14" width="9" height="9" class="stroke" stroke-width="2" />
-            </svg>
+          <div class="bottom-mobile-menu-button__inner">
+            <div class="bottom-mobile-menu-button__icon-wrapper">
+              <svg class="bottom-mobile-menu-button__icon" fill="none" width="24" height="24" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="9" height="9" class="stroke" stroke-width="2" />
+                <rect x="14" y="1" width="9" height="9" class="stroke" stroke-width="2" />
+                <rect x="14" y="14" width="9" height="9" class="stroke" stroke-width="2" />
+                <rect x="1" y="14" width="9" height="9" class="stroke" stroke-width="2" />
+              </svg>
+            </div>
+            <span class="bottom-mobile-menu-button__text">Остальное</span>
           </div>
-          <span class="bottom-mobile-menu-button__text">Остальное</span>
         </button>
       </div>
     </div>
@@ -509,19 +635,6 @@
           <button data-close-menu class="cross-button"></button>
         </div>
       </div>
-      <div class="search-input-group mb-10">
-        <div class="search-input-group__row">
-          <input class="search-input-group__input" placeholder="Поиск" type="text">
-          <button class="search-input-group__button"><svg width="17" height="17" viewBox="0 0 17 17" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M1.26564 6.42777C1.26564 9.29027 3.5638 11.5925 6.37631 11.5925C9.18882 11.5925 11.487 9.29027 11.487 6.42777C11.487 3.56527 9.18882 1.26301 6.37631 1.26301C3.5638 1.26301 1.26564 3.56527 1.26564 6.42777Z"
-                stroke-width="2.52602" />
-              <line y1="-1.26301" x2="7.5559" y2="-1.26301"
-                transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.3359 10.001)" stroke-width="2.52602" />
-            </svg></button>
-        </div>
-      </div>
     </div>
   </nav>
 
@@ -531,46 +644,64 @@
         <a href="#" class="menu-list__link">Каталог</a>
         <ul class="menu-list__inner-list">
           <li class="menu-list__item">
-            <a class="menu-list__link" href="#">Строительные материалы</a>
+            <a class="menu-list__link" href="#">Металлопрокат</a>
           </li>
           <li class="menu-list__item">
-            <a class="menu-list__link" href="#">Строительные материалы</a>
+            <a class="menu-list__link" href="#">Сухие смеси</a>
           </li>
           <li class="menu-list__item">
-            <a class="menu-list__link" href="#">Строительные материалы</a>
+            <a class="menu-list__link" href="#">Теплоизоляционные материалы</a>
           </li>
           <li class="menu-list__item">
             <a href="#" class="menu-list__link">Строительные материалы
             </a>
             <ul class="menu-list__inner-list">
               <li class="menu-list__item">
-                <a class="menu-list__link" href="#">Строительные материалы</a>
+                <a class="menu-list__link" href="#">Затирка для швов (плитки), гидроизоляционная смесь</a>
               </li>
               <li class="menu-list__item">
-                <a class="menu-list__link" href="#">Строительные материалы</a>
+                <a class="menu-list__link" href="#">Блоки для строительства</a>
               </li>
               <li class="menu-list__item">
-                <a class="menu-list__link" href="#">Строительные материалы</a>
+                <a class="menu-list__link" href="#">Затирка для швов (плитки), гидроизоляционная смесь</a>
               </li>
               <li class="menu-list__item">
-                <a href="#" class="menu-list__link">Строительные материалы
+                <a href="#" class="menu-list__link">Сетка фасадная, стеклотканевая, стеклохолст
                 </a>
                 <ul class="menu-list__inner-list">
                   <li class="menu-list__item">
-                    <a class="menu-list__link" href="#">Строительные материалы</a>
+                    <a class="menu-list__link" href="#">Затирка для швов (плитки), гидроизоляционная смесь</a>
                   </li>
                   <li class="menu-list__item">
-                    <a class="menu-list__link" href="#">Строительные материалы</a>
+                    <a class="menu-list__link" href="#">Блоки для строительства</a>
                   </li>
                   <li class="menu-list__item">
-                    <a class="menu-list__link" href="#">Строительные материалы</a>
-                  </li>
-                  <li class="menu-list__item">
-                    <a class="menu-list__link" href="#">Строительные материалы</a>
+                    <a class="menu-list__link" href="#">Затирка для швов (плитки), гидроизоляционная смесь</a>
                   </li>
                 </ul>
               </li>
             </ul>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Листовые материалы</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Инженерная сантехника</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Гидроизоляционные материалы</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Вентиляция</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Водоснабжение</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Водосточные и дренажные системы</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Двери</a>
           </li>
         </ul>
       </li>
@@ -585,16 +716,6 @@
       </li>
 
       <div class="mobile-side-menu-footer">
-        <div class="g-row mobile-side-menu-footer__row mb-20">
-          <a class="g-link mobile-side-menu-footer__link" href="#">
-            <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M6.24701 0C2.80237 0 0 2.80246 0 6.2468C0 9.56227 5.66802 17.3084 5.90936 17.6364L6.13459 17.943C6.16094 17.9789 6.20288 18 6.24701 18C6.29182 18 6.33349 17.9789 6.36011 17.943L6.5852 17.6364C6.82669 17.3084 12.4945 9.56227 12.4945 6.2468C12.4945 2.80246 9.69175 0 6.24701 0ZM6.24701 4.00921C7.48124 4.00921 8.48486 5.01276 8.48486 6.2468C8.48486 7.4802 7.48119 8.48439 6.24701 8.48439C5.01351 8.48439 4.00916 7.4802 4.00916 6.2468C4.00916 5.01276 5.01346 4.00921 6.24701 4.00921Z"
-                fill="#2363D1" />
-            </svg>
-            Самара
-          </a>
-        </div>
         <div class="phone-block mb-20">
           <a class="g-link phone-block__primary-link" href="#">+7 (999) 999-00-00</a>
           <a class="g-link phone-block__secondary-link" href="#">Заказать звонок</a>

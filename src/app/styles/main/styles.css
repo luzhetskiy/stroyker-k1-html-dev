@@ -510,6 +510,12 @@ p:last-child {
   background-color: var(--header-top-bg-color, #fff);
 }
 
+.menu-item__link {
+  display: flex;
+  align-self: center;
+  gap: 15px;
+}
+
 .top-header .btn-border {
   margin-left: 15px;
 }
@@ -1526,11 +1532,11 @@ p:last-child {
 }
 
 .mobile-phone {
-  display: block;
   margin-bottom: 30px;
-  padding-left: 40px;
   padding-top: 20px;
   position: relative;
+  display: flex !important;
+  justify-content: center;
 }
 
 .mobile-phone .icon {

@@ -55,6 +55,10 @@ $(document).ready(function () {
     $(".search-modal-window").addClass("d-block");
   });
 
+  $("[data-clear-input]").on("click", () => {
+    $("[data-input]").val("");
+  });
+
   $(".like-btn").on("click", function (event) {
     event.preventDefault();
     $(this).toggleClass("active");
