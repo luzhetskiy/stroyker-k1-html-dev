@@ -1,0 +1,333 @@
+:root {
+  --grey-color: #333333;
+  --white-color: #ffffff;
+}
+
+:root {
+  /* Фон шапки */
+  --header__bg: #333;
+  --header-top-bg-color: #fff;
+  --header-bottom__bg: #333;
+  --header-bg-color: #dadada;
+
+  /* Кнопка "Каталог товаров" */
+  --catalog-btn__bg: #fff;
+  --catalog-menu-button_bg: #fff;
+  --catalog-btn__borderColor: #333333;
+  --catalog-btn__color: #333333;
+  --catalog-btn__burgerColor: #333333;
+  --header-buttons-font-color: #333333;
+  --catalog-btn__bg--hover: #2363d1;
+  --catalog-btn__borderColor--hover: #2363d1;
+  --catalog-btn__color--hover: #fff;
+  --catalog-btn__burgerColor--hover: #fff;
+
+  /* Поле поиска */
+  --search-box__bg: #fff;
+  --search-field-bg-color: #fff;
+  --search-box__borderColor: #a7a7a7;
+  --search-field-border-color: #a7a7a7;
+  --search-box__color: #333;
+  --search-field-font-color: #333;
+  --search-box__placeholderColor: #333333;
+  --search-field-placeholder-font-color: #a7a7a7;
+
+  /* кнопка в поле поиск  */
+  --search-box-submit__bg: #dadada;
+  --search-field-btn-color: #a7a7a7;
+  --search-box-submit__borderColor: #a7a7a7;
+  --search-box-submit__bg--hover: #2363d1;
+  --search-box-submit__borderColor--hover: #2363d1;
+
+  /* Выпадающие результаты поиска */
+  --search-box-item__bg: #fff;
+  --search-box-item__borderBottomColor: #000;
+  --search-box-item__color: #000;
+  --search-box-item__priceColor: #1c52ac;
+
+  /* после ховера - результат товара в поле поиск  */
+  --search-box-item__bg--hover: #000;
+
+  /* кнопка "все каталоги" в результате товара из поле поиск  */
+  --search-box-all-item__bg: #333333;
+  --search-box-all-item__color: #fff;
+
+  /* Верхнее меню */
+  --nav-item__color: #333333;
+  --header-top-menu-font-color: #333333;
+  --nav-item-active__color--active--hover: #2363d1;
+  --header-top-menu-font-hover-color: #2363d1;
+
+  /* Счетчик корзины и сравнения */
+  --option-item__color: #333333;
+  --option-item__bg: #2363d1;
+  --main-elements-color: #2363d1;
+  --option-item__color--active--hover: #2363d1;
+  --main-elements-hover-color: #1c52ac;
+
+  /* Вход в ЛК */
+  --accounts-item__color: #333333;
+  --accounts-item__color--hover: #2363d1;
+
+  /* Телефон в шапке */
+  --contact-box-text__color: #333333;
+  --color: #333333;
+  --contact-box-text-circle__color: #2363d1;
+  --contact-box-tel__color: #333333;
+  --header-top-phone-font-color: #333;
+  --contact-box-text__color--hover: #2363d1;
+  --color-hover: #2363d1;
+  --contact-box-tel__color--hover: #2363d1;
+
+  /* Заказать звонок */
+  --contact-box-call-link__color: #333333;
+  --color-button-callme-text: #333333;
+  --contact-box-call-link__bg: #fff;
+  --color-button-callme-background: #fff;
+  --contact-box-call-link__borderColor: #333333;
+  --color-button-callme-border: #333333;
+  --contact-box-call-link__bg--hover: #2363d1;
+  --color-button-callme-background-hover: #2363d1;
+  --contact-box-call-link__color--hover: #fff;
+  --color-button-callme-text-hover: #fff;
+  --contact-box-call-link__borderColor--hover: #2363d1;
+  --color-button-callme-border-hover: #2363d1;
+
+  /* кнопка callme (legacy) */
+  --callme-button-color: #ffffff;
+  --callme-button-hover-color: #ffffff;
+  --callme-button-fill-color: #ffffff;
+  --callme-button-fill-hover-color: #ffffff;
+
+  /* Выпадающее меню каталога */
+  --menu-box_catalog-box__bg: #434343;
+  --menu-box_catalog-box-ul-a__color: #fff;
+  --menu-box_catalog-box-ul-a__color--hover: #2363d1;
+  --category-menu-font-highlight-color: #2363d1;
+  --menu-box_catalog-box-ul-a__underlineColor--hover: #2363d1;
+  --category-menu-underline-highlight-color: #2363d1;
+
+  /* Кнопка меню для шапки v3 */
+  --menu-btn__bg: #dadada;
+  --menu-btn__borderColor: #333333;
+  --menu-btn__color: #fff;
+  --menu-btn__bg--hover: #2363d1;
+  --menu-btn__borderColor--hover: #2363d1;
+  --menu-btn__color--hover: #fff;
+
+  /* Пункты меню для шапок версий fat-v2 */
+  --fat-v2-nav-ul-li-a__color: #fff;
+  --fat-v2-nav-ul-li-a__bg--hover: #222222;
+  --fat-v2-nav-ul-li-a__color--hover: #fff;
+  --fat-v2-nav-ul-li-a__color--active: #2363d1;
+  --fat-v2-nav-ul-li-ul-li__bg: #222222;
+  --fat-v2-nav-ul-li-ul-li-a__color: #fff;
+  --fat-v2-nav-ul-li-ul-li-a__color--hover: #2363d1;
+  --fat-v2-nav-ul-li-ul-li__bg--hover: #333333;
+}
+
+/* "Шапки в адаптиве */
+:root {
+  /* Фон */
+  --mob-header__bg: #fff;
+  --mob-header_bottom__bg: #333;
+  --mob-header_bottom__borderColor: #333;
+
+  /* Поле поиска */
+  --mob-search-box__bg: #fff;
+  --mob-search-box__borderColor: #333333;
+  --mob-search-box__color: #000;
+  --mob-search-box__placeholderColor: #333333;
+  --mob-search-box-submit__bg: #dadada;
+  --mob-search-box-submit__borderColor: #333333;
+  --mob-search-box-submit__bg--hover: #2363d1;
+  --mob-search-box-submit__borderColor--hover: #2363d1;
+
+  /* Результаты поиска */
+  --mob-search-box-item__bg: #fff;
+  --mob-search-box-item__borderBottomColor: rgba(0, 0, 0, 0.13);
+  --mob-search-box-item__color: #000;
+  --mob-search-box-item__priceColor: #1c52ac;
+  --mob-search-box-item__bg--hover: #000;
+
+  /* Кнопка "каталог товаров" */
+  --mob-catalog-btn__bg: #fff;
+  --mob-catalog-btn__borderColor: #333333;
+  --mob-catalog-btn__color: #333333;
+  --catalog-menu-font-color: #333333;
+  --mob-catalog-btn__burgerColor: #333333;
+  --mob-catalog-btn__bg--hover: #2363d1;
+  --mob-catalog-btn__borderColor--hover: #2363d1;
+  --mob-catalog-btn__color--hover: #fff;
+  --mob-catalog-btn__burgerColor--hover: #fff;
+
+  /* Бургер мобильного меню */
+  --mob-burger-btn__color: #2363d1;
+  --header-top-icon-color: #2363d1;
+
+  /* Телефоны */
+  --mob-contact-box-phone__color: #333333;
+  --mob-contact-box-phone__bg: transparent;
+  --mob-contact-box-phone__borderColor: #2363d1;
+  --mob-contact-box-phone__color--hover: #fff;
+  --mob-contact-box-phone__bg--hover: #2363d1;
+  --mob-contact-box-phone__borderColor--hover: #2363d1;
+
+  /* Заказать звонок */
+  --mob-contact-box-order-call__color: #333333;
+  --mob-contact-box-order-call__bg: transparent;
+  --mob-contact-box-order-call__borderColor: #2363d1;
+  --mob-contact-box-order-call__color--hover: #fff;
+  --mob-contact-box-order-call__bg--hover: #2363d1;
+  --mob-contact-box-order-call__borderColor--hover: #2363d1;
+
+  /* Корзина */
+  --mob-cart-number__color: #333333;
+  --mob-cart-number__bg: #fff;
+  --mob-cart-number__borderColor: #2363d1;
+  --mob-cart-number__color--hover: #fff;
+  --mob-cart-number__bg--hover: #2363d1;
+  --mob-cart-number__borderColor--hover: #2363d1;
+
+  /* Элементы выпадающего меню */
+  --mm-navbar-title__color: #fff;
+  --mm-navbar__bg: #000;
+  --mm-navbar-button-icons__color: #fff;
+  --mm-panels-mobile-menu__bg: #e7e7e7;
+  --mm-listitem__bg: #fff;
+  --mm-listitem__color: #000;
+  --mm-listitem-button-icons__color: #000;
+  --mm-other-options__color: #000;
+  --mm-login__color: #000;
+  --register-arrow__color: #000;
+}
+
+/* Переменные темы */
+:root {
+  /* высота предварительного просмотра категории */
+  --category-preview-height: 200px;
+
+  /* кастомный шрифт */
+  --custom-font-family: Golos;
+
+  /* выпадающие меню */
+  --color-main-dropdown-menu-bg: #333333;
+  --color-main-dropdown-menu-text: #ffffff;
+
+  /* основная кнопка */
+  --color-button-primary-text: #ffffff;
+  --color-button-primary-background: #2363d1;
+  --color-button-primary-border: #2363d1;
+  --color-button-primary-text-hover: #ffffff;
+  --color-button-primary-background-hover: #1c52ac;
+  --color-button-primary-border-hover: #1c52ac;
+
+  /* вторичная кнопка */
+  --color-button-secondary-text: #2363d1;
+  --color-button-secondary-background: #ffffff;
+  --color-button-secondary-border: #2363d1;
+  --color-button-secondary-text-hover: #ffffff;
+  --color-button-secondary-background-hover: #2363d1;
+  --color-button-secondary-border-hover: #2363d1;
+
+  /* не активная кнопка */
+  --color-button-muted-text: #333;
+  --color-button-muted-background: #b6b6b6;
+  --color-button-muted-border: #b6b6b6;
+  --color-button-muted-text-hover: #ffffff;
+  --color-button-muted-background-hover: #333;
+  --color-button-muted-border-hover: #333;
+
+  /* кнопка корзины */
+  --color-button-cart-text: #ffffff;
+  --color-button-cart-background: #2363d1;
+  --color-button-cart-border: #2363d1;
+  --color-button-cart-text-hover: #ffffff;
+  --color-button-cart-background-hover: #1c52ac;
+  --color-button-cart-border-hover: #1c52ac;
+
+  /* без цветные кнопки */
+  --colorless-buttons-border-color: #ffffff;
+  --colorless-buttons-font-color: #333;
+  --colorless-buttons-font-color-hover: #2363d1;
+  --colorless-buttons-hover-bg: #ffffff;
+
+  /* кнопка счета */
+  --invoice-button-color: #2363d1;
+
+  /* товары */
+  --hit-tag-bg-color: #3ec28f;
+  --sale-tag-bg-color: #ff9500;
+  --new-tag-bg-color: #30c2ff;
+  --discount-tag-bg-color: #c43228;
+  --hit-tag-font-color: #ffffff;
+  --sale-tag-font-color: #ffffff;
+  --discount-tag-font-color: #ffffff;
+  --new-tag-font-color: #ffffff;
+  --product-list-header-link-color: #333;
+  --product-list-header-link-hover-color: #2363d1;
+  --product-tab-link-color: #333;
+  --product-tab-link-hover-color: #2363d1;
+  --color-card-border: #d9d9de;
+  --product-preview-border-hover-color: #2363d1;
+  --product-preview-bg-color: #ffffff;
+  --color-product-online-price: #333;
+  --checkout-button-font-color: #333;
+  --invoice-button-font-color: #2363d1;
+
+  /* Статьи */
+  --article-label-font-color: #333;
+  --article-label-bg-color: #ffffff;
+
+  /* новости и акции */
+  --news-label-bg-color: #2363d1;
+  --news-label-font-color: #ffffff;
+  --action-label-bg-color: #2363d1;
+  --action-label-font-color: #ffffff;
+
+  /* меню каталога */
+  --catalog-menu-bg-color: #ffffff;
+  --catalog-menu-hover-bg-color: #ffffff;
+  --catalog-menu-border-color: #d9d9de;
+  --catalog-menu-font-hover-color: #333;
+  --catalog-menu-burger-color: #2363d1;
+  --catalog-menu-link-hover: #2363d1;
+  --catalog-menu-arrow-color: #2363d1;
+
+  /* форма обратной связи */
+  --feedback-form-section-bg-color: #ffffff;
+  --feedback-form-bg: #ffffff;
+  --feedback-form-title: #333;
+  --feedback-form-text: #333;
+  --feedback-form-border: #2363d1;
+  --feedback-form-input-border: #2363d1;
+
+  /* хлебные крошки */
+  --breadcrumb-item-color: #333;
+  --breadcrumb-item-hover-color: #2363d1;
+
+  /* статичные страницы */
+  --staticpage-box-fill-color: #ffffff;
+  --staticpage-box-border-color: #ffffff;
+
+  /* личный кабинет */
+  --color-lk-accent-items: #2363d1;
+  --color-lk-items-bg: #ffffff;
+  --color-lk-items-border: #2363d1;
+  --color-lk-items-hover-bg: #dadada;
+  --color-fixedbtn: #ffffff;
+  --color-bg-fixedbtn: #2363d1;
+
+  /* подвал */
+  --footer-bg-color: #333;
+  --color-footer-links: #d6d6d6;
+  --color-footer-links-hover: #2363d1;
+  --color-footer-title: #ffffff;
+
+  /* разное */
+  --frontpage-first-screen-bg-color: #ffffff;
+  --preview-bg-color: #f5f5f5;
+  --preview-font-color: #333;
+  --preview-bg-hover-color: #ffffff;
+  --inner-page-bg: #ffffff;
+}
