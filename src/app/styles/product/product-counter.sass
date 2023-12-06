@@ -1,0 +1,90 @@
+.product-counter
+  background-color: #fff
+  border: 1px solid #A7A7AB
+  display: flex
+  justify-content: space-between
+  min-width: 80px
+  width: 80px
+  height: 40px
+  border-radius: 2px
+  position: relative
+  transition: .3s
+
+  &:hover
+    background-color: #4FA22E33
+    border: 1px solid #4FA22E
+    .product-counter
+      &__order-up:hover, &__order-down:hover
+        background-color: #4FA22E33
+
+  &_active
+    background-color: #4FA22E33
+    border: 1px solid #4FA22E
+    .product-counter
+      &__order-up:hover, &__order-down:hover
+        background-color: #4FA22E33
+
+  &_disabled
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+    &:hover
+      background-color: #fff
+      border: 1px solid #A7A7AB
+      .product-counter
+        &__order-up:hover, &__order-down:hover
+          background-color: #fff
+    .product-counter
+      &__input
+        color: #A7A7AB
+      &__order-up::after, &__order-down::before
+        color: #A7A7AB
+
+  &__input
+    background: transparent
+    border: none
+    width: 100%
+    text-align: center
+    -webkit-appearance: none
+    appearance: none
+    color: #333
+    &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+      appearance: none
+      -moz-appearance: textfield
+
+    &:focus, &:hover
+      appearance: none
+      -moz-appearance: textfield
+
+  &__order-down, &__order-up
+    height: 100%
+    width: 100%
+    display: block
+    cursor: pointer
+    transition: .3s
+    background-color: #ffffff00
+
+  &__order-up
+    display: flex
+    align-items: center
+    justify-content: center
+    &::after
+      content: '+'
+      font-size: 12px
+      font-weight: 400
+      line-height: 18px
+      color: #333
+
+  &__order-down
+    display: flex
+    align-items: center
+    justify-content: center
+    &::before
+      content: '-'
+      font-size: 12px
+      font-weight: 400
+      line-height: 18px
+      color: #333

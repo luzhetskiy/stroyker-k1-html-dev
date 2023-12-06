@@ -3,20 +3,30 @@
   padding: 15px 0
   border-bottom: 1px solid #E5E5EA
   position: relative
+  justify-content: space-between
   &:last-child
     border-bottom: none
   &__info
-    width: 45%
+    max-width: 265px
+    min-width: 265px
     display: flex
     align-items: center
+    justify-content: space-between
   &__title
-    width: 55%
+    width: auto
+    padding-right: 30px
   &__format
-    width: 25%
+    min-width: 48px
+    max-width: 48px
   &__size
-    width: 30%
+    overflow: hidden
+    text-overflow: ellipsis
+    width: 100%
+    padding-left: 10px
+    padding-right: 10px
   &__button
-    width: 45%
+    min-width: max-content
+    max-width: max-content
 
 @media (max-width: 767px)
   .product-file
@@ -27,16 +37,19 @@
   .product-file
     flex-direction: row-reverse
     padding-bottom: 25px
+    gap: 20px
     &__title
       width: 100%
+      padding-right: 0
     &__size
       position: absolute
       bottom: 5px
-      left: 75px
+      left: 70px
+      padding: 0
       color: #BDBDBD
       width: auto
     &__format
       min-width: 45px
     &__info
-      min-width: 75px
+      min-width: 48px
       width: auto
