@@ -512,7 +512,7 @@ p:last-child {
 
 .menu-item__link {
   display: flex;
-  align-self: center;
+  align-items: center;
   gap: 15px;
 }
 
@@ -1532,11 +1532,18 @@ p:last-child {
 }
 
 .mobile-phone {
-  margin-bottom: 30px;
   padding-top: 20px;
   position: relative;
   display: flex !important;
   justify-content: center;
+}
+
+.mobile-ul li .submenu {
+  background: none;
+}
+
+.mobile-ul li .submenu li a:hover {
+  background: #e5e5e5;
 }
 
 .mobile-phone .icon {

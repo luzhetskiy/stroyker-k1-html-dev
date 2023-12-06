@@ -1,6 +1,6 @@
 .bottom-mobile-menu-list
   position: absolute
-  background-color: #fff
+  background-color: var(--bottom-mobile-menu-list-background, var(--neutral-lightest))
   bottom: 0
   left: 0
   width: 100%
@@ -16,34 +16,35 @@
     display: flex
     gap: 8px
     flex-wrap: wrap
+    justify-content: flex-end
     .bottom-mobile-menu-list
       &__link
         display: inline-flex
-        background-color: #E5EFFF
+        background-color: var(--bottom-mobile-menu-list-plates-link-text-color, var(--accent-light-color))
         height: 40px
         text-align: center
         border: none
         border-radius: 6px
         transition: .3s
         &:hover
-          background-color: #2363D1
-          color: #FFFFFF
+          background-color: var(--bottom-mobile-menu-list-plates-link-background-color, var(--accent-color))
+          color: var(--bottom-mobile-menu-list-plates-link-text-color, var(--neutral-lightest))
 
   &_active
     transform: translateY(0%)
 
   &__icon-arrow-fill
-    fill: #CCCCCC
+    fill: var(--bottom-mobile-menu-list-link-icon-color, var(--neutral-light))
 
   &__link
     padding: 10px 20px
     display: flex
     justify-content: space-between
     align-items: center
-    color: #1C52AC
-    border: 1px solid #E9E9E9
+    color: var(--bottom-mobile-menu-list-link-text-color, var(--accent-dark-color))
+    border-bottom: 1px solid var(--bottom-mobile-menu-list-link-border-color, var(--neutral-lighter))
     transition: .3s
-    background-color: #fff
+    background-color: var(--bottom-mobile-menu-list-link-background, var(--neutral-lightest))
     &:hover
-      background-color: #E5EFFF
-      color: #2363D1
+      background-color: var(--bottom-mobile-menu-list-link-background-hover, var(--accent-light-color))
+      color: var(--bottom-mobile-menu-list-link-text-color, var(--accent-color))
