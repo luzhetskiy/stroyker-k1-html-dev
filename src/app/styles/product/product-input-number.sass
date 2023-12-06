@@ -1,0 +1,53 @@
+.product-input-number
+  width: 100%
+  max-width: 80px
+  min-width: 80px
+  height: 40px
+  display: flex
+  border: 1px solid var(--color-button-secondary-border, #B7CBE5)
+  border-radius: 2px
+  justify-content: center
+  overflow: hidden
+  padding: 0
+  margin-right: 0
+
+  input[type="number"]
+    width: 40px
+    -webkit-appearance: none
+    text-align: center
+    border: none
+    height: 100%
+    color: var(--color-button-secondary-text)
+    font-size: 12px
+    font-weight: 400
+    line-height: 18px
+    padding-bottom: 2px
+    color: #1C52AC
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button
+      -webkit-appearance: none
+      margin: 0
+
+  .order-down, .order-up
+    width: 23px
+    border: none
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 0
+    &:hover
+      background: var(--color-button-secondary-background-hover, #e7eef6)
+
+  .order-up:after, .order-up:before, .order-down:before
+    top: auto
+    left: auto
+
+  .order-up:before
+    width: 1px
+    height: 7px
+
+  .order-up:after, .order-down:before
+    width: 7px
+    height: 1px

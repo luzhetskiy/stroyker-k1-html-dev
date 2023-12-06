@@ -1,0 +1,84 @@
+.product-content
+  background-color: #fff
+  border: 1px solid #E5E5EA
+  &_inner
+    padding: 40px 80px
+  &_frameless
+    border: none
+
+.product-content-main
+  padding: 30px 80px
+
+.product-content-inner
+  padding: 0 60px
+
+.product-content-inner-dark
+  background-color: #F5F5F5
+  padding: 20px 30px
+
+.product-content-slideshow
+  &_inner
+    padding: 0 20px 30px 20px
+  #sync1
+    .owl-nav
+      max-width: 360px
+      margin: 0 auto
+      position: relative
+
+.product-articul
+  margin: 0
+  color: #BDBDBD
+  font-size: 12px
+  display: inline
+
+.product-title
+  font-family: Golos
+  font-size: 26px
+  font-weight: 700
+  line-height: 34px
+  color: #000
+
+.product-text
+  font-family: Golos
+  font-size: 14px
+  font-weight: 400
+  line-height: 20px
+  color: #333333
+
+@media (max-width: 1279px)
+  .product-content-inner
+    padding: 0 25px
+
+@media (max-width: 1023px)
+  .product-content
+    &_inner
+      padding: 20px 0
+  .product-content-main
+    padding: 20px
+  .product-content-inner
+    padding: 20px 0
+
+@media ( max-width: 767px )
+  .product-content
+    &_inner
+      padding: 40px 80px
+
+  .product-content-slideshow
+    padding-bottom: 40px
+    #sync1
+      .owl-nav
+        top: 18px
+        z-index: 1
+      .owl-dots
+        top: 18px
+
+@media (max-width: 575px)
+  .product-content-main
+    padding: 30px 0
+  .product-content
+    border: none
+    &_inner
+      padding: 20px 0
+
+  .product-content-inner-dark
+    margin: 0 -16px

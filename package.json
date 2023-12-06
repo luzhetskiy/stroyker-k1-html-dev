@@ -3,7 +3,6 @@
 	"version": "0.1.0",
 	"description": "k1 gulp builder",
 	"author": "Nikita Shkutyak",
-
 	"browserslist": [
 		"last 3 versions"
 	],
@@ -32,8 +31,16 @@
 		"gulp-clean": "^0.4.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-postcss": "^9.0.1",
+		"gulp-preprocess": "^4.0.2",
 		"gulp-sass": "^5.1.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-terser": "^2.1.0"
+	},
+	"dependencies": {
+		"@rollup/plugin-commonjs": "^25.0.7",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"gulp-include": "^2.4.1",
+		"gulp-js-import": "^1.0.6",
+		"gulp-rollup": "^2.17.0"
 	}
 }

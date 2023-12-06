@@ -1,0 +1,42 @@
+.product-file
+  display: flex
+  padding: 15px 0
+  border-bottom: 1px solid #E5E5EA
+  position: relative
+  &:last-child
+    border-bottom: none
+  &__info
+    width: 45%
+    display: flex
+    align-items: center
+  &__title
+    width: 55%
+  &__format
+    width: 25%
+  &__size
+    width: 30%
+  &__button
+    width: 45%
+
+@media (max-width: 767px)
+  .product-file
+    grid-template-columns: repeat(1, 1fr)
+    grid-template-rows: repeat(2, auto)
+
+@media (max-width: 575px)
+  .product-file
+    flex-direction: row-reverse
+    padding-bottom: 25px
+    &__title
+      width: 100%
+    &__size
+      position: absolute
+      bottom: 5px
+      left: 75px
+      color: #BDBDBD
+      width: auto
+    &__format
+      min-width: 45px
+    &__info
+      min-width: 75px
+      width: auto

@@ -1,1 +1,0 @@
-"use strict";$(document).ready((function(){$(".reveal").each((function(){var e=$(this),t=e.attr("data-reveal-delay");setTimeout((function(){e.addClass("item-revealed")}),t)}))}));

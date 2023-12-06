@@ -9,6 +9,7 @@ const autoprefixer = require("autoprefixer");
 const cssNano = require("cssnano");
 const babel = require("gulp-babel");
 const clean = require("gulp-clean");
+const preprocess = require("gulp-preprocess");
 
 const sass = gulpSass(dartSass);
 const mode = process.env.NODE_ENV === "production" ? "production" : "development";
@@ -30,10 +31,18 @@ const sync = () => {
   });
 };
 
+const html = () => {
+  return gulp
+  .src(["src/pages/**/*.html"])
+  .pipe(preprocess({ context: { NODE_ENV: mode } }))
+  .pipe(gulp.dest("./public/"));
+};
+
 const scripts = () => {
   return gulp
-  .src(["src/scripts/*.js"])
+  .src(["src/app/scripts/*.js"])
   .pipe(sourcemaps.init())
+  .pipe(preprocess({ context: { NODE_ENV: mode } }))
   .pipe(babel(babelConfig))
   .pipe(terser())
   .pipe(sourcemaps.write())
@@ -43,7 +52,8 @@ const scripts = () => {
 
 const scriptsBuild = () => {
   return gulp
-  .src(["src/scripts/*.js"])
+  .src(["src/app/scripts/*.js"])
+  .pipe(preprocess({ context: { NODE_ENV: mode } }))
   .pipe(babel(babelConfig))
   .pipe(terser())
   .pipe(gulp.dest("build/js"))
@@ -52,7 +62,7 @@ const scriptsBuild = () => {
 
 const styles = () => {
   return gulp
-  .src([`src/styles/*.sass`])
+  .src([`src/app/styles/*.sass`])
   .pipe(sourcemaps.init())
   .pipe(sass({ "include css": true }))
   .pipe(gulpPostCss(postCssPlugins))
@@ -63,7 +73,7 @@ const styles = () => {
 
 const stylesBuild = () => {
   return gulp
-  .src([`src/styles/*.sass`])
+  .src([`src/app/styles/*.sass`])
   .pipe(sass({ "include css": true }))
   .pipe(gulpPostCss(postCssPlugins))
   .pipe(gulp.dest("build/css"))
@@ -79,13 +89,14 @@ const createBuild = () => {
 };
 
 const startWatch = () => {
-  gulp.watch(`src/styles/**/*`, { usePolling: true }, styles);
-  gulp.watch(["src/scripts/**/*.js"], { usePolling: true }, scripts);
+  gulp.watch(`src/**/*.sass`, { usePolling: true }, styles);
+  gulp.watch(["src/**/*.js"], { usePolling: true }, scripts);
+  gulp.watch(`src/**/*.html`, { usePolling: true }, html);
   gulp.watch(`public/**/*`, { usePolling: true }).on("change", browserSync.reload);
 };
 
 exports.styles = styles;
 exports.scripts = scripts;
 
-exports.default = gulp.series(scripts, styles, gulp.parallel(sync, startWatch));
+exports.default = gulp.series(scripts, html, styles, gulp.parallel(sync, startWatch));
 exports.build = gulp.series(cleanBuild, createBuild, scriptsBuild, stylesBuild);
