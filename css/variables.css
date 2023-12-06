@@ -1,209 +1,247 @@
+/* Кастомная цветовая схема */
 :root {
-  --grey-color: #333333;
-  --white-color: #ffffff;
+  --custom-accent-color: #2363d1;
+  --custom-accent-dark-color: #1c52ac;
+  --custom-accent-light-color: #b7cbe5;
+
+  --custom-neutral-lightest: #ffffff;
+  --custom-neutral-lightest-opacity: #ffffff1a;
+  --custom-neutral-lighter: #dadada;
+  --custom-neutral-light: #ccc;
+  --custom-neutral: #a7a7a7;
+  --custom-neutral-dark: #333333;
+  --custom-neutral-darker: #222222;
+  --custom-neutral-darkest: #000000;
+
+  --custom-hit-color: #3ec28f;
+  --custom-sale-color: #ff9500;
+  --custom-new-color: #30c2ff;
+  --custom-discount-color: #c43228;
+  --custom-transparent-color: transparent;
 }
 
+/* Цветовая схема */
+:root {
+  --accent-color: var(--custom-accent-color, #2363d1);
+  --accent-dark-color: var(--custom-accent-dark-color, #1c52ac);
+  --accent-light-color: var(--custom-accent-light-color, #b7cbe5);
+
+  --neutral-darkest: var(--custom-black-color, #000000);
+  --neutral-darker: var(--custom-dark-color, #222222);
+  --neutral-dark: var(--custom-neutral-dark, #333333);
+  --neutral: var(--custom-neutral, #a7a7a7);
+  --neutral-light: var(--custom-neutral-light, #cccccc);
+  --neutral-lighter: var(--custom-neutral-lighter, #dadada);
+  --neutral-lightest: var(--custom-neutral-lightest, #ffffff);
+  --neutral-lightest-opacity: var(--custom-neutral-lightest-opacity, #ffffff1a);
+
+  --hit-color: var(--custom-hit-color, #3ec28f);
+  --sale-color: var(--custom-sale-color, #ff9500);
+  --new-color: var(--custom-new-color, #30c2ff);
+  --discount-color: var(--custom-discount-color, #c43228);
+  --transparent-color: var(--custom-white-opacity-color, transparent);
+}
+
+/* Предназначение цветов */
 :root {
   /* Фон шапки */
-  --header__bg: #333;
-  --header-top-bg-color: #fff;
-  --header-bottom__bg: #333;
-  --header-bg-color: #dadada;
+  --header__bg: var(--neutral-dark);
+  --header-top-bg-color: var(--neutral-lightest);
+  --header-bottom__bg: var(--neutral-dark);
+  --header-bg-color: var(--neutral-darkest);
 
   /* Кнопка "Каталог товаров" */
-  --catalog-btn__bg: #fff;
-  --catalog-menu-button_bg: #fff;
-  --catalog-btn__borderColor: #333333;
-  --catalog-btn__color: #333333;
-  --catalog-btn__burgerColor: #333333;
-  --header-buttons-font-color: #333333;
-  --catalog-btn__bg--hover: #2363d1;
-  --catalog-btn__borderColor--hover: #2363d1;
-  --catalog-btn__color--hover: #fff;
-  --catalog-btn__burgerColor--hover: #fff;
+  --catalog-btn__bg: var(--neutral-lightest);
+  --catalog-menu-button_bg: var(--neutral-dark);
+  --catalog-btn__borderColor: var(--neutral-dark);
+  --catalog-btn__color: var(--neutral-dark);
+  --catalog-btn__burgerColor: var(--neutral-dark);
+  --header-buttons-font-color: var(--neutral-lightest);
+  --catalog-btn__bg--hover: var(--accent-color);
+  --catalog-btn__borderColor--hover: var(--accent-color);
+  --catalog-btn__color--hover: var(--neutral-lightest);
+  --catalog-btn__burgerColor--hover: var(--neutral-lightest);
 
   /* Поле поиска */
-  --search-box__bg: #fff;
-  --search-field-bg-color: #fff;
-  --search-box__borderColor: #a7a7a7;
-  --search-field-border-color: #a7a7a7;
-  --search-box__color: #333;
-  --search-field-font-color: #333;
-  --search-box__placeholderColor: #333333;
-  --search-field-placeholder-font-color: #a7a7a7;
+  --search-box__bg: var(--neutral-lightest);
+  --search-field-bg-color: var(--neutral-darker);
+  --search-box__borderColor: var(--neutral);
+  --search-field-border-color: var(--neutral-dark);
+  --search-box__color: var(--neutral-dark);
+  --search-field-font-color: var(--neutral-lightest);
+  --search-box__placeholderColor: var(--neutral-dark);
+  --search-field-placeholder-font-color: var(--neutral);
 
   /* кнопка в поле поиск  */
-  --search-box-submit__bg: #dadada;
-  --search-field-btn-color: #a7a7a7;
-  --search-box-submit__borderColor: #a7a7a7;
-  --search-box-submit__bg--hover: #2363d1;
-  --search-box-submit__borderColor--hover: #2363d1;
+  --search-box-submit__bg: var(--neutral-lighter);
+  --search-field-btn-color: var(--neutral-lightest-opacity);
+  --search-box-submit__borderColor: var(--neutral);
+  --search-box-submit__bg--hover: var(--accent-color);
+  --search-box-submit__borderColor--hover: var(--accent-color);
 
   /* Выпадающие результаты поиска */
-  --search-box-item__bg: #fff;
-  --search-box-item__borderBottomColor: #000;
-  --search-box-item__color: #000;
-  --search-box-item__priceColor: #1c52ac;
+  --search-box-item__bg: var(--neutral-lightest);
+  --search-box-item__borderBottomColor: var(--neutral-darkest);
+  --search-box-item__color: var(--neutral-darkest);
+  --search-box-item__priceColor: var(--accent-dark-color);
 
   /* после ховера - результат товара в поле поиск  */
-  --search-box-item__bg--hover: #000;
+  --search-box-item__bg--hover: var(--neutral-darkest);
 
   /* кнопка "все каталоги" в результате товара из поле поиск  */
-  --search-box-all-item__bg: #333333;
-  --search-box-all-item__color: #fff;
+  --search-box-all-item__bg: var(--neutral-dark);
+  --search-box-all-item__color: var(--neutral-lightest);
 
   /* Верхнее меню */
-  --nav-item__color: #333333;
-  --header-top-menu-font-color: #333333;
-  --nav-item-active__color--active--hover: #2363d1;
-  --header-top-menu-font-hover-color: #2363d1;
+  --nav-item__color: var(--neutral-dark);
+  --header-top-menu-font-color: var(--neutral-dark);
+  --nav-item-active__color--active--hover: var(--accent-color);
+  --header-top-menu-font-hover-color: var(--accent-color);
 
   /* Счетчик корзины и сравнения */
-  --option-item__color: #333333;
-  --option-item__bg: #2363d1;
-  --main-elements-color: #2363d1;
-  --option-item__color--active--hover: #2363d1;
-  --main-elements-hover-color: #1c52ac;
+  --option-item__color: var(--neutral-dark);
+  --option-item__bg: var(--accent-color);
+  --main-elements-color: var(--accent-color);
+  --option-item__color--active--hover: var(--accent-color);
+  --main-elements-hover-color: var(--accent-dark-color);
 
   /* Вход в ЛК */
-  --accounts-item__color: #333333;
-  --accounts-item__color--hover: #2363d1;
+  --accounts-item__color: var(--neutral-dark);
+  --accounts-item__color--hover: var(--accent-color);
 
   /* Телефон в шапке */
-  --contact-box-text__color: #333333;
-  --color: #333333;
-  --contact-box-text-circle__color: #2363d1;
-  --contact-box-tel__color: #333333;
-  --header-top-phone-font-color: #333;
-  --contact-box-text__color--hover: #2363d1;
-  --color-hover: #2363d1;
-  --contact-box-tel__color--hover: #2363d1;
+  --contact-box-text__color: var(--neutral-dark);
+  --color: var(--neutral-dark);
+  --contact-box-text-circle__color: var(--accent-color);
+  --contact-box-tel__color: var(--neutral-dark);
+  --header-top-phone-font-color: var(--neutral-dark);
+  --contact-box-text__color--hover: var(--accent-color);
+  --color-hover: var(--accent-color);
+  --contact-box-tel__color--hover: var(--accent-color);
 
   /* Заказать звонок */
-  --contact-box-call-link__color: #333333;
-  --color-button-callme-text: #333333;
-  --contact-box-call-link__bg: #fff;
-  --color-button-callme-background: #fff;
-  --contact-box-call-link__borderColor: #333333;
-  --color-button-callme-border: #333333;
-  --contact-box-call-link__bg--hover: #2363d1;
-  --color-button-callme-background-hover: #2363d1;
-  --contact-box-call-link__color--hover: #fff;
-  --color-button-callme-text-hover: #fff;
-  --contact-box-call-link__borderColor--hover: #2363d1;
-  --color-button-callme-border-hover: #2363d1;
+  --contact-box-call-link__color: var(--neutral-dark);
+  --color-button-callme-text: var(--accent-color);
+  --contact-box-call-link__bg: var(--neutral-lightest);
+  --color-button-callme-background: var(--neutral-lightest);
+  --contact-box-call-link__borderColor: var(--neutral-dark);
+  --color-button-callme-border: var(--accent-light-color);
+  --contact-box-call-link__bg--hover: var(--accent-color);
+  --color-button-callme-background-hover: var(--accent-color);
+  --contact-box-call-link__color--hover: var(--neutral-lightest);
+  --color-button-callme-text-hover: var(--neutral-lightest);
+  --contact-box-call-link__borderColor--hover: var(--accent-color);
+  --color-button-callme-border-hover: var(--accent-color);
 
   /* кнопка callme (legacy) */
-  --callme-button-color: #ffffff;
-  --callme-button-hover-color: #ffffff;
-  --callme-button-fill-color: #ffffff;
-  --callme-button-fill-hover-color: #ffffff;
+  --callme-button-color: var(--accent-color);
+  --callme-button-hover-color: var(--accent-dark-color);
+  --callme-button-fill-color: var(--neutral-lightest);
+  --callme-button-fill-hover-color: var(--neutral-lightest);
 
   /* Выпадающее меню каталога */
-  --menu-box_catalog-box__bg: #434343;
-  --menu-box_catalog-box-ul-a__color: #fff;
-  --menu-box_catalog-box-ul-a__color--hover: #2363d1;
-  --category-menu-font-highlight-color: #2363d1;
-  --menu-box_catalog-box-ul-a__underlineColor--hover: #2363d1;
-  --category-menu-underline-highlight-color: #2363d1;
+  --menu-box_catalog-box__bg: var(--neutral-dark);
+  --menu-box_catalog-box-ul-a__color: var(--neutral-lightest);
+  --menu-box_catalog-box-ul-a__color--hover: var(--accent-color);
+  --category-menu-font-highlight-color: var(--accent-color);
+  --menu-box_catalog-box-ul-a__underlineColor--hover: var(--accent-color);
+  --category-menu-underline-highlight-color: var(--accent-color);
 
   /* Кнопка меню для шапки v3 */
-  --menu-btn__bg: #dadada;
-  --menu-btn__borderColor: #333333;
-  --menu-btn__color: #fff;
-  --menu-btn__bg--hover: #2363d1;
-  --menu-btn__borderColor--hover: #2363d1;
-  --menu-btn__color--hover: #fff;
+  --menu-btn__bg: var(--neutral-lighter);
+  --menu-btn__borderColor: var(--neutral-dark);
+  --menu-btn__color: var(--neutral-lightest);
+  --menu-btn__bg--hover: var(--accent-color);
+  --menu-btn__borderColor--hover: var(--accent-color);
+  --menu-btn__color--hover: var(--neutral-lightest);
 
   /* Пункты меню для шапок версий fat-v2 */
-  --fat-v2-nav-ul-li-a__color: #fff;
-  --fat-v2-nav-ul-li-a__bg--hover: #222222;
-  --fat-v2-nav-ul-li-a__color--hover: #fff;
-  --fat-v2-nav-ul-li-a__color--active: #2363d1;
-  --fat-v2-nav-ul-li-ul-li__bg: #222222;
-  --fat-v2-nav-ul-li-ul-li-a__color: #fff;
-  --fat-v2-nav-ul-li-ul-li-a__color--hover: #2363d1;
-  --fat-v2-nav-ul-li-ul-li__bg--hover: #333333;
-}
+  --fat-v2-nav-ul-li-a__color: var(--neutral-lightest);
+  --fat-v2-nav-ul-li-a__bg--hover: var(--neutral-darker);
+  --fat-v2-nav-ul-li-a__color--hover: var(--neutral-lightest);
+  --fat-v2-nav-ul-li-a__color--active: var(--accent-color);
+  --fat-v2-nav-ul-li-ul-li__bg: var(--neutral-darker);
+  --fat-v2-nav-ul-li-ul-li-a__color: var(--neutral-lightest);
+  --fat-v2-nav-ul-li-ul-li-a__color--hover: var(--accent-color);
+  --fat-v2-nav-ul-li-ul-li__bg--hover: var(--neutral-dark);
 
-/* "Шапки в адаптиве */
-:root {
+  /* "Шапки в адаптиве */
+
   /* Фон */
-  --mob-header__bg: #fff;
-  --mob-header_bottom__bg: #333;
-  --mob-header_bottom__borderColor: #333;
+  --mob-header__bg: var(--neutral-lightest);
+  --mob-header_bottom__bg: var(--neutral-dark);
+  --mob-header_bottom__borderColor: var(--neutral-dark);
 
   /* Поле поиска */
-  --mob-search-box__bg: #fff;
-  --mob-search-box__borderColor: #333333;
-  --mob-search-box__color: #000;
-  --mob-search-box__placeholderColor: #333333;
-  --mob-search-box-submit__bg: #dadada;
-  --mob-search-box-submit__borderColor: #333333;
-  --mob-search-box-submit__bg--hover: #2363d1;
-  --mob-search-box-submit__borderColor--hover: #2363d1;
+  --mob-search-box__bg: var(--neutral-lightest);
+  --mob-search-box__borderColor: var(--neutral-dark);
+  --mob-search-box__color: var(--neutral-darkest);
+  --mob-search-box__placeholderColor: var(--neutral-dark);
+  --mob-search-box-submit__bg: var(--neutral-lighter);
+  --mob-search-box-submit__borderColor: var(--neutral-dark);
+  --mob-search-box-submit__bg--hover: var(--accent-color);
+  --mob-search-box-submit__borderColor--hover: var(--accent-color);
 
   /* Результаты поиска */
-  --mob-search-box-item__bg: #fff;
+  --mob-search-box-item__bg: var(--neutral-lightest);
   --mob-search-box-item__borderBottomColor: rgba(0, 0, 0, 0.13);
-  --mob-search-box-item__color: #000;
-  --mob-search-box-item__priceColor: #1c52ac;
-  --mob-search-box-item__bg--hover: #000;
+  --mob-search-box-item__color: var(--neutral-darkest);
+  --mob-search-box-item__priceColor: var(--accent-dark-color);
+  --mob-search-box-item__bg--hover: var(--neutral-darkest);
 
   /* Кнопка "каталог товаров" */
-  --mob-catalog-btn__bg: #fff;
-  --mob-catalog-btn__borderColor: #333333;
-  --mob-catalog-btn__color: #333333;
-  --catalog-menu-font-color: #333333;
-  --mob-catalog-btn__burgerColor: #333333;
-  --mob-catalog-btn__bg--hover: #2363d1;
-  --mob-catalog-btn__borderColor--hover: #2363d1;
-  --mob-catalog-btn__color--hover: #fff;
-  --mob-catalog-btn__burgerColor--hover: #fff;
+  --mob-catalog-btn__bg: var(--neutral-lightest);
+  --mob-catalog-btn__borderColor: var(--neutral-dark);
+  --mob-catalog-btn__color: var(--neutral-dark);
+  --catalog-menu-font-color: var(--neutral-dark);
+  --mob-catalog-btn__burgerColor: var(--neutral-dark);
+  --mob-catalog-btn__bg--hover: var(--accent-color);
+  --mob-catalog-btn__borderColor--hover: var(--accent-color);
+  --mob-catalog-btn__color--hover: var(--neutral-lightest);
+  --mob-catalog-btn__burgerColor--hover: var(--neutral-lightest);
 
   /* Бургер мобильного меню */
-  --mob-burger-btn__color: #2363d1;
-  --header-top-icon-color: #2363d1;
+  --mob-burger-btn__color: var(--neutral-lightest);
+  --header-top-icon-color: var(--accent-color);
 
   /* Телефоны */
-  --mob-contact-box-phone__color: #333333;
-  --mob-contact-box-phone__bg: transparent;
-  --mob-contact-box-phone__borderColor: #2363d1;
-  --mob-contact-box-phone__color--hover: #fff;
-  --mob-contact-box-phone__bg--hover: #2363d1;
-  --mob-contact-box-phone__borderColor--hover: #2363d1;
+  --mob-contact-box-phone__color: var(--neutral-dark);
+  --mob-contact-box-phone__bg: var(--transparent-color);
+  --mob-contact-box-phone__borderColor: var(--accent-color);
+  --mob-contact-box-phone__color--hover: var(--neutral-lightest);
+  --mob-contact-box-phone__bg--hover: var(--accent-color);
+  --mob-contact-box-phone__borderColor--hover: var(--accent-color);
 
   /* Заказать звонок */
-  --mob-contact-box-order-call__color: #333333;
-  --mob-contact-box-order-call__bg: transparent;
-  --mob-contact-box-order-call__borderColor: #2363d1;
-  --mob-contact-box-order-call__color--hover: #fff;
-  --mob-contact-box-order-call__bg--hover: #2363d1;
-  --mob-contact-box-order-call__borderColor--hover: #2363d1;
+  --mob-contact-box-order-call__color: var(--neutral-dark);
+  --mob-contact-box-order-call__bg: var(--transparent-color);
+  --mob-contact-box-order-call__borderColor: var(--accent-color);
+  --mob-contact-box-order-call__color--hover: var(--neutral-lightest);
+  --mob-contact-box-order-call__bg--hover: var(--accent-color);
+  --mob-contact-box-order-call__borderColor--hover: var(--accent-color);
 
   /* Корзина */
-  --mob-cart-number__color: #333333;
-  --mob-cart-number__bg: #fff;
-  --mob-cart-number__borderColor: #2363d1;
-  --mob-cart-number__color--hover: #fff;
-  --mob-cart-number__bg--hover: #2363d1;
-  --mob-cart-number__borderColor--hover: #2363d1;
+  --mob-cart-number__color: var(--neutral-dark);
+  --mob-cart-number__bg: var(--neutral-lightest);
+  --mob-cart-number__borderColor: var(--accent-color);
+  --mob-cart-number__color--hover: var(--neutral-lightest);
+  --mob-cart-number__bg--hover: var(--accent-color);
+  --mob-cart-number__borderColor--hover: var(--accent-color);
 
   /* Элементы выпадающего меню */
-  --mm-navbar-title__color: #fff;
-  --mm-navbar__bg: #000;
-  --mm-navbar-button-icons__color: #fff;
-  --mm-panels-mobile-menu__bg: #e7e7e7;
-  --mm-listitem__bg: #fff;
-  --mm-listitem__color: #000;
-  --mm-listitem-button-icons__color: #000;
-  --mm-other-options__color: #000;
-  --mm-login__color: #000;
-  --register-arrow__color: #000;
-}
+  --mm-navbar-title__color: var(--neutral-lightest);
+  --mm-navbar__bg: var(--neutral-darkest);
+  --mm-navbar-button-icons__color: var(--neutral-lightest);
+  --mm-panels-mobile-menu__bg: var(--neutral);
+  --mm-listitem__bg: var(--neutral-lightest);
+  --mm-listitem__color: var(--neutral-darkest);
+  --mm-listitem-button-icons__color: var(--neutral-darkest);
+  --mm-other-options__color: var(--neutral-darkest);
+  --mm-login__color: var(--neutral-darkest);
+  --register-arrow__color: var(--neutral-darkest);
 
-/* Переменные темы */
-:root {
+  /* Переменные темы */
+
   /* высота предварительного просмотра категории */
   --category-preview-height: 200px;
 
@@ -211,123 +249,123 @@
   --custom-font-family: Golos;
 
   /* выпадающие меню */
-  --color-main-dropdown-menu-bg: #333333;
-  --color-main-dropdown-menu-text: #ffffff;
+  --color-main-dropdown-menu-bg: var(--neutral-dark);
+  --color-main-dropdown-menu-text: var(--neutral-lightest);
 
   /* основная кнопка */
-  --color-button-primary-text: #ffffff;
-  --color-button-primary-background: #2363d1;
-  --color-button-primary-border: #2363d1;
-  --color-button-primary-text-hover: #ffffff;
-  --color-button-primary-background-hover: #1c52ac;
-  --color-button-primary-border-hover: #1c52ac;
+  --color-button-primary-text: var(--neutral-lightest);
+  --color-button-primary-background: var(--accent-color);
+  --color-button-primary-border: var(--accent-color);
+  --color-button-primary-text-hover: var(--neutral-lightest);
+  --color-button-primary-background-hover: var(--accent-dark-color);
+  --color-button-primary-border-hover: var(--accent-dark-color);
 
   /* вторичная кнопка */
-  --color-button-secondary-text: #2363d1;
-  --color-button-secondary-background: #ffffff;
-  --color-button-secondary-border: #2363d1;
-  --color-button-secondary-text-hover: #ffffff;
-  --color-button-secondary-background-hover: #2363d1;
-  --color-button-secondary-border-hover: #2363d1;
+  --color-button-secondary-text: var(--accent-color);
+  --color-button-secondary-background: var(--neutral-lightest);
+  --color-button-secondary-border: var(--accent-color);
+  --color-button-secondary-text-hover: var(--neutral-lightest);
+  --color-button-secondary-background-hover: var(--accent-color);
+  --color-button-secondary-border-hover: var(--accent-color);
 
   /* не активная кнопка */
-  --color-button-muted-text: #333;
-  --color-button-muted-background: #b6b6b6;
-  --color-button-muted-border: #b6b6b6;
-  --color-button-muted-text-hover: #ffffff;
-  --color-button-muted-background-hover: #333;
-  --color-button-muted-border-hover: #333;
+  --color-button-muted-text: var(--neutral-dark);
+  --color-button-muted-background: var(--neutral-lighter);
+  --color-button-muted-border: var(--neutral-lighter);
+  --color-button-muted-text-hover: var(--neutral-lightest);
+  --color-button-muted-background-hover: var(--neutral-dark);
+  --color-button-muted-border-hover: var(--neutral-dark);
 
   /* кнопка корзины */
-  --color-button-cart-text: #ffffff;
-  --color-button-cart-background: #2363d1;
-  --color-button-cart-border: #2363d1;
-  --color-button-cart-text-hover: #ffffff;
-  --color-button-cart-background-hover: #1c52ac;
-  --color-button-cart-border-hover: #1c52ac;
+  --color-button-cart-text: var(--neutral-lightest);
+  --color-button-cart-background: var(--accent-color);
+  --color-button-cart-border: var(--accent-color);
+  --color-button-cart-text-hover: var(--neutral-lightest);
+  --color-button-cart-background-hover: var(--accent-dark-color);
+  --color-button-cart-border-hover: var(--accent-dark-color);
 
   /* без цветные кнопки */
-  --colorless-buttons-border-color: #ffffff;
-  --colorless-buttons-font-color: #333;
-  --colorless-buttons-font-color-hover: #2363d1;
-  --colorless-buttons-hover-bg: #ffffff;
+  --colorless-buttons-border-color: var(--neutral-lightest);
+  --colorless-buttons-font-color: var(--neutral-dark);
+  --colorless-buttons-font-color-hover: var(--accent-color);
+  --colorless-buttons-hover-bg: var(--neutral-lightest);
 
   /* кнопка счета */
-  --invoice-button-color: #2363d1;
+  --invoice-button-color: var(--accent-color);
 
   /* товары */
-  --hit-tag-bg-color: #3ec28f;
-  --sale-tag-bg-color: #ff9500;
-  --new-tag-bg-color: #30c2ff;
-  --discount-tag-bg-color: #c43228;
-  --hit-tag-font-color: #ffffff;
-  --sale-tag-font-color: #ffffff;
-  --discount-tag-font-color: #ffffff;
-  --new-tag-font-color: #ffffff;
-  --product-list-header-link-color: #333;
-  --product-list-header-link-hover-color: #2363d1;
-  --product-tab-link-color: #333;
-  --product-tab-link-hover-color: #2363d1;
-  --color-card-border: #d9d9de;
-  --product-preview-border-hover-color: #2363d1;
-  --product-preview-bg-color: #ffffff;
-  --color-product-online-price: #333;
-  --checkout-button-font-color: #333;
-  --invoice-button-font-color: #2363d1;
+  --hit-tag-bg-color: var(--hit-color);
+  --sale-tag-bg-color: var(--sale-color);
+  --new-tag-bg-color: var(--new-color);
+  --discount-tag-bg-color: var(--discount-color);
+  --hit-tag-font-color: var(--neutral-lightest);
+  --sale-tag-font-color: var(--neutral-lightest);
+  --discount-tag-font-color: var(--neutral-lightest);
+  --new-tag-font-color: var(--neutral-lightest);
+  --product-list-header-link-color: var(--neutral-dark);
+  --product-list-header-link-hover-color: var(--accent-color);
+  --product-tab-link-color: var(--neutral-dark);
+  --product-tab-link-hover-color: var(--accent-color);
+  --color-card-border: var(--light-color);
+  --product-preview-border-hover-color: var(--accent-color);
+  --product-preview-bg-color: var(--neutral-lightest);
+  --color-product-online-price: var(--neutral-dark);
+  --checkout-button-font-color: var(--neutral-dark);
+  --invoice-button-font-color: var(--accent-color);
 
   /* Статьи */
-  --article-label-font-color: #333;
-  --article-label-bg-color: #ffffff;
+  --article-label-font-color: var(--neutral-dark);
+  --article-label-bg-color: var(--neutral-lightest);
 
   /* новости и акции */
-  --news-label-bg-color: #2363d1;
-  --news-label-font-color: #ffffff;
-  --action-label-bg-color: #2363d1;
-  --action-label-font-color: #ffffff;
+  --news-label-bg-color: var(--accent-color);
+  --news-label-font-color: var(--neutral-lightest);
+  --action-label-bg-color: var(--accent-color);
+  --action-label-font-color: var(--neutral-lightest);
 
   /* меню каталога */
-  --catalog-menu-bg-color: #ffffff;
-  --catalog-menu-hover-bg-color: #ffffff;
-  --catalog-menu-border-color: #d9d9de;
-  --catalog-menu-font-hover-color: #333;
-  --catalog-menu-burger-color: #2363d1;
-  --catalog-menu-link-hover: #2363d1;
-  --catalog-menu-arrow-color: #2363d1;
+  --catalog-menu-bg-color: var(--neutral-lightest);
+  --catalog-menu-hover-bg-color: var(--neutral-lightest);
+  --catalog-menu-border-color: var(--light-color);
+  --catalog-menu-font-hover-color: var(--neutral-dark);
+  --catalog-menu-burger-color: var(--accent-color);
+  --catalog-menu-link-hover: var(--accent-color);
+  --catalog-menu-arrow-color: var(--accent-color);
 
   /* форма обратной связи */
-  --feedback-form-section-bg-color: #ffffff;
-  --feedback-form-bg: #ffffff;
-  --feedback-form-title: #333;
-  --feedback-form-text: #333;
-  --feedback-form-border: #2363d1;
-  --feedback-form-input-border: #2363d1;
+  --feedback-form-section-bg-color: var(--neutral-lightest);
+  --feedback-form-bg: var(--neutral-lightest);
+  --feedback-form-title: var(--neutral-dark);
+  --feedback-form-text: var(--neutral-dark);
+  --feedback-form-border: var(--accent-color);
+  --feedback-form-input-border: var(--accent-color);
 
   /* хлебные крошки */
-  --breadcrumb-item-color: #333;
-  --breadcrumb-item-hover-color: #2363d1;
+  --breadcrumb-item-color: var(--neutral-dark);
+  --breadcrumb-item-hover-color: var(--accent-color);
 
   /* статичные страницы */
-  --staticpage-box-fill-color: #ffffff;
-  --staticpage-box-border-color: #ffffff;
+  --staticpage-box-fill-color: var(--neutral-lightest);
+  --staticpage-box-border-color: var(--neutral-lightest);
 
   /* личный кабинет */
-  --color-lk-accent-items: #2363d1;
-  --color-lk-items-bg: #ffffff;
-  --color-lk-items-border: #2363d1;
-  --color-lk-items-hover-bg: #dadada;
-  --color-fixedbtn: #ffffff;
-  --color-bg-fixedbtn: #2363d1;
+  --color-lk-accent-items: var(--accent-color);
+  --color-lk-items-bg: var(--neutral-lightest);
+  --color-lk-items-border: var(--accent-color);
+  --color-lk-items-hover-bg: var(--neutral-lighter);
+  --color-fixedbtn: var(--neutral-lightest);
+  --color-bg-fixedbtn: var(--neutral-darkest);
 
   /* подвал */
-  --footer-bg-color: #333;
-  --color-footer-links: #d6d6d6;
-  --color-footer-links-hover: #2363d1;
-  --color-footer-title: #ffffff;
+  --footer-bg-color: var(--neutral-dark);
+  --color-footer-links: var(--light-color);
+  --color-footer-links-hover: var(--accent-color);
+  --color-footer-title: var(--neutral-lightest);
 
   /* разное */
-  --frontpage-first-screen-bg-color: #ffffff;
-  --preview-bg-color: #f5f5f5;
-  --preview-font-color: #333;
-  --preview-bg-hover-color: #ffffff;
-  --inner-page-bg: #ffffff;
+  --frontpage-first-screen-bg-color: var(--neutral-lightest);
+  --preview-bg-color: var(--neutral-lighter);
+  --preview-font-color: var(--neutral-dark);
+  --preview-bg-hover-color: var(--neutral-lightest);
+  --inner-page-bg: var(--neutral-lightest);
 }
