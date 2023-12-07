@@ -1,7 +1,45 @@
+.additional-products-block
+  &__bottom
+    display: flex
+    align-items: flex-end
+    flex-direction: column
+
+  &__price
+    max-width: 111px
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    gap: 10px
+
+  &__price-text
+    color: #000
+    font-family: Golos
+    font-size: 18px
+    font-weight: 700
+    line-height: 130%
+
+  &__button
+    max-width: max-content
+
+  &__icon-fill
+    fill: #fff
+
+@media (max-width: 1023px)
+  .additional-products-block
+    &__price
+      max-width: 100%
+      width: 100%
+      flex-direction: row
+      justify-content: space-between
+
+    &__button
+      max-width: 100%
+
 .additional-products
   display: flex
   flex-direction: column
   gap: 10px
+  margin-bottom: 20px
 
 .additional-product
   display: flex
@@ -46,6 +84,7 @@
     flex-direction: column
     align-items: flex-end
     justify-content: space-between
+    min-width: 255px
 
   &__description
     padding: 10px
@@ -57,6 +96,7 @@
 
   &__counter-text
     font-size: 12px
+    line-height: 130%
 
   &__price-title
     font-size: 12px
@@ -71,15 +111,17 @@
   &__price
     font-size: 14px
     font-weight: 700
-    line-height: 17px
+    line-height: 140%
     color: var(--additional-product-price, var(--neutral-dark-colorest-color))
+    text-wrap: nowrap
 
   &__old-price
     font-size: 12px
-    line-height: 16px
+    line-height: 130%
     position: relative
     display: flex
     align-items: center
+    text-wrap: nowrap
     &::after
       content: ''
       display: block
@@ -88,9 +130,12 @@
       width: 100%
       background-color: #D74853
 
+  &__status
+    margin-bottom: 5px !important
+
 @media (max-width: 767px)
   .additional-product
-    height: 150px
+    height: 172px
     &__content
       flex-direction: column
 
@@ -104,18 +149,19 @@
       padding-top: 0
       padding-bottom: 10px
       align-items: flex-start
+      min-width: 0
 
     &__articul
       margin-bottom: 1px
-      line-height: 16px
+      line-height: 130%
 
     &__title
       margin-bottom: 5px
       font-size: 12px
-      line-height: 14.4px
+      line-height: 130%
 
     &__status
-      line-height: 16px
+      line-height: 130%
       font-size: 12px
       margin-bottom: 5px
 
@@ -125,7 +171,14 @@
     &__counter-wrapper
       margin-left: auto
 
+    &__price-block
+      flex-direction: column-reverse
+      gap: 5px
+      align-items: flex-start
+
 @media (max-width: 575px)
+  .additional-products-block
+    margin-bottom: 30px
   .additional-product
     &__counter-wrapper
       gap: 5px

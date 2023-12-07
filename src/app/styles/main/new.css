@@ -4957,6 +4957,23 @@
   }
 }
 
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}
+
 .text-color-accent {
   color: var(--main-elements-color, #2363d1);
 }

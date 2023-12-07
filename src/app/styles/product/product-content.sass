@@ -1,6 +1,7 @@
 .product-content
   background-color: #fff
   border: 1px solid #E5E5EA
+  margin-bottom: 8px
   &_inner
     padding: 40px 80px
   &_frameless
@@ -44,18 +45,11 @@
   font-size: 12px
   display: inline
 
-.product-title
-  font-family: Golos
-  font-size: 26px
-  font-weight: 700
-  line-height: 34px
-  color: #000
-
 .product-text
   font-family: Golos
   font-size: 14px
   font-weight: 400
-  line-height: 20px
+  line-height: 140%
   color: #333333
 
 @media (max-width: 1279px)
@@ -86,8 +80,16 @@
     padding: 30px 0
   .product-content
     border: none
-    &_inner
-      padding: 20px 0
+    padding: 0
+    margin: 0
 
   .product-content-inner-dark
     margin: 0 -16px
+
+  .product-content-slideshow
+    &_inner
+      padding: 10px
+
+  #sync1
+    .owl-prev, .owl-next
+      width: 30px !important
