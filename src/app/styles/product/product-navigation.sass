@@ -1,6 +1,8 @@
 .product-navigation
   border-bottom: #E5E5EA 1px solid
   display: flex
+  align-items: center
+  justify-content: center
   &__prev, &__next
     display: flex
     align-items: center
@@ -22,7 +24,23 @@
     justify-content: flex-end
   &__text
     color: inherit
+    overflow: hidden
+    text-wrap: nowrap
+    text-overflow: ellipsis
+  &__articul
+    position: absolute
+    font-size: 12px
+    font-weight: 400
+    line-height: 18px
+    color: #BDBDBD
+    max-width: 220px
+    overflow: hidden
+    text-overflow: ellipsis
 
 @media (max-width: 575px)
   .product-navigation
     border: none
+    &__prev, &__next
+      padding: 10px
+    &__text
+      max-width: 50px

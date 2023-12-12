@@ -15,6 +15,9 @@
 //@include ./features/header.js
 //@include ./features/homeBanner.js
 //@include ./features/catalogCardSlideshow.js
+//@include ../../components/product-description-group/index.js
+//@include ../../components/product-haracteristic-group/index.js
+//@include ../../components/product-cards/index.js
 
 (function ($) {
   var pluginName = "cscrlb";

@@ -1,6 +1,6 @@
 .bottom-mobile-menu-list
   position: absolute
-  background-color: var(--bottom-mobile-menu-list-background, var(--neutral-lightest))
+  background-color: var(--bottom-mobile-menu-list-background, var(--neutral-lightest-color))
   bottom: 0
   left: 0
   width: 100%
@@ -28,7 +28,7 @@
         transition: .3s
         &:hover
           background-color: var(--bottom-mobile-menu-list-plates-link-background-color, var(--accent-color))
-          color: var(--bottom-mobile-menu-list-plates-link-text-color, var(--neutral-lightest))
+          color: var(--bottom-mobile-menu-list-plates-link-text-color, var(--neutral-lightest-color))
 
   &_active
     transform: translateY(0%)
@@ -42,9 +42,9 @@
     justify-content: space-between
     align-items: center
     color: var(--bottom-mobile-menu-list-link-text-color, var(--accent-dark-color))
-    border-bottom: 1px solid var(--bottom-mobile-menu-list-link-border-color, var(--neutral-lighter))
+    border-bottom: 1px solid var(--bottom-mobile-menu-list-link-border-color, var(--neutral-lighter-color))
     transition: .3s
-    background-color: var(--bottom-mobile-menu-list-link-background, var(--neutral-lightest))
+    background-color: var(--bottom-mobile-menu-list-link-background, var(--neutral-lightest-color))
     &:hover
       background-color: var(--bottom-mobile-menu-list-link-background-hover, var(--accent-light-color))
       color: var(--bottom-mobile-menu-list-link-text-color, var(--accent-color))

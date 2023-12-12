@@ -3567,7 +3567,7 @@
 }
 
 :root {
-  --grid-gutter-width: 20px;
+  --grid-gutter-width: 10px;
   --container-padding-x: 16px;
   --animation-duration-1: 150ms;
   --animation-duration-2: 300ms;
@@ -3580,7 +3580,7 @@
 }
 @media (max-width: 575.98px) {
   :root {
-    --grid-gutter-width: 16px;
+    --grid-gutter-width: 8px;
   }
 }
 
@@ -4954,6 +4954,23 @@
   .g-xxl-50,
   .gy-xxl-50 {
     --bs-gutter-y: 50px;
+  }
+}
+
+.collapse:not(.show) {
+  display: none;
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
   }
 }
 

@@ -15,7 +15,6 @@ $(document).ready(function () {
   $("[data-open-dropdown-content]").on("click", (event) => {
     const target = $(event.currentTarget);
     const parent = target.parent();
-    parent.find("[data-dropdown-content]").removeClass("d-none");
     parent.find("[data-close-dropdown-content]").removeClass("d-none");
     target.addClass("d-none");
   });
@@ -23,7 +22,6 @@ $(document).ready(function () {
   $("[data-close-dropdown-content]").on("click", (event) => {
     const target = $(event.currentTarget);
     const parent = target.parent();
-    parent.find("[data-dropdown-content]").addClass("d-none");
     parent.find("[data-open-dropdown-content]").removeClass("d-none");
     target.addClass("d-none");
   });
