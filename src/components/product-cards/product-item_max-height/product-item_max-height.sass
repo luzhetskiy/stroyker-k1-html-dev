@@ -1,0 +1,30 @@
+.product-item_max-heigth
+  height: auto
+  .product-item
+    &__image
+      aspect-ratio: 220/320
+
+@media (max-width: 767px)
+  .product-item_max-heigth
+    height: auto
+    padding-bottom: 60px
+    .product-item
+      flex-direction: column
+      &__image
+        aspect-ratio: 220/320
+        max-width: 100%
+        min-width: 0
+        width: 100%
+        height: auto
+
+      &__link
+        flex-direction: column
+        height: auto
+
+      &__content-top
+        height: auto
+
+      &__content-bottom
+        width: 100%
+        right: 0
+        padding: 10px
