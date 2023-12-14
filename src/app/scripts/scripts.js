@@ -13,7 +13,7 @@
 //@include ./features/gallery.js
 //@include ./features/header.js
 //@include ./features/homeBanner.js
-//@include ./features/catalogCardSlideshow.js
+
 //@include ../../components/index.js
 //@include ../../widgets/index.js
 

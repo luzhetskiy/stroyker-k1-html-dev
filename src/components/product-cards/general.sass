@@ -191,3 +191,48 @@
 
     &_comparison
       display: none
+
+.shopping-cart-product
+  display: flex
+  gap: 10px
+
+  &--btn
+    width: calc(100% - 65px)
+
+@media (max-width: 767px)
+  .shopping-cart-product .not-available
+    width: 100% !important
+
+@media (max-width: 767px)
+  .shopping-cart-product
+    width: 100%
+    -webkit-box-pack: end
+    -ms-flex-pack: end
+    justify-content: flex-end
+
+.shopping-cart-product .btn
+  width: 130px
+  padding: 0
+  border: 1px solid var(--main-elements-color, #2363d1)
+
+@media (max-width: 767px)
+  .shopping-cart-product .btn
+    width: 100%
+
+.shopping-cart-product .btn-border
+  text-align: center
+  padding: 0
+  width: 100%
+  min-width: 130px
+
+.shopping-cart-product .btn-checkout
+  width: 100%
+  line-height: normal
+  height: 48px
+  text-align: center
+  border: 0 !important
+  padding: 0 10px
+
+@media (max-width: 767px)
+  .shopping-cart-product .btn-checkout
+    width: calc(100% - 80px)
