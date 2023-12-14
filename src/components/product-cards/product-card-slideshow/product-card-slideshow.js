@@ -1,3 +1,6 @@
+let touchstartX = 0;
+let touchendX = 0;
+
 $(".product-card-slideshow__sector").on("mousemove", (event) => {
   const target = $(event.currentTarget);
   const id = target.attr("data-sector");

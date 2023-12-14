@@ -5,6 +5,3 @@ const breakpoints = {
   lg: 1024,
   xl: 1280,
 };
-
-let touchstartX = 0;
-let touchendX = 0;

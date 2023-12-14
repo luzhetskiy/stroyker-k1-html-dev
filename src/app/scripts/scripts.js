@@ -1,7 +1,8 @@
 ("use strict");
 
-//@include ./shared/config/index.js
-//@include ./shared/lib/debounce-throttle.js
+//@include ../../shared/config/index.js
+//@include ../../shared/libs/index.js
+
 //@include ./features/clickEvents.js
 //@include ./features/smoothScroll.js
 //@include ./features/bigSlides.js
