@@ -1,43 +1,300 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Навигация по страницам</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../libs/fancy-box/fancy-box.css" />
+  <link rel="stylesheet" href="../libs/mmenu/mmenu.css" />
+  <script defer src="../libs/jquery/jquery.js"></script>
+  <script defer src="../libs/owl-carousel/owl-carousel.js"></script>
+  <script defer src="../libs/fancy-box/fancy-box.js"></script>
+  <script defer src="../libs/slick/slick.js"></script>
+  <script defer src="../libs/mmenu/mmenu.js"></script>
+
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/headers-custom.css" />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <script defer src="../js/scripts.js"></script>
+  <script defer src="../js/headers-custom.js"></script>
 </head>
 
-<body>
-  <ul>
+<body class="inner-page">
 
-    <li>
-      <a href="./all.html">Все варианты карточек</a>
-    </li>
-    <li>
-      <a href="./v1.html">v1</a>
-    </li>
-    <li>
-      <a href="./v1-new.html">v1-new</a>
-    </li>
-    <li>
-      <a href="./v1-wide.html">v1-wide</a>
-    </li>
-    <li>
-      <a href="./v1-max-height.html">v1-max-height</a>
-    </li>
-    <li>
-      <a href="./v1-max-width.html">v1-max-width</a>
-    </li>
-    <li>
-      <a href="./v2.html">v2</a>
-    </li>
-    <li>
-      <a href="./v2-1.html">v2-1</a>
-    </li>
-    <li>
-      <a href="./v2-2-hover.html">v2-2-hover</a>
-    </li>
-  </ul>
+  <div class="page">
+
+    <!-- @include ../../widgets/headers/header-v-1-location.html -->
+
+    <main>
+      <section class="section mobile-show header-top-bg-color">
+        <div class="container">
+          <div class="catalog-side mobile-show">
+            <span class="catalog-side__title">
+              <span class="icon">
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z" fill="currentColor"></path>
+                </svg>
+              </span>
+              Проекты домов
+            </span>
+            <div class="catalog-side__content">
+              <ul>
+                <li class="menu-item">
+                  <a href="/catalog/kategoriya-tovarov-1/">Проекты домов до 150м2</a>
+                </li>
+
+                <li class="menu-item">
+                  <a href="/catalog/kategoriya-tovarov-2/">Проекты домов до 300м2</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="page-head">
+            <!-- @include ../../components/inner-page/breadcrumbs/breadcrumbs.html -->
+          </div>
+
+          <div class="content-block">
+            <h1>Одноэтажные дома до 150м2</h1>
+
+            <div class="catalog">
+              <div class="catalog-head">
+                <div class="catalog-sorting">
+                  <span class="catalog-sorting__title">Сортировка:</span>
+                  <ul>
+                    <li>
+                      <a href="?price_sort=price__asc">
+                        <span class="icon-sort-price price-asc"> <span></span> </span>Цена (по
+                        возрастанию)
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="?price_sort=price__desc">
+                        <span class="icon-sort-price price-desc"> <span></span> </span>Цена (по
+                        убыванию)
+                      </a>
+                    </li>
+
+                    <li class="sort-availability">
+                      <a href="?sort_field=availability"> Наличие </a>
+                    </li>
+
+                    <li>
+                      <a href="?sort_field=is_hit"> Популярность </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="sort-select">
+                  <select name="characters" class="custom-select" tabindex="-1" id="products-header-sort-mobile">
+                    <option value="" disabled="" selected="">выбрать...</option>
+
+                    <option value="?price_sort=price__asc">По цене (по возрастанию)</option>
+
+                    <option value="?price_sort=price__desc">По цене (по убыванию)</option>
+
+                    <option value="?sort_field=availability">По наличию</option>
+
+                    <option value="?sort_field=is_hit">По популярности</option>
+                  </select>
+                  <div class="dropdown-container">
+                    <div class="dropdown-select entypo-down-open-big">
+                      <svg class="icon">
+                        <use xlink:href="#tab-arrow"></use>
+                      </svg><span>выбрать...</span>
+                    </div>
+                    <ul class="dropdown-select-ul" data-role="products-header-sort-mobile">
+                      <li class="selected" data-value="">выбрать...</li>
+                      <li data-value="?price_sort=price__asc">По цене (по возрастанию)</li>
+                      <li data-value="?price_sort=price__desc">По цене (по убыванию)</li>
+                      <li data-value="?sort_field=availability">По наличию</li>
+                      <li data-value="?sort_field=is_hit">По популярности</li>
+                    </ul>
+                  </div>
+                  <!-- .custom-select-wrapper -->
+                </div>
+
+                <div class="catalog-right">
+                  <div class="view-sorting">
+                    <span class="view-sorting__title">Вид</span>
+                    <button data-list-view-mode="1"
+                      class="view-sort-item select-product-list-view view-sort-item--1 button1 current">
+                      <svg class="icon-svg">
+                        <use xlink:href="#view-sort-1"></use>
+                      </svg>
+                    </button>
+                    <button data-list-view-mode="2"
+                      class="view-sort-item select-product-list-view view-sort-item--2 button2">
+                      <svg class="icon-svg">
+                        <use xlink:href="#view-sort-2"></use>
+                      </svg>
+                    </button>
+                    <button data-list-view-mode="3" class="view-sort-item view-sort-item--3 button3">
+                      <svg class="icon-svg">
+                        <use xlink:href="#view-sort-3"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <a class="filter-btn"></a>
+              </div>
+
+              <div class="catalog-container">
+
+                <div class="catalog-body catalog-body--wide">
+                  <div class="product-items-header">
+                    <span>Арт.</span>
+                    <span>Наименование</span>
+                    <span>Остаток</span>
+                    <span>Цена</span>
+                    <span>Ваша цена</span>
+                    <span>Кол-во</span>
+                    <span>Купить</span>
+                  </div>
+
+                  <h1 class="mt-50 mb-30">v1</h1>
+
+                  <div
+                    class="d-grid gap-grid   grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5">
+                    <!-- @include ../../widgets/product-cards/catalog__product-item.html -->
+                  </div>
+
+                  <div style="padding-top: 80px;">
+                    <div class="slider-constructor slick-dotted" data-sm-rows="1" data-slides="1" data-md-slides="2"
+                      data-lg-slides="3" data-xl-slides="5">
+                      <!-- @include ../../widgets/product-cards/catalog__product-item.html -->
+                      <!-- @include ../../widgets/product-cards/catalog__product-item.html -->
+                    </div>
+                  </div>
+
+                  <h1 class="mt-50 mb-30">v1 new</h1>
+
+                  <div
+                    class="d-grid gap-grid   grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5">
+                    <!-- @include ../../widgets/product-cards/catalog__product-item_new.html -->
+                  </div>
+
+                  <div style="padding-top: 80px;">
+                    <div class="slider-constructor slick-dotted" data-sm-rows="1" data-slides="1" data-md-slides="2"
+                      data-lg-slides="3" data-xl-slides="5">
+                      <!-- @include ../../widgets/product-cards/catalog__product-item_new.html -->
+                      <!-- @include ../../widgets/product-cards/catalog__product-item_new.html -->
+                    </div>
+                  </div>
+
+                  <h1 class="mt-50 mb-30">v1 max-wide</h1>
+
+                  <div
+                    class="d-grid gap-grid   grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5">
+                    <!-- @include ../../widgets/product-cards/catalog__product-item_wide.html -->
+                  </div>
+
+                  <div style="padding-top: 80px;">
+                    <div class="slider-constructor slick-dotted" data-sm-rows="1" data-slides="1" data-md-slides="2"
+                      data-lg-slides="3" data-xl-slides="5">
+                      <!-- @include ../../widgets/product-cards/catalog__product-item_wide.html -->
+                      <!-- @include ../../widgets/product-cards/catalog__product-item_wide.html -->
+                    </div>
+                  </div>
+
+                  <h1 class="mt-50 mb-30">v1 max-width</h1>
+
+                  <div
+                    class="d-grid gap-grid   grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5">
+                    <!-- @include ../../widgets/product-cards/catalog__product-item_max-width.html -->
+                  </div>
+
+                  <div style="padding-top: 80px;">
+                    <div class="slider-constructor slick-dotted" data-sm-rows="1" data-slides="1" data-md-slides="2"
+                      data-lg-slides="3" data-xl-slides="5">
+                      <!-- @include ../../widgets/product-cards/catalog__product-item_max-width.html -->
+                      <!-- @include ../../widgets/product-cards/catalog__product-item_max-width.html -->
+                    </div>
+                  </div>
+
+                  <h1 class="mt-50 mb-30">v1 max-height</h1>
+
+                  <div
+                    class="d-grid gap-grid   grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5">
+                    <!-- @include ../../widgets/product-cards/catalog__product-item_max-height.html -->
+                  </div>
+
+                  <div style="padding-top: 80px;">
+                    <div class="slider-constructor slick-dotted" data-sm-rows="1" data-slides="1" data-md-slides="2"
+                      data-lg-slides="3" data-xl-slides="5">
+                      <!-- @include ../../widgets/product-cards/catalog__product-item_max-height.html -->
+                      <!-- @include ../../widgets/product-cards/catalog__product-item_max-height.html -->
+                    </div>
+                  </div>
+
+                  <h1 class="mt-50 mb-30">v2</h1>
+
+                  <div
+                    class="d-grid gap-grid   grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5">
+                    <!-- @include ../../widgets/product-cards/catalog__product-card-v2.html -->
+                  </div>
+
+                  <div style="padding-top: 80px;">
+                    <div class="slider-constructor slick-dotted" data-sm-rows="1" data-slides="1" data-md-slides="2"
+                      data-lg-slides="3" data-xl-slides="5">
+                      <!-- @include ../../widgets/product-cards/catalog__product-card-v2.html -->
+                      <!-- @include ../../widgets/product-cards/catalog__product-card-v2.html -->
+                    </div>
+                  </div>
+
+                  <h1 class="mt-50 mb-30">v2-1</h1>
+
+                  <div
+                    class="d-grid gap-grid   grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5">
+                    <!-- @include ../../widgets/product-cards/catalog__product-card-v2_type-2.html -->
+                  </div>
+                  <div style="padding-top: 80px;">
+                    <div class="slider-constructor slick-dotted" data-sm-rows="1" data-slides="1" data-md-slides="2"
+                      data-lg-slides="3" data-xl-slides="5">
+                      <!-- @include ../../widgets/product-cards/catalog__product-card-v2_type-2.html -->
+                      <!-- @include ../../widgets/product-cards/catalog__product-card-v2_type-2.html -->
+                    </div>
+                  </div>
+
+                  <h1 class="mt-50 mb-30">v2-2</h1>
+
+                  <div
+                    class="d-grid gap-grid   grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5">
+                    <!-- @include ../../widgets/product-cards/catalog__product-card-v2_hover.html -->
+                  </div>
+
+                  <div style="padding-top: 80px;">
+                    <div class="slider-constructor slick-dotted" data-sm-rows="1" data-slides="1" data-md-slides="2"
+                      data-lg-slides="3" data-xl-slides="5">
+                      <!-- @include ../../widgets/product-cards/catalog__product-card-v2_hover.html -->
+                      <!-- @include ../../widgets/product-cards/catalog__product-card-v2_hover.html -->
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @include ../../widgets/footers/footer-default.html -->
+
+  </div>
+
+  <!-- @include ../../widgets/footers/svg-pack.html -->
+
+  <!-- @include ../../widgets/modals/callme-modal.html -->
+
 </body>
 
 </html>
