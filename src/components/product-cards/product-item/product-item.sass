@@ -106,6 +106,7 @@
     bottom: -24px
 
 .product-item__image
+  overflow: hidden
   position: relative
   height: auto
   width: 100%
@@ -323,7 +324,6 @@
     align-items: flex-start
     position: relative
     z-index: 9
-    bottom: -5px
     -webkit-box-orient: vertical
     -webkit-box-direction: normal
     -ms-flex-direction: column
@@ -693,3 +693,71 @@
 
   & .shopping-cart-product .btn-border
     min-width: 180px
+
+.product-item__link:hover .product-item__image img
+  transform: scale(1.05)
+
+.product-item__image
+  background: transparent
+
+  &-inner
+    position: relative
+    height: 100%
+    width: 100%
+
+  & img
+    position: relative
+    padding: 10px
+    transition: opacity 0.15s ease-out, visibility 0.15s ease-out, transform 0.15s ease-out
+    will-change: transform
+
+  & img:not(:first-child)
+    z-index: 2
+    opacity: 0
+    visibility: hidden
+    position: absolute
+    top: 0
+    left: 0
+
+.product-item__content-top
+  padding: 10px 12px 0px 12px
+
+.product-item__content-bottom
+  padding: 0px 12px 10px 12px
+
+.product-item__head
+  margin-bottom: 5px
+
+.product-item__cost-label
+  font-size: 12px
+  padding-bottom: 2px
+  color: #333
+  font-weight: 400
+  margin-left: 5px
+
+.product-item__cost-product
+  line-height: 18px
+
+@media (max-width: 767px)
+  .product-item
+    height: 155px
+
+    &__cost
+      bottom: initial
+
+    &__cost-label
+      margin: 0
+      font-size: 10px
+
+  .slider-constructor .product-item
+    margin: 0
+    border: 1px solid #d9d9de
+
+.product-item--wide .product-item__online-cost
+  top: 45px
+
+  & span
+    margin-right: 0
+
+.product-item--wide .product-item__cost-label
+  margin-right: 0 !important
