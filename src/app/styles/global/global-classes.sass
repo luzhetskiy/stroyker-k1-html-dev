@@ -109,19 +109,13 @@
   &_space-between
     justify-content: space-between
 
+.g-column
+  display: flex
+  flex-direction: column
+
 .g-image
   width: 100%
   height: auto
-
-.g-favorite-icon
-  font-size: 20px
-
-.g-cart-icon
-  font-size: 20px
-
-.g-grafic-icon
-  font-size: 15px
-  color: #2363D1
 
 .ad-shild
   display: inline-flex
@@ -144,3 +138,12 @@
 
 .page
   background-color: #fff
+
+.g-content
+  background-color: #fff
+  border: 1px solid #E5E5EA
+  margin-bottom: var(--grid-gutter-width, 20px)
+  &_inner
+    padding: 40px 80px
+  &_frameless
+    border: none
