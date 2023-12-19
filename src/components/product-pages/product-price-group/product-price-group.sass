@@ -5,29 +5,17 @@
     fill: #2363d1
     align-items: center
 
-  &__text-small
+  &__date-text
     text-wrap: nowrap
 
-  &__text
+  &__title
     margin-bottom: 2px
-    &_inactive
-      opacity: 0.4
 
   &__row
     display: flex
     align-items: center
     gap: 15px
-    margin-bottom: 10px
-  &__primary-price
-    font-family: Golos
-    font-size: 28px
-    font-weight: 700
-    line-height: 130%
-    color: #000
-    margin: 0
-    text-wrap: nowrap
-    &_inactive
-      opacity: 0.4
+
   &__price
     font-family: Golos
     font-size: 14px
@@ -41,10 +29,25 @@
       text-decoration: line-through
     &_inactive
       opacity: 0.4
+    &_primary
+      font-size: 28px
+      font-weight: 700
+      line-height: 130%
+      color: #000
+    &_range
+      color: #A7A7AB
+      font-size: 20px
+      line-height: 100%
+      font-weight: 700
+    &_range-cost
+      color: #A7A7AB
+      font-size: 28px
+      line-height: 100%
+      font-weight: 700
 
 @media (max-width: 1023px)
   .product-price-group
-    &__text
+    &__title
       margin-bottom: 10px
 
     &__row

@@ -1,0 +1,201 @@
+<div class="product" itemscope="" itemtype="http://schema.org/Product">
+  <div class="product-card">
+    <div class="product-card__navigation"></div>
+
+    <div class="product-card__head">
+      <h1 class="product-card__title" itemprop="name">Товар 1</h1>
+      <span class="product-card__artikul" itemprop="sku">001</span>
+    </div>
+    <div class="product-card__container">
+      <div class="product-card__slideshow">
+        <div id="sync1" class="owl-carousel owl-theme owl-loaded owl-drag">
+          <a class="item" href="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
+            data-fancybox="images" target="_blank">
+            <img itemprop="image" src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
+              alt="Товар 1 (фото 1)" />
+            <span class="product-item__flag-content"> </span>
+          </a>
+        </div>
+
+        <div id="sync2" class="owl-carousel owl-theme owl-loaded owl-drag">
+          <div class="item">
+            <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="product-card__content">
+        <div class="product-card__left">
+          <div class="product-card__wrapper mb-20">
+            <!-- @include ../../../components/product-pages/product-price-group/product-price-group.html -->
+          </div>
+          <div class="product-card__wrapper mb-20">
+            <!-- @include ../../../components/product-pages/product-price-group/product-price-group.html -->
+          </div>
+          <div class="product-card__wrapper mb-20">
+            <!-- @include ../../../components/product-pages/product-size-group/product-size-group.html -->
+          </div>
+          <div class="product-card__wrapper mb-20">
+            <!-- @include ../../../components/product-pages/product-select-group/product-select-group.html -->
+          </div>
+
+
+          <div class="product-card__wrapper g-row mb-30">
+            <!-- @include ../../../components/product-pages/product-page-buttons/product-add-to-cart-button.html -->
+            <!-- @include ../../../components/product-pages/product-input-number/product-input-number.html -->
+          </div>
+          <div class="product-card__wrapper g-row g-row_space-between mb-20">
+            <!-- @include ../../../components/product-pages/product-page-buttons/product-share-button.html -->
+            <!-- @include ../../../components/product-pages/product-page-buttons/product-compare-button.html -->
+          </div>
+          <div class="product-card__wrapper g-row mb-20">
+            <!-- @include ../../../components/product-pages/product-rating/product-rating.html -->
+            <!-- @include ../../../components/product-pages/product-page-buttons/product-reviews-button.html -->
+          </div>
+        </div>
+        <div class="product-card__right">
+          <div class="product-card__discription">
+            <span class="product-card__discription-title">Наличие:</span>
+            <ul>
+              <li>
+                <span class="green-color">
+                  <div class="product-item__status product-item__status--none">
+                    нет в наличии
+                  </div>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card-container">
+    <div class="product-card-content">
+      <div class="tabs-content">
+        <ul class="tabs">
+          <li class="active" rel="tab1">Описание</li>
+
+          <li rel="tab2" class="tab_last">Характеристики</li>
+        </ul>
+        <div class="tabsgroup">
+          <span class="tab_drawer_heading d_active" rel="tab1">
+            <span class="icon"><svg class="icon-svg">
+                <use xlink:href="#tab-arrow"></use>
+              </svg></span>
+            Описание
+          </span>
+          <div id="tab1" class="tab-content" style="display: block">
+            <div class="text-page" itemprop="description">
+              <div class="row">
+                <div class="col-lg-6 col-md-12">
+                  <img alt="" src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png" />
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                  <h2 style="color: #1e1e1e">Пример расположения контента</h2>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-4 col-md-12">
+                  <h2 style="color: #1e1e1e">Пример расположения контента</h2>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                  <img alt="" src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png" />
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                  <img alt="" src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- #tab1 -->
+          <span class="tab_drawer_heading" rel="tab2">
+            <span class="icon"><svg class="icon-svg">
+                <use xlink:href="#tab-arrow"></use>
+              </svg></span>
+            Характеристики
+          </span>
+          <div id="tab2" class="tab-content" style="display: none">
+            <ul class="char">
+              <li>
+                <span class="char-text"><span class="char-text__mask">Материал</span></span><span
+                  class="char-text"></span>
+                Сталь </span>
+              </li>
+
+              <li>
+                <span class="char-text"><span class="char-text__mask">Размер</span></span><span class="char-text"> 5
+                </span>
+              </li>
+            </ul>
+          </div>
+          <!-- #tab2 -->
+          <span class="tab_drawer_heading" rel="tab3">
+            <span class="icon"><svg class="icon-svg">
+                <use xlink:href="#tab-arrow"></use>
+              </svg></span>
+            Отзывы
+          </span>
+          <div id="tab3" class="tab-content" style="display: none">
+            <div class="rate-product">
+              <div class="rate-product__title">Пожалуйста, оцените:</div>
+              <div class="rate-product__content">
+                <div class="rating-stars text-center">
+                  <ul id="stars">
+                    <li class="star" title="Poor" data-value="1">
+                      <i class="fa fa-star fa-fw"></i>
+                    </li>
+                    <li class="star" title="Fair" data-value="2">
+                      <i class="fa fa-star fa-fw"></i>
+                    </li>
+                    <li class="star" title="Good" data-value="3">
+                      <i class="fa fa-star fa-fw"></i>
+                    </li>
+                    <li class="star" title="Excellent" data-value="4">
+                      <i class="fa fa-star fa-fw"></i>
+                    </li>
+                    <li class="star" title="WOW!!!" data-value="5">
+                      <i class="fa fa-star fa-fw"></i>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <form action="/reviews/add/1/" method="post" id="review_form">
+              <div class="review-textarea">
+                <div class="form-group">
+                  <textarea class="form-control" name="review_text" autocomplete="off" required=""></textarea>
+                  <label for="text" class="label-name">
+                    <span class="content-name"> Ваш отзыв* </span>
+                  </label>
+                </div>
+                <input type="hidden" name="rating_value" value="0" id="id_rating_value" />
+
+                <button class="btn btn--main-min btn--fixed-small">Отправить</button>
+              </div>
+            </form>
+
+            <h2>Отзывы на товар</h2>
+
+            <p>Отзывов для данного товара пока еще нет.</p>
+          </div>
+          <!-- #tab3 -->
+        </div>
+      </div>
+
+      <div class="product-card__extra-text"></div>
+    </div>
+    <div class="product-card-side"></div>
+  </div>
+
+  <div class="product-card-bottom">
+    <span class="product-card-bottom__artikul">001</span>
+    <div class="product-card__navigation"></div>
+  </div>
+</div>
