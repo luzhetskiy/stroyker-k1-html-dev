@@ -643,6 +643,7 @@
     bottom: -2px
     background: transparent
     padding: 10px
+    width: auto
 
   & .product-item__content-bottom .product-comparison
     display: none
@@ -773,3 +774,8 @@
 
 .product-item--banner
   padding-bottom: 0
+
+.slider-constructor
+  &:has(.product-item--wide),
+  &:has(.product-item--line)
+    display: none !important
