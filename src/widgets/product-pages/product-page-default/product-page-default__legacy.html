@@ -1,6 +1,24 @@
 <div class="product" itemscope="" itemtype="http://schema.org/Product">
   <div class="product-card">
-    <div class="product-card__navigation"></div>
+    <div class="product-card__navigation">
+      <a href="" class="product-card__nav-prev">
+        <span class="icon">
+          <svg class="icon-svg">
+            <use xlink:href="#product-nav-arrow"></use>
+          </svg>
+        </span>
+        Предыдущий товар
+      </a>
+      <a href="" class="product-card__nav-next">
+
+        Следующий товар
+        <span class="icon">
+          <svg class="icon-svg">
+            <use xlink:href="#product-nav-arrow"></use>
+          </svg>
+        </span>
+      </a>
+    </div>
 
     <div class="product-card__head">
       <h1 class="product-card__title" itemprop="name">Товар 1</h1>
@@ -25,11 +43,11 @@
       </div>
       <div class="product-card__content">
         <div class="product-card__left">
-          <div class="product-card__wrapper mb-20">
-            <!-- @include ../../../components/product-pages/product-price-group/product-price-group.html -->
+          <div class="product-sidebar__wrapper mb-20">
+            Кастомнное html поле
           </div>
-          <div class="product-card__wrapper mb-20">
-            <!-- @include ../../../components/product-pages/product-price-group/product-price-group.html -->
+          <div class="product__wrapper mb-20">
+            <!-- @include ../../../components/product-pages/product-price-group/product-price-group__full.html -->
           </div>
           <div class="product-card__wrapper mb-20">
             <!-- @include ../../../components/product-pages/product-size-group/product-size-group.html -->
@@ -65,6 +83,28 @@
               </li>
             </ul>
           </div>
+          <div class="product-card__discription">
+            <span class="product-card__discription-title">Оплата:</span>
+            <ul>
+              <li>— Картой / наличными при получении</li>
+              <li>— Онлайн на сайте</li>
+              <li>— Оплата в кредит</li>
+              <li>— Безналом по счёту</li>
+            </ul>
+            <a href="" class="btn-border"><span class="icon"><svg class="icon-svg">
+                  <use xlink:href="#document-icon"></use>
+                </svg></span>Получить счёт</a>
+          </div>
+          <div class="product-card__discription">
+            <ul>
+              <li><strong>Доставка:</strong> точно и в срок</li>
+            </ul>
+
+
+            <a href="" class="btn-border"><span class="icon"><svg class="icon-svg">
+                  <use xlink:href="#delivery-icon"></use>
+                </svg></span>Рассчитать</a>
+          </div>
         </div>
       </div>
     </div>
@@ -72,6 +112,9 @@
 
   <div class="product-card-container">
     <div class="product-card-content">
+      <div class="g-content_inner g-content_frameless g-content mb-10">
+        <!-- @include ../../../components/product-pages/additional-products/additional-products.html -->
+      </div>
       <div class="tabs-content">
         <ul class="tabs">
           <li class="active" rel="tab1">Описание</li>
@@ -191,7 +234,23 @@
 
       <div class="product-card__extra-text"></div>
     </div>
-    <div class="product-card-side"></div>
+
+    <div class="product-card-side">
+      <div class="product-slider__banners owl-carousel">
+        <div class="item">
+          <div class="product-item product-item--banner">
+            <a href="#"><img src="http://mennanov.myjino.ru/whitebox/images/banner-2.jpg" alt=""></a>
+          </div>
+        </div>
+        <div class="item">
+          <div class="product-item product-item--banner">
+            <a href="#"><img src="http://mennanov.myjino.ru/whitebox/images/banner-2.jpg" alt=""></a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </div>
 
   <div class="product-card-bottom">

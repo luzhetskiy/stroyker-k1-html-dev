@@ -27,7 +27,7 @@
           <div class="top-header__content">
             <div class="top-header__content-left">
               <a href="/" class="logo">
-                <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/logo.svg" alt="" />
+                <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/logo.svg" alt="" />
               </a>
               <div class="main-menu">
                 <ul>
@@ -48,14 +48,6 @@
   
               <a data-fancybox="callme-modal" data-src="#callme-modal" href="javascript:;"
                 class="btn-border callme-button mobile-hide button-theme button-theme_callme">Заказать звонок</a>
-              <a href="/cart/" class="header-cart">
-                <i class="icon">
-                  <svg class="icon-svg">
-                    <use xlink:href="#shopping-cart"></use>
-                  </svg>
-                </i>
-                <span class="cart-number">0</span>
-              </a>
             </div>
             <div class="burger-menu">
               <div class="burger"></div>
@@ -121,33 +113,7 @@
                   </li>
                 </ul>
   
-                <ul>
-                  <li>
-                    <a href="#">
-                      Сотрудничество
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Доставка
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Акции
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Партнеры
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Контакты
-                    </a>
-                  </li>
-                </ul>
+                <ul></ul>
               </div>
   
               <div class="mobile-btn mobile-show">
@@ -193,6 +159,15 @@
                   info@nastroyker.ru
                 </a>
               </div>
+  
+              <a href="/cart/" class="header-cart">
+                <i class="icon">
+                  <svg class="icon-svg">
+                    <use xlink:href="#shopping-cart"></use>
+                  </svg>
+                </i>
+                <span class="cart-number">0</span>
+              </a>
             </div>
             <div class="header-fixed-content">
               <div class="header-phones top-header__phones">
@@ -366,6 +341,9 @@
                   <div class="col-md-7 col-xl-5">
                     <div class="product__main-column-content">
                       <div class="product__wrapper mb-20">
+                        Кастомнное html поле
+                      </div>
+                      <div class="product__wrapper mb-20">
                         <div class="product-price-group">
                           <div class="product-price-group__item">
                             <p class="g-text product-price-group__title">Персональная цена:</p>
@@ -521,11 +499,24 @@
                   </div>
                   <div class="col-lg-12 col-xl-3">
                     <div class="product__secondary-column-content">
-                      <div class="product-accessibility-group">
-                        <p class="g-text g-text_grey product-accessibility-group__text">Наличие:</p>
-                        <div class="g-row product-accessibility-group__row">
-                          <p class="g-text g-text_green product-accessibility-group__status">Много:</p>
-                          <p class="g-text g-text_grey product-accessibility-group__text">1125 шт</p>
+                      <div class="product__wrapper mb-20">
+                        <div class="product-accessibility-group">
+                          <p class="g-text g-text_grey product-accessibility-group__title">Наличие:</p>
+                          <div class="g-row product-accessibility-group__row">
+                            <p class="g-text g-text_green product-accessibility-group__status">Много:</p>
+                            <p class="g-text g-text_grey product-accessibility-group__text">1125 шт</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product__wrapper mb-20">
+                        <div class="product-static-text">
+                          <p class="g-title g-title_small mb-10">Оплата:</p>
+                          <ul>
+                            <li>— Картой / наличными при получении</li>
+                            <li>— Онлайн на сайте</li>
+                            <li>— Оплата в кредит</li>
+                            <li>— Безналом по счёту</li>
+                          </ul>
                         </div>
                       </div>
                     </div>
@@ -536,7 +527,7 @@
             <div class="product__secondary-content">
               <div class="row">
                 <div class="col-lg-9">
-                  <div class="product__inner-content g-content mb-10">
+                  <div class="product__inner-content g-content_frameless g-content mb-10">
                     <div class="additional-products-block">
                       <div class="additional-products">
                         <div class="additional-product">
@@ -1391,7 +1382,7 @@
         d="M3.073 1h16.854C21.067 1 22 1.808 22 2.796v9.847c0 .987-.933 1.796-2.073 1.796h-5.76c-1.378 0-1.097-.068-2.217.63L7.49 17.85c-.58.362-1.323.03-1.323-.59v-2.25c0-.484-.334-.571-.75-.571H3.074C1.933 14.439 1 13.63 1 12.643V2.796C1 1.808 1.933 1 3.073 1z"
         stroke="#1C52AC" stroke-width="2" stroke-miterlimit="22.926"></path>
     </symbol>
-
+  
     <symbol viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="comparison-delete">
       <path d="M6.344 6.343l11.314 11.314m-11.313 0L17.658 6.343" stroke="currentColor" stroke-width="2"></path>
     </symbol>
@@ -1434,30 +1425,30 @@
         action="/crm/callme-request/" onsubmit="">
         <input type="hidden" name="csrfmiddlewaretoken"
           value="FcUv0c8WVshb8HUBRqDXG302JnlqVjKR1s8yOz8Y3ZpCgASjJDa2utFsWNmSwlmR" />
-
+  
         <input type="hidden" name="url" value="/" />
-
+  
         <div class="form-group">
           <input type="text" class="form-control" name="name" autocomplete="off" required />
           <label for="name" class="label-name">
             <span class="content-name"> Как Вас зовут </span>
           </label>
         </div>
-
+  
         <div class="form-group">
           <input type="tel" class="form-control phone" name="phone" autocomplete="off" required />
           <label for="phone" class="label-name">
             <span class="content-name"> Ваш Телефон </span>
           </label>
         </div>
-
+  
         <div class="form-group-inline">
           <button type="submit" class="btn btn--main-min button-theme button-theme_primary">
             Отправить
           </button>
           <a class="form-close btn-close" data-fancybox-close>Закрыть</a>
         </div>
-
+  
         <span class="form-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с
           нашей политикой конфиденциальности</span>
       </form>
