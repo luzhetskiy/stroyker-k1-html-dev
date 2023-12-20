@@ -27,7 +27,7 @@
           <div class="top-header__content">
             <div class="top-header__content-left">
               <a href="/" class="logo">
-                <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/logo.svg" alt="" />
+                <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/logo.svg" alt="" />
               </a>
               <div class="main-menu">
                 <ul>
@@ -48,14 +48,6 @@
   
               <a data-fancybox="callme-modal" data-src="#callme-modal" href="javascript:;"
                 class="btn-border callme-button mobile-hide button-theme button-theme_callme">Заказать звонок</a>
-              <a href="/cart/" class="header-cart">
-                <i class="icon">
-                  <svg class="icon-svg">
-                    <use xlink:href="#shopping-cart"></use>
-                  </svg>
-                </i>
-                <span class="cart-number">0</span>
-              </a>
             </div>
             <div class="burger-menu">
               <div class="burger"></div>
@@ -121,33 +113,7 @@
                   </li>
                 </ul>
   
-                <ul>
-                  <li>
-                    <a href="#">
-                      Сотрудничество
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Доставка
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Акции
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Партнеры
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Контакты
-                    </a>
-                  </li>
-                </ul>
+                <ul></ul>
               </div>
   
               <div class="mobile-btn mobile-show">
@@ -193,6 +159,15 @@
                   info@nastroyker.ru
                 </a>
               </div>
+  
+              <a href="/cart/" class="header-cart">
+                <i class="icon">
+                  <svg class="icon-svg">
+                    <use xlink:href="#shopping-cart"></use>
+                  </svg>
+                </i>
+                <span class="cart-number">0</span>
+              </a>
             </div>
             <div class="header-fixed-content">
               <div class="header-phones top-header__phones">
@@ -306,7 +281,25 @@
         <div class="content-block">
           <div class="product" itemscope="" itemtype="http://schema.org/Product">
             <div class="product-card">
-              <div class="product-card__navigation"></div>
+              <div class="product-card__navigation">
+                <a href="" class="product-card__nav-prev">
+                  <span class="icon">
+                    <svg class="icon-svg">
+                      <use xlink:href="#product-nav-arrow"></use>
+                    </svg>
+                  </span>
+                  Предыдущий товар
+                </a>
+                <a href="" class="product-card__nav-next">
+          
+                  Следующий товар
+                  <span class="icon">
+                    <svg class="icon-svg">
+                      <use xlink:href="#product-nav-arrow"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
           
               <div class="product-card__head">
                 <h1 class="product-card__title" itemprop="name">Товар 1</h1>
@@ -334,51 +327,45 @@
                     <div class="product-sidebar__wrapper mb-20">
                       <p>Кастомнное html поле</p>
                     </div>
-                    <div class="product-card__wrapper mb-20">
+                    <div class="product__wrapper mb-20">
                       <div class="product-price-group">
                         <div class="product-price-group__item">
                           <p class="g-text product-price-group__title">Персональная цена:</p>
-                      
                           <div class="d-flex flex-column gap-10">
                             <div class="product-price-group__row">
-                              <p class="product-price-group__price product-price-group__price_primary">500 ₽/шт</p>
-                      
-                              <p class="g-text product-price-group__percent">
-                                <svg width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M15.5025 0.75H10.2L12.3225 2.8725L8.475 6.72L6.0675 4.3125L0.1875 10.185L1.2525 11.25L6.0675 6.435L8.475 8.8425L13.38 3.93L15.5025 6.0525V0.75Z">
-                                  </path>
-                                </svg>
-                                0.2%
-                              </p>
-                              <p class="g-text g-text_small product-price-group__date-text">
-                                c 08.01.2023
-                              </p>
-                      
+                              <p class="product-price-group__price product-price-group__price_primary">500 ₽/кг</p>
+                              <div class="g-row">
+                                <p class="g-text product-price-group__percent">
+                                  <svg width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                      d="M15.5025 0.75H10.2L12.3225 2.8725L8.475 6.72L6.0675 4.3125L0.1875 10.185L1.2525 11.25L6.0675 6.435L8.475 8.8425L13.38 3.93L15.5025 6.0525V0.75Z">
+                                    </path>
+                                  </svg>
+                                  0.2%
+                                </p>
+                                <p class="g-text g-text_small product-price-group__date-text">
+                                  c 08.01.2023
+                                </p>
+                              </div>
                             </div>
                             <div class="product-price-group__row">
                               <p class="product-price-group__price">Цена:</p>
-                              <p class="product-price-group__price">585 ₽/шт</p>
+                              <p class="product-price-group__price">585 ₽/кг</p>
                               <p class="product-price-group__price product-price-group__price_old">
-                                585 ₽/шт
+                                585 ₽/кг
                               </p>
                             </div>
                             <div class="product-price-group__row">
                               <p class="product-price-group__price">Цена онлайн:</p>
-                              <p class="product-price-group__price">585 ₽/шт</p>
+                              <p class="product-price-group__price">585 ₽/кг</p>
                               <p class="product-price-group__price product-price-group__price_old">
-                                585 ₽/шт
+                                585 ₽/кг
                               </p>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="product-card__wrapper mb-20">
-                      <div class="product-price-group">
                         <div class="product-price-group__item">
                           <p class="g-text product-price-group__title">Персональная цена:</p>
-                      
                           <div class="d-flex flex-column gap-10">
                             <div class="product-price-group__row">
                               <p class="product-price-group__price product-price-group__price_primary">500 ₽/шт</p>
