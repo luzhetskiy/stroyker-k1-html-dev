@@ -76,32 +76,40 @@
           line-height: 1px
           font-size: 30px
 
-  .fill
-    fill: var(--bottom-mobile-menu-inactive, var(--neutral-light))
-    transition: .3s
-  .stroke
-    stroke: var(--bottom-mobile-menu-inactive, var(--neutral-light))
-    transition: .3s
-
   &_active
     .bottom-mobile-menu-button
       &__text
         color: var(--bottom-mobile-menu-active, var(--accent-color))
 
-    .fill
-      fill: var(--bottom-mobile-menu-active, var(--accent-color))
-    .stroke
-      stroke: var(--bottom-mobile-menu-active, var(--accent-color))
+      &__icon
+        opacity: 0
+        &_active
+          opacity: 1
+        &_always-active
+          opacity: 1
 
   &:hover
     .bottom-mobile-menu-button
       &__text
         color: var(--bottom-mobile-menu-active, var(--accent-color))
 
-    .fill
-      fill: var(--bottom-mobile-menu-active, var(--accent-color))
-    .stroke
-      stroke: var(--bottom-mobile-menu-active, var(--accent-color))
+      &__icon
+        opacity: 0
+        &_active
+          opacity: 1
+        &_always-active
+          opacity: 1
+
+  &__icon
+    position: absolute
+    opacity: 1
+    transition: .3s
+    &_active
+      opacity: 0
+    &_always-active
+      opacity: 1
+    &_hidden
+      opacity: 0
 
   &__text
     font-size: 10px
@@ -125,6 +133,8 @@
     display: flex
     align-items: center
     justify-content: center
+    height: 25px
+    width: 30px
 
   &__counter
     position: absolute
@@ -142,6 +152,7 @@
     justify-content: center
     right: -9px
     top: -9px
+    z-index: 1
 
 @media (max-width: 340px)
   .bottom-mobile-menu
