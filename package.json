@@ -35,12 +35,5 @@
 		"gulp-sass": "^5.1.0",
 		"gulp-sourcemaps": "^3.0.0",
 		"gulp-terser": "^2.1.0"
-	},
-	"dependencies": {
-		"@rollup/plugin-commonjs": "^25.0.7",
-		"@rollup/plugin-node-resolve": "^15.2.3",
-		"gulp-include": "^2.4.1",
-		"gulp-js-import": "^1.0.6",
-		"gulp-rollup": "^2.17.0"
 	}
 }
