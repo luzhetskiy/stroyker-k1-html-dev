@@ -3,6 +3,7 @@
   --custom-accent-color: #2363d1;
   --custom-accent-dark-color: #1c52ac;
   --custom-accent-light-color: #b7cbe5;
+  --custom-accent-lighter-color: #e7eef6;
 
   --custom-neutral-lightest: #ffffff;
   --custom-neutral-lightest-opacity: #ffffff1a;
@@ -265,7 +266,7 @@
   --color-button-secondary-background: var(--neutral-lightest-color);
   --color-button-secondary-border: var(--accent-color);
   --color-button-secondary-text-hover: var(--neutral-lightest-color);
-  --color-button-secondary-background-hover: var(--accent-color);
+  --color-button-secondary-background-hover: var(--custom-accent-lighter-color);
   --color-button-secondary-border-hover: var(--accent-color);
 
   /* не активная кнопка */
