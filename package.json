@@ -13,7 +13,9 @@
 		"test": "backstop test",
 		"test-approve": "backstop approve",
 		"test-init": "backstop init",
-		"test-reference": "backstop reference"
+		"test-reference": "backstop reference",
+		"unit-test": "jest",
+		"unit-test-coverage": "jest --coverage"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.23.2",
@@ -34,6 +36,7 @@
 		"gulp-preprocess": "^4.0.2",
 		"gulp-sass": "^5.1.0",
 		"gulp-sourcemaps": "^3.0.0",
-		"gulp-terser": "^2.1.0"
+		"gulp-terser": "^2.1.0",
+		"jest": "^29.7.0"
 	}
 }
