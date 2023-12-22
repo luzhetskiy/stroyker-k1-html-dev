@@ -3,17 +3,18 @@
 //@include ../../shared/config/index.js
 //@include ../../shared/libs/index.js
 
-//@include ./legacy/clickEvents.js
-//@include ./legacy/smoothScroll.js
+//@include ./legacy/accordion.js
 //@include ./legacy/bigSlides.js
-//@include ./legacy/customSelect.js
-//@include ./legacy/tabs.js
-//@include ./legacy/syncSliders.js
 //@include ./legacy/catalogViewMode.js
-//@include ./legacy/rangeSlider.js
+//@include ./legacy/clickEvents.js
+//@include ./legacy/customSelect.js
 //@include ./legacy/gallery.js
 //@include ./legacy/header.js
 //@include ./legacy/homeBanner.js
+//@include ./legacy/rangeSlider.js
+//@include ./legacy/smoothScroll.js
+//@include ./legacy/syncSliders.js
+//@include ./legacy/tabs.js
 
 //@include ../../components/index.js
 //@include ../../widgets/index.js
