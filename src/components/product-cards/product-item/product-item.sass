@@ -34,10 +34,8 @@
 
 @media (max-width: 767px)
   .product-item
-    height: 145px
     display: -webkit-box
     display: -ms-flexbox
-    padding-bottom: 0
     display: flex
     border-left: 0
     border-right: 0
@@ -346,8 +344,9 @@
     flex-direction: column
 
 .product-item__cost-product
-  font-size: 15px
-  line-height: 21px
+  font-size: 18px
+  font-weight: 700
+  line-height: 24px
   color: #333
   font-weight: bold
   white-space: nowrap
@@ -731,6 +730,10 @@
 .product-item__content-top
   padding: 10px 12px
 
+@media (max-width: 767px)
+  .product-item__content-top
+    padding-bottom: 50px
+
 .product-item__content-bottom
   padding: 0px 12px 10px 12px
 
@@ -749,7 +752,6 @@
 
 @media (max-width: 767px)
   .product-item
-    height: 155px
 
     &__cost
       bottom: initial
