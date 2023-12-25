@@ -48,31 +48,56 @@
       </div>
       <div class="product-card__content">
         <div class="product-card__left">
-          <div class="product-sidebar__static-text-wrapper mb-20">
+          <div class="product-card__static-text-wrapper mb-20">
             Кастомнное html поле
           </div>
-          <div class="product__wrapper mb-20">
-            <!-- @include ../../../components/product-pages/product-price-group/product-price-group__online-old.html -->
+          <!-- @include ../../../components/product-pages/product-price-group/product-card__personal-cost.html -->
+          <div class="shopping-cart-product">
+            <div class="input-number input-number--lg">
+              <div class="order-down"></div>
+              <input type="number" min="0" step="1" value="1" id="number" required="">
+              <div class="order-up"></div>
+            </div>
+            <a href="" class="shopping-cart-btn shopping-cart-btn--lg">Купить</a>
           </div>
-          <div class="product-card__wrapper mb-20">
-            <!-- @include ../../../components/product-pages/product-size-group/product-size-group.html -->
-          </div>
-          <div class="product-card__wrapper mb-20">
-            <!-- @include ../../../components/product-pages/product-select-group/product-select-group.html -->
-          </div>
+          <div class="product-card__btns">
+            <a href="" class="btn-radius btn-radius--comparison">
+              <span class="icon-svg">
+                <svg class="icon">
+                  <use xlink:href="#compare-icon-2"></use>
+                </svg>
+              </span>Сравнить</a>
+            <div class="share-block">
+              <a class="btn-radius share-btn ">
+                <span class="icon-svg">
+                  <svg class="icon">
+                    <use xlink:href="#share-icon"></use>
+                  </svg>
 
+                </span>Поделиться</a>
 
-          <div class="product-card__wrapper g-row mb-30">
-            <!-- @include ../../../components/product-pages/product-page-buttons/product-add-to-cart-button.html -->
-            <!-- @include ../../../components/product-pages/product-input-number/product-input-number.html -->
+              <div class="share-block__show">
+                <p>Чтобы поделиться ссылкой, нажмите на иконку вашей соцсети</p>
+                <div class="share-block__list">
+                  <a href="" class="share-social"><img src="images/vk.svg" alt=""></a>
+                  <a href="" class="share-social"><img src="images/tw.svg" alt=""></a>
+                  <a href="" class="share-social"><img src="images/ok.svg" alt=""></a>
+                  <a href="" class="share-social"><img src="images/fb.svg" alt=""></a>
+                </div>
+              </div>
+            </div>
+
           </div>
-          <div class="product-card__wrapper g-row g-row_space-between mb-20">
-            <!-- @include ../../../components/product-pages/product-page-buttons/product-share-button.html -->
-            <!-- @include ../../../components/product-pages/product-page-buttons/product-compare-button.html -->
-          </div>
-          <div class="product-card__wrapper g-row mb-20">
-            <!-- @include ../../../components/product-pages/product-rating/product-rating.html -->
-            <!-- @include ../../../components/product-pages/product-page-buttons/product-reviews-button.html -->
+          <div class="product-card__rating">
+            <span class="product-item__rating">
+              <span class="star star--full"></span>
+              <span class="star star--full"></span>
+              <span class="star star--full"></span>
+              <span class="star star--half"></span>
+              <span class="star star--empty"></span>
+            </span>
+
+            <span class="product-card__review-link"><a rel="tab3">Отзывы (6)</a></span>
           </div>
         </div>
         <div class="product-card__right">

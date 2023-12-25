@@ -4189,6 +4189,12 @@ p:last-child {
   text-wrap: nowrap;
 }
 
+.product .shopping-cart-btn {
+  background-image: url(../images/icons/shopping-cart.svg);
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+}
+
 .shopping-cart-btn .icon {
   width: 30px;
   height: 26px;
