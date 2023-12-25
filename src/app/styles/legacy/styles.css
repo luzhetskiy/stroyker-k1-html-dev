@@ -4171,8 +4171,7 @@ p:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: var(--main-elements-color, #2363d1) url(../images/icons/shopping-cart.svg) 50% 50%
-    no-repeat;
+  background: var(--main-elements-color, #2363d1);
   background-size: 28px auto;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;

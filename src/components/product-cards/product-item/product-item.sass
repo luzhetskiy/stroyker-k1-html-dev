@@ -6,7 +6,6 @@
   border: 1px solid var(--color-card-border, #D9D9DE)
   margin: -0.5px
   transition: var(--trs-2, .3s)
-  padding-bottom: 50px
 
   &__image-inner
     img
@@ -22,6 +21,9 @@
   &:has(.product-price-range) .product-item__name
     height: 36px
     -webkit-line-clamp: 2
+
+  &:has(.product-card-slideshow) .product-card-sell-badge_bottom
+    bottom: 15px
 
   &:hover
     border: 1px solid var(--product-preview-border-hover-color, #d9d9de)
@@ -143,7 +145,7 @@
 
 .product-item__content-top
   position: relative
-  padding: 15px 12px 10px 12px
+  padding: 15px 12px 50px 12px
   display: block
   height: 100%
   width: 100%
@@ -727,6 +729,7 @@
 
 .product-item__content-top
   padding: 10px 12px
+  padding-bottom: 50px
 
 @media (max-width: 767px)
   .product-item__content-top

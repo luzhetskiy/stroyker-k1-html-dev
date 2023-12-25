@@ -35,14 +35,22 @@ $(document).ready(() => {
       .find(".product-card-slideshow__dot_active")
       .removeClass("product-card-slideshow__dot_active");
       if (id >= length) {
-        parent.find(`[data-sector-image="${1}"]`).addClass("product-card-slideshow__image_active");
-        parent.find(`[data-sector-dot="${1}"]`).addClass("product-card-slideshow__dot_active");
+        parent
+        .find(`[data-sector-image]:nth-child(1)`)
+        .addClass("product-card-slideshow__image_active");
+        parent
+        .find(`[data-sector-dot]:nth-child(1)`)
+        .addClass("product-card-slideshow__dot_active");
         return;
       }
       parent
-      .find(`[data-sector-image="${id + 1}"]`)
+      .find(`[data-sector-image="${id}"]`)
+      .next()
       .addClass("product-card-slideshow__image_active");
-      parent.find(`[data-sector-dot="${id + 1}"]`).addClass("product-card-slideshow__dot_active");
+      parent
+      .find(`[data-sector-dot="${id}"]`)
+      .next()
+      .addClass("product-card-slideshow__dot_active");
     }
     if (touchendX > touchstartX) {
       parent
@@ -53,15 +61,21 @@ $(document).ready(() => {
       .removeClass("product-card-slideshow__dot_active");
       if (id <= 1) {
         parent
-        .find(`[data-sector-image="${length}"]`)
+        .find(`[data-sector-image]:nth-child(${length})`)
         .addClass("product-card-slideshow__image_active");
-        parent.find(`[data-sector-dot="${length}"]`).addClass("product-card-slideshow__dot_active");
+        parent
+        .find(`[data-sector-dot]:nth-child(${length})`)
+        .addClass("product-card-slideshow__dot_active");
         return;
       }
       parent
-      .find(`[data-sector-image="${id - 1}"]`)
+      .find(`[data-sector-image="${id}"]`)
+      .prev()
       .addClass("product-card-slideshow__image_active");
-      parent.find(`[data-sector-dot="${id - 1}"]`).addClass("product-card-slideshow__dot_active");
+      parent
+      .find(`[data-sector-dot="${id}"]`)
+      .prev()
+      .addClass("product-card-slideshow__dot_active");
     }
   });
 
