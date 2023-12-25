@@ -4,6 +4,7 @@
   border: 1px solid var(--color-card-border, #d9d9de)
   display: flex !important
   flex-direction: column
+  overflow: hidden
 
   &__link
     position: absolute
@@ -201,6 +202,10 @@
 
 @media (max-width: 575.98px)
   .product-card-v2
+
+    &__buttons
+      & > *
+        height: 40px !important
 
     &_type-2
       display: grid !important
