@@ -10,8 +10,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="../libs/fancy-box/fancy-box.css" />
   <link rel="stylesheet" href="../libs/mmenu/mmenu.css" />
+  <link rel="stylesheet" href="../libs/noslider/nouislider.min.css" />
   <script defer src="../libs/jquery/jquery.js"></script>
   <script defer src="../libs/owl-carousel/owl-carousel.js"></script>
+  <script defer src="../libs/noslider/nouislider.min.js"></script>
+  <script defer src="../libs/wNumb/wNumb.js"></script>
+
   <script defer src="../libs/slick/slick.js"></script>
   <script defer src="../libs/mmenu/mmenu.js"></script>
 
@@ -405,50 +409,6 @@
                 <form action="/catalog/category/elektrosvarnye-fitingi/otvod-elektrosvarnoj/" id="catalog_filter_form"
                   method="get" class="catalog-filter-body" autocomplete="off" data-gtm-form-interact-id="0">
                   <ul class="catalog-filter-accordion">
-                    <li class="active">
-                      <a href="#" class="opener">Диаметр, мм
-                        <svg class="icon">
-                          <use xlink:href="#tab-arrow"></use>
-                        </svg>
-                      </a>
-                      <ul class="submenu" style="display: block">
-                        <li>
-                          <div class="filter-item">
-                            <div class="filter-item__content">
-                              <div class="filter-range">
-                                <div class="filter-range__head">
-                                  <span>От</span><span>До</span>
-                                </div>
-                                <div class="range-slider noUi-target noUi-ltr noUi-horizontal" data-name="diametr-mm">
-                                  <div class="noUi-base">
-                                    <div class="noUi-origin" style="left: 0%">
-                                      <div class="noUi-handle" data-handle="0" style="z-index: 5"></div>
-                                    </div>
-                                    <div class="noUi-connect" style="left: 0%; right: 0%"></div>
-                                    <div class="noUi-origin" style="left: 100%">
-                                      <div class="noUi-handle" data-handle="1" style="z-index: 4"></div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="filter-range__content">
-                                  <div class="input-cont">
-                                    <div class="input-placeholder"></div>
-                                    <input type="text" name="diametr-mm_0" class="range-input" data-current-value="25"
-                                      data-min-value="25" id="id_diametr-mm_0" disabled="" />
-                                  </div>
-                                  <div class="input-cont">
-                                    <div class="input-placeholder"></div>
-                                    <input type="text" name="diametr-mm_1" class="range-input" data-current-value="160"
-                                      data-max-value="160" id="id_diametr-mm_1" disabled="" />
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-
                     <li>
                       <a href="#" class="opener">Материал
                         <svg class="icon">
@@ -531,33 +491,23 @@
                     <span class="filter-item-title">Цена</span>
                     <div class="filter-range">
                       <div class="filter-range__head"><span>От</span><span>До</span></div>
-                      <div class="range-slider noUi-target noUi-ltr noUi-horizontal" data-name="price_range">
-                        <div class="noUi-base">
-                          <div class="noUi-origin" style="left: 0%">
-                            <div class="noUi-handle" data-handle="0" style="z-index: 5"></div>
-                          </div>
-                          <div class="noUi-connect" style="left: 0%; right: 0%"></div>
-                          <div class="noUi-origin" style="left: 100%">
-                            <div class="noUi-handle" data-handle="1" style="z-index: 4"></div>
-                          </div>
-                        </div>
+                      <div class="range-slider" data-name="price_range">
+
                       </div>
                       <div class="filter-range__content">
                         <div class="input-cont">
                           <div class="input-placeholder"></div>
                           <input type="text" name="price_range_0" value="837" class="range-input"
-                            data-current-value="837" data-min-value="837" id="id_price_range_0" disabled="" />
+                            data-current-value="837" data-min-value="837" id="id_price_range_0" />
                         </div>
                         <div class="input-cont">
                           <div class="input-placeholder"></div>
                           <input type="text" name="price_range_1" value="900" class="range-input"
                             data-current-value="900" data-max-value="9200" id="id_price_range_1"
-                            data-gtm-form-interact-field-id="0" disabled="" />
+                            data-gtm-form-interact-field-id="0" />
                         </div>
                       </div>
                     </div>
-                    <span class="filter-show-all" style=""><a
-                        href="/catalog/category/elektrosvarnye-fitingi/otvod-elektrosvarnoj/">Показать 19</a></span>
                   </div>
 
                   <div class="catalog-filter__btns">
@@ -984,47 +934,57 @@
       <form action="/catalog/category/elektrosvarnye-fitingi/otvod-elektrosvarnoj/" id="catalog_filter_form"
         method="get" class="catalog-filter-body" autocomplete="off">
         <ul class="catalog-filter-accordion">
+
+
+
+
+
+
+
           <li class="active">
             <a href="#" class="opener">Диаметр, мм
               <svg class="icon">
                 <use xlink:href="#tab-arrow"></use>
               </svg>
             </a>
-            <ul class="submenu" style="display: block">
+            <ul class="submenu" style="display:block">
               <li>
                 <div class="filter-item">
                   <div class="filter-item__content">
                     <div class="filter-range">
                       <div class="filter-range__head"><span>От</span><span>До</span></div>
-                      <div class="range-slider noUi-target noUi-ltr noUi-horizontal" data-name="diametr-mm">
-                        <div class="noUi-base">
-                          <div class="noUi-origin" style="left: 0%">
-                            <div class="noUi-handle" data-handle="0" style="z-index: 5"></div>
-                          </div>
-                          <div class="noUi-connect" style="left: 0%; right: 0%"></div>
-                          <div class="noUi-origin" style="left: 100%">
-                            <div class="noUi-handle" data-handle="1" style="z-index: 4"></div>
-                          </div>
-                        </div>
+                      <div class="range-slider" data-name="diametr-mm">
+
                       </div>
                       <div class="filter-range__content">
                         <div class="input-cont">
-                          <div class="input-placeholder"></div>
-                          <input type="text" name="diametr-mm_0" class="range-input" data-current-value="25"
-                            data-min-value="25" id="id_diametr-mm_0" disabled="" />
+                          <div class="input-placeholder"></div><input type="text" name="diametr-mm_0"
+                            class="range-input" data-current-value="25" data-min-value="25" id="id_diametr-mm_0"
+                            disabled="">
                         </div>
                         <div class="input-cont">
-                          <div class="input-placeholder"></div>
-                          <input type="text" name="diametr-mm_1" class="range-input" data-current-value="160"
-                            data-max-value="160" id="id_diametr-mm_1" disabled="" />
+                          <div class="input-placeholder"></div><input type="text" name="diametr-mm_1"
+                            class="range-input" data-current-value="160" data-max-value="160" id="id_diametr-mm_1"
+                            disabled="">
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
               </li>
             </ul>
           </li>
+
+
+
+
+
+
+
+
+
+
 
           <li>
             <a href="#" class="opener">Материал
@@ -1032,22 +992,33 @@
                 <use xlink:href="#tab-arrow"></use>
               </svg>
             </a>
-            <ul class="submenu" style="display: none">
+            <ul class="submenu" style="display:none">
               <li>
                 <div class="filter-item">
                   <div class="filter-item__content">
                     <div class="form-group">
                       <div class="checkbox">
-                        <input type="checkbox" name="material" value="polietilen-pe-100" id="id_material_0" />
+                        <input type="checkbox" name="material" value="polietilen-pe-100" id="id_material_0">
 
                         <label for="id_material_0">Полиэтилен PE 100 <span>19</span></label>
                       </div>
                     </div>
                   </div>
                 </div>
+
               </li>
             </ul>
           </li>
+
+
+
+
+
+
+
+
+
+
 
           <li>
             <a href="#" class="opener">Градус
@@ -1055,30 +1026,46 @@
                 <use xlink:href="#tab-arrow"></use>
               </svg>
             </a>
-            <ul class="submenu" style="display: none">
+            <ul class="submenu" style="display:none">
               <li>
                 <div class="filter-item">
                   <div class="filter-item__content">
                     <div class="form-group">
                       <div class="checkbox">
-                        <input type="checkbox" name="gradus" value="45" id="id_gradus_0" />
+                        <input type="checkbox" name="gradus" value="45" id="id_gradus_0">
 
                         <label for="id_gradus_0">45° <span>8</span></label>
                       </div>
                     </div>
 
+
+
+
+
+
                     <div class="form-group">
                       <div class="checkbox">
-                        <input type="checkbox" name="gradus" value="90" id="id_gradus_1" />
+                        <input type="checkbox" name="gradus" value="90" id="id_gradus_1">
 
                         <label for="id_gradus_1">90° <span>11</span></label>
                       </div>
                     </div>
                   </div>
                 </div>
+
               </li>
             </ul>
           </li>
+
+
+
+
+
+
+
+
+
+
 
           <li>
             <a href="#" class="opener">Производитель
@@ -1086,22 +1073,36 @@
                 <use xlink:href="#tab-arrow"></use>
               </svg>
             </a>
-            <ul class="submenu" style="display: none">
+            <ul class="submenu" style="display:none">
               <li>
                 <div class="filter-item">
                   <div class="filter-item__content">
                     <div class="form-group">
                       <div class="checkbox">
-                        <input type="checkbox" name="proizvoditel" value="fox" id="id_proizvoditel_0" />
+                        <input type="checkbox" name="proizvoditel" value="fox" id="id_proizvoditel_0">
 
                         <label for="id_proizvoditel_0">FOX <span>19</span></label>
                       </div>
                     </div>
                   </div>
                 </div>
+
               </li>
             </ul>
           </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
         </ul>
 
         <div class="catalog-filter__bottom">
@@ -1110,36 +1111,38 @@
             <div class="filter-range__head"><span>От</span><span>До</span></div>
             <div class="range-slider noUi-target noUi-ltr noUi-horizontal" data-name="price_range">
               <div class="noUi-base">
-                <div class="noUi-origin" style="left: 0%">
-                  <div class="noUi-handle" data-handle="0" style="z-index: 5"></div>
+                <div class="noUi-origin" style="left: 0%;">
+                  <div class="noUi-handle" data-handle="0" style="z-index: 5;"></div>
                 </div>
-                <div class="noUi-connect" style="left: 0%; right: 0%"></div>
-                <div class="noUi-origin" style="left: 100%">
-                  <div class="noUi-handle" data-handle="1" style="z-index: 4"></div>
+                <div class="noUi-connect" style="left: 0%; right: 0%;"></div>
+                <div class="noUi-origin" style="left: 100%;">
+                  <div class="noUi-handle" data-handle="1" style="z-index: 4;"></div>
                 </div>
               </div>
             </div>
             <div class="filter-range__content">
               <div class="input-cont">
-                <div class="input-placeholder"></div>
-                <input type="text" name="price_range_0" class="range-input" data-current-value="837"
-                  data-min-value="837" id="id_price_range_0" disabled="" />
+                <div class="input-placeholder"></div><input type="text" name="price_range_0" class="range-input"
+                  data-current-value="837" data-min-value="837" id="id_price_range_0" disabled="">
               </div>
               <div class="input-cont">
-                <div class="input-placeholder"></div>
-                <input type="text" name="price_range_1" class="range-input" data-current-value="9200"
-                  data-max-value="9200" id="id_price_range_1" disabled="" />
+                <div class="input-placeholder"></div><input type="text" name="price_range_1" class="range-input"
+                  data-current-value="9200" data-max-value="9200" id="id_price_range_1" disabled="">
               </div>
             </div>
           </div>
         </div>
 
+
         <div class="catalog-filter__btns">
-          <button class="btn btn--main-min button-theme button-theme_primary">Применить</button>
+          <button class="btn btn--main-min button-theme button-theme_primary">
+            Применить
+          </button>
           <a href="/catalog/category/elektrosvarnye-fitingi/otvod-elektrosvarnoj/"
             class="btn-border btn-link">Очистить</a>
         </div>
         <span class="filter-show-all" style="display: none"></span>
+
       </form>
     </div>
   </div>

@@ -6133,18 +6133,6 @@ header .header-fixed-content .header-phone {
   background: var(--main-elements-color, #2363d1);
 }
 
-.filter-range .noUi-horizontal .noUi-handle {
-  top: -7px;
-}
-
-.filter-range .noUi-origin:first-child .noUi-handle {
-  left: 0;
-}
-
-.filter-range .noUi-origin:last-child .noUi-handle {
-  left: -20px;
-}
-
 .landing-title {
   text-transform: uppercase;
 }
