@@ -78,7 +78,7 @@
   white-space: break-spaces
   overflow: hidden
   text-overflow: ellipsis
-  width: 100%
+  width: auto
   padding: 8px 14px
   transition: var(--trs-1)
   border: 1px solid transparent
@@ -237,3 +237,13 @@
 @media (max-width: 767px)
   .shopping-cart-product .btn-checkout
     width: calc(100% - 80px)
+
+.st-button_add-to-cart
+  width: 100%
+
+.st-button_add-to-favorite
+  min-width: 52px
+  max-width: 52px
+
+.st-button_without-price
+  width: 100%
