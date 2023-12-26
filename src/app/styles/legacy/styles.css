@@ -11910,6 +11910,15 @@ canvas {
   display: inline-block;
 }
 
+.search-result-item__article {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  color: #a7a7a7;
+  display: block;
+  margin-bottom: 10px;
+}
+
 .search-result-item__product {
   padding: 2px 7px;
   background: #e5e5ea;
@@ -11925,7 +11934,7 @@ canvas {
   line-height: 20px;
   color: var(--main-elements-color, #2363d1);
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 3px;
 }
 
 .search-result-item__cost {

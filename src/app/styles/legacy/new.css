@@ -5372,9 +5372,6 @@ body {
   flex-direction: row;
   align-items: flex-start;
 }
-.search-result-item__name {
-  margin-bottom: 15px;
-}
 .search-result-item__image {
   width: 60px;
   height: 60px;
