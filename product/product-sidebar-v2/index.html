@@ -383,7 +383,7 @@
                           <div class="d-flex flex-column gap-10">
                             <div class="product-price-group__row">
                               <p class="product-price-group__price product-price-group__price_primary">500 ₽/шт</p>
-                              <span class="product-sale-badge">
+                              <span class="product-sale-badge d-none d-md-block">
                                 -25%
                               </span>
                             </div>
@@ -487,29 +487,31 @@
                         Сравнить
                       </a>
                     </div>
-                    <div class="product-sidebar__wrapper d-flex flex-column gap-10 mb-20">
-                      <a class="g-button g-button_frame product-check-button" href="#"><svg width="16" height="20" viewBox="0 0 16 20"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M11.41 0H0V20H16V4.59L11.41 0ZM12 14H4V6H12V14ZM7.35 7.35H5.35V9.35H7.35V7.35ZM10.65 10.65H8.65V12.65H10.65V10.65ZM7.35 10.65H5.35V12.65H7.35V10.65ZM10.65 7.35H8.65V9.35H10.65V7.35Z">
-                          </path>
-                        </svg>
-                        Получить счёт
-                      </a>
-                      <a class="g-button g-button_frame product-question-button" href="#"><svg width="20" height="22" viewBox="0 0 20 22"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M17 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.316071 1.44129 0 2.20435 0 3V22L6 16H17C17.7956 16 18.5587 15.6839 19.1213 15.1213C19.6839 14.5587 20 13.7956 20 13V3C20 2.20435 19.6839 1.44129 19.1213 0.87868C18.5587 0.316071 17.7956 0 17 0ZM11 11H6V9H11V11ZM14 7H6V5H14V7Z">
-                          </path>
-                        </svg>
-                        Задать вопрос
-                      </a>
+                    <div class="product-sidebar__static-text-wrapper mb-20">
+                      <div class=" d-flex flex-column gap-10 mb-20">
+                        <a class="g-button g-button_frame product-check-button" href="#"><svg width="16" height="20" viewBox="0 0 16 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M11.41 0H0V20H16V4.59L11.41 0ZM12 14H4V6H12V14ZM7.35 7.35H5.35V9.35H7.35V7.35ZM10.65 10.65H8.65V12.65H10.65V10.65ZM7.35 10.65H5.35V12.65H7.35V10.65ZM10.65 7.35H8.65V9.35H10.65V7.35Z">
+                            </path>
+                          </svg>
+                          Получить счёт
+                        </a>
+                        <a class="g-button g-button_frame product-question-button" href="#"><svg width="20" height="22" viewBox="0 0 20 22"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M17 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.316071 1.44129 0 2.20435 0 3V22L6 16H17C17.7956 16 18.5587 15.6839 19.1213 15.1213C19.6839 14.5587 20 13.7956 20 13V3C20 2.20435 19.6839 1.44129 19.1213 0.87868C18.5587 0.316071 17.7956 0 17 0ZM11 11H6V9H11V11ZM14 7H6V5H14V7Z">
+                            </path>
+                          </svg>
+                          Задать вопрос
+                        </a>
+                      </div>
+                      <p class="g-text">
+                        <span class="g-text g-text_accent">Внимание!</span>
+                        Товар можно оплатить онлайн, за наличные, получить счет или купить в кредит
+                        онлайн.
+                      </p>
                     </div>
-                    <p class="g-text mb-20">
-                      <span class="g-text g-text_accent">Внимание!</span>
-                      Товар можно оплатить онлайн, за наличные, получить счет или купить в кредит
-                      онлайн.
-                    </p>
                     <div class="product-banner-group">
                       <img class="g-image product-banner-group__image"
                         src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/add.jpg" alt="">
@@ -520,6 +522,7 @@
               <div class="col-lg-12">
                 <div class="g-content product-sidebar__secondary-content mb-10">
                   <div class="additional-products-block">
+                    <p class="g-title additional-products-block__title">С этим товаром обычно покупают</p>
                     <div class="additional-products">
                       <div class="additional-product">
                         <div href="#" class="additional-product__image-wrapper">
