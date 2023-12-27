@@ -5382,6 +5382,15 @@ body {
 .search-result-item__content {
   flex: 1 1 auto;
 }
+.s-item-article {
+  font-family: Golos;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 10px;
+  color: #A7A7A7;
+  display: block;
+  margin-bottom: 10px;
+}
 
 .product-card-container .tabs-content:not(:last-child) {
   margin-bottom: 40px;

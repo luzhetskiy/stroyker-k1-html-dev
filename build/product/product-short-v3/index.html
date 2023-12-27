@@ -314,7 +314,7 @@
               <div class="g-content g-content_frameless product-short__main-content">
                 <div class="row">
                   <div class="col-lg-4 col-md-6">
-                    <div class="product-slideshow">
+                    <div class="product-slideshow-default">
                       <div id="sync1" class="owl-carousel owl-theme owl-loaded owl-drag">
                         <a class="item" href="../../images/banner-content-1.png" data-fancybox="images" target="_blank">
                           <img itemprop="image" src="../../images/banner-content-1.png" alt="Товар 1 (фото 1)" />
@@ -379,7 +379,7 @@
                             <div class="d-flex flex-column gap-10">
                               <div class="product-price-group__row">
                                 <p class="product-price-group__price product-price-group__price_primary">500 ₽/шт</p>
-                                <span class="product-sale-badge">
+                                <span class="product-sale-badge d-none d-md-block">
                                   -25%
                                 </span>
                               </div>
@@ -395,6 +395,11 @@
                         </div>
                       </div>
                       <div class="product-short__wrapper d-flex gap-15 mb-30">
+                        <div class="input-number product-input-number">
+                          <div class="order-down"></div>
+                          <input type="number" min="1" max="123" step="1" value="1" id="number" required="">
+                          <div class="order-up"></div>
+                        </div>
                         <a class="g-button g-button_fill product-add-to-cart-button" href="#"><svg width="20" height="19" viewBox="0 0 20 19"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -403,11 +408,6 @@
                           </svg>
                           В корзину
                         </a>
-                        <div class="input-number product-input-number">
-                          <div class="order-down"></div>
-                          <input type="number" min="1" max="123" step="1" value="1" id="number" required="">
-                          <div class="order-up"></div>
-                        </div>
                       </div>
                       <div class="product-short__wrapper d-flex justify-content-between mb-20">
                         <a href="#" class="g-text product-share-button"><svg width="14" height="22" viewBox="0 0 14 22"
@@ -455,7 +455,7 @@
                         Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные покрытия, для
                         опалубки, для изготовления тары и упаковки, а также в мебельном производстве.
                       </p>
-                      <div class="product-short__haracteristic-table">
+                      <div class="product-short__haracteristic-table mb-20">
                         <dir class="product-short__haracteristic-table-row">
                           <p class="g-text product-short__haracteristic-name">Поверхность:</p>
                           <p class="g-text product-short__haracteristic-value">не шлифованная, пример длинной записи на
@@ -471,6 +471,31 @@
                           <p class="g-text product-short__haracteristic-value">24</p>
                         </dir>
                       </div>
+                      <div class="product-short__static-text-wrapper">
+                        <div class=" d-flex flex-column gap-10 mb-20">
+                          <a class="g-button g-button_frame product-check-button" href="#"><svg width="16" height="20" viewBox="0 0 16 20"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M11.41 0H0V20H16V4.59L11.41 0ZM12 14H4V6H12V14ZM7.35 7.35H5.35V9.35H7.35V7.35ZM10.65 10.65H8.65V12.65H10.65V10.65ZM7.35 10.65H5.35V12.65H7.35V10.65ZM10.65 7.35H8.65V9.35H10.65V7.35Z">
+                              </path>
+                            </svg>
+                            Получить счёт
+                          </a>
+                          <a class="g-button g-button_frame product-question-button" href="#"><svg width="20" height="22" viewBox="0 0 20 22"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M17 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.316071 1.44129 0 2.20435 0 3V22L6 16H17C17.7956 16 18.5587 15.6839 19.1213 15.1213C19.6839 14.5587 20 13.7956 20 13V3C20 2.20435 19.6839 1.44129 19.1213 0.87868C18.5587 0.316071 17.7956 0 17 0ZM11 11H6V9H11V11ZM14 7H6V5H14V7Z">
+                              </path>
+                            </svg>
+                            Задать вопрос
+                          </a>
+                        </div>
+                        <p class="g-text">
+                          <span class="g-text g-text_accent">Внимание!</span>
+                          Товар можно оплатить онлайн, за наличные, получить счет или купить в кредит
+                          онлайн.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -480,6 +505,7 @@
               <div class="col-lg-9">
                 <div class="g-content product-short__secondary-content">
                   <div class="additional-products-block">
+                    <p class="g-title additional-products-block__title">С этим товаром обычно покупают</p>
                     <div class="additional-products">
                       <div class="additional-product">
                         <div href="#" class="additional-product__image-wrapper">
