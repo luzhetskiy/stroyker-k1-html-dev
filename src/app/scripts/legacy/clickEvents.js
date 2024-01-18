@@ -40,8 +40,9 @@ $(document).ready(function () {
     $(".search-modal-window__input").focus();
   });
 
-  $("[data-clear-input]").on("click", () => {
-    $("[data-input]").val("");
+  $("[data-clear-input-button]").on("click", (event) => {
+    const id = $(event.currentTarget).attr("data-clear-input-button");
+    $(`[data-clear-input="${id}"]`).val("");
   });
 
   $(".like-btn").on("click", function (event) {

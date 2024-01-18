@@ -1,44 +1,50 @@
-$(document).ready(function($){
+$(document).ready(function ($) {
+  $("[data-search-button]").on("click", (event) => {
+    const id = $(event.currentTarget).attr("data-search-button");
+    const input = $(`[data-search-input="${id}"]`);
+    const value = input.val();
+    const searchUrl = input.attr("data-search-url");
+    window.location = searchUrl + "?q=" + value;
+  });
 
-    $('[data-search-button]').on('click', (event) => {
-        const id = $(event.currentTarget).attr('data-search-button')
-        const input = $(`[data-search-input="${id}"]`)
-        const value = input.val()
-        const searchUrl = input.attr('data-search-url')
-        window.location = searchUrl + '?q=' + value;
-    })
+  $("[data-search-input]").on("keypress", (event) => {
+    const input = $(event.currentTarget);
+    const value = input.val();
+    const id = input.attr("data-search-input");
+    const searchMinChars = input.attr("data-min-chars");
+    const searchUrl = input.attr("data-search-url");
+    const resultContainer = $(`[data-search-results="${id}"]`);
+    const clickOuterHandler = (event) => {
+      if (!event.target.closest("[data-search-results-active]")) {
+        $(event.target).removeAttr("data-search-results-active");
+        $(document).off("click", clickOuterHandler);
+      }
+    };
 
-    $('[data-search-input]').on('input', (event) => {
-        const input = $(event.currentTarget)
-        const id = input.attr('data-search-input')
-        const searchMinChars = input.attr('data-min-chars')
-        const searchUrl = input.attr('data-search-url')
-        const value = input.val()
-        const resultContainer = $(`[data-search-results="${id}"]`)
-        const clickOuterHandler = (event) => {
-            if (!event.target.closest('[data-search-results-active]')) {
-                $(event.target).removeAttr('data-search-results-active')
-                $(document).off('click', clickOuterHandler)
-            }
-        } 
-        if (value.length < searchMinChars) return
+    if (event.key === "enter") return (window.location = searchUrl + "?q=" + value);
 
-        $.ajax({
-            type: 'get',
-            url: searchUrl,
-            data: input.serialize(),
-            dataType: 'html'
-        }).done((result) => {
-            if (result.replace(/\s/g,'').length <= 0) {
-                resultBoxEl.html('');
-                resultBoxEl.removeAttr('data-search-results-active')
-                return
-            }
-            resultContainer.html(result);
-            resultContainer.attr('data-search-results-active');
-            $(document).on('click', clickOuterHandler)
-        });
-    })
+    if (value.length < searchMinChars) return;
 
-    
+    try {
+      $.ajax({
+        type: "get",
+        url: searchUrl,
+        data: input.serialize(),
+        dataType: "html",
+      }).done((result) => {
+        if (result.replace(/\s/g, "").length <= 0) {
+          resultBoxEl.html("");
+          resultBoxEl.removeAttr("data-search-results-active");
+          return;
+        }
+        resultContainer.html(result);
+        resultContainer.attr("data-search-results-active");
+        $(document).on("click", clickOuterHandler);
+      });
+    } catch {
+      (error) => {
+        console.log(error);
+      };
+    }
+  });
 });
