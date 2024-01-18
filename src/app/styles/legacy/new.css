@@ -5387,7 +5387,7 @@ body {
   font-size: 10px;
   font-weight: 400;
   line-height: 10px;
-  color: #A7A7A7;
+  color: #a7a7a7;
   display: block;
   margin-bottom: 10px;
 }
@@ -6668,7 +6668,6 @@ header .header-fixed-content .header-phone {
 }
 .conditional-section .container {
   position: relative;
-  z-index: 2;
 }
 .conditional-section .conditional-section:last-child {
   margin-bottom: 0;
