@@ -318,9 +318,11 @@
       <div class="container">
         <div class="g-row search-modal-window__row">
           <form class="search-modal-window__input-form">
-            <input data-input="" class="search-modal-window__input" type="text">
-            <button type="button" data-clear-input class="search-modal-window__clear-input"><svg width="9" height="9"
-                viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <input data-clear-input="search-menu" name="q" data-min-chars="3" data-search-url="/search" value
+              autocomplete="off" data-search-input="search-modal" class="search-modal-window__input" type="text">
+            <button data-clear-input-button="search-menu" type="button" data-clear-input
+              class="search-modal-window__clear-input"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 8L7.99998 1" stroke="#E5E5EA" stroke-width="0.991667" stroke-linecap="round" />
                 <path d="M8 8L1 1" stroke="#E5E5EA" stroke-width="0.991667" stroke-linecap="round" />
               </svg>
@@ -331,44 +333,24 @@
       </div>
     </div>
     <div class="search-modal-window__search-results">
-      <div class="container">
-        <a href="#" class="search-modal-window__search-result">
-          <svg class="search-modal-window__search-icon" width="17" height="18" viewBox="0 0 17 18"
-            xmlns="http://www.w3.org/2000/svg" fill="none">
-            <path
-              d="M1.26368 6.92753C1.26368 9.79003 3.56185 12.0923 6.37436 12.0923C9.18687 12.0923 11.485 9.79003 11.485 6.92753C11.485 4.06502 9.18687 1.76276 6.37436 1.76276C3.56185 1.76276 1.26368 4.06502 1.26368 6.92753Z"
-              class="search-modal-window__search-icon-stroke" stroke-width="2.52602" />
-            <line y1="-1.26301" x2="7.5559" y2="-1.26301"
-              transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.334 10.5007)"
-              class="search-modal-window__search-icon-stroke" stroke-width="2.52602" />
-          </svg>
-          <span class="search-modal-window__search-result-text">Затирка для швов (плитки), гидроизоляционная
-            смесь</span>
+      <div class="container" data-search-results="search-modal">
+        <a class="search-result-item" href="#">
+          <div class="search-result-item__content">
+            <span class="search-result-item__name">test</span>
+            <span class="search-result-item__cost">Нет в наличии</span>
+          </div>
         </a>
-        <a href="#" class="search-modal-window__search-result">
-          <svg class="search-modal-window__search-icon" width="17" height="18" viewBox="0 0 17 18" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M1.26368 6.92753C1.26368 9.79003 3.56185 12.0923 6.37436 12.0923C9.18687 12.0923 11.485 9.79003 11.485 6.92753C11.485 4.06502 9.18687 1.76276 6.37436 1.76276C3.56185 1.76276 1.26368 4.06502 1.26368 6.92753Z"
-              class="search-modal-window__search-icon" stroke-width="2.52602" />
-            <line y1="-1.26301" x2="7.5559" y2="-1.26301"
-              transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.334 10.5007)"
-              class="search-modal-window__search-icon" stroke-width="2.52602" />
-          </svg>
-          <span class="search-modal-window__search-result-text">Блоки для строительства</span>
+        <a class="search-result-item" href="#">
+          <div class="search-result-item__content">
+            <span class="search-result-item__name">test</span>
+            <span class="search-result-item__cost">Нет в наличии</span>
+          </div>
         </a>
-        <a href="#" class="search-modal-window__search-result">
-          <svg class="search-modal-window__search-icon" width="17" height="18" viewBox="0 0 17 18" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M1.26368 6.92753C1.26368 9.79003 3.56185 12.0923 6.37436 12.0923C9.18687 12.0923 11.485 9.79003 11.485 6.92753C11.485 4.06502 9.18687 1.76276 6.37436 1.76276C3.56185 1.76276 1.26368 4.06502 1.26368 6.92753Z"
-              class="search-modal-window__search-icon" stroke-width="2.52602" />
-            <line y1="-1.26301" x2="7.5559" y2="-1.26301"
-              transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.334 10.5007)"
-              class="search-modal-window__search-icon" stroke-width="2.52602" />
-          </svg>
-          <span class="search-modal-window__search-result-text">Затирка для швов (плитки), гидроизоляционная
-            смесь</span>
+        <a class="search-result-item" href="#">
+          <div class="search-result-item__content">
+            <span class="search-result-item__name">test</span>
+            <span class="search-result-item__cost">Нет в наличии</span>
+          </div>
         </a>
       </div>
     </div>
@@ -732,9 +714,10 @@
       </div>
       <div class="search-input-group mb-10">
         <div class="search-input-group__row">
-          <input class="search-input-group__input" placeholder="Поиск" type="text">
-          <button class="search-input-group__button"><svg width="17" height="17" viewBox="0 0 17 17" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
+          <input data-search-input="search-menu" name="q" data-min-chars="3" data-search-url="/search" value
+            class="search-input-group__input" autocomplete="off" placeholder="Поиск" type="text">
+          <button data-search-button="search-menu" class="search-input-group__button"><svg width="17" height="17"
+              viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M1.26564 6.42777C1.26564 9.29027 3.5638 11.5925 6.37631 11.5925C9.18882 11.5925 11.487 9.29027 11.487 6.42777C11.487 3.56527 9.18882 1.26301 6.37631 1.26301C3.5638 1.26301 1.26564 3.56527 1.26564 6.42777Z"
                 stroke-width="2.52602" />
