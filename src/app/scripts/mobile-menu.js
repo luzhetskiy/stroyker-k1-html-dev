@@ -1,34 +1,37 @@
-const srcMenu = $("#menu");
-const srcNavbar = $("#menu-navbar");
+$(document).ready(() => {
+  const srcMenu = $("#menu");
+  const srcNavbar = $("#menu-navbar");
+  if (!srcMenu || !srcNavbar) return;
 
-const menu = new Mmenu("#menu", {
-  offCanvas: {
-    position: srcMenu.attr("data-position"),
-  },
-  navbars: [
-    {
-      content: srcNavbar.html(),
+  const menu = new Mmenu("#menu", {
+    offCanvas: {
+      position: srcMenu.attr("data-position"),
     },
-  ],
-  screenReader: {
-    closeMenu: "Close menu",
-  },
-  page: {
-    noSelector: [],
-  },
-  hooks: {
-    "initMenu:before": () => {
-      srcNavbar.remove();
+    navbars: [
+      {
+        content: srcNavbar.html(),
+      },
+    ],
+    screenReader: {
+      closeMenu: "Close menu",
     },
-  },
-});
+    page: {
+      noSelector: [],
+    },
+    hooks: {
+      "initMenu:before": () => {
+        srcNavbar.remove();
+      },
+    },
+  });
 
-const menuApi = menu.API;
+  const menuApi = menu.API;
 
-$("[data-open-menu]").on("click", () => {
-  menuApi.openPanel();
-});
+  $("[data-open-menu]").on("click", () => {
+    menuApi.openPanel();
+  });
 
-$("[data-close-menu]").on("click", () => {
-  menuApi.close();
+  $("[data-close-menu]").on("click", () => {
+    menuApi.close();
+  });
 });
