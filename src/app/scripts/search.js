@@ -1,3 +1,72 @@
+jQuery(document).ready(function ($) {
+  let searchInputEl,
+    resultBoxEl,
+    mobile = false;
+
+  if (screen.width > 767) {
+    searchInputEl = $(".search_input");
+    resultBoxEl = $(".header-search-results");
+  } else {
+    searchInputEl = $(".search_input_mobile");
+    resultBoxEl = $("#search-result-mob");
+    mobile = true;
+  }
+
+  processSearchResult(searchInputEl, resultBoxEl, mobile);
+  processSearchBtnClick(searchInputEl);
+});
+
+function processSearchResult(searchInputEl, resultBoxEl, mobile = false) {
+  let searchUrl = searchInputEl.data("search-url"),
+    searchMinChars = searchInputEl.data("min-chars");
+
+  searchInputEl.on("focus keyup paste", function (e) {
+    var input = $(this),
+      minChars = this.dataset.minChars;
+    if (input.val().length >= searchMinChars) {
+      $.ajax({
+        type: "get",
+        url: searchUrl,
+        data: input.serialize(),
+        dataType: "html",
+      }).done(function (result) {
+        if (result.replace(/\s/g, "").length > 0) {
+          resultBoxEl.html(result);
+          resultBoxEl.show();
+          $(document).mouseup(function (e) {
+            if (!resultBoxEl.is(e.target) && resultBoxEl.has(e.target).length === 0) {
+              resultBoxEl.hide();
+            }
+          });
+        } else {
+          resultBoxEl.html("");
+          resultBoxEl.hide();
+        }
+      });
+    } else {
+      resultBoxEl.hide().empty();
+    }
+  });
+}
+
+function processSearchBtnClick(searchInputEl) {
+  var searchBtn = searchInputEl.next("button");
+
+  searchBtn.click(function () {
+    var searchInputVal = searchInputEl.val();
+    if (searchInputVal) {
+      var url = searchInputEl.data("search-url");
+      window.location = url + "?q=" + searchInputVal;
+    }
+  });
+
+  searchInputEl.keyup(function (event) {
+    if (event.keyCode === 13) {
+      searchBtn.click();
+    }
+  });
+}
+
 $(document).ready(function ($) {
   $("[data-search-button]").on("click", (event) => {
     const id = $(event.currentTarget).attr("data-search-button");
