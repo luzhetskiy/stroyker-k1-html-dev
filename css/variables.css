@@ -1,0 +1,372 @@
+/* Кастомная цветовая схема */
+:root {
+  --custom-accent-color: #2363d1;
+  --custom-accent-dark-color: #1c52ac;
+  --custom-accent-light-color: #b7cbe5;
+  --custom-accent-lighter-color: #e7eef6;
+
+  --custom-neutral-lightest: #ffffff;
+  --custom-neutral-lightest-opacity: #ffffff1a;
+  --custom-neutral-lighter: #dadada;
+  --custom-neutral-light: #ccc;
+  --custom-neutral: #a7a7a7;
+  --custom-neutral-dark: #333333;
+  --custom-neutral-darker: #222222;
+  --custom-neutral-darkest: #000000;
+
+  --custom-hit-color: #3ec28f;
+  --custom-sale-color: #ff9500;
+  --custom-new-color: #30c2ff;
+  --custom-discount-color: #c43228;
+  --custom-transparent-color: transparent;
+}
+
+/* Цветовая схема */
+:root {
+  --accent-color: var(--custom-accent-color, #2363d1);
+  --accent-dark-color: var(--custom-accent-dark-color, #1c52ac);
+  --accent-light-color: var(--custom-accent-light-color, #b7cbe5);
+
+  --neutral-darkest-color: var(--custom-black-color, #000000);
+  --neutral-darker-color: var(--custom-dark-color, #222222);
+  --neutral-dark: var(--custom-neutral-dark, #333333);
+  --neutral: var(--custom-neutral, #a7a7a7);
+  --neutral-light: var(--custom-neutral-light, #cccccc);
+  --neutral-lighter-color: var(--custom-neutral-lighter, #dadada);
+  --neutral-lightest-color: var(--custom-neutral-lightest, #ffffff);
+  --neutral-lightest-color-opacity: var(--custom-neutral-lightest-opacity, #ffffff1a);
+
+  --hit-color: var(--custom-hit-color, #3ec28f);
+  --sale-color: var(--custom-sale-color, #ff9500);
+  --new-color: var(--custom-new-color, #30c2ff);
+  --discount-color: var(--custom-discount-color, #c43228);
+  --transparent-color: var(--custom-white-opacity-color, transparent);
+}
+
+/* Предназначение цветов */
+:root {
+  /* Фон шапки */
+  --header__bg: var(--neutral-dark);
+  --header-top-bg-color: var(--neutral-lightest-color);
+  --header-bottom__bg: var(--neutral-dark);
+  --header-bg-color: var(--neutral-darkest-color);
+
+  /* Кнопка "Каталог товаров" */
+  --catalog-btn__bg: var(--neutral-lightest-color);
+  --catalog-menu-button_bg: var(--neutral-dark);
+  --catalog-btn__borderColor: var(--neutral-dark);
+  --catalog-btn__color: var(--neutral-dark);
+  --catalog-btn__burgerColor: var(--neutral-dark);
+  --header-buttons-font-color: var(--neutral-lightest-color);
+  --catalog-btn__bg--hover: var(--accent-color);
+  --catalog-btn__borderColor--hover: var(--accent-color);
+  --catalog-btn__color--hover: var(--neutral-lightest-color);
+  --catalog-btn__burgerColor--hover: var(--neutral-lightest-color);
+
+  /* Поле поиска */
+  --search-box__bg: var(--neutral-lightest-color);
+  --search-field-bg-color: var(--neutral-darker-color);
+  --search-box__borderColor: var(--neutral);
+  --search-field-border-color: var(--neutral-dark);
+  --search-box__color: var(--neutral-dark);
+  --search-field-font-color: var(--neutral-lightest-color);
+  --search-box__placeholderColor: var(--neutral-dark);
+  --search-field-placeholder-font-color: var(--neutral);
+
+  /* кнопка в поле поиск  */
+  --search-box-submit__bg: var(--neutral-lighter-color);
+  --search-field-btn-color: var(--neutral-lightest-color-opacity);
+  --search-box-submit__borderColor: var(--neutral);
+  --search-box-submit__bg--hover: var(--accent-color);
+  --search-box-submit__borderColor--hover: var(--accent-color);
+
+  /* Выпадающие результаты поиска */
+  --search-box-item__bg: var(--neutral-lightest-color);
+  --search-box-item__borderBottomColor: var(--neutral-darkest-color);
+  --search-box-item__color: var(--neutral-darkest-color);
+  --search-box-item__priceColor: var(--accent-dark-color);
+
+  /* после ховера - результат товара в поле поиск  */
+  --search-box-item__bg--hover: var(--neutral-darkest-color);
+
+  /* кнопка "все каталоги" в результате товара из поле поиск  */
+  --search-box-all-item__bg: var(--neutral-dark);
+  --search-box-all-item__color: var(--neutral-lightest-color);
+
+  /* Верхнее меню */
+  --nav-item__color: var(--neutral-dark);
+  --header-top-menu-font-color: var(--neutral-dark);
+  --nav-item-active__color--active--hover: var(--accent-color);
+  --header-top-menu-font-hover-color: var(--accent-color);
+
+  /* Счетчик корзины и сравнения */
+  --option-item__color: var(--neutral-dark);
+  --option-item__bg: var(--accent-color);
+  --main-elements-color: var(--accent-color);
+  --option-item__color--active--hover: var(--accent-color);
+  --main-elements-hover-color: var(--accent-dark-color);
+
+  /* Вход в ЛК */
+  --accounts-item__color: var(--neutral-dark);
+  --accounts-item__color--hover: var(--accent-color);
+
+  /* Телефон в шапке */
+  --contact-box-text__color: var(--neutral-dark);
+  --color: var(--neutral-dark);
+  --contact-box-text-circle__color: var(--accent-color);
+  --contact-box-tel__color: var(--neutral-dark);
+  --header-top-phone-font-color: var(--neutral-dark);
+  --contact-box-text__color--hover: var(--accent-color);
+  --color-hover: var(--accent-color);
+  --contact-box-tel__color--hover: var(--accent-color);
+
+  /* Заказать звонок */
+  --contact-box-call-link__color: var(--neutral-dark);
+  --color-button-callme-text: var(--accent-color);
+  --contact-box-call-link__bg: var(--neutral-lightest-color);
+  --color-button-callme-background: var(--neutral-lightest-color);
+  --contact-box-call-link__borderColor: var(--neutral-dark);
+  --color-button-callme-border: var(--accent-light-color);
+  --contact-box-call-link__bg--hover: var(--accent-color);
+  --color-button-callme-background-hover: var(--accent-color);
+  --contact-box-call-link__color--hover: var(--neutral-lightest-color);
+  --color-button-callme-text-hover: var(--neutral-lightest-color);
+  --contact-box-call-link__borderColor--hover: var(--accent-color);
+  --color-button-callme-border-hover: var(--accent-color);
+
+  /* кнопка callme (legacy) */
+  --callme-button-color: var(--accent-color);
+  --callme-button-hover-color: var(--accent-dark-color);
+  --callme-button-fill-color: var(--neutral-lightest-color);
+  --callme-button-fill-hover-color: var(--neutral-lightest-color);
+
+  /* Выпадающее меню каталога */
+  --menu-box_catalog-box__bg: var(--neutral-dark);
+  --menu-box_catalog-box-ul-a__color: var(--neutral-lightest-color);
+  --menu-box_catalog-box-ul-a__color--hover: var(--accent-color);
+  --category-menu-font-highlight-color: var(--accent-color);
+  --menu-box_catalog-box-ul-a__underlineColor--hover: var(--accent-color);
+  --category-menu-underline-highlight-color: var(--accent-color);
+
+  /* Кнопка меню для шапки v3 */
+  --menu-btn__bg: var(--neutral-lighter-color);
+  --menu-btn__borderColor: var(--neutral-dark);
+  --menu-btn__color: var(--neutral-lightest-color);
+  --menu-btn__bg--hover: var(--accent-color);
+  --menu-btn__borderColor--hover: var(--accent-color);
+  --menu-btn__color--hover: var(--neutral-lightest-color);
+
+  /* Пункты меню для шапок версий fat-v2 */
+  --fat-v2-nav-ul-li-a__color: var(--neutral-lightest-color);
+  --fat-v2-nav-ul-li-a__bg--hover: var(--neutral-darker-color);
+  --fat-v2-nav-ul-li-a__color--hover: var(--neutral-lightest-color);
+  --fat-v2-nav-ul-li-a__color--active: var(--accent-color);
+  --fat-v2-nav-ul-li-ul-li__bg: var(--neutral-darker-color);
+  --fat-v2-nav-ul-li-ul-li-a__color: var(--neutral-lightest-color);
+  --fat-v2-nav-ul-li-ul-li-a__color--hover: var(--accent-color);
+  --fat-v2-nav-ul-li-ul-li__bg--hover: var(--neutral-dark);
+
+  /* "Шапки в адаптиве */
+
+  /* Фон */
+  --mob-header__bg: var(--neutral-lightest-color);
+  --mob-header_bottom__bg: var(--neutral-dark);
+  --mob-header_bottom__borderColor: var(--neutral-dark);
+
+  /* Поле поиска */
+  --mob-search-box__bg: var(--neutral-lightest-color);
+  --mob-search-box__borderColor: var(--neutral-dark);
+  --mob-search-box__color: var(--neutral-darkest-color);
+  --mob-search-box__placeholderColor: var(--neutral-dark);
+  --mob-search-box-submit__bg: var(--neutral-lighter-color);
+  --mob-search-box-submit__borderColor: var(--neutral-dark);
+  --mob-search-box-submit__bg--hover: var(--accent-color);
+  --mob-search-box-submit__borderColor--hover: var(--accent-color);
+
+  /* Результаты поиска */
+  --mob-search-box-item__bg: var(--neutral-lightest-color);
+  --mob-search-box-item__borderBottomColor: rgba(0, 0, 0, 0.13);
+  --mob-search-box-item__color: var(--neutral-darkest-color);
+  --mob-search-box-item__priceColor: var(--accent-dark-color);
+  --mob-search-box-item__bg--hover: var(--neutral-darkest-color);
+
+  /* Кнопка "каталог товаров" */
+  --mob-catalog-btn__bg: var(--neutral-lightest-color);
+  --mob-catalog-btn__borderColor: var(--neutral-dark);
+  --mob-catalog-btn__color: var(--neutral-dark);
+  --catalog-menu-font-color: var(--neutral-dark);
+  --mob-catalog-btn__burgerColor: var(--neutral-dark);
+  --mob-catalog-btn__bg--hover: var(--accent-color);
+  --mob-catalog-btn__borderColor--hover: var(--accent-color);
+  --mob-catalog-btn__color--hover: var(--neutral-lightest-color);
+  --mob-catalog-btn__burgerColor--hover: var(--neutral-lightest-color);
+
+  /* Бургер мобильного меню */
+  --mob-burger-btn__color: var(--neutral-lightest-color);
+  --header-top-icon-color: var(--accent-color);
+
+  /* Телефоны */
+  --mob-contact-box-phone__color: var(--neutral-dark);
+  --mob-contact-box-phone__bg: var(--transparent-color);
+  --mob-contact-box-phone__borderColor: var(--accent-color);
+  --mob-contact-box-phone__color--hover: var(--neutral-lightest-color);
+  --mob-contact-box-phone__bg--hover: var(--accent-color);
+  --mob-contact-box-phone__borderColor--hover: var(--accent-color);
+
+  /* Заказать звонок */
+  --mob-contact-box-order-call__color: var(--neutral-dark);
+  --mob-contact-box-order-call__bg: var(--transparent-color);
+  --mob-contact-box-order-call__borderColor: var(--accent-color);
+  --mob-contact-box-order-call__color--hover: var(--neutral-lightest-color);
+  --mob-contact-box-order-call__bg--hover: var(--accent-color);
+  --mob-contact-box-order-call__borderColor--hover: var(--accent-color);
+
+  /* Корзина */
+  --mob-cart-number__color: var(--neutral-dark);
+  --mob-cart-number__bg: var(--neutral-lightest-color);
+  --mob-cart-number__borderColor: var(--accent-color);
+  --mob-cart-number__color--hover: var(--neutral-lightest-color);
+  --mob-cart-number__bg--hover: var(--accent-color);
+  --mob-cart-number__borderColor--hover: var(--accent-color);
+
+  /* Элементы выпадающего меню */
+  --mm-navbar-title__color: var(--neutral-lightest-color);
+  --mm-navbar__bg: var(--neutral-darkest-color);
+  --mm-navbar-button-icons__color: var(--neutral-lightest-color);
+  --mm-panels-mobile-menu__bg: var(--neutral);
+  --mm-listitem__bg: var(--neutral-lightest-color);
+  --mm-listitem__color: var(--neutral-darkest-color);
+  --mm-listitem-button-icons__color: var(--neutral-darkest-color);
+  --mm-other-options__color: var(--neutral-darkest-color);
+  --mm-login__color: var(--neutral-darkest-color);
+  --register-arrow__color: var(--neutral-darkest-color);
+
+  /* Переменные темы */
+
+  /* высота предварительного просмотра категории */
+  --category-preview-height: 200px;
+
+  /* кастомный шрифт */
+  --custom-font-family: Golos;
+
+  /* выпадающие меню */
+  --color-main-dropdown-menu-bg: var(--neutral-dark);
+  --color-main-dropdown-menu-text: var(--neutral-lightest-color);
+
+  /* основная кнопка */
+  --color-button-primary-text: var(--neutral-lightest-color);
+  --color-button-primary-background: var(--accent-color);
+  --color-button-primary-border: var(--accent-color);
+  --color-button-primary-text-hover: var(--neutral-lightest-color);
+  --color-button-primary-background-hover: var(--accent-dark-color);
+  --color-button-primary-border-hover: var(--accent-dark-color);
+
+  /* вторичная кнопка */
+  --color-button-secondary-text: var(--accent-color);
+  --color-button-secondary-background: var(--neutral-lightest-color);
+  --color-button-secondary-border: var(--accent-color);
+  --color-button-secondary-text-hover: var(--neutral-lightest-color);
+  --color-button-secondary-background-hover: var(--custom-accent-lighter-color);
+  --color-button-secondary-border-hover: var(--accent-color);
+
+  /* не активная кнопка */
+  --color-button-muted-text: var(--neutral-dark);
+  --color-button-muted-background: var(--neutral-lighter-color);
+  --color-button-muted-border: var(--neutral-lighter-color);
+  --color-button-muted-text-hover: var(--neutral-lightest-color);
+  --color-button-muted-background-hover: var(--neutral-dark);
+  --color-button-muted-border-hover: var(--neutral-dark);
+
+  /* кнопка корзины */
+  --color-button-cart-text: var(--neutral-lightest-color);
+  --color-button-cart-background: var(--accent-color);
+  --color-button-cart-border: var(--accent-color);
+  --color-button-cart-text-hover: var(--neutral-lightest-color);
+  --color-button-cart-background-hover: var(--accent-dark-color);
+  --color-button-cart-border-hover: var(--accent-dark-color);
+
+  /* без цветные кнопки */
+  --colorless-buttons-border-color: var(--neutral-lightest-color);
+  --colorless-buttons-font-color: var(--neutral-dark);
+  --colorless-buttons-font-color-hover: var(--accent-color);
+  --colorless-buttons-hover-bg: var(--neutral-lightest-color);
+
+  /* кнопка счета */
+  --invoice-button-color: var(--accent-color);
+
+  /* товары */
+  --hit-tag-bg-color: var(--hit-color);
+  --sale-tag-bg-color: var(--sale-color);
+  --new-tag-bg-color: var(--new-color);
+  --discount-tag-bg-color: var(--discount-color);
+  --hit-tag-font-color: var(--neutral-lightest-color);
+  --sale-tag-font-color: var(--neutral-lightest-color);
+  --discount-tag-font-color: var(--neutral-lightest-color);
+  --new-tag-font-color: var(--neutral-lightest-color);
+  --product-list-header-link-color: var(--neutral-dark);
+  --product-list-header-link-hover-color: var(--accent-color);
+  --product-tab-link-color: var(--neutral-dark);
+  --product-tab-link-hover-color: var(--accent-color);
+  --color-card-border: var(--light-color);
+  --product-preview-border-hover-color: var(--accent-color);
+  --product-preview-bg-color: var(--neutral-lightest-color);
+  --color-product-online-price: var(--neutral-dark);
+  --checkout-button-font-color: var(--neutral-dark);
+  --invoice-button-font-color: var(--accent-color);
+
+  /* Статьи */
+  --article-label-font-color: var(--neutral-dark);
+  --article-label-bg-color: var(--neutral-lightest-color);
+
+  /* новости и акции */
+  --news-label-bg-color: var(--accent-color);
+  --news-label-font-color: var(--neutral-lightest-color);
+  --action-label-bg-color: var(--accent-color);
+  --action-label-font-color: var(--neutral-lightest-color);
+
+  /* меню каталога */
+  --catalog-menu-bg-color: var(--neutral-lightest-color);
+  --catalog-menu-hover-bg-color: var(--neutral-lightest-color);
+  --catalog-menu-border-color: var(--light-color);
+  --catalog-menu-font-hover-color: var(--neutral-dark);
+  --catalog-menu-burger-color: var(--accent-color);
+  --catalog-menu-link-hover: var(--accent-color);
+  --catalog-menu-arrow-color: var(--accent-color);
+
+  /* форма обратной связи */
+  --feedback-form-section-bg-color: var(--neutral-lightest-color);
+  --feedback-form-bg: var(--neutral-lightest-color);
+  --feedback-form-title: var(--neutral-dark);
+  --feedback-form-text: var(--neutral-dark);
+  --feedback-form-border: var(--accent-color);
+  --feedback-form-input-border: var(--accent-color);
+
+  /* хлебные крошки */
+  --breadcrumb-item-color: var(--neutral-dark);
+  --breadcrumb-item-hover-color: var(--accent-color);
+
+  /* статичные страницы */
+  --staticpage-box-fill-color: var(--neutral-lightest-color);
+  --staticpage-box-border-color: var(--neutral-lightest-color);
+
+  /* личный кабинет */
+  --color-lk-accent-items: var(--accent-color);
+  --color-lk-items-bg: var(--neutral-lightest-color);
+  --color-lk-items-border: var(--accent-color);
+  --color-lk-items-hover-bg: var(--neutral-lighter-color);
+  --color-fixedbtn: var(--neutral-lightest-color);
+  --color-bg-fixedbtn: var(--neutral-darkest-color);
+
+  /* подвал */
+  --footer-bg-color: var(--neutral-dark);
+  --color-footer-links: var(--light-color);
+  --color-footer-links-hover: var(--accent-color);
+  --color-footer-title: var(--neutral-lightest-color);
+
+  /* разное */
+  --frontpage-first-screen-bg-color: var(--neutral-lightest-color);
+  --preview-bg-color: var(--neutral-lighter-color);
+  --preview-font-color: var(--neutral-dark);
+  --preview-bg-hover-color: var(--neutral-lightest-color);
+  --inner-page-bg: var(--neutral-lightest-color);
+}
