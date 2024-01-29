@@ -458,6 +458,7 @@
     -ms-flex-pack: start
     justify-content: flex-start
     height: 100%
+    padding-bottom: 65px
 
   & .product-item__head
     -webkit-box-pack: start
@@ -468,7 +469,7 @@
   & .product-item__content-top
     height: 100%
     width: calc(100% - 145px)
-    padding-top: 15px
+    padding: 15px 12px
 
 @media (max-width: 991px)
   .product-item--wide .product-item__content-top
@@ -552,7 +553,7 @@
   -webkit-transition: 0.5s
   -o-transition: 0.5s
   transition: 0.5s
-  min-height: 48px
+  height: 56px
 
   &:hover
     background: #f6f6f6 !important
@@ -595,7 +596,7 @@
     -webkit-box-pack: start
     -ms-flex-pack: start
     justify-content: flex-start
-    height: auto
+    height: 100%
 
   & .product-item__head
     -webkit-box-pack: start
@@ -605,7 +606,7 @@
     margin: 0
 
   & .product-item__content-top
-    height: auto
+    height: 100%
     width: 100%
     display: -webkit-box
     display: -ms-flexbox
@@ -639,9 +640,9 @@
   & .product-item__content-bottom
     position: absolute
     right: 0px
-    bottom: -2px
+    bottom: 0
     background: transparent
-    padding: 10px
+    padding: 8px 10px
     width: auto
 
   & .product-item__content-bottom .product-comparison
@@ -734,7 +735,7 @@
 
 @media (max-width: 767px)
   .product-item__content-top
-    padding-bottom: 50px
+    padding-bottom: 67px
 
 .product-item__content-bottom
   padding: 0px 12px 15px 12px
@@ -782,3 +783,7 @@
   &:has(.product-item--wide),
   &:has(.product-item--line)
     display: none !important
+
+.welcome__content
+  .d-grid:has(.product-item--line), .d-grid:has(.product-item--wide)
+    grid-template-columns: repeat(1,1fr)!important

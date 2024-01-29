@@ -1344,8 +1344,7 @@ p:last-child {
 }
 
 .burger-menu {
-  position: absolute;
-  right: 15px;
+  position: relative;
   width: 16px;
   height: 14px;
   cursor: pointer;

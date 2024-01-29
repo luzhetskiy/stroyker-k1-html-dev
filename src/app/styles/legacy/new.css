@@ -5396,12 +5396,6 @@ body {
   margin-bottom: 40px;
 }
 
-@media (min-width: 768px) {
-  .product-card-container .product-slider {
-    margin: 0 !important;
-  }
-}
-
 .header-phones {
   --font-size: 14px;
   --line-height: 20px;
