@@ -27,6 +27,19 @@
 
   &__button
     max-width: max-content
+    --color-text: var(--color-button-cart-text,#fff)
+    --color-background: var(--color-button-cart-background,#2363d1)
+    --color-border: var(--color-button-cart-border,#2363d1)
+    --color-text-hover: var(--color-button-cart-text-hover,var(--color-text))
+    --color-background-hover: var(--color-button-cart-background-hover,#1c52ac)
+    --color-border-hover: var(--color-button-cart-border-hover,#1c52ac)
+    background-color: var(--color-background)!important
+    border-color: var(--color-border)!important
+    border-style: solid!important
+    border-width: 1px!important
+    color: var(--color-text)!important
+    -webkit-transition: color var(--trs-1),background-color var(--trs-1),border-color var(--trs-1)!important
+    transition: color var(--trs-1),background-color var(--trs-1),border-color var(--trs-1)!important
 
   &__icon-fill
     fill: #fff
