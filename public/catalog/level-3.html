@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="../css/headers-custom.css" />
   <script defer src="../js/scripts.js"></script>
   <script defer src="../js/headers-custom.js"></script>
+  <script defer src="../js/filter-search.js"></script>
+  <script defer src="../js/filter-scroll.js"></script>
 </head>
 
 <body class="inner-page">
@@ -448,25 +450,30 @@
                           <div class="filter-item">
                             <div class="filter-item__content">
                               <div class="filter-search">
-                                <input type="text" name="search" class="filter-search__search-input"
-                                  placeholder="Поиск..." />
-                                <button class="filter-search__search-button"><img
+                                <input type="text" name="search" class="filter-search__search-input" 
+                                id="filter-search__color" 
+                                placeholder="Поиск..." />
+                                <button class="filter-search__search-button" id="filter-search-button__color"><img
                                     src="../images/icons/filter-search.svg" /></button>
                               </div>
                               <div class="filter-item__container">
-                                <div class="form-groups">
+                                <div class="form-groups"  id="form-groups__search-color">
                                   <div class="form-group">
                                     <div class="checkbox">
                                       <input type="checkbox" name="color" value="white" id="id_color_0" />
-
                                       <label for="id_color_0">Белый <span>19</span></label>
                                     </div>
                                   </div>
                                   <div class="form-group">
                                     <div class="checkbox">
                                       <input type="checkbox" name="color" value="grey" id="id_color_1" />
-
                                       <label for="id_color_1">Серый <span>19</span></label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="checkbox">
+                                      <input type="checkbox" name="color" value="beige" id="id_color_2" />
+                                      <label for="id_color_2">Бежевый <span>19</span></label>
                                     </div>
                                   </div>
                                 </div>
@@ -486,11 +493,9 @@
                       <ul class="submenu" style="display: none">
                         <li>
                           <div class="filter-item">
-                            <div class="filter-gradient">
-                              <img src="../images/filter-gradient.svg" />
-                            </div>
+                           <div class="filter-gradient" id="filter-gradient__gradus"></div>                           
                             <div class="filter-item__content">
-                              <div class="filter-item__container">
+                              <div class="filter-item__container filter-scroll" id="filter-scroll-gradus">
                                 <div class="form-groups">
                                   <div class="form-group">
                                     <div class="checkbox">
@@ -501,15 +506,31 @@
                                   </div>
                                   <div class="form-group">
                                     <div class="checkbox">
-                                      <input type="checkbox" name="gradus" value="90" id="id_gradus_1" />
+                                      <input type="checkbox" name="gradus" value="70" id="id_gradus_1" />
 
-                                      <label for="id_gradus_1">90° <span>11</span></label>
+                                      <label for="id_gradus_1">70° <span>11</span></label>
                                     </div>
                                   </div>
-                                </div>
-                                <div class="filter-scroll">
-                                  <div class="filter-scroll__base">
-                                    <div class="filter-scroll__active"></div>
+                                  <div class="form-group">
+                                    <div class="checkbox">
+                                      <input type="checkbox" name="gradus" value="80" id="id_gradus_2" />
+
+                                      <label for="id_gradus_2">80° <span>11</span></label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="checkbox">
+                                      <input type="checkbox" name="gradus" value="90" id="id_gradus_3" />
+
+                                      <label for="id_gradus_3">90° <span>11</span></label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="checkbox">
+                                      <input type="checkbox" name="gradus" value="100" id="id_gradus_4" />
+
+                                      <label for="id_gradus_4">100° <span>11</span></label>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -528,43 +549,51 @@
                       <ul class="submenu" style="display: none">
                         <li>
                           <div class="filter-item">
-                            <div class="filter-gradient">
-                              <img src="../images/filter-gradient.svg" />
-                            </div>
+                            <div class="filter-gradient" id="filter-gradient__pro"></div>
                             <div class="filter-item__content">
                               <div class="filter-search">
                                 <input type="text" name="search" class="filter-search__search-input"
+                                id="filter-search__pro"
                                   placeholder="Поиск..." />
-                                <button class="filter-search__search-button"><img
+                                <button class="filter-search__search-button" id="filter-search-button__pro"><img
                                     src="../images/icons/filter-search.svg" /></button>
                               </div>
-                              <div class="filter-item__container">
-                                <div class="form-groups">
+                              <div class="filter-item__container filter-scroll" id="filter-scroll-pro">
+                                <div class="form-groups" id="form-groups__search-pro">
                                   <div class="form-group">
                                     <div class="checkbox">
-                                      <input type="checkbox" name="proizvoditel" value="fox" id="id_proizvoditel_0" />
+                                      <input type="checkbox" name="proizvoditel" value="fox_1" id="id_proizvoditel_0" />
 
-                                      <label for="id_proizvoditel_0">FOX <span>19</span></label>
+                                      <label for="id_proizvoditel_0">FOX-1 <span>19</span></label>
                                     </div>
                                   </div>
                                   <div class="form-group">
                                     <div class="checkbox">
-                                      <input type="checkbox" name="proizvoditel" value="fox" id="id_proizvoditel_1" />
+                                      <input type="checkbox" name="proizvoditel" value="fox_2" id="id_proizvoditel_1" />
 
-                                      <label for="id_proizvoditel_1">FOX <span>19</span></label>
+                                      <label for="id_proizvoditel_1">FOX-2 <span>19</span></label>
                                     </div>
                                   </div>
                                   <div class="form-group">
                                     <div class="checkbox">
-                                      <input type="checkbox" name="proizvoditel" value="fox" id="id_proizvoditel_2" />
+                                      <input type="checkbox" name="proizvoditel" value="fox_3" id="id_proizvoditel_2" />
 
-                                      <label for="id_proizvoditel_2">FOX <span>19</span></label>
+                                      <label for="id_proizvoditel_2">FOX-3 <span>19</span></label>
                                     </div>
                                   </div>
-                                </div>
-                                <div class="filter-scroll">
-                                  <div class="filter-scroll__base">
-                                    <div class="filter-scroll__active"></div>
+                                  <div class="form-group">
+                                    <div class="checkbox">
+                                      <input type="checkbox" name="proizvoditel" value="home_1" id="id_proizvoditel_2" />
+
+                                      <label for="id_proizvoditel_2">Home-1 <span>19</span></label>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <div class="checkbox">
+                                      <input type="checkbox" name="proizvoditel" value="home_2" id="id_proizvoditel_2" />
+
+                                      <label for="id_proizvoditel_2">Home-2 <span>19</span></label>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
