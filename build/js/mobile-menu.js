@@ -1,1 +1,2 @@
-"use strict";$(document).ready((function(){var n=$("#menu"),e=$("#menu-navbar");if(n.length&&e.length){var o=new Mmenu("#menu",{offCanvas:{position:n.attr("data-position")},navbars:[{content:e.html()}],screenReader:{closeMenu:"Close menu"},page:{noSelector:[]},hooks:{"initMenu:before":function(){e.remove()}}}).API;$("[data-open-menu]").on("click",(function(){o.openPanel()})),$("[data-close-menu]").on("click",(function(){o.close()}))}}));
+"use strict";
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibW9iaWxlLW1lbnUuanMiLCJuYW1lcyI6W10sInNvdXJjZXMiOlsibW9iaWxlLW1lbnUuanMiXSwibWFwcGluZ3MiOiJBQUFBIiwic291cmNlc0NvbnRlbnQiOlsiIl19
