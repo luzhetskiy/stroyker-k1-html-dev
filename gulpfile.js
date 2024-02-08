@@ -90,6 +90,7 @@ const createBuild = () => {
 
 const startWatch = () => {
   gulp.watch(`src/**/*.sass`, { usePolling: true }, styles);
+  gulp.watch(`src/**/*.css`, { usePolling: true }, styles);
   gulp.watch(["src/**/*.js"], { usePolling: true }, scripts);
   gulp.watch(`src/**/*.html`, { usePolling: true }, html);
   gulp.watch(`public/**/*`, { usePolling: true }).on("change", browserSync.reload);
