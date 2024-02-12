@@ -1345,7 +1345,7 @@ p:last-child {
   display: none;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .burger-menu {
     display: block;
   }
@@ -2796,13 +2796,7 @@ p:last-child {
   cursor: pointer;
   width: 60px;
   height: 100%;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(rgba(0, 0, 0, 0.1)),
-    to(rgba(0, 0, 0, 0.75))
-  );
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.75)));
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -2832,13 +2826,7 @@ p:last-child {
 }
 
 .main-slider .owl-nav [class*="owl-"]:last-child {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(rgba(0, 0, 0, 0.1)),
-    to(rgba(0, 0, 0, 0.75))
-  );
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.75)));
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
@@ -3730,13 +3718,7 @@ p:last-child {
   cursor: pointer;
   width: 60px;
   height: 100%;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(rgba(0, 0, 0, 0.1)),
-    to(rgba(0, 0, 0, 0.75))
-  );
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.75)));
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -3766,13 +3748,7 @@ p:last-child {
 }
 
 .slider .owl-nav [class*="owl-"]:last-child {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(rgba(0, 0, 0, 0.1)),
-    to(rgba(0, 0, 0, 0.75))
-  );
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.75)));
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
@@ -9448,8 +9424,7 @@ canvas {
   left: -25px;
   width: 16px;
   height: 16px;
-  background: var(--main-elements-color, #2363d1) url(../images/checkbox-check.svg) 50% 50%
-    no-repeat;
+  background: var(--main-elements-color, #2363d1) url(../images/checkbox-check.svg) 50% 50% no-repeat;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;

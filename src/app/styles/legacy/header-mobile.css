@@ -177,7 +177,7 @@
   display: block;
 }
 
-#search-result-mob .s-item-link {
+.s-item-link {
   display: flex;
   width: 100%;
   align-items: center;
@@ -186,41 +186,41 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.13);
 }
 
-#search-result-mob .s-item-link:last-child {
+.s-item-link:last-child {
   border: none;
 }
 
-#search-result-mob .s-item-link:hover {
+.s-item-link:hover {
   background-color: rgba(0, 0, 0, 0.048);
 }
 
-#search-result-mob .s-item-img {
+.s-item-img {
   width: 50px;
   margin-right: 10px;
 }
 
-#search-result-mob .s-item-img img {
+.s-item-img img {
   max-width: 100%;
   max-height: 50px;
 }
 
-#search-result-mob .s-item-info {
+.s-item-info {
   width: 100%;
 }
 
-#search-result-mob .s-item-info span {
+.s-item-info span {
   margin: 2px 0;
 }
 
-#search-result-mob .s-item-info span:first-child {
+.s-item-info span:first-child {
   margin-top: 0;
 }
 
-#search-result-mob .s-item-info span:last-child {
+.s-item-info span:last-child {
   margin-bottom: 0;
 }
 
-#search-result-mob .s-item-title {
+.s-item-title {
   font-family: var(--rr);
   display: inline-block;
   color: #000;
@@ -228,14 +228,14 @@
   font-size: 12px;
 }
 
-#search-result-mob .s-item-price {
+.s-item-price {
   width: 100%;
   display: inline-block;
   font-family: var(--rb);
   color: #1c52ac;
 }
 
-#search-result-mob .all-items-link {
+.all-items-link {
   position: sticky;
   bottom: 0;
   left: 0;
