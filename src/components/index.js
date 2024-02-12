@@ -1,2 +1,3 @@
-//@include ./product-pages/index.js
-//@include ./product-cards/index.js
+//@include ./products/index.js
+//@include ./product-teasers/index.js
+//@include ./general/index.js

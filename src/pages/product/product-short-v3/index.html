@@ -26,7 +26,7 @@
 <body class="inner-page">
 
   <div class="page">
-    <!-- @include ../../../widgets/headers/header-default.html -->
+    <!-- @include ../../../components/headers/header-default/header-default.html -->
 
     <main>
       <section class="section mobile-show header-top-bg-color">
@@ -106,7 +106,93 @@
             </div>
           </div>
 
-          <!-- @include ../../../widgets/product-pages/product-page-short/product-page-short.html -->
+          <div class="product-short" itemscope itemtype="http://schema.org/Product">
+            <div class="g-content product-short__content">
+              <div class="product-short__navigation-wrapper">
+                <!-- @include ../../../components/products/product-navigation/product-navigation.html -->
+              </div>
+              <!-- @include ../../../components/products/product-content/product-title-block.html -->
+              <div class="g-content g-content_frameless product-short__main-content">
+                <div class="row">
+                  <div class="col-lg-4 col-md-6">
+                    <!-- @include ../../../components/products/product-slideshow/product-slideshow-default.html -->
+                  </div>
+                  <div class="col-xl-4 col-lg-5 col-md-6">
+                    <div class="product-short__main-column-content">
+                      <div class="product-short__static-text-wrapper mb-20">
+                        Кастомнное html поле
+                      </div>
+                      <div class="product-short__accessibility-wrapper mb-10">
+                        <!-- @include ../../../components/products/product-accessibility-group/product-accessibility-group.html -->
+                      </div>
+                      <div class="product-short__price-wrapper mb-20">
+                        <!-- @include ../../../components/products/product-price-group/product-price-group__online-old.html -->
+                      </div>
+                      <div class="product-short__wrapper d-flex gap-15 mb-30">
+                        <!-- @include ../../../components/products/product-input-number/product-input-number.html -->
+                        <!-- @include ../../../components/products/product-page-buttons/product-add-to-cart-button.html -->
+                      </div>
+                      <div class="product-short__wrapper d-flex justify-content-between mb-20">
+                        <!-- @include ../../../components/products/product-page-buttons/product-share-button.html -->
+                        <!-- @include ../../../components/products/product-page-buttons/product-compare-button.html -->
+                      </div>
+                      <div class="product-short__wrapper d-flex gap-15 mb-20">
+                        <!-- @include ../../../components/products/product-rating/product-rating.html -->
+                        <!-- @include ../../../components/products/product-page-buttons/product-reviews-button.html -->
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="col-xl-4 col-lg-3">
+                    <div class="product-short__secondary-column-content">
+                      <p class="g-text product-short__description-text">
+                        Предназначена для обшивки стен, потолков, перегородок, в качестве настила под напольные
+                        покрытия, для
+                        опалубки, для изготовления тары и упаковки, а также в мебельном производстве.
+                      </p>
+                      <div class="product-short__haracteristic-table mb-20">
+                        <dir class="product-short__haracteristic-table-row">
+                          <p class="g-text product-short__haracteristic-name">Поверхность:</p>
+                          <p class="g-text product-short__haracteristic-value">не шлифованная, пример длинной записи на
+                            несколько
+                            строчек</p>
+                        </dir>
+                        <dir class="product-short__haracteristic-table-row">
+                          <p class="g-text product-short__haracteristic-name">Поверхность:</p>
+                          <p class="g-text product-short__haracteristic-value">22 листа</p>
+                        </dir>
+                        <dir class="product-short__haracteristic-table-row">
+                          <p class="g-text product-short__haracteristic-name">Количество в 1 м³:</p>
+                          <p class="g-text product-short__haracteristic-value">24</p>
+                        </dir>
+                      </div>
+                      <div class="product-short__static-text-wrapper">
+                        <div class=" d-flex flex-column gap-10 mb-20">
+                          <!-- @include ../../../components/products/product-page-buttons/product-check-button.html -->
+                          <!-- @include ../../../components/products/product-page-buttons/product-question-button.html -->
+                        </div>
+                        <p class="g-text">
+                          <span class="g-text g-text_accent">Внимание!</span>
+                          Товар можно оплатить онлайн, за наличные, получить счет или купить в кредит
+                          онлайн.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-9">
+                <div class="g-content product-short__secondary-content">
+                  <!-- @include ../../../components/products/additional-products/additional-products.html -->
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <!-- @include ../../../components/products/product-banner-group/product-banner-group.html -->
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -161,13 +247,13 @@
       </section>
     </main>
 
-    <!-- @include ../../../widgets/footers/footer-default.html -->
+    <!-- @include ../../../components/footers/footer/footer.html -->
 
   </div>
 
-  <!-- @include ../../../widgets/footers/svg-pack.html -->
+  <!-- @include ../../../components/general/svg-pack/svg-pack.html -->
 
-  <!-- @include ../../../widgets/modals/callme-modal.html -->
+  <!-- @include ../../../components/modals/callme-modal/callme-modal.html -->
 </body>
 
 </html>
