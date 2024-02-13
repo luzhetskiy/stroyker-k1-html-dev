@@ -5015,8 +5015,8 @@ body {
   align-items: center;
   text-align: center;
   font-size: 14px;
-  transition: color 0.15s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out,
-    opacity 0.15s ease-out, visibility 0.15s ease-out;
+  transition: color 0.15s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out, opacity 0.15s ease-out,
+    visibility 0.15s ease-out;
   height: 40px;
   line-height: 38px;
   padding: 0 15px;
@@ -5194,38 +5194,6 @@ body {
 
 .slick-arrow.slick-hidden {
   display: none;
-}
-
-.slick-dots {
-  z-index: 3;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 20px;
-  margin: 0;
-  padding: 0;
-  font-size: 0;
-  display: flex;
-  justify-content: center;
-  list-style: none;
-}
-.slick-dots li:not(:last-child) {
-  margin-right: 16px;
-}
-.slick-dots button {
-  width: 11px;
-  height: 11px;
-  background-color: #f3f6fb;
-  border-radius: 11px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--main-elements-color, #2363d1);
-  font-size: 0;
-  display: block;
-  transition: border-color 0.15s ease-out, background-color 0.15s ease-out;
-}
-.slick-dots .slick-active button {
-  background-color: var(--main-elements-color, #2363d1);
 }
 
 /* конец с плавным увеличением/уменьшением контента  */

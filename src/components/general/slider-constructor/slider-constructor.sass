@@ -6,14 +6,17 @@
   .slider-constructor:not([data-no-arrows])
     padding-top: 30px
 
-  .slider-constructor:not([data-no-arrows]) .slick-dots
-    position: absolute
-    top: 0
-    text-align: right
-    width: 100%
-    justify-content: flex-end
-    margin-top: 0
-    padding-right: 30px
+.slider-constructor .slick-dots
+  position: absolute
+  top: 0
+  bottom: auto
+  right: 0
+  left: auto
+  text-align: right
+  width: 100%
+  justify-content: flex-end
+  margin-top: 0
+  padding-right: 30px
 
 .slider-constructor
   display: flex
@@ -29,13 +32,6 @@
 .slider-constructor .slick-list
   margin: 0 calc(var(--grid-gutter-width) / -2)
   width: 100%
-
-.slider-constructor .slick-dots
-  position: relative
-  margin-top: 25px
-  bottom: initial
-  transform: initial
-  left: initial
 
 .slider-constructor .slick-slide
   flex: 0 0 auto
@@ -94,6 +90,33 @@
 .slider-constructor.scale-slide .slide-item img
   max-width: 100%
   margin: auto
+
+.slick-dots
+  z-index: 3
+  margin: 0
+  padding: 0
+  font-size: 0
+  display: flex
+  justify-content: center
+  list-style: none
+
+  & li:not(:last-child)
+    margin-right: 16px
+
+  & button
+    width: 11px
+    height: 11px
+    background-color: #f3f6fb
+    border-radius: 11px
+    border-width: 1px
+    border-style: solid
+    border-color: var(--main-elements-color, #2363d1)
+    font-size: 0
+    display: block
+    transition: border-color 0.15s ease-out, background-color 0.15s ease-out
+
+  & .slick-active button
+    background-color: var(--main-elements-color, #2363d1)
 
 @media (min-width: 576px)
   .slider-constructor.scale-slide:not([data-no-arrows]) .slick-dots
