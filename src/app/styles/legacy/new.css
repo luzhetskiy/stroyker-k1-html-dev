@@ -7665,7 +7665,7 @@ main {
 
 @media (min-width: 992px) {
   header {
-    position: static;
+    position: relative;
   }
 
   main {
