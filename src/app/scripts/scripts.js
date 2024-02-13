@@ -16,7 +16,7 @@
 //@include ./legacy/syncSliders.js
 //@include ./legacy/tabs.js
 
-//@include ../../components/index.js
+//@include ../../components/scripts/scripts.js
 
 (function ($) {
   var pluginName = "cscrlb";
