@@ -7233,7 +7233,7 @@ select::-ms-expand {
 
 .product-card__personal-cost {
   margin-bottom: 15px;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 28px;
   line-height: 33px;
 }
