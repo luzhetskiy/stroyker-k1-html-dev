@@ -554,6 +554,7 @@ p:last-child {
 @media (max-width: 991px) {
   .top-header__content-right {
     padding-right: 40px;
+    margin-left: auto;
   }
 }
 
@@ -1521,7 +1522,8 @@ p:last-child {
   padding-top: 20px;
   position: relative;
   display: flex !important;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .mobile-ul li .submenu {

@@ -28,4 +28,18 @@ $(document).ready(() => {
       return;
     }
   });
+
+  // menu open
+  document.addEventListener("click", function (e) {
+    if (e.target.matches(".menu-btn")) {
+      menuBtn.classList.toggle("toggled");
+      menuBox.classList.toggle("show");
+      if (catalogBtn) {
+        catalogBtn.classList.remove("toggled");
+        catalogBox.classList.remove("show");
+      }
+    } else {
+      return;
+    }
+  });
 });
