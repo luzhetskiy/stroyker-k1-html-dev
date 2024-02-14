@@ -37,7 +37,6 @@ $(document).ready(() => {
     if (keypressSlider !== null && keypressSlider.noUiSlider) {
       keypressSlider.noUiSlider.on("update", function (values, handle) {
         inputs[handle].value = values[handle];
-        console.log(123);
       });
     }
 
