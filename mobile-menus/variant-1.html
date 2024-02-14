@@ -203,17 +203,30 @@
             <a class="menu-list__link" href="#">Контакты</a>
           </li>
       
+          <li class="menu-list__item menu-list__item_bottom">
+            <a class="g-link mobile-side-menu-footer__link" href="#">
+              <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.24701 0C2.80237 0 0 2.80246 0 6.2468C0 9.56227 5.66802 17.3084 5.90936 17.6364L6.13459 17.943C6.16094 17.9789 6.20288 18 6.24701 18C6.29182 18 6.33349 17.9789 6.36011 17.943L6.5852 17.6364C6.82669 17.3084 12.4945 9.56227 12.4945 6.2468C12.4945 2.80246 9.69175 0 6.24701 0ZM6.24701 4.00921C7.48124 4.00921 8.48486 5.01276 8.48486 6.2468C8.48486 7.4802 7.48119 8.48439 6.24701 8.48439C5.01351 8.48439 4.00916 7.4802 4.00916 6.2468C4.00916 5.01276 5.01346 4.00921 6.24701 4.00921Z"
+                  fill="currentColor" />
+              </svg>
+              Самара
+            </a>
+            <ul>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#">
+                  Самара
+                </a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#">
+                  Самара
+                </a>
+              </li>
+            </ul>
+          </li>
+      
           <div class="mobile-side-menu-footer">
-            <div class="g-row mobile-side-menu-footer__row mb-20">
-              <a class="g-link mobile-side-menu-footer__link" href="#">
-                <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6.24701 0C2.80237 0 0 2.80246 0 6.2468C0 9.56227 5.66802 17.3084 5.90936 17.6364L6.13459 17.943C6.16094 17.9789 6.20288 18 6.24701 18C6.29182 18 6.33349 17.9789 6.36011 17.943L6.5852 17.6364C6.82669 17.3084 12.4945 9.56227 12.4945 6.2468C12.4945 2.80246 9.69175 0 6.24701 0ZM6.24701 4.00921C7.48124 4.00921 8.48486 5.01276 8.48486 6.2468C8.48486 7.4802 7.48119 8.48439 6.24701 8.48439C5.01351 8.48439 4.00916 7.4802 4.00916 6.2468C4.00916 5.01276 5.01346 4.00921 6.24701 4.00921Z"
-                    fill="currentColor" />
-                </svg>
-                Самара
-              </a>
-            </div>
             <div class="phone-block mb-20">
               <a class="g-link phone-block__primary-link" href="#">+7 (999) 999-00-00</a>
               <a class="g-link phone-block__secondary-link" href="#">Заказать звонок</a>
@@ -284,139 +297,137 @@
     </header>
 
     <main>
-      <main>
-        <section class="section section-first mobile-show">
-          <div class="container">
-            <div class="catalog-side mobile-show">
-              <span class="catalog-side__title">
-                <span class="icon">
-                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z" fill="currentColor" />
-                  </svg>
-                </span>
-                Проекты домов
+      <section class="section section-first mobile-show">
+        <div class="container">
+          <div class="catalog-side mobile-show">
+            <span class="catalog-side__title">
+              <span class="icon">
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z" fill="currentColor" />
+                </svg>
               </span>
-              <div class="catalog-side__content">
-                <ul>
-                  <li class="menu-item">
-                    <a href="/catalog/kategoriya-tovarov-1/">Проекты домов до 150м2</a>
-                  </li>
-        
-                  <li class="menu-item">
-                    <a href="/catalog/kategoriya-tovarov-2/">Проекты домов до 300м2</a>
-                  </li>
-                </ul>
-              </div>
+              Проекты домов
+            </span>
+            <div class="catalog-side__content">
+              <ul>
+                <li class="menu-item">
+                  <a href="/catalog/kategoriya-tovarov-1/">Проекты домов до 150м2</a>
+                </li>
+      
+                <li class="menu-item">
+                  <a href="/catalog/kategoriya-tovarov-2/">Проекты домов до 300м2</a>
+                </li>
+              </ul>
             </div>
           </div>
-        </section>
-        
-        <section class="conditional-section offer-big-slider big_banners wide-container">
-          <div class="container">
-            <!-- это ширина на весь экран  -->
-        
-            <!-- обрезка влево -  cropped--left -->
-            <!-- обрезка вправо - cropped--right -->
-            <!-- без обрезки - убираем классы cropped--left и cropped--right -->
-            <div class="home-banner cropped--nocrop inner-block__active">
-              <div class="owl-carousel" data-autoplay-timeout="5">
-                <!--slide-->
-        
-                <div class="home-banner__slide">
-                  <!--image-->
-        
-                  <div class="image image_cover" title="Оффер">
-                    <img src="../images/offer-img.svg" alt="Оффер" />
-                  </div>
-        
-                  <div class="container content-container">
-                    <div class="slide-content align--right">
-                      <div>
-                        <p style="font-weight: 800; font-size: 30px; line-height: 100%">
-                          Оффер - большой слайдер
-                        </p>
-        
-                        <li>
-                          можно выбрать варианты - широкий баннер, до 1180px, баннер с каталогом слева
-                        </li>
-                        <li>высота настраивается в зависимости от контента</li>
-                        <li>
-                          загружается фон (изображение, возможно, текст, который нет возможности
-                          внедрить в рамках админки)
-                        </li>
-                        <br />
-                        <li>можно выбрать расположение информации в левой или правой колонке</li>
-                        <li>можно выбрать пагинацию кружками снизу или стрелками по сторонам</li>
-                        <br />
-                        <li>
-                          в блоке можно уместить: изображение; текст; кнопки; внутреннее разделение на
-                          колонки; любые сочетания вышеперечисленного контента
-                        </li>
-                      </div>
-                    </div>
-                  </div>
+        </div>
+      </section>
+      
+      <section class="conditional-section offer-big-slider big_banners wide-container">
+        <div class="container">
+          <!-- это ширина на весь экран  -->
+      
+          <!-- обрезка влево -  cropped--left -->
+          <!-- обрезка вправо - cropped--right -->
+          <!-- без обрезки - убираем классы cropped--left и cropped--right -->
+          <div class="home-banner cropped--nocrop inner-block__active">
+            <div class="owl-carousel" data-autoplay-timeout="5">
+              <!--slide-->
+      
+              <div class="home-banner__slide">
+                <!--image-->
+      
+                <div class="image image_cover" title="Оффер">
+                  <img src="../images/offer-img.svg" alt="Оффер" />
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section class="conditional-section offer-banner-two-col multirow_banner_set">
-          <div class="container">
-            <div class="b-multirows-row d-grid row-gap-25 column-gap-grid grid-columns-md-2 grid-columns-lg-2">
-              <div class="content-standard-box">
-                <div class="content-standard-box__container">
-                  <div class="content-background-box__text-content">
+      
+                <div class="container content-container">
+                  <div class="slide-content align--right">
                     <div>
                       <p style="font-weight: 800; font-size: 30px; line-height: 100%">
-                        Оффер - набор строк с баннерами - 2 колонки
+                        Оффер - большой слайдер
                       </p>
-        
-                      <li>ширина колонки 580px</li>
-                      <li>высота любая</li>
+      
+                      <li>
+                        можно выбрать варианты - широкий баннер, до 1180px, баннер с каталогом слева
+                      </li>
+                      <li>высота настраивается в зависимости от контента</li>
+                      <li>
+                        загружается фон (изображение, возможно, текст, который нет возможности
+                        внедрить в рамках админки)
+                      </li>
                       <br />
-                      <p>в колонке можно уместить:</p>
-        
-                      <li>изображение</li>
-                      <li>текст</li>
-                      <li>кнопки</li>
-                      <li>внутреннее разделение на колонки</li>
-                      <li>оставить одну из колонок пустой</li>
-                      <li>любые сочетания вышеперечисленного контента</li>
-                      <li>колонки могут быть разной высоты</li>
+                      <li>можно выбрать расположение информации в левой или правой колонке</li>
+                      <li>можно выбрать пагинацию кружками снизу или стрелками по сторонам</li>
                       <br />
-                      <p>
-                        Изначально, если изображение загружается через админку, оно автоматически
-                        будет отображаться выше контента, прописываемого в поле “Текст”, на таких фото
-                        стоит зум, но есть проблемы с вставлением ссылок на фото
-                      </p>
-        
-                      <p>
-                        Кодом можно поправить отображение текста, например, сделать его на фото снизу
-                      </p>
-        
-                      <p>
-                        Если положение фото должно быть другим - его внутри контента вставить ссылкой,
-                        предварительно добавив в менеджер файлов
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-        
-              <div class="content-standard-box">
-                <div class="content-standard-box__container">
-                  <div class="content-image image-zoom">
-                    <div class="image">
-                      <img src="../images/example-banner.svg" />
+                      <li>
+                        в блоке можно уместить: изображение; текст; кнопки; внутреннее разделение на
+                        колонки; любые сочетания вышеперечисленного контента
+                      </li>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+      
+      <section class="conditional-section offer-banner-two-col multirow_banner_set">
+        <div class="container">
+          <div class="b-multirows-row d-grid row-gap-25 column-gap-grid grid-columns-md-2 grid-columns-lg-2">
+            <div class="content-standard-box">
+              <div class="content-standard-box__container">
+                <div class="content-background-box__text-content">
+                  <div>
+                    <p style="font-weight: 800; font-size: 30px; line-height: 100%">
+                      Оффер - набор строк с баннерами - 2 колонки
+                    </p>
+      
+                    <li>ширина колонки 580px</li>
+                    <li>высота любая</li>
+                    <br />
+                    <p>в колонке можно уместить:</p>
+      
+                    <li>изображение</li>
+                    <li>текст</li>
+                    <li>кнопки</li>
+                    <li>внутреннее разделение на колонки</li>
+                    <li>оставить одну из колонок пустой</li>
+                    <li>любые сочетания вышеперечисленного контента</li>
+                    <li>колонки могут быть разной высоты</li>
+                    <br />
+                    <p>
+                      Изначально, если изображение загружается через админку, оно автоматически
+                      будет отображаться выше контента, прописываемого в поле “Текст”, на таких фото
+                      стоит зум, но есть проблемы с вставлением ссылок на фото
+                    </p>
+      
+                    <p>
+                      Кодом можно поправить отображение текста, например, сделать его на фото снизу
+                    </p>
+      
+                    <p>
+                      Если положение фото должно быть другим - его внутри контента вставить ссылкой,
+                      предварительно добавив в менеджер файлов
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="content-standard-box">
+              <div class="content-standard-box__container">
+                <div class="content-image image-zoom">
+                  <div class="image">
+                    <img src="../images/example-banner.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
