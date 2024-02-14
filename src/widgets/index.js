@@ -1,1 +1,0 @@
-//@include ./sliders/index.js
