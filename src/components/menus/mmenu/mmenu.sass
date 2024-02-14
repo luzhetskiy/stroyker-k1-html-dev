@@ -79,10 +79,6 @@
 
 #menu:not(.mm-menu)
   display: none
-  transform: translateX(-100%) 
-
-#menu:not(.mm-menu--opened)
-  transform: translateX(-100%) 
 
 .cross-button
   display: inline-flex
@@ -104,3 +100,62 @@
     transform: rotate(45deg)
   &::before
     transform: rotate(-45deg)
+
+
+.menu-list
+  &__item
+    display: flex
+    padding: 6.5px 20px
+    align-items: center
+    &_bottom
+      position: absolute
+      bottom: 180px
+      width: 100%
+      z-index: 1
+  &__link
+    cursor: pointer
+    color: #333333
+    display: inline-flex
+    padding: 5px 0
+    padding-right: 15px
+    gap: 15px
+    align-items: center
+    padding-left: 0 !important
+    white-space: normal !important
+
+  &__icon
+    max-width: 22px
+    width: 100%
+    min-width: 22px
+    height: auto
+
+
+.mobile-side-menu-footer
+  position: absolute
+  bottom: 0
+  left: 0
+  border-top: 1px solid #E5E5EA
+  width: 100%
+  padding: 20px
+  padding-top: 55px
+
+  &__link
+    font-size: 16px
+    display: inline-flex
+    align-items: center
+    gap: 5px
+    color: #2363D1 !important
+
+.phone-block
+  display: flex
+  flex-direction: column
+  gap: 10px
+  &__primary-link
+    font-size: 22px
+    color: #2363D1 !important
+  &__secondary-link
+    font-size: 16px
+    text-decoration: underline
+    color: #2363D1 !important
+    &:hover
+      text-decoration: underline
