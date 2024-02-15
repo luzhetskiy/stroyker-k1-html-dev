@@ -1449,14 +1449,13 @@ p:last-child {
 
 .mobile-ul {
   width: calc(100% + 30px);
-  margin: 0 -15px 15px -15px;
   padding: 0 15px 0px 15px;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 767px) {
   .mobile-ul {
     border-bottom: 1px solid #fff;
-    padding-bottom: 30px;
   }
 }
 
@@ -1519,11 +1518,12 @@ p:last-child {
 }
 
 .mobile-phone {
-  padding-top: 20px;
   position: relative;
   display: flex !important;
   align-items: center;
   flex-direction: column;
+  gap: 5px;
+  padding-bottom: 10px;
 }
 
 .mobile-ul li .submenu {
@@ -1585,7 +1585,6 @@ p:last-child {
   .btn-download {
     width: 100%;
     padding: 0;
-    margin: 25px 0;
   }
 }
 

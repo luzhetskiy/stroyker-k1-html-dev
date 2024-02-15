@@ -1,48 +1,3 @@
-/* Кастомная цветовая схема */
-:root {
-  --custom-accent-color: #2363d1;
-  --custom-accent-dark-color: #1c52ac;
-  --custom-accent-light-color: #b7cbe5;
-  --custom-accent-lighter-color: #e7eef6;
-
-  --custom-neutral-lightest: #ffffff;
-  --custom-neutral-lightest-opacity: #ffffff1a;
-  --custom-neutral-lighter: #dadada;
-  --custom-neutral-light: #ccc;
-  --custom-neutral: #a7a7a7;
-  --custom-neutral-dark: #333333;
-  --custom-neutral-darker: #222222;
-  --custom-neutral-darkest: #000000;
-
-  --custom-hit-color: #3ec28f;
-  --custom-sale-color: #ff9500;
-  --custom-new-color: #30c2ff;
-  --custom-discount-color: #c43228;
-  --custom-transparent-color: transparent;
-}
-
-/* Цветовая схема */
-:root {
-  --accent-color-400: var(--custom-accent-color, #2363d1);
-  --accent-color-500: var(--custom-accent-dark-color, #1c52ac);
-  --accent-color-400-100: var(--custom-accent-light-color, #b7cbe5);
-
-  --neutral-darkest-color: var(--custom-black-color, #000000);
-  --neutral-darker-color: var(--custom-dark-color, #222222);
-  --neutral-dark: var(--custom-neutral-dark, #333333);
-  --neutral: var(--custom-neutral, #a7a7a7);
-  --gray-color-400: var(--custom-neutral-light, #cccccc);
-  --gray-color-400er-color: var(--custom-neutral-lighter, #dadada);
-  --gray-color-400est-color: var(--custom-neutral-lightest, #ffffff);
-  --gray-color-400est-color-opacity: var(--custom-neutral-lightest-opacity, #ffffff1a);
-
-  --hit-color: var(--custom-hit-color, #3ec28f);
-  --sale-color: var(--custom-sale-color, #ff9500);
-  --new-color: var(--custom-new-color, #30c2ff);
-  --discount-color: var(--custom-discount-color, #c43228);
-  --transparent-color: var(--custom-white-opacity-color, transparent);
-}
-
 /* Предназначение цветов */
 :root {
   /* Фон шапки */
@@ -126,7 +81,7 @@
   --contact-box-call-link__bg: var(--gray-color-400est-color);
   --color-button-callme-background: var(--gray-color-400est-color);
   --contact-box-call-link__borderColor: var(--neutral-dark);
-  --color-button-callme-border: var(--accent-color-400-100);
+  --color-button-callme-border: var(--accent-color-400);
   --contact-box-call-link__bg--hover: var(--accent-color-400);
   --color-button-callme-background-hover: var(--accent-color-400);
   --contact-box-call-link__color--hover: var(--gray-color-400est-color);

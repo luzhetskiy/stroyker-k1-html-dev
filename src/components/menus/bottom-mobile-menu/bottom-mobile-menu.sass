@@ -40,12 +40,12 @@
     &:hover
       .bottom-mobile-menu-button
         &__inner
-          background-color: var(--bottom-mobile-menu-background-circle-hover, var(--accent-color-400-100))
+          background-color: var(--bottom-mobile-menu-background-circle-hover, var(--accent-color-400))
 
     &.bottom-mobile-menu-button_active
       .bottom-mobile-menu-button
         &__inner
-          background-color: var(--bottom-mobile-menu-background-circle-hover, var(--accent-color-400-100))
+          background-color: var(--bottom-mobile-menu-background-circle-hover, var(--accent-color-400))
 
     .bottom-mobile-menu-button
       &__inner
@@ -160,3 +160,55 @@
       &__content
         margin-bottom: 4px
         margin-inline: 4px
+
+
+.bottom-mobile-menu-list
+  position: absolute
+  background-color: var(--bottom-mobile-menu-list-background, var(--white-color))
+  bottom: 0
+  left: 0
+  width: 100%
+  padding-bottom: 95px
+  transition: .3s
+  transform: translateY(100%)
+  overflow: auto
+  max-height: 50vh
+
+  &_plates
+    padding: 10px 20px
+    padding-bottom: 95px
+    display: flex
+    gap: 8px
+    flex-wrap: wrap
+    justify-content: flex-end
+    .bottom-mobile-menu-list
+      &__link
+        display: inline-flex
+        background-color: var(--bottom-mobile-menu-list-plates-link-text-color, var(--accent-color-400))
+        height: 40px
+        text-align: center
+        border: none
+        border-radius: 6px
+        transition: .3s
+        &:hover
+          background-color: var(--bottom-mobile-menu-list-plates-link-background-color, var(--accent-color-400))
+          color: var(--bottom-mobile-menu-list-plates-link-text-color, var(--white-color))
+
+  &_active
+    transform: translateY(0%)
+
+  &__icon-arrow-fill
+    fill: var(--bottom-mobile-menu-list-link-icon-color, var(--gray-color-400))
+
+  &__link
+    padding: 10px 20px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    color: var(--bottom-mobile-menu-list-link-text-color, var(--accent-color-500))
+    border-bottom: 1px solid var(--bottom-mobile-menu-list-link-border-color, var(--gray-color-300))
+    transition: .3s
+    background-color: var(--bottom-mobile-menu-list-link-background, var(--white-color))
+    &:hover
+      background-color: var(--bottom-mobile-menu-list-link-background-hover, var(--accent-color-400))
+      color: var(--bottom-mobile-menu-list-link-text-color, var(--accent-color-400))

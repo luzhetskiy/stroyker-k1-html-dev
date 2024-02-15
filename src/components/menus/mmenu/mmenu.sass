@@ -1,5 +1,5 @@
 .mm-navbar
-  background-color: #fff
+  background-color: var(--white-color)
 
 .mm-navbars_top
   border: none
@@ -22,13 +22,13 @@
     font-size: 16px
     font-weight: 700
     line-height: 20px
-    color: #333 !important
+    color: var(--gray-color-700) !important
 
 .mm-listitem:after
   display: none
 
 .mm-menu
-  background-color: #fff
+  background-color: var(--white-color)
 
 .mm-navbars_bottom>.mm-navbar:not(.mm-navbar_has-btns), .mm-navbars_top>.mm-navbar:not(.mm-navbar_has-btns)
   display: block
@@ -47,7 +47,7 @@
   display: block
 
 .mm-menu--theme-light
-  --mm-color-background: #fff
+  --mm-color-background: var(--white-color)
 
 .mm-navbars--top
   border: none
@@ -101,7 +101,7 @@
     height: 2px
     position: absolute
     border-radius: 1px
-    background-color: #000
+    background-color: var(--black-color)
 
   &::after
     transform: rotate(45deg)
@@ -121,7 +121,7 @@
       z-index: 1
   &__link
     cursor: pointer
-    color: #333333
+    color: var(--gray-color-700)
     display: inline-flex
     padding: 5px 0
     padding-right: 15px
@@ -141,7 +141,7 @@
   position: absolute
   bottom: 0
   left: 0
-  border-top: 1px solid #E5E5EA
+  border-top: 1px solid var(--gray-color-200)
   width: 100%
   padding: 20px
   padding-top: 60px
@@ -151,7 +151,7 @@
     display: inline-flex
     align-items: center
     gap: 5px
-    color: #2363D1 !important
+    color: var(--accent-color-400) !important
 
 .phone-block
   display: flex
@@ -159,10 +159,92 @@
   gap: 10px
   &__primary-link
     font-size: 22px
-    color: #2363D1 !important
+    color: var(--accent-color-400) !important
   &__secondary-link
     font-size: 16px
     text-decoration: underline
     color: #2363D1 !important
     &:hover
       text-decoration: underline
+
+
+.mobile-side-menu
+  &__background
+    background-color: #00000057
+    transition: .3s
+    height: 100vh
+    width: 100vw
+    top: 0
+    left: 0
+    position: absolute
+    z-index: 10
+    display: none
+
+.mobile-side-menu-content
+  width: 90%
+  height: 100vh
+  transform: translateX(-100%)
+  transition: .3s
+  background-color: var(--white-color)
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 11
+  overflow: hidden
+  display: flex
+  flex-direction: column
+  &_active
+    transform: translateX(0%)
+
+  &__header
+    height: 57px
+    display: flex
+    align-items: center
+    padding: 0 20px
+
+  &__row
+    width: 100%
+
+  &__main
+    height: 100%
+    width: 100%
+    position: relative
+    overflow: hidden
+
+  &__page
+    transform: translateX(100%)
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    transition: .3s
+    background-color: var(--white-color)
+    padding: 0 20px
+    &_active
+      transform: translateX(0%)
+
+
+.search-input-group
+  padding: 0 20px
+  &__row
+    display: flex
+  &__input
+    width: 100%
+    height: 40px
+    padding: 10px 16px
+    border-radius: 0
+    border-top-left-radius: 2px
+    border-bottom-left-radius: 2px
+    border: 1px solid var(--gray-color-500)
+    outline: none !important
+
+  &__button
+    min-width: 48px
+    height: 40px
+    background-color: var(--accent-color-400)
+    color: var(--white-color)
+    stroke: var(--white-color)
+    border-radius: 0
+    border-top-right-radius: 2px
+    border-bottom-right-radius: 2px
