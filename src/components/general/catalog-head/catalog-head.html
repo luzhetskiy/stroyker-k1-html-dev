@@ -1,0 +1,80 @@
+<div class="catalog-head">
+  <div class="catalog-sorting">
+    <span class="catalog-sorting__title">Сортировка:</span>
+    <ul>
+      <li>
+        <a href="?price_sort=price__asc">
+          <span class="icon-sort-price price-asc"> <span></span> </span>Цена (по
+          возрастанию)
+        </a>
+      </li>
+
+      <li>
+        <a href="?price_sort=price__desc">
+          <span class="icon-sort-price price-desc"> <span></span> </span>Цена (по
+          убыванию)
+        </a>
+      </li>
+
+      <li class="sort-availability">
+        <a href="?sort_field=availability"> Наличие </a>
+      </li>
+
+      <li>
+        <a href="?sort_field=is_hit"> Популярность </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sort-select">
+    <select name="characters" class="custom-select" tabindex="-1" id="products-header-sort-mobile">
+      <option value="" disabled="" selected="">выбрать...</option>
+
+      <option value="?price_sort=price__asc">По цене (по возрастанию)</option>
+
+      <option value="?price_sort=price__desc">По цене (по убыванию)</option>
+
+      <option value="?sort_field=availability">По наличию</option>
+
+      <option value="?sort_field=is_hit">По популярности</option>
+    </select>
+    <div class="dropdown-container">
+      <div class="dropdown-select entypo-down-open-big">
+        <svg class="icon">
+          <use xlink:href="#tab-arrow"></use>
+        </svg><span>выбрать...</span>
+      </div>
+      <ul class="dropdown-select-ul" data-role="products-header-sort-mobile">
+        <li class="selected" data-value="">выбрать...</li>
+        <li data-value="?price_sort=price__asc">По цене (по возрастанию)</li>
+        <li data-value="?price_sort=price__desc">По цене (по убыванию)</li>
+        <li data-value="?sort_field=availability">По наличию</li>
+        <li data-value="?sort_field=is_hit">По популярности</li>
+      </ul>
+    </div>
+    <!-- .custom-select-wrapper -->
+  </div>
+
+  <div class="catalog-right">
+    <div class="view-sorting">
+      <span class="view-sorting__title">Вид</span>
+      <button data-list-view-mode="1" class="view-sort-item select-product-list-view view-sort-item--1 button1 current">
+        <svg class="icon-svg">
+          <use xlink:href="#view-sort-1"></use>
+        </svg>
+      </button>
+      <button data-list-view-mode="2" class="view-sort-item select-product-list-view view-sort-item--2 button2">
+        <svg class="icon-svg">
+          <use xlink:href="#view-sort-2"></use>
+        </svg>
+      </button>
+      <button data-list-view-mode="3" class="view-sort-item view-sort-item--3 button3">
+        <svg class="icon-svg">
+          <use xlink:href="#view-sort-3"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <a class="filter-btn"></a>
+</div>

@@ -327,8 +327,8 @@
       "requireSameDimensions": true
     },
     {
-      "label": "product cards",
-      "url": "http://localhost:3000/product-cards/index.html",
+      "label": "product teasers",
+      "url": "http://localhost:3000/product-teasers/index.html",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",

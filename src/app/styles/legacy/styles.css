@@ -554,6 +554,7 @@ p:last-child {
 @media (max-width: 991px) {
   .top-header__content-right {
     padding-right: 40px;
+    margin-left: auto;
   }
 }
 
@@ -1345,7 +1346,7 @@ p:last-child {
   display: none;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .burger-menu {
     display: block;
   }
@@ -1448,19 +1449,23 @@ p:last-child {
 
 .mobile-ul {
   width: calc(100% + 30px);
-  margin: 0 -15px 15px -15px;
   padding: 0 15px 0px 15px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 @media (max-width: 767px) {
   .mobile-ul {
     border-bottom: 1px solid #fff;
-    padding-bottom: 30px;
   }
 }
 
-.mobile-ul li {
-  margin-bottom: 20px;
+.mobile-ul ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .mobile-ul li:last-child {
@@ -1469,8 +1474,6 @@ p:last-child {
 
 .mobile-ul li .submenu {
   display: none;
-  width: calc(100% + 40px);
-  margin: 15px -20px;
   background: #d9d9de;
   padding: 15px 0;
 }
@@ -1518,10 +1521,12 @@ p:last-child {
 }
 
 .mobile-phone {
-  padding-top: 20px;
   position: relative;
   display: flex !important;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 10px;
 }
 
 .mobile-ul li .submenu {
@@ -1583,7 +1588,6 @@ p:last-child {
   .btn-download {
     width: 100%;
     padding: 0;
-    margin: 25px 0;
   }
 }
 
@@ -2796,13 +2800,7 @@ p:last-child {
   cursor: pointer;
   width: 60px;
   height: 100%;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(rgba(0, 0, 0, 0.1)),
-    to(rgba(0, 0, 0, 0.75))
-  );
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.75)));
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -2832,13 +2830,7 @@ p:last-child {
 }
 
 .main-slider .owl-nav [class*="owl-"]:last-child {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(rgba(0, 0, 0, 0.1)),
-    to(rgba(0, 0, 0, 0.75))
-  );
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.75)));
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
@@ -3730,13 +3722,7 @@ p:last-child {
   cursor: pointer;
   width: 60px;
   height: 100%;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(rgba(0, 0, 0, 0.1)),
-    to(rgba(0, 0, 0, 0.75))
-  );
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.75)));
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -3766,13 +3752,7 @@ p:last-child {
 }
 
 .slider .owl-nav [class*="owl-"]:last-child {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(rgba(0, 0, 0, 0.1)),
-    to(rgba(0, 0, 0, 0.75))
-  );
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.75)));
   background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
   -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
@@ -7255,7 +7235,7 @@ select::-ms-expand {
 
 .product-card__personal-cost {
   margin-bottom: 15px;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 28px;
   line-height: 33px;
 }
@@ -9448,8 +9428,7 @@ canvas {
   left: -25px;
   width: 16px;
   height: 16px;
-  background: var(--main-elements-color, #2363d1) url(../images/checkbox-check.svg) 50% 50%
-    no-repeat;
+  background: var(--main-elements-color, #2363d1) url(../images/checkbox-check.svg) 50% 50% no-repeat;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;

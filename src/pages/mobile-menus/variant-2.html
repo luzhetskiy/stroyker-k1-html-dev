@@ -9,40 +9,41 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="../libs/fancy-box/fancy-box.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.css" />
+  <link rel="stylesheet" href="../libs/mmenu/mmenu.css" />
   <script defer src="../libs/jquery/jquery.js"></script>
   <script defer src="../libs/owl-carousel/owl-carousel.js"></script>
   <script defer src="../libs/slick/slick.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.js"></script>
+  <script defer src="../libs/mmenu/mmenu.js"></script>
 
   <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="../css/mobile-menu.css">
-  <script defer src="../js/mobile-menu.js"></script>
+  <link rel="stylesheet" href="../css/headers-custom.css" />
+  <link rel="stylesheet" href="../css/variables.css" />
   <script defer src="../js/scripts.js"></script>
+  <script defer src="../js/headers-custom.js"></script>
 </head>
 
 <body class="inner-page">
   <div class="page">
     <header>
 
-      <!-- @include ../../widgets/headers/mobile-header/mobile-header__empty.html -->
+      <!-- @include ../../components/headers/mobile-header/mobile-header__empty.html -->
+
+      <!-- @include ../../components/headers/search-modal-window/search-modal-window__empty.html -->
+
+      <!-- @include ../../components/menus/mmenu/mmenu.html -->
 
     </header>
 
     <main>
-      <!-- @include ../../widgets/main-page-content/main-page-content.html -->
+      <!-- @include ../../components/general/example-main-content/example-main-content.html -->
     </main>
 
-    <!-- @include ../../widgets/footers/footer-default__cookie.html -->
+    <!-- @include ../../components/footers/footer/footer.html -->
   </div>
 
-  <!-- @include ../../widgets/modals/search-modal-window/search-modal-window__empty.html -->
+  <!-- @include ../../components/menus/bottom-mobile-menu/bottom-mobile-menu.html -->
 
-  <!-- @include ../../widgets/menus/bottom-mobile-menu/bottom-mobile-menu_radius.html -->
-
-  <!-- @include ../../widgets/menus/mmenu/mmenu.html -->
-
-  <!-- @include ../../widgets/footers/svg-pack.html -->
+  <!-- @include ../../components/general/svg-pack/svg-pack.html -->
 </body>
 
 </html>

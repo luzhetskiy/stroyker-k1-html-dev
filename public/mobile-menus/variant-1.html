@@ -9,16 +9,17 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="../libs/fancy-box/fancy-box.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.min.css" />
+  <link rel="stylesheet" href="../libs/mmenu/mmenu.css" />
   <script defer src="../libs/jquery/jquery.js"></script>
   <script defer src="../libs/owl-carousel/owl-carousel.js"></script>
   <script defer src="../libs/slick/slick.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/9.3.0/mmenu.js"></script>
+  <script defer src="../libs/mmenu/mmenu.js"></script>
 
   <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="../css/chustom-headers.css" />
-  <script defer src="../js/search.js"></script>
+  <link rel="stylesheet" href="../css/headers-custom.css" />
+  <link rel="stylesheet" href="../css/variables.css" />
   <script defer src="../js/scripts.js"></script>
+  <script defer src="../js/headers-custom.js"></script>
 </head>
 
 <body class="inner-page">
@@ -55,142 +56,378 @@
         </div>
       </section>
 
+      <div class="search-modal-window">
+        <div class="search-modal-window__header">
+          <div class="container">
+            <div class="g-row search-modal-window__row">
+              <form class="search-modal-window__input-form">
+                <input data-clear-input="search-menu" name="q" data-min-chars="3" data-search-url="/search" value
+                  autocomplete="off" data-search-input="search-modal" class="search-modal-window__input" type="text">
+                <button data-clear-input-button="search-menu" type="button" data-clear-input
+                  class="search-modal-window__clear-input"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L7.99998 1" stroke="#E5E5EA" stroke-width="0.991667" stroke-linecap="round" />
+                    <path d="M8 8L1 1" stroke="#E5E5EA" stroke-width="0.991667" stroke-linecap="round" />
+                  </svg>
+                </button>
+              </form>
+              <button type="button" data-close-search-modal class="g-link search-modal-window__cancel">Отмена</button>
+            </div>
+          </div>
+        </div>
+        <div class="search-modal-window__search-results">
+          <div class="container" data-search-results="search-modal">
+            <a href="/catalog/product/tovar-1/" class="s-item-link" style="display: flex">
+              <div class="s-item-info">
+                <span class="s-item-title">Товар 1</span>
+                <span class="s-item-price">
+                  1&nbsp;000,00 ₽/шт.
+                </span>
+              </div>
+            </a>
+            <a href="/catalog/product/tovar-1/" class="s-item-link" style="display: flex">
+              <div class="s-item-info">
+                <span class="s-item-title">Товар 1</span>
+                <span class="s-item-price">
+                  1&nbsp;000,00 ₽/шт.
+                </span>
+              </div>
+            </a>
+            <a href="/catalog/product/tovar-1/" class="s-item-link" style="display: flex">
+              <div class="s-item-img">
+                <img src="http://stage.nastroyker.ru/media/stage_cache/43/e7/43e76b625aa4040e081cf0a11ffe0ca8.png"
+                  alt="Товар 1">
+              </div>
+              <div class="s-item-info">
+                <span class="s-item-title">Товар 1</span>
+                <span class="s-item-price">
+                  1&nbsp;000,00 ₽/шт.
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <nav data-position="left-front" id="menu">
+        <ul>
+          <li class="menu-list__item">
+            <a href="#" class="menu-list__link">Каталог</a>
+            <ul class="menu-list__inner-list">
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">
+                  Металлопрокат</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Сухие
+                  смеси</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">
+                  Теплоизоляционные материалы</a>
+              </li>
+              <li class="menu-list__item">
+                <a href="#" class="menu-list__link"><img class="menu-list__icon" src="../images/Group.svg" alt="">
+                  Строительные материалы
+                </a>
+                <ul class="menu-list__inner-list">
+                  <li class="menu-list__item">
+                    <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Затирка
+                      для швов (плитки), гидроизоляционная смесь</a>
+                  </li>
+                  <li class="menu-list__item">
+                    <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Блоки
+                      для строительства</a>
+                  </li>
+                  <li class="menu-list__item">
+                    <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Затирка
+                      для швов (плитки), гидроизоляционная смесь</a>
+                  </li>
+                  <li class="menu-list__item">
+                    <a href="#" class="menu-list__link"><img class="menu-list__icon" src="../images/Group.svg" alt="">Сетка
+                      фасадная, стеклотканевая, стеклохолст
+                    </a>
+                    <ul class="menu-list__inner-list">
+                      <li class="menu-list__item">
+                        <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg"
+                            alt="">Затирка для швов (плитки), гидроизоляционная смесь</a>
+                      </li>
+                      <li class="menu-list__item">
+                        <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg"
+                            alt="">Блоки для строительства</a>
+                      </li>
+                      <li class="menu-list__item">
+                        <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg"
+                            alt="">Затирка для швов (плитки), гидроизоляционная смесь</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Листовые
+                  материалы</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Инженерная
+                  сантехника</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg"
+                    alt="">Гидроизоляционные материалы</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg"
+                    alt="">Вентиляция</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg"
+                    alt="">Водоснабжение</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Водосточные
+                  и дренажные системы</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Двери</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Услуги</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Реквизиты</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="#">Контакты</a>
+          </li>
+      
+          <li class="menu-list__item menu-list__item_bottom">
+            <a class="g-link mobile-side-menu-footer__link" href="#">
+              <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.24701 0C2.80237 0 0 2.80246 0 6.2468C0 9.56227 5.66802 17.3084 5.90936 17.6364L6.13459 17.943C6.16094 17.9789 6.20288 18 6.24701 18C6.29182 18 6.33349 17.9789 6.36011 17.943L6.5852 17.6364C6.82669 17.3084 12.4945 9.56227 12.4945 6.2468C12.4945 2.80246 9.69175 0 6.24701 0ZM6.24701 4.00921C7.48124 4.00921 8.48486 5.01276 8.48486 6.2468C8.48486 7.4802 7.48119 8.48439 6.24701 8.48439C5.01351 8.48439 4.00916 7.4802 4.00916 6.2468C4.00916 5.01276 5.01346 4.00921 6.24701 4.00921Z"
+                  fill="currentColor" />
+              </svg>
+              Самара
+            </a>
+            <ul>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#">
+                  Самара
+                </a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#">
+                  Самара
+                </a>
+              </li>
+            </ul>
+          </li>
+      
+          <div class="mobile-side-menu-footer">
+            <div class="phone-block mb-20">
+              <a class="g-link phone-block__primary-link" href="#">+7 (999) 999-00-00</a>
+              <a class="g-link phone-block__secondary-link" href="#">Заказать звонок</a>
+            </div>
+            <div class="g-row mobile-side-menu-footer__row mb-20">
+              <a class="g-link mobile-side-menu-footer__link" href="#"><svg width="16" height="18" viewBox="0 0 16 18"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.76938 7.84653C8.49965 7.84653 9.21352 7.62998 9.82072 7.22427C10.4279 6.81855 10.9012 6.24189 11.1806 5.56721C11.4601 4.89253 11.5332 4.15013 11.3907 3.43389C11.2483 2.71765 10.8966 2.05975 10.3802 1.54337C9.86386 1.02699 9.20595 0.675331 8.48971 0.532862C7.77348 0.390394 7.03108 0.463514 6.3564 0.742976C5.68171 1.02244 5.10506 1.49569 4.69934 2.10289C4.29362 2.71008 4.07707 3.42395 4.07707 4.15422C4.07707 5.13348 4.46608 6.07264 5.15852 6.76508C5.85097 7.45752 6.79012 7.84653 7.76938 7.84653ZM14.8863 13.5696C12.9968 11.6858 10.4375 10.6279 7.76938 10.6279C5.10124 10.6279 2.54195 11.6858 0.652458 13.5696L0.384766 13.8465V18.0004H15.154V13.8465L14.8863 13.5696Z"
+                    fill="currentColor" />
+                </svg>
+                Войти</a>
+            </div>
+            <div class="g-row mobile-side-menu-footer__row">
+              <a class="g-link mobile-side-menu-footer__link" href="#"><svg width="18" height="18" viewBox="0 0 18 18"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.5 9H14.5V18H17.5V9Z" fill="currentColor" />
+                  <path d="M3.5 4.5H0.5V18H3.5V4.5Z" fill="currentColor" />
+                  <path d="M10.5 0H7.5V18H10.5V0Z" fill="currentColor" />
+                </svg>
+                555</a>
+              <a class="g-link mobile-side-menu-footer__link" href="#"><svg width="21" height="18" viewBox="0 0 21 18"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.6721 1.48886C12.9595 -0.564802 16.4942 -0.496639 18.6978 1.71088C20.9005 3.91938 20.9764 7.43661 18.9276 9.7308L10.6702 18L2.41468 9.7308C0.3659 7.43661 0.442827 3.91354 2.64449 1.71088C4.85004 -0.493718 8.37796 -0.567724 10.6721 1.48886Z"
+                    fill="currentColor" />
+                </svg>
+                555</a>
+              <a class="g-link mobile-side-menu-footer__link" href="#"><svg width="21" height="18" viewBox="0 0 21 18"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.59005 15.5879C6.35151 15.5879 6.11832 15.6586 5.91998 15.7911C5.72164 15.9237 5.56705 16.112 5.47576 16.3324C5.38447 16.5528 5.36059 16.7953 5.40713 17.0292C5.45367 17.2632 5.56853 17.4781 5.73721 17.6468C5.90589 17.8154 6.12079 17.9303 6.35475 17.9768C6.58871 18.0234 6.83122 17.9995 7.0516 17.9082C7.27199 17.8169 7.46036 17.6623 7.59288 17.464C7.72541 17.2657 7.79615 17.0325 7.79615 16.7939C7.79615 16.4741 7.66908 16.1673 7.44289 15.9411C7.2167 15.715 6.90993 15.5879 6.59005 15.5879ZM17.2037 15.5879C16.9652 15.5879 16.732 15.6586 16.5336 15.7911C16.3353 15.9237 16.1807 16.112 16.0894 16.3324C15.9981 16.5528 15.9743 16.7953 16.0208 17.0292C16.0673 17.2632 16.1822 17.4781 16.3509 17.6468C16.5195 17.8154 16.7345 17.9303 16.9684 17.9768C17.2024 18.0234 17.4449 17.9995 17.6653 17.9082C17.8856 17.8169 18.074 17.6623 18.2065 17.464C18.3391 17.2657 18.4098 17.0325 18.4098 16.7939C18.4098 16.4741 18.2827 16.1673 18.0566 15.9411C17.8304 15.715 17.5236 15.5879 17.2037 15.5879ZM18.1686 14.623V12.6934H7.8058L7.49704 11.4391L20.0983 9.18133V2.08008H5.17168L4.66029 0.150391H0.800781V2.08008H3.18403L6.30059 14.623H18.1686Z"
+                    fill="currentColor" />
+                </svg>
+                555</a>
+            </div>
+          </div>
+        </ul>
+      </nav>
+      
+      <nav class="d-none" id="menu-navbar">
+        <div class="menu-navbar">
+          <div class="mobile-side-menu-content__header mb-10">
+            <div class="g-row g-row_space-between mobile-side-menu-content__row">
+              <a class="logo-link" href="#">
+                <img class="logo-link__image" src="../images/logo.svg" alt="">
+              </a>
+              <button data-close-menu class="cross-button"></button>
+            </div>
+          </div>
+          <div class="search-input-group mb-10">
+            <div class="search-input-group__row">
+              <input data-search-input="search-menu" name="q" data-min-chars="3" data-search-url="/search" value
+                class="search-input-group__input" autocomplete="off" placeholder="Поиск" type="text">
+              <button data-search-button="search-menu" class="search-input-group__button"><svg width="17" height="17"
+                  viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1.26564 6.42777C1.26564 9.29027 3.5638 11.5925 6.37631 11.5925C9.18882 11.5925 11.487 9.29027 11.487 6.42777C11.487 3.56527 9.18882 1.26301 6.37631 1.26301C3.5638 1.26301 1.26564 3.56527 1.26564 6.42777Z"
+                    stroke-width="2.52602" />
+                  <line y1="-1.26301" x2="7.5559" y2="-1.26301"
+                    transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.3359 10.001)" stroke-width="2.52602" />
+                </svg></button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
     </header>
 
     <main>
-      <main>
-        <section class="section section-first mobile-show">
-          <div class="container">
-            <div class="catalog-side mobile-show">
-              <span class="catalog-side__title">
-                <span class="icon">
-                  <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z" fill="currentColor" />
-                  </svg>
-                </span>
-                Проекты домов
+      <section class="section section-first mobile-show">
+        <div class="container">
+          <div class="catalog-side mobile-show">
+            <span class="catalog-side__title">
+              <span class="icon">
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z" fill="currentColor" />
+                </svg>
               </span>
-              <div class="catalog-side__content">
-                <ul>
-                  <li class="menu-item">
-                    <a href="/catalog/kategoriya-tovarov-1/">Проекты домов до 150м2</a>
-                  </li>
+              Проекты домов
+            </span>
+            <div class="catalog-side__content">
+              <ul>
+                <li class="menu-item">
+                  <a href="/catalog/kategoriya-tovarov-1/">Проекты домов до 150м2</a>
+                </li>
       
-                  <li class="menu-item">
-                    <a href="/catalog/kategoriya-tovarov-2/">Проекты домов до 300м2</a>
-                  </li>
-                </ul>
-              </div>
+                <li class="menu-item">
+                  <a href="/catalog/kategoriya-tovarov-2/">Проекты домов до 300м2</a>
+                </li>
+              </ul>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
       
-        <section class="conditional-section offer-big-slider big_banners wide-container">
-          <div class="container">
-            <!-- это ширина на весь экран  -->
+      <section class="conditional-section offer-big-slider big_banners wide-container">
+        <div class="container">
+          <!-- это ширина на весь экран  -->
       
-            <!-- обрезка влево -  cropped--left -->
-            <!-- обрезка вправо - cropped--right -->
-            <!-- без обрезки - убираем классы cropped--left и cropped--right -->
-            <div class="home-banner cropped--nocrop inner-block__active">
-              <div class="owl-carousel" data-autoplay-timeout="5">
-                <!--slide-->
+          <!-- обрезка влево -  cropped--left -->
+          <!-- обрезка вправо - cropped--right -->
+          <!-- без обрезки - убираем классы cropped--left и cropped--right -->
+          <div class="home-banner cropped--nocrop inner-block__active">
+            <div class="owl-carousel" data-autoplay-timeout="5">
+              <!--slide-->
       
-                <div class="home-banner__slide">
-                  <!--image-->
+              <div class="home-banner__slide">
+                <!--image-->
       
-                  <div class="image image_cover" title="Оффер">
-                    <img src="../images/offer-img.svg" alt="Оффер" />
-                  </div>
-      
-                  <div class="container content-container">
-                    <div class="slide-content align--right">
-                      <div>
-                        <p style="font-weight: 800; font-size: 30px; line-height: 100%">
-                          Оффер - большой слайдер
-                        </p>
-      
-                        <li>
-                          можно выбрать варианты - широкий баннер, до 1180px, баннер с каталогом слева
-                        </li>
-                        <li>высота настраивается в зависимости от контента</li>
-                        <li>
-                          загружается фон (изображение, возможно, текст, который нет возможности
-                          внедрить в рамках админки)
-                        </li>
-                        <br />
-                        <li>можно выбрать расположение информации в левой или правой колонке</li>
-                        <li>можно выбрать пагинацию кружками снизу или стрелками по сторонам</li>
-                        <br />
-                        <li>
-                          в блоке можно уместить: изображение; текст; кнопки; внутреннее разделение на
-                          колонки; любые сочетания вышеперечисленного контента
-                        </li>
-                      </div>
-                    </div>
-                  </div>
+                <div class="image image_cover" title="Оффер">
+                  <img src="../images/offer-img.svg" alt="Оффер" />
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
       
-        <section class="conditional-section offer-banner-two-col multirow_banner_set">
-          <div class="container">
-            <div class="b-multirows-row d-grid row-gap-25 column-gap-grid grid-columns-md-2 grid-columns-lg-2">
-              <div class="content-standard-box">
-                <div class="content-standard-box__container">
-                  <div class="content-background-box__text-content">
+                <div class="container content-container">
+                  <div class="slide-content align--right">
                     <div>
                       <p style="font-weight: 800; font-size: 30px; line-height: 100%">
-                        Оффер - набор строк с баннерами - 2 колонки
+                        Оффер - большой слайдер
                       </p>
       
-                      <li>ширина колонки 580px</li>
-                      <li>высота любая</li>
+                      <li>
+                        можно выбрать варианты - широкий баннер, до 1180px, баннер с каталогом слева
+                      </li>
+                      <li>высота настраивается в зависимости от контента</li>
+                      <li>
+                        загружается фон (изображение, возможно, текст, который нет возможности
+                        внедрить в рамках админки)
+                      </li>
                       <br />
-                      <p>в колонке можно уместить:</p>
-      
-                      <li>изображение</li>
-                      <li>текст</li>
-                      <li>кнопки</li>
-                      <li>внутреннее разделение на колонки</li>
-                      <li>оставить одну из колонок пустой</li>
-                      <li>любые сочетания вышеперечисленного контента</li>
-                      <li>колонки могут быть разной высоты</li>
+                      <li>можно выбрать расположение информации в левой или правой колонке</li>
+                      <li>можно выбрать пагинацию кружками снизу или стрелками по сторонам</li>
                       <br />
-                      <p>
-                        Изначально, если изображение загружается через админку, оно автоматически
-                        будет отображаться выше контента, прописываемого в поле “Текст”, на таких фото
-                        стоит зум, но есть проблемы с вставлением ссылок на фото
-                      </p>
-      
-                      <p>
-                        Кодом можно поправить отображение текста, например, сделать его на фото снизу
-                      </p>
-      
-                      <p>
-                        Если положение фото должно быть другим - его внутри контента вставить ссылкой,
-                        предварительно добавив в менеджер файлов
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-      
-              <div class="content-standard-box">
-                <div class="content-standard-box__container">
-                  <div class="content-image image-zoom">
-                    <div class="image">
-                      <img src="../images/example-banner.svg" />
+                      <li>
+                        в блоке можно уместить: изображение; текст; кнопки; внутреннее разделение на
+                        колонки; любые сочетания вышеперечисленного контента
+                      </li>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
+      
+      <section class="conditional-section offer-banner-two-col multirow_banner_set">
+        <div class="container">
+          <div class="b-multirows-row d-grid row-gap-25 column-gap-grid grid-columns-md-2 grid-columns-lg-2">
+            <div class="content-standard-box">
+              <div class="content-standard-box__container">
+                <div class="content-background-box__text-content">
+                  <div>
+                    <p style="font-weight: 800; font-size: 30px; line-height: 100%">
+                      Оффер - набор строк с баннерами - 2 колонки
+                    </p>
+      
+                    <li>ширина колонки 580px</li>
+                    <li>высота любая</li>
+                    <br />
+                    <p>в колонке можно уместить:</p>
+      
+                    <li>изображение</li>
+                    <li>текст</li>
+                    <li>кнопки</li>
+                    <li>внутреннее разделение на колонки</li>
+                    <li>оставить одну из колонок пустой</li>
+                    <li>любые сочетания вышеперечисленного контента</li>
+                    <li>колонки могут быть разной высоты</li>
+                    <br />
+                    <p>
+                      Изначально, если изображение загружается через админку, оно автоматически
+                      будет отображаться выше контента, прописываемого в поле “Текст”, на таких фото
+                      стоит зум, но есть проблемы с вставлением ссылок на фото
+                    </p>
+      
+                    <p>
+                      Кодом можно поправить отображение текста, например, сделать его на фото снизу
+                    </p>
+      
+                    <p>
+                      Если положение фото должно быть другим - его внутри контента вставить ссылкой,
+                      предварительно добавив в менеджер файлов
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+            <div class="content-standard-box">
+              <div class="content-standard-box__container">
+                <div class="content-image image-zoom">
+                  <div class="image">
+                    <img src="../images/example-banner.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -198,7 +435,6 @@
         <div class="footer-content">
           <div class="footer-first-column">
             <span class="footer-contact"> Контактные данные сайта (нужно настроить) </span>
-            <a class="phone" itemprop="telephone" href="tel:+79093431012" inputmode="text">9093431012</a>
             <a href="/" class="logo">
               <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/footer-logo.svg" alt="" />
             </a>
@@ -270,10 +506,6 @@
             <div class="developer-link">
               <a href="https://nastroyker.ru/" target="_blank">Разработка сайта: NASTROYKER</a>
             </div>
-    
-            <p class="footer-content-cookie">Наш сайт использует cookie, данные об IP-адресе, местоположении.
-              Если Вы не
-              хотите, чтобы эти данные обрабатывались, то должны покинуть сайт.</p>
           </div>
         </div>
     
@@ -312,49 +544,6 @@
         </div>
       </div>
     </footer>
-  </div>
-
-  <div class="search-modal-window">
-    <div class="search-modal-window__header">
-      <div class="container">
-        <div class="g-row search-modal-window__row">
-          <form class="search-modal-window__input-form">
-            <input data-clear-input="search-menu" name="q" data-min-chars="3" data-search-url="/search" value
-              autocomplete="off" data-search-input="search-modal" class="search-modal-window__input" type="text">
-            <button data-clear-input-button="search-menu" type="button" data-clear-input
-              class="search-modal-window__clear-input"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 8L7.99998 1" stroke="#E5E5EA" stroke-width="0.991667" stroke-linecap="round" />
-                <path d="M8 8L1 1" stroke="#E5E5EA" stroke-width="0.991667" stroke-linecap="round" />
-              </svg>
-            </button>
-          </form>
-          <button type="button" data-close-search-modal class="g-link search-modal-window__cancel">Отмена</button>
-        </div>
-      </div>
-    </div>
-    <div class="search-modal-window__search-results">
-      <div class="container" data-search-results="search-modal">
-        <a class="search-result-item" href="#">
-          <div class="search-result-item__content">
-            <span class="search-result-item__name">test</span>
-            <span class="search-result-item__cost">Нет в наличии</span>
-          </div>
-        </a>
-        <a class="search-result-item" href="#">
-          <div class="search-result-item__content">
-            <span class="search-result-item__name">test</span>
-            <span class="search-result-item__cost">Нет в наличии</span>
-          </div>
-        </a>
-        <a class="search-result-item" href="#">
-          <div class="search-result-item__content">
-            <span class="search-result-item__name">test</span>
-            <span class="search-result-item__cost">Нет в наличии</span>
-          </div>
-        </a>
-      </div>
-    </div>
   </div>
 
   <div class="bottom-mobile-menu d-block d-lg-none">
@@ -409,178 +598,6 @@
     </div>
   
   </div>
-
-  <nav data-position="left-front" id="menu">
-    <ul>
-      <li class="menu-list__item">
-        <a href="#" class="menu-list__link">Каталог</a>
-        <ul class="menu-list__inner-list">
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">
-              Металлопрокат</a>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Сухие
-              смеси</a>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">
-              Теплоизоляционные материалы</a>
-          </li>
-          <li class="menu-list__item">
-            <a href="#" class="menu-list__link"><img class="menu-list__icon" src="../images/Group.svg" alt="">
-              Строительные материалы
-            </a>
-            <ul class="menu-list__inner-list">
-              <li class="menu-list__item">
-                <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Затирка
-                  для швов (плитки), гидроизоляционная смесь</a>
-              </li>
-              <li class="menu-list__item">
-                <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Блоки
-                  для строительства</a>
-              </li>
-              <li class="menu-list__item">
-                <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Затирка
-                  для швов (плитки), гидроизоляционная смесь</a>
-              </li>
-              <li class="menu-list__item">
-                <a href="#" class="menu-list__link"><img class="menu-list__icon" src="../images/Group.svg" alt="">Сетка
-                  фасадная, стеклотканевая, стеклохолст
-                </a>
-                <ul class="menu-list__inner-list">
-                  <li class="menu-list__item">
-                    <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg"
-                        alt="">Затирка для швов (плитки), гидроизоляционная смесь</a>
-                  </li>
-                  <li class="menu-list__item">
-                    <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg"
-                        alt="">Блоки для строительства</a>
-                  </li>
-                  <li class="menu-list__item">
-                    <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg"
-                        alt="">Затирка для швов (плитки), гидроизоляционная смесь</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Листовые
-              материалы</a>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Инженерная
-              сантехника</a>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg"
-                alt="">Гидроизоляционные материалы</a>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg"
-                alt="">Вентиляция</a>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg"
-                alt="">Водоснабжение</a>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Водосточные
-              и дренажные системы</a>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="#"><img class="menu-list__icon" src="../images/Group.svg" alt="">Двери</a>
-          </li>
-        </ul>
-      </li>
-      <li class="menu-list__item">
-        <a class="menu-list__link" href="#">Услуги</a>
-      </li>
-      <li class="menu-list__item">
-        <a class="menu-list__link" href="#">Реквизиты</a>
-      </li>
-      <li class="menu-list__item">
-        <a class="menu-list__link" href="#">Контакты</a>
-      </li>
-  
-      <div class="mobile-side-menu-footer">
-        <div class="g-row mobile-side-menu-footer__row mb-20">
-          <a class="g-link mobile-side-menu-footer__link" href="#">
-            <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M6.24701 0C2.80237 0 0 2.80246 0 6.2468C0 9.56227 5.66802 17.3084 5.90936 17.6364L6.13459 17.943C6.16094 17.9789 6.20288 18 6.24701 18C6.29182 18 6.33349 17.9789 6.36011 17.943L6.5852 17.6364C6.82669 17.3084 12.4945 9.56227 12.4945 6.2468C12.4945 2.80246 9.69175 0 6.24701 0ZM6.24701 4.00921C7.48124 4.00921 8.48486 5.01276 8.48486 6.2468C8.48486 7.4802 7.48119 8.48439 6.24701 8.48439C5.01351 8.48439 4.00916 7.4802 4.00916 6.2468C4.00916 5.01276 5.01346 4.00921 6.24701 4.00921Z"
-                fill="#2363D1" />
-            </svg>
-            Самара
-          </a>
-        </div>
-        <div class="phone-block mb-20">
-          <a class="g-link phone-block__primary-link" href="#">+7 (999) 999-00-00</a>
-          <a class="g-link phone-block__secondary-link" href="#">Заказать звонок</a>
-        </div>
-        <div class="g-row mobile-side-menu-footer__row mb-20">
-          <a class="g-link mobile-side-menu-footer__link" href="#"><svg width="16" height="18" viewBox="0 0 16 18"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M7.76938 7.84653C8.49965 7.84653 9.21352 7.62998 9.82072 7.22427C10.4279 6.81855 10.9012 6.24189 11.1806 5.56721C11.4601 4.89253 11.5332 4.15013 11.3907 3.43389C11.2483 2.71765 10.8966 2.05975 10.3802 1.54337C9.86386 1.02699 9.20595 0.675331 8.48971 0.532862C7.77348 0.390394 7.03108 0.463514 6.3564 0.742976C5.68171 1.02244 5.10506 1.49569 4.69934 2.10289C4.29362 2.71008 4.07707 3.42395 4.07707 4.15422C4.07707 5.13348 4.46608 6.07264 5.15852 6.76508C5.85097 7.45752 6.79012 7.84653 7.76938 7.84653ZM14.8863 13.5696C12.9968 11.6858 10.4375 10.6279 7.76938 10.6279C5.10124 10.6279 2.54195 11.6858 0.652458 13.5696L0.384766 13.8465V18.0004H15.154V13.8465L14.8863 13.5696Z"
-                fill="#2363D1" />
-            </svg>
-            Войти</a>
-        </div>
-        <div class="g-row mobile-side-menu-footer__row">
-          <a class="g-link mobile-side-menu-footer__link" href="#"><svg width="18" height="18" viewBox="0 0 18 18"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.5 9H14.5V18H17.5V9Z" fill="#2363D1" />
-              <path d="M3.5 4.5H0.5V18H3.5V4.5Z" fill="#2363D1" />
-              <path d="M10.5 0H7.5V18H10.5V0Z" fill="#2363D1" />
-            </svg>
-            555</a>
-          <a class="g-link mobile-side-menu-footer__link" href="#"><svg width="21" height="18" viewBox="0 0 21 18"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M10.6721 1.48886C12.9595 -0.564802 16.4942 -0.496639 18.6978 1.71088C20.9005 3.91938 20.9764 7.43661 18.9276 9.7308L10.6702 18L2.41468 9.7308C0.3659 7.43661 0.442827 3.91354 2.64449 1.71088C4.85004 -0.493718 8.37796 -0.567724 10.6721 1.48886Z"
-                fill="#2363D1" />
-            </svg>
-            555</a>
-          <a class="g-link mobile-side-menu-footer__link" href="#"><svg width="21" height="18" viewBox="0 0 21 18"
-              fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M6.59005 15.5879C6.35151 15.5879 6.11832 15.6586 5.91998 15.7911C5.72164 15.9237 5.56705 16.112 5.47576 16.3324C5.38447 16.5528 5.36059 16.7953 5.40713 17.0292C5.45367 17.2632 5.56853 17.4781 5.73721 17.6468C5.90589 17.8154 6.12079 17.9303 6.35475 17.9768C6.58871 18.0234 6.83122 17.9995 7.0516 17.9082C7.27199 17.8169 7.46036 17.6623 7.59288 17.464C7.72541 17.2657 7.79615 17.0325 7.79615 16.7939C7.79615 16.4741 7.66908 16.1673 7.44289 15.9411C7.2167 15.715 6.90993 15.5879 6.59005 15.5879ZM17.2037 15.5879C16.9652 15.5879 16.732 15.6586 16.5336 15.7911C16.3353 15.9237 16.1807 16.112 16.0894 16.3324C15.9981 16.5528 15.9743 16.7953 16.0208 17.0292C16.0673 17.2632 16.1822 17.4781 16.3509 17.6468C16.5195 17.8154 16.7345 17.9303 16.9684 17.9768C17.2024 18.0234 17.4449 17.9995 17.6653 17.9082C17.8856 17.8169 18.074 17.6623 18.2065 17.464C18.3391 17.2657 18.4098 17.0325 18.4098 16.7939C18.4098 16.4741 18.2827 16.1673 18.0566 15.9411C17.8304 15.715 17.5236 15.5879 17.2037 15.5879ZM18.1686 14.623V12.6934H7.8058L7.49704 11.4391L20.0983 9.18133V2.08008H5.17168L4.66029 0.150391H0.800781V2.08008H3.18403L6.30059 14.623H18.1686Z"
-                fill="#2363D1" />
-            </svg>
-            555</a>
-        </div>
-      </div>
-    </ul>
-  </nav>
-  
-  <nav class="d-none" id="menu-navbar">
-    <div class="menu-navbar">
-      <div class="mobile-side-menu-content__header mb-10">
-        <div class="g-row g-row_space-between mobile-side-menu-content__row">
-          <a class="logo-link" href="#">
-            <img class="logo-link__image" src="../images/logo.svg" alt="">
-          </a>
-          <button data-close-menu class="cross-button"></button>
-        </div>
-      </div>
-      <div class="search-input-group mb-10">
-        <div class="search-input-group__row">
-          <input data-search-input="search-menu" name="q" data-min-chars="3" data-search-url="/search" value
-            class="search-input-group__input" autocomplete="off" placeholder="Поиск" type="text">
-          <button data-search-button="search-menu" class="search-input-group__button"><svg width="17" height="17"
-              viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M1.26564 6.42777C1.26564 9.29027 3.5638 11.5925 6.37631 11.5925C9.18882 11.5925 11.487 9.29027 11.487 6.42777C11.487 3.56527 9.18882 1.26301 6.37631 1.26301C3.5638 1.26301 1.26564 3.56527 1.26564 6.42777Z"
-                stroke-width="2.52602" />
-              <line y1="-1.26301" x2="7.5559" y2="-1.26301"
-                transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.3359 10.001)" stroke-width="2.52602" />
-            </svg></button>
-        </div>
-      </div>
-    </div>
-  </nav>
 
   <svg width="0" height="0" class="hidden">
     <symbol id="exit" stroke="none" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 21.4 18">

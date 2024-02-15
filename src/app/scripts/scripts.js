@@ -16,8 +16,7 @@
 //@include ./legacy/syncSliders.js
 //@include ./legacy/tabs.js
 
-//@include ../../components/index.js
-//@include ../../widgets/index.js
+//@include ../../components/scripts/scripts.js
 
 (function ($) {
   var pluginName = "cscrlb";
@@ -116,8 +115,7 @@
       }
 
       var jumpAmt = pageJumpMultp * $scrollContentEl[sizeAttr]();
-      var eventOffset =
-        scrollDirection === "vert" ? e.originalEvent.layerY : e.originalEvent.layerX;
+      var eventOffset = scrollDirection === "vert" ? e.originalEvent.layerY : e.originalEvent.layerX;
       var dragHandleOffset = $dragHandleEl.position()[offsetAttr];
       var scrollPos =
         eventOffset < dragHandleOffset
@@ -210,10 +208,7 @@
       var widthMinusScrollbars = $("div", tempEl).innerWidth();
       tempEl.remove();
 
-      if (
-        width === widthMinusScrollbars &&
-        navigator.userAgent.toLowerCase().indexOf("firefox") > -1
-      ) {
+      if (width === widthMinusScrollbars && navigator.userAgent.toLowerCase().indexOf("firefox") > -1) {
         return 17;
       }
 
@@ -376,8 +371,7 @@ function _unsupportedIterableToArray(o, minLen) {
   var n = Object.prototype.toString.call(o).slice(8, -1);
   if (n === "Object" && o.constructor) n = o.constructor.name;
   if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n))
-    return _arrayLikeToArray(o, minLen);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
 }
 
 function _arrayLikeToArray(arr, len) {
@@ -658,21 +652,11 @@ var СustomInteraction = function СustomInteraction() {
       }
     } //mouseenter
 
-    if (
-      event.type == "mouseenter" &&
-      !_this2.touched &&
-      $targets[0] &&
-      $targets[0] == event.target
-    ) {
+    if (event.type == "mouseenter" && !_this2.touched && $targets[0] && $targets[0] == event.target) {
       $targets[0].setAttribute("data-hover", "");
     }
     //mouseleave
-    else if (
-      event.type == "mouseleave" &&
-      !_this2.touched &&
-      $targets[0] &&
-      $targets[0] == event.target
-    ) {
+    else if (event.type == "mouseleave" && !_this2.touched && $targets[0] && $targets[0] == event.target) {
       $targets[0].removeAttribute("data-click");
       $targets[0].removeAttribute("data-hover");
     } //mousedown
