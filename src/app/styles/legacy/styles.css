@@ -1451,6 +1451,9 @@ p:last-child {
   width: calc(100% + 30px);
   padding: 0 15px 0px 15px;
   padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 @media (max-width: 767px) {
@@ -1459,8 +1462,10 @@ p:last-child {
   }
 }
 
-.mobile-ul li {
-  margin-bottom: 20px;
+.mobile-ul ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .mobile-ul li:last-child {
@@ -1469,8 +1474,6 @@ p:last-child {
 
 .mobile-ul li .submenu {
   display: none;
-  width: calc(100% + 40px);
-  margin: 15px -20px;
   background: #d9d9de;
   padding: 15px 0;
 }
