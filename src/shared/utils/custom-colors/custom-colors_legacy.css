@@ -1,0 +1,315 @@
+:root {
+  /* Фон шапки */
+  --header__bg: #333; /* цвет фона верхней шапки */
+  --header-top-bg-color: #fff; /* цвет фона верхней шапки (legacy) */
+  --header-bottom__bg: #333; /* цвет фона нижней шапки */
+  --header-bg-color: #dadada; /* цвет фона нижней шапки (legacy) */
+
+  /* Кнопка "Каталог товаров" */
+  --catalog-btn__bg: #fff; /* цвет фона */
+  --catalog-menu-button_bg: #fff; /* цвет фона (legacy) */
+  --catalog-btn__borderColor: #333333; /* цвет рамки */
+  --catalog-btn__color: #333333; /* цвет текста */
+  --catalog-btn__burgerColor: #333333; /* цвет бургера в кнопке - каталог товаров  */
+  --header-buttons-font-color: #333333; /* цвет бургера в кнопке - каталог товаров (legacy) */
+  --catalog-btn__bg--hover: #2363d1; /* цвет фон при наведении */
+  --catalog-btn__borderColor--hover: #2363d1; /* цвет фона при наведении */
+  --catalog-btn__color--hover: #fff; /* цвет текста при наведении */
+  --catalog-btn__burgerColor--hover: #fff; /* цвет бургера в кнопке при наведении */
+
+  /* Поле поиска */
+  --search-box__bg: #fff; /* фон */
+  --search-field-bg-color: #fff; /* цвет фона (legacy) */
+  --search-box__borderColor: #a7a7a7; /* обводка */
+  --search-field-border-color: #a7a7a7; /* обводка (legacy) */
+  --search-box__color: #333; /* цвет текста */
+  --search-field-font-color: #333; /* цвет текста (legacy) */
+  --search-box__placeholderColor: #333333; /* цвет placeholder */
+  --search-field-placeholder-font-color: #a7a7a7; /* цвет placeholder (legacy) */
+
+  /* кнопка в поле поиск  */
+  --search-box-submit__bg: #dadada; /* фон */
+  --search-field-btn-color: #a7a7a7; /* цвет (legacy) */
+  --search-box-submit__borderColor: #a7a7a7; /* обводка */
+  --search-box-submit__bg--hover: #2363d1; /* фон */
+  --search-box-submit__borderColor--hover: #2363d1; /* обводка */
+
+  /* Выпадающие результаты поиска */
+  --search-box-item__bg: #fff; /* фон */
+  --search-box-item__borderBottomColor: #000; /* обводка снизу */
+  --search-box-item__color: #000; /* цвет текста */
+  --search-box-item__priceColor: #1c52ac; /* цвет текста цены */
+
+  /* после ховера - результат товара в поле поиск  */
+  --search-box-item__bg--hover: #000; /* фон */
+
+  /* кнопка "все каталоги" в результате товара из поле поиск  */
+  --search-box-all-item__bg: #333333; /* фон */
+  --search-box-all-item__color: #fff; /* цвет текста */
+
+  /* Верхнее меню */
+  --nav-item__color: #333333; /* цвет */
+  --header-top-menu-font-color: #333333; /* цвет (legacy) */
+  --nav-item-active__color--active--hover: #2363d1; /* цвет */
+  --header-top-menu-font-hover-color: #2363d1; /* цвет (legacy) */
+
+  /* Счетчик корзины и сравнения */
+  --option-item__color: #333333; /* цвет */
+  --option-item__bg: #2363d1; /* фон (в дефолтной шапке) */
+  --main-elements-color: #2363d1; /* фон (в дефолтной шапке) (legacy) */
+  --option-item__color--active--hover: #2363d1; /* цвет */
+  --main-elements-hover-color: #1c52ac; /* цвет при наведении (legacy) */
+
+  /* Вход в ЛК */
+  --accounts-item__color: #333333; /* цвет */
+  --accounts-item__color--hover: #2363d1; /* цвет */
+
+  /* Телефон в шапке */
+  --contact-box-text__color: #333333; /* цвет текста "Показать..." */
+  --color: #333333; /* цвет текста "Показать..." (legacy) */
+  --contact-box-text-circle__color: #2363d1; /* цвет мигающий точка */
+  --contact-box-tel__color: #333333; /* цвет текста телефона */
+  --header-top-phone-font-color: #333; /* цвет текста телефона (legacy) */
+  --contact-box-text__color--hover: #2363d1; /* цвет текста */
+  --color-hover: #2363d1; /* цвет текста (legacy) */
+  --contact-box-tel__color--hover: #2363d1; /* цвет текста телефона */
+
+  /* Заказать звонок */
+  --contact-box-call-link__color: #333333; /* цвет текста */
+  --color-button-callme-text: #333333; /* цвет текста (legacy) */
+  --contact-box-call-link__bg: #fff; /* фон */
+  --color-button-callme-background: #fff; /* фон (legacy) */
+  --contact-box-call-link__borderColor: #333333; /* обводка */
+  --color-button-callme-border: #333333; /* обводка (legacy) */
+  --contact-box-call-link__bg--hover: #2363d1; /* фон */
+  --color-button-callme-background-hover: #2363d1; /* фон (legacy) */
+  --contact-box-call-link__color--hover: #fff; /* цвет текста */
+  --color-button-callme-text-hover: #fff; /* цвет текста (legacy) */
+  --contact-box-call-link__borderColor--hover: #2363d1; /* обводка */
+  --color-button-callme-border-hover: #2363d1; /* обводка (legacy) */
+
+  /* кнопка callme (legacy) */
+  --callme-button-color: #ffffff; /* цвет текста (legacy) */
+  --callme-button-hover-color: #ffffff; /* цвет текста при наведении (legacy) */
+  --callme-button-fill-color: #ffffff; /* цвет фона (legacy) */
+  --callme-button-fill-hover-color: #ffffff; /* цвет фона при наведении (legacy) */
+
+  /* Выпадающее меню каталога */
+  --menu-box_catalog-box__bg: #434343; /* фон */
+  --menu-box_catalog-box-ul-a__color: #fff; /* цвет текста пунктов */
+  --menu-box_catalog-box-ul-a__color--hover: #2363d1; /* цвет текста пунктов */
+  --category-menu-font-highlight-color: #2363d1; /* цвет текста пунктов (legacy) */
+  --menu-box_catalog-box-ul-a__underlineColor--hover: #2363d1; /* цвет подчеркивания если есть при наведении */
+  --category-menu-underline-highlight-color: #2363d1; /* цвет подчеркивания если есть */
+
+  /* Кнопка меню для шапки v3 */
+  --menu-btn__bg: #dadada; /* фон */
+  --menu-btn__borderColor: #333333; /* обводка */
+  --menu-btn__color: #fff; /* цвет текста */
+  --menu-btn__bg--hover: #2363d1; /* фон */
+  --menu-btn__borderColor--hover: #2363d1; /* обводка */
+  --menu-btn__color--hover: #fff; /* цвет текста */
+
+  /* Пункты меню для шапок версий fat-v2 */
+  --fat-v2-nav-ul-li-a__color: #fff; /* цвет текста */
+  --fat-v2-nav-ul-li-a__bg--hover: #222222; /* фон */
+  --fat-v2-nav-ul-li-a__color--hover: #fff; /* цвет текста */
+  --fat-v2-nav-ul-li-a__color--active: #2363d1; /* цвет текста */
+  --fat-v2-nav-ul-li-ul-li__bg: #222222; /* фон */
+  --fat-v2-nav-ul-li-ul-li-a__color: #fff; /* цвет текста */
+  --fat-v2-nav-ul-li-ul-li-a__color--hover: #2363d1; /* цвет текста */
+  --fat-v2-nav-ul-li-ul-li__bg--hover: #333333; /* фон */
+}
+
+/* "Шапки в адаптиве */
+:root {
+  /* Фон */
+  --mob-header__bg: #fff; /* Фон шапки  */
+  --mob-header_bottom__bg: #333; /* Фон нижной части шапки или фиксированный ниже */
+  --mob-header_bottom__borderColor: #333; /* Цвет Обводки с верху  */
+
+  /* Поле поиска */
+  --mob-search-box__bg: #fff; /* фон */
+  --mob-search-box__borderColor: #333333; /* обводка */
+  --mob-search-box__color: #000; /* цвет текста */
+  --mob-search-box__placeholderColor: #333333; /* цвет placeholder */
+  --mob-search-box-submit__bg: #dadada; /* фон */
+  --mob-search-box-submit__borderColor: #333333; /* обводка */
+  --mob-search-box-submit__bg--hover: #2363d1; /* фон */
+  --mob-search-box-submit__borderColor--hover: #2363d1; /* обводка */
+
+  /* Результаты поиска */
+  --mob-search-box-item__bg: #fff; /* фон */
+  --mob-search-box-item__borderBottomColor: rgba(0, 0, 0, 0.13); /* обводка с низу */
+  --mob-search-box-item__color: #000; /* цвет текста */
+  --mob-search-box-item__priceColor: #1c52ac; /* цвет текста цены */
+  --mob-search-box-item__bg--hover: #000; /* фон */
+
+  /* Кнопка "каталог товаров" */
+  --mob-catalog-btn__bg: #fff; /* фон */
+  --mob-catalog-btn__borderColor: #333333; /* обводка */
+  --mob-catalog-btn__color: #333333; /* цвет текста */
+  --catalog-menu-font-color: #333333; /* цвет текста (legacy) */
+  --mob-catalog-btn__burgerColor: #333333; /* цвет бургера в кнопке - каталог товаров  */
+  --mob-catalog-btn__bg--hover: #2363d1; /*  фон */
+  --mob-catalog-btn__borderColor--hover: #2363d1; /* обводка */
+  --mob-catalog-btn__color--hover: #fff; /* цвет текста */
+  --mob-catalog-btn__burgerColor--hover: #fff; /* цвет бургера в кнопке */
+
+  /* Бургер мобильного меню */
+  --mob-burger-btn__color: #2363d1; /* цвет */
+  --header-top-icon-color: #2363d1; /* цвет (legacy) */
+
+  /* Телефоны */
+  --mob-contact-box-phone__color: #333333; /* цвет текста */
+  --mob-contact-box-phone__bg: transparent; /* фон (если есть)*/
+  --mob-contact-box-phone__borderColor: #2363d1; /* обводка (если есть)*/
+  --mob-contact-box-phone__color--hover: #fff; /* цвет текста */
+  --mob-contact-box-phone__bg--hover: #2363d1; /* фон (если есть)*/
+  --mob-contact-box-phone__borderColor--hover: #2363d1; /* обводка (если есть)*/
+
+  /* Заказать звонок */
+  --mob-contact-box-order-call__color: #333333; /* цвет текста */
+  --mob-contact-box-order-call__bg: transparent; /* фон (если есть)*/
+  --mob-contact-box-order-call__borderColor: #2363d1; /* обводка (если есть)*/
+  --mob-contact-box-order-call__color--hover: #fff; /* цвет текста */
+  --mob-contact-box-order-call__bg--hover: #2363d1; /* фон (если есть)*/
+  --mob-contact-box-order-call__borderColor--hover: #2363d1; /* обводка (если есть)*/
+
+  /* Корзина */
+  --mob-cart-number__color: #333333; /* цвет текста */
+  --mob-cart-number__bg: #fff; /* фон (если есть)*/
+  --mob-cart-number__borderColor: #2363d1; /* обводка (если есть)*/
+  --mob-cart-number__color--hover: #fff; /* цвет текста */
+  --mob-cart-number__bg--hover: #2363d1; /* фон (если есть)*/
+  --mob-cart-number__borderColor--hover: #2363d1; /* обводка (если есть)*/
+}
+
+/* Переменные темы */
+:root {
+  --category-preview-height: 200px; /* высота предварительного просмотра категории */
+
+  /* кастомный шрифт */
+  --custom-font-family: Golos; /* Название подключенного шрифта */
+
+  /* выпадающие меню */
+  --color-main-dropdown-menu-bg: #333333; /* цвет фона */
+  --color-main-dropdown-menu-text: #ffffff; /* цвет текста */
+
+  /* основная кнопка */
+  --color-button-primary-text: #ffffff; /* цвет текста */
+  --color-button-primary-background: #2363d1; /* цвет фона */
+  --color-button-primary-border: #2363d1; /* цвет рамки */
+  --color-button-primary-text-hover: #ffffff; /* цвет текста при наведении */
+  --color-button-primary-background-hover: #1c52ac; /* цвет фона при наведении */
+  --color-button-primary-border-hover: #1c52ac; /* цвет рамки при наведении */
+
+  /* вторичная кнопка */
+  --color-button-secondary-text: #2363d1; /* цвет текста */
+  --color-button-secondary-background: #ffffff; /* цвет фона */
+  --color-button-secondary-border: #2363d1; /* цвет рамки */
+  --color-button-secondary-text-hover: #ffffff; /* цвет текста при наведении */
+  --color-button-secondary-background-hover: #2363d1; /* цвет фона при наведении */
+  --color-button-secondary-border-hover: #2363d1; /* цвет рамки при наведении */
+
+  /* не активная кнопка */
+  --color-button-muted-text: #333; /* цвет текста */
+  --color-button-muted-background: #b6b6b6; /* цвет фона */
+  --color-button-muted-border: #b6b6b6; /* цвет рамки */
+  --color-button-muted-text-hover: #ffffff; /* цвет текста при наведении */
+  --color-button-muted-background-hover: #333; /* цвет фона при наведении */
+  --color-button-muted-border-hover: #333; /* цвет рамки при наведении */
+
+  /* кнопка корзины */
+  --color-button-cart-text: #ffffff; /* цвет текста */
+  --color-button-cart-background: #2363d1; /* цвет фона */
+  --color-button-cart-border: #2363d1; /* цвет рамки */
+  --color-button-cart-text-hover: #ffffff; /* цвет текста при наведении */
+  --color-button-cart-background-hover: #1c52ac; /* цвет фона при наведении */
+  --color-button-cart-border-hover: #1c52ac; /* цвет рамки при наведении */
+
+  /* без цветные кнопки */
+  --colorless-buttons-border-color: #ffffff; /* цвет рамки */
+  --colorless-buttons-font-color: #333; /* цвет текста */
+  --colorless-buttons-font-color-hover: #2363d1; /* цвет текста */
+  --colorless-buttons-hover-bg: #ffffff; /* цвет фона при наведении */
+
+  /* кнопка счета */
+  --invoice-button-color: #2363d1; /* цвет кнопки */
+
+  /* товары */
+  --hit-tag-bg-color: #3ec28f; /* фон бирки 'хит' */
+  --sale-tag-bg-color: #ff9500; /* Фон бирки 'распродажа' */
+  --new-tag-bg-color: #30c2ff; /* фон бирки 'новинка' */
+  --discount-tag-bg-color: #c43228; /* фон бирки 'уценка' */
+  --offer-tag-bg-color: #4fa22e; /* фон бирки 'акция' */
+  --hit-tag-font-color: #ffffff; /* цвет текста бирки 'хит' */
+  --sale-tag-font-color: #ffffff; /* цвет текста бирки 'распродажа' */
+  --discount-tag-font-color: #ffffff; /* цвет текста бирки 'уценка' */
+  --new-tag-font-color: #ffffff; /* цвет текста бирки 'новинка' */
+  --offer-tag-font-color: #ffffff; /* цвет текста бирки 'акция' */
+  --product-list-header-link-color: #333; /* цвет ссылки товара */
+  --product-list-header-link-hover-color: #2363d1; /* цвет ссылки при наведении */
+  --product-tab-link-color: #333; /* цвет ссылки таба */
+  --product-tab-link-hover-color: #2363d1; /* цвет ссылки таба при наведении */
+  --color-card-border: #d9d9de; /* цвет рамки карточки */
+  --product-preview-border-hover-color: #2363d1; /* цвет рамки превью при наведении */
+  --product-preview-bg-color: #ffffff; /* цвет фона превью */
+  --color-product-online-price: #333; /* цвет онлайн цены */
+  --checkout-button-font-color: #333; /* цвет подтверждающей кнопки */
+  --invoice-button-font-color: #2363d1; /* цвет кнопки счета */
+
+  /* Статьи */
+  --article-label-font-color: #333; /* цвет текста */
+  --article-label-bg-color: #ffffff; /* цвет фона */
+
+  /* новости и акции */
+  --news-label-bg-color: #2363d1; /* Фон плашки для новостей */
+  --news-label-font-color: #ffffff; /* Цвет шрифта плашки для новостей */
+  --action-label-bg-color: #2363d1; /* Фон плашки акций */
+  --action-label-font-color: #ffffff; /* Цвет шрифта плашки акций */
+
+  /* меню каталога */
+  --catalog-menu-bg-color: #ffffff; /* Фон меню каталога */
+  --catalog-menu-hover-bg-color: #ffffff; /* фон меню при наведении */
+  --catalog-menu-border-color: #d9d9de; /* цвет рамки */
+  --catalog-menu-font-hover-color: #333; /* цвет текста при наведении */
+  --catalog-menu-burger-color: #2363d1; /* цвет бургера */
+  --catalog-menu-link-hover: #2363d1; /* цвет ссылки при наведении */
+  --catalog-menu-arrow-color: #2363d1; /* цвет стрелок */
+
+  /* форма обратной связи */
+  --feedback-form-section-bg-color: #ffffff; /* Фон блока с формой обратной связи */
+  --feedback-form-bg: #ffffff; /* Цвет фона внутри самой формы обратной связи */
+  --feedback-form-title: #333; /* Форма обратной связи: цвет заголовка: */
+  --feedback-form-text: #333; /* Форма обратной связи: цвет текста: */
+  --feedback-form-border: #2363d1; /* Форма обратной связи: цвет обводки: */
+  --feedback-form-input-border: #2363d1; /* Форма обратной связи: цвет обводки элементов формы: */
+
+  /* хлебные крошки */
+  --breadcrumb-item-color: #333; /* Цвет ссылок в крошках: */
+  --breadcrumb-item-hover-color: #2363d1; /* Цвет ссылок в крошках при наведении */
+
+  /* статичные страницы */
+  --staticpage-box-fill-color: #ffffff; /* Цвет заливки для текстовых блоков на статичных страницах */
+  --staticpage-box-border-color: #ffffff; /* Цвет обводки для текстовых блоков на статичных страницах */
+
+  /* личный кабинет */
+  --color-lk-accent-items: #2363d1; /* Цвет иконок в ЛК: */
+  --color-lk-items-bg: #ffffff; /* Цвет фона для блоков на страницах ЛК */
+  --color-lk-items-border: #2363d1; /* Цвет обводки для блоков на страницах ЛК */
+  --color-lk-items-hover-bg: #dadada; /* Цвет фона для блоков на страницах ЛК при наведении */
+
+  /* подвал */
+  --footer-bg-color: #333; /* цвет подвала */
+  --color-footer-links: #d6d6d6; /* цвет ссылок подвала */
+  --color-footer-links-hover: #2363d1; /* цвет ссылок подвала при наведении */
+  --color-footer-title: #ffffff; /* цвет заголовка подвала */
+
+  /* разное */
+  --frontpage-first-screen-bg-color: #ffffff; /* цвет фона главной страницы */
+  --preview-bg-color: #f5f5f5; /* цвет фона предпросмотра */
+  --preview-font-color: #333; /* цвет текста предпросмотра */
+  --preview-bg-hover-color: #ffffff; /* цвет заднего фона предпросмотра */
+  --inner-page-bg: #ffffff; /* фон внутренних страниц */
+}
