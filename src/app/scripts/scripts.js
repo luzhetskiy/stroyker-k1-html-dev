@@ -1,7 +1,7 @@
 ("use strict");
 
 //@include ../../shared/config/index.js
-//@include ../../shared/libs/index.js
+//@include ../../shared/utils/throttle-debounce/index.js
 
 //@include ./legacy/accordion.js
 //@include ./legacy/bigSlides.js
