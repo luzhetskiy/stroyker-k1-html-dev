@@ -7295,6 +7295,11 @@ select::-ms-expand {
   background-color: #626262;
 }
 
+.product-item__flag--offer {
+  background-color: var(--offer-tag-bg-color,#626262);
+  color: var(--offer-tag-font-color,#fff);
+}
+  
 .product-card .product-item__img-text {
   position: absolute;
   right: 15px;
