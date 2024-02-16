@@ -114,5 +114,5 @@ exports.scripts = scripts;
 exports.libs = libs;
 exports.assets = assets;
 
-exports.default = gulp.series(scripts, html, styles, gulp.parallel(sync, startWatch));
+exports.default = gulp.series(scripts, html, styles, assets, libs, gulp.parallel(sync, startWatch));
 exports.build = gulp.series(cleanBuild, createBuild, scriptsBuild, stylesBuild);
