@@ -7,3 +7,5 @@
 /**/bitmaps_test/
 /**/coverage
 /**/public/
+/**/!libs/
+/public/!libs/

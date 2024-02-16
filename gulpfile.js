@@ -10,6 +10,7 @@ const cssNano = require("cssnano");
 const babel = require("gulp-babel");
 const clean = require("gulp-clean");
 const preprocess = require("gulp-preprocess");
+const gulpCopy = require("gulp-copy");
 
 const sass = gulpSass(dartSass);
 const mode = process.env.NODE_ENV === "production" ? "production" : "development";
@@ -36,6 +37,16 @@ const html = () => {
   .src(["src/pages/**/*.html"])
   .pipe(preprocess({ context: { NODE_ENV: mode } }))
   .pipe(gulp.dest("./public/"));
+};
+
+const libs = () => {
+  return gulp.src(["src/shared/libs/**/*"]).pipe(gulpCopy("public", { prefix: 2 }));
+};
+
+const assets = () => {
+  return gulp
+  .src(["src/shared/assets/images/**/*", "src/shared/assets/fonts/**/*"])
+  .pipe(gulpCopy("public", { prefix: 3 }));
 };
 
 const scripts = () => {
@@ -98,6 +109,8 @@ const startWatch = () => {
 
 exports.styles = styles;
 exports.scripts = scripts;
+exports.libs = libs;
+exports.assets = assets;
 
 exports.default = gulp.series(scripts, html, styles, gulp.parallel(sync, startWatch));
 exports.build = gulp.series(cleanBuild, createBuild, scriptsBuild, stylesBuild);
