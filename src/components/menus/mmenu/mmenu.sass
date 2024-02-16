@@ -80,12 +80,14 @@
 #menu:not(.mm-menu)
   display: none
 
+#menu
+  transition: 0
 
 #menu.mm-menu--position-right-front:not(.mm-menu--opened)
-  transform: translateX(100%) 
+  transform: translateX(100%)
 
 #menu.mm-menu--position-left-front:not(.mm-menu--opened)
-  transform: translateX(-100%) 
+  transform: translateX(-100%)
 
 .cross-button
   display: inline-flex
@@ -107,7 +109,6 @@
     transform: rotate(45deg)
   &::before
     transform: rotate(-45deg)
-
 
 .menu-list
   &__item
@@ -135,7 +136,6 @@
     width: 100%
     min-width: 22px
     height: auto
-
 
 .mobile-side-menu-footer
   position: absolute
@@ -166,7 +166,6 @@
     color: #2363D1 !important
     &:hover
       text-decoration: underline
-
 
 .mobile-side-menu
   &__background
@@ -223,7 +222,6 @@
     padding: 0 20px
     &_active
       transform: translateX(0%)
-
 
 .search-input-group
   padding: 0 20px
