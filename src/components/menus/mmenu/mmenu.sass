@@ -80,11 +80,26 @@
 #menu:not(.mm-menu)
   display: none
 
-#menu.mm-menu--position-right-front:not(.mm-menu--opened)
+#menu
+  transition: none
+
+#menu[data-position="left-front"]
   transform: translateX(100%)
 
-#menu.mm-menu--position-left-front:not(.mm-menu--opened)
+#menu[data-position="left-front"]
   transform: translateX(-100%)
+
+#menu.mm-menu--position-right-front
+  transform: translateX(100%)
+  transition: .4s
+
+#menu.mm-menu--position-left-front
+  transform: translateX(-100%)
+  transition: .4s
+
+#menu.mm-menu--opened
+  transform: translateX(0)
+  transition: .4s
 
 .cross-button
   display: inline-flex
