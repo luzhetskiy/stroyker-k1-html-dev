@@ -2,6 +2,7 @@
 
 //@include ../../shared/config/index.js
 //@include ../../shared/utils/throttle-debounce/index.js
+//@include ../../shared/libs/bootstrap/collapse.js
 
 //@include ./legacy/accordion.js
 //@include ./legacy/bigSlides.js
