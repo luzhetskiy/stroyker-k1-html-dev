@@ -1,4 +1,10 @@
 .product-v2
+  display: flex
+  flex-direction: column
+  gap: 10px
+
+  .char
+    padding-bottom: 20px
 
   .input-number
     width: 100%
@@ -63,9 +69,13 @@
 
     &__sidebar-main-content
       padding: 20px
+      display: flex
+      flex-direction: column
+      gap: 15px
 
     &__secondary-content
       padding: 40px 60px
+      margin-top: 10px
 
 
 @media (max-width: 767px)
@@ -73,7 +83,15 @@
     .product-card
       &__secondary-content,
       &__sidebar-main-content
-        padding: 20px 0
+        padding: 20px
 
       &__sidebar-top
         border-bottom: none
+
+
+@media (max-width: 575px)
+  .product-v2
+    .product-card
+      &__secondary-content,
+      &__sidebar-main-content
+        padding: 20px 0

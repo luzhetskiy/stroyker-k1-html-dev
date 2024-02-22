@@ -7323,23 +7323,6 @@ ol.number-list li:before {
   background: var(--main-elements-color, #2363d1) !important;
 }
 
-.char li {
-  margin-bottom: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
-@media (max-width: 767px) {
-  .char li {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-}
-
 .char .char-text {
   position: relative;
   font-size: 14px;

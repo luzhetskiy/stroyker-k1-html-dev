@@ -56,26 +56,25 @@
           <div class="product-card__sidebar-main-content">
             <h1 class="product-card__title">test2</h1>
 
-            <div class="product-card__static-text-wrapper mb-20">dsgdsgsdfgdsfgdsg</div>
+            <div class="product-card__short-description">dsgdsgsdfgdsfgdsg</div>
 
             <!-- @include ../../product-price-block/product-price-block.html -->
 
-            <div class="product-card__accessibility-wrapper mb-20">
-              <div class="product-accessibility-group">
-                <div class="product-item__status product-item__status--many common-status">oloooloo</div>
-              </div>
+            <!-- @include ../../product-availability-block/product-availability-block.html -->
+
+            <div class="product-card__static-text-wrapper">
+              <p>2342424234234</p>
             </div>
-            <div class="d-flex flex-column gap-10">
+
+            <div class="product-card__share-block-wrapper">
               <div class="share-block">
                 <a class="btn-radius share-btn ">
                   <span class="icon-svg">
                     <svg class="icon">
                       <use xlink:href="#share-icon"></use>
                     </svg>
-  
                   </span>Поделиться</a>
-  
-                <div class="share-block__show" style="display: none;">
+                  <div class="share-block__show" style="display: none;">
                   <p>Чтобы поделиться ссылкой, нажмите на иконку вашей соцсети</p>
                   <div class="share-block__list">
                     <a href="" class="share-social"><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/vk.svg" alt=""></a>
@@ -85,44 +84,15 @@
                   </div>
                 </div>
               </div>
-
-              <div
-                class="d-flex align-items-center gap-20"
-                itemprop="aggregateRating"
-                itemscope=""
-                itemtype="http://schema.org/AggregateRating"
-              >
-                <span class="g-link product-reviews-button" href="#">Отзывы (1)</span>
-
-                <span class="product-item__rating">
-                  <meta itemprop="bestRating" content="5" />
-                  <meta itemprop="worstRating" content="1" />
-                  <meta itemprop="ratingValue" content="4,0" />
-
-                  <span class="star star--full"></span>
-
-                  <span class="star star--full"></span>
-
-                  <span class="star star--full"></span>
-
-                  <span class="star star--full"></span>
-
-                  <span class="star star--empty"></span>
-                </span>
-
-                <meta itemprop="ratingCount" content="1" />
-              </div>
             </div>
-
-            ertertertertertertertertertretertert
           </div>
         </div>
       </div>
       <div class="col-lg-12">
         <div class="g-content product-card__secondary-content">
           <div class="product-card__wrapper mb-30">
-            <div class="product-description-group">
-              <p class="g-title mb-20">Описание</p>
+            <div class="d-flex flex-column gap-10">
+              <p class="g-title">Описание</p>
               <div
                 id="collapse-1"
                 class="collapse product-description-group__collapse product-description-group__collapse_inactive"
