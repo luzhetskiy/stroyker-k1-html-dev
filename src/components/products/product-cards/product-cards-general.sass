@@ -1,0 +1,672 @@
+.product-card-page 
+  padding: 30px 0 60px 0
+
+
+.product-card
+  background: #fff
+  width: 100%
+
+  .btn-border
+    min-width: 180px
+    margin-top: 15px
+
+  &__status
+    font-size: 11px
+    margin-bottom: 8px
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+
+  &__status--limited
+    color: #30c2ff
+
+  &__status--small
+    color: #ff9500
+
+  &__status--none
+    color: #d74853
+
+  &__status--many
+    color: #3ec28f
+
+  &__btns
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+
+  &__btns .share-block
+    width: auto
+
+  &__rating
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+
+  &__rating .product-item__rating
+    margin-top: 2px
+
+  &__review-link
+    margin-left: 10px
+
+  &__review-link a
+    font-size: 14px
+    color: var(--main-elements-color, #2363d1)
+    -webkit-transition: 0.5s
+    -o-transition: 0.5s
+    transition: 0.5s
+    cursor: pointer
+
+  &__review-link a:hover
+    color: var(--main-elements-hover-color, #1c52ac)
+
+  &__review-link a:active
+    color: #164593
+
+  &__head
+    padding: 20px 30px
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    border-bottom: 1px solid var(--gray-color-200)
+
+  &__title
+    font-weight: bold
+    font-size: 30px
+    line-height: 36px
+    color: #000000
+    margin: 0
+
+  &__artikul
+    font-size: 11px
+    line-height: 13px
+    color: #bdbdbd
+    margin: 0
+
+  &__navigation
+    display: flex
+    border-bottom: 1px solid var(--gray-color-200)
+
+  &__nav-prev
+    display: flex
+    width: 100%
+    height: 38px
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    padding: 0 30px
+    background: #fff
+    font-size: 11px
+    line-height: 13px
+    color: #bdbdbd
+    -webkit-box-pack: start
+    -ms-flex-pack: start
+    justify-content: flex-start
+    -webkit-transition: 0.5s
+    -o-transition: 0.5s
+    transition: 0.5s
+
+  &__nav-prev:hover
+    background: rgba(0, 189, 189, 0.05)
+    color: var(--main-elements-color, #2363d1)
+
+  &__nav-prev:hover .icon svg
+    color: var(--main-elements-color, #2363d1)
+
+  &__nav-prev .icon
+    margin-right: 5px
+    -webkit-transform: rotate(-180deg)
+    -ms-transform: rotate(-180deg)
+    transform: rotate(-180deg)
+    margin-top: -4px
+
+  &__nav-prev .icon svg
+    width: 12px
+    height: 12px
+
+  &__nav-next
+    display: flex
+    width: 100%
+    height: 38px
+    align-items: center
+    padding: 0 30px
+    background: #fff
+    font-size: 11px
+    line-height: 13px
+    color: #bdbdbd
+    -webkit-box-pack: end
+    -ms-flex-pack: end
+    justify-content: flex-end
+    -webkit-transition: 0.5s
+    -o-transition: 0.5s
+    transition: 0.5s
+
+  &__nav-next:hover
+    background: rgba(0, 189, 189, 0.05)
+    color: var(--main-elements-color, #2363d1)
+
+  &__nav-next:hover .icon svg
+    color: var(--main-elements-color, #2363d1)
+
+  &__nav-next .icon
+    margin-left: 5px
+    margin-bottom: -4px
+
+  &__nav-next .icon svg
+    width: 12px
+    height: 12px
+
+  &__container
+    padding: 20px 80px
+    background: #fff
+    display: flex
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+
+  &__slideshow
+    width: 320px
+
+  &__slideshow .product-item__img-text
+    font-size: 11px
+    color: rgba(0, 0, 0, 0.25)
+
+  &__content
+    width: calc(100% - 355px)
+    display: flex
+    -webkit-box-pack: justify
+    -ms-flex-pack: justify
+    justify-content: space-between
+
+  &__left
+    min-width: 260px
+
+  &__content .btn-checkout
+    width: calc(100% - 80px)
+
+  &__left
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+    width: 260px
+
+  &__right
+    width: 300px
+    margin-left: 20px
+
+  &__price-block
+    display: flex
+    flex-direction: column
+    gap: 15px
+
+  &__personal-cost
+    font-weight: 400
+    font-size: 28px
+    line-height: 33px
+    display: flex
+    flex-direction: column
+    gap: 10px
+
+  &__personal-cost span
+    display: block
+    font-size: 14px
+    line-height: 16px
+    font-weight: 400
+
+  &__main-cost
+    color: #767676
+    font-size: 14px
+    margin-bottom: 15px
+
+  &__main-cost strong
+    font-size: 14px
+    line-height: 16px
+    padding-left: 5px
+    font-weight: 400
+
+  &__main-cost span
+    font-size: 14px
+    line-height: 16px
+    -webkit-text-decoration-line: line-through
+    text-decoration-line: line-through
+    padding-left: 5px
+    color: #d74853
+
+  & .product-item__flag--hit
+    background-color: #d74853
+
+  & .product-item__flag--new
+    background-color: #3ec28f
+
+  & .product-item__flag--sale
+    background-color: #f6ac1d
+
+  & .product-item__flag--markdown
+    background-color: #626262
+
+  .product-item__flag--offer
+    background-color: var(--offer-tag-bg-color,#626262)
+    color: var(--offer-tag-font-color,#fff)
+
+  & .product-item__img-text
+    position: absolute
+    right: 15px
+    top: 0
+    height: 24px
+    line-height: 24px
+    font-weight: bold
+    font-size: 10px
+    color: rgba(0, 0, 0, 0.4)
+    z-index: 9
+    text-transform: none
+    font-style: italic
+    font-family: "Golos"
+
+  &__discription
+    padding: 20px 30px
+    background: #f6f6f6
+    margin-bottom: 1px
+
+  &__discription ul li 
+    font-size: 14px
+    line-height: 18px
+    color: #7c8994
+    margin-bottom: 3px
+
+  &__discription .btn-get-an-account-min
+    margin-top: 10px
+
+  &__discription .btn-calculate-min
+    margin-top: 10px
+
+  &__discription-title
+    display: block
+    margin-bottom: 10px
+    font-weight: bold
+    font-size: 14px
+    line-height: 16px
+    color: #7c8994
+
+  &__modification-container
+    display: flex
+    flex-direction: column
+    gap: 5px
+
+  &__rating
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    margin-top: -2px
+
+    .star
+      width: 15px
+      height: 15px
+      margin-left: 2px
+
+  &__rating .star:first-child
+    margin-left: 0
+
+  &__rating .star--full
+    background-image: url(../images/icons/star-full.svg)
+    background-size: 15px 15px
+
+  &__rating .star--half
+    background-image: url(../images/icons/star-half.svg)
+    background-size: 15px 15px
+
+  &__rating .star--empty
+    background-image: url(../images/icons/star-empty.svg)
+    background-size: 15px 15px
+
+  &__radio-options
+    display: flex
+    width: 100%
+    position: relative
+    flex-wrap: wrap
+    gap: 5px
+
+  &__modification-title
+    width: 100%
+    display: inline-block
+    font-size: 14px
+    line-height: 20px
+    color: #767676
+    font-weight: 400
+    margin-bottom: 0
+
+  &__product-mod-param
+    border-radius: 2px
+    cursor: pointer
+    font-family: "Golos"
+    transition: 0.2s
+    white-space: nowrap
+    text-overflow: ellipsis
+    position: relative
+    overflow: hidden
+    display: inline-block
+    max-width: 100%
+    padding: 7px 14.5px
+    font-size: 12px
+    line-height: 20px
+    color: #767676
+    background: #ffffff
+    border: 1px solid #767676
+
+  &__product-mod-param:hover
+    background: #2363d1
+    border-color: #2363d1
+    color: #fff
+
+  &__product-mod-param_active
+    background: #2363D1
+    border-color: #2363D1
+    color: #FFF
+
+  &__select-options
+    display: inline-block
+    width: 100%
+    margin-bottom: 30px
+
+  &__select-options span
+    width: 100%
+    display: inline-block
+    font-size: 14px
+    line-height: 20px
+    color: #767676
+    font-weight: 400
+    margin-bottom: 6px
+
+  &__select-options select
+    width: 100%
+    height: 30px
+    padding-left: 20px
+    appearance: none
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")
+    background-repeat: no-repeat
+    background-position: right 1rem center
+    background-size: 24px 20px
+    border: 1px solid #bdbdbd
+    border-radius: 2px
+    font-size: 12px
+    line-height: 20px
+    font-weight: 400
+    font-family: "Golos"
+    color: #333333
+
+.btn-checkout
+  background: var(--checkout-button-color, #3ec28f)
+  border: 0
+
+  &.btn
+    color: var(--checkout-button-font-color, #3ec28f)
+
+  & .icon-svg
+    max-width: 22px
+    max-height: 22px
+    margin: 0 10px 0 0
+
+.product-card-schedule
+  width: 100%
+  background: #f6f6f6
+  margin-bottom: 15px
+  padding: 15px 20px
+
+  &__image
+    display: block
+    margin-bottom: 15px
+    text-align: center
+
+  &__image img
+    max-width: 100%
+
+  & .schedule-btn
+    padding: 0 15px
+
+  & .schedule-btn .icon
+    margin-right: 7px
+    margin-bottom: -2px
+
+  & .schedule-btn .icon .icon-svg
+    width: 25px
+    height: 11px
+
+  & .schedule-btn a
+    cursor: pointer
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    width: 100%
+    height: 40px
+    -webkit-transition: 0.5s
+    -o-transition: 0.5s
+    transition: 0.5s
+    white-space: nowrap
+
+.product-card-container
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+
+  & .product-card-content
+    width: calc(100% - 240px)
+
+  & .product-card-side
+    width: 225px
+
+.cart-icon
+  margin-right: 10px
+
+@media (max-width: 767px)
+
+  .product-card-page
+    padding: 30px 0
+  
+  .product-card
+
+    &__status
+      -webkit-box-ordinal-group: 1
+      -ms-flex-order: 0
+      order: 0
+      position: relative
+      bottom: 0
+
+    &__rating .star
+      width: 18px
+      height: 18px
+
+    &__rating .star--full
+      background-size: 18px 18px
+
+    &__rating .star--half
+      background-size: 18px 18px
+
+    &__rating .star--empty
+      background-size: 18px 18px
+
+    & .input-number
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+
+    &__review-link a
+      font-size: 14px
+
+    &__head
+      -webkit-box-orient: vertical
+      -webkit-box-direction: normal
+      -ms-flex-direction: column
+      flex-direction: column
+      padding: 15px
+      border-bottom: 0
+
+    &__artikul
+      -webkit-box-ordinal-group: 0
+      -ms-flex-order: -1
+      order: -1
+      margin-top: -32px
+      margin-bottom: 30px
+
+    &__navigation
+      padding: 15px 15px 0 15px
+      display: -webkit-box
+      display: -ms-flexbox
+      display: flex
+      -webkit-box-pack: justify
+      -ms-flex-pack: justify
+      justify-content: space-between
+      -webkit-box-align: center
+      -ms-flex-align: center
+      align-items: center
+      border-bottom: 0
+
+    &__nav-prev
+      width: 24px
+      height: 24px
+      border-radius: 50%
+      background: #f2f2f2
+      font-size: 0
+      padding: 0
+      -webkit-box-pack: center
+      -ms-flex-pack: center
+      justify-content: center
+
+    &__nav-prev .icon
+      margin-right: -2px
+      margin-top: -7px
+
+    &__nav-next
+      width: 24px
+      height: 24px
+      border-radius: 50%
+      background: #f2f2f2
+      font-size: 0
+      padding: 0
+      -webkit-box-pack: center
+      -ms-flex-pack: center
+      justify-content: center
+
+    &__nav-next .icon
+      margin-left: -2px
+      margin-bottom: -7px
+
+    &__container
+      -webkit-box-orient: vertical
+      -webkit-box-direction: normal
+      -ms-flex-direction: column
+      flex-direction: column
+
+    &__slideshow
+      width: 100%
+      margin-bottom: 30px
+
+    &__content
+      width: 100%
+
+    &__right
+      width: calc(100% + 30px)
+      margin: 0 -15px
+
+    & .product-item__flag
+      top: 10px
+      height: 24px
+      line-height: 24px
+      font-size: 13px
+
+    & .product-item__img-text
+      top: 10px
+      right: 15px
+      bottom: auto
+      left: auto
+      font-size: 13px
+
+    &__discription
+      margin-bottom: 0
+
+  .product-card-schedule
+    width: calc(100% + 30px)
+    margin: 0 -15px
+    padding: 15px 30px
+
+  .product-card-container .product-card-side
+    display: block
+    width: 100%
+
+@media (max-width: 991px)
+  .product-card
+    &__rating
+      margin-bottom: 15px
+
+    &__left
+      width: 100%
+
+    &__right
+      width: 100%
+      margin-left: 0px
+
+  .product-card-schedule
+    -webkit-box-ordinal-group: 4
+    -ms-flex-order: 3
+    order: 3
+    margin-bottom: 0
+    padding: 15px 15px 0 15px
+
+  .product-card-schedule .schedule-btn
+    padding: 0
+
+  .product-card-container .product-card-content
+    width: 100%
+    margin-bottom: 20px
+
+  .product-card-container .product-card-side
+    display: none
+
+@media (max-width: 1024px)
+  .product-card
+    &__container
+      padding: 20px 15px 0 15px
+
+    &__content
+      -webkit-box-orient: vertical
+      -webkit-box-direction: normal
+      -ms-flex-direction: column
+      flex-direction: column
+      width: calc(100% - 340px)
+    &__discription
+      padding: 20px 15px
+
+@media (max-width: 1279px)
+  .product-card__right
+    width: auto
+
+@media (max-width: 1279px)
+  .product-card__container
+    padding: 20px 30px

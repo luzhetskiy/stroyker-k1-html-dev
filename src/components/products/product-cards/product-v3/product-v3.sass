@@ -1,0 +1,48 @@
+.product-v3
+  .product-card
+    width: auto
+    margin: 0
+    &__main-content
+      padding: 30px
+
+    &__main-column-content
+      margin: 0 30px
+      display: flex
+      flex-direction: column
+      gap: 15px
+
+    &__secondary-column-content
+      display: flex
+      flex-direction: column
+      gap: 20px
+
+  .char .char-text:first-child:before
+    display: none
+
+  .char .char-text:first-child
+    width: 35%
+    color: var(--gray-color-500)
+
+  .char .char-text:last-child
+    width: 65%
+
+
+@media (max-width: 1023px)
+  .product-v3
+    .product-card
+      &__main-column-content
+        margin-right: 0
+
+      &__secondary-column-content
+        width: 100%
+        padding-top: 30px
+
+@media (max-width: 767px)
+  .product-v3
+    .product-card
+      border: none
+      &__main-column-content
+        margin: 0
+
+      &__main-content
+        padding: 30px 0
