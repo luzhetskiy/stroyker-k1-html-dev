@@ -6903,11 +6903,6 @@ ol.number-list li:before {
   background: #fff;
 }
 
-.tabs-content {
-  width: 100%;
-  margin-bottom: 30px;
-}
-
 .tabs-content--authorizaion {
   width: 100%;
   max-width: 580px;

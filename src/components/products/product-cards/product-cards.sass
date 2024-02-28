@@ -48,9 +48,7 @@
   padding: 30px 0 60px 0
 
 .product-card
-  background: #fff
   width: 100%
-  margin-bottom: 10px
 
   .btn-border
     min-width: 180px
@@ -236,9 +234,6 @@
   &__right
     width: 300px
     margin-left: 20px
-    display: flex
-    flex-direction: column
-    gap: 10px
 
   &__price-block
     display: flex
@@ -310,7 +305,6 @@
   &__discription
     padding: 20px 30px
     background: #f6f6f6
-    margin-bottom: 1px
 
   &__discription ul li
     font-size: 14px
@@ -397,7 +391,7 @@
     border: 1px solid #767676
 
   &__product-mod-param:hover
-    background: #2363d1 
+    background: #2363d1
     border-color: #2363d1
     color: #fff
 
@@ -461,7 +455,6 @@
 @media (max-width: 991px)
   .product-banners
     grid-template-columns: repeat(2, 1fr)
-
 
 .btn-checkout
   background: var(--checkout-button-color, #3ec28f)
@@ -585,6 +578,10 @@
     line-height: 18px
     color: #7c8994
 
+  &__download
+    max-width: max-content
+    width: 100%
+
   &__download-button
     background: #ffffff
     border: 1px solid #f2f2f2
@@ -606,9 +603,6 @@
       color: #fff
       border-color: var(--main-elements-color, #2363d1)
 
-.tab-content
-  margin-bottom: 30px
-
 @media (max-width: 1279px)
   .product-card
     &__container
@@ -619,7 +613,7 @@
 
     &__inner-content
       padding: 20px 40px
-      
+
   .tab-content
     padding: 40px
 
@@ -650,7 +644,6 @@
     padding: 40px 20px
 
 @media (max-width: 991px)
-
 
   .product-card-schedule
     -webkit-box-ordinal-group: 4

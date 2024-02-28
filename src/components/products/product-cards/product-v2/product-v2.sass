@@ -73,10 +73,6 @@
       flex-direction: column
       gap: 15px
 
-    &__secondary-content
-      padding: 40px 60px
-      margin-top: 10px
-
   .document-item
 
     &__text
@@ -108,16 +104,21 @@
         color: var(--white-color)
         border-color: 1px solid var(--accent-color-400)
 
+  .product-card-secondary
+    padding: 40px 60px
+
 
 @media (max-width: 767px)
   .product-v2
     .product-card
-      &__secondary-content,
       &__sidebar-main-content
         padding: 20px
 
       &__sidebar-top
         border-bottom: none
+
+    .product-card-secondary
+      padding: 20px
 
     .document-item
       padding-left: 50px

@@ -5356,10 +5356,6 @@ body {
   margin-bottom: 10px;
 }
 
-.product-card-container .tabs-content:not(:last-child) {
-  margin-bottom: 40px;
-}
-
 .header-phones {
   --font-size: 14px;
   --line-height: 20px;
