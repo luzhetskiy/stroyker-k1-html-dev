@@ -1,0 +1,220 @@
+.reservation-block
+  background-color: var(--white-color)
+  padding: 85px 50px
+
+  &__slider
+    margin-inline: auto
+    margin-bottom: 25px
+    max-width: 600px
+    padding: 0 50px
+
+  &__statuses
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 15px
+    margin-bottom: 25px
+
+  &__status
+    display: flex
+    align-items: center
+    gap: 7px
+    font-size: 12px
+    color: var(--gray-color-700)
+    margin: 0
+
+  &__status-color
+    height: 16px
+    width: 16px
+    border-radius: 2px
+
+    &_free
+      border: 1px solid var(--green-color-400)
+      background-color: var(--green-color-200)
+
+    &_selected
+      border: 1px solid var(--green-color-400)
+      background-color: var(--green-color-400)
+
+    &_busy
+      border: 1px solid var(--gray-color-500)
+      background-color: var(--white-color)
+
+.reservation-table
+  position: relative
+  &__scroll
+    overflow: auto
+
+  &__content
+    min-width: max-content
+    display: flex
+    flex-direction: column
+    gap: 17px
+
+  &__row
+    display: grid
+    &_hours
+      grid-template-columns: 125px 1fr
+
+  &__title
+    font-size: 10px
+    padding-right: 10px
+    margin: 0
+    color: var(--gray-color-700)
+    min-height: 30px
+
+  &__items
+    display: flex
+    justify-content: flex-end
+    &_hours
+      gap: 8px
+
+  &__item
+    font-size: 9px
+    color: var(--gray-color-700)
+    border-radius: 2px
+    width: 100%
+    height: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: .3s
+
+    &_free
+      border: 1px solid var(--green-color-400)
+      background-color: var(--green-color-200)
+      &:hover
+        border: 1px solid var(--green-color-400)
+        background-color: var(--green-color-400)
+
+    &_selected
+      border: 1px solid var(--green-color-400)
+      background-color: var(--green-color-400)
+
+    &_busy
+      border: 1px solid var(--gray-color-500)
+      background-color: var(--white-color)
+      cursor: auto
+
+    &_past
+      opacity: 0.5
+
+  &__mobile-titles
+    position: absolute
+    left: 0
+    top: 0
+    display: flex
+    flex-direction: column
+    gap: 17px
+    background-color: var(--white-color)
+    height: 100%
+    max-width: 110px
+
+    &_shadow::after
+      content: ''
+      display: block
+      position: absolute
+      right: -20px
+      background: linear-gradient(90deg, #7676761A 0%, #76767600 100%)
+      width: 20px
+      height: 100%
+
+
+.reservation-block-day
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  &__week-day
+    font-size: 12px
+    font-weight: 600
+    color: var(--gray-color-700)
+    text-align: center
+    margin: 0
+
+  &__date
+    font-size: 12px
+    text-align: center
+    color: var(--gray-color-700)
+    margin: 0
+
+.days-slider-prev,
+.days-slider-next
+  display: flex !important
+  align-items: center
+  position: absolute
+  width: auto !important
+  min-width: auto !important
+
+.days-slider-prev
+  left: -45px
+
+.days-slider-next
+  right: -45px
+
+.days-slider
+  align-items: center
+  padding-top: 0
+  .slick-dots
+    display: none !important
+
+.tippy-box[data-theme~='light']
+  background-color: var(--white-color)
+  color: var(--gray-color-700)
+  border: 1px solid var(--gray-color-300)
+
+  .tippy-content
+    padding: 25px 40px
+
+  .tippy-arrow
+    color: var(--white-color)
+
+    &::before
+      z-index: 1
+
+    &::after
+      content: ""
+      position: absolute
+      transform-origin: center top
+
+  &[data-placement^=top]>.tippy-arrow:after
+    bottom: -8px
+    left: -1px
+    border-style: solid
+    border-width: 9px 9px 0
+    border-color: var(--gray-color-300) transparent transparent transparent
+
+  &[data-placement^=bottom]>.tippy-arrow:after
+    top: -8px
+    left: -1px
+    border-style: solid
+    border-width: 0px 9px 9px
+    border-color: transparent transparent var(--gray-color-300) transparent
+
+
+.reservation-tooltip
+  display: flex
+  flex-direction: column
+  gap: 15px
+  &__text
+    color: var(--gray-color-550)
+    margin: 0
+
+  &__text-accent
+    color: var(--accent-color-500)
+
+  &__button
+    width: auto
+    padding: 10px 30px
+    max-width: max-content
+
+
+
+@media ( max-width: 575px )
+  .reservation-block
+    padding: 40px 0
+  
+  .reservation-table
+    &__row
+      &_hours
+        grid-template-columns: 110px 1fr
