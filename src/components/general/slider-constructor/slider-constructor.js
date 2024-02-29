@@ -6,10 +6,7 @@ function _typeof(obj) {
     };
   } else {
     _typeof = function _typeof(obj) {
-      return obj &&
-        typeof Symbol === "function" &&
-        obj.constructor === Symbol &&
-        obj !== Symbol.prototype
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype
         ? "symbol"
         : typeof obj;
     };
@@ -111,9 +108,7 @@ const SliderConstructor = /*#__PURE__*/ (function () {
           '\n      <svg viewBox="0 0 11 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">\n        <path d="M9.00039 7.24792e-05L10.4004 1.40007L2.80039 9.00009L10.4004 16.6001L9.00039 18.1001L0.000391006 9.00009C0.000391006 9.00009 9.10039 7.24792e-05 9.00039 7.24792e-05Z"/>\n      </svg>\n    ';
         let leftIconClass = "custom-icon-left";
         let rightIconClass = "custom-icon-right";
-        let customIcons = this.element.querySelectorAll(
-          ".".concat(leftIconClass, ", .").concat(rightIconClass)
-        );
+        let customIcons = this.element.querySelectorAll(".".concat(leftIconClass, ", .").concat(rightIconClass));
         customIcons.forEach(function (icon) {
           let isLeftIcon = icon.classList.contains(leftIconClass);
           let isRightIcon = icon.classList.contains(rightIconClass);
@@ -128,14 +123,30 @@ const SliderConstructor = /*#__PURE__*/ (function () {
 
           icon.remove();
         });
-        this.nextArrow = '<button type="button" class="button button_style-1 slick-next">'.concat(
-          leftIcon,
-          "</button>"
-        );
-        this.prevArrow = '<button type="button" class="button button_style-1 slick-prev">'.concat(
-          rightIcon,
-          "</button>"
-        );
+
+        const prevButton = this.element.getAttribute("data-prev-button-id");
+        const nextButton = this.element.getAttribute("data-next-button-id");
+        if (prevButton) {
+          console.log(123);
+          const button = document.getElementById(prevButton);
+          this.prevArrow = button.outerHTML;
+          button.remove()
+        } else {
+          this.prevArrow = '<button type="button" class="button button_style-1 slick-prev">'.concat(
+            rightIcon,
+            "</button>"
+          );
+        }
+        if (nextButton) {
+          const button = document.getElementById(nextButton);
+          this.nextArrow = button.outerHTML;
+          button.remove()
+        } else {
+          this.nextArrow = '<button type="button" class="button button_style-1 slick-next">'.concat(
+            leftIcon,
+            "</button>"
+          );
+        }
       },
     },
     {
@@ -247,15 +258,9 @@ const SliderConstructor = /*#__PURE__*/ (function () {
             const target = $(event.currentTarget);
             const id = target.attr("data-sector");
             const parent = target.parent().parent();
-            parent
-            .find(".product-card-slideshow__image_active")
-            .removeClass("product-card-slideshow__image_active");
-            parent
-            .find(".product-card-slideshow__dot_active")
-            .removeClass("product-card-slideshow__dot_active");
-            parent
-            .find(`[data-sector-image="${id}"]`)
-            .addClass("product-card-slideshow__image_active");
+            parent.find(".product-card-slideshow__image_active").removeClass("product-card-slideshow__image_active");
+            parent.find(".product-card-slideshow__dot_active").removeClass("product-card-slideshow__dot_active");
+            parent.find(`[data-sector-image="${id}"]`).addClass("product-card-slideshow__image_active");
             parent.find(`[data-sector-dot="${id}"]`).addClass("product-card-slideshow__dot_active");
           });
 
@@ -271,54 +276,28 @@ const SliderConstructor = /*#__PURE__*/ (function () {
             const length = parent.find(".product-card-slideshow__image").length;
 
             if (touchendX < touchstartX) {
-              parent
-              .find(".product-card-slideshow__image_active")
-              .removeClass("product-card-slideshow__image_active");
-              parent
-              .find(".product-card-slideshow__dot_active")
-              .removeClass("product-card-slideshow__dot_active");
+              parent.find(".product-card-slideshow__image_active").removeClass("product-card-slideshow__image_active");
+              parent.find(".product-card-slideshow__dot_active").removeClass("product-card-slideshow__dot_active");
               if (id >= length) {
-                parent
-                .find(`[data-sector-image]:nth-child(1)`)
-                .addClass("product-card-slideshow__image_active");
-                parent
-                .find(`[data-sector-dot]:nth-child(1)`)
-                .addClass("product-card-slideshow__dot_active");
+                parent.find(`[data-sector-image]:nth-child(1)`).addClass("product-card-slideshow__image_active");
+                parent.find(`[data-sector-dot]:nth-child(1)`).addClass("product-card-slideshow__dot_active");
                 return;
               }
-              parent
-              .find(`[data-sector-image="${id}"]`)
-              .next()
-              .addClass("product-card-slideshow__image_active");
-              parent
-              .find(`[data-sector-dot="${id}"]`)
-              .next()
-              .addClass("product-card-slideshow__dot_active");
+              parent.find(`[data-sector-image="${id}"]`).next().addClass("product-card-slideshow__image_active");
+              parent.find(`[data-sector-dot="${id}"]`).next().addClass("product-card-slideshow__dot_active");
             }
             if (touchendX > touchstartX) {
-              parent
-              .find(".product-card-slideshow__image_active")
-              .removeClass("product-card-slideshow__image_active");
-              parent
-              .find(".product-card-slideshow__dot_active")
-              .removeClass("product-card-slideshow__dot_active");
+              parent.find(".product-card-slideshow__image_active").removeClass("product-card-slideshow__image_active");
+              parent.find(".product-card-slideshow__dot_active").removeClass("product-card-slideshow__dot_active");
               if (id <= 1) {
                 parent
                 .find(`[data-sector-image]:nth-child(${length})`)
                 .addClass("product-card-slideshow__image_active");
-                parent
-                .find(`[data-sector-dot]:nth-child(${length})`)
-                .addClass("product-card-slideshow__dot_active");
+                parent.find(`[data-sector-dot]:nth-child(${length})`).addClass("product-card-slideshow__dot_active");
                 return;
               }
-              parent
-              .find(`[data-sector-image="${id}"]`)
-              .prev()
-              .addClass("product-card-slideshow__image_active");
-              parent
-              .find(`[data-sector-dot="${id}"]`)
-              .prev()
-              .addClass("product-card-slideshow__dot_active");
+              parent.find(`[data-sector-image="${id}"]`).prev().addClass("product-card-slideshow__image_active");
+              parent.find(`[data-sector-dot="${id}"]`).prev().addClass("product-card-slideshow__dot_active");
             }
           });
 
