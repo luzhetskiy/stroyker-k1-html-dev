@@ -1,4 +1,4 @@
-.reservation-block
+.booking-block
   background-color: var(--white-color)
   padding: 85px 50px
 
@@ -14,6 +14,8 @@
     justify-content: center
     gap: 15px
     margin-bottom: 25px
+    &_right
+      justify-content: flex-end
 
   &__status
     display: flex
@@ -40,21 +42,26 @@
       border: 1px solid var(--gray-color-500)
       background-color: var(--white-color)
 
-.reservation-table
+.booking-table
   position: relative
   &__scroll
     overflow: auto
 
   &__content
     min-width: max-content
+    width: 100%
     display: flex
     flex-direction: column
     gap: 17px
 
   &__row
     display: grid
+    padding-left: 7px
     &_hours
       grid-template-columns: 125px 1fr
+
+    &_days
+      grid-template-columns: 260px 1fr
 
   &__title
     font-size: 10px
@@ -62,6 +69,9 @@
     margin: 0
     color: var(--gray-color-700)
     min-height: 30px
+    &_days
+      font-size: 14px
+      padding-right: 15px
 
   &__items
     display: flex
@@ -69,8 +79,11 @@
     &_hours
       gap: 8px
 
+    &_days
+      gap: 14px
+
   &__item
-    font-size: 9px
+    font-size: 10px
     color: var(--gray-color-700)
     border-radius: 2px
     width: 100%
@@ -79,6 +92,18 @@
     align-items: center
     justify-content: center
     transition: .3s
+    gap: 3px
+
+    &[data-booking-item-selected]
+      border: 1px solid var(--green-color-400)
+      background-color: var(--green-color-400)
+
+    &_hour
+      padding: 0 4px
+  
+    &_day
+      font-size: 12px
+      padding: 0 10px
 
     &_free
       border: 1px solid var(--green-color-400)
@@ -120,23 +145,23 @@
       height: 100%
 
 
-.reservation-block-day
+.booking-block-day-slide
   display: flex
   flex-direction: column
   align-items: center
 
-  &__week-day
-    font-size: 12px
-    font-weight: 600
-    color: var(--gray-color-700)
-    text-align: center
-    margin: 0
+.booking-block-week-day
+  font-size: 12px
+  font-weight: 600
+  color: var(--gray-color-700)
+  text-align: center
+  margin: 0
 
-  &__date
-    font-size: 12px
-    text-align: center
-    color: var(--gray-color-700)
-    margin: 0
+.booking-block-date
+  font-size: 12px
+  text-align: center
+  color: var(--gray-color-700)
+  margin: 0
 
 .days-slider-prev,
 .days-slider-next
@@ -192,7 +217,7 @@
     border-color: transparent transparent var(--gray-color-300) transparent
 
 
-.reservation-tooltip
+.booking-tooltip
   display: flex
   flex-direction: column
   gap: 15px
@@ -210,11 +235,18 @@
 
 
 
-@media ( max-width: 575px )
-  .reservation-block
-    padding: 40px 0
+@media ( max-width: 767px )
+  .booking-block
+    padding: 40px 20px
   
-  .reservation-table
+  .booking-table
     &__row
-      &_hours
-        grid-template-columns: 110px 1fr
+      grid-template-columns: 110px 1fr
+      
+    &__title_days
+      font-size: 10px
+
+
+@media ( max-width: 575px )
+  .booking-block
+    padding: 40px 0
