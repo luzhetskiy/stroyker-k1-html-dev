@@ -1,4 +1,6 @@
 $(() => {
+  if (!$('[data-booking-tooltip]').length) return
+
   const selectedItems = new Map();
   const tooltipContent = $("[data-booking-tooltip]");
 
