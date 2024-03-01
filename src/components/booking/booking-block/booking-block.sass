@@ -69,6 +69,7 @@
     margin: 0
     color: var(--gray-color-700)
     min-height: 30px
+    line-height: 130%
     &_days
       font-size: 14px
       padding-right: 15px
@@ -76,6 +77,7 @@
   &__items
     display: flex
     justify-content: flex-end
+    align-items: center
     &_hours
       gap: 8px
 
@@ -87,12 +89,18 @@
     color: var(--gray-color-700)
     border-radius: 2px
     width: 100%
-    height: 30px
+    height: auto
     display: flex
     align-items: center
     justify-content: center
     transition: .3s
     gap: 3px
+    border: 1px solid var(--green-color-400)
+    background-color: var(--green-color-200)
+    aspect-ratio: 1/1
+    &:hover
+      border: 1px solid var(--green-color-400)
+      background-color: var(--green-color-400)
 
     &[data-booking-item-selected]
       border: 1px solid var(--green-color-400)
@@ -100,17 +108,10 @@
 
     &_hour
       padding: 0 4px
-  
+
     &_day
       font-size: 12px
       padding: 0 10px
-
-    &_free
-      border: 1px solid var(--green-color-400)
-      background-color: var(--green-color-200)
-      &:hover
-        border: 1px solid var(--green-color-400)
-        background-color: var(--green-color-400)
 
     &_selected
       border: 1px solid var(--green-color-400)
@@ -119,10 +120,13 @@
     &_busy
       border: 1px solid var(--gray-color-500)
       background-color: var(--white-color)
+      pointer-events: none
       cursor: auto
 
     &_past
       opacity: 0.5
+      pointer-events: none
+      cursor: auto
 
   &__mobile-titles
     position: absolute
@@ -133,9 +137,10 @@
     gap: 17px
     background-color: var(--white-color)
     height: 100%
-    max-width: 110px
+    max-width: 150px
+    transition: .3s
 
-    &_shadow::after
+    &[data-booking-mobile-titles-active]::after
       content: ''
       display: block
       position: absolute
@@ -144,11 +149,13 @@
       width: 20px
       height: 100%
 
-
 .booking-block-day-slide
   display: flex
   flex-direction: column
   align-items: center
+  &_past
+    opacity: 0.5
+    pointer-events: none
 
 .booking-block-week-day
   font-size: 12px
@@ -170,6 +177,9 @@
   position: absolute
   width: auto !important
   min-width: auto !important
+  transition: .3s
+  &.slick-disabled
+    opacity: 0.5
 
 .days-slider-prev
   left: -45px
@@ -216,7 +226,6 @@
     border-width: 0px 9px 9px
     border-color: transparent transparent var(--gray-color-300) transparent
 
-
 .booking-tooltip
   display: flex
   flex-direction: column
@@ -233,19 +242,16 @@
     padding: 10px 30px
     max-width: max-content
 
-
-
 @media ( max-width: 767px )
   .booking-block
     padding: 40px 20px
-  
+
   .booking-table
     &__row
-      grid-template-columns: 110px 1fr
-      
+      grid-template-columns: 150px 1fr
+
     &__title_days
       font-size: 10px
-
 
 @media ( max-width: 575px )
   .booking-block

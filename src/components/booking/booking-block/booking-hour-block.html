@@ -14,36 +14,36 @@
           fill="currentColor" />
       </svg>
     </button>
-    <div class="slider-constructor slick-slider days-slider" data-prev-button-id="prev-button"
-      data-next-button-id="next-button" data-md-slides="5" data-slides="4" data-no-dots>
-      <div class="booking-block-day-slide">
+    <div class="slider-constructor days-slider" data-prev-button-id="prev-button"
+      data-next-button-id="next-button" data-no-infinite data-md-slides="5" data-slides="4" data-no-dots>
+      <a href="#" class="booking-block-day-slide booking-block-day-slide_past">
         <p class="booking-block-week-day">ПН</p>
         <p class="booking-block-date">02/02</p>
-      </div>
-      <div class="booking-block-day-slide">
+      </a>
+      <a href="#" class="booking-block-day-slide booking-block-day-slide_past">
         <p class="booking-block-week-day">ПН</p>
         <p class="booking-block-date">02/02</p>
-      </div>
-      <div class="booking-block-day-slide">
+      </a>
+      <a href="#" class="booking-block-day-slide">
         <p class="booking-block-week-day">ПН</p>
         <p class="booking-block-date">02/02</p>
-      </div>
-      <div class="booking-block-day-slide">
+      </a>
+      <a href="#" class="booking-block-day-slide">
         <p class="booking-block-week-day">ПН</p>
         <p class="booking-block-date">02/02</p>
-      </div>
-      <div class="booking-block-day-slide">
+      </a>
+      <a href="#" class="booking-block-day-slide">
         <p class="booking-block-week-day">ПН</p>
         <p class="booking-block-date">02/02</p>
-      </div>
-      <div class="booking-block-day-slide">
+      </a>
+      <a href="#" class="booking-block-day-slide">
         <p class="booking-block-week-day">ПН</p>
         <p class="booking-block-date">02/02</p>
-      </div>
-      <div class="booking-block-day-slide">
+      </a>
+      <a href="#" class="booking-block-day-slide">
         <p class="booking-block-week-day">ПН</p>
         <p class="booking-block-date">02/02</p>
-      </div>
+      </a>
     </div>
   </div>
   <div class="booking-block__statuses">
@@ -71,43 +71,36 @@
       </div>
     </div>
     <div class="booking-table">
-      <div class="booking-table__scroll">
-        <div class="d-md-none booking-table__mobile-titles booking-table__mobile-titles_shadow">
-          <p class="booking-table__title">Стол №1 (1 этаж) - возле парадного входа</p>
-          <p class="booking-table__title">Стол №1 (1 этаж)</p>
-          <p class="booking-table__title">Стол №1 (1 этаж)</p>
-          <p class="booking-table__title">Стол №1 (1 этаж)</p>
+      <div data-booking-scroll class="booking-table__scroll">
+        <div data-booking-mobile-titles class="d-md-none booking-table__mobile-titles booking-table__mobile-titles_shadow">
         </div>
         <div class="booking-table__content">
           <div class="booking-table__row booking-table__row_hours">
             <p data-booking-title class="booking-table__title">Стол №1 (1 этаж) - возле парадного входа</p>
             <div class="booking-table__items booking-table__items_hours">
               <a data-booking-tooltip data-booking-time="15:00-16:00"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:01"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:02"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:03"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
-                href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_busy"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
                 class="booking-table__item booking-table__item_hour booking-table__item_busy"
@@ -119,40 +112,43 @@
                 class="booking-table__item booking-table__item_hour booking-table__item_busy"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy"
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:17"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:27"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:37"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a data-booking-tooltip data-booking-time="15:00-16:07"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+              <a data-booking-tooltip data-booking-time="15:00-16:47"
+                class="booking-table__item booking-table__item_hour "
+                href="#">8:00</a>
+              <a data-booking-tooltip data-booking-time="15:00-16:57"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:08"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:09"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:10"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:11"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:12"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:13"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:14"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
             </div>
           </div>
@@ -160,31 +156,28 @@
             <p data-booking-title class="booking-table__title">Стол №1 (1 этаж)</p>
             <div class="booking-table__items booking-table__items_hours">
               <a data-booking-tooltip data-booking-time="15:00-16:00"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:01"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:02"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:03"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
-                href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_busy"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
                 class="booking-table__item booking-table__item_hour booking-table__item_busy"
@@ -196,40 +189,43 @@
                 class="booking-table__item booking-table__item_hour booking-table__item_busy"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy"
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:17"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:27"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:37"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a data-booking-tooltip data-booking-time="15:00-16:07"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+              <a data-booking-tooltip data-booking-time="15:00-16:47"
+                class="booking-table__item booking-table__item_hour "
+                href="#">8:00</a>
+              <a data-booking-tooltip data-booking-time="15:00-16:57"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:08"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:09"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:10"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:11"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:12"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:13"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:14"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
             </div>
           </div>
@@ -237,31 +233,28 @@
             <p data-booking-title class="booking-table__title">Стол №1 (1 этаж)</p>
             <div class="booking-table__items booking-table__items_hours">
               <a data-booking-tooltip data-booking-time="15:00-16:00"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:01"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:02"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:03"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
-                href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_busy"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
                 class="booking-table__item booking-table__item_hour booking-table__item_busy"
@@ -273,40 +266,43 @@
                 class="booking-table__item booking-table__item_hour booking-table__item_busy"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy"
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:17"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:27"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:37"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a data-booking-tooltip data-booking-time="15:00-16:07"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+              <a data-booking-tooltip data-booking-time="15:00-16:47"
+                class="booking-table__item booking-table__item_hour "
+                href="#">8:00</a>
+              <a data-booking-tooltip data-booking-time="15:00-16:57"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:08"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:09"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:10"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:11"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:12"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:13"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:14"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
             </div>
           </div>
@@ -314,31 +310,28 @@
             <p data-booking-title class="booking-table__title">Стол №1 (1 этаж)</p>
             <div class="booking-table__items booking-table__items_hours">
               <a data-booking-tooltip data-booking-time="15:00-16:00"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:01"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:02"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:03"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour  booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
-                href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_busy"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy booking-table__item_past"
                 href="#">8:00</a>
               <a
                 class="booking-table__item booking-table__item_hour booking-table__item_busy"
@@ -350,40 +343,43 @@
                 class="booking-table__item booking-table__item_hour booking-table__item_busy"
                 href="#">8:00</a>
               <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+                class="booking-table__item booking-table__item_hour booking-table__item_busy"
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:17"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:27"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:37"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a data-booking-tooltip data-booking-time="15:00-16:07"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+              <a data-booking-tooltip data-booking-time="15:00-16:47"
+                class="booking-table__item booking-table__item_hour "
+                href="#">8:00</a>
+              <a data-booking-tooltip data-booking-time="15:00-16:57"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:08"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:09"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
               <a data-booking-tooltip data-booking-time="15:00-16:10"
-                class="booking-table__item booking-table__item_hour booking-table__item_free"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:11"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:12"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:13"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
-              <a
-                class="booking-table__item booking-table__item_hour booking-table__item_selected"
+              <a data-booking-tooltip data-booking-time="15:00-16:14"
+                class="booking-table__item booking-table__item_hour "
                 href="#">8:00</a>
             </div>
           </div>

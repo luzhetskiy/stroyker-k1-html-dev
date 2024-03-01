@@ -76,4 +76,24 @@ $(() => {
       $("[data-booking-tooltip-button]").off("click", bookingButtonClickHandler);
     },
   });
+
+  $('[data-booking-scroll]').scroll((event) => {
+    const currentScroll = $(event.currentTarget).scrollLeft();
+    if (currentScroll > 1) {
+      $('[data-booking-mobile-titles]').attr('data-booking-mobile-titles-active', '')
+      return
+    }
+    $('[data-booking-mobile-titles-active]').removeAttr('data-booking-mobile-titles-active')
+  })
+
+  const appendMobileTitles = () => {
+    $('[data-booking-title]').each((index, element) => {
+      const target = $(element)
+      const title = target.clone()
+      title.css({'min-height': target.height()})
+      $('[data-booking-mobile-titles]').append(title)
+    })
+  }
+  appendMobileTitles()
+  
 });

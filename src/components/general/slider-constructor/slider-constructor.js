@@ -55,6 +55,7 @@ const SliderConstructor = /*#__PURE__*/ (function () {
 
         this.params.adaptiveHeight = this.element.getAttribute("data-adaptive-height") !== null;
         this.params.centerMode = this.element.getAttribute("data-center") === null ? false : true;
+        this.params.infinite = this.element.getAttribute("data-no-infinite") === null ? true : false
         this.params.count = {};
         this.params.count.xs = +this.element.getAttribute("data-slides") || 1;
         this.params.count.sm = +this.element.getAttribute("data-sm-slides") || this.params.count.xs;
@@ -215,6 +216,7 @@ const SliderConstructor = /*#__PURE__*/ (function () {
           dots: this.params.dots,
           centerMode: this.params.centerMode,
           accessibility: false,
+          infinite: this.params.infinite,
           responsive: [
             {
               breakpoint: breakpoints.sm - 1,
