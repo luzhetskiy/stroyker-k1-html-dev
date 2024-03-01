@@ -26,7 +26,7 @@
 .burger-box svg {
   color: var(--main-elements-color, #2363D1);
 }
-.product-card__radio-options.product-modification-params a.active {
+.product-card__radio-options.product-modification-params a.active, .product-card__product-mod-param_active {
   background: #2363D1;
   border-color: #2363D1;
   color: #FFF;
