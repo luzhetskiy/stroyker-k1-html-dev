@@ -23,7 +23,7 @@
   opacity: 0
   visibility: hidden
   transition: opacity 0.15s ease-out, visibility 0.15s ease-out
-  margin: 0 calc(var(--grid-gutter-width)/-2)
+  width: 100%
 
 .slider-constructor.visible,
 .slider-constructor.slick-initialized
@@ -31,7 +31,8 @@
   visibility: visible
 
 .slider-constructor .slick-list
-  width: 100%
+  width: calc(100% + var(--grid-gutter-width))
+  margin: 0 calc(var(--grid-gutter-width)/-2)
 
 .slider-constructor .slick-slide
   flex: 0 0 auto
