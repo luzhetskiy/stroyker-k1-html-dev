@@ -286,15 +286,14 @@
                   </p>
                 </div>
                 <div class="booking-block__content">
-                  <div data-booking-tooltip class="d-none">
+                  <div data-booking-tooltip-content class="d-none">
                     <div class="booking-tooltip">
                       <p class="booking-tooltip__text">
                         Нажмите, чтобы забронировать
                         <span data-booking-tooltip-title class="booking-tooltip__text-accent"></span> на время
                         <span data-booking-tooltip-time class="booking-tooltip__text-accent"></span>
                       </p>
-                      <button class="g-button g-button_fill booking-tooltip__button"
-                        data-booking-tooltip-button>
+                      <button class="g-button g-button_fill booking-tooltip__button" data-booking-tooltip-button>
                         Забронировать
                       </button>
                     </div>
@@ -303,12 +302,15 @@
                     <div data-booking-scroll class="booking-table__scroll">
                       <div class="booking-table__content">
                         <div class="booking-table__row booking-table__row_days">
-                          <p data-booking-title class="booking-table__title booking-table__title_days">Стол №1 (1 этаж) - возле парадного входа1</p>
+                          <p data-booking-title="Стол №1 (1 этаж) - возле парадного входа1"
+                            class="booking-table__title booking-table__title_days">
+                            Стол №1 (1 этаж) - возле парадного входа1
+                          </p>
                           <div class="booking-table__items booking-table__items_days">
                             <button data-booking-tooltip data-booking-time="15:10-16:00"
                               class="booking-table__item booking-table__item_day booking-table__item_free">
                               <span class="booking-block-week-day">ВТ</span> 03/02
-                            </button> 
+                            </button>
                             <button data-booking-tooltip data-booking-time="15:03-16:00"
                               class="booking-table__item booking-table__item_day booking-table__item_free">
                               <span class="booking-block-week-day">ВТ</span> 03/02
@@ -336,12 +338,15 @@
                           </div>
                         </div>
                         <div class="booking-table__row booking-table__row_days">
-                          <p data-booking-title class="booking-table__title booking-table__title_days">Стол №1 (1 этаж) - возле парадного входа2</p>
+                          <p data-booking-title="Стол №1 (1 этаж) - возле парадного входа2"
+                            class="booking-table__title booking-table__title_days">
+                            Стол №1 (1 этаж) - возле парадного входа2
+                          </p>
                           <div class="booking-table__items booking-table__items_days">
                             <button data-booking-tooltip data-booking-time="15:10-16:00"
                               class="booking-table__item booking-table__item_day booking-table__item_free">
                               <span class="booking-block-week-day">ВТ</span> 03/02
-                            </button> 
+                            </button>
                             <button data-booking-tooltip data-booking-time="15:03-16:00"
                               class="booking-table__item booking-table__item_day booking-table__item_free">
                               <span class="booking-block-week-day">ВТ</span> 03/02
@@ -369,12 +374,15 @@
                           </div>
                         </div>
                         <div class="booking-table__row booking-table__row_days">
-                          <p data-booking-title class="booking-table__title booking-table__title_days">Стол №1 (1 этаж) - возле парадного входа3</p>
+                          <p data-booking-title="Стол №1 (1 этаж) - возле парадного входа3"
+                            class="booking-table__title booking-table__title_days">
+                            Стол №1 (1 этаж) - возле парадного входа3
+                          </p>
                           <div class="booking-table__items booking-table__items_days">
                             <button data-booking-tooltip data-booking-time="15:10-16:00"
                               class="booking-table__item booking-table__item_day booking-table__item_free">
                               <span class="booking-block-week-day">ВТ</span> 03/02
-                            </button> 
+                            </button>
                             <button data-booking-tooltip data-booking-time="15:03-16:00"
                               class="booking-table__item booking-table__item_day booking-table__item_free">
                               <span class="booking-block-week-day">ВТ</span> 03/02
@@ -402,12 +410,15 @@
                           </div>
                         </div>
                         <div class="booking-table__row booking-table__row_days">
-                          <p data-booking-title class="booking-table__title booking-table__title_days">Стол №1 (1 этаж) - возле парадного входа4</p>
+                          <p data-booking-title="Стол №1 (1 этаж) - возле парадного входа4"
+                            class="booking-table__title booking-table__title_days">
+                            Стол №1 (1 этаж) - возле парадного входа4
+                          </p>
                           <div class="booking-table__items booking-table__items_days">
                             <button data-booking-tooltip data-booking-time="15:10-16:00"
                               class="booking-table__item booking-table__item_day booking-table__item_free">
                               <span class="booking-block-week-day">ВТ</span> 03/02
-                            </button> 
+                            </button>
                             <button data-booking-tooltip data-booking-time="15:03-16:00"
                               class="booking-table__item booking-table__item_day booking-table__item_free">
                               <span class="booking-block-week-day">ВТ</span> 03/02
@@ -435,9 +446,37 @@
                           </div>
                         </div>
                       </div>
-                      <div data-booking-mobile-titles class="d-md-none booking-table__mobile-titles booking-table__mobile-titles_shadow">
-                      </div>
+                      <div data-booking-mobile-titles
+                        class="d-md-none booking-table__mobile-titles booking-table__mobile-titles_shadow"></div>
                     </div>
+                  </div>
+                  <div class="booking-form">
+                    <p class="content-title h2 booking-form__title">Оставить заявку на бронирование</p>
+                    <p class="form-text booking-form__text">
+                      Заполните форму, и мы свяжемся с вами для уточнения информации о брони по указанному номеру телефона:
+                    </p>
+                    <form id="booking-form" class="booking-form__form">
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="name" autocomplete="off" required="" />
+                        <label for="name" class="label-name">
+                          <span class="content-name"> Имя* </span>
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <input type="phone" value="79277767575" class="form-control phone" name="phone" autocomplete="off" required=""
+                          maxlength="18" />
+                        <label for="phone" class="label-name">
+                          <span class="content-name"> Телефон </span>
+                        </label>
+                      </div>
+                      <div class="form-group">
+                        <textarea class="form-control" name="message" autocomplete="off" required=""></textarea>
+                        <label for="message" class="label-name">
+                          <span class="content-name"> Комментарий </span>
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn--main-min">Отправить</button>
+                    </form>
                   </div>
                 </div>
               </div>
