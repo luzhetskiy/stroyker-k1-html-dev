@@ -30,7 +30,7 @@ $(() => {
         if (!form.length) return;
         form.find("input, textarea, button").removeAttr("disabled");
         form.attr("action", action);
-        form.find('[name="message"]').val(`Хочу забронировать столик: ${title}, на время: ${time}`);
+        form.find('[name="message"]').val(`Хочу забронировать: ${title}, на время: ${time}`);
         $("html, body").animate(
           {
             scrollTop: $("[data-booking-form]").offset().top - 200,
