@@ -23,18 +23,10 @@ $(() => {
       const action = target.attr("data-submit-url");
       const button = $("[data-booking-tooltip-button]");
 
-      // const url = "https://secret-smr.ru/booking/matrix/test-hours/2024-03-26/";
       const url = window.location.pathname;
-      const pattern = /(\d{4})-(\d{2})-(\d{2})/;
+      const pattern = /\d{4}-\d{2}-\d{2}/;
       const match = url.match(pattern);
-      let date = "";
-      if (match) {
-        const year = parseInt(match[1], 10);
-        const month = parseInt(match[2], 10) - 1;
-        const day = parseInt(match[3], 10);
-        const formattedDate = new Date(year, month, day);
-        date = formattedDate.toLocaleDateString();
-      }
+      const date = match ? new Date(match[0]).toLocaleDateString() : undefined;
       button.attr("data-booking-tooltip-button-time", time);
       button.attr("data-booking-tooltip-button-title", title);
       $("[data-booking-tooltip-title]").text(title);
@@ -59,18 +51,18 @@ $(() => {
             },
             500
           );
+          return;
         }
-        if (!date) {
-          form
-            .find('[name="message"]')
-            .val(`Хочу забронировать: ${title}, время: ${time}`);
-          $("html, body").animate(
-            {
-              scrollTop: $("[data-booking-form]").offset().top - 200,
-            },
-            500
-          );
-        }
+
+        form
+          .find('[name="message"]')
+          .val(`Хочу забронировать: ${title}, время: ${time}`);
+        $("html, body").animate(
+          {
+            scrollTop: $("[data-booking-form]").offset().top - 200,
+          },
+          500
+        );
       });
     },
   });
