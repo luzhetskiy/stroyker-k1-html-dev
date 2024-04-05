@@ -153,7 +153,7 @@ $(document).ready(function () {
     content: autoModal.innerHTML,
     allowHTML: true,
     theme: "light",
-    placement: "bottom-start",
+    placement: "bottom",
     trigger: "click",
   });
 

@@ -2,16 +2,16 @@ main
     overflow: hidden
 
 *:not(html, body)::-webkit-scrollbar
-  width: 8px
-  background: transparent
+    width: 8px
+    background: transparent
 
 *:not(html, body)::-webkit-scrollbar-track
-  background: transparent
+    background: transparent
 
 *:not(html, body)::-webkit-scrollbar-thumb
-  background-color: #D9D9DE
-  border-radius: 4px
-  border: 1px solid #D9D9DE
+    background-color: #D9D9DE
+    border-radius: 4px
+    border: 1px solid #D9D9DE
 
 .filter-choice
     display: flex
@@ -174,7 +174,6 @@ main
     z-index: 10
     height: 142px
     overflow-y: auto
-    
 
 .parameter-select .select-option
     padding: 10px 0 10px 15px
@@ -216,6 +215,11 @@ main
 #tippy-1 .tippy-box,
 #tippy-2 .tippy-box
     max-width: 720px !important
+
+@media(max-width:991px)
+    #tippy-1 .tippy-box,
+    #tippy-2 .tippy-box
+        max-width: 550px !important
 
 .parameter-modal-title,
 .auto-modal-title
@@ -289,3 +293,13 @@ main
     font-size: 10px
     line-height: 14px
     color: #A7A7AB
+
+@media(max-width: 575px)
+    .tire-section .tab-content
+        padding: 0 !important
+@media(max-width: 575px)
+    .filter-auto, 
+    .filter-parameter
+        flex-direction: column
+    .filter-choice
+        gap: 10px
