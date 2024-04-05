@@ -16,6 +16,7 @@
 //@include ./legacy/smoothScroll.js
 //@include ./legacy/syncSliders.js
 //@include ./legacy/tabs.js
+//@include ./legacy/tabs.js
 
 //@include ../../components/scripts/scripts.js
 
