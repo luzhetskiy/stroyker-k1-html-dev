@@ -76,7 +76,7 @@ $(document).ready(function ($) {
     window.location = searchUrl + "?q=" + value;
   });
 
-  $("[data-search-input]").on("keypress", (event) => {
+  $("[data-search-input]").on("focus keyup paste", (event) => {
     const input = $(event.currentTarget);
     const value = input.val();
     const id = input.attr("data-search-input");
