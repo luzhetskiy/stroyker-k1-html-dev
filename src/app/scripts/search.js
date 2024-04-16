@@ -102,8 +102,8 @@ $(document).ready(function ($) {
         dataType: "html",
       }).done((result) => {
         if (result.replace(/\s/g, "").length <= 0) {
-          resultBoxEl.html("");
-          resultBoxEl.removeAttr("data-search-results-active");
+          resultContainer.html("");
+          resultContainer.removeAttr("data-search-results-active");
           return;
         }
         resultContainer.html(result);
