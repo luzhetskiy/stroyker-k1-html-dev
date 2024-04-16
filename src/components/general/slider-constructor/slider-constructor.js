@@ -128,7 +128,6 @@ const SliderConstructor = /*#__PURE__*/ (function () {
         const prevButton = this.element.getAttribute("data-prev-button-id");
         const nextButton = this.element.getAttribute("data-next-button-id");
         if (prevButton) {
-          console.log(123);
           const button = document.getElementById(prevButton);
           this.prevArrow = button.outerHTML;
           button.remove()

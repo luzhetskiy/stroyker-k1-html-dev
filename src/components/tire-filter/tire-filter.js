@@ -3,6 +3,8 @@ $(document).ready(function () {
     ".filter-toggle .toggle-input"
   );
 
+  if (!tireFilterToggle) return
+
   tireFilterToggle.addEventListener("change", function () {
     let blockParameter = document.querySelector(".parameter-block");
     let blockAuto = document.querySelector(".auto-block");
