@@ -107,7 +107,7 @@ $(document).ready(function ($) {
           return;
         }
         resultContainer.html(result);
-        resultContainer.attr("data-search-results-active");
+        resultContainer.attr("data-search-results-active", "");
         $(document).on("click", clickOuterHandler);
       });
     } catch {
