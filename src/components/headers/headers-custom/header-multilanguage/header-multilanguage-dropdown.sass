@@ -1,0 +1,46 @@
+.header-language__selector
+    width: 53px
+    color: #fff
+    position: relative
+    
+.header-language__selected
+    border-radius: 2px
+    position: relative
+
+.header-language__selected,
+.header-language__option
+   padding-left: 10px
+   height: 24px
+   display: flex
+   align-items: center
+   background-color: #2F2F2F
+   font-size: 14px
+   
+
+.header-language__options
+    display: none
+    position: absolute
+    top: 24px
+    width: 100%
+    
+.header-language__option:last-child
+    border-bottom-left-radius: 2px
+    border-bottom-right-radius: 2px
+.header-language__selector:hover .header-language__options
+    display: block
+
+.header-language__selector:hover .header-language__selected
+    border-bottom-left-radius: 0px
+    border-bottom-right-radius: 0px
+
+.header-language__selected::after
+    content: ''
+    background: url(../images/icons/dropdown-arrow.svg)
+    position: absolute
+    right: 10px
+    width: 8px
+    height: 6px
+    background-size: cover
+
+.header-language__option:hover
+    background-color: #212121
