@@ -1,0 +1,436 @@
+<section class="__header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="logo">
+          <a href="#"><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/logo.svg"
+              alt="" /></a>
+        </div>
+      </div>
+      <div class="col-lg-6 pl--0">
+        <div class="custom-block">
+          <button class="btn catalog-btn">
+            <span></span> Каталог товаров
+          </button>
+          <div class="search-box general--width">
+            <div id="overlay" onclick="javascript: close_all();"></div>
+            <form action="">
+              <input type="text" autocomplete="off" id="edit_search" onkeyup="javascript: find_my_div();"
+                placeholder="Название магазина" />
+              <button class="btn submit">
+                <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/search-icon.svg"
+                  alt="" />
+              </button>
+            </form>
+            <div id="search-result">
+              <a href="#" id="user_0" class="s-item-link">
+                <div class="s-item-img">
+                  <img
+                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/30851ff8e294859c3b812fef189cce5b.jpeg"
+                    alt="" />
+                </div>
+                <div class="s-item-info">
+                  <span class="s-item-title">Золотое яблоко</span>
+                  <span class="s-item-price">247$</span>
+                </div>
+              </a>
+              <a href="#" id="user_1" class="s-item-link">
+                <div class="s-item-img">
+                  <img
+                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/30851ff8e294859c3b812fef189cce5b.jpeg"
+                    alt="" />
+                </div>
+                <div class="s-item-info">
+                  <span class="s-item-title">доска asd asd asd asdas </span>
+                  <span class="s-item-price">247$</span>
+                </div>
+              </a>
+              <a href="#" id="user_2" class="s-item-link">
+                <div class="s-item-img">
+                  <img
+                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/30851ff8e294859c3b812fef189cce5b.jpeg"
+                    alt="" />
+                </div>
+                <div class="s-item-info">
+                  <span class="s-item-title">корзина</span>
+                  <span class="s-item-price">247$</span>
+                </div>
+              </a>
+              <a href="#" id="user_3" class="s-item-link">
+                <div class="s-item-img">
+                  <img
+                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/30851ff8e294859c3b812fef189cce5b.jpeg"
+                    alt="" />
+                </div>
+                <div class="s-item-info">
+                  <span class="s-item-title">Золотое яблоко</span>
+                  <span class="s-item-price">247$</span>
+                </div>
+              </a>
+              <a href="#" id="user_4" class="s-item-link">
+                <div class="s-item-img">
+                  <img
+                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/30851ff8e294859c3b812fef189cce5b.jpeg"
+                    alt="" />
+                </div>
+                <div class="s-item-info">
+                  <span class="s-item-title">доска asd asd asd asdas </span>
+                  <span class="s-item-price">247$</span>
+                </div>
+              </a>
+              <a href="#" id="user_5" class="s-item-link">
+                <div class="s-item-img">
+                  <img
+                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/30851ff8e294859c3b812fef189cce5b.jpeg"
+                    alt="" />
+                </div>
+                <div class="s-item-info">
+                  <span class="s-item-title">корзина</span>
+                  <span class="s-item-price">247$</span>
+                </div>
+              </a>
+
+              <a href="#" class="all-items-link">Все каталоги</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="options-box">
+          <div class="v3-variant">
+            <button class="btn menu-btn">
+              <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/profile-icon-t2.svg"
+                alt="" />
+              <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/close-icon.svg" alt="" />
+              Меню
+            </button>
+
+            <div class="col-block a-center">
+              <ul class="option-items v-white">
+                <li>
+                  <a href="#"><img
+                      src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/cart-icon-orange.svg"
+                      alt="" />
+                    123 456</a>
+                </li>
+              </ul>
+              <ul class="option-items v-white">
+                <li class="option-item__lang">
+                  <a href="#">
+                    <div data-fancybox="header-language-modal" data-src="#header-language-modal"
+              class="header-multilanguage-content">
+              <div id="header-language-open" class="header-language__selector">
+                <div class="header-language__selected">RU</div>
+              </div>
+                    </div>
+                  </a>
+                  <div id="header-language-modal" class="modal header-language__modal">
+                    <h3 class="header-language__modal_title">Выберите язык</h3>
+                    <ul class="language-list">
+                      <li>
+                        <a href="#">
+                          <img src="../images/ru.svg" alt="" class="language-icon">
+                          <span class="language-name">Русский</span>
+                          <span class="language-valuta">(RUB)</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img src="../images/spain.svg" alt="" class="language-icon">
+                          <span class="language-name">Испанский</span>
+                          <span class="language-valuta">(ESP)</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img src="../images/us.svg" alt="" class="language-icon">
+                          <span class="language-name">Английский</span>
+                          <span class="language-valuta">(USD)</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <img src="../images/kz.svg" alt="" class="language-icon">
+                          <span class="language-name">Казахский</span>
+                          <span class="language-valuta">(KZT)</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="menu-box">
+              <ul class="hover--color link--arrow-right">
+                <li>
+                  <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+                      alt="" /></span>
+                  <a href="#">Категория </a>
+                </li>
+                <li>
+                  <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+                      alt="" /></span>
+                  <a href="#">Категория товара или раздел сайта Три стр...</a>
+                </li>
+                <li>
+                  <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+                      alt="" /></span>
+                  <a href="#">Категория товара или раздел сайта Три стр...</a>
+                </li>
+                <li>
+                  <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+                      alt="" /></span>
+                  <a href="#">Категория товара или раздел сайта Три стр...</a>
+                </li>
+                <li>
+                  <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+                      alt="" /></span>
+                  <a href="#">Категория товара или раздел сайта Три стр...</a>
+                </li>
+                <li>
+                  <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+                      alt="" /></span>
+                  <a href="#">Категория товара или раздел сайта Три стр...</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-2">
+        <div class="contact-box">
+          <p>
+            <span class="circle"></span><span class="show-number">Показать .. 10-53-28</span><a href="#">+7(960)
+              810-53-28</a>
+          </p>
+          <a href="#" data-fancybox="callme-modal" data-src="#callme-modal" href="javascript:;"><img
+              src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/order-call-arrow.svg" alt="" />
+            Запросить звонок</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="catalog-box">
+    <div class="container">
+      <ul class="hover--color hover--underline link--arrow-right">
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Образец выделения активного пункта 1</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Образец выделения активного пункта 2</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Образец выделения активного пункта 3</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">В одну строку название</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Название пункта меню в 2 строки</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Пример, когда иконка слева от текста</a>
+        </li>
+
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Образец выделения активного пункта 1</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Образец выделения активного пункта 2</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Образец выделения активного пункта 3</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">В одну строку название</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Название пункта меню в 2 строки</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Название пункта меню в 2 строки</a>
+        </li>
+
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Категория товара или раздел сайта Три стр...</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Категория товара или раздел сайта Три стр...</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Категория товара или раздел сайта Три стр...</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Категория товара или раздел сайта Три стр...</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Категория товара или раздел сайта Три стр...</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Категория товара или раздел сайта Три стр...</a>
+        </li>
+
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Категория товара или раздел сайта Три стр...</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Категория товара или раздел сайта Три стр...</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Категория товара или раздел сайта Три стр...</a>
+        </li>
+        <li>
+          <span><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/link-arrow.svg"
+              alt="" /></span>
+          <a href="#">Категория товара или раздел сайта Три стр...</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="header--mob">
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <div class="logo">
+          <a href="#"><img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/logo.svg"
+              alt="" /></a>
+        </div>
+      </div>
+      <div class="col-8">
+        <div class="search--box">
+          <div id="overlay_mob" onclick="javascript: close_all_mob();"></div>
+          <form action="" class="s-icon-right">
+            <input type="text" autocomplete="off" id="edit_search_mob" onkeyup="javascript: find_my_div_mob();" />
+            <button class="btn submit">
+              <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/header-icons/s-icon-mob.svg" alt="" />
+            </button>
+          </form>
+          <div id="search-result-mob">
+            <a href="#" id="user_0" class="s-item-link">
+              <div class="s-item-img">
+                <img
+                  src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/30851ff8e294859c3b812fef189cce5b.jpeg"
+                  alt="" />
+              </div>
+              <div class="s-item-info">
+                <span class="s-item-title">Золотое яблоко</span>
+                <span class="s-item-price">247$</span>
+              </div>
+            </a>
+            <a href="#" id="user_1" class="s-item-link">
+              <div class="s-item-img">
+                <img
+                  src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/30851ff8e294859c3b812fef189cce5b.jpeg"
+                  alt="" />
+              </div>
+              <div class="s-item-info">
+                <span class="s-item-title">доска asd asd asd asdas </span>
+                <span class="s-item-price">247$</span>
+              </div>
+            </a>
+            <a href="#" id="user_2" class="s-item-link">
+              <div class="s-item-img">
+                <img
+                  src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/30851ff8e294859c3b812fef189cce5b.jpeg"
+                  alt="" />
+              </div>
+              <div class="s-item-info">
+                <span class="s-item-title">корзина</span>
+                <span class="s-item-price">247$</span>
+              </div>
+            </a>
+            <a href="#" id="user_3" class="s-item-link">
+              <div class="s-item-img">
+                <img
+                  src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/30851ff8e294859c3b812fef189cce5b.jpeg"
+                  alt="" />
+              </div>
+              <div class="s-item-info">
+                <span class="s-item-title">Золотое яблоко</span>
+                <span class="s-item-price">247$</span>
+              </div>
+            </a>
+            <a href="#" id="user_4" class="s-item-link">
+              <div class="s-item-img">
+                <img
+                  src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/30851ff8e294859c3b812fef189cce5b.jpeg"
+                  alt="" />
+              </div>
+              <div class="s-item-info">
+                <span class="s-item-title">доска asd asd asd asdas </span>
+                <span class="s-item-price">247$</span>
+              </div>
+            </a>
+            <a href="#" id="user_5" class="s-item-link">
+              <div class="s-item-img">
+                <img
+                  src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/30851ff8e294859c3b812fef189cce5b.jpeg"
+                  alt="" />
+              </div>
+              <div class="s-item-info">
+                <span class="s-item-title">корзина</span>
+                <span class="s-item-price">247$</span>
+              </div>
+            </a>
+
+            <a href="#" class="all-items-link">Все каталоги</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-1">
+        <div class="burger-box">
+          <button class="btn" id="my-button">
+            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="17" height="2" rx="1" fill="#2363D1" />
+              <rect y="6" width="17" height="2" rx="1" fill="#2363D1" />
+              <rect y="12" width="17" height="2" rx="1" fill="#2363D1" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
