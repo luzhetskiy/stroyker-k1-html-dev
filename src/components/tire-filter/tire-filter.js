@@ -23,7 +23,9 @@ $(document).ready(function () {
   function resetFilters(block) {
     let selectors = block.querySelectorAll(
       ".parameter-select .selected-option"
-    );
+    )
+    let resetButton = block.querySelector(".button-reset")
+    resetButton.style.display = "none"
     let selectOptions = block.querySelector(".select-options");
     selectors.forEach(function (selector) {
       selector.textContent = selectOptions.firstElementChild.textContent;
@@ -49,7 +51,7 @@ $(document).ready(function () {
   }
 
   // search selector
-
+  
   function toggleOptions(searchInput, selectOptions, selectedOption) {
     selectOptions.style.display =
       selectOptions.style.display === "none" ? "block" : "none";
@@ -70,17 +72,48 @@ $(document).ready(function () {
     const text = selectOption.textContent.toLowerCase();
     selectOption.style.display = text.includes(searchString) ? "block" : "none";
   }
+  
   const selectors = document.querySelectorAll(".selector");
+
+  function checkSelectors() {
+    const atLeastOneSelectedParam = Array.from(selectors).some(function(selector) {
+      return selector.querySelector(".parameter-block .selected") !== null;
+    });
+    atLeastOneSelectedParam ? resetFilterButtonParameter.style.display = "flex" :
+    resetFilterButtonParameter.style.display = "none"
+    const atLeastOneSelectedAuto = Array.from(selectors).some(function(selector) {
+      return selector.querySelector(".auto-block .selected") !== null;
+    });
+    atLeastOneSelectedAuto ? resetFilterButtonAuto.style.display = "flex" :
+    resetFilterButtonAuto.style.display = "none"
+    
+  }
+
   selectors.forEach(function (selector) {
+    selector.addEventListener("click", function(event) {
+      const target = event.target;
+      if (target !== this.firstChild) {
+        checkSelectors();
+      }
+    })
     const selectedOption = selector.querySelector(".selected-option");
     const searchInput = selector.querySelector(".select-search-input");
     const selectOptions = selector.querySelector(".select-options");
+    selectedOption.style.display = "block"
+    searchInput.style.display = "none"
+    selectOptions.style.display = "none"
     selectedOption.addEventListener("click", function () {
       toggleOptions(searchInput, selectOptions, selectedOption);
     });
     const selectOption = selector.querySelectorAll(".select-option");
     selectOption.forEach(function (selectOption) {
-      selectOption.addEventListener("click", function () {
+      selectOption.addEventListener("click", function (event) {
+        const target = event.target
+        if(target !== selector.firstChild) {
+          const selected = selector.querySelector('.selected')
+          selected ? selected.classList.remove("selected"): null
+          target.classList.add("selected")
+        }
         selectedOption.textContent = selectOption.textContent;
         closeOptions(searchInput, selectOptions, selectedOption);
       });
@@ -98,6 +131,7 @@ $(document).ready(function () {
       });
     });
   });
+
 
   // слайдер категорий в мобилке
 
@@ -124,7 +158,8 @@ $(document).ready(function () {
   );
 
   sliderItems.forEach(function (item) {
-    item.addEventListener("click", function () {
+    item.addEventListener("click", function (event) {
+      const targetItem = event.target
       const tabId = item.getAttribute("data-tab");
       const tab = document.getElementById(tabId);
       const allTabs = document.querySelectorAll(".tab-content");
@@ -132,6 +167,10 @@ $(document).ready(function () {
         tab.style.display = "none";
       });
       tab.style.display = "block";
+      const mobileSlider = document.querySelector(".tabs-slider-mobile")
+      const itemActive = mobileSlider.querySelector(".slider-item.active")
+      itemActive ? itemActive.classList.remove("active") : null
+      targetItem.classList.add("active")
     });
   });
 
