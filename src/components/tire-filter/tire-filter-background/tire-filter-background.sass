@@ -1,7 +1,6 @@
 section.tire-section .tire-container
     position: relative
-    min-height: 550px
-    
+
 section.tire-section .background-container
     width: 100%
     height: 100%
@@ -20,11 +19,11 @@ section.tire-section .tabs-container
     z-index: 10
     height: 100%
 
-@media(min-width:768px) 
+@media(min-width:768px)
     section.tire-section .tabs-container
         width: 50%
-    
-@media(max-width:767px) 
+
+@media(max-width:767px)
     section.tire-section .background-container
         position: relative
         top: auto
@@ -32,4 +31,14 @@ section.tire-section .tabs-container
         height: 550px
     .section-dark.tire-section
         background-color: #fff !important
-    
+
+@media(min-width: 768px) and (max-width: 875px)
+    .po-parametram,
+    .po-auto
+        font-size: 12px
+@media(min-width: 768px)
+    .button-parameter__container,
+    .button-reset__container
+        margin-right: 10px
+    .tire-container .parameter-select
+        margin-right: 10px
