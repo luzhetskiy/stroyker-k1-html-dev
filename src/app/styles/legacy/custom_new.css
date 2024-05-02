@@ -1,13 +1,9 @@
 .__header .option-items li a.header-cart {
   margin-left: 0;
 }
-.header-user__link.noauth {
-  display: inline;
-  bottom: 10px;
-}
+
 .header-user__link.noauth .icon {
   position: relative;
-  top: 10px;
   margin: 0;
 }
 .header-cart .icon img.icon-svg {

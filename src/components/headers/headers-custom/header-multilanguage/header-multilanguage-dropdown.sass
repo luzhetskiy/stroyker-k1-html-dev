@@ -1,0 +1,64 @@
+.header-language__selector
+    width: 47px
+    color: #fff
+    position: relative
+    
+.header-language__selected
+    border-radius: 2px
+    position: relative
+
+.header-language__selected,
+.header-language__option
+   padding-left: 10px
+   height: 24px
+   display: flex
+   align-items: center
+   font-size: 14px
+   
+.header-language__selector:hover .header-language__selected,
+.header-language__selector:hover .header-language__option
+    background-color: #2F2F2F
+
+.header-language__options
+    display: none
+    position: absolute
+    top: 24px
+    width: 100%
+    z-index: 1
+    
+.header-language__option:last-child
+    border-bottom-left-radius: 2px
+    border-bottom-right-radius: 2px
+.header-language__selector:hover .header-language__options
+    display: block
+
+.header-language__selector.drop-selector:hover .header-language__selected
+    border-bottom-left-radius: 0px
+    border-bottom-right-radius: 0px
+
+.header-language__selected::after
+    content: ''
+    background: url(../images/icons/dropdown-arrow.svg)
+    position: absolute
+    right: 7px
+    width: 8px
+    height: 6px
+    background-size: cover
+
+.header-language__selector .header-language__selected:hover,
+.header-language__selector .header-language__option:hover
+    background-color: #212121
+.option-item__lang a
+    padding-left: 0 !important
+
+.__header.header-lang .option-items li 
+    padding-right: 10px
+
+.__header.header-lang .options-box
+    width: 260px
+.__header .options-box ul
+    align-items: center
+.header-lang-v-3-2 .contact-box
+    min-width: 157px
+.header-lang-v-3-2 .option-items li
+    padding-right: 3px !important

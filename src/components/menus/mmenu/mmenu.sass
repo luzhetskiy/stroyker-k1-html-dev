@@ -132,6 +132,11 @@
       bottom: 180px
       width: 100%
       z-index: 1
+    &_bottom-language
+      position: absolute
+      bottom: 230px
+      width: 100%
+      z-index: 1
   &__link
     cursor: pointer
     color: var(--gray-color-700)
@@ -142,7 +147,13 @@
     align-items: center
     padding-left: 0 !important
     white-space: normal !important
-
+  &__link-language::after
+    content: ''
+    position: absolute
+    background: url(../images/next-arrow.svg)
+    width: 8px
+    height: 12px
+    left: 230px
   &__icon
     max-width: 22px
     width: 100%
@@ -156,7 +167,7 @@
   border-top: 1px solid var(--gray-color-200)
   width: 100%
   padding: 20px
-  padding-top: 60px
+  padding-top: 110px
 
   &__link
     font-size: 16px
