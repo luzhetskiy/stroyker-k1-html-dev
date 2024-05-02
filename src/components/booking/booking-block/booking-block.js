@@ -20,13 +20,14 @@ $(() => {
         .find("[data-booking-title]")
         .attr("data-booking-title");
       const time = target.attr("data-booking-time");
-      const action = target.attr("data-submit-url");
+      // const action = target.attr("data-submit-url");
+      const action = '/booking/matrix/test-hours/add/1/2024-05-0/'
       const button = $("[data-booking-tooltip-button]");
-
-      const url = window.location.pathname;
-      const pattern = /\d{4}-\d{2}-\d{2}/;
-      const match = url.match(pattern);
-      const date = match ? new Date(match[0]).toLocaleDateString() : new Date().toLocaleDateString();
+      const timePattern = /\/\d{4}-\d{2}-\d{2}\/\d+(?:\/\d+)?\/?$/;
+      const isTime = timePattern.test(action)
+      const datePattern = /\d{4}-\d{2}-\d{2}/;
+      const match = action.match(datePattern);
+      const date = match ? new Date(match[0]).toLocaleDateString() : undefined;
       button.attr("data-booking-tooltip-button-time", time);
       button.attr("data-booking-tooltip-button-title", title);
       $("[data-booking-tooltip-title]").text(title);
