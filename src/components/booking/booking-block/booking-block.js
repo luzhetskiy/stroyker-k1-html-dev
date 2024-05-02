@@ -20,8 +20,7 @@ $(() => {
         .find("[data-booking-title]")
         .attr("data-booking-title");
       const time = target.attr("data-booking-time");
-      // const action = target.attr("data-submit-url");
-      const action = '/booking/matrix/test-hours/add/1/2024-05-0/'
+      const action = target.attr("data-submit-url");
       const button = $("[data-booking-tooltip-button]");
       const timePattern = /\/\d{4}-\d{2}-\d{2}\/\d+(?:\/\d+)?\/?$/;
       const isTime = timePattern.test(action)
