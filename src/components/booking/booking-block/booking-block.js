@@ -26,7 +26,7 @@ $(() => {
       const isTime = timePattern.test(action)
       const datePattern = /\d{4}-\d{2}-\d{2}/;
       const match = action.match(datePattern);
-      const date = match ? new Date(match[0]).toLocaleDateString() : undefined;
+      const date = match ? new Date(match[0]).toLocaleDateString() : new Date().toLocaleDateString();
       button.attr("data-booking-tooltip-button-time", time);
       button.attr("data-booking-tooltip-button-title", title);
       $("[data-booking-tooltip-title]").text(title);
@@ -41,7 +41,7 @@ $(() => {
         if (!form.length) return;
         form.find("input, textarea, button").removeAttr("disabled");
         form.attr("action", action);
-        if (isTime) {
+        if (isTime && date) {
           form
             .find('[name="message"]')
             .val(`Хочу забронировать: ${title}, дата: ${date}, время: ${time} \nКол-во гостей: -`);
