@@ -22,10 +22,10 @@ $(() => {
       const time = target.attr("data-booking-time");
       const action = target.attr("data-submit-url");
       const button = $("[data-booking-tooltip-button]");
-
-      const url = window.location.pathname;
-      const pattern = /\d{4}-\d{2}-\d{2}/;
-      const match = url.match(pattern);
+      const timePattern = /\/\d{4}-\d{2}-\d{2}\/\d+(?:\/\d+)?\/?$/;
+      const isTime = timePattern.test(action)
+      const datePattern = /\d{4}-\d{2}-\d{2}/;
+      const match = action.match(datePattern);
       const date = match ? new Date(match[0]).toLocaleDateString() : new Date().toLocaleDateString();
       button.attr("data-booking-tooltip-button-time", time);
       button.attr("data-booking-tooltip-button-title", title);
@@ -41,10 +41,22 @@ $(() => {
         if (!form.length) return;
         form.find("input, textarea, button").removeAttr("disabled");
         form.attr("action", action);
+        if (isTime && date) {
+          form
+            .find('[name="message"]')
+            .val(`Хочу забронировать: ${title}, дата: ${date}, время: ${time} \nКол-во гостей: -`);
+          $("html, body").animate(
+            {
+              scrollTop: $("[data-booking-form]").offset().top - 200,
+            },
+            500
+          );
+          return;
+        }
         if (date) {
           form
             .find('[name="message"]')
-            .val(`Хочу забронировать: ${title}, дата: ${date}, время: ${time}`);
+            .val(`Хочу забронировать: ${title}, дата: ${date} \nКол-во гостей: -`);
           $("html, body").animate(
             {
               scrollTop: $("[data-booking-form]").offset().top - 200,
@@ -56,7 +68,7 @@ $(() => {
 
         form
           .find('[name="message"]')
-          .val(`Хочу забронировать: ${title}, время: ${time}`);
+          .val(`Хочу забронировать: ${title}, ${time}  \nКол-во гостей: -`);
         $("html, body").animate(
           {
             scrollTop: $("[data-booking-form]").offset().top - 200,
