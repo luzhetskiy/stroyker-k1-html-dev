@@ -24,13 +24,15 @@ $(document).ready(function () {
   });
   function resetFilters(block) {
     let selectors = block.querySelectorAll(
-      ".parameter-select .selected-option"
+      ".parameter-select .selector"
     )
     let resetButton = block.querySelector(".button-reset")
     resetButton.style.display = "none"
-    let selectOptions = block.querySelector(".select-options");
+    
     selectors.forEach(function (selector) {
-      selector.textContent = selectOptions.firstElementChild.textContent;
+      let selectedOption = selector.querySelector(".selected-option");
+      let selectOptions = selector.querySelector(".select-options");
+      selectedOption.textContent = selectOptions.firstElementChild.textContent;
     });
   }
   const resetFilterButtonParameter = document.querySelector(
