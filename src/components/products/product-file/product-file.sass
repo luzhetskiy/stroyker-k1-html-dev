@@ -1,0 +1,73 @@
+.product-file
+  display: flex
+  padding: 15px 0
+  border-bottom: 1px solid #E5E5EA
+  position: relative
+  justify-content: space-between
+  &:last-child
+    border-bottom: none
+  &__info
+    max-width: 265px
+    min-width: 265px
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__title
+    width: auto
+    padding-right: 30px
+  &__format
+    min-width: 48px
+    max-width: 48px
+    aspect-ratio: 32/40
+    height: auto
+    background-image: url(@images/format-file.svg)
+    background-size: contain
+    background-repeat: no-repeat
+    text-align: center
+    text-transform: uppercase
+    color: #fff
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    padding-bottom: 10px
+    margin: 0
+  &__size
+    overflow: hidden
+    text-overflow: ellipsis
+    width: 100%
+    padding-left: 10px
+    padding-right: 10px
+  &__button
+    min-width: max-content
+    max-width: max-content
+
+@media (max-width: 767px)
+  .product-file
+    grid-template-columns: repeat(1, 1fr)
+    grid-template-rows: repeat(2, auto)
+
+@media (max-width: 575px)
+  .product-file
+    flex-direction: row-reverse
+    padding-bottom: 25px + 40px
+    gap: 20px
+    &__title
+      width: 100%
+      padding-right: 0
+    &__size
+      position: absolute
+      bottom: 48px
+      left: 70px
+      padding: 0
+      color: #BDBDBD
+      width: auto
+    &__format
+      min-width: 45px
+    &__info
+      min-width: 48px
+      width: auto
+
+    &__button
+      position: absolute
+      bottom: 0
+      max-width: 100%

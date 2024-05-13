@@ -1,0 +1,59 @@
+.product-price-group
+  display: flex
+  flex-direction: column
+  gap: 20px
+  &__percent
+    display: flex
+    gap: 5px
+    fill: #2363d1
+    align-items: center
+
+  &__date-text
+    text-wrap: nowrap
+    white-space: nowrap
+
+  &__title
+    margin-bottom: 2px
+
+  &__row
+    display: flex
+    align-items: center
+    gap: 15px
+
+  &__price
+    font-family: Golos
+    font-size: 14px
+    font-weight: 400
+    line-height: 140%
+    color: #767676
+    margin: 0
+    text-wrap: nowrap
+    white-space: nowrap
+    &_old
+      color: #C43228
+      text-decoration: line-through
+    &_inactive
+      opacity: 0.4
+    &_primary
+      font-size: 28px
+      font-weight: 700
+      line-height: 130%
+      color: #000
+    &_range
+      color: #A7A7AB
+      font-size: 20px
+      line-height: 100%
+      font-weight: 700
+    &_range-cost
+      color: #A7A7AB
+      font-size: 28px
+      line-height: 100%
+      font-weight: 700
+
+@media (max-width: 1023px)
+  .product-price-group
+    &__title
+      margin-bottom: 10px
+
+    &__row
+      margin-bottom: 5px

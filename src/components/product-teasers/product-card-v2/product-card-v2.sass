@@ -1,0 +1,248 @@
+.product-card-v2
+  font-size: 14px
+  position: relative
+  border: 1px solid var(--color-card-border, #d9d9de)
+  display: flex !important
+  flex-direction: column
+  overflow: hidden
+
+  &__img-text
+    color: #333
+    font-size: 12px
+    font-weight: 700
+    height: 24px
+    line-height: 24px
+    opacity: .5
+    position: relative
+    text-transform: none
+    z-index: 9
+
+  &__link
+    position: absolute
+    z-index: 2
+    display: block
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+
+  &__image
+    position: relative
+    aspect-ratio: 220/170
+    width: 100%
+    height: auto
+    overflow: hidden
+
+  &__image:has(.product-card-slideshow)
+    z-index: 3
+
+  &:has(.product-card-slideshow)
+    .product-card-v2
+      &__image
+        z-index: 3
+      &__labels
+        bottom: 15px
+
+  &__image .image
+    height: 100%
+
+  &__image .image img
+    padding: 10px
+    transition: opacity 0.15s ease-out, visibility 0.15s ease-out, transform 0.15s ease-out
+    will-change: transform
+    object-fit: contain
+
+  &__image .image img:not(:first-child)
+    opacity: 0
+    visibility: hidden
+
+  &__image .image_no-image
+    background-color: #f5f5f5
+
+  &__image .image_no-image img
+    padding: 25px !important
+
+  &__labels
+    position: absolute
+    width: 100%
+    z-index: 2
+    bottom: 0
+    display: flex
+    flex-wrap: wrap
+
+  &__label
+    padding: 0 8px
+    width: auto
+    font-weight: 500
+
+  &__rating
+    position: relative
+    width: 85px
+    height: auto
+    z-index: 2
+    margin-top: 5px
+
+  &__rating-stars
+    display: block
+    width: 100%
+    height: auto
+
+  &__title
+    hyphens: auto
+    -webkit-line-clamp: 3
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    overflow: hidden
+    flex: 0 0 auto
+    margin-bottom: 15px
+    line-height: 1.5
+
+  &__content
+    flex: 1 1 auto
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 15px 12px
+    position: relative
+    z-index: 3
+    pointer-events: none
+    height: auto
+    width: 100%
+
+  &__content-bottom
+    display: flex
+    flex-direction: column
+    gap: 15px
+
+  &__buttons
+    display: flex
+    gap: 10px
+    pointer-events: all
+    & > *
+      height: 48px !important
+
+    .st-button_not-availbe
+      width: 100% !important
+
+    .st-button_add-to-cart
+      width: 100% !important
+
+  &__button
+    position: relative
+    z-index: 3
+
+  &__cart-button
+    width: 100%
+    position: relative
+    z-index: 3
+    padding: 0
+
+  &__cart-button .icon
+    width: 26px
+    height: 26px
+
+  &__cart-button > span
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    text-align: left
+    row-gap: 4px
+
+  &__cart-button > span span
+    line-height: 1
+
+  &__cart-button > span span:not(:last-child)
+    font-size: 10px
+
+  &__cart-button > span span:not(:first-child)
+    font-size: 16px
+    text-transform: uppercase
+
+  &__pricing
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    line-height: 1
+    gap: 6px
+
+  &__pricing-txt
+    font-size: 12px
+    line-height: 1.25
+
+  &__price
+    font-size: 20px
+    font-weight: 700
+
+  &__price.text-color-accent span
+    color: #333333
+
+  &__price span
+    font-weight: 700
+    font-size: 16px
+
+  &__old-price
+    color: #767676
+    font-size: 16px
+    position: relative
+    padding: 0 3px
+
+  &__old-price::after
+    content: ""
+    position: absolute
+    display: block
+    width: 100%
+    height: 2px
+    background-color: #c43228
+    top: calc(45% - 1px)
+    left: 0
+
+.product-card-v2[data-touch] .product-card-v2__image .image img,
+.product-card-v2[data-hover] .product-card-v2__image .image img
+  transform: scale(1.05)
+
+.product-card-v2[data-touch] .product-card-v2__image .image img:not(:last-child),
+.product-card-v2[data-hover] .product-card-v2__image .image img:not(:last-child)
+  opacity: 0
+  visibility: hidden
+
+.product-card-v2[data-touch] .product-card-v2__image .image img:not(:first-child),
+.product-card-v2[data-hover] .product-card-v2__image .image img:not(:first-child)
+  opacity: 1
+  visibility: visible
+
+@media (max-width: 575.98px)
+  .product-card-v2
+
+    &__buttons
+      & > *
+        height: 40px !important
+
+    &_type-2
+      display: grid !important
+      grid-template-columns: 1fr 1fr
+      min-height: 160px
+
+  .gap-grid > .product-card-v2_type-2:not(:nth-child(1))
+    margin-top: calc(var(--grid-gutter-width) * -1 - 1px)
+
+  .slider-constructor .slick-slide > div:not(:first-child) .product-card-v2_type-2
+    margin-top: calc(var(--grid-gutter-width) / -2 - 0.5px)
+
+  .slider-constructor .slick-slide > div:not(:last-child) .product-card-v2_type-2
+    margin-bottom: calc(var(--grid-gutter-width) / -2 - 0.5px)
+
+  .slider-constructor .slick-slide .product-card-v2_type-2
+    display: grid !important
+
+  .product-card-v2_type-2 .product-card-v2__image
+    height: 100%
+
+  .product-card-v2_type-2 .product-card-v2__rating
+    right: 0
+    left: auto
+
+.product-card-v2__text-rating_container
+  position: absolute
+  right: 15px
+  top: 0
+  z-index: 9

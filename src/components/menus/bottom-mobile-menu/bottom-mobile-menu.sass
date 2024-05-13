@@ -1,0 +1,214 @@
+.bottom-mobile-menu
+  position: fixed
+  bottom: 0
+  left: 0
+  width: 100%
+  background-color: var(--bottom-mobile-menu-background, var(--white-color))
+  z-index: 99
+  &_radius
+    background-color: transparent
+    .bottom-mobile-menu
+      &__content
+        border-radius: 40px
+        margin-bottom: 13px
+        margin-inline: 13px
+        background-color: var(--bottom-mobile-menu-background, var(--white-color))
+        box-shadow: 0px -2px 15px 2px #DADADA80
+
+  &__content
+    background-color: var(--bottom-mobile-menu-background, var(--white-color))
+    position: relative
+    z-index: 1
+    box-shadow: 0px -1px 15px 2px #DADADA80
+    height: 70px
+    display: flex
+    align-items: center
+
+  &__row
+    width: 100%
+    display: flex
+    justify-content: space-between
+
+.bottom-mobile-menu-button
+  display: flex
+  align-items: center
+  flex-direction: column
+  justify-content: center
+  width: 100%
+
+  &_background
+    &:hover
+      .bottom-mobile-menu-button
+        &__inner
+          background-color: var(--bottom-mobile-menu-background-circle-hover, var(--accent-color-400))
+
+    &.bottom-mobile-menu-button_active
+      .bottom-mobile-menu-button
+        &__inner
+          background-color: var(--bottom-mobile-menu-background-circle-hover, var(--accent-color-400))
+
+    .bottom-mobile-menu-button
+      &__inner
+        border-radius: 100%
+        background-color: var(--bottom-mobile-menu-background-circle, var(--white-color))
+        transition: .3s
+
+  &_underline
+    &:hover
+      .bottom-mobile-menu-button
+        &__icon-wrapper::after
+          color: var(--bottom-mobile-menu-active, var(--accent-color-400))
+
+    &.bottom-mobile-menu-button_active
+      .bottom-mobile-menu-button
+        &__icon-wrapper::after
+          color: var(--bottom-mobile-menu-active, var(--accent-color-400))
+
+    .bottom-mobile-menu-button
+      &__icon-wrapper
+        position: relative
+        &::after
+          content: '-'
+          position: absolute
+          bottom: -5px
+          transition: .3s
+          color: #fff
+          line-height: 1px
+          font-size: 30px
+
+  &_active
+    .bottom-mobile-menu-button
+      &__text
+        color: var(--bottom-mobile-menu-active, var(--accent-color-400))
+
+      &__icon
+        opacity: 0
+        &_active
+          opacity: 1
+        &_always-active
+          opacity: 1
+
+  &:hover
+    .bottom-mobile-menu-button
+      &__text
+        color: var(--bottom-mobile-menu-active, var(--accent-color-400))
+
+      &__icon
+        opacity: 0
+        &_active
+          opacity: 1
+        &_always-active
+          opacity: 1
+
+  &__icon
+    position: absolute
+    opacity: 1
+    transition: .3s
+    &_active
+      opacity: 0
+    &_always-active
+      opacity: 1
+    &_hidden
+      opacity: 0
+
+  &__text
+    font-size: 10px
+    font-weight: 400
+    line-height: 10px
+    color: var(--bottom-mobile-menu-inactive, var(--gray-color-400))
+    transition: .3s
+    text-align: center
+
+  &__inner
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 5px
+    height: 50px
+    width: 50px
+
+  &__icon-wrapper
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 25px
+    width: 30px
+
+  &__counter
+    position: absolute
+    width: 18px
+    height: 18px
+    border-radius: 100%
+    overflow: hidden
+    background-color: var(--bottom-mobile-menu-active, var(--accent-color-400))
+    color: #fff
+    font-size: 10px
+    font-weight: 400
+    line-height: 10px
+    display: flex
+    align-items: center
+    justify-content: center
+    right: -9px
+    top: -9px
+    z-index: 1
+
+@media (max-width: 340px)
+  .bottom-mobile-menu
+    .bottom-mobile-menu
+      &__content
+        margin-bottom: 4px
+        margin-inline: 4px
+
+
+.bottom-mobile-menu-list
+  position: absolute
+  background-color: var(--bottom-mobile-menu-list-background, var(--white-color))
+  bottom: 0
+  left: 0
+  width: 100%
+  padding-bottom: 95px
+  transition: .3s
+  transform: translateY(100%)
+  overflow: auto
+  max-height: 50vh
+
+  &_plates
+    padding: 10px 20px
+    padding-bottom: 95px
+    display: flex
+    gap: 8px
+    flex-wrap: wrap
+    justify-content: flex-end
+    .bottom-mobile-menu-list
+      &__link
+        display: inline-flex
+        background-color: var(--bottom-mobile-menu-list-plates-link-text-color, var(--accent-color-400))
+        height: 40px
+        text-align: center
+        border: none
+        border-radius: 6px
+        transition: .3s
+        &:hover
+          background-color: var(--bottom-mobile-menu-list-plates-link-background-color, var(--accent-color-400))
+          color: var(--bottom-mobile-menu-list-plates-link-text-color, var(--white-color))
+
+  &_active
+    transform: translateY(0%)
+
+  &__icon-arrow-fill
+    fill: var(--bottom-mobile-menu-list-link-icon-color, var(--gray-color-400))
+
+  &__link
+    padding: 10px 20px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    color: var(--bottom-mobile-menu-list-link-text-color, var(--accent-color-500))
+    border-bottom: 1px solid var(--bottom-mobile-menu-list-link-border-color, var(--gray-color-300))
+    transition: .3s
+    background-color: var(--bottom-mobile-menu-list-link-background, var(--white-color))
+    &:hover
+      background-color: var(--bottom-mobile-menu-list-link-background-hover, var(--accent-color-400))
+      color: var(--bottom-mobile-menu-list-link-text-color, var(--accent-color-400))

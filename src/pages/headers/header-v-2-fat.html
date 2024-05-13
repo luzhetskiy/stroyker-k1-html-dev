@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html>
 
-    <title>header-v-2-fat</title>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" type="image/x-icon" href="public/favicon.png" />
+  <title>Главная</title>
 
-    <link rel="stylesheet" href="src/app/index.sass" />
-    <link rel="stylesheet" href="src/app/styles/header.sass" />
-    <link
-      rel="stylesheet"
-      href="src/app/styles/headers/header-bottom-mobile.scss"
-    />
-    <link rel="stylesheet" href="src/app/styles/headers/header-fat-v2.scss" />
+  <link rel="stylesheet" href="@src/app/index.sass">
+  <script defer src="@src/app/index.js" ></script>
+</head>
 
-    <script defer src="src/app/index.js"></script>
-  </head>
-  <body style="min-height: 200vh">
-    <%~ include('headers/header-v-2-fat.html') %>
-  </body>
+<body class="inner-page">
+
+  <div class="page">
+    <header>
+      <!-- @include ../../components/headers/headers-custom/header-v-2-fat.html -->
+
+      <!-- @include ../../components/menus/mmenu/mmenu.html -->
+    </header>
+
+    <main>
+      <!-- @include ../../components/general/example-main-content/example-main-content.html -->
+    </main>
+
+    <!-- @include ../../components/footers/footer/footer.html -->
+
+  </div>
+
+  <!-- @include ../../components/general/svg-pack/svg-pack.html -->
+
+  <!-- @include ../../components/modals/callme-modal/callme-modal.html -->
+</body>
+
 </html>

@@ -1,18 +1,34 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<html>
 
-    <title>header default</title>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="icon" type="image/x-icon" href="public/favicon.png" />
+  <title>Главная</title>
 
-    <link rel="stylesheet" href="src/app/index.sass" />
+  <link rel="stylesheet" href="@src/app/index.sass">
+  <script defer src="@src/app/index.js" ></script>
+</head>
 
-    <script defer src="src/app/index.js"></script>
-  </head>
-  <body style="height: 200vh">
-    <%~ include('headers/header-default.html') %>
-  </body>
+<body class="inner-page">
+
+  <div class="page">
+    <header>
+      <!-- @include ../../components/headers/header-default/header-default.html -->
+    </header>
+
+    <main>
+      <!-- @include ../../components/general/example-main-content/example-main-content.html -->
+    </main>
+
+    <!-- @include ../../components/footers/footer/footer.html -->
+
+  </div>
+
+  <!-- @include ../../components/general/svg-pack/svg-pack.html -->
+
+  <!-- @include ../../components/modals/callme-modal/callme-modal.html -->
+</body>
+
 </html>

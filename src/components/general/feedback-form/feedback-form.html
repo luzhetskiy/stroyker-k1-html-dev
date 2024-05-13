@@ -1,0 +1,49 @@
+<section class="section-dark feedback-form">
+  <div class="container">
+    <div class="question-main" id="question-main">
+      <div class="question-form">
+        <span class="content-title center h2">Остались вопросы?</span>
+        <form action="/crm/message/" method="post" id="feedback-message-request-form" onsubmit="">
+          <input type="hidden" name="csrfmiddlewaretoken"
+            value="vAIkE0c5pfnzOIo62JgqyUirpOOaiZJKOFlqPiE0efDPluqXNez9kYQQp3lCYb9E" />
+          <div class="question-form__column">
+            <div class="form-group">
+              <input type="text" class="form-control" name="name" autocomplete="off" required="" />
+              <label for="name" class="label-name">
+                <span class="content-name"> Имя* </span>
+              </label>
+            </div>
+            <div class="form-group">
+              <input type="phone" value="79277767575" class="form-control phone" name="phone" autocomplete="off"
+                required="" maxlength="18" />
+              <label for="phone" class="label-name">
+                <span class="content-name"> Телефон </span>
+              </label>
+            </div>
+            <div class="form-group">
+              <input type="mail" value="info@nastroyker.ru" class="form-control" name="email" autocomplete="off"
+                required="" />
+              <label for="text" class="label-name">
+                <span class="content-name"> e-mail </span>
+              </label>
+            </div>
+          </div>
+          <div class="question-form__column">
+            <div class="form-group">
+              <textarea class="form-control" name="message" autocomplete="off" required=""></textarea>
+              <label for="message" class="label-name">
+                <span class="content-name"> Комментарий </span>
+              </label>
+            </div>
+            <input type="hidden" name="url" id="id_url" />
+
+            <button type="submit" class="btn btn--main-min">Отправить</button>
+          </div>
+        </form>
+
+        <span class="form-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных и
+          соглашаетесь с нашей политикой конфиденциальности</span>
+      </div>
+    </div>
+  </div>
+</section>

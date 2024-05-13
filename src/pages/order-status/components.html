@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="@src/app/index.sass">
+  <script defer src="@src/app/index.js" ></script>
+</head>
+
+<body class="frontpage">
+  <div class="order-status-block">
+    <div>
+      <span class="order-status-block__badge order-status-block__badge_red">Отменено</span>
+      <span class="order-status-block__badge order-status-block__badge_blue">Новый</span>
+      <span class="order-status-block__badge order-status-block__badge_blue">Обработан</span>
+      <span class="order-status-block__badge order-status-block__badge_green">Завершён</span>
+      <span class="order-status-block__badge order-status-block__badge_green">В доставке</span>
+    </div>
+    <div>
+      <p class="order-status-block__grid-element order-status-block__grid-element_red">
+        <img class="order-status-block__icon" src="@images/cross.svg" alt="" />Не оплачено
+      </p>
+    </div>
+    <div>
+      <p class="order-status-block__grid-element order-status-block__grid-element_green">
+        <img class="order-status-block__icon" src="@images/payment.svg" alt="" />Оплачено
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

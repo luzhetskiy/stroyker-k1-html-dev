@@ -1,0 +1,101 @@
+.product-v1-new
+  display: flex
+  flex-direction: column
+  gap: 10px
+  .input-number
+    width: 100%
+    max-width: 80px
+    min-width: 80px
+    height: 48px
+    display: flex
+    border: 1px solid var(--color-button-secondary-border, #B7CBE5)
+    border-radius: 2px
+    justify-content: center
+    overflow: hidden
+    padding: 0
+    margin-right: 0
+
+    input[type="number"]
+      width: 40px
+      text-align: center
+      border: none
+      height: 100%
+      color: var(--color-button-secondary-text)
+      font-size: 12px
+      font-weight: 400
+      line-height: 130%
+      padding-bottom: 2px
+      color: #1C52AC
+
+    .order-down, .order-up
+      width: 23px
+      border: none
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 0
+      &:hover
+        background: var(--color-button-secondary-background-hover, #e7eef6)
+
+    .order-up:after, .order-up:before, .order-down:before
+      top: auto
+      left: auto
+
+    .order-up:before
+      width: 1px
+      height: 7px
+
+    .order-up:after, .order-down:before
+      width: 7px
+      height: 1px
+
+  .product-card
+    &__inner-content
+      padding: 20px 80px
+
+    &__main-column-content
+      margin-left: 20px
+      display: flex
+      flex-direction: column
+      gap: 15px
+
+    &__secondary-column-content
+      display: flex
+      flex-direction: column
+      gap: 15px
+      margin-left: 40px
+      background-color: var(--gray-color-100)
+      padding: 20px 30px
+
+
+@media (max-width: 1279px)
+  .product-v1-new
+    .product-card
+      &__secondary-column-content
+        margin-left: 0
+        margin-top: 20px
+
+@media ( max-width: 1023px )
+  .product-banners
+    grid-template-columns: repeat(2, 1fr)
+  
+
+@media (max-width: 991px)
+  .product-v1-new
+    .product-card
+      &__inner-content
+        padding: 20px
+
+@media (max-width: 767px)
+  .product-v1-new
+    .product-card
+      &__main-column-content
+        margin-left: 0
+        padding-top: 20px
+
+@media (max-width: 575px)
+  .product-v1-new
+    .product-card
+      &__inner-content
+        padding: 20px 0

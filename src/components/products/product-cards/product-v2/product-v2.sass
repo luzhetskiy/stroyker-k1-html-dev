@@ -1,0 +1,143 @@
+.product-v2
+  display: flex
+  flex-direction: column
+  gap: 10px
+
+  .char
+    padding-bottom: 20px
+
+  .input-number
+    width: 100%
+    max-width: 80px
+    min-width: 80px
+    height: 48px
+    display: flex
+    border: 1px solid var(--color-button-secondary-border, #B7CBE5)
+    border-radius: 2px
+    justify-content: center
+    overflow: hidden
+    padding: 0
+    margin-right: 0
+
+    input[type="number"]
+      width: 40px
+      text-align: center
+      border: none
+      height: 100%
+      color: var(--color-button-secondary-text)
+      font-size: 12px
+      font-weight: 400
+      line-height: 130%
+      padding-bottom: 2px
+      color: #1C52AC
+
+    .order-down, .order-up
+      width: 23px
+      border: none
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 0
+      &:hover
+        background: var(--color-button-secondary-background-hover, #e7eef6)
+
+    .order-up:after, .order-up:before, .order-down:before
+      top: auto
+      left: auto
+
+    .order-up:before
+      width: 1px
+      height: 7px
+
+    .order-up:after, .order-down:before
+      width: 7px
+      height: 1px
+
+  .product-card
+    background: none
+
+    &__slideshow-wrapper
+      padding-bottom: 30px
+
+    &__sidebar-top
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 10px 20px
+      border-bottom: 1px solid var(--gray-color-200)
+
+    &__sidebar-main-content
+      padding: 20px
+      display: flex
+      flex-direction: column
+      gap: 15px
+
+  .document-item
+
+    &__text
+      width: 100%
+
+    &__format
+      min-width: 48px
+      max-width: 48px
+      height: 48px
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+
+    &__size
+      max-width: 85px
+      min-width: 85px
+      padding: 0 10px
+      text-align: center
+
+    &__download-button
+      border-radius: 0
+      width: max-content
+      font-size: 14px
+      background: var(--white-color)
+      color: var(--accent-color-400)
+      border: 1px solid var(--accent-color-200)
+      &:hover
+        background: var(--accent-color-400)
+        color: var(--white-color)
+        border-color: 1px solid var(--accent-color-400)
+
+
+@media (max-width: 767px)
+  .product-v2
+    .product-card
+      &__sidebar-main-content
+        padding: 20px
+
+      &__sidebar-top
+        border-bottom: none
+
+    .document-item
+      padding-left: 50px
+      &__format
+        min-width: 32px
+        max-width: 32px
+        height: 40px
+        font-size: 10px
+
+      &__size
+        padding: 0
+        min-width: 0
+        max-width: max-content
+        margin-bottom: 10px
+
+      &__download
+        width: 100%
+
+      &__download-button
+        width: 100%
+
+
+
+@media (max-width: 575px)
+  .product-v2
+    .product-card
+      &__sidebar-main-content
+        padding: 20px 0

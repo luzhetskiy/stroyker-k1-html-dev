@@ -1,0 +1,24 @@
+.product-v1
+  display: flex
+  flex-direction: column
+  gap: 10px
+  
+@media (max-width: 767px)
+  .product-v1
+    .char
+      .char-text
+        color: #a9b1b9
+        line-height: 24px
+
+        .char-text:first-child
+          width: auto
+          margin-right: 0
+
+        li
+          -webkit-box-orient: vertical
+          -webkit-box-direction: normal
+          -ms-flex-direction: column
+          flex-direction: column
+
+        .char-text:first-child:before
+          display: none

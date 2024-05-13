@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="@src/app/index.sass">
+  <script defer src="@src/app/index.js" ></script>
+</head>
+
+<body class="inner-page">
+
+  <main>
+    <div class="container">
+      <div style="row-gap: 100px !important;"
+        class="d-grid row-gap-50 gap-grid grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3">
+        <div>
+          <h2>Дефолтная цена</h2>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-price-group/product-price-group__default.html -->
+          </div>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-accessibility-group/product-accessibility-group.html -->
+          </div>
+          <!-- @include ../../components/products/product-page-buttons/product-add-to-cart-button.html -->
+        </div>
+        <div>
+          <h2>Дефолтная цена и пересчет</h2>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-price-group/product-price-group__recount.html -->
+          </div>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-accessibility-group/product-accessibility-group.html -->
+          </div>
+          <!-- @include ../../components/products/product-page-buttons/product-add-to-cart-button.html -->
+        </div>
+        <div>
+          <h2>Дефолтная цена и старая цена</h2>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-price-group/product-price-group__old.html -->
+          </div>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-accessibility-group/product-accessibility-group.html -->
+          </div>
+          <!-- @include ../../components/products/product-page-buttons/product-add-to-cart-button.html -->
+        </div>
+        <div>
+          <h2>Онлайн цена, цена и старая цена (если стоит)</h2>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-price-group/product-price-group__online-old.html -->
+          </div>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-accessibility-group/product-accessibility-group.html -->
+          </div>
+          <!-- @include ../../components/products/product-page-buttons/product-add-to-cart-button.html -->
+        </div>
+        <div>
+          <h2>Персональная цена, цена и старая цена (если стоит)</h2>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-price-group/product-price-group__personal-old.html -->
+          </div>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-accessibility-group/product-accessibility-group.html -->
+          </div>
+          <!-- @include ../../components/products/product-page-buttons/product-add-to-cart-button.html -->
+        </div>
+        <div>
+          <h2>Нет в наличии, дефолтная цена и старая цена (если стоит)</h2>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-price-group/product-price-group__not-available.html -->
+          </div>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-accessibility-group/product-accessibility-group__not-available.html -->
+          </div>
+          <!-- @include ../../components/products/product-page-buttons/product-find-availability.html -->
+        </div>
+        <div>
+          <h2>Нет цены</h2>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-accessibility-group/product-accessibility-group__not-available.html -->
+          </div>
+          <!-- @include ../../components/products/product-page-buttons/product-find-price.html -->
+        </div>
+        <div>
+          <h2>От - до</h2>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-price-group/product-price-group__from-to.html -->
+          </div>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-accessibility-group/product-accessibility-group.html -->
+          </div>
+          <!-- @include ../../components/products/product-page-buttons/product-find-price.html -->
+        </div>
+        <div>
+          <h2>От</h2>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-price-group/product-price-group__from.html -->
+          </div>
+          <div class="mb-20">
+            <!-- @include ../../components/products/product-accessibility-group/product-accessibility-group.html -->
+          </div>
+          <!-- @include ../../components/products/product-page-buttons/product-find-price.html -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>

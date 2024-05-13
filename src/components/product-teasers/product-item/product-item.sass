@@ -1,0 +1,789 @@
+.product-item
+  width: auto
+  height: auto
+  background-color: var(--product-preview-bg-color, #fff)
+  position: relative
+  border: 1px solid var(--color-card-border, #D9D9DE)
+  margin: -0.5px
+  transition: var(--trs-2, .3s)
+  overflow: hidden
+
+  &__image-inner
+    img
+      transition: .3s
+    img:not(:first-child)
+      position: absolute
+      opacity: 0
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+
+  &:has(.product-price-range) .product-item__name
+    height: 36px
+    -webkit-line-clamp: 2
+
+  &:has(.product-card-slideshow) .product-card-sell-badge_bottom
+    bottom: 15px
+
+  &:hover
+    border: 1px solid var(--product-preview-border-hover-color, #d9d9de)
+    .product-item
+      &__image-inner
+        img:not(:first-child)
+          opacity: 1
+        img:not(:last-child)
+          opacity: 0
+
+@media (max-width: 767px)
+  .product-item
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    border-left: 0
+    border-right: 0
+    margin: -1px 0 0px 0
+
+.product-item__link
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  height: auto
+
+@media (max-width: 767px)
+  .product-item__link
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    height: auto
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
+    flex-direction: row
+    -webkit-box-pack: start
+    -ms-flex-pack: start
+    justify-content: flex-start
+    width: 100%
+
+.product-item--banner
+  text-align: center
+  border: 0 !important
+
+  & a
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    height: 378px
+    width: 100%
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    max-width: 290px
+    margin: 0 auto
+    background: #fff
+
+@media (max-width: 767px)
+  .product-item--banner a
+    max-width: 480px
+
+.product-item--banner img
+  width: 100%
+  height: 100%
+  max-width: 290px
+  overflow: hidden
+  object-fit: contain
+  margin: 0 auto
+
+@media (max-width: 767px)
+  .product-item--banner img
+    max-width: 480px
+
+.product-item__img-text
+  position: absolute
+  right: 15px
+  top: 0
+  height: 24px
+  line-height: 24px
+  font-weight: bold
+  font-size: 12px
+  color: #333
+  opacity: 0.5
+  z-index: 9
+  text-transform: none
+
+  &--white
+    color: rgba(255, 255, 255, 0.6) !important
+
+@media (max-width: 767px)
+  .product-item__img-text
+    right: auto
+    left: 0px
+    top: auto
+    bottom: -24px
+
+.product-item__image
+  overflow: hidden
+  position: relative
+  height: auto
+  width: 100%
+  aspect-ratio: 220/170
+  display: block
+  background-color: transparent
+
+@media (max-width: 767px)
+  .product-item__image
+    aspect-ratio: 1/1
+    min-width: 95px
+    max-width: 95px
+    width: 95px
+
+.product-item__image img
+  width: 100%
+  height: 100%
+  overflow: hidden
+  object-fit: contain
+
+.product-item__content-top
+  position: relative
+  padding: 15px 12px 50px 12px
+  display: block
+  height: 100%
+  width: 100%
+
+.product-item__content-bottom
+  position: absolute
+  bottom: 0
+  width: 100%
+  padding: 0px 12px 10px 12px
+  display: block
+
+@media (max-width: 767px)
+  .product-item__content-bottom
+    position: absolute
+    right: 0
+    bottom: 0
+    width: calc(100% - 95px)
+    z-index: 10
+
+.product-item__flag-content
+  position: absolute
+  left: 0
+  top: 0
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -ms-flex-direction: column
+  flex-direction: column
+
+.product-item__flag
+  font-weight: 500
+  font-size: 12px
+  line-height: 150%
+  color: #ffffff
+  height: 20px
+  padding: 0 15px
+  min-width: 65px
+  line-height: 0px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+
+@media (max-width: 767px)
+  .product-item__flag
+    padding: 0 5px
+    min-width: auto
+
+.product-item__flag--hit
+  background-color: var(--hit-tag-bg-color, #3ec28f)
+  color: var(--hit-tag-font-color, #fff)
+
+.product-item__flag--new
+  background-color: var(--new-tag-bg-color, #30c2ff)
+  color: var(--new-tag-font-color, #fff)
+
+.product-item__flag--sale
+  background-color: var(--sale-tag-bg-color, #ff9500)
+  color: var(--sale-tag-font-color, #fff)
+
+.product-item__flag--discounted
+  background-color: var(--discount-tag-bg-color, #626262)
+  color: var(--discount-tag-font-color, #fff)
+
+.product-item__head
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  margin-bottom: 7px
+
+@media (max-width: 767px)
+  .product-item__head
+    -webkit-box-ordinal-group: -1
+    -ms-flex-order: -2
+    order: -2
+
+.product-item__art
+  font-size: 12px
+  color: #bdbdbd
+
+@media (max-width: 767px)
+  .product-item__art
+    font-size: 10px
+
+.product-item__rating
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  margin-top: -2px
+
+  & .star
+    width: 15px
+    height: 15px
+    margin-left: 2px
+
+@media (max-width: 767px)
+  .product-item__rating .star
+    width: 18px
+    height: 18px
+
+.product-item__rating .star:first-child
+  margin-left: 0
+
+.product-item__rating .star--full
+  background-image: url(@images/icons/star-full.svg)
+  background-size: 15px 15px
+
+@media (max-width: 767px)
+  .product-item__rating .star--full
+    background-size: 18px 18px
+
+.product-item__rating .star--half
+  background-image: url(@images/icons/star-half.svg)
+  background-size: 15px 15px
+
+@media (max-width: 767px)
+  .product-item__rating .star--half
+    background-size: 18px 18px
+
+.product-item__rating .star--empty
+  background-image: url(@images/icons/star-empty.svg)
+  background-size: 15px 15px
+
+@media (max-width: 767px)
+  .product-item__rating .star--empty
+    background-size: 18px 18px
+
+.product-item__name
+  font-size: 14px
+  line-height: 18px
+  color: #333333
+  display: block
+  margin-bottom: 5px
+  overflow: hidden
+  height: 56px
+  text-overflow: ellipsis
+  display: -webkit-box
+  -webkit-line-clamp: 3
+  -webkit-box-orient: vertical
+
+@media (max-width: 767px)
+  .product-item__name
+    -webkit-box-ordinal-group: 0
+    -ms-flex-order: -1
+    order: -1
+    height: 33px
+    -webkit-line-clamp: 2
+
+.product-item__delivery
+  display: -webkit-inline-box
+  display: -ms-inline-flexbox
+  display: inline-flex
+  font-size: 11px
+  margin-left: 10px
+  color: #a9b1b9
+
+  & .icon
+    margin-right: 10px
+
+  & .icon img
+    width: 18px
+
+.product-item__cost
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  font-weight: bold
+  -webkit-box-align: end
+  -ms-flex-align: end
+  align-items: flex-end
+  margin-bottom: 5px
+
+@media (max-width: 767px)
+  .product-item__cost
+    -webkit-box-align: start
+    -ms-flex-align: start
+    align-items: flex-start
+    position: relative
+    z-index: 9
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+    -ms-flex-direction: column
+    flex-direction: column
+
+.product-item__cost-product
+  font-size: 18px
+  font-weight: 700
+  line-height: 24px
+  color: #333
+  font-weight: bold
+  white-space: nowrap
+
+  & span
+    font-size: 14px
+    padding-left: 2px
+
+.product-item__cost-old
+  font-size: 12px
+  text-decoration: line-through
+  -webkit-text-decoration-color: #d74853
+  text-decoration-color: #d74853
+  color: #7c8994
+  font-weight: normal
+  padding-left: 10px
+  white-space: nowrap
+  position: relative
+  top: -3px
+  margin-bottom: 2px
+
+@media (max-width: 767px)
+  .product-item__cost-old
+    -webkit-box-ordinal-group: 0
+    -ms-flex-order: -1
+    order: -1
+    padding-left: 0
+
+.product-item__status
+  font-size: 11px
+  margin-bottom: 8px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+
+@media (max-width: 767px)
+  .product-item__status
+    -webkit-box-ordinal-group: 1
+    -ms-flex-order: 0
+    order: 0
+    position: relative
+    bottom: 0
+
+.product-item__status--limited
+  color: #30c2ff
+
+.product-item__status--small
+  color: #ff9500
+
+.product-item__status--none
+  color: #d74853
+
+.product-item__status--many
+  color: #3ec28f
+
+.product-item__btns
+  display: flex
+  gap: 10px
+  width: 100%
+
+.product-item__balance
+  display: none
+  font-size: 11px
+  color: #000
+
+.product-item__line-cost
+  display: none
+  font-size: 11px
+  color: #000
+
+.product-item__input-line
+  display: none
+  margin-right: 10px
+
+  & input
+    width: 54px
+    height: 32px
+    border: 1px solid #e0e0e0
+    -webkit-box-shadow: inset 0px 1.6px 4px rgba(0, 0, 0, 0.05)
+    box-shadow: inset 0px 1.6px 4px rgba(0, 0, 0, 0.05)
+    border-radius: 2px
+    text-align: center
+    font-size: 11px
+    line-height: 30px
+    color: #000000
+    -webkit-transition: 0.5s
+    -o-transition: 0.5s
+    transition: 0.5s
+
+  & input:focus
+    border-color: var(--main-elements-color, #2363d1)
+
+.product-item--wide
+  height: 150px
+  margin-bottom: 10px
+  overflow: hidden
+  border: 1px solid #d9d9de
+
+  & .product-item__link
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
+    flex-direction: row
+    -webkit-box-pack: start
+    -ms-flex-pack: start
+    justify-content: flex-start
+    height: 100%
+    padding-bottom: 65px
+
+  & .product-item__head
+    -webkit-box-pack: start
+    -ms-flex-pack: start
+    justify-content: flex-start
+    padding-top: 5px
+
+  & .product-item__content-top
+    height: 100%
+    width: calc(100% - 145px)
+    padding: 15px 12px
+
+@media (max-width: 991px)
+  .product-item--wide .product-item__content-top
+    width: calc(100% - 80px)
+
+.product-item--wide .product-item__cost-title
+  display: none
+
+.product-item--wide .product-item__art
+  margin-right: 30px
+
+.product-item--wide .product-item__name
+  width: calc(100% - 200px)
+  margin-bottom: 15px
+
+.product-item--wide .product-item__status
+  position: relative
+
+.product-item--wide .product-item__content-bottom
+  position: absolute
+  right: 0px
+  bottom: 0px
+
+  & .product-comparison
+    -webkit-box-ordinal-group: 0
+    -ms-flex-order: -1
+    order: -1
+    margin-right: 10px
+
+.product-item--wide .product-item__cost
+  position: absolute
+  right: 15px
+  top: 20px
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+  & span
+    -webkit-box-ordinal-group: 0
+    -ms-flex-order: -1
+    order: -1
+    margin-right: 10px
+
+.product-item--wide .product-item__img-text
+  bottom: 0
+  left: 10px
+  right: auto
+  top: auto
+
+.product-item--wide .product-item__image
+  width: 190px
+  height: 100%
+
+@media (max-width: 991px)
+  .product-item--wide .product-item__image
+    width: 100px
+
+.product-item--wide .product-item__image:before
+  width: 30px
+  height: 100%
+  left: auto
+  right: -1px
+  top: 0px
+  border: auto
+  background: url(@images/product-mask-wide.svg) no-repeat
+  background-size: 30px
+
+@media (max-width: 991px)
+  .product-item--wide .product-item__image:before
+    width: 18px
+    background: url(@images/product-mask-mobile.png) no-repeat
+    background-size: 18px auto
+    right: -2px
+
+.product-item--line
+  height: auto
+  padding: 8px 0
+  margin-bottom: 0px
+  overflow: hidden
+  margin-bottom: -1px !important
+  -webkit-transition: 0.5s
+  -o-transition: 0.5s
+  transition: 0.5s
+  height: 56px
+
+  &:hover
+    background: #f6f6f6 !important
+
+  &:hover .product-item__link .product-item__name
+    color: var(--main-elements-color, #2363d1)
+
+  & .btn-green
+    width: 80px
+    font-size: 12px
+    margin-left: 20px
+
+  & .btn-green .icon
+    display: none
+
+  & .product-item__input-line
+    display: block
+
+  & .input-number
+    width: 100px !important
+    margin-right: 10px
+
+  & .input-number input[type="number"]
+    width: 21px
+    font-size: 12px
+    text-align: center
+    border-radius: 2px
+    color: #000000
+    border: 1px solid #d9d9de
+    width: 50px
+    height: 40px
+    line-height: 48px
+    margin: 0 7px
+
+  & .product-item__link
+    -webkit-box-orient: horizontal
+    -webkit-box-direction: normal
+    -ms-flex-direction: row
+    flex-direction: row
+    -webkit-box-pack: start
+    -ms-flex-pack: start
+    justify-content: flex-start
+    height: 100%
+
+  & .product-item__head
+    -webkit-box-pack: start
+    -ms-flex-pack: start
+    justify-content: flex-start
+    padding: 0
+    margin: 0
+
+  & .product-item__content-top
+    height: 100%
+    width: 100%
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    min-height: 32px
+    background: transparent
+    padding: 0 140px 0 15px
+
+  & .product-item__cost-title
+    display: none
+
+  & .product-item__art
+    margin-right: 20px
+    width: 45px
+
+  & .product-item__name
+    height: auto
+    width: calc(100% - 502px)
+    margin-bottom: 0
+    font-size: 12px
+    -webkit-transition: 0.5s
+    -o-transition: 0.5s
+    transition: 0.5s
+
+  & .product-item__status
+    display: none
+
+  & .product-item__content-bottom
+    position: absolute
+    right: 0px
+    bottom: 0
+    background: transparent
+    padding: 8px 10px
+    width: auto
+
+  & .product-item__content-bottom .product-comparison
+    display: none
+
+  & .product-item__cost
+    display: none
+
+  & .product-item__img-text
+    bottom: 0
+    left: 10px
+    right: auto
+    top: auto
+
+  & .product-item__image
+    display: none
+
+  & .product-item__rating
+    display: none
+
+  & .product-item__balance
+    display: block
+    padding: 0 12px
+    width: 14%
+    text-align: center
+    padding-right: 23px
+
+  & .product-item__line-cost
+    display: block
+    padding-left: 4px
+    width: 14%
+    text-align: center
+
+  & .shopping-cart-btn
+    width: 80px
+    height: 40px
+    border-radius: 2px
+    background-image: none
+    background-color: #fff
+    border: 1px solid #b7cbe5
+    -webkit-transition: 0.5s
+    -o-transition: 0.5s
+    transition: 0.5s
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    -webkit-box-pack: center
+    -ms-flex-pack: center
+    justify-content: center
+    -webkit-box-align: center
+    -ms-flex-align: center
+    align-items: center
+    color: var(--main-elements-color, #2363d1)
+    overflow: hidden
+    margin-left: 20px
+
+  & .shopping-cart-btn .icon
+    width: 30px
+    height: 26px
+    -webkit-transition: 0.5s
+    -o-transition: 0.5s
+    transition: 0.5s
+
+  & .shopping-cart-btn:hover .icon
+    color: #fff
+
+  & .shopping-cart-product .btn-border
+    min-width: 180px
+
+.product-item__link:hover .product-item__image img
+  transform: scale(1.05)
+
+.product-item__image
+  background: transparent
+
+  &-inner
+    position: relative
+    height: 100%
+    width: 100%
+
+  & img
+    position: relative
+    padding: 10px
+    transition: opacity 0.15s ease-out, visibility 0.15s ease-out, transform 0.15s ease-out
+    will-change: transform
+
+.product-item__content-top
+  padding: 10px 12px
+  padding-bottom: 67px
+
+@media (max-width: 767px)
+  .product-item__content-top
+    padding-bottom: 67px
+
+.product-item__content-bottom
+  padding: 0px 12px 15px 12px
+
+.product-item__head
+  margin-bottom: 5px
+
+.product-item__cost-label
+  font-size: 12px
+  padding-bottom: 2px
+  color: #333
+  font-weight: 400
+  margin-left: 5px
+
+.product-item__cost-product
+  line-height: 18px
+
+@media (max-width: 767px)
+  .product-item
+
+    &__cost
+      bottom: initial
+
+    &__cost-label
+      margin: 0
+      font-size: 10px
+
+  .slider-constructor .product-item
+    margin: 0
+    border: 1px solid #d9d9de
+
+.product-item--wide .product-item__online-cost
+  top: 45px
+
+  & span
+    margin-right: 0
+
+.product-item--wide .product-item__cost-label
+  margin-right: 0 !important
+
+.product-item--banner
+  padding-bottom: 0
+
+.slider-constructor
+  &:has(.product-item--wide),
+  &:has(.product-item--line)
+    display: none !important
+
+.welcome__content
+  .d-grid:has(.product-item--line), .d-grid:has(.product-item--wide)
+    grid-template-columns: repeat(1,1fr)!important

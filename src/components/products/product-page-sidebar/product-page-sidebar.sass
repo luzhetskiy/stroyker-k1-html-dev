@@ -1,0 +1,76 @@
+.product-sidebar
+  .product-item__flag-content
+    width: 64px
+
+  &__main-content
+    position: sticky
+    top: 100px
+    left: 0
+
+  &__slideshow-wrapper
+    padding: 0 0 30px 0
+
+  &__sidebar-content
+    background-color: #fff
+    border: 1px solid #E5E5EA
+    margin-bottom: var(--grid-gutter-width, 20px)
+
+  &__sidebar-top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 10px 20px
+    border-bottom: 1px solid #E5E5EA
+
+  &__sidebar-main-content
+    padding: 20px
+
+  &__secondary-content
+    padding: 40px 60px
+
+  &__title
+    font-family: Golos
+    font-size: 26px
+    font-weight: 700
+    line-height: 130%
+    color: #000
+    margin-bottom: 25px
+
+  &__top-item
+    display: flex
+    gap: 15px
+    min-width: 185px
+
+  &__additional-buttons
+    display: flex
+    flex-direction: column
+    gap: 10px
+
+  &__static-text-wrapper
+    font-size: 14px
+
+@media (max-width: 1023px)
+  .product-sidebar
+    &__title
+      margin-bottom: 10px
+
+    &__secondary-content
+      padding: 20px
+
+@media ( max-width: 575px )
+  .product-sidebar
+
+    &__sidebar-content, &__main-content
+      border: none
+      margin: 0 -16px
+    &__sidebar-main-content
+      padding: 20px 16px
+      border: none
+    &__secondary-content
+      padding: 20px 0
+      border: none
+    &__top
+      padding: 10px 0
+
+  .section-dark
+    background-color: #fff !important
