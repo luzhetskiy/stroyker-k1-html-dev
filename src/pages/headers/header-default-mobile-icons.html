@@ -8,27 +8,27 @@
   <title>Главная</title>
 
   <link rel="stylesheet" href="@src/app/index.sass">
-  <script defer src="@src/app/index.js" ></script>
+  <script defer src="@src/app/index.js"></script>
 </head>
 
 <body class="inner-page">
 
   <div class="page">
     <header>
-      <!-- @include ../../components/headers/header-default/header-default-mobile/header-default-mobile.html -->
+      <%~ include("/components/headers/header-default/header-default-mobile/header-default-mobile.html") %>
     </header>
 
     <main>
-      <!-- @include ../../components/general/example-main-content/example-main-content.html -->
+      <%~ include("/components/general/example-main-content/example-main-content.html") %>
     </main>
 
-    <!-- @include ../../components/footers/footer/footer.html -->
+    <%~ include("/components/footers/footer/footer.html") %>
 
   </div>
 
-  <!-- @include ../../components/general/svg-pack/svg-pack.html -->
+  <%~ include("/components/general/svg-pack/svg-pack.html") %>
 
-  <!-- @include ../../components/modals/callme-modal/callme-modal.html -->
+    <%~ include("/components/modals/callme-modal/callme-modal.html") %>
 </body>
 
 </html>

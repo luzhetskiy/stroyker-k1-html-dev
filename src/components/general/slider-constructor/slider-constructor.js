@@ -27,6 +27,22 @@ function sliderDebounce(func, interval, context) {
   };
 }
 
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
 const SliderConstructor = /*#__PURE__*/ (function () {
   function SliderConstructor(element) {
     _classCallCheck(this, SliderConstructor);
@@ -55,7 +71,7 @@ const SliderConstructor = /*#__PURE__*/ (function () {
 
         this.params.adaptiveHeight = this.element.getAttribute("data-adaptive-height") !== null;
         this.params.centerMode = this.element.getAttribute("data-center") === null ? false : true;
-        this.params.infinite = this.element.getAttribute("data-no-infinite") === null ? true : false
+        this.params.infinite = this.element.getAttribute("data-no-infinite") === null ? true : false;
         this.params.count = {};
         this.params.count.xs = +this.element.getAttribute("data-slides") || 1;
         this.params.count.sm = +this.element.getAttribute("data-sm-slides") || this.params.count.xs;
@@ -130,7 +146,7 @@ const SliderConstructor = /*#__PURE__*/ (function () {
         if (prevButton) {
           const button = document.getElementById(prevButton);
           this.prevArrow = button.outerHTML;
-          button.remove()
+          button.remove();
         } else {
           this.prevArrow = '<button type="button" class="button button_style-1 slick-prev">'.concat(
             rightIcon,
@@ -140,7 +156,7 @@ const SliderConstructor = /*#__PURE__*/ (function () {
         if (nextButton) {
           const button = document.getElementById(nextButton);
           this.nextArrow = button.outerHTML;
-          button.remove()
+          button.remove();
         } else {
           this.nextArrow = '<button type="button" class="button button_style-1 slick-next">'.concat(
             leftIcon,

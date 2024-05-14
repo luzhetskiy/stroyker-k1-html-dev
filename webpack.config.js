@@ -1,23 +1,22 @@
 const path = require("path");
-const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
-const webpack = require('webpack')
+const HtmlBundlerPlugin = require("html-bundler-webpack-plugin");
+const webpack = require("webpack");
 
 const buildDir = "build";
-const publicDir = 'public'
+const publicDir = "public";
 const devDir = "src";
 
-const mode =
-  process.env.NODE_ENV === "production" ? "production" : "development";
+const mode = process.env.NODE_ENV === "production" ? "production" : "development";
 
 module.exports = {
   mode: mode,
   stats: "minimal",
-  devtool: mode === 'development' ? 'source-map' : false,
+  devtool: mode === "development" ? "source-map" : false,
   resolve: {
     alias: {
-      '@public': path.resolve(__dirname, 'public'),
-      '@src': path.resolve(__dirname, 'src'),
-      '@images': path.resolve(__dirname, 'public/images'),
+      "@public": path.resolve(__dirname, "public"),
+      "@src": path.resolve(__dirname, "src"),
+      "@images": path.resolve(__dirname, "public/images"),
     },
   },
   output: {
@@ -45,24 +44,24 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
-      'window.jQuery': 'jquery'
+      "window.jQuery": "jquery",
     }),
     new HtmlBundlerPlugin({
-      entry: 'src/pages',
+      entry: "src/pages",
       js: {
         // output filename of compiled JavaScript, used if `inline` option is false (defaults)
-        filename: 'scripts/[name].js',
+        filename: "scripts/[name].js",
         //inline: true, // inlines JS into HTML
       },
       css: {
         // output filename of extracted CSS, used if `inline` option is false (defaults)
-        filename: 'styles/[name].css',
+        filename: "styles/[name].css",
         //inline: true, // inlines CSS into HTML
       },
       loaderOptions: {
-        preprocessor: 'eta',
+        preprocessor: "eta",
         preprocessorOptions: {
-          views: 'src/components',
+          views: "src",
         },
       },
     }),
@@ -71,7 +70,7 @@ module.exports = {
     rules: [
       {
         test: /\.(css|sass|scss)$/,
-        use: ['css-loader', 'sass-loader'],
+        use: ["css-loader", "sass-loader"],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -82,9 +81,9 @@ module.exports = {
       },
       {
         test: /\.(ico|png|jpg|jpeg|webp|svg)$/,
-        type: 'asset/resource',
+        type: "asset/resource",
         generator: {
-          filename: 'images/[name][id][ext][query]',
+          filename: "images/[name][ext][query]",
         },
       },
     ],

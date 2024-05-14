@@ -12477,7 +12477,7 @@ canvas {
 }
 
 .product-item-comparison__rating .star--full {
-  background-image: url(@images/icons/star-full.svg);
+  background-image: url(@images/star-full.svg);
   background-size: 15px 15px;
 }
 
@@ -12488,7 +12488,7 @@ canvas {
 }
 
 .product-item-comparison__rating .star--half {
-  background-image: url(@images/icons/star-half.svg);
+  background-image: url(@images/star-half.svg);
   background-size: 15px 15px;
 }
 
@@ -12499,7 +12499,7 @@ canvas {
 }
 
 .product-item-comparison__rating .star--empty {
-  background-image: url(@images/icons/star-empty.svg);
+  background-image: url(@images/star-empty.svg);
   background-size: 15px 15px;
 }
 

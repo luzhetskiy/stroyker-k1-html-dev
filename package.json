@@ -39,6 +39,7 @@
     "font-awesome": "^4.3.0",
     "jquery": "^3.7.0",
     "mmenu-js": "^9.3.0",
-    "owl.carousel": "^2.3.4"
+    "owl.carousel": "^2.3.4",
+    "slick-carousel": "^1.8.1"
   }
 }
