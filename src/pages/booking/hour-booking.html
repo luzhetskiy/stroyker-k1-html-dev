@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="@src/app/index.sass" />
+    <script defer src="@src/app/index.js"></script>
+  </head>
 
-  <link rel="stylesheet" href="@src/app/index.sass">
-  <script defer src="@src/app/index.js"></script>
-</head>
+  <body class="inner-page">
+    <div class="page">
+      <header><%~ include("/components/headers/header-default/header-default.html") %></header>
 
-<body class="inner-page">
-  <div class="page">
-    <header>
-      <%~ include("/components/headers/header-default/header-default.html") %>
-    </header>
+      <main>
+        <section class="section-dark">
+          <div class="container">
+            <div class="page-head">
+              <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Главная" href="/">
+                    Главная
+                    <meta itemprop="name" content="Главная" />
+                  </a>
+                  <meta itemprop="position" content="1" />
+                </span>
 
-    <main>
-      <section class="section-dark">
-        <div class="container">
-          <div class="page-head">
-            <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-              <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <a itemprop="item" title="Главная" href="/">
-                  Главная
-                  <meta itemprop="name" content="Главная" />
-                </a>
-                <meta itemprop="position" content="1" />
-              </span>
-
-              <svg class="breadcrumbs__sep">
-                <use xlink:href="#tab-arrow"></use>
-              </svg>
-              Контакты
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+                Контакты
+              </div>
             </div>
+
+            <div class="content-block"><%~ include("components/booking/booking-block/booking-hour-block.html") %></div>
           </div>
+        </section>
 
-          <div class="content-block">
-            <!-- @include ../../components/booking/booking-block/booking-hour-block.html -->
-          </div>
-        </div>
-      </section>
+        <%~ include("components/general/feedback-form/feedback-form.html") %>
+      </main>
 
-      <!-- @include ../../components/general/feedback-form/feedback-form.html -->
-    </main>
+      <%~ include("/components/footers/footer/footer.html") %>
+    </div>
 
-    <%~ include("/components/footers/footer/footer.html") %>
-  </div>
-
-  <%~ include("/components/general/svg-pack/svg-pack.html") %>
-
-    <%~ include("/components/modals/callme-modal/callme-modal.html") %>
-</body>
-
+    <%~ include("/components/general/svg-pack/svg-pack.html") %> <%~
+    include("/components/modals/callme-modal/callme-modal.html") %>
+  </body>
 </html>

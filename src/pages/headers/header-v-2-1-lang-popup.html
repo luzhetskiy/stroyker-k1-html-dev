@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Главная</title>
 
-  <title>Главная</title>
+    <link rel="stylesheet" href="@src/app/index.sass" />
+    <script defer src="@src/app/index.js"></script>
+  </head>
 
-  <link rel="stylesheet" href="@src/app/index.sass">
-  <script defer src="@src/app/index.js"></script>
-</head>
+  <body class="inner-page">
+    <div class="page">
+      <header>
+        <%~ include("components/headers/headers-custom/header-multilanguage/header-v-2-1-lang-popup.html") %> <%~
+        include("components/menus/mmenu/mmenu.html") %>
+      </header>
 
-<body class="inner-page">
+      <main><%~ include("/components/general/example-main-content/example-main-content.html") %></main>
 
-  <div class="page">
-    <header>
-      <!-- @include ../../components/headers/headers-custom/header-multilanguage/header-v-2-1-lang-popup.html -->
+      <%~ include("/components/footers/footer/footer.html") %>
+    </div>
 
-      <!-- @include ../../components/menus/mmenu/mmenu.html -->
-    </header>
-
-    <main>
-      <%~ include("/components/general/example-main-content/example-main-content.html") %>
-    </main>
-
-    <%~ include("/components/footers/footer/footer.html") %>
-
-  </div>
-
-  <%~ include("/components/general/svg-pack/svg-pack.html") %>
-
-    <%~ include("/components/modals/callme-modal/callme-modal.html") %>
-</body>
-
+    <%~ include("/components/general/svg-pack/svg-pack.html") %> <%~
+    include("/components/modals/callme-modal/callme-modal.html") %>
+  </body>
 </html>

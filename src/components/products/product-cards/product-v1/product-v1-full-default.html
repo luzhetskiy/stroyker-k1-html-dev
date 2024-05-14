@@ -26,14 +26,18 @@
     </div>
     <div class="product-card__container">
       <div class="product-card__slideshow">
-        <!-- @include ../../product-slideshow/product-slideshow.html -->
+        <%~ include("/components/products/product-slideshow/product-slideshow.html") %>
       </div>
       <div class="product-card__content">
         <div class="product-card__left">
           <div class="product-sidebar__static-text-wrapper mb-20">dsgdsgsdfgdsfgdsg</div>
 
-          <div class="product-card__personal-cost orig-price" itemprop="offers" itemtype="http://schema.org/Offer"
-            itemscope="">
+          <div
+            class="product-card__personal-cost orig-price"
+            itemprop="offers"
+            itemtype="http://schema.org/Offer"
+            itemscope=""
+          >
             <span> цена: </span>
             <meta itemprop="price" content="12313123" />
             <meta itemprop="priceCurrency" content="RUB" />
@@ -49,8 +53,9 @@
 
               <a class="product-mod-param" data-param-id="6" data-param-value="199" href="javascript:void(0)">199</a>
 
-              <a class="product-mod-param active" data-param-id="6" data-param-value="65"
-                href="javascript:void(0)">65</a>
+              <a class="product-mod-param active" data-param-id="6" data-param-value="65" href="javascript:void(0)"
+                >65</a
+              >
             </div>
 
             <div class="product-card__select-options product-modification-params">
@@ -58,8 +63,13 @@
               <select name="" id="" autocomplete="off">
                 <option data-param-id="12" data-param-value="456546" class="product-mod-param" value="">456546</option>
 
-                <option data-param-id="12" data-param-value="234234" class="product-mod-param active" value=""
-                  selected="">
+                <option
+                  data-param-id="12"
+                  data-param-value="234234"
+                  class="product-mod-param active"
+                  value=""
+                  selected=""
+                >
                   234234
                 </option>
               </select>
@@ -69,14 +79,24 @@
           <div class="shopping-cart-product">
             <div class="input-number input-number--lg">
               <div class="order-down"></div>
-              <input type="number" min="0" max="inf" step="1" value="1" id="number" required=""
-                data-product-counter="2" />
+              <input
+                type="number"
+                min="0"
+                max="inf"
+                step="1"
+                value="1"
+                id="number"
+                required=""
+                data-product-counter="2"
+              />
               <div class="order-up"></div>
             </div>
 
-            <a href="/cart/add/2"
-              class="shopping-cart-btn shopping-cart-btn--lg add-to-cart button-theme button-theme_cart custom-icon">
-              <img src="../@images/shopping-cart.svg" />
+            <a
+              href="/cart/add/2"
+              class="shopping-cart-btn shopping-cart-btn--lg add-to-cart button-theme button-theme_cart custom-icon"
+            >
+              <img src="@images/shopping-cart.svg" />
               В корзину
             </a>
           </div>
@@ -86,52 +106,86 @@
               <span class="icon-svg">
                 <svg class="icon">
                   <use xlink:href="#share-icon"></use>
-                </svg> </span>Поделиться</a>
+                </svg> </span
+              >Поделиться</a
+            >
             <div class="share-block__show">
               <p>Чтобы поделиться ссылкой, нажмите на иконку вашей соцсети</p>
               <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
               <script src="https://yastatic.net/share2/share.js"></script>
-              <div class="ya-share2 ya-share2_inited"
-                data-services="vkontakte,twitter,odnoklassniki,telegram,whatsapp,viber">
+              <div
+                class="ya-share2 ya-share2_inited"
+                data-services="vkontakte,twitter,odnoklassniki,telegram,whatsapp,viber"
+              >
                 <div
-                  class="ya-share2__container ya-share2__container_size_m ya-share2__container_color-scheme_normal ya-share2__container_shape_normal">
+                  class="ya-share2__container ya-share2__container_size_m ya-share2__container_color-scheme_normal ya-share2__container_shape_normal"
+                >
                   <ul class="ya-share2__list ya-share2__list_direction_horizontal">
                     <li class="ya-share2__item ya-share2__item_service_vkontakte">
-                      <a class="ya-share2__link"
+                      <a
+                        class="ya-share2__link"
                         href="https://vk.com/share.php?url=http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;title=test2&amp;utm_source=share2"
-                        rel="nofollow noopener" target="_blank" title="ВКонтакте"><span class="ya-share2__badge"><span
-                            class="ya-share2__icon"></span></span><span class="ya-share2__title">ВКонтакте</span></a>
+                        rel="nofollow noopener"
+                        target="_blank"
+                        title="ВКонтакте"
+                        ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                        ><span class="ya-share2__title">ВКонтакте</span></a
+                      >
                     </li>
                     <li class="ya-share2__item ya-share2__item_service_twitter">
-                      <a class="ya-share2__link"
+                      <a
+                        class="ya-share2__link"
                         href="https://twitter.com/intent/tweet?text=test2&amp;url=http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;utm_source=share2"
-                        rel="nofollow noopener" target="_blank" title="Twitter"><span class="ya-share2__badge"><span
-                            class="ya-share2__icon"></span></span><span class="ya-share2__title">Twitter</span></a>
+                        rel="nofollow noopener"
+                        target="_blank"
+                        title="Twitter"
+                        ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                        ><span class="ya-share2__title">Twitter</span></a
+                      >
                     </li>
                     <li class="ya-share2__item ya-share2__item_service_odnoklassniki">
-                      <a class="ya-share2__link"
+                      <a
+                        class="ya-share2__link"
                         href="https://connect.ok.ru/offer?url=http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;title=test2&amp;utm_source=share2"
-                        rel="nofollow noopener" target="_blank" title="Одноклассники"><span
-                          class="ya-share2__badge"><span class="ya-share2__icon"></span></span><span
-                          class="ya-share2__title">Одноклассники</span></a>
+                        rel="nofollow noopener"
+                        target="_blank"
+                        title="Одноклассники"
+                        ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                        ><span class="ya-share2__title">Одноклассники</span></a
+                      >
                     </li>
                     <li class="ya-share2__item ya-share2__item_service_telegram">
-                      <a class="ya-share2__link"
+                      <a
+                        class="ya-share2__link"
                         href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;text=test2&amp;utm_source=share2"
-                        rel="nofollow noopener" target="_blank" title="Telegram"><span class="ya-share2__badge"><span
-                            class="ya-share2__icon"></span></span><span class="ya-share2__title">Telegram</span></a>
+                        rel="nofollow noopener"
+                        target="_blank"
+                        title="Telegram"
+                        ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                        ><span class="ya-share2__title">Telegram</span></a
+                      >
                     </li>
                     <li class="ya-share2__item ya-share2__item_service_whatsapp">
-                      <a class="ya-share2__link"
+                      <a
+                        class="ya-share2__link"
                         href="https://api.whatsapp.com/send?text=test2%20http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;utm_source=share2"
-                        rel="nofollow noopener" target="_blank" title="WhatsApp"><span class="ya-share2__badge"><span
-                            class="ya-share2__icon"></span></span><span class="ya-share2__title">WhatsApp</span></a>
+                        rel="nofollow noopener"
+                        target="_blank"
+                        title="WhatsApp"
+                        ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                        ><span class="ya-share2__title">WhatsApp</span></a
+                      >
                     </li>
                     <li class="ya-share2__item ya-share2__item_service_viber">
-                      <a class="ya-share2__link"
+                      <a
+                        class="ya-share2__link"
                         href="viber://forward?text=test2%20http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;utm_source=share2"
-                        rel="nofollow" target="_blank" title="Viber"><span class="ya-share2__badge"><span
-                            class="ya-share2__icon"></span></span><span class="ya-share2__title">Viber</span></a>
+                        rel="nofollow"
+                        target="_blank"
+                        title="Viber"
+                        ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                        ><span class="ya-share2__title">Viber</span></a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -139,8 +193,12 @@
             </div>
           </div>
 
-          <div class="product-card__rating" itemprop="aggregateRating" itemscope=""
-            itemtype="http://schema.org/AggregateRating">
+          <div
+            class="product-card__rating"
+            itemprop="aggregateRating"
+            itemscope=""
+            itemtype="http://schema.org/AggregateRating"
+          >
             <span class="product-item__rating">
               <meta itemprop="bestRating" content="5" />
               <meta itemprop="worstRating" content="1" />
@@ -196,9 +254,10 @@
         </ul>
         <div class="tabsgroup">
           <span class="d_active tab_drawer_heading" rel="tab1">
-            <span class="icon"><svg class="icon-svg">
-                <use xlink:href="#tab-arrow"></use>
-              </svg></span>
+            <span class="icon"
+              ><svg class="icon-svg">
+                <use xlink:href="#tab-arrow"></use></svg
+            ></span>
             Описание
           </span>
           <div id="tab1" class="tab-content" style="display: block">
@@ -209,49 +268,51 @@
 
           <!-- #tab1 -->
           <span class="tab_drawer_heading" rel="tab2">
-            <span class="icon"><svg class="icon-svg">
-                <use xlink:href="#tab-arrow"></use>
-              </svg></span>
+            <span class="icon"
+              ><svg class="icon-svg">
+                <use xlink:href="#tab-arrow"></use></svg
+            ></span>
             Характеристики
           </span>
           <div id="tab2" class="tab-content" style="display: none">
             <ul class="char">
               <li>
-                <span class="char-text"><span class="char-text__mask">Объем, м3</span></span><span
-                  class="char-text">9,0</span>
+                <span class="char-text"><span class="char-text__mask">Объем, м3</span></span
+                ><span class="char-text">9,0</span>
               </li>
 
               <li>
-                <span class="char-text"><span class="char-text__mask">Длина, мм</span></span><span
-                  class="char-text">9,0</span>
+                <span class="char-text"><span class="char-text__mask">Длина, мм</span></span
+                ><span class="char-text">9,0</span>
               </li>
 
               <li>
-                <span class="char-text"><span class="char-text__mask">Ширина, мм</span></span><span
-                  class="char-text">9,0</span>
+                <span class="char-text"><span class="char-text__mask">Ширина, мм</span></span
+                ><span class="char-text">9,0</span>
               </li>
 
               <li>
-                <span class="char-text"><span class="char-text__mask">Высота, мм</span></span><span
-                  class="char-text">9,0</span>
+                <span class="char-text"><span class="char-text__mask">Высота, мм</span></span
+                ><span class="char-text">9,0</span>
               </li>
 
               <li>
-                <span class="char-text"><span class="char-text__mask">testbox</span></span><span class="char-text"> 1
-                </span>
+                <span class="char-text"><span class="char-text__mask">testbox</span></span
+                ><span class="char-text"> 1 </span>
               </li>
 
               <li>
-                <span class="char-text"><span class="char-text__mask">toshiba</span></span><span class="char-text">
-                  345543,0 </span>
+                <span class="char-text"><span class="char-text__mask">toshiba</span></span
+                ><span class="char-text"> 345543,0 </span>
               </li>
             </ul>
           </div>
           <!-- #tab2 -->
           <span class="tab_drawer_heading" rel="tab3">
-            <span class="icon"><svg class="icon-svg">
-                <use xlink:href="#tab-arrow"></use>
-              </svg></span>
+            <span class="icon"
+              ><svg class="icon-svg">
+                <use xlink:href="#tab-arrow"></use></svg
+            ></span>
             Отзывы
           </span>
           <div id="tab3" class="tab-content" style="display: none">
@@ -309,9 +370,10 @@
           <!-- #tab3 -->
 
           <span class="tab_drawer_heading" rel="tab5">
-            <span class="icon"><svg class="icon-svg">
-                <use xlink:href="#tab-arrow"></use>
-              </svg></span>
+            <span class="icon"
+              ><svg class="icon-svg">
+                <use xlink:href="#tab-arrow"></use></svg
+            ></span>
             Документы
           </span>
           <div id="tab5" class="tab-content" style="display: none">
@@ -322,8 +384,11 @@
                 <span class="document-item__text">rwrwr</span>
                 <span class="document-item__format">jpg</span>
                 <span class="document-item__size">77.9 Кб</span>
-                <span class="document-item__btn"><a href="/media/product/certificates/photo_2024-02-07_11-16-48_2.jpg"
-                    class="btn" download="">Скачать</a></span>
+                <span class="document-item__btn"
+                  ><a href="/media/product/certificates/photo_2024-02-07_11-16-48_2.jpg" class="btn" download=""
+                    >Скачать</a
+                  ></span
+                >
               </div>
             </div>
           </div>
@@ -334,34 +399,49 @@
 
       <span class="content-title product-set-title h2">Возможно, вам понравится</span>
       <div class="product-slider product-slider--4 product-slider--5 related-products-main">
-        <div class="slider-constructor" data-slides="1" data-sm-slides="2" data-md-slides="2" data-lg-slides="3"
-          data-test="3" data-xl-slides="4">
-          <!-- @include ../../../product-teasers/product-item/product-item.html -->
-          <!-- @include ../../../product-teasers/product-item/product-item__slides.html -->
-          <!-- @include ../../../product-teasers/product-item/product-item__range.html -->
-          <!-- @include ../../../product-teasers/product-item/product-item.html -->
-          <!-- @include ../../../product-teasers/product-item/product-item__slides.html -->
-          <!-- @include ../../../product-teasers/product-item/product-item__range.html -->
+        <div
+          class="slider-constructor"
+          data-slides="1"
+          data-sm-slides="2"
+          data-md-slides="2"
+          data-lg-slides="3"
+          data-test="3"
+          data-xl-slides="4"
+        >
+          <%~ include("/components/product-teasers/product-item/product-item.html") %> <%~
+          include("/components/product-teasers/product-item/product-item__slides.html") %> <%~
+          include("/components/product-teasers/product-item/product-item__range.html") %> <%~
+          include("/components/product-teasers/product-item/product-item.html") %> <%~
+          include("/components/product-teasers/product-item/product-item__slides.html") %> <%~
+          include("/components/product-teasers/product-item/product-item__range.html") %>
         </div>
       </div>
       <div class="g-content_inner g-content_frameless g-content mb-10 additional-products-block-wrapper">
         <span class="h2">sdfsdfsdfsdf</span>
-        <!-- @include ../../additional-products/additional-products.html -->
+        <%~ include("/components/products/additional-products/additional-products.html") %>
       </div>
     </div>
     <div class="product-card-side">
       <div class="product-slider__banners">
         <div class="item">
           <div class="product-item product-item--banner">
-            <img data-bnr-pk="1" class="bnr-image-for-page"
-              src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png" alt="ertetertett" />
+            <img
+              data-bnr-pk="1"
+              class="bnr-image-for-page"
+              src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
+              alt="ertetertett"
+            />
           </div>
         </div>
 
         <div class="item">
           <div class="product-item product-item--banner">
-            <img data-bnr-pk="2" class="bnr-image-for-page"
-              src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png" alt="wrwerewrwe" />
+            <img
+              data-bnr-pk="2"
+              class="bnr-image-for-page"
+              src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
+              alt="wrwerewrwe"
+            />
           </div>
         </div>
       </div>
@@ -375,7 +455,8 @@
         <span class="icon">
           <svg class="icon-svg">
             <use xlink:href="#product-nav-arrow"></use>
-          </svg> </span>Предыдущий товар
+          </svg> </span
+        >Предыдущий товар
       </a>
 
       <a class="product-card__nav-next" href="/catalog/product/tetert/">

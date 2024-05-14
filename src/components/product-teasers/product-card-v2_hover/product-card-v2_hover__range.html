@@ -6,11 +6,9 @@
     </div>
 
     <div class="product-card-v2__labels">
-      <div class="card-label card-label_style-sale product-card-v2__label">
-        Распродажа
-      </div>
+      <div class="card-label card-label_style-sale product-card-v2__label">Распродажа</div>
       <div class="card-label card-label_style-hit product-card-v2__label">Хит</div>
-      <!-- @include ../product-card-sell-badge/product-card-sell-badge.html -->
+      <% include("/components/product-teasers/product-card-sell-badge/product-card-sell-badge.html") %>
     </div>
     <div class="product-card-v2__text-rating_container">
       <div class="product-card-v2__img-text">Заказ 30 дней!</div>
@@ -33,7 +31,7 @@
     </div>
     <div class="product-card-v2__content-bottom">
       <div class="product-card-v2__pricing">
-        <!-- @include ../product-price-range/product-price-range.html -->
+        <% include("/components/product-teasers/product-price-range/product-price-range.html") %>
       </div>
       <div class="product-card-v2__buttons">
         <a href="#" class="st-button st-button_muted st-button_not-availbe">

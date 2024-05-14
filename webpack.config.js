@@ -8,6 +8,8 @@ const devDir = "src";
 
 const mode = process.env.NODE_ENV === "production" ? "production" : "development";
 
+console.log(mode);
+
 module.exports = {
   mode: mode,
   stats: "minimal",
@@ -51,12 +53,12 @@ module.exports = {
       js: {
         // output filename of compiled JavaScript, used if `inline` option is false (defaults)
         filename: "scripts/[name].js",
-        //inline: true, // inlines JS into HTML
+        inline: mode === "production", // inlines JS into HTML
       },
       css: {
         // output filename of extracted CSS, used if `inline` option is false (defaults)
         filename: "styles/[name].css",
-        //inline: true, // inlines CSS into HTML
+        inline: mode === "production", // inlines CSS into HTML
       },
       loaderOptions: {
         preprocessor: "eta",
@@ -68,6 +70,16 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [["@babel/preset-env", { targets: "defaults" }]],
+          },
+        },
+      },
       {
         test: /\.(css|sass|scss)$/,
         use: ["css-loader", "sass-loader"],

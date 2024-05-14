@@ -1,52 +1,50 @@
 <div class="product" itemscope="" itemtype="http://schema.org/Product">
   <div class="product__content g-content g-content_frameless">
     <div class="product__navigation-wrapper">
-      <!-- @include ../../../components/product-pages/product-navigation/product-navigation.html -->
+      <%~ include("/components/product-pages/product-navigation/product-navigation.html") %>
     </div>
-    <!-- @include ../../../components/product-pages/product-content/product-title-block.html -->
+    <%~ include("/components/product-pages/product-content/product-title-block.html") %>
     <div class="product__inner-content">
       <div class="row">
         <div class="col-md-5 col-xl-4">
-          <!-- @include ../../../components/product-pages/product-slideshow/product-slideshow.html -->
+          <%~ include("/components/product-pages/product-slideshow/product-slideshow.html") %>
         </div>
         <div class="col-md-7 col-xl-5">
           <div class="product__main-column-content">
-            <div class="product__static-text-wrapper mb-20">
-              Кастомнное html поле
-            </div>
+            <div class="product__static-text-wrapper mb-20">Кастомнное html поле</div>
             <div class="product__price-wrapper mb-20">
-              <!-- @include ../../../components/product-pages/product-price-group/product-price-group__online-old.html -->
+              <%~ include("/components/product-pages/product-price-group/product-price-group__online-old.html") %>
             </div>
             <div class="product__select-wrapper mb-20">
-              <!-- @include ../../../components/product-pages/product-price-will-change/product-price-will-change.html -->
+              <%~ include("/components/product-pages/product-price-will-change/product-price-will-change.html") %>
             </div>
             <div class="product__mod-wrapper mb-20">
-              <!-- @include ../../../components/product-pages/product-size-group/product-size-group.html -->
+              <%~ include("/components/product-pages/product-size-group/product-size-group.html") %>
             </div>
             <div class="product__select-wrapper mb-20">
-              <!-- @include ../../../components/product-pages/product-select-group/product-select-group.html -->
+              <%~ include("/components/product-pages/product-select-group/product-select-group.html") %>
             </div>
             <div class="product__wrapper g-row mb-30">
-              <!-- @include ../../../components/product-pages/product-page-buttons/product-add-to-cart-button.html -->
-              <!-- @include ../../../components/product-pages/product-input-number/product-input-number.html -->
+              <%~ include("/components/product-pages/product-page-buttons/product-add-to-cart-button.html") %> <%~
+              include("/components/product-pages/product-input-number/product-input-number.html") %>
             </div>
             <div class="product__wrapper g-row g-row_space-between mb-20">
-              <!-- @include ../../../components/product-pages/product-page-buttons/product-share-button.html -->
-              <!-- @include ../../../components/product-pages/product-page-buttons/product-compare-button.html -->
+              <%~ include("/components/product-pages/product-page-buttons/product-share-button.html") %> <%~
+              include("/components/product-pages/product-page-buttons/product-compare-button.html") %>
             </div>
             <div class="product__wrapper g-row mb-20">
-              <!-- @include ../../../components/product-pages/product-rating/product-rating.html -->
-              <!-- @include ../../../components/product-pages/product-page-buttons/product-reviews-button.html -->
+              <%~ include("/components/product-pages/product-rating/product-rating.html") %> <%~
+              include("/components/product-pages/product-page-buttons/product-reviews-button.html") %>
             </div>
           </div>
         </div>
         <div class="col-lg-12 col-xl-3">
           <div class="product__secondary-column-content">
             <div class="product__accessibility-wrapper mb-20">
-              <!-- @include ../../../components/product-pages/product-accessibility-group/product-accessibility-group.html -->
+              <%~ include("/components/product-pages/product-accessibility-group/product-accessibility-group.html") %>
             </div>
             <div class="product__static-text-wrapper mb-20">
-              <!-- @include ../../../components/product-pages/product-static-text/product-static-text.html -->
+              <%~ include("/components/product-pages/product-static-text/product-static-text.html") %>
             </div>
           </div>
         </div>
@@ -57,7 +55,7 @@
     <div class="row">
       <div class="col-lg-9">
         <div class="product__inner-content g-content_frameless g-content mb-10">
-          <!-- @include ../../../components/product-pages/additional-products/additional-products.html -->
+          <%~ include("/components/product-pages/additional-products/additional-products.html") %>
         </div>
         <div class="product-description mb-10 mb-md-0">
           <div class="product-tabs">
@@ -70,16 +68,17 @@
           <div class="product-content product-content_frameless">
             <div class="tabsgroup">
               <span class="tab_drawer_heading" rel="tab1">
-                <span class="icon"><svg class="icon-svg">
-                    <use xlink:href="#tab-arrow"></use>
-                  </svg></span>
+                <span class="icon"
+                  ><svg class="icon-svg">
+                    <use xlink:href="#tab-arrow"></use></svg
+                ></span>
                 Описание
               </span>
-              <div id="tab1" class="tab-content" style="display: none;">
+              <div id="tab1" class="tab-content" style="display: none">
                 <div class="text-page" itemprop="description">
                   <div class="row">
                     <div class="col-lg-6 col-md-12">
-                      <img alt="" src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png">
+                      <img alt="" src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png" />
                     </div>
 
                     <div class="col-lg-6 col-md-12">
@@ -93,11 +92,11 @@
                     </div>
 
                     <div class="col-lg-4 col-md-12">
-                      <img alt="" src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png">
+                      <img alt="" src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png" />
                     </div>
 
                     <div class="col-lg-4 col-md-12">
-                      <img alt="" src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png">
+                      <img alt="" src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png" />
                     </div>
                   </div>
                 </div>
@@ -105,29 +104,31 @@
 
               <!-- #tab1 -->
               <span class="tab_drawer_heading" rel="tab2">
-                <span class="icon"><svg class="icon-svg">
-                    <use xlink:href="#tab-arrow"></use>
-                  </svg></span>
+                <span class="icon"
+                  ><svg class="icon-svg">
+                    <use xlink:href="#tab-arrow"></use></svg
+                ></span>
                 Характеристики
               </span>
               <div id="tab2" class="tab-content" style="display: none">
                 <ul class="char">
                   <li>
-                    <span class="char-text"><span class="char-text__mask">Материал</span></span><span class="char-text">
-                      Сталь </span>
+                    <span class="char-text"><span class="char-text__mask">Материал</span></span
+                    ><span class="char-text"> Сталь </span>
                   </li>
 
                   <li>
-                    <span class="char-text"><span class="char-text__mask">Размер</span></span><span class="char-text"> 5
-                    </span>
+                    <span class="char-text"><span class="char-text__mask">Размер</span></span
+                    ><span class="char-text"> 5 </span>
                   </li>
                 </ul>
               </div>
               <!-- #tab2 -->
               <span class="tab_drawer_heading" rel="tab3">
-                <span class="icon"><svg class="icon-svg">
-                    <use xlink:href="#tab-arrow"></use>
-                  </svg></span>
+                <span class="icon"
+                  ><svg class="icon-svg">
+                    <use xlink:href="#tab-arrow"></use></svg
+                ></span>
                 Отзывы
               </span>
               <div id="tab3" class="tab-content" style="display: none">
@@ -164,7 +165,7 @@
                         <span class="content-name"> Ваш отзыв* </span>
                       </label>
                     </div>
-                    <input type="hidden" name="rating_value" value="0" id="id_rating_value">
+                    <input type="hidden" name="rating_value" value="0" id="id_rating_value" />
 
                     <button class="btn btn--main-min btn--fixed-small">Отправить</button>
                   </div>
@@ -179,14 +180,22 @@
           </div>
         </div>
         <p class="g-title mb-30 mt-30">С этим товаром обычно покупают</p>
-        <div class="slider-constructor slick-dotted mb-30" data-sm-rows="1" data-slides="1" data-md-slides="2"
-          data-lg-slides="3" data-xl-slides="4">
+        <div
+          class="slider-constructor slick-dotted mb-30"
+          data-sm-rows="1"
+          data-slides="1"
+          data-md-slides="2"
+          data-lg-slides="3"
+          data-xl-slides="4"
+        >
           <div class="product-item">
             <a href="/catalog/product/tovar-1/" class="product-item__link">
               <div class="product-item__image">
                 <div class="product-item__image-inner">
-                  <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
-                    alt="Товар 1" />
+                  <img
+                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
+                    alt="Товар 1"
+                  />
                 </div>
                 <span class="product-item__flag-content"> </span>
               </div>
@@ -196,9 +205,7 @@
                 </span>
                 <span class="product-item__name">Товар 1</span>
 
-                <div class="product-item__status product-item__status--none">
-                  нет в наличии
-                </div>
+                <div class="product-item__status product-item__status--none">нет в наличии</div>
 
                 <span class="product-item__cost">
                   <span class="product-item__cost-product">
@@ -216,9 +223,14 @@
             <div class="product-item__content-bottom">
               <div class="product-item__btns">
                 <div class="shopping-cart-product">
-                  <a href="#question-main" data-product-code="001" data-product-name="Товар 1"
-                    class="btn-border not-for-sale not-available btn-small button-theme button-theme_secondary">
-                    Узнать о наличии</a>
+                  <a
+                    href="#question-main"
+                    data-product-code="001"
+                    data-product-name="Товар 1"
+                    class="btn-border not-for-sale not-available btn-small button-theme button-theme_secondary"
+                  >
+                    Узнать о наличии</a
+                  >
                 </div>
               </div>
             </div>
@@ -227,8 +239,10 @@
             <a href="/catalog/product/tovar-1/" class="product-item__link">
               <div class="product-item__image">
                 <div class="product-item__image-inner">
-                  <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
-                    alt="Товар 1" />
+                  <img
+                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
+                    alt="Товар 1"
+                  />
                 </div>
 
                 <span class="product-item__flag-content"> </span>
@@ -239,9 +253,7 @@
                 </span>
                 <span class="product-item__name">Товар 1</span>
 
-                <div class="product-item__status product-item__status--many">
-                  Кол-во: 123
-                </div>
+                <div class="product-item__status product-item__status--many">Кол-во: 123</div>
 
                 <span class="product-item__cost">
                   <span class="product-item__cost-product">
@@ -278,8 +290,10 @@
             <a href="/catalog/product/tovar-1/" class="product-item__link">
               <div class="product-item__image">
                 <div class="product-item__image-inner">
-                  <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
-                    alt="Товар 1" />
+                  <img
+                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
+                    alt="Товар 1"
+                  />
                 </div>
 
                 <span class="product-item__flag-content"> </span>
@@ -290,9 +304,7 @@
                 </span>
                 <span class="product-item__name">Товар 1</span>
 
-                <div class="product-item__status product-item__status--none">
-                  нет в наличии
-                </div>
+                <div class="product-item__status product-item__status--none">нет в наличии</div>
 
                 <span class="product-item__cost">
                   <span class="product-item__cost-product">
@@ -310,9 +322,14 @@
             <div class="product-item__content-bottom">
               <div class="product-item__btns">
                 <div class="shopping-cart-product">
-                  <a href="#question-main" data-product-code="001" data-product-name="Товар 1"
-                    class="btn-border not-for-sale not-available btn-small button-theme button-theme_secondary">
-                    Узнать о наличии</a>
+                  <a
+                    href="#question-main"
+                    data-product-code="001"
+                    data-product-name="Товар 1"
+                    class="btn-border not-for-sale not-available btn-small button-theme button-theme_secondary"
+                  >
+                    Узнать о наличии</a
+                  >
                 </div>
               </div>
             </div>
@@ -321,8 +338,10 @@
             <a href="/catalog/product/tovar-1/" class="product-item__link">
               <div class="product-item__image">
                 <div class="product-item__image-inner">
-                  <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
-                    alt="Товар 1" />
+                  <img
+                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
+                    alt="Товар 1"
+                  />
                 </div>
 
                 <span class="product-item__flag-content"> </span>
@@ -333,9 +352,7 @@
                 </span>
                 <span class="product-item__name">Товар 1</span>
 
-                <div class="product-item__status product-item__status--many">
-                  Кол-во: 123
-                </div>
+                <div class="product-item__status product-item__status--many">Кол-во: 123</div>
 
                 <span class="product-item__cost">
                   <span class="product-item__cost-product">
@@ -372,8 +389,10 @@
             <a href="/catalog/product/tovar-1/" class="product-item__link">
               <div class="product-item__image">
                 <div class="product-item__image-inner">
-                  <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
-                    alt="Товар 1" />
+                  <img
+                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
+                    alt="Товар 1"
+                  />
                 </div>
 
                 <span class="product-item__flag-content"> </span>
@@ -384,9 +403,7 @@
                 </span>
                 <span class="product-item__name">Товар 1</span>
 
-                <div class="product-item__status product-item__status--many">
-                  Кол-во: 123
-                </div>
+                <div class="product-item__status product-item__status--many">Кол-во: 123</div>
 
                 <span class="product-item__cost">
                   <span class="product-item__cost-product">
@@ -423,8 +440,10 @@
             <a href="/catalog/product/tovar-1/" class="product-item__link">
               <div class="product-item__image">
                 <div class="product-item__image-inner">
-                  <img src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
-                    alt="Товар 1" />
+                  <img
+                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
+                    alt="Товар 1"
+                  />
                 </div>
 
                 <span class="product-item__flag-content"> </span>
@@ -435,9 +454,7 @@
                 </span>
                 <span class="product-item__name">Товар 1</span>
 
-                <div class="product-item__status product-item__status--many">
-                  Кол-во: 123
-                </div>
+                <div class="product-item__status product-item__status--many">Кол-во: 123</div>
 
                 <span class="product-item__cost">
                   <span class="product-item__cost-product">
@@ -474,12 +491,18 @@
       </div>
       <div class="col-lg-3">
         <div class="product-banner-group mb-30">
-          <img class="g-image product-banner-group__image"
-            src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/add.jpg" alt="" />
+          <img
+            class="g-image product-banner-group__image"
+            src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/add.jpg"
+            alt=""
+          />
         </div>
         <div class="product-banner-group">
-          <img class="g-image product-banner-group__image"
-            src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/add.jpg" alt="" />
+          <img
+            class="g-image product-banner-group__image"
+            src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/add.jpg"
+            alt=""
+          />
         </div>
       </div>
     </div>

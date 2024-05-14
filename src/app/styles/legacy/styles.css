@@ -3105,7 +3105,6 @@ p:last-child {
   top: 50%;
   margin-left: -40px;
   margin-top: -40px;
-  background: url(owl.video.play.png) no-repeat;
   cursor: pointer;
   z-index: 1;
   -webkit-backface-visibility: hidden;
@@ -11148,8 +11147,8 @@ canvas {
 .noUi-horizontal .noUi-handle {
   width: 20px;
   height: 20px;
-  left: -8px;
-  top: -8px;
+  right: -10px;
+  top: -7px;
 }
 
 .noUi-handle {

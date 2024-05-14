@@ -1,7 +1,10 @@
 import jQuery from "jquery";
+import wNumb from "wnumb";
+import noUiSlider from "nouislider";
 import "owl.carousel";
 import "mmenu-js";
 import "slick-carousel";
+import "@fancyapps/fancybox";
 
 const breakpoints = {
   xs: 0,
