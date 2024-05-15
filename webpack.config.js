@@ -21,9 +21,9 @@ module.exports = {
       "@images": path.resolve(__dirname, "public/images"),
     },
   },
-  optimization: {
-    minimize: false
-  },
+  // optimization: {
+  //   minimize: false
+  // },
   output: {
     chunkFilename: "js/[name][id].js", // [chunkhash]
     assetModuleFilename: "[name][ext][query]", // [hash]

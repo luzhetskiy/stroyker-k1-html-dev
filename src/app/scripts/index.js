@@ -6,9 +6,17 @@ import "mmenu-js";
 import "slick-carousel";
 import "@fancyapps/fancybox";
 import "inputmask/dist/jquery.inputmask";
-import "notifyjs";
+import '@src/shared/libs/notify/notify.js'
 
-const breakpoints = {
+
+window.jQuery = jQuery;
+window.$ = jQuery;
+
+
+$('button').notify(true, 'test')
+
+
+window.breakpoints = {
   xs: 0,
   sm: 576,
   md: 768,
@@ -17,6 +25,8 @@ const breakpoints = {
 };
 
 $(".acc__toggle:not(.not_toggle)").click(function (e) {
+  // e.preventDefault();
+
   var $this = $(this);
   if ($this.next().hasClass("show")) {
     $this.next().removeClass("show");
@@ -152,7 +162,7 @@ $(".partners-slider .owl-carousel").owlCarousel({
   },
 });
 
-$(() => {
+(() => {
   const buttonDefaultView = $(".button1");
   const buttonWideView = $(".button2");
   const buttonLineView = $(".button3");
@@ -2133,428 +2143,11 @@ var СustomInteraction = function СustomInteraction() {
   document.addEventListener("contextmenu", events);
 };
 
-// search.js
-jQuery(document).ready(function ($) {
-  let searchInputEl,
-    resultBoxEl,
-    mobile = false;
-
-  if (screen.width > 767) {
-    searchInputEl = $(".search_input");
-    resultBoxEl = $(".header-search-results");
-  } else {
-    searchInputEl = $(".search_input_mobile");
-    resultBoxEl = $("#search-result-mob");
-    mobile = true;
-  }
-
-  processSearchResult(searchInputEl, resultBoxEl, mobile);
-  processSearchBtnClick(searchInputEl);
-});
-
-function processSearchResult(searchInputEl, resultBoxEl, mobile = false) {
-  let searchUrl = searchInputEl.data("search-url"),
-    searchMinChars = searchInputEl.data("min-chars");
-
-  searchInputEl.on("focus keyup paste", function (e) {
-    var input = $(this),
-      minChars = this.dataset.minChars;
-    if (input.val().length >= searchMinChars) {
-      $.ajax({
-        type: "get",
-        url: searchUrl,
-        data: input.serialize(),
-        dataType: "html",
-      }).done(function (result) {
-        if (result.replace(/\s/g, "").length > 0) {
-          resultBoxEl.html(result);
-          resultBoxEl.show();
-          $(document).mouseup(function (e) {
-            if (!resultBoxEl.is(e.target) && resultBoxEl.has(e.target).length === 0) {
-              resultBoxEl.hide();
-            }
-          });
-        } else {
-          resultBoxEl.html("");
-          resultBoxEl.hide();
-        }
-      });
-    } else {
-      resultBoxEl.hide().empty();
-    }
-  });
-}
-
-function processSearchBtnClick(searchInputEl) {
-  var searchBtn = searchInputEl.next("button");
-
-  searchBtn.click(function () {
-    var searchInputVal = searchInputEl.val();
-    if (searchInputVal) {
-      var url = searchInputEl.data("search-url");
-      window.location = url + "?q=" + searchInputVal;
-    }
-  });
-
-  searchInputEl.keyup(function (event) {
-    if (event.keyCode === 13) {
-      searchBtn.click();
-    }
-  });
-}
-
-$(document).ready(function ($) {
-  $("[data-search-button]").on("click", (event) => {
-    const id = $(event.currentTarget).attr("data-search-button");
-    const input = $(`[data-search-input="${id}"]`);
-    const value = input.val();
-    const searchUrl = input.attr("data-search-url");
-    window.location = searchUrl + "?q=" + value;
-  });
-
-  $("[data-search-input]").on("focus keyup paste", (event) => {
-    const input = $(event.currentTarget);
-    const value = input.val();
-    const id = input.attr("data-search-input");
-    const searchMinChars = input.attr("data-min-chars");
-    const searchUrl = input.attr("data-search-url");
-    const resultContainer = $(`[data-search-results="${id}"]`);
-    const clickOuterHandler = (event) => {
-      if (!event.target.closest("[data-search-results-active]")) {
-        $(event.target).removeAttr("data-search-results-active");
-        $(document).off("click", clickOuterHandler);
-      }
-    };
-
-    if (event.key === "enter") return (window.location = searchUrl + "?q=" + value);
-
-    if (value.length < searchMinChars) return;
-
-    try {
-      $.ajax({
-        type: "get",
-        url: searchUrl,
-        data: input.serialize(),
-        dataType: "html",
-      }).done((result) => {
-        if (result.replace(/\s/g, "").length <= 0) {
-          resultContainer.html("");
-          resultContainer.removeAttr("data-search-results-active");
-          return;
-        }
-        resultContainer.html(result);
-        resultContainer.attr("data-search-results-active", "");
-        $(document).on("click", clickOuterHandler);
-      });
-    } catch {
-      (error) => {
-        console.log(error);
-      };
-    }
-  });
-});
-
-// script-mobile.js
-("use strict");
-
-function goTo(selector) {
-  var lastVisible = document.querySelector(selector);
-
-  if (lastVisible) {
-    var elemRect = lastVisible.getBoundingClientRect();
-    var bodyRect = document.body.getBoundingClientRect();
-    var offset = elemRect.bottom - bodyRect.top;
-    window.scrollTo(0, offset);
-  }
-}
-
-$(function () {
-  $(".product-slider--3 .item").slice(0, 2).show();
-  $(".btn-download-1").on("click", function (e) {
-    e.preventDefault();
-    $(".product-slider--3 .item:hidden").slice(0, 2).show();
-    goTo(".product-slider--3 .item:nth-child(2)");
-
-    if ($(".product-slider--3 .item:hidden").length == 0) {
-      $("#load").show();
-    }
-  });
-});
-$(function () {
-  $(".actions-content .item").slice(0, 4).show();
-  $(".btn-download-4").on("click", function (e) {
-    e.preventDefault();
-    $(".actions-content .item:hidden").slice(0, 3).show();
-    goTo(".actions-content .item:nth-child(3)");
-
-    if ($(".actions-content .item:hidden").length == 0) {
-      $("#load").show();
-    }
-  });
-});
-$(function () {
-  $(".articles-block .item").slice(0, 4).show();
-  $(".btn-download-5").on("click", function (e) {
-    e.preventDefault();
-    $(".articles-block .item:hidden").slice(0, 3).show();
-    goTo(".articles-block .item:nth-child(5)");
-
-    if ($(".articles-block .item:hidden").length == 0) {
-      $("#load").show();
-    }
-  });
-});
-$(function () {
-  $(".catalog-menu--search .catalog-menu-item").slice(0, 4).show();
-  $(".btn-download-6").on("click", function (e) {
-    e.preventDefault();
-    $(".catalog-menu--search .catalog-menu-item:hidden").slice(0, 2).show();
-    goTo(".catalog-menu--search .catalog-menu-item:nth-child(4)");
-
-    if ($(".catalog-menu--search .catalog-menu-item:hidden").length == 0) {
-      $("#load").show();
-    }
-  });
-});
-$(function () {
-  $(".catalog-content--search-results .product-item").slice(0, 4).show();
-  $(".btn-download-7").on("click", function (e) {
-    e.preventDefault();
-    $(".catalog-content--search-results .product-item:hidden").slice(0, 2).show();
-    goTo(".catalog-content--search-results .product-item:nth-child(4)");
-
-    if ($(".catalog-content--search-results .product-item:hidden").length == 0) {
-      $("#load").show();
-    }
-  });
-});
-$(function () {
-  $(".catalog-content .product-item").slice(0, 4).show();
-  $(".btn-download-8").on("click", function (e) {
-    e.preventDefault();
-    $(".catalog-content .product-item:hidden").slice(0, 4).show();
-    goTo(".catalog-content .product-item:nth-child(4)");
-
-    if ($(".catalog-content .product-item:hidden").length == 0) {
-      $("#load").show();
-    }
-  });
-});
-$(".city-selection__link").click(function () {
-  $(".city-selection__list").toggle(0);
-});
-var $banners = $(".product-slider__banners.owl-carousel, .new-banners.owl-carousel");
-$banners.each(function () {
-  console.log($(this));
-  var $this = $(this); //
-
-  if ($this.find(".item").length > 2) {
-    $this.owlCarousel({
-      loop: true,
-      nav: false,
-      dots: true,
-      items: 2,
-      responsive: {
-        0: {
-          nav: false,
-          dots: true,
-        },
-        768: {
-          nav: false,
-          dots: false,
-        },
-      },
-    });
-  }
-}); //$(function () {
-//  $(".product-slider--third .item").slice(0, 2).show();
-//  $(".btn-download-1").on('click', function (e) {
-//    e.preventDefault();
-//    $(".product-slider--third .item:hidden").slice(0, 2).show();
-//    if ($(".product-slider--third .item:hidden").length == 0) {
-//      $("#load").show();
-//    }
-//  });
-//});
-//
-
-$(function () {
-  $(".product-slider--4 .item").slice(0, 4).show();
-  $(".btn-download-2").on("click", function (e) {
-    e.preventDefault();
-    $(".product-slider--4 .item:hidden").slice(0, 4).show();
-    goTo(".product-slider--4 .item:nth-child(4)");
-
-    if ($(".product-slider--4 .item:hidden").length == 0) {
-      $("#load").show();
-    }
-  });
-});
-$(".actions-content .owl-carousel").owlCarousel({
-  loop: true,
-  margin: 20,
-  nav: true,
-  dots: false,
-  items: 3,
-  responsive: {
-    0: {
-      nav: false,
-      dots: true,
-      items: 1,
-    },
-    479: {
-      nav: false,
-      dots: true,
-      items: 2,
-    },
-  },
-});
-$(".articles-block .owl-carousel").owlCarousel({
-  loop: true,
-  margin: 0,
-  nav: true,
-  dots: false,
-  items: 3,
-  responsive: {
-    0: {
-      nav: false,
-      dots: true,
-      items: 1,
-    },
-    479: {
-      nav: false,
-      dots: true,
-      items: 2,
-    },
-  },
-});
-
-function moveBtnexitToLktop() {
-  if (!document.querySelector(".page-head > .btn-exit")) {
-    var btnexitBlock = document.querySelector(".btn-exit");
-    var lktopBlock = document.querySelector(".page-head");
-
-    if (lktopBlock && btnexitBlock) {
-      lktopBlock.appendChild(btnexitBlock);
-    }
-  }
-}
-
-function moveCompareToHeadright() {
-  if (!document.querySelector(".top-header__content-right > .header-compare")) {
-    var compareBlock = document.querySelector(".header-compare");
-    var headrightBlock = document.querySelector(".top-header__content-right");
-
-    if (headrightBlock && compareBlock) {
-      headrightBlock.appendChild(compareBlock);
-    }
-  }
-}
-
-function moveCartToHeadright() {
-  if (!document.querySelector(".top-header__content-right > .header-cart")) {
-    var cartBlock = document.querySelector(".header-cart");
-    var headrightBlock = document.querySelector(".top-header__content-right");
-
-    if (headrightBlock && cartBlock) {
-      headrightBlock.appendChild(cartBlock);
-    }
-  }
-}
-
-function moveBtnToMobbtn() {
-  if (!document.querySelector(".mobile-btn-container > .btn-form")) {
-    var btnBlock = document.querySelector(".btn-form");
-    var mobbtnBlock = document.querySelector(".mobile-btn-container");
-
-    if (mobbtnBlock && btnBlock) {
-      mobbtnBlock.appendChild(btnBlock);
-    }
-  }
-}
-
-function handleResize() {
-  var width = window.innerWidth;
-
-  if (width < 768) {
-    moveBtnexitToLktop();
-    moveCompareToHeadright();
-    moveCartToHeadright();
-    moveBtnToMobbtn();
-    return;
-  }
-}
-
-window.addEventListener("resize", handleResize);
-handleResize();
-
-// script-desktop.js
-("use strict");
-
-$(".product-slider--5 .owl-carousel").owlCarousel({
-  loop: true,
-  margin: 11,
-  nav: true,
-  dots: false,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    768: {
-      items: 3,
-    },
-    992: {
-      items: 4,
-    },
-  },
-});
-$(".product-slider--4:not(.product-slider--5) .owl-carousel").owlCarousel({
-  loop: true,
-  margin: 11,
-  nav: true,
-  dots: false,
-  items: 5,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    768: {
-      items: 3,
-    },
-    992: {
-      items: 4,
-    },
-    1240: {
-      items: 5,
-    },
-  },
-});
-$(".product-slider--3 .owl-carousel").owlCarousel({
-  loop: true,
-  margin: 11,
-  nav: true,
-  dots: false,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    768: {
-      items: 2,
-    },
-    992: {
-      items: 3,
-    },
-    1240: {
-      items: 4,
-    },
-  },
-});
-
 // header-custom.js
+
 $(document).ready(() => {
   const srcMenu = $("#menu");
   const srcNavbar = $("#menu-navbar");
-
   if (!srcMenu.length || !srcNavbar.length) return;
 
   const menu = new Mmenu("#menu", {
@@ -2639,135 +2232,314 @@ $(document).ready(() => {
   });
 });
 
-// header-search-catalog.js
+// scripts-desktop.js
 
-// поиск результат при вводе
-function gid(a_id) {
-  return document.getElementById(a_id);
-}
+$(() => {
+  if (window.innerWidth >= 767) {
+    $(".product-slider--5 .owl-carousel").owlCarousel({
+      loop: true,
+      margin: 11,
+      nav: true,
+      dots: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        768: {
+          items: 3,
+        },
+        992: {
+          items: 4,
+        },
+      },
+    });
+    $(".product-slider--4:not(.product-slider--5) .owl-carousel").owlCarousel({
+      loop: true,
+      margin: 11,
+      nav: true,
+      dots: false,
+      items: 5,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        768: {
+          items: 3,
+        },
+        992: {
+          items: 4,
+        },
+        1240: {
+          items: 5,
+        },
+      },
+    });
+    $(".product-slider--3 .owl-carousel").owlCarousel({
+      loop: true,
+      margin: 11,
+      nav: true,
+      dots: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        768: {
+          items: 2,
+        },
+        992: {
+          items: 3,
+        },
+        1240: {
+          items: 4,
+        },
+      },
+    });
 
-function close_all() {
-  // hide all divs
-  var o_res = gid("search-result");
+    function goTo(selector) {
+      var lastVisible = document.querySelector(selector);
 
-  for (i = 0; i < 7; i++) {
-    // to simplify the story I have here the hardcoded number of elements. In real life make it better.
-    var o = gid("user_" + i);
-    if (o) {
-      //just to make sure this object really exists
-      o.style.display = "none";
+      if (lastVisible) {
+        var elemRect = lastVisible.getBoundingClientRect();
+        var bodyRect = document.body.getBoundingClientRect();
+        var offset = elemRect.bottom - bodyRect.top;
+        window.scrollTo(0, offset);
+      }
     }
-  }
-  o_res.style.display = "none";
-  overlay.classList.remove("show");
-}
+  } else {
+    ("use strict");
 
-function find_my_div() {
-  // find and show
-  close_all(); // close previous searhc results
+    function goTo(selector) {
+      var lastVisible = document.querySelector(selector);
 
-  var o_res = gid("search-result");
-  var overlay = gid("overlay");
-  var str_needle = edit_search.value;
-  str_needle = str_needle.toUpperCase();
+      if (lastVisible) {
+        var elemRect = lastVisible.getBoundingClientRect();
+        var bodyRect = document.body.getBoundingClientRect();
+        var offset = elemRect.bottom - bodyRect.top;
+        window.scrollTo(0, offset);
+      }
+    }
 
-  if (str_needle != "") {
-    // we will not search for empty strings
-    for (i = 0; i < 7; i++) {
-      var o = gid("user_" + i);
-      if (o) {
-        //just to make sure this object really exists
-        // we want case insensitive search, so bring the both parts to upper case and compare
-        var str_haystack = o.innerHTML.toUpperCase();
-        if (str_haystack.indexOf(str_needle) == -1) {
-          // not found, do nothing
-        } else {
-          // yes, we got it, show it
+    $(function () {
+      $(".product-slider--3 .item").slice(0, 2).show();
+      $(".btn-download-1").on("click", function (e) {
+        e.preventDefault();
+        $(".product-slider--3 .item:hidden").slice(0, 2).show();
+        goTo(".product-slider--3 .item:nth-child(2)");
 
-          o.style.display = "flex";
-          o_res.style.display = "block";
-          overlay.classList.add("show");
+        if ($(".product-slider--3 .item:hidden").length == 0) {
+          $("#load").show();
+        }
+      });
+    });
+    $(function () {
+      $(".actions-content .item").slice(0, 4).show();
+      $(".btn-download-4").on("click", function (e) {
+        e.preventDefault();
+        $(".actions-content .item:hidden").slice(0, 3).show();
+        goTo(".actions-content .item:nth-child(3)");
+
+        if ($(".actions-content .item:hidden").length == 0) {
+          $("#load").show();
+        }
+      });
+    });
+    $(function () {
+      $(".articles-block .item").slice(0, 4).show();
+      $(".btn-download-5").on("click", function (e) {
+        e.preventDefault();
+        $(".articles-block .item:hidden").slice(0, 3).show();
+        goTo(".articles-block .item:nth-child(5)");
+
+        if ($(".articles-block .item:hidden").length == 0) {
+          $("#load").show();
+        }
+      });
+    });
+    $(function () {
+      $(".catalog-menu--search .catalog-menu-item").slice(0, 4).show();
+      $(".btn-download-6").on("click", function (e) {
+        e.preventDefault();
+        $(".catalog-menu--search .catalog-menu-item:hidden").slice(0, 2).show();
+        goTo(".catalog-menu--search .catalog-menu-item:nth-child(4)");
+
+        if ($(".catalog-menu--search .catalog-menu-item:hidden").length == 0) {
+          $("#load").show();
+        }
+      });
+    });
+    $(function () {
+      $(".catalog-content--search-results .product-item").slice(0, 4).show();
+      $(".btn-download-7").on("click", function (e) {
+        e.preventDefault();
+        $(".catalog-content--search-results .product-item:hidden").slice(0, 2).show();
+        goTo(".catalog-content--search-results .product-item:nth-child(4)");
+
+        if ($(".catalog-content--search-results .product-item:hidden").length == 0) {
+          $("#load").show();
+        }
+      });
+    });
+    $(function () {
+      $(".catalog-content .product-item").slice(0, 4).show();
+      $(".btn-download-8").on("click", function (e) {
+        e.preventDefault();
+        $(".catalog-content .product-item:hidden").slice(0, 4).show();
+        goTo(".catalog-content .product-item:nth-child(4)");
+
+        if ($(".catalog-content .product-item:hidden").length == 0) {
+          $("#load").show();
+        }
+      });
+    });
+    $(".city-selection__link").click(function () {
+      $(".city-selection__list").toggle(0);
+    });
+    var $banners = $(".product-slider__banners.owl-carousel, .new-banners.owl-carousel");
+    $banners.each(function () {
+      console.log($(this));
+      var $this = $(this); //
+
+      if ($this.find(".item").length > 2) {
+        $this.owlCarousel({
+          loop: true,
+          nav: false,
+          dots: true,
+          items: 2,
+          responsive: {
+            0: {
+              nav: false,
+              dots: true,
+            },
+            768: {
+              nav: false,
+              dots: false,
+            },
+          },
+        });
+      }
+    }); //$(function () {
+    //  $(".product-slider--third .item").slice(0, 2).show();
+    //  $(".btn-download-1").on('click', function (e) {
+    //    e.preventDefault();
+    //    $(".product-slider--third .item:hidden").slice(0, 2).show();
+    //    if ($(".product-slider--third .item:hidden").length == 0) {
+    //      $("#load").show();
+    //    }
+    //  });
+    //});
+    //
+
+    $(function () {
+      $(".product-slider--4 .item").slice(0, 4).show();
+      $(".btn-download-2").on("click", function (e) {
+        e.preventDefault();
+        $(".product-slider--4 .item:hidden").slice(0, 4).show();
+        goTo(".product-slider--4 .item:nth-child(4)");
+
+        if ($(".product-slider--4 .item:hidden").length == 0) {
+          $("#load").show();
+        }
+      });
+    });
+    $(".actions-content .owl-carousel").owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: true,
+      dots: false,
+      items: 3,
+      responsive: {
+        0: {
+          nav: false,
+          dots: true,
+          items: 1,
+        },
+        479: {
+          nav: false,
+          dots: true,
+          items: 2,
+        },
+      },
+    });
+    $(".articles-block .owl-carousel").owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      items: 3,
+      responsive: {
+        0: {
+          nav: false,
+          dots: true,
+          items: 1,
+        },
+        479: {
+          nav: false,
+          dots: true,
+          items: 2,
+        },
+      },
+    });
+
+    function moveBtnexitToLktop() {
+      if (!document.querySelector(".page-head > .btn-exit")) {
+        var btnexitBlock = document.querySelector(".btn-exit");
+        var lktopBlock = document.querySelector(".page-head");
+
+        if (lktopBlock && btnexitBlock) {
+          lktopBlock.appendChild(btnexitBlock);
         }
       }
     }
-  }
-}
 
-// header-search-catalog-mobile.js
+    function moveCompareToHeadright() {
+      if (!document.querySelector(".top-header__content-right > .header-compare")) {
+        var compareBlock = document.querySelector(".header-compare");
+        var headrightBlock = document.querySelector(".top-header__content-right");
 
-function close_all_mob() {
-  // hide all divs
-  var o_res = gid("search-result-mob");
-  var overlay = gid("overlay_mob");
-  for (i = 0; i < 7; i++) {
-    // to simplify the story I have here the hardcoded number of elements. In real life make it better.
-    var o = gid("user_" + i);
-    if (o) {
-      //just to make sure this object really exists
-      o.style.display = "none";
-    }
-  }
-  o_res.style.display = "none";
-  overlay.classList.remove("show");
-}
-
-function find_my_div_mob() {
-  // find and show
-  close_all_mob(); // close previous searhc results
-
-  var o_res = gid("search-result-mob");
-  var overlay = gid("overlay_mob");
-  var str_needle = edit_search_mob.value;
-  str_needle = str_needle.toUpperCase();
-
-  if (str_needle != "") {
-    // we will not search for empty strings
-    for (i = 0; i < 7; i++) {
-      var o = gid("user_" + i);
-      if (o) {
-        //just to make sure this object really exists
-        // we want case insensitive search, so bring the both parts to upper case and compare
-        var str_haystack = o.innerHTML.toUpperCase();
-        if (str_haystack.indexOf(str_needle) == -1) {
-          // not found, do nothing
-        } else {
-          // yes, we got it, show it
-
-          o.style.display = "flex";
-          o_res.style.display = "block";
-          overlay.classList.add("show");
+        if (headrightBlock && compareBlock) {
+          headrightBlock.appendChild(compareBlock);
         }
       }
     }
-  }
-}
 
-// ajax-setup.js
+    function moveCartToHeadright() {
+      if (!document.querySelector(".top-header__content-right > .header-cart")) {
+        var cartBlock = document.querySelector(".header-cart");
+        var headrightBlock = document.querySelector(".top-header__content-right");
 
-$.ajaxSetup({
-  beforeSend: function (xhr, settings) {
-    if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
-      // Only send the token to relative URLs i.e. locally.
-      xhr.setRequestHeader("X-CSRFToken", getCookie("csrftoken"));
+        if (headrightBlock && cartBlock) {
+          headrightBlock.appendChild(cartBlock);
+        }
+      }
     }
-  },
+
+    function moveBtnToMobbtn() {
+      if (!document.querySelector(".mobile-btn-container > .btn-form")) {
+        var btnBlock = document.querySelector(".btn-form");
+        var mobbtnBlock = document.querySelector(".mobile-btn-container");
+
+        if (mobbtnBlock && btnBlock) {
+          mobbtnBlock.appendChild(btnBlock);
+        }
+      }
+    }
+
+    function handleResize() {
+      var width = window.innerWidth;
+
+      if (width < 768) {
+        moveBtnexitToLktop();
+        moveCompareToHeadright();
+        moveCartToHeadright();
+        moveBtnToMobbtn();
+        return;
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+  }
 });
-
-function getCookie(name) {
-  var cookieValue = null;
-  if (document.cookie && document.cookie != "") {
-    var cookies = document.cookie.split(";");
-    for (var i = 0; i < cookies.length; i++) {
-      var cookie = jQuery.trim(cookies[i]);
-      // Does this cookie string begin with the name we want?
-      if (cookie.substring(0, name.length + 1) == name + "=") {
-        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-        break;
-      }
-    }
-  }
-  return cookieValue;
-}
 
 // common.js
 
@@ -2818,661 +2590,5 @@ function headerPhones() {
     phoneToggle.addEventListener("click", function () {
       $(".header-phones.top-header__phones .header-phones__inner").show();
     });
-  }
-}
-
-// frontpage.js
-
-$(document).ready(function () {
-  $(".category-slider .owl-carousel").owlCarousel({
-    loop: true,
-    margin: 20,
-    nav: true,
-    items: 5,
-    responsive: {
-      0: {
-        nav: false,
-        dots: true,
-        items: 1,
-      },
-      479: {
-        nav: false,
-        dots: true,
-        items: 3,
-      },
-      768: {
-        nav: true,
-        dots: false,
-        items: 4,
-      },
-      992: {
-        nav: true,
-        items: 5,
-      },
-    },
-  });
-});
-
-// catalog.js
-
-const filterForm = $("#catalog_filter_form");
-
-jQuery(document).ready(function ($) {
-  updRangeSliders();
-
-  filterForm.on("keyup change paste", "input, select, textarea", function () {
-    handleFilterChange(this);
-  });
-
-  // Remove empty fields from GET forms
-  filterForm.submit(function () {
-    var $this = $(this);
-    $this
-    .find(":input")
-    .filter(function () {
-      return !this.value;
-    })
-    .attr("disabled", "disabled");
-
-    prepareFilterForm();
-    return true;
-  });
-
-  // Un-disable form fields when page loads, in case they click back after submission
-  filterForm.find(":input").not(".range-input").prop("disabled", false);
-
-  $(".found-cheaper-panel").on("click", ".close-panel", function () {
-    document.cookie = "found_chaper_panel_closed=1; path=/";
-  });
-
-  const questionFormBoxId = "question-main";
-
-  $('[href="#' + questionFormBoxId + '"]').click(function () {
-    $("html, body").animate(
-      {
-        scrollTop: $(this.hash).offset().top - 80,
-      },
-      300,
-      function () {}
-    );
-
-    var $this = $(this),
-      message;
-    if ($this.hasClass("smoothScroll")) {
-      prepareQestionForm(questionFormBoxId, "Нашли дешевле?", "Где дешевле?");
-    } else {
-      if ($this.hasClass("not-available")) {
-        message = $this.attr("data-form-main-msg") ? $this.data("form-main-msg") : "Когда будет в наличии?";
-        message += "\n\n" + $this.data("product-name");
-        message += '\n"Артикул: ' + $this.data("product-code") + ".";
-
-        prepareQestionForm(questionFormBoxId, $this.data("form-subject"), "Ваш вопрос", message);
-      } else if ($this.hasClass("not-price")) {
-        message = $this.attr("data-form-main-msg") ? $this.data("form-main-msg") : "Хочу узнать цену.";
-        message += "\n\n" + $this.data("product-name");
-        message += "\nАртикул: " + $this.data("product-code") + ".";
-        prepareQestionForm(questionFormBoxId, $this.data("form-subject"), "Ваш вопрос", message);
-      }
-    }
-  });
-
-  function prepareQestionForm(form_id, title, placeholder, message = "") {
-    const questionFormBox = $("#" + form_id);
-    if (questionFormBox.length) {
-      if (title) {
-        $(".content-title", questionFormBox).text(title);
-      }
-      if (placeholder) {
-        $('label[for="message"] .content-name', questionFormBox).text(placeholder);
-      }
-      $("textarea", questionFormBox).text(message);
-    }
-  }
-
-  // catalog product list sort (mobile mode)
-  const sortingList = $('.dropdown-select-ul[data-role="products-header-sort-mobile"]');
-  sortingList.on("DOMSubtreeModified", "li.selected", function () {
-    var url = $(this).data("value");
-    if (url.length > 0) {
-      location = url;
-    }
-  });
-
-  // scroll to target tag
-  $('a[rel^="tab"]').click(function () {
-    var targetTab = $('.tabs li[rel="' + $(this).attr("rel") + '"]:visible');
-
-    if (!targetTab.length) {
-      targetTab = $('.tab_drawer_heading[rel="' + $(this).attr("rel") + '"]:visible');
-    }
-
-    if (targetTab.length) {
-      $("body,html").animate(
-        {
-          scrollTop: targetTab.offset().top,
-        },
-        800 //speed
-      );
-    }
-  });
-
-  $(".view-sort-item").on("click", function () {
-    if ($(this).is("[data-list-view-mode]")) {
-      Cookies.set("list_view_mode", this.dataset.listViewMode);
-    }
-  });
-
-  $("#catalog_filter_form input").on("change", (event) => {
-    $(event.currentTarget).attr("data-active-input", "");
-    console.log("change");
-  });
-  $("#catalog_filter_form input").on("input", (event) => {
-    $(event.currentTarget).attr("data-active-input", "");
-    console.log("input");
-  });
-});
-
-function prepareFilterForm() {
-  // clear price_range values
-  var rangeInputs = document.querySelectorAll(".range-input");
-  rangeInputs.forEach(function (item) {
-    if (!item.disabled) {
-      item.value = item.value.replace(/[^0-9]+/g, "");
-    }
-  });
-}
-
-function handleFilterChange(elem) {
-  var $this = $(elem);
-  filterForm
-  .find(":input")
-  .not("button")
-  .filter(function () {
-    if (this.classList.contains("range-input")) {
-      return parseInt(this.dataset.initValue) === parseInt(this.value);
-    }
-    return !this.value;
-  })
-  .attr("disabled", "disabled");
-  prepareFilterForm();
-  var formData = filterForm.serialize();
-  var url = filterForm.attr("action");
-  if (formData.length) {
-    url += "?" + formData;
-  }
-  $.getJSON(url, function (response) {
-    var filterShowAll = $(".filter-show-all");
-    if (filterShowAll.length > 0) {
-      filterShowAll.hide();
-      filterShowAll.show();
-      filterShowAll.insertAfter($this.parent());
-      if (response.count) {
-        filterShowAll.html('<a href="' + url + '">Показать ' + response.count + "</a>");
-      } else {
-        filterShowAll.html('<a href="#">Найдено 0</a>');
-      }
-      setTimeout(function () {
-        filterShowAll.not(":hover").fadeOut("fast");
-      }, 5000);
-    }
-  });
-}
-
-function updRangeSliders() {
-  $(".filter-range").each(function () {
-    var filter = this,
-      keypressSliders = $(".range-slider");
-
-    $(keypressSliders).each(function (index, keypressSlider) {
-      if (keypressSlider !== null && keypressSlider.noUiSlider) {
-        var rangeInputs = filter.querySelectorAll(".range-input");
-        keypressSlider.noUiSlider.on("update", function () {
-          var minInput = rangeInputs[0].value.replace(/[^0-9]+/g, "") === rangeInputs[0].dataset.minValue;
-          var maxInput = rangeInputs[1].value.replace(/[^0-9]+/g, "") === rangeInputs[1].dataset.maxValue;
-          for (var i = 0; i < rangeInputs.length; i++) {
-            rangeInputs[i].disabled = minInput && maxInput;
-          }
-        });
-        keypressSlider.noUiSlider.on("set", function () {
-          handleFilterChange(keypressSlider);
-        });
-      }
-    });
-  });
-}
-
-// cart.simple.js
-
-(function ($) {
-  $(document).ready(function () {
-    if (!document.getElementById("delivery_payment_mapping")) return
-    var delivery_payment_mapping = JSON.parse(document.getElementById("delivery_payment_mapping").textContent);
-    var current_delivery = $("input[name=delivery_variant]:checked").val();
-    var payment_block = $("#id_payment_variant").parent();
-    payment_block.hide().find("input").prop("checked", false);
-
-    function change_delivery_variant(e) {
-      if (e) {
-        current_delivery = $(this).val();
-      }
-      if (current_delivery) {
-        payment_block.show().find("li").show();
-        payment_block
-        .show()
-        .find("input")
-        .each(function () {
-          var current_element = $(this);
-          if (!delivery_payment_mapping[current_delivery].includes(current_element.val())) {
-            current_element.prop("checked", false).parent().parent().hide();
-          }
-        });
-      }
-    }
-    $("input[name=delivery_variant]").click(change_delivery_variant);
-    change_delivery_variant(undefined);
-  });
-})(jQuery);
-
-$(() => {
-  $(".simple-order-form").on("submit", (event) => {
-    const formData = $(event.currentTarget).serializeArray();
-    if (formData[1].value.length === 0) return;
-    if (formData[2].value.length !== 18) return;
-    if (!/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/.test(formData[3].value)) return;
-
-    if (typeof roistat !== "undefined") {
-      const obj = formData.reduce((acc, item) => ((acc[item.name] = item.value), acc), {});
-      roistat.event.send("orderForm", obj);
-    }
-  });
-});
-
-// cart.js
-
-(function ($) {
-  $(document).ready(function () {
-    $(".input-number").each(function () {
-      let spinner = $(this),
-        input = spinner.find('input[type="number"]'),
-        btnUp = spinner.find(".order-up"),
-        btnDown = spinner.find(".order-down"),
-        min = parseInt(input.attr("min")),
-        max = input.attr("max"),
-        multiplicity = parseInt(input.attr("step")),
-        qty;
-
-      if (max === "inf") {
-        max = Infinity;
-      } else {
-        max = parseInt(max);
-      }
-      btnUp.click(function () {
-        qty = parseInt(input.val());
-        if (qty > max) {
-          input.val(max);
-        } else if (qty < max) {
-          input.val(qty + multiplicity);
-        }
-        input.trigger("change");
-      });
-      input.change(function () {
-        qty = parseInt(input.val());
-        if (qty > 9 && qty <= 99) {
-          btnDown.css("right", 57);
-        } else if (qty > 99 && qty <= 999) {
-          btnDown.css("right", 74);
-        } else if (qty > 999) {
-          btnDown.css("right", 90);
-        } else {
-          btnDown.css("right", 45);
-        }
-      });
-      btnDown.click(function () {
-        qty = parseInt(input.val());
-        if (qty < min) {
-          input.val(min);
-        } else if (qty > min) {
-          input.val(qty - multiplicity);
-        }
-
-        input.trigger("change");
-      });
-    });
-
-    // добавление товара в корзину
-    // ссылка обновления кол-ва товара должна иметь класс add-to-cart
-    $(document).on("click", ".add-to-cart", function (e) {
-      e.preventDefault();
-
-      // Элемент, на который меняется кнопка добавления в корзину
-      // после нажатия и успешного добавления.
-      const CHECKOUT_BTN = `<a href="/cart/"
-                                     class="st-button st-button_primary w-100">Оформить</a>`;
-
-      var $this = $(this),
-        qty = $("input", $this.prev()).val(),
-        url = $this.attr("href");
-
-      if (typeof qty !== "undefined") {
-        url += "?qty=" + qty;
-      }
-
-      $.getJSON(url, function (response) {
-        $this.prev().not(".input-number--lg").hide();
-        $this.replaceWith(CHECKOUT_BTN);
-        if (response.result == "success") {
-          if (window.location.pathname == URLS.cart) {
-            window.location.reload(true);
-          } else {
-            $(".cart-number").html(response.count);
-          }
-        }
-      });
-    });
-
-    // обновление кол-ва товара
-    // ссылка обновления кол-ва товара должна иметь класс cart-qty-control
-    $(".cart-qty-control").click(function (e) {
-      var $this = $(this);
-      updateQtyAjax($this, $this.data("qty-update-url"));
-    });
-
-    // обновление кол-ва товара при вводе в поле
-    $(".cart-qty-control-input").on("input", function (e) {
-      var $this = $(this),
-        updateUrl = $this.data("qty-update-url") + "?qty=" + $this.val();
-      updateQtyAjax($this, updateUrl);
-    });
-
-    function updateQtyAjax(element, url) {
-      $.getJSON(url, function (response) {
-        element.notify(response.message, response.result);
-        if (response.result == "success") {
-          element
-          .closest("span")
-          .next()
-          .html(response.product_price_total + ' <span class="rouble"> ₽</span>');
-          $(".cart-total-price").html(response.total_price + " ₽");
-          $(".cart-total-weight").html(response.total_weight);
-          $(".cart-total-volume").html(response.total_volume);
-          $(element).parent().find("input.cart-qty-control-input").val(response.quantity);
-        }
-      });
-    }
-
-    $(".shopping-cart-item__delete").click(function (e) {
-      var url = $(this).data("cart-delete-url");
-      if (url) {
-        window.location = url;
-      }
-    });
-
-    showLoginFormCheckbox();
-  });
-})(jQuery);
-
-function showLoginFormCheckbox() {
-  $("#account-exists-checkbox").click(function () {
-    var loginForm = $("#commerce-login-form");
-    if (this.checked) {
-      loginForm.show();
-    } else {
-      loginForm.hide();
-    }
-  });
-}
-
-// crm.js
-
-function ajax_send_crm_form(form, key, run_onsubmit = false) {
-  if (run_onsubmit && form.hasAttribute("onsubmit")) {
-    eval(form.getAttribute("onsubmit")); // jshint ignore:line
-  }
-  var data = form.serializeArray();
-  $.ajax({
-    type: "POST",
-    url: form.attr("action"),
-    data: data,
-    dataType: "json",
-  }).done(function (response) {
-    formDoneAction(form, response, key);
-  });
-}
-
-// feedback message request form handler
-//
-$("#feedback-message-request-form").on("submit", function (event) {
-  event.preventDefault();
-  var form = $(this);
-  form.find('input[name="url"]').val(window.location.pathname);
-  ajax_send_crm_form(form, "feedBackForm");
-});
-
-// Вместо того чтобы написать один обработчик для всех тут создан новый как callBack для капчи
-function feedback_form_ajax_submit() {
-  var form = $("#feedback-message-request-form");
-  form.find('input[name="url"]').val(window.location.pathname);
-  ajax_send_crm_form(form, "feedBackForm", true);
-}
-
-// call-merequest form handler
-$("form.callme-request-form").on("submit", function (event) {
-  event.preventDefault();
-  ajax_send_crm_form($(this), "callMeForm");
-});
-
-function callme_form_ajax_submit(token) {
-  let form = $("#crm-callme-request-form");
-  ajax_send_crm_form(form, "callMeForm", true);
-}
-
-function formDoneAction(form, response, key) {
-  var msg;
-  form.find(".error-text").each(function () {
-    $(this).remove();
-  });
-  form.find(".form-group").each(function () {
-    $(this).removeClass("form-group--error");
-  });
-  if (response.success) {
-    if (typeof roistat !== "undefined") {
-      const obj = form.serializeArray().reduce((acc, item) => ((acc[item.name] = item.value), acc), {});
-      roistat.event.send(key, obj);
-    }
-    // дальше очистка полей, без понятия зачем если и так из dom удаляется модалка
-    form.find("input, textarea").val("");
-    $.fancybox.close();
-    msg = response.msg ? response.msg : "<h3>Ваше сообщение отправлено!</h3>";
-    $.fancybox.open(msg);
-  } else {
-    for (var f in response.errors) {
-      msg = '<span class="error-text">' + response.errors[f] + "</span>";
-      var input = form.find('[name="' + f + '"]');
-      var formGroup = input.parent(".form-group");
-      formGroup.addClass("form-group--error");
-      formGroup.append(msg);
-    }
-  }
-}
-
-// gift for phone form handler
-$("form.git-for-phone-form").on("submit", function (event) {
-  event.preventDefault();
-  var form = $(this);
-  var data = form.serializeArray();
-  $.ajax({
-    type: "POST",
-    url: form.attr("action"),
-    data: data,
-    dataType: "json",
-  }).done(function (response) {
-    formDoneAction(form, response, "giftForm");
-  });
-});
-
-// custom_forms.js
-
-let customForm = $("form.custom-form-instance");
-customForm.not(":visible").show();
-
-customForm.on("submit", function (event) {
-  event.preventDefault();
-  ajax_send_custom_form($(this));
-});
-
-function ajax_send_custom_form(jquery_form_obj) {
-  var token = getCookie("csrftoken");
-  jquery_form_obj.find('[name="csrfmiddlewaretoken"]').val(token);
-  var data = jquery_form_obj.serialize();
-
-  $.ajax({
-    type: "POST",
-    url: jquery_form_obj.attr("action"),
-    data: new FormData(jquery_form_obj[0]),
-    processData: false,
-    contentType: false,
-    success: function (response) {
-      formErrAction(jquery_form_obj, response);
-      if (typeof roistat !== "undefined") {
-        const obj = jquery_form_obj.serializeArray().reduce((acc, item) => ((acc[item.name] = item.value), acc), {});
-        roistat.event.send(`customForm - ${jquery_form_obj.attr("action")}`, obj);
-      }
-    },
-  });
-}
-
-function formErrAction(form, response) {
-  var msg;
-  form.find(".error-text").each(function () {
-    $(this).remove();
-  });
-  form.find(".form-group").each(function () {
-    $(this).removeClass("form-group--error");
-  });
-
-  if (response.success) {
-    form.find("input, textarea").val("");
-    $.fancybox.close();
-    for (var indexPod = 0; indexPod < filePods.length; indexPod++) {
-      var filePond = filePods[indexPod];
-      if (filePond.getFiles().length !== 0) {
-        for (var i = 0; i <= filePond.getFiles().length - 1; i++) {
-          filePond.removeFile(filePond.getFiles()[0].id);
-        }
-      }
-    }
-    msg = response.msg ? response.msg : "<h3>Ваше сообщение отправлено!</h3>";
-    $.fancybox.open(msg);
-  } else {
-    for (var f in response.errors) {
-      msg = '<span class="error-text">' + response.errors[f] + "</span>";
-      var input = form.find('[name="' + f + '"]');
-      var formGroup = input.parent(".form-group");
-      formGroup.addClass("form-group--error");
-      formGroup.append(msg);
-    }
-  }
-}
-
-// subscruption.js
-
-$("#footer-subscription-form").on("submit", function (event) {
-  event.preventDefault();
-  var $this = $(this),
-    msg = "";
-  $.post($this.attr("action"), $this.serialize(), function (data) {
-    if (data.success) {
-      msg = '<p style="color: white">Поздравляем! Вы успешно подписались на нашу рассылку.</p>';
-      if (typeof roistat !== "undefined") {
-        const obj = $this.serializeArray().reduce((acc, item) => ((acc[item.name] = item.value), acc), {});
-        roistat.event.send(`newsSubForm`, obj);
-      }
-    } else if (data.errors) {
-      for (var e in data.errors) {
-        msg = msg + '<p style="color: white">' + data.errors[e] + "</p>";
-      }
-    }
-    $this.html(msg);
-  });
-});
-
-
-// product-modifications.js
-
-jQuery(document).ready(function($){
-  $('.product-modification-params select').each( function() {
-      $(this).change(function(e) {
-          e.preventDefault();
-          goToUrl(this.selectedOptions[0]);
-      })
-
-  });
-
-  $('.product-modification-params a').each( function() {
-      $(this).click(
-          function(e) {
-              e.preventDefault();
-              goToUrl(this);
-          }
-      )
-  });
-});
-
-
-function goToUrl(obj) {
-  const formData = new FormData();
-  let productInfoObj = obj.closest('[data-ajax-url]');
-  if (!productInfoObj) {
-      return;
-  }
-
-  formData.append('active_id', obj.dataset.paramId);
-  formData.append('active_value', obj.dataset.paramValue);
-
-
-  let current = obj;
-  document.querySelectorAll('.active[data-param-id]').forEach((el) => {
-      if (el.dataset.paramId !== current.dataset.paramId && 'paramValue' in el.dataset) {
-          formData.append(el.dataset.paramId, el.dataset.paramValue);
-      }
-  });
-  // console.log(formData)
-
-  fetch(productInfoObj.dataset.ajaxUrl, {
-      body: formData,
-      method: 'post'
-  }).then(response => response.json()).then(data => {
-      if (data.url) {
-          window.location = data.url;
-      }
-  });
-}
-
-// bnrs.js
-
-(function ($) {
-  $(document).ready(function() {
-      var targetImgs = $('.bnr-image-for-page');
-      if (typeof BNR_URLS !== 'undefined' && targetImgs.length) {
-          targetImgs.each(function( index ) {
-              bnrCounterUpd($(this), BNR_URLS.inc_views);
-          });
-
-          targetImgs.click(function (e) {
-              if($(e.target).closest('a').length){
-                  bnrCounterUpd($(this), BNR_URLS.inc_clicks);
-              }
-          });
-      }
-
-  });
-})(jQuery);
-
-function bnrCounterUpd(imgElem, updUrl) {
-  if (updUrl) {
-      let pk = imgElem.data('bnr-pk');
-      if (pk) {
-          $.post(updUrl, {'pk': pk});
-      }
   }
 }
