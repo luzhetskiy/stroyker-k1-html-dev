@@ -5,6 +5,8 @@ import "owl.carousel";
 import "mmenu-js";
 import "slick-carousel";
 import "@fancyapps/fancybox";
+import "inputmask";
+import "notifyjs";
 
 const breakpoints = {
   xs: 0,
@@ -2827,3 +2829,656 @@ function find_my_div_mob() {
     }
   }
 }
+
+// ajax-setup.js
+
+$.ajaxSetup({
+  beforeSend: function (xhr, settings) {
+    if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+      // Only send the token to relative URLs i.e. locally.
+      xhr.setRequestHeader("X-CSRFToken", getCookie("csrftoken"));
+    }
+  },
+});
+
+function getCookie(name) {
+  var cookieValue = null;
+  if (document.cookie && document.cookie != "") {
+    var cookies = document.cookie.split(";");
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = jQuery.trim(cookies[i]);
+      // Does this cookie string begin with the name we want?
+      if (cookie.substring(0, name.length + 1) == name + "=") {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
+
+// common.js
+
+$(document).ready(function () {
+  if (window.innerWidth < 767) {
+    $(".product-item.product-item--wide").removeClass("product-item--wide");
+  }
+  var sysMessages = $("#system-messages");
+  if (sysMessages) {
+    $.fancybox.open(sysMessages);
+  }
+  // phone mask init
+  $('.phone:not(".skip-mask")').inputmask("+9 (999) 999-99-99", {
+    placeholder: "",
+    showMaskOnHover: false,
+  });
+  $('.phone:not(".skip-mask")').on("input", function () {
+    const value = $(this).val();
+    if (value[1] == 8) {
+      $(this).val(7 + value.slice(2));
+      return;
+    }
+    if (value[1] != 8 && value[1] != 7 && value[1]) {
+      $(this).val("7" + value);
+      return;
+    }
+  });
+
+  headerPhones();
+});
+
+function externalLinksInit() {
+  var links = document.getElementsByTagName("a");
+  for (var i = 0; i < links.length; i++) {
+    if (links[i].href.startsWith("http") && linkIsExternal(links[i])) {
+      links[i].setAttribute("target", "_blank");
+    }
+  }
+}
+
+function linkIsExternal(link_element) {
+  return link_element.host !== window.location.host;
+}
+
+function headerPhones() {
+  let phoneToggle = document.querySelector(".header-phones__toggle");
+  if (phoneToggle) {
+    phoneToggle.addEventListener("click", function () {
+      $(".header-phones.top-header__phones .header-phones__inner").show();
+    });
+  }
+}
+
+// frontpage.js
+
+$(document).ready(function () {
+  $(".category-slider .owl-carousel").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true,
+    items: 5,
+    responsive: {
+      0: {
+        nav: false,
+        dots: true,
+        items: 1,
+      },
+      479: {
+        nav: false,
+        dots: true,
+        items: 3,
+      },
+      768: {
+        nav: true,
+        dots: false,
+        items: 4,
+      },
+      992: {
+        nav: true,
+        items: 5,
+      },
+    },
+  });
+});
+
+// catalog.js
+
+const filterForm = $("#catalog_filter_form");
+
+jQuery(document).ready(function ($) {
+  updRangeSliders();
+
+  filterForm.on("keyup change paste", "input, select, textarea", function () {
+    handleFilterChange(this);
+  });
+
+  // Remove empty fields from GET forms
+  filterForm.submit(function () {
+    var $this = $(this);
+    $this
+    .find(":input")
+    .filter(function () {
+      return !this.value;
+    })
+    .attr("disabled", "disabled");
+
+    prepareFilterForm();
+    return true;
+  });
+
+  // Un-disable form fields when page loads, in case they click back after submission
+  filterForm.find(":input").not(".range-input").prop("disabled", false);
+
+  $(".found-cheaper-panel").on("click", ".close-panel", function () {
+    document.cookie = "found_chaper_panel_closed=1; path=/";
+  });
+
+  const questionFormBoxId = "question-main";
+
+  $('[href="#' + questionFormBoxId + '"]').click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: $(this.hash).offset().top - 80,
+      },
+      300,
+      function () {}
+    );
+
+    var $this = $(this),
+      message;
+    if ($this.hasClass("smoothScroll")) {
+      prepareQestionForm(questionFormBoxId, "Нашли дешевле?", "Где дешевле?");
+    } else {
+      if ($this.hasClass("not-available")) {
+        message = $this.attr("data-form-main-msg") ? $this.data("form-main-msg") : "Когда будет в наличии?";
+        message += "\n\n" + $this.data("product-name");
+        message += '\n"Артикул: ' + $this.data("product-code") + ".";
+
+        prepareQestionForm(questionFormBoxId, $this.data("form-subject"), "Ваш вопрос", message);
+      } else if ($this.hasClass("not-price")) {
+        message = $this.attr("data-form-main-msg") ? $this.data("form-main-msg") : "Хочу узнать цену.";
+        message += "\n\n" + $this.data("product-name");
+        message += "\nАртикул: " + $this.data("product-code") + ".";
+        prepareQestionForm(questionFormBoxId, $this.data("form-subject"), "Ваш вопрос", message);
+      }
+    }
+  });
+
+  function prepareQestionForm(form_id, title, placeholder, message = "") {
+    const questionFormBox = $("#" + form_id);
+    if (questionFormBox.length) {
+      if (title) {
+        $(".content-title", questionFormBox).text(title);
+      }
+      if (placeholder) {
+        $('label[for="message"] .content-name', questionFormBox).text(placeholder);
+      }
+      $("textarea", questionFormBox).text(message);
+    }
+  }
+
+  // catalog product list sort (mobile mode)
+  const sortingList = $('.dropdown-select-ul[data-role="products-header-sort-mobile"]');
+  sortingList.on("DOMSubtreeModified", "li.selected", function () {
+    var url = $(this).data("value");
+    if (url.length > 0) {
+      location = url;
+    }
+  });
+
+  // scroll to target tag
+  $('a[rel^="tab"]').click(function () {
+    var targetTab = $('.tabs li[rel="' + $(this).attr("rel") + '"]:visible');
+
+    if (!targetTab.length) {
+      targetTab = $('.tab_drawer_heading[rel="' + $(this).attr("rel") + '"]:visible');
+    }
+
+    if (targetTab.length) {
+      $("body,html").animate(
+        {
+          scrollTop: targetTab.offset().top,
+        },
+        800 //speed
+      );
+    }
+  });
+
+  $(".view-sort-item").on("click", function () {
+    if ($(this).is("[data-list-view-mode]")) {
+      Cookies.set("list_view_mode", this.dataset.listViewMode);
+    }
+  });
+
+  $("#catalog_filter_form input").on("change", (event) => {
+    $(event.currentTarget).attr("data-active-input", "");
+    console.log("change");
+  });
+  $("#catalog_filter_form input").on("input", (event) => {
+    $(event.currentTarget).attr("data-active-input", "");
+    console.log("input");
+  });
+});
+
+function prepareFilterForm() {
+  // clear price_range values
+  var rangeInputs = document.querySelectorAll(".range-input");
+  rangeInputs.forEach(function (item) {
+    if (!item.disabled) {
+      item.value = item.value.replace(/[^0-9]+/g, "");
+    }
+  });
+}
+
+function handleFilterChange(elem) {
+  var $this = $(elem);
+  filterForm
+  .find(":input")
+  .not("button")
+  .filter(function () {
+    if (this.classList.contains("range-input")) {
+      return parseInt(this.dataset.initValue) === parseInt(this.value);
+    }
+    return !this.value;
+  })
+  .attr("disabled", "disabled");
+  prepareFilterForm();
+  var formData = filterForm.serialize();
+  var url = filterForm.attr("action");
+  if (formData.length) {
+    url += "?" + formData;
+  }
+  $.getJSON(url, function (response) {
+    var filterShowAll = $(".filter-show-all");
+    if (filterShowAll.length > 0) {
+      filterShowAll.hide();
+      filterShowAll.show();
+      filterShowAll.insertAfter($this.parent());
+      if (response.count) {
+        filterShowAll.html('<a href="' + url + '">Показать ' + response.count + "</a>");
+      } else {
+        filterShowAll.html('<a href="#">Найдено 0</a>');
+      }
+      setTimeout(function () {
+        filterShowAll.not(":hover").fadeOut("fast");
+      }, 5000);
+    }
+  });
+}
+
+function updRangeSliders() {
+  $(".filter-range").each(function () {
+    var filter = this,
+      keypressSliders = $(".range-slider");
+
+    $(keypressSliders).each(function (index, keypressSlider) {
+      if (keypressSlider !== null && keypressSlider.noUiSlider) {
+        var rangeInputs = filter.querySelectorAll(".range-input");
+        keypressSlider.noUiSlider.on("update", function () {
+          var minInput = rangeInputs[0].value.replace(/[^0-9]+/g, "") === rangeInputs[0].dataset.minValue;
+          var maxInput = rangeInputs[1].value.replace(/[^0-9]+/g, "") === rangeInputs[1].dataset.maxValue;
+          for (var i = 0; i < rangeInputs.length; i++) {
+            rangeInputs[i].disabled = minInput && maxInput;
+          }
+        });
+        keypressSlider.noUiSlider.on("set", function () {
+          handleFilterChange(keypressSlider);
+        });
+      }
+    });
+  });
+}
+
+// cart.simple.js
+
+(function ($) {
+  $(document).ready(function () {
+    var delivery_payment_mapping = JSON.parse(document.getElementById("delivery_payment_mapping").textContent);
+    var current_delivery = $("input[name=delivery_variant]:checked").val();
+    var payment_block = $("#id_payment_variant").parent();
+    payment_block.hide().find("input").prop("checked", false);
+
+    function change_delivery_variant(e) {
+      if (e) {
+        current_delivery = $(this).val();
+      }
+      if (current_delivery) {
+        payment_block.show().find("li").show();
+        payment_block
+        .show()
+        .find("input")
+        .each(function () {
+          var current_element = $(this);
+          if (!delivery_payment_mapping[current_delivery].includes(current_element.val())) {
+            current_element.prop("checked", false).parent().parent().hide();
+          }
+        });
+      }
+    }
+    $("input[name=delivery_variant]").click(change_delivery_variant);
+    change_delivery_variant(undefined);
+  });
+})(jQuery);
+
+$(() => {
+  $(".simple-order-form").on("submit", (event) => {
+    const formData = $(event.currentTarget).serializeArray();
+    if (formData[1].value.length === 0) return;
+    if (formData[2].value.length !== 18) return;
+    if (!/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/.test(formData[3].value)) return;
+
+    if (typeof roistat !== "undefined") {
+      const obj = formData.reduce((acc, item) => ((acc[item.name] = item.value), acc), {});
+      roistat.event.send("orderForm", obj);
+    }
+  });
+});
+
+// cart.js
+
+(function ($) {
+  $(document).ready(function () {
+    $(".input-number").each(function () {
+      let spinner = $(this),
+        input = spinner.find('input[type="number"]'),
+        btnUp = spinner.find(".order-up"),
+        btnDown = spinner.find(".order-down"),
+        min = parseInt(input.attr("min")),
+        max = input.attr("max"),
+        multiplicity = parseInt(input.attr("step")),
+        qty;
+
+      if (max === "inf") {
+        max = Infinity;
+      } else {
+        max = parseInt(max);
+      }
+      btnUp.click(function () {
+        qty = parseInt(input.val());
+        if (qty > max) {
+          input.val(max);
+        } else if (qty < max) {
+          input.val(qty + multiplicity);
+        }
+        input.trigger("change");
+      });
+      input.change(function () {
+        qty = parseInt(input.val());
+        if (qty > 9 && qty <= 99) {
+          btnDown.css("right", 57);
+        } else if (qty > 99 && qty <= 999) {
+          btnDown.css("right", 74);
+        } else if (qty > 999) {
+          btnDown.css("right", 90);
+        } else {
+          btnDown.css("right", 45);
+        }
+      });
+      btnDown.click(function () {
+        qty = parseInt(input.val());
+        if (qty < min) {
+          input.val(min);
+        } else if (qty > min) {
+          input.val(qty - multiplicity);
+        }
+
+        input.trigger("change");
+      });
+    });
+
+    // добавление товара в корзину
+    // ссылка обновления кол-ва товара должна иметь класс add-to-cart
+    $(document).on("click", ".add-to-cart", function (e) {
+      e.preventDefault();
+
+      // Элемент, на который меняется кнопка добавления в корзину
+      // после нажатия и успешного добавления.
+      const CHECKOUT_BTN = `<a href="/cart/"
+                                     class="st-button st-button_primary w-100">Оформить</a>`;
+
+      var $this = $(this),
+        qty = $("input", $this.prev()).val(),
+        url = $this.attr("href");
+
+      if (typeof qty !== "undefined") {
+        url += "?qty=" + qty;
+      }
+
+      $.getJSON(url, function (response) {
+        $this.prev().not(".input-number--lg").hide();
+        $this.replaceWith(CHECKOUT_BTN);
+        if (response.result == "success") {
+          if (window.location.pathname == URLS.cart) {
+            window.location.reload(true);
+          } else {
+            $(".cart-number").html(response.count);
+          }
+        }
+      });
+    });
+
+    // обновление кол-ва товара
+    // ссылка обновления кол-ва товара должна иметь класс cart-qty-control
+    $(".cart-qty-control").click(function (e) {
+      var $this = $(this);
+      updateQtyAjax($this, $this.data("qty-update-url"));
+    });
+
+    // обновление кол-ва товара при вводе в поле
+    $(".cart-qty-control-input").on("input", function (e) {
+      var $this = $(this),
+        updateUrl = $this.data("qty-update-url") + "?qty=" + $this.val();
+      updateQtyAjax($this, updateUrl);
+    });
+
+    function updateQtyAjax(element, url) {
+      $.getJSON(url, function (response) {
+        element.notify(response.message, response.result);
+        if (response.result == "success") {
+          element
+          .closest("span")
+          .next()
+          .html(response.product_price_total + ' <span class="rouble"> ₽</span>');
+          $(".cart-total-price").html(response.total_price + " ₽");
+          $(".cart-total-weight").html(response.total_weight);
+          $(".cart-total-volume").html(response.total_volume);
+          $(element).parent().find("input.cart-qty-control-input").val(response.quantity);
+        }
+      });
+    }
+
+    $(".shopping-cart-item__delete").click(function (e) {
+      var url = $(this).data("cart-delete-url");
+      if (url) {
+        window.location = url;
+      }
+    });
+
+    showLoginFormCheckbox();
+  });
+})(jQuery);
+
+function showLoginFormCheckbox() {
+  $("#account-exists-checkbox").click(function () {
+    var loginForm = $("#commerce-login-form");
+    if (this.checked) {
+      loginForm.show();
+    } else {
+      loginForm.hide();
+    }
+  });
+}
+
+// crm.js
+
+function ajax_send_crm_form(form, key, run_onsubmit = false) {
+  if (run_onsubmit && form.hasAttribute("onsubmit")) {
+    eval(form.getAttribute("onsubmit")); // jshint ignore:line
+  }
+  var data = form.serializeArray();
+  $.ajax({
+    type: "POST",
+    url: form.attr("action"),
+    data: data,
+    dataType: "json",
+  }).done(function (response) {
+    formDoneAction(form, response, key);
+  });
+}
+
+// feedback message request form handler
+//
+$("#feedback-message-request-form").on("submit", function (event) {
+  event.preventDefault();
+  var form = $(this);
+  form.find('input[name="url"]').val(window.location.pathname);
+  ajax_send_crm_form(form, "feedBackForm");
+});
+
+// Вместо того чтобы написать один обработчик для всех тут создан новый как callBack для капчи
+function feedback_form_ajax_submit() {
+  var form = $("#feedback-message-request-form");
+  form.find('input[name="url"]').val(window.location.pathname);
+  ajax_send_crm_form(form, "feedBackForm", true);
+}
+
+// call-merequest form handler
+$("form.callme-request-form").on("submit", function (event) {
+  event.preventDefault();
+  ajax_send_crm_form($(this), "callMeForm");
+});
+
+function callme_form_ajax_submit(token) {
+  let form = $("#crm-callme-request-form");
+  ajax_send_crm_form(form, "callMeForm", true);
+}
+
+function formDoneAction(form, response, key) {
+  var msg;
+  form.find(".error-text").each(function () {
+    $(this).remove();
+  });
+  form.find(".form-group").each(function () {
+    $(this).removeClass("form-group--error");
+  });
+  if (response.success) {
+    if (typeof roistat !== "undefined") {
+      const obj = form.serializeArray().reduce((acc, item) => ((acc[item.name] = item.value), acc), {});
+      roistat.event.send(key, obj);
+    }
+    // дальше очистка полей, без понятия зачем если и так из dom удаляется модалка
+    form.find("input, textarea").val("");
+    $.fancybox.close();
+    msg = response.msg ? response.msg : "<h3>Ваше сообщение отправлено!</h3>";
+    $.fancybox.open(msg);
+  } else {
+    for (var f in response.errors) {
+      msg = '<span class="error-text">' + response.errors[f] + "</span>";
+      var input = form.find('[name="' + f + '"]');
+      var formGroup = input.parent(".form-group");
+      formGroup.addClass("form-group--error");
+      formGroup.append(msg);
+    }
+  }
+}
+
+// gift for phone form handler
+$("form.git-for-phone-form").on("submit", function (event) {
+  event.preventDefault();
+  var form = $(this);
+  var data = form.serializeArray();
+  $.ajax({
+    type: "POST",
+    url: form.attr("action"),
+    data: data,
+    dataType: "json",
+  }).done(function (response) {
+    formDoneAction(form, response, "giftForm");
+  });
+});
+
+// custom_forms.js
+
+let customForm = $("form.custom-form-instance");
+customForm.not(":visible").show();
+
+customForm.on("submit", function (event) {
+  event.preventDefault();
+  ajax_send_custom_form($(this));
+});
+
+function ajax_send_custom_form(jquery_form_obj) {
+  var token = getCookie("csrftoken");
+  jquery_form_obj.find('[name="csrfmiddlewaretoken"]').val(token);
+  var data = jquery_form_obj.serialize();
+
+  $.ajax({
+    type: "POST",
+    url: jquery_form_obj.attr("action"),
+    data: new FormData(jquery_form_obj[0]),
+    processData: false,
+    contentType: false,
+    success: function (response) {
+      formErrAction(jquery_form_obj, response);
+      if (typeof roistat !== "undefined") {
+        const obj = jquery_form_obj.serializeArray().reduce((acc, item) => ((acc[item.name] = item.value), acc), {});
+        roistat.event.send(`customForm - ${jquery_form_obj.attr("action")}`, obj);
+      }
+    },
+  });
+}
+
+function formErrAction(form, response) {
+  var msg;
+  form.find(".error-text").each(function () {
+    $(this).remove();
+  });
+  form.find(".form-group").each(function () {
+    $(this).removeClass("form-group--error");
+  });
+
+  if (response.success) {
+    form.find("input, textarea").val("");
+    $.fancybox.close();
+    for (var indexPod = 0; indexPod < filePods.length; indexPod++) {
+      var filePond = filePods[indexPod];
+      if (filePond.getFiles().length !== 0) {
+        for (var i = 0; i <= filePond.getFiles().length - 1; i++) {
+          filePond.removeFile(filePond.getFiles()[0].id);
+        }
+      }
+    }
+    msg = response.msg ? response.msg : "<h3>Ваше сообщение отправлено!</h3>";
+    $.fancybox.open(msg);
+  } else {
+    for (var f in response.errors) {
+      msg = '<span class="error-text">' + response.errors[f] + "</span>";
+      var input = form.find('[name="' + f + '"]');
+      var formGroup = input.parent(".form-group");
+      formGroup.addClass("form-group--error");
+      formGroup.append(msg);
+    }
+  }
+}
+
+// subscruption.js
+
+$("#footer-subscription-form").on("submit", function (event) {
+  event.preventDefault();
+  var $this = $(this),
+    msg = "";
+  $.post($this.attr("action"), $this.serialize(), function (data) {
+    if (data.success) {
+      msg = '<p style="color: white">Поздравляем! Вы успешно подписались на нашу рассылку.</p>';
+      if (typeof roistat !== "undefined") {
+        const obj = $this.serializeArray().reduce((acc, item) => ((acc[item.name] = item.value), acc), {});
+        roistat.event.send(`newsSubForm`, obj);
+      }
+    } else if (data.errors) {
+      for (var e in data.errors) {
+        msg = msg + '<p style="color: white">' + data.errors[e] + "</p>";
+      }
+    }
+    $this.html(msg);
+  });
+});
