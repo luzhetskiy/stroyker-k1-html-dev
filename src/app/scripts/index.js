@@ -5,7 +5,7 @@ import "owl.carousel";
 import "mmenu-js";
 import "slick-carousel";
 import "@fancyapps/fancybox";
-import "inputmask";
+import "inputmask/dist/jquery.inputmask";
 import "notifyjs";
 
 const breakpoints = {
@@ -3133,6 +3133,7 @@ function updRangeSliders() {
 
 (function ($) {
   $(document).ready(function () {
+    if (!document.getElementById("delivery_payment_mapping")) return
     var delivery_payment_mapping = JSON.parse(document.getElementById("delivery_payment_mapping").textContent);
     var current_delivery = $("input[name=delivery_variant]:checked").val();
     var payment_block = $("#id_payment_variant").parent();
