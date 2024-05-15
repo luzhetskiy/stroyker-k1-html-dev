@@ -21,6 +21,9 @@ module.exports = {
       "@images": path.resolve(__dirname, "public/images"),
     },
   },
+  optimization: {
+    minimize: false
+  },
   output: {
     chunkFilename: "js/[name][id].js", // [chunkhash]
     assetModuleFilename: "[name][ext][query]", // [hash]
@@ -52,13 +55,13 @@ module.exports = {
       entry: "src/pages",
       js: {
         // output filename of compiled JavaScript, used if `inline` option is false (defaults)
-        filename: "scripts/[name].js",
-        inline: mode === "production", // inlines JS into HTML
+        filename: "js/[name].js",
+        // inline: true, // inlines JS into HTML
       },
       css: {
         // output filename of extracted CSS, used if `inline` option is false (defaults)
-        filename: "styles/[name].css",
-        inline: mode === "production", // inlines CSS into HTML
+        filename: "css/[name].css",
+        // inline: true, // inlines CSS into HTML
       },
       loaderOptions: {
         preprocessor: "eta",

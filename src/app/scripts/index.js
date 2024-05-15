@@ -16,95 +16,7 @@ const breakpoints = {
   xl: 1280,
 };
 
-function throttle(delay, callback, options) {
-  var _ref = options || {},
-    _ref$noTrailing = _ref.noTrailing,
-    noTrailing = _ref$noTrailing === void 0 ? false : _ref$noTrailing,
-    _ref$noLeading = _ref.noLeading,
-    noLeading = _ref$noLeading === void 0 ? false : _ref$noLeading,
-    _ref$debounceMode = _ref.debounceMode,
-    debounceMode = _ref$debounceMode === void 0 ? undefined : _ref$debounceMode;
-
-  var timeoutID;
-  var cancelled = false;
-
-  var lastExec = 0;
-
-  function clearExistingTimeout() {
-    if (timeoutID) {
-      clearTimeout(timeoutID);
-    }
-  }
-
-  function cancel(options) {
-    var _ref2 = options || {},
-      _ref2$upcomingOnly = _ref2.upcomingOnly,
-      upcomingOnly = _ref2$upcomingOnly === void 0 ? false : _ref2$upcomingOnly;
-
-    clearExistingTimeout();
-    cancelled = !upcomingOnly;
-  }
-
-  function wrapper() {
-    for (var _len = arguments.length, arguments_ = new Array(_len), _key = 0; _key < _len; _key++) {
-      arguments_[_key] = arguments[_key];
-    }
-
-    var self = this;
-    var elapsed = Date.now() - lastExec;
-
-    if (cancelled) {
-      return;
-    }
-
-    function exec() {
-      lastExec = Date.now();
-      callback.apply(self, arguments_);
-    }
-
-    function clear() {
-      timeoutID = undefined;
-    }
-
-    if (!noLeading && debounceMode && !timeoutID) {
-      exec();
-    }
-
-    clearExistingTimeout();
-
-    if (debounceMode === undefined && elapsed > delay) {
-      if (noLeading) {
-        lastExec = Date.now();
-
-        if (!noTrailing) {
-          timeoutID = setTimeout(debounceMode ? clear : exec, delay);
-        }
-      } else {
-        exec();
-      }
-    } else if (noTrailing !== true) {
-      timeoutID = setTimeout(debounceMode ? clear : exec, debounceMode === undefined ? delay - elapsed : delay);
-    }
-  }
-
-  wrapper.cancel = cancel;
-
-  return wrapper;
-}
-
-function debounce(delay, callback, options) {
-  var _ref = options || {},
-    _ref$atBegin = _ref.atBegin,
-    atBegin = _ref$atBegin === void 0 ? false : _ref$atBegin;
-
-  return throttle(delay, callback, {
-    debounceMode: atBegin !== false,
-  });
-}
-
 $(".acc__toggle:not(.not_toggle)").click(function (e) {
-  // e.preventDefault();
-
   var $this = $(this);
   if ($this.next().hasClass("show")) {
     $this.next().removeClass("show");
@@ -240,7 +152,7 @@ $(".partners-slider .owl-carousel").owlCarousel({
   },
 });
 
-(() => {
+$(() => {
   const buttonDefaultView = $(".button1");
   const buttonWideView = $(".button2");
   const buttonLineView = $(".button3");
@@ -3483,3 +3395,84 @@ $("#footer-subscription-form").on("submit", function (event) {
     $this.html(msg);
   });
 });
+
+
+// product-modifications.js
+
+jQuery(document).ready(function($){
+  $('.product-modification-params select').each( function() {
+      $(this).change(function(e) {
+          e.preventDefault();
+          goToUrl(this.selectedOptions[0]);
+      })
+
+  });
+
+  $('.product-modification-params a').each( function() {
+      $(this).click(
+          function(e) {
+              e.preventDefault();
+              goToUrl(this);
+          }
+      )
+  });
+});
+
+
+function goToUrl(obj) {
+  const formData = new FormData();
+  let productInfoObj = obj.closest('[data-ajax-url]');
+  if (!productInfoObj) {
+      return;
+  }
+
+  formData.append('active_id', obj.dataset.paramId);
+  formData.append('active_value', obj.dataset.paramValue);
+
+
+  let current = obj;
+  document.querySelectorAll('.active[data-param-id]').forEach((el) => {
+      if (el.dataset.paramId !== current.dataset.paramId && 'paramValue' in el.dataset) {
+          formData.append(el.dataset.paramId, el.dataset.paramValue);
+      }
+  });
+  // console.log(formData)
+
+  fetch(productInfoObj.dataset.ajaxUrl, {
+      body: formData,
+      method: 'post'
+  }).then(response => response.json()).then(data => {
+      if (data.url) {
+          window.location = data.url;
+      }
+  });
+}
+
+// bnrs.js
+
+(function ($) {
+  $(document).ready(function() {
+      var targetImgs = $('.bnr-image-for-page');
+      if (typeof BNR_URLS !== 'undefined' && targetImgs.length) {
+          targetImgs.each(function( index ) {
+              bnrCounterUpd($(this), BNR_URLS.inc_views);
+          });
+
+          targetImgs.click(function (e) {
+              if($(e.target).closest('a').length){
+                  bnrCounterUpd($(this), BNR_URLS.inc_clicks);
+              }
+          });
+      }
+
+  });
+})(jQuery);
+
+function bnrCounterUpd(imgElem, updUrl) {
+  if (updUrl) {
+      let pk = imgElem.data('bnr-pk');
+      if (pk) {
+          $.post(updUrl, {'pk': pk});
+      }
+  }
+}
