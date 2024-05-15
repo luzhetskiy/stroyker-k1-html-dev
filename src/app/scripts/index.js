@@ -12,10 +12,6 @@ import '@src/shared/libs/notify/notify.js'
 window.jQuery = jQuery;
 window.$ = jQuery;
 
-
-$('button').notify(true, 'test')
-
-
 window.breakpoints = {
   xs: 0,
   sm: 576,
