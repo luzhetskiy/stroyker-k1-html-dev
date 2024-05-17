@@ -180,16 +180,6 @@ $(document).ready(function () {
 
   // всплывашка
 
-  const parameterModal = document.querySelector(".parameter-modal-content");
-
-  tippy("#parameter-modal-btn", {
-    content: parameterModal.innerHTML,
-    allowHTML: true,
-    theme: "light",
-    placement: "bottom-start",
-    trigger: "click",
-  });
-
   const autoModal = document.querySelector(".auto-modal-content");
 
   tippy("#auto-modal-btn", {
@@ -201,23 +191,6 @@ $(document).ready(function () {
   });
 
   // модальное окно в мобилке
-
-  const parameterOpenButton = document.querySelector(
-    ".parameter__modal-button-mobile"
-  );
-  const parameterModalMobile = document.querySelector(
-    ".po-parametram__modal-mobile"
-  );
-  const parameterCloseButton = document.querySelector(
-    ".po-parametram-close-button"
-  );
-
-  parameterOpenButton.addEventListener("click", function () {
-    parameterModalMobile.style.display = "block";
-  });
-  parameterCloseButton.addEventListener("click", function () {
-    parameterModalMobile.style.display = "none";
-  });
 
   const autoOpenButton = document.querySelector(".auto__modal-button-mobile");
   const autoModalMobile = document.querySelector(".po-auto__modal-mobile");
