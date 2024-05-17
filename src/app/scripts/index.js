@@ -1,16 +1,14 @@
 import jQuery from "jquery";
 import wNumb from "wnumb";
 import noUiSlider from "nouislider";
+import tippy from 'tippy.js';
 import "owl.carousel";
 import "mmenu-js";
 import "slick-carousel";
 import "@fancyapps/fancybox";
 import "inputmask/dist/jquery.inputmask";
-import '@src/shared/libs/notify/notify.js'
 
-
-window.jQuery = jQuery;
-window.$ = jQuery;
+window.tippy = tippy
 
 window.breakpoints = {
   xs: 0,
@@ -2588,3 +2586,38 @@ function headerPhones() {
     });
   }
 }
+
+// frontpage.js
+
+$(document).ready(function () {
+  $('.category-slider .owl-carousel').owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: true,
+      items: 5,
+      responsive: {
+          0: {
+              nav: false,
+              dots: true,
+              items: 1
+          },
+          479: {
+              nav: false,
+              dots: true,
+              items: 3
+          },
+          768: {
+              nav: true,
+              dots: false,
+              items: 4
+          },
+          992: {
+              nav: true,
+              items: 5
+          }
+      }
+  });
+});
+
+
+

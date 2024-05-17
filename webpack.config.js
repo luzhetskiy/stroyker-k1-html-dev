@@ -21,9 +21,28 @@ module.exports = {
       "@images": path.resolve(__dirname, "public/images"),
     },
   },
-  // optimization: {
-  //   minimize: false
-  // },
+  optimization: {
+    // minimize: false,
+    mergeDuplicateChunks: true,
+    splitChunks: {
+      cacheGroups: {
+        app: {
+          test: /\.(js|ts)$/, // split only JS files
+          chunks: 'all', // <- use it only in cache groups
+          
+          name({ context }, chunks, groupName) {
+            // save split chunks of the node module under package name
+            if (/[\\/]node_modules[\\/]/.test(context)) {
+              const moduleName = context.match(/[\\/]node_modules[\\/](.*?)(?:[\\/]|$)/)[1].replace('@', '');
+              return `${moduleName}`;
+            }
+            // save split chunks of the application
+            return groupName;
+          },
+        },
+      },
+    },
+  },
   output: {
     chunkFilename: "js/[name][id].js", // [chunkhash]
     assetModuleFilename: "[name][ext][query]", // [hash]
@@ -73,6 +92,17 @@ module.exports = {
   ],
   module: {
     rules: [
+      {
+        test: require.resolve("jquery"),
+        use: [
+          {
+            loader: "expose-loader",
+            options: {
+              exposes: ["$", "jQuery"],
+            },
+          },
+        ],
+      },
       {
         test: /\.(?:js|mjs|cjs)$/,
         exclude: /node_modules/,
