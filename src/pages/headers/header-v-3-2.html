@@ -1,48 +1,33 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Главная</title>
 
-  <title>Главная</title>
+    <link rel="stylesheet" href="@src/../node_modules/mmenu-js/dist/mmenu.css" />
+    <link rel="stylesheet" href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css" />
+    <link rel="stylesheet" href="@src/../node_modules/nouislider/dist/nouislider.css" />
+    <link rel="stylesheet" href="@src/../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="@src/../node_modules/tippy.js/dist/tippy.css" />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+    <script defer src="@src/app/main.js"></script>
+  </head>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="../libs/fancy-box/fancy-box.css" />
-  <link rel="stylesheet" href="../libs/mmenu/mmenu.css" />
-  <script defer src="../libs/jquery/jquery.js"></script>
-  <script defer src="../libs/owl-carousel/owl-carousel.js"></script>
-  <script defer src="../libs/slick/slick.js"></script>
-  <script defer src="../libs/mmenu/mmenu.js"></script>
+  <body class="inner-page">
+    <div class="page">
+      <header>
+        <%~ include("components/headers/headers-custom/header-v-3-2.html") %> <%~
+        include("components/menus/mmenu/mmenu.html") %>
+      </header>
 
-  <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="stylesheet" href="../css/headers-custom.css" />
-  <link rel="stylesheet" href="../css/header-v3.css" />
-  <link rel="stylesheet" href="../css/variables.css" />
-  <script defer src="../js/scripts.js"></script>
-  <script defer src="../js/headers-custom.js"></script>
-</head>
+      <main><%~ include("/components/general/example-main-content/example-main-content.html") %></main>
 
-<body class="inner-page">
+      <%~ include("/components/footers/footer/footer.html") %>
+    </div>
 
-  <div class="page">
-    <header>
-      <!-- @include ../../components/headers/headers-custom/header-v-3-2.html -->
-
-      <!-- @include ../../components/menus/mmenu/mmenu.html -->
-    </header>
-
-    <main>
-      <!-- @include ../../components/general/example-main-content/example-main-content.html -->
-    </main>
-
-    <!-- @include ../../components/footers/footer/footer.html -->
-
-  </div>
-
-  <!-- @include ../../components/general/svg-pack/svg-pack.html -->
-
-  <!-- @include ../../components/modals/callme-modal/callme-modal.html -->
-</body>
-
+    <%~ include("/components/general/svg-pack/svg-pack.html") %> <%~
+    include("/components/modals/callme-modal/callme-modal.html") %>
+  </body>
 </html>

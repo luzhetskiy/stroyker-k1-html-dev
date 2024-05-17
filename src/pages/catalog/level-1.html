@@ -7,19 +7,18 @@
 
   <title>Каталог 1 уровень</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="../libs/fancy-box/fancy-box.css" />
-  <script defer src="../libs/jquery/jquery.js"></script>
-  <script defer src="../libs/owl-carousel/owl-carousel.js"></script>
-  <script defer src="../libs/slick/slick.js"></script>
-
-  <link rel="stylesheet" href="../css/styles.css" />
-  <script defer src="../js/scripts.js"></script>
+  <link rel="stylesheet" href="@src/../node_modules/mmenu-js/dist/mmenu.css" />
+    <link rel="stylesheet" href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css" />
+    <link rel="stylesheet" href="@src/../node_modules/nouislider/dist/nouislider.css" />
+    <link rel="stylesheet" href="@src/../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="@src/../node_modules/tippy.js/dist/tippy.css" />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+  <script defer src="@src/app/main.js"></script>
 </head>
 
 <body class="inner-page">
   <header>
-    <!-- @include ../../components/headers/header-default/header-default.html -->
+    <%~ include("/components/headers/header-default/header-default.html") %>
   </header>
 
   <main>
@@ -76,7 +75,7 @@
             <a href="/catalog/kategoriya-tovarov-1/" title="Перейти в раздел 'Проекты домов до 150м2'"
               class="catalog-menu-item">
               <span class="catalog-menu-item__image">
-                <img src="../images/no-img.png" alt="Проекты домов до 150м2" />
+                <img src="@images/no-img.png" alt="Проекты домов до 150м2" />
               </span>
               <span class="catalog-menu-item__name">Проекты домов до 150м2</span>
             </a>
@@ -84,7 +83,7 @@
             <a href="/catalog/kategoriya-tovarov-2/" title="Перейти в раздел 'Проекты домов до 300м2'"
               class="catalog-menu-item">
               <span class="catalog-menu-item__image">
-                <img src="../images/no-img.png" alt="Проекты домов до 300м2" />
+                <img src="@images/no-img.png" alt="Проекты домов до 300м2" />
               </span>
               <span class="catalog-menu-item__name">Проекты домов до 300м2</span>
             </a>
@@ -150,7 +149,7 @@
         <div class="footer-first-column">
           <span class="footer-contact"> Контактные данные сайта (нужно настроить) </span>
           <a href="/" class="logo">
-            <img src="../images/footer-logo.svg" alt="" />
+            <img src="@images/footer-logo.svg" alt="" />
           </a>
           <div class="mobile-show">
             <div class="developer-link">
@@ -231,25 +230,25 @@
         <div class="footer-social">
           <span>
             <a href="#">
-              <img src="../images/instagram-icon.svg" alt="Мы в Instagram" />
+              <img src="@images/instagram-icon.svg" alt="Мы в Instagram" />
             </a>
           </span>
 
           <span>
             <a href="#">
-              <img src="../images/twitter-icon.svg" alt="Мы в Twitter" />
+              <img src="@images/twitter-icon.svg" alt="Мы в Twitter" />
             </a>
           </span>
 
           <span>
             <a href="#">
-              <img src="../images/youtube-icon.svg" alt="Мы на YouTube" />
+              <img src="@images/youtube-icon.svg" alt="Мы на YouTube" />
             </a>
           </span>
 
           <span>
             <a href="#">
-              <img src="../images/vk-icon.svg" alt="Наша страница ВКонтакте" />
+              <img src="@images/vk-icon.svg" alt="Наша страница ВКонтакте" />
             </a>
           </span>
         </div>

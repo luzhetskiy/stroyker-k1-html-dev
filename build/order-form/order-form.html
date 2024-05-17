@@ -1,107 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Форма заказа</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-</head>
-<body>
+    <link rel="stylesheet" href="../css/mmenu.css" />
+    <link rel="stylesheet" href="../css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="../css/nouislider.css" />
+    <link rel="stylesheet" href="../css/font-awesome.css" />
+    <link rel="stylesheet" href="../css/tippy.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <script defer src="../js/jquery.js"></script>
+<script defer src="../js/inputmask.js"></script>
+<script defer src="../js/fancyapps.js"></script>
+<script defer src="../js/mmenu-js.js"></script>
+<script defer src="../js/owl.carousel.js"></script>
+<script defer src="../js/slick-carousel.js"></script>
+<script defer src="../js/app.js"></script>
+<script defer src="../js/tippy.js.js"></script>
+<script defer src="../js/popperjs.js"></script>
+<script defer src="../js/main.js"></script>
+  </head>
+
+  <body>
     <table class="table__print__wrapper">
-        <tbody>
-            <tr>
-                <td width="50%">
-                    <h3>Контакты</h3>
-                    <p>8 (846) 221-00-98</p>
-                    <p>8 (846) 221-00-98</p>
-                    <p>info@faktura-stroybaza.ru</p>
-                    <p>faktura-stroybaza.ru</p>
-                </td>
-                <td width="50%">
-                    <div class="print__quick_order_info">
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>Номер заказа:</td>
-                                    <td>15</td>
-                                </tr>
-                                <tr>
-                                    <td>Дата заказа:</td>
-                                    <td>04.04.2024 20:15</td>
-                                </tr>
-                                <tr>
-                                    <td>Способ оплаты:</td>
-                                    <td>Картой при
-                                        получении</td>
-                                </tr>
-                                <tr>
-                                    <td>Способ доставки:</td>
-                                    <td>Доставка по адресу</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-    
-                </td>
-            </tr>
-            <tr>
-                <td width="50%">
-                    <h3>Комментарий</h3>
-                    <div class="print__comment__wrapper">
-                        <p>Доставка, посёлок черновский</p>
-                    </div>
-                </td>
-                <td width="50%">
-                    <h3>Получатель:</h3>
-                    <p>Алсиня Айратовна Лукманова</p>
-                    <p>+79276898622</p>
-                    <p>alsinya.mingulova@bk.ru</p>
-                </td>
-            </tr>
-            <tr>
-                <td class="print__order__elements" colspan="2" width="100%">
-                    <h1>Заказ №15</h1>
-                    <table class="print__table__header">
-                        <tbody>
-                            <tr>
-                                <td><b>Наименование <br> товара</b></td>
-                                <td><b>Кол-во товара</b></td>
-                                <td><b>Цена за ед., руб.</b></td>
-                                <td><b>Стоимость, руб.</b></td>
-                            </tr>
-                        </tbody>
-                    </table>
+    <tbody>
+        <tr>
+            <td width="50%">
+                <h3>Контакты</h3>
+                <p>8 (846) 221-00-98</p>
+                <p>8 (846) 221-00-98</p>
+                <p>info@faktura-stroybaza.ru</p>
+                <p>faktura-stroybaza.ru</p>
+            </td>
+            <td width="50%">
+                <div class="print__quick_order_info">
                     <table>
                         <tbody>
                             <tr>
-                                <td>ОСБ-ОСП (OSB-3) 2500x1250x 9 мм</td>
+                                <td>Номер заказа:</td>
                                 <td>15</td>
-                                <td>413,30 ₽</td>
-                                <td>6 200,00 ₽</td>
                             </tr>
                             <tr>
-                                <td>Профнастил С8 0,4мм Длина 3м (RAL 7024 - графитовый серый)</td>
-                                <td>1</td>
-                                <td>500,00 ₽</td>
-                                <td>500,00 ₽</td>
+                                <td>Дата заказа:</td>
+                                <td>04.04.2024 20:15</td>
+                            </tr>
+                            <tr>
+                                <td>Способ оплаты:</td>
+                                <td>Картой при
+                                    получении</td>
+                            </tr>
+                            <tr>
+                                <td>Способ доставки:</td>
+                                <td>Доставка по адресу</td>
                             </tr>
                         </tbody>
                     </table>
-                    <table class="print__table__footer">
-                        <tbody>
-                            <tr>
-                                <td>Доставка:</td>
-                                <td>0,00 ₽</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Итоговая сумма:</strong></td>
-                                <td><strong>6 700,00 ₽</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</body>
+                </div>
+
+            </td>
+        </tr>
+        <tr>
+            <td width="50%">
+                <h3>Комментарий</h3>
+                <div class="print__comment__wrapper">
+                    <p>Доставка, посёлок черновский</p>
+                </div>
+            </td>
+            <td width="50%">
+                <h3>Получатель:</h3>
+                <p>Алсиня Айратовна Лукманова</p>
+                <p>+79276898622</p>
+                <p>alsinya.mingulova@bk.ru</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="print__order__elements" colspan="2" width="100%">
+                <h1>Заказ №15</h1>
+                <table class="print__table__header">
+                    <tbody>
+                        <tr>
+                            <td><b>Наименование <br> товара</b></td>
+                            <td><b>Кол-во товара</b></td>
+                            <td><b>Цена за ед., руб.</b></td>
+                            <td><b>Стоимость, руб.</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>ОСБ-ОСП (OSB-3) 2500x1250x 9 мм</td>
+                            <td>15</td>
+                            <td>413,30 ₽</td>
+                            <td>6 200,00 ₽</td>
+                        </tr>
+                        <tr>
+                            <td>Профнастил С8 0,4мм Длина 3м (RAL 7024 - графитовый серый)</td>
+                            <td>1</td>
+                            <td>500,00 ₽</td>
+                            <td>500,00 ₽</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="print__table__footer">
+                    <tbody>
+                        <tr>
+                            <td>Доставка:</td>
+                            <td>0,00 ₽</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Итоговая сумма:</strong></td>
+                            <td><strong>6 700,00 ₽</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>  </body>
 </html>

@@ -26,14 +26,14 @@
     </div>
     <div class="product-card__container">
       <div class="product-card__slideshow">
-        <!-- @include ../../product-slideshow/product-slideshow.html -->
+        <%~ include("/components/products/product-slideshow/product-slideshow.html") %>
       </div>
       <div class="product-card__content">
         <div class="product-card__left">
           <div class="product-card__static-text-wrapper">
             Кастомнное html поле
           </div>
-          <!-- @include ../../product-price-group/product-card__personal-cost.html -->
+          <%~ include("/components/products/product-price-group/product-card__personal-cost.html") %>
           <div class="shopping-cart-product">
             <div class="input-number input-number--lg">
               <div class="order-down"></div>
@@ -42,7 +42,7 @@
             </div>
             <a href="/cart/add/2"
               class="shopping-cart-btn shopping-cart-btn--lg add-to-cart button-theme button-theme_cart custom-icon">
-              <img class="cart-icon" src="../../images/icons/shopping-cart.svg">
+              <img class="cart-icon" src="@images/icons/shopping-cart.svg">
               В корзину
             </a>
           </div>
@@ -66,13 +66,13 @@
                 <p>Чтобы поделиться ссылкой, нажмите на иконку вашей соцсети</p>
                 <div class="share-block__list">
                   <a href="" class="share-social"><img
-                      src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/vk.svg" alt=""></a>
+                      src="@images/vk.svg" alt=""></a>
                   <a href="" class="share-social"><img
-                      src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/tw.svg" alt=""></a>
+                      src="@images/tw.svg" alt=""></a>
                   <a href="" class="share-social"><img
-                      src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/ok.svg" alt=""></a>
+                      src="@images/ok.svg" alt=""></a>
                   <a href="" class="share-social"><img
-                      src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/fb.svg" alt=""></a>
+                      src="@images/fb.svg" alt=""></a>
                 </div>
               </div>
             </div>
@@ -133,7 +133,7 @@
   <div class="product-card-container">
     <div class="product-card-content">
       <div class="g-content_inner g-content_frameless g-content mb-10">
-        <!-- @include ../../additional-products/additional-products.html -->
+        <%~ include("/components/products/additional-products/additional-products.html") %>
       </div>
       <div class="tabs-content">
         <ul class="tabs">
@@ -152,8 +152,7 @@
             <div class="text-page" itemprop="description">
               <div class="row">
                 <div class="col-lg-6 col-md-12">
-                  <img alt=""
-                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png" />
+                  <img alt="" src="@images/banner-content-1.png" />
                 </div>
 
                 <div class="col-lg-6 col-md-12">
@@ -167,13 +166,11 @@
                 </div>
 
                 <div class="col-lg-4 col-md-12">
-                  <img alt=""
-                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png" />
+                  <img alt="" src="@images/banner-content-1.png" />
                 </div>
 
                 <div class="col-lg-4 col-md-12">
-                  <img alt=""
-                    src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png" />
+                  <img alt="" src="@images/banner-content-1.png" />
                 </div>
               </div>
             </div>
@@ -195,8 +192,7 @@
               </li>
 
               <li>
-                <span class="char-text"><span class="char-text__mask">Размер</span></span><span
-                  class="char-text"> 5
+                <span class="char-text"><span class="char-text__mask">Размер</span></span><span class="char-text"> 5
                 </span>
               </li>
             </ul>
@@ -262,12 +258,12 @@
     <div class="product-card-side">
       <div class="product-banners">
         <div class="product-banners__item">
-            <a class="product-banners__link" href="#"><img class="product-banners__image" src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/add.jpg"
-                alt=""></a>
+          <a class="product-banners__link" href="#"><img class="product-banners__image"
+              src="@images/add.jpg" alt=""></a>
         </div>
         <div class="product-banners__item">
-            <a class="product-banners__link" href="#"><img class="product-banners__image" src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/add.jpg"
-                alt=""></a>
+          <a class="product-banners__link" href="#"><img class="product-banners__image"
+              src="@images/add.jpg" alt=""></a>
         </div>
       </div>
     </div>

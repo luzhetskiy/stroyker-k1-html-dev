@@ -26,7 +26,7 @@
     </div>
     <div class="product-card__container">
       <div class="product-card__slideshow">
-        <!-- @include ../../product-slideshow/product-slideshow.html -->
+        <%~ include("/components/products/product-slideshow/product-slideshow.html") %>
       </div>
       <div class="product-card__content">
         <div class="product-card__left">
@@ -96,7 +96,7 @@
               href="/cart/add/2"
               class="shopping-cart-btn shopping-cart-btn--lg add-to-cart button-theme button-theme_cart custom-icon"
             >
-              <img src="../../images/shopping-cart.svg" />
+              <img src="@images/shopping-cart.svg" />
               В корзину
             </a>
           </div>
@@ -408,17 +408,17 @@
           data-test="3"
           data-xl-slides="4"
         >
-          <!-- @include ../../../product-teasers/product-item/product-item.html -->
-          <!-- @include ../../../product-teasers/product-item/product-item__slides.html -->
-          <!-- @include ../../../product-teasers/product-item/product-item__range.html -->
-          <!-- @include ../../../product-teasers/product-item/product-item.html -->
-          <!-- @include ../../../product-teasers/product-item/product-item__slides.html -->
-          <!-- @include ../../../product-teasers/product-item/product-item__range.html -->
+          <%~ include("/components/product-teasers/product-item/product-item.html") %> <%~
+          include("/components/product-teasers/product-item/product-item__slides.html") %> <%~
+          include("/components/product-teasers/product-item/product-item__range.html") %> <%~
+          include("/components/product-teasers/product-item/product-item.html") %> <%~
+          include("/components/product-teasers/product-item/product-item__slides.html") %> <%~
+          include("/components/product-teasers/product-item/product-item__range.html") %>
         </div>
       </div>
       <div class="g-content_inner g-content_frameless g-content mb-10 additional-products-block-wrapper">
         <span class="h2">sdfsdfsdfsdf</span>
-        <!-- @include ../../additional-products/additional-products.html -->
+        <%~ include("/components/products/additional-products/additional-products.html") %>
       </div>
     </div>
     <div class="product-card-side">
@@ -428,7 +428,7 @@
             <img
               data-bnr-pk="1"
               class="bnr-image-for-page"
-              src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
+              src="@images/banner-content-1.png"
               alt="ertetertett"
             />
           </div>
@@ -439,7 +439,7 @@
             <img
               data-bnr-pk="2"
               class="bnr-image-for-page"
-              src="https://luzhetskiy.github.io/stroyker-k1-html-dev/images/banner-content-1.png"
+              src="@images/banner-content-1.png"
               alt="wrwerewrwe"
             />
           </div>
