@@ -120,7 +120,6 @@ main
 .parameter-select .selector
     position: relative
 
-    
 .parameter-select .selected-option
     display: flex
     align-items: center
@@ -324,7 +323,6 @@ main
     visibility: visible
     right: 0
 
-
 .slider-item:hover,
 .slider-item.active
     background-color: #2363D1
@@ -357,9 +355,21 @@ main
     .tire-section .tabs li
         margin-bottom: -1px
 
-// .po-parametram__modal-button,
-// .parameter__modal-button-mobile
-//     display: none
 @media(max-width: 767px)
     section.tire-section .content-block
         padding-top: 0
+
+@media(min-width: 768px)
+    .po-auto__modal-mobile
+        display: none !important
+
+@media(max-width: 767px)
+    #tippy-1 .tippy-box,
+    #tippy-2 .tippy-box,
+    #tippy-3 .tippy-box,
+    #tippy-4 .tippy-box
+        display: none !important
+
+@media(max-width: 767px)
+    .tire-section #tab1
+        display: none
