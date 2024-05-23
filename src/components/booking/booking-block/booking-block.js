@@ -29,8 +29,10 @@ $(() => {
       const date = match ? new Date(match[0]).toLocaleDateString() : new Date().toLocaleDateString();
       button.attr("data-booking-tooltip-button-time", time);
       button.attr("data-booking-tooltip-button-title", title);
+      button.attr("data-booking-tooltip-button-date", date);
       $("[data-booking-tooltip-title]").text(title);
       $("[data-booking-tooltip-time]").text(time);
+      $("[data-booking-tooltip-date]").text(date);
       $("[data-booking-tooltip-button]").on("click", (event) => {
         const form = $("#booking-form");
         $("[data-booking-item-selected]").removeAttr(
