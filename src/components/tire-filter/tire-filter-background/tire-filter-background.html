@@ -50,87 +50,6 @@
                         <div class="filter-choice">
                             <div class="filter-parameter">
                                 <span class="po-parametram">По параметрам</span>
-                                <span id="parameter-modal-btn"
-                                    class="parameter__modal-button po-parametram__modal-button">
-                                    <img src="../images/tire-modal-btn.svg" alt="">
-                                </span>
-                                <div class="parameter-modal-content">
-                                    <div class="row">
-                                        <div class="col-lg-7">
-                                            <p class="parameter-modal-title">Типоразмер шин</p>
-                                            <p class="parameter-modal-text">Типоразмер указан в маркировке на боковине
-                                                шины:
-                                            </p>
-                                            <p class="parameter-modal-text">Ширина профиля шины — первое число в
-                                                маркировке,
-                                                например 195/50 R16 -
-                                                ширина 195 мм. Ширина профиля представляет собой выраженное в
-                                                миллиметрах
-                                                расстояние между наружными
-                                                сторонами боковин накачанной шины.</p>
-                                            <p class="parameter-modal-text">Высота профиля — второе число в маркировке
-                                                шин,
-                                                например 195/50 R16 -
-                                                высота 50%. Это отношение высоты шины к ширине, выраженное в процентах
-                                                (%).
-                                            </p>
-                                            <p class="parameter-modal-text">Монтажный диаметр — третье число в
-                                                маркировке
-                                                шины,
-                                                например 195/50
-                                                R16 - диаметр обода 16'. Должен совпадать с монтажным диаметром
-                                                колесного
-                                                диска.
-                                                Измеряется в
-                                                дюймах.</p>
-                                        </div>
-                                        <div class="col-lg-5">
-                                            <img src="../images/tire-modal-img.jpg" alt="" class="parameter-modal-img">
-                                        </div>
-                                    </div>
-                                </div>
-                                <span class="parameter__modal-button parameter__modal-button-mobile">
-                                    <img src="../images/tire-modal-btn.svg" alt="">
-                                </span>
-                                <div class="parameter-modal-mobile po-parametram__modal-mobile">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <p class="parameter-modal-title">Типоразмер шин</p>
-                                                <p class="parameter-modal-text">Типоразмер указан в маркировке на
-                                                    боковине
-                                                    шины:
-                                                </p>
-                                                <p class="parameter-modal-text">Ширина профиля шины — первое число в
-                                                    маркировке,
-                                                    например 195/50 R16
-                                                    - ширина 195 мм. Ширина профиля представляет собой выраженное в
-                                                    миллиметрах
-                                                    расстояние между
-                                                    наружными сторонами боковин накачанной шины.</p>
-                                                <p class="parameter-modal-text">Высота профиля — второе число в
-                                                    маркировке
-                                                    шин,
-                                                    например 195/50 R16
-                                                    - высота 50%. Это отношение высоты шины к ширине, выраженное в
-                                                    процентах
-                                                    (%).</p>
-                                                <p class="parameter-modal-text">Монтажный диаметр — третье число в
-                                                    маркировке
-                                                    шины, например 195/50
-                                                    R16 - диаметр обода 16'. Должен совпадать с монтажным диаметром
-                                                    колесного
-                                                    диска. Измеряется в
-                                                    дюймах.</p>
-                                            </div>
-                                            <div class="col-lg-12">
-                                                <img src="../images/tire-modal-img.jpg" alt=""
-                                                    class="parameter-modal-img">
-                                            </div>
-                                            <span class="parameter-close-button po-parametram-close-button"></span>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <div class="filter-toggle">
                                 <label for="checkbox-toggle" class="toggle">
@@ -228,6 +147,7 @@
                                                     <span class="selected-option">Ширина</span>
                                                     <input type="text" class="select-search-input">
                                                     <div class="select-options">
+                                                        <div class="select-option name">Ширина</div>
                                                         <div class="select-option">Все</div>
                                                         <div class="select-option">10</div>
                                                         <div class="select-option">15</div>
@@ -248,6 +168,7 @@
                                                     <span class="selected-option">Профиль</span>
                                                     <input type="text" class="select-search-input">
                                                     <div class="select-options">
+                                                        <div class="select-option name">Профиль</div>
                                                         <div class="select-option">Все</div>
                                                         <div class="select-option">1</div>
                                                         <div class="select-option">12</div>
@@ -264,6 +185,7 @@
                                                     <span class="selected-option">Радиус</span>
                                                     <input type="text" class="select-search-input">
                                                     <div class="select-options">
+                                                        <div class="select-option name">Радиус</div>
                                                         <div class="select-option">Все</div>
                                                         <div class="select-option">1</div>
                                                         <div class="select-option">2</div>
@@ -284,6 +206,7 @@
                                                     <span class="selected-option">Сезонность</span>
                                                     <input type="text" class="select-search-input">
                                                     <div class="select-options">
+                                                        <div class="select-option name">Сезонность</div>
                                                         <div class="select-option">Все</div>
                                                         <div class="select-option">Всесезонные</div>
                                                         <div class="select-option">Летние</div>
@@ -312,11 +235,11 @@
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="parameter-list">
                                             <div class="parameter-select">
-                                                <span class="parameter-title">Марка:</span>
                                                 <div class="selector">
-                                                    <span class="selected-option">Все</span>
+                                                    <span class="selected-option">Марка</span>
                                                     <input type="text" class="select-search-input">
                                                     <div class="select-options">
+                                                        <div class="select-option name">Марка</div>
                                                         <div class="select-option">Все</div>
                                                         <div class="select-option">10</div>
                                                         <div class="select-option">15</div>
@@ -332,12 +255,12 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="parameter-list">
-                                            <div class="parameter-select">
-                                                <span class="parameter-title">Модель:</span>
+                                            <div class="parameter-select disabled">
                                                 <div class="selector">
-                                                    <span class="selected-option">Все</span>
+                                                    <span class="selected-option">Модель</span>
                                                     <input type="text" class="select-search-input">
                                                     <div class="select-options">
+                                                        <div class="select-option name">Модель</div>
                                                         <div class="select-option">Все</div>
                                                         <div class="select-option">10</div>
                                                         <div class="select-option">15</div>
@@ -353,12 +276,12 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="parameter-list">
-                                            <div class="parameter-select">
-                                                <span class="parameter-title">Поколение:</span>
+                                            <div class="parameter-select disabled">
                                                 <div class="selector">
-                                                    <span class="selected-option">Все</span>
+                                                    <span class="selected-option">Поколение</span>
                                                     <input type="text" class="select-search-input">
                                                     <div class="select-options">
+                                                        <div class="select-option name">Поколение</div>
                                                         <div class="select-option">Все</div>
                                                         <div class="select-option">10</div>
                                                         <div class="select-option">15</div>
@@ -374,12 +297,12 @@
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <div class="parameter-list">
-                                            <div class="parameter-select">
-                                                <span class="parameter-title">Модификация:</span>
+                                            <div class="parameter-select disabled">
                                                 <div class="selector">
-                                                    <span class="selected-option">Все</span>
+                                                    <span class="selected-option">Модификация</span>
                                                     <input type="text" class="select-search-input">
                                                     <div class="select-options">
+                                                        <div class="select-option name">Модификация</div>
                                                         <div class="select-option">Все</div>
                                                         <div class="select-option">10</div>
                                                         <div class="select-option">15</div>
@@ -396,7 +319,7 @@
                                 </div>
                                 <div class="row parameter-buttons">
                                     <div class="col-lg-6 col-md-6 col-12">
-                                        <a href="#" class="button-parameter">Подобрать</a>
+                                        <a href="#" class="button-parameter disabled">Подобрать</a>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-12">
                                         <button class="button-reset">Сбросить</button>
@@ -421,87 +344,6 @@
                         <div class="filter-choice">
                             <div class="filter-parameter">
                                 <span class="po-parametram">По параметрам</span>
-                                <span id="parameter-modal-btn"
-                                    class="parameter__modal-button po-parametram__modal-button">
-                                    <img src="../images/tire-modal-btn.svg" alt="">
-                                </span>
-                                <div class="parameter-modal-content">
-                                    <div class="row">
-                                        <div class="col-lg-7">
-                                            <p class="parameter-modal-title">Типоразмер шин</p>
-                                            <p class="parameter-modal-text">Типоразмер указан в маркировке на боковине
-                                                шины:
-                                            </p>
-                                            <p class="parameter-modal-text">Ширина профиля шины — первое число в
-                                                маркировке,
-                                                например 195/50 R16 -
-                                                ширина 195 мм. Ширина профиля представляет собой выраженное в
-                                                миллиметрах
-                                                расстояние между наружными
-                                                сторонами боковин накачанной шины.</p>
-                                            <p class="parameter-modal-text">Высота профиля — второе число в маркировке
-                                                шин,
-                                                например 195/50 R16 -
-                                                высота 50%. Это отношение высоты шины к ширине, выраженное в процентах
-                                                (%).
-                                            </p>
-                                            <p class="parameter-modal-text">Монтажный диаметр — третье число в
-                                                маркировке
-                                                шины,
-                                                например 195/50
-                                                R16 - диаметр обода 16'. Должен совпадать с монтажным диаметром
-                                                колесного
-                                                диска.
-                                                Измеряется в
-                                                дюймах.</p>
-                                        </div>
-                                        <div class="col-lg-5">
-                                            <img src="../images/tire-modal-img.jpg" alt="" class="parameter-modal-img">
-                                        </div>
-                                    </div>
-                                </div>
-                                <span class="parameter__modal-button parameter__modal-button-mobile">
-                                    <img src="../images/tire-modal-btn.svg" alt="">
-                                </span>
-                                <div class="parameter-modal-mobile po-parametram__modal-mobile">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <p class="parameter-modal-title">Типоразмер шин</p>
-                                                <p class="parameter-modal-text">Типоразмер указан в маркировке на
-                                                    боковине
-                                                    шины:
-                                                </p>
-                                                <p class="parameter-modal-text">Ширина профиля шины — первое число в
-                                                    маркировке,
-                                                    например 195/50 R16
-                                                    - ширина 195 мм. Ширина профиля представляет собой выраженное в
-                                                    миллиметрах
-                                                    расстояние между
-                                                    наружными сторонами боковин накачанной шины.</p>
-                                                <p class="parameter-modal-text">Высота профиля — второе число в
-                                                    маркировке
-                                                    шин,
-                                                    например 195/50 R16
-                                                    - высота 50%. Это отношение высоты шины к ширине, выраженное в
-                                                    процентах
-                                                    (%).</p>
-                                                <p class="parameter-modal-text">Монтажный диаметр — третье число в
-                                                    маркировке
-                                                    шины, например 195/50
-                                                    R16 - диаметр обода 16'. Должен совпадать с монтажным диаметром
-                                                    колесного
-                                                    диска. Измеряется в
-                                                    дюймах.</p>
-                                            </div>
-                                            <div class="col-lg-12">
-                                                <img src="../images/tire-modal-img.jpg" alt=""
-                                                    class="parameter-modal-img">
-                                            </div>
-                                            <span class="parameter-close-button po-parametram-close-button"></span>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <div class="filter-toggle">
                                 <label for="checkbox-toggle" class="toggle">
@@ -790,87 +632,6 @@
                         <div class="filter-choice">
                             <div class="filter-parameter">
                                 <span class="po-parametram">По параметрам</span>
-                                <span id="parameter-modal-btn"
-                                    class="parameter__modal-button po-parametram__modal-button">
-                                    <img src="../images/tire-modal-btn.svg" alt="">
-                                </span>
-                                <div class="parameter-modal-content">
-                                    <div class="row">
-                                        <div class="col-lg-7">
-                                            <p class="parameter-modal-title">Типоразмер шин</p>
-                                            <p class="parameter-modal-text">Типоразмер указан в маркировке на боковине
-                                                шины:
-                                            </p>
-                                            <p class="parameter-modal-text">Ширина профиля шины — первое число в
-                                                маркировке,
-                                                например 195/50 R16 -
-                                                ширина 195 мм. Ширина профиля представляет собой выраженное в
-                                                миллиметрах
-                                                расстояние между наружными
-                                                сторонами боковин накачанной шины.</p>
-                                            <p class="parameter-modal-text">Высота профиля — второе число в маркировке
-                                                шин,
-                                                например 195/50 R16 -
-                                                высота 50%. Это отношение высоты шины к ширине, выраженное в процентах
-                                                (%).
-                                            </p>
-                                            <p class="parameter-modal-text">Монтажный диаметр — третье число в
-                                                маркировке
-                                                шины,
-                                                например 195/50
-                                                R16 - диаметр обода 16'. Должен совпадать с монтажным диаметром
-                                                колесного
-                                                диска.
-                                                Измеряется в
-                                                дюймах.</p>
-                                        </div>
-                                        <div class="col-lg-5">
-                                            <img src="../images/tire-modal-img.jpg" alt="" class="parameter-modal-img">
-                                        </div>
-                                    </div>
-                                </div>
-                                <span class="parameter__modal-button parameter__modal-button-mobile">
-                                    <img src="../images/tire-modal-btn.svg" alt="">
-                                </span>
-                                <div class="parameter-modal-mobile po-parametram__modal-mobile">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <p class="parameter-modal-title">Типоразмер шин</p>
-                                                <p class="parameter-modal-text">Типоразмер указан в маркировке на
-                                                    боковине
-                                                    шины:
-                                                </p>
-                                                <p class="parameter-modal-text">Ширина профиля шины — первое число в
-                                                    маркировке,
-                                                    например 195/50 R16
-                                                    - ширина 195 мм. Ширина профиля представляет собой выраженное в
-                                                    миллиметрах
-                                                    расстояние между
-                                                    наружными сторонами боковин накачанной шины.</p>
-                                                <p class="parameter-modal-text">Высота профиля — второе число в
-                                                    маркировке
-                                                    шин,
-                                                    например 195/50 R16
-                                                    - высота 50%. Это отношение высоты шины к ширине, выраженное в
-                                                    процентах
-                                                    (%).</p>
-                                                <p class="parameter-modal-text">Монтажный диаметр — третье число в
-                                                    маркировке
-                                                    шины, например 195/50
-                                                    R16 - диаметр обода 16'. Должен совпадать с монтажным диаметром
-                                                    колесного
-                                                    диска. Измеряется в
-                                                    дюймах.</p>
-                                            </div>
-                                            <div class="col-lg-12">
-                                                <img src="../images/tire-modal-img.jpg" alt=""
-                                                    class="parameter-modal-img">
-                                            </div>
-                                            <span class="parameter-close-button po-parametram-close-button"></span>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <div class="filter-toggle">
                                 <label for="checkbox-toggle" class="toggle">
@@ -1159,87 +920,6 @@
                         <div class="filter-choice">
                             <div class="filter-parameter">
                                 <span class="po-parametram">По параметрам</span>
-                                <span id="parameter-modal-btn"
-                                    class="parameter__modal-button po-parametram__modal-button">
-                                    <img src="../images/tire-modal-btn.svg" alt="">
-                                </span>
-                                <div class="parameter-modal-content">
-                                    <div class="row">
-                                        <div class="col-lg-7">
-                                            <p class="parameter-modal-title">Типоразмер шин</p>
-                                            <p class="parameter-modal-text">Типоразмер указан в маркировке на боковине
-                                                шины:
-                                            </p>
-                                            <p class="parameter-modal-text">Ширина профиля шины — первое число в
-                                                маркировке,
-                                                например 195/50 R16 -
-                                                ширина 195 мм. Ширина профиля представляет собой выраженное в
-                                                миллиметрах
-                                                расстояние между наружными
-                                                сторонами боковин накачанной шины.</p>
-                                            <p class="parameter-modal-text">Высота профиля — второе число в маркировке
-                                                шин,
-                                                например 195/50 R16 -
-                                                высота 50%. Это отношение высоты шины к ширине, выраженное в процентах
-                                                (%).
-                                            </p>
-                                            <p class="parameter-modal-text">Монтажный диаметр — третье число в
-                                                маркировке
-                                                шины,
-                                                например 195/50
-                                                R16 - диаметр обода 16'. Должен совпадать с монтажным диаметром
-                                                колесного
-                                                диска.
-                                                Измеряется в
-                                                дюймах.</p>
-                                        </div>
-                                        <div class="col-lg-5">
-                                            <img src="../images/tire-modal-img.jpg" alt="" class="parameter-modal-img">
-                                        </div>
-                                    </div>
-                                </div>
-                                <span class="parameter__modal-button parameter__modal-button-mobile">
-                                    <img src="../images/tire-modal-btn.svg" alt="">
-                                </span>
-                                <div class="parameter-modal-mobile po-parametram__modal-mobile">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <p class="parameter-modal-title">Типоразмер шин</p>
-                                                <p class="parameter-modal-text">Типоразмер указан в маркировке на
-                                                    боковине
-                                                    шины:
-                                                </p>
-                                                <p class="parameter-modal-text">Ширина профиля шины — первое число в
-                                                    маркировке,
-                                                    например 195/50 R16
-                                                    - ширина 195 мм. Ширина профиля представляет собой выраженное в
-                                                    миллиметрах
-                                                    расстояние между
-                                                    наружными сторонами боковин накачанной шины.</p>
-                                                <p class="parameter-modal-text">Высота профиля — второе число в
-                                                    маркировке
-                                                    шин,
-                                                    например 195/50 R16
-                                                    - высота 50%. Это отношение высоты шины к ширине, выраженное в
-                                                    процентах
-                                                    (%).</p>
-                                                <p class="parameter-modal-text">Монтажный диаметр — третье число в
-                                                    маркировке
-                                                    шины, например 195/50
-                                                    R16 - диаметр обода 16'. Должен совпадать с монтажным диаметром
-                                                    колесного
-                                                    диска. Измеряется в
-                                                    дюймах.</p>
-                                            </div>
-                                            <div class="col-lg-12">
-                                                <img src="../images/tire-modal-img.jpg" alt=""
-                                                    class="parameter-modal-img">
-                                            </div>
-                                            <span class="parameter-close-button po-parametram-close-button"></span>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             <div class="filter-toggle">
                                 <label for="checkbox-toggle" class="toggle">

@@ -77,10 +77,19 @@ main
     border-radius: 2px
     color: #fff
     transition: .3s
+
+.button-parameter.disabled
+    border: 1px solid #D9D9DE
+    background: #D9D9DE
+    color: #767676
 .button-parameter:hover
     background-color: #fff
     color: #1C52AC
     border: 1px solid #B7CBE5
+.button-parameter.disabled:hover
+    border: 1px solid #D9D9DE
+    background: #D9D9DE
+    color: #767676
 .button-reset
     color: #767676
     display: flex
@@ -120,7 +129,6 @@ main
 .parameter-select .selector
     position: relative
 
-    
 .parameter-select .selected-option
     display: flex
     align-items: center
@@ -128,7 +136,11 @@ main
     padding: 10px 0 10px 15px
     height: 40px
     border-radius: 2px
+    color: #333333
+    font-size: 14px
 
+.parameter-select.disabled .selected-option
+    color: #767676
 .parameter-select .selected-option:before
     content: ''
     background: url('../images/icons/filter-blue-arrow.svg')
@@ -138,10 +150,9 @@ main
     background-size: cover
     right: 10px
     bottom: 7px
-
-.parameter-select .selected-option .selected-option__text
-    color: #333333
-    font-size: 14px
+.parameter-select.disabled .selected-option:before
+    background: url('../images/icons/filter-disabled-arrow.svg')
+    background-size: cover
 
 .parameter-select .select-search-input
     display: none
@@ -202,17 +213,22 @@ main
 .parameter-modal-content,
 .auto-modal-content
     display: none
-
+.parameter-modal-img
+    max-width: 100%
 .tire-section .slick-list
     overflow: visible
 
 #tippy-1 .tippy-box,
-#tippy-2 .tippy-box
+#tippy-2 .tippy-box,
+#tippy-3 .tippy-box,
+#tippy-4 .tippy-box
     max-width: 720px !important
 
 @media(max-width:991px)
     #tippy-1 .tippy-box,
-    #tippy-2 .tippy-box
+    #tippy-2 .tippy-box,
+    #tippy-3 .tippy-box,
+    #tippy-4 .tippy-box
         max-width: 550px !important
 
 .parameter-modal-title,
@@ -319,10 +335,10 @@ main
     visibility: visible
     right: 0
 
-
 .slider-item:hover,
 .slider-item.active
     background-color: #2363D1
+    border-color: #2363D1
 
 .slider-item:hover .slider-item__title,
 .slider-item:hover .slider-item__subtitle,
@@ -350,3 +366,22 @@ main
         border-bottom: none
     .tire-section .tabs li
         margin-bottom: -1px
+
+@media(max-width: 767px)
+    section.tire-section .content-block
+        padding-top: 0
+
+@media(min-width: 768px)
+    .po-auto__modal-mobile
+        display: none !important
+
+@media(max-width: 767px)
+    #tippy-1 .tippy-box,
+    #tippy-2 .tippy-box,
+    #tippy-3 .tippy-box,
+    #tippy-4 .tippy-box
+        display: none !important
+
+@media(max-width: 767px)
+    .tire-section #tab1
+        display: none
