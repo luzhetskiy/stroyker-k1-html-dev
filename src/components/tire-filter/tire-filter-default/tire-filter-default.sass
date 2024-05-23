@@ -77,10 +77,19 @@ main
     border-radius: 2px
     color: #fff
     transition: .3s
+
+.button-parameter.disabled
+    border: 1px solid #D9D9DE
+    background: #D9D9DE
+    color: #767676
 .button-parameter:hover
     background-color: #fff
     color: #1C52AC
     border: 1px solid #B7CBE5
+.button-parameter.disabled:hover
+    border: 1px solid #D9D9DE
+    background: #D9D9DE
+    color: #767676
 .button-reset
     color: #767676
     display: flex
@@ -127,7 +136,11 @@ main
     padding: 10px 0 10px 15px
     height: 40px
     border-radius: 2px
+    color: #333333
+    font-size: 14px
 
+.parameter-select.disabled .selected-option
+    color: #767676
 .parameter-select .selected-option:before
     content: ''
     background: url('../images/icons/filter-blue-arrow.svg')
@@ -137,10 +150,9 @@ main
     background-size: cover
     right: 10px
     bottom: 7px
-
-.parameter-select .selected-option .selected-option__text
-    color: #333333
-    font-size: 14px
+.parameter-select.disabled .selected-option:before
+    background: url('../images/icons/filter-disabled-arrow.svg')
+    background-size: cover
 
 .parameter-select .select-search-input
     display: none
