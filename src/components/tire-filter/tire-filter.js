@@ -9,18 +9,22 @@ $(document).ready(function () {
     let blockParameter = document.querySelector(".parameter-block");
     let blockAuto = document.querySelector(".auto-block");
     let poParametram = document.querySelector(".po-parametram");
-    let poAuto = document.querySelector(".po-auto");
+    let poAuto = document.querySelectorAll(".po-auto");
     if (this.checked) {
       blockParameter.style.display = "none";
       blockAuto.style.display = "block";
-      poParametram.style.color = "#A7A7AB";
-      poAuto.style.color = "#000";
+      poParametram.classList.add("disactive")
+      poAuto.forEach(function(poAuto) {
+        poAuto.classList.remove("disactive")
+      })
       return;
     }
     blockParameter.style.display = "block";
     blockAuto.style.display = "none";
-    poParametram.style.color = "#000";
-    poAuto.style.color = "#A7A7AB";
+    poParametram.classList.remove("disactive")
+    poAuto.forEach(function(poAuto) {
+      poAuto.classList.add("disactive")
+    })
   });
   function resetFilters(block) {
     let selectors = block.querySelectorAll(".parameter-select .selector");

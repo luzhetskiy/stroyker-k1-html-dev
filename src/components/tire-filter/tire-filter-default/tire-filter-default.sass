@@ -25,13 +25,13 @@ main
 
 .po-auto.mobile
     display: none
-@media(max-width: 767px) 
+@media(max-width: 767px)
     .po-auto
         display: none
     .po-auto.mobile
         display: block
-.po-auto
-    color: #A7A7AB
+// .po-auto
+//     color: #A7A7AB
 
 .parameter__modal-button
     width: 20px
@@ -106,6 +106,12 @@ main
     font-weight: 400
     line-height: 20px
     width: 100%
+.po-parametram:not(.disactive),
+.po-auto:not(.disactive)
+    color: #000
+.po-parametram.disactive,
+.po-auto.disactive
+    color: #A7A7AB
 .parameter-block .button-reset,
 .auto-block .button-reset
     display: none
