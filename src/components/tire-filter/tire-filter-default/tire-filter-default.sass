@@ -23,6 +23,13 @@ main
     display: flex
     gap: 7px
 
+.po-auto.mobile
+    display: none
+@media(max-width: 767px) 
+    .po-auto
+        display: none
+    .po-auto.mobile
+        display: block
 .po-auto
     color: #A7A7AB
 
@@ -352,7 +359,7 @@ main
 @media(max-width: 575px)
     .po-parametram,
     .po-auto
-        font-size: 11px
+        font-size: 14px
     .parameter__modal-button-mobile
         height: 17px
         width: 17px
