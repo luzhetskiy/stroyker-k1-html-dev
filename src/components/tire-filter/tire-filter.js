@@ -13,18 +13,18 @@ $(document).ready(function () {
     if (this.checked) {
       blockParameter.style.display = "none";
       blockAuto.style.display = "block";
-      poParametram.classList.add("disactive")
-      poAuto.forEach(function(poAuto) {
-        poAuto.classList.remove("disactive")
-      })
+      poParametram.classList.add("disactive");
+      poAuto.forEach(function (poAuto) {
+        poAuto.classList.remove("disactive");
+      });
       return;
     }
     blockParameter.style.display = "block";
     blockAuto.style.display = "none";
-    poParametram.classList.remove("disactive")
-    poAuto.forEach(function(poAuto) {
-      poAuto.classList.add("disactive")
-    })
+    poParametram.classList.remove("disactive");
+    poAuto.forEach(function (poAuto) {
+      poAuto.classList.add("disactive");
+    });
   });
   function resetFilters(block) {
     let selectors = block.querySelectorAll(".parameter-select .selector");
@@ -203,8 +203,10 @@ $(document).ready(function () {
 
   autoOpenButton.addEventListener("click", function () {
     autoModalMobile.style.display = "block";
+    document.body.appendChild(autoModalMobile);
   });
   autoCloseButton.addEventListener("click", function () {
     autoModalMobile.style.display = "none";
+    document.querySelector(".filter-auto").appendChild(autoModalMobile);
   });
 });
