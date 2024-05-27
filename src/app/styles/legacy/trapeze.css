@@ -233,6 +233,10 @@
   margin-left: 10px;
 }
 
+.__header.trapeze .c-box-fat-v2 .order-call:hover {
+  background: none;
+}
+
 .__header.trapeze_1 .c-box-fat-v2 .order-call {
   padding: 11px 9px 9px 24px;
   max-width: 160px;
@@ -242,6 +246,10 @@
 .__header.trapeze_2 .c-box-fat-v2 .order-call {
   padding: 12px 15px 8px 15px;
   max-width: 165px;
+}
+
+.__header.trapeze_1 .c-box-fat-v2 .order-call:hover {
+  background-color: transparent;
 }
 
 .__header.trapeze .c-box-fat-v2 .order-call:before {
