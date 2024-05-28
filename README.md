@@ -29,6 +29,6 @@
 `build` - папка для итоговой сборки в production режиме
 
 ## path allies (абсолютные пути)
-`@src` - `/src`
-`@public` - `/public`
+`@src` - `/src` \
+`@public` - `/public` \
 `@images` - `/public/images`
