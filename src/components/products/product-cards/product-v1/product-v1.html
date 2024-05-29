@@ -130,143 +130,96 @@
     </div>
   </div>
 
-  <div class="product-card-container">
-    <div class="product-card-content">
-      <div class="g-content_inner g-content_frameless g-content mb-10">
-        <%~ include("/components/products/additional-products/additional-products.html") %>
-      </div>
-      <div class="tabs-content">
-        <ul class="tabs">
-          <li class="active" rel="tab1">Описание</li>
+  <div class="product-card-secondary g-content d-flex flex-column gap-60">
 
-          <li rel="tab2" class="tab_last">Характеристики</li>
+    <div class="d-flex flex-column gap-20">
+      <p class="g-title">Описание</p>
+      <div id="collapse-1" class="collapse" data-custom-collapse="1">
+        <p>sdifoidsfjsdifjosidfjiosdfiosdjfoisdfoijsdjfsdfsdjoif</p>
+        <p>sdifoidsfjsdifjosidfjiosdfiosdjfoisdfoijsdjfsdfsdjoif</p>
+      </div>
+      <button
+        data-toggle="collapse"
+        data-target="#collapse-1"
+        aria-expanded="false"
+        aria-controls="collapse-1"
+        data-custom-collapse-close="1"
+        class="d-md-none d-none g-text-button"
+        type="button"
+      >
+        Свернуть
+      </button>
+      <button
+        data-toggle="collapse"
+        data-target="#collapse-1"
+        aria-expanded="false"
+        aria-controls="collapse-1"
+        class="d-md-none g-text-button"
+        data-custom-collapse-open="1"
+        type="button"
+      >
+        Развернуть
+      </button>
+    </div>
+
+    <div class="d-flex flex-column gap-20">
+      <p class="g-title">Характеристики</p>
+      <div data-custom-collapse="2">
+        <ul class="char">
+          <li>
+            <span class="char-text"><span class="char-text__mask">Объем, м3</span></span
+            ><span class="char-text">9,0</span>
+          </li>
+
+          <li>
+            <span class="char-text"><span class="char-text__mask">toshiba</span></span
+            ><span class="char-text"> 345543,0 </span>
+          </li>
         </ul>
-        <div class="tabsgroup">
-          <span class="tab_drawer_heading d_active" rel="tab1">
-            <span class="icon"><svg class="icon-svg">
-                <use xlink:href="#tab-arrow"></use>
-              </svg></span>
-            Описание
-          </span>
-          <div id="tab1" class="tab-content" style="display: block">
-            <div class="text-page" itemprop="description">
-              <div class="row">
-                <div class="col-lg-6 col-md-12">
-                  <img alt="" src="@images/banner-content-1.png" />
-                </div>
-
-                <div class="col-lg-6 col-md-12">
-                  <h2 style="color: #1e1e1e">Пример расположения контента</h2>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-lg-4 col-md-12">
-                  <h2 style="color: #1e1e1e">Пример расположения контента</h2>
-                </div>
-
-                <div class="col-lg-4 col-md-12">
-                  <img alt="" src="@images/banner-content-1.png" />
-                </div>
-
-                <div class="col-lg-4 col-md-12">
-                  <img alt="" src="@images/banner-content-1.png" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- #tab1 -->
-          <span class="tab_drawer_heading" rel="tab2">
-            <span class="icon"><svg class="icon-svg">
-                <use xlink:href="#tab-arrow"></use>
-              </svg></span>
-            Характеристики
-          </span>
-          <div id="tab2" class="tab-content" style="display: none">
-            <ul class="char">
-              <li>
-                <span class="char-text"><span class="char-text__mask">Материал</span></span><span
-                  class="char-text"></span>
-                Сталь </span>
-              </li>
-
-              <li>
-                <span class="char-text"><span class="char-text__mask">Размер</span></span><span class="char-text"> 5
-                </span>
-              </li>
-            </ul>
-          </div>
-          <!-- #tab2 -->
-          <span class="tab_drawer_heading" rel="tab3">
-            <span class="icon"><svg class="icon-svg">
-                <use xlink:href="#tab-arrow"></use>
-              </svg></span>
-            Отзывы
-          </span>
-          <div id="tab3" class="tab-content" style="display: none">
-            <div class="rate-product">
-              <div class="rate-product__title">Пожалуйста, оцените:</div>
-              <div class="rate-product__content">
-                <div class="rating-stars text-center">
-                  <ul id="stars">
-                    <li class="star" title="Poor" data-value="1">
-                      <i class="fa fa-star fa-fw"></i>
-                    </li>
-                    <li class="star" title="Fair" data-value="2">
-                      <i class="fa fa-star fa-fw"></i>
-                    </li>
-                    <li class="star" title="Good" data-value="3">
-                      <i class="fa fa-star fa-fw"></i>
-                    </li>
-                    <li class="star" title="Excellent" data-value="4">
-                      <i class="fa fa-star fa-fw"></i>
-                    </li>
-                    <li class="star" title="WOW!!!" data-value="5">
-                      <i class="fa fa-star fa-fw"></i>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <form action="/reviews/add/1/" method="post" id="review_form">
-              <div class="review-textarea">
-                <div class="form-group">
-                  <textarea class="form-control" name="review_text" autocomplete="off" required=""></textarea>
-                  <label for="text" class="label-name">
-                    <span class="content-name"> Ваш отзыв* </span>
-                  </label>
-                </div>
-                <input type="hidden" name="rating_value" value="0" id="id_rating_value" />
-
-                <button class="btn btn--main-min btn--fixed-small">Отправить</button>
-              </div>
-            </form>
-
-            <h2>Отзывы на товар</h2>
-
-            <p>Отзывов для данного товара пока еще нет.</p>
-          </div>
-          <!-- #tab3 -->
-        </div>
       </div>
-
-      <div class="product-card__extra-text"></div>
+      <button
+        class="g-text-button"
+        data-custom-collapse-toggle="2"
+        type="button"
+      >
+        Раскрыть
+      </button>
     </div>
 
-    <div class="product-card-side">
-      <div class="product-banners">
-        <div class="product-banners__item">
-          <a class="product-banners__link" href="#"><img class="product-banners__image"
-              src="@images/add.jpg" alt=""></a>
-        </div>
-        <div class="product-banners__item">
-          <a class="product-banners__link" href="#"><img class="product-banners__image"
-              src="@images/add.jpg" alt=""></a>
+    <div class="product-files-group">
+      <p class="g-title mb-20">Приложенные файлы</p>
+
+      <div class="documents">
+        <div class="document-item">
+          <div class="document-item__text">rwrwr</div>
+          <div class="document-item__format">jpg</div>
+          <div class="document-item__size">77.9 Кб</div>
+          <div class="document-item__download">
+            <a
+              href="/media/product/certificates/photo_2024-02-07_11-16-48_2.jpg"
+              class="document-item__download-button btn"
+              download=""
+            >
+              <svg
+                class="document-item__download-icon"
+                width="18"
+                height="19"
+                viewBox="0 0 18 19"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.71 8.79L13.29 7.37L10 10.66V0H8V10.66L4.71 7.37L3.29 8.79L9 14.49L14.71 8.79ZM0 17V19H18V17H0Z"
+                  fill="currentColor"
+                />
+              </svg>
+              Скачать
+            </a>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
 
   <div class="product-card-bottom">
