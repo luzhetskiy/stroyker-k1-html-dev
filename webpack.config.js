@@ -13,7 +13,7 @@ console.log(mode);
 module.exports = {
   mode: mode,
   stats: "minimal",
-  devtool: mode === "development" ? "source-map" : false,
+  devtool: false,
   resolve: {
     alias: {
       "@public": path.resolve(__dirname, "public"),
@@ -22,7 +22,7 @@ module.exports = {
     },
   },
   optimization: {
-    // minimize: false,
+    minimize: false,
     mergeDuplicateChunks: true,
     splitChunks: {
       cacheGroups: {

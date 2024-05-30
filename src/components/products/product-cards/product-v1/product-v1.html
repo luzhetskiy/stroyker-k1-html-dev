@@ -130,41 +130,42 @@
     </div>
   </div>
 
-  <div class="product-card-secondary g-content d-flex flex-column gap-60">
+  <div class="product-content product-content_frameless d-flex flex-column gap-60">
 
-    <div class="d-flex flex-column gap-20">
+    <div class="d-flex flex-column gap-15 gap-md-20">
       <p class="g-title">Описание</p>
-      <div id="collapse-1" class="collapse" data-custom-collapse="1">
+      <div class="d-flex flex-column gap-10">
+      <div data-collapse="1">
         <p>sdifoidsfjsdifjosidfjiosdfiosdjfoisdfoijsdjfsdfsdjoif</p>
         <p>sdifoidsfjsdifjosidfjiosdfiosdjfoisdfoijsdjfsdfsdjoif</p>
+        <p>sdifoidsfjsdifjosidfjiosdfiosdjfoisdfoijsdjfsdfsdjoif</p>
+        <p>sdifoidsfjsdifjosidfjiosdfiosdjfoisdfoijsdjfsdfsdjoif</p>
+        <p>sdifoidsfjsdifjosidfjiosdfiosdjfoisdfoijsdjfsdfsdjoif</p>
+        <p>sdifoidsfjsdifjosidfjiosdfiosdjfoisdfoijsdjfsdfsdjoif</p>
+     
       </div>
       <button
-        data-toggle="collapse"
-        data-target="#collapse-1"
-        aria-expanded="false"
-        aria-controls="collapse-1"
-        data-custom-collapse-close="1"
         class="d-md-none d-none g-text-button"
+        data-collapse-open="1"
+        data-collapse-hiding-open="1"
         type="button"
       >
-        Свернуть
+        Раскрыть
       </button>
       <button
-        data-toggle="collapse"
-        data-target="#collapse-1"
-        aria-expanded="false"
-        aria-controls="collapse-1"
-        class="d-md-none g-text-button"
-        data-custom-collapse-open="1"
+        class="d-md-none d-none g-text-button"
+        data-collapse-close="1"
+        data-collapse-hiding-close="1"
         type="button"
       >
-        Развернуть
+        Закрыть
       </button>
     </div>
+    </div>
 
-    <div class="d-flex flex-column gap-20">
+    <div class="d-flex flex-column gap-15 gap-md-20">
       <p class="g-title">Характеристики</p>
-      <div data-custom-collapse="2">
+      <div data-collapse="2">
         <ul class="char">
           <li>
             <span class="char-text"><span class="char-text__mask">Объем, м3</span></span
@@ -178,23 +179,36 @@
         </ul>
       </div>
       <button
-        class="g-text-button"
-        data-custom-collapse-toggle="2"
+        class="d-md-none d-none g-text-button"
+        data-collapse-open="2"
+        data-collapse-hiding-open="2"
         type="button"
       >
         Раскрыть
       </button>
+      <button
+        class="d-md-none d-none g-text-button"
+        data-collapse-close="2"
+        data-collapse-hiding-close="2"
+        type="button"
+      >
+        Закрыть
+      </button>
     </div>
 
-    <div class="product-files-group">
-      <p class="g-title mb-20">Приложенные файлы</p>
+    <div class="product-files-group d-flex flex-column gap-15 gap-md-20">
+      <p class="g-title">Приложенные файлы</p>
 
       <div class="documents">
         <div class="document-item">
-          <div class="document-item__text">rwrwr</div>
+          <div class="document-item__name">
+            <a class="document-item__name-link" href="#">
+              rwrwr
+            </a>
+          </div>
           <div class="document-item__format">jpg</div>
           <div class="document-item__size">77.9 Кб</div>
-          <div class="document-item__download">
+          <div class="document-item__download d-md-block d-none">
             <a
               href="/media/product/certificates/photo_2024-02-07_11-16-48_2.jpg"
               class="document-item__download-button btn"

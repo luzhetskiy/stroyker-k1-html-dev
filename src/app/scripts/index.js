@@ -7,7 +7,8 @@ import "mmenu-js";
 import "slick-carousel";
 import "@fancyapps/fancybox";
 import "inputmask/dist/jquery.inputmask";
-import '../../components/products/index'
+import '../../shared/libs/collapse/collapse'
+import '../../components/products/product-cards/product-cards'
 
 window.tippy = tippy
 
