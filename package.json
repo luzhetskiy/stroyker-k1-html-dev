@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=development --max-old-space-size=8192 webpack-dev-server --hot",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --hot",
     "dev": "cross-env NODE_ENV=development webpack --progress",
     "build": "cross-env NODE_ENV=production webpack --progress",
     "test": "backstop test",
