@@ -143,3 +143,48 @@
   .slider-constructor.scale-slide .slick-active,
   .slider-constructor.scale-slide .slick-current
     transform: none !important
+
+.slick-dot-line .slick-dots
+  position: absolute
+  display: flex !important
+  justify-content: center
+  align-items: center
+  height: 6px
+  background-color: #F1F1F1
+  border-radius: 5px
+
+.slick-dot-line .slick-dots li
+  position: relative
+  flex: 1
+  height: 100%
+
+.slick-dot-line .slick-dots li button
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: none
+  border: none
+  padding: 0
+
+.slick-dot-line .slick-dots li.slick-active button 
+  background: #D9D9DE
+
+
+.slick-arrow .slick-dots
+  display: none !important
+@media (max-width: 575.98px)
+  .slick-arrow.slider-constructor .slick-next, .slick-arrow.slider-constructor .slick-prev
+    display: flex !important
+    width: 20px
+    height: 20px
+    min-width: 20px
+    border: none
+    top: 50%
+    transform: translateY(50%)
+  .slick-arrow.slider-constructor .slick-prev
+    left: 0
+  .slick-arrow.slider-constructor .slick-arrow svg
+    fill: #fff
+

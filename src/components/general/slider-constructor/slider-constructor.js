@@ -6,7 +6,10 @@ function _typeof(obj) {
     };
   } else {
     _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype
+      return obj &&
+        typeof Symbol === "function" &&
+        obj.constructor === Symbol &&
+        obj !== Symbol.prototype
         ? "symbol"
         : typeof obj;
     };
@@ -41,38 +44,55 @@ const SliderConstructor = /*#__PURE__*/ (function () {
         let _this3 = this;
 
         this.params = {};
-        this.params.autoplay = this.element.getAttribute("data-autoplay-timeout") !== null;
-        this.params.autoplayTimeout = +this.element.getAttribute("data-autoplay-timeout") || 5000;
-        this.params.arrows = this.element.getAttribute("data-no-arrows") === null ? true : false;
+        this.params.autoplay =
+          this.element.getAttribute("data-autoplay-timeout") !== null;
+        this.params.autoplayTimeout =
+          +this.element.getAttribute("data-autoplay-timeout") || 5000;
+        this.params.arrows =
+          this.element.getAttribute("data-no-arrows") === null ? true : false;
 
         const mediaQuery = window.matchMedia("(min-width: 575.98px)");
         // Check if the media query is true
         if (mediaQuery.matches) {
-          this.params.dots = this.element.getAttribute("data-no-dots") === null ? true : false;
+          this.params.dots =
+            this.element.getAttribute("data-no-dots") === null ? true : false;
         } else {
           this.params.dots = true;
         }
 
-        this.params.adaptiveHeight = this.element.getAttribute("data-adaptive-height") !== null;
-        this.params.centerMode = this.element.getAttribute("data-center") === null ? false : true;
-        this.params.infinite = this.element.getAttribute("data-no-infinite") === null ? true : false
+        this.params.adaptiveHeight =
+          this.element.getAttribute("data-adaptive-height") !== null;
+        this.params.centerMode =
+          this.element.getAttribute("data-center") === null ? false : true;
+        this.params.infinite =
+          this.element.getAttribute("data-no-infinite") === null ? true : false;
         this.params.count = {};
         this.params.count.xs = +this.element.getAttribute("data-slides") || 1;
-        this.params.count.sm = +this.element.getAttribute("data-sm-slides") || this.params.count.xs;
-        this.params.count.md = +this.element.getAttribute("data-md-slides") || this.params.count.sm;
-        this.params.count.lg = +this.element.getAttribute("data-lg-slides") || this.params.count.md;
-        this.params.count.xl = +this.element.getAttribute("data-xl-slides") || this.params.count.lg;
+        this.params.count.sm =
+          +this.element.getAttribute("data-sm-slides") || this.params.count.xs;
+        this.params.count.md =
+          +this.element.getAttribute("data-md-slides") || this.params.count.sm;
+        this.params.count.lg =
+          +this.element.getAttribute("data-lg-slides") || this.params.count.md;
+        this.params.count.xl =
+          +this.element.getAttribute("data-xl-slides") || this.params.count.lg;
         this.params.rows = {};
         (this.params.rows.xs = +this.element.getAttribute("data-rows") || 1),
-          (this.params.rows.sm = +this.element.getAttribute("data-sm-rows") || this.params.rows.xs),
-          (this.params.rows.md = +this.element.getAttribute("data-md-rows") || this.params.rows.sm),
-          (this.params.rows.lg = +this.element.getAttribute("data-lg-rows") || this.params.rows.md),
-          (this.params.rows.xl = +this.element.getAttribute("data-xl-rows") || this.params.rows.lg);
+          (this.params.rows.sm =
+            +this.element.getAttribute("data-sm-rows") || this.params.rows.xs),
+          (this.params.rows.md =
+            +this.element.getAttribute("data-md-rows") || this.params.rows.sm),
+          (this.params.rows.lg =
+            +this.element.getAttribute("data-lg-rows") || this.params.rows.md),
+          (this.params.rows.xl =
+            +this.element.getAttribute("data-xl-rows") || this.params.rows.lg);
         this.params.state = {};
         Object.keys(breakpoints).forEach(function (key, index) {
           let breakpoint = index !== 0 ? "-" + key + "-" : "-";
 
-          let attr = _this3.element.getAttribute("data".concat(breakpoint, "mounted"));
+          let attr = _this3.element.getAttribute(
+            "data".concat(breakpoint, "mounted")
+          );
 
           if (attr === null && index !== 0) {
             let prevKey = Object.keys(breakpoints)[index - 1];
@@ -96,7 +116,11 @@ const SliderConstructor = /*#__PURE__*/ (function () {
         });
         this.createIcons();
         this.checkSliderState();
-        this.checkSliderStateDebounced = sliderDebounce(this.checkSliderState, 500, this);
+        this.checkSliderStateDebounced = sliderDebounce(
+          this.checkSliderState,
+          500,
+          this
+        );
         window.addEventListener("resize", this.checkSliderStateDebounced);
       },
     },
@@ -109,7 +133,9 @@ const SliderConstructor = /*#__PURE__*/ (function () {
           '\n      <svg viewBox="0 0 11 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">\n        <path d="M9.00039 7.24792e-05L10.4004 1.40007L2.80039 9.00009L10.4004 16.6001L9.00039 18.1001L0.000391006 9.00009C0.000391006 9.00009 9.10039 7.24792e-05 9.00039 7.24792e-05Z"/>\n      </svg>\n    ';
         let leftIconClass = "custom-icon-left";
         let rightIconClass = "custom-icon-right";
-        let customIcons = this.element.querySelectorAll(".".concat(leftIconClass, ", .").concat(rightIconClass));
+        let customIcons = this.element.querySelectorAll(
+          ".".concat(leftIconClass, ", .").concat(rightIconClass)
+        );
         customIcons.forEach(function (icon) {
           let isLeftIcon = icon.classList.contains(leftIconClass);
           let isRightIcon = icon.classList.contains(rightIconClass);
@@ -130,22 +156,24 @@ const SliderConstructor = /*#__PURE__*/ (function () {
         if (prevButton) {
           const button = document.getElementById(prevButton);
           this.prevArrow = button.outerHTML;
-          button.remove()
+          button.remove();
         } else {
-          this.prevArrow = '<button type="button" class="button button_style-1 slick-prev">'.concat(
-            rightIcon,
-            "</button>"
-          );
+          this.prevArrow =
+            '<button type="button" class="button button_style-1 slick-prev">'.concat(
+              rightIcon,
+              "</button>"
+            );
         }
         if (nextButton) {
           const button = document.getElementById(nextButton);
           this.nextArrow = button.outerHTML;
-          button.remove()
+          button.remove();
         } else {
-          this.nextArrow = '<button type="button" class="button button_style-1 slick-next">'.concat(
-            leftIcon,
-            "</button>"
-          );
+          this.nextArrow =
+            '<button type="button" class="button button_style-1 slick-next">'.concat(
+              leftIcon,
+              "</button>"
+            );
         }
       },
     },
@@ -189,7 +217,8 @@ const SliderConstructor = /*#__PURE__*/ (function () {
           slide.remove();
         });
         this.slides.forEach(function (slide) {
-          let shouldBeHidden = slide.getAttribute("data-slide-mobile-hidden") !== null;
+          let shouldBeHidden =
+            slide.getAttribute("data-slide-mobile-hidden") !== null;
           let breakpoint = window.innerWidth < breakpoints.sm;
 
           if (!(shouldBeHidden && breakpoint)) {
@@ -259,10 +288,18 @@ const SliderConstructor = /*#__PURE__*/ (function () {
             const target = $(event.currentTarget);
             const id = target.attr("data-sector");
             const parent = target.parent().parent();
-            parent.find(".product-card-slideshow__image_active").removeClass("product-card-slideshow__image_active");
-            parent.find(".product-card-slideshow__dot_active").removeClass("product-card-slideshow__dot_active");
-            parent.find(`[data-sector-image="${id}"]`).addClass("product-card-slideshow__image_active");
-            parent.find(`[data-sector-dot="${id}"]`).addClass("product-card-slideshow__dot_active");
+            parent
+              .find(".product-card-slideshow__image_active")
+              .removeClass("product-card-slideshow__image_active");
+            parent
+              .find(".product-card-slideshow__dot_active")
+              .removeClass("product-card-slideshow__dot_active");
+            parent
+              .find(`[data-sector-image="${id}"]`)
+              .addClass("product-card-slideshow__image_active");
+            parent
+              .find(`[data-sector-dot="${id}"]`)
+              .addClass("product-card-slideshow__dot_active");
           });
 
           $(".product-card-slideshow__sectors").on("touchstart", (event) => {
@@ -277,37 +314,63 @@ const SliderConstructor = /*#__PURE__*/ (function () {
             const length = parent.find(".product-card-slideshow__image").length;
 
             if (touchendX < touchstartX) {
-              parent.find(".product-card-slideshow__image_active").removeClass("product-card-slideshow__image_active");
-              parent.find(".product-card-slideshow__dot_active").removeClass("product-card-slideshow__dot_active");
+              parent
+                .find(".product-card-slideshow__image_active")
+                .removeClass("product-card-slideshow__image_active");
+              parent
+                .find(".product-card-slideshow__dot_active")
+                .removeClass("product-card-slideshow__dot_active");
               if (id >= length) {
-                parent.find(`[data-sector-image]:nth-child(1)`).addClass("product-card-slideshow__image_active");
-                parent.find(`[data-sector-dot]:nth-child(1)`).addClass("product-card-slideshow__dot_active");
+                parent
+                  .find(`[data-sector-image]:nth-child(1)`)
+                  .addClass("product-card-slideshow__image_active");
+                parent
+                  .find(`[data-sector-dot]:nth-child(1)`)
+                  .addClass("product-card-slideshow__dot_active");
                 return;
               }
-              parent.find(`[data-sector-image="${id}"]`).next().addClass("product-card-slideshow__image_active");
-              parent.find(`[data-sector-dot="${id}"]`).next().addClass("product-card-slideshow__dot_active");
+              parent
+                .find(`[data-sector-image="${id}"]`)
+                .next()
+                .addClass("product-card-slideshow__image_active");
+              parent
+                .find(`[data-sector-dot="${id}"]`)
+                .next()
+                .addClass("product-card-slideshow__dot_active");
             }
             if (touchendX > touchstartX) {
-              parent.find(".product-card-slideshow__image_active").removeClass("product-card-slideshow__image_active");
-              parent.find(".product-card-slideshow__dot_active").removeClass("product-card-slideshow__dot_active");
+              parent
+                .find(".product-card-slideshow__image_active")
+                .removeClass("product-card-slideshow__image_active");
+              parent
+                .find(".product-card-slideshow__dot_active")
+                .removeClass("product-card-slideshow__dot_active");
               if (id <= 1) {
                 parent
-                .find(`[data-sector-image]:nth-child(${length})`)
-                .addClass("product-card-slideshow__image_active");
-                parent.find(`[data-sector-dot]:nth-child(${length})`).addClass("product-card-slideshow__dot_active");
+                  .find(`[data-sector-image]:nth-child(${length})`)
+                  .addClass("product-card-slideshow__image_active");
+                parent
+                  .find(`[data-sector-dot]:nth-child(${length})`)
+                  .addClass("product-card-slideshow__dot_active");
                 return;
               }
-              parent.find(`[data-sector-image="${id}"]`).prev().addClass("product-card-slideshow__image_active");
-              parent.find(`[data-sector-dot="${id}"]`).prev().addClass("product-card-slideshow__dot_active");
+              parent
+                .find(`[data-sector-image="${id}"]`)
+                .prev()
+                .addClass("product-card-slideshow__image_active");
+              parent
+                .find(`[data-sector-dot="${id}"]`)
+                .prev()
+                .addClass("product-card-slideshow__dot_active");
             }
           });
 
-          $(".product-card-slideshow .product-card-slideshow__image:first-child").addClass(
-            "product-card-slideshow__image_active"
-          );
-          $(".product-card-slideshow .product-card-slideshow__dot:first-child").addClass(
-            "product-card-slideshow__dot_active"
-          );
+          $(
+            ".product-card-slideshow .product-card-slideshow__image:first-child"
+          ).addClass("product-card-slideshow__image_active");
+          $(
+            ".product-card-slideshow .product-card-slideshow__dot:first-child"
+          ).addClass("product-card-slideshow__dot_active");
         });
 
         this.mounted = true;
