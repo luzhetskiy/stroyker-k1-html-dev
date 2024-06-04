@@ -7825,17 +7825,6 @@ ol.number-list li:before {
   margin-bottom: 20px;
 }
 
-@media (max-width: 767px) {
-  .reviews {
-    width: calc(100% + 30px);
-    margin: 0 -15px 20px -15px;
-  }
-}
-
-.reviews:last-child {
-  margin-bottom: 0;
-}
-
 .review-item {
   padding: 25px 25px 25px 40px;
   background: #f6f6f6;

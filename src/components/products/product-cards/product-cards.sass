@@ -1,16 +1,23 @@
+[data-collapse-open]
+  color: #2363D1
+
+[data-collapse-close]
+  color: #767676
+  
 .product-content
   background-color: #fff
   border: none
   
   &_inner
     padding: 40px 80px
-  &_frameless
-    border: none
+  
 
 @media (min-width: 575px)
   .product-content
     padding: 40px 20px
     border: 1px solid #E5E5EA
+    &_frameless
+      border: none
 
 
 @media (min-width: 768px)
@@ -18,16 +25,12 @@
     padding: 40px 60px
     
 
-
-
 .char
   display: flex
   flex-direction: column
   gap: 20px
 
   li
-    display: -webkit-box
-    display: -ms-flexbox
     display: flex
     position: relative
 
@@ -45,7 +48,7 @@
   height: 16px
 
 .char-text:first-child
-  width: 50%
+  width: 60%
   margin-right: 10px
 
 .char-text:first-child:before
@@ -58,12 +61,29 @@
   background: url(@images/dot.png) 0 0 repeat-x
 
 .char-text:last-child
-  width: 50%
+  width: 40%
 
 .char-text:last-child
   width: auto
-  font-size: 18px
+  font-size: 14px
   color: #000
+
+@media (max-width: 767px)
+  .char
+    li
+      flex-direction: column
+      gap: 5px
+    
+  .char-text:first-child
+    font-size: 14px
+    color: #BDBDBD
+
+  .char-text:last-child
+    font-size: 18px
+
+  .char-text:first-child:before
+    display: none
+
 
 .product-card-page
   padding: 30px 0 60px 0
@@ -578,7 +598,7 @@
   border-bottom: 1px solid #f6f6f6
   padding: 10px 0
 
-  &__name
+  &__text
     display: block
     max-width: 350px
     font-size: 14px
@@ -586,7 +606,7 @@
     color: #000000
     margin-right: auto
 
-  &__name-link
+  &__text-link
     font-size: 14px
     line-height: 18px
     color: #000000
@@ -618,7 +638,7 @@
 
   &__download-button
     background: #ffffff
-    border: 1px solid #B7CBE5
+    border: 1px solid var(--colorless-buttons-border-color, #b7cbe5)
     height: 40px
     line-height: 38px
     font-size: 14px

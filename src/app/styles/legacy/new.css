@@ -1430,6 +1430,12 @@
   .gap-md-50 {
     gap: 50px !important;
   }
+  .gap-md-55 {
+    gap: 55px !important;
+  }
+  .gap-md-60 {
+    gap: 60px !important;
+  }
   .justify-content-md-start {
     justify-content: flex-start !important;
   }

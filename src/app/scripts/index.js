@@ -10,6 +10,9 @@ import "inputmask/dist/jquery.inputmask";
 import '../../shared/libs/collapse/collapse'
 import '../../components/products/product-cards/product-cards'
 
+
+window.wNumb = wNumb
+window.noUiSlider = noUiSlider
 window.tippy = tippy
 
 window.breakpoints = {
@@ -19,6 +22,7 @@ window.breakpoints = {
   lg: 1024,
   xl: 1280,
 };
+
 
 $(".acc__toggle:not(.not_toggle)").click(function (e) {
   // e.preventDefault();
