@@ -42,6 +42,8 @@ var collapse = __webpack_require__(6954);
 
 
 
+window.wNumb = (wNumb_default());
+window.noUiSlider = nouislider/* default */.Ay;
 window.tippy = tippy_esm/* default */.Ay;
 window.breakpoints = {
   xs: 0,
