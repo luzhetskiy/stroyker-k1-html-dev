@@ -76,13 +76,13 @@ $(".shopping-cart-item__delete").click(function () {
 });
 $(".slider .owl-carousel").owlCarousel({
   loop: true,
-  margin: 0,
+  margin: 10,
   items: 1,
   nav: true,
 });
 $(".news-slider .owl-carousel").owlCarousel({
   loop: true,
-  margin: 0,
+  margin: 10,
   items: 4,
   responsive: {
     0: {
@@ -131,7 +131,7 @@ $(".action-slider .owl-carousel").owlCarousel({
 });
 $(".partners-slider .owl-carousel").owlCarousel({
   loop: true,
-  margin: 0,
+  margin: 10,
   nav: true,
   dots: false,
   items: 5,
@@ -676,48 +676,6 @@ $(document).ready(function () {
     sync1.data("owl.carousel").to(number, 300, true);
   });
 });
-
-$(".tab-content").hide();
-$(".tab-content:first").show();
-/* if in tab mode */
-
-$("ul.tabs li,.product-card__review-link a,.schedule-btn a").click(function () {
-  $(".tab-content").hide();
-  var activeTab = $(this).attr("rel");
-  $("#" + activeTab).fadeIn();
-  $("ul.tabs li").removeClass("active");
-  $(this).addClass("active");
-  $(".tab_drawer_heading").removeClass("d_active");
-  $(".tab_drawer_heading[rel^='" + activeTab + "']").addClass("d_active");
-});
-/* if in drawer mode */
-
-$(".tab_drawer_heading").click(function () {
-  var d_activeTab = $(this).attr("rel"),
-    activeTabBlock = $("#" + d_activeTab + ":hidden"),
-    $thisActive = $(this).not(".d_active");
-  $(".tab-content").hide();
-  activeTabBlock.fadeIn();
-  $(".tab_drawer_heading").removeClass("d_active");
-  $thisActive.addClass("d_active");
-  $("ul.tabs li").removeClass("active");
-  $("ul.tabs li[rel^='" + d_activeTab + "']").addClass("active");
-});
-/* Extra class "tab_last"
- to add border to right side
- of last tab */
-
-$("ul.tabs li").last().addClass("tab_last");
-jQuery(document).ready(function () {
-  jQuery(".schedule-btn a").click(function () {
-    jQuery(".schedule-link").toggleClass("active");
-  });
-});
-jQuery(document).ready(function () {
-  jQuery(".product-card__review-link a").click(function () {
-    jQuery(".review-tab-link").toggleClass("active");
-  });
-}); //slideshow
 
 $(".tab-content").hide();
 $(".tab-content:first").show();
@@ -2426,7 +2384,7 @@ $(() => {
     });
     $(".articles-block .owl-carousel").owlCarousel({
       loop: true,
-      margin: 0,
+      margin: 10,
       nav: true,
       dots: false,
       items: 3,

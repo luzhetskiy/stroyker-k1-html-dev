@@ -13,6 +13,7 @@ console.log(mode);
 module.exports = {
   mode: mode,
   stats: "minimal",
+  // devtool: mode === 'production' ? false : 'source-map',
   devtool: false,
   resolve: {
     alias: {
@@ -22,7 +23,7 @@ module.exports = {
     },
   },
   optimization: {
-    minimize: false,
+    minimize: mode === 'production',
     mergeDuplicateChunks: true,
     splitChunks: {
       cacheGroups: {
