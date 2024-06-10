@@ -75,29 +75,153 @@
             </div>
 
             <div class="content-block">
-              <div class="row">
-                <div class="col-lg-9"></div>
-                <div class="col-lg-3">
-                  <div class="d-flex flex-column gap-20">
-                    <form id="promotional-code-form">
-                      <input class="promotional-code-input" type="text" name="promotional-code" id="promotional-code" />
-                    </form>
-                    <div class="d-flex flex-column gap-15">
-                      <div class="d-felx flex-column gap-10">
-                        <div class="d-flex flex-row justify-content-between">
-                          <p class="text">
+              <div class="d-flex flex-column gap-20">
+                <h1 class="title">Корзина</h1>
+                <div class="row">
+                  <div class="col-lg-9">
+                    <div class="d-flex flex-column gap-20">
+                      <div class="d-flex flex-column">
+                        <%~ include("/components/cart/cart-item/cart-item.html") %> <%~
+                        include("/components/cart/cart-item/cart-item.html") %> <%~
+                        include("/components/cart/cart-item/cart-item.html") %>
+                      </div>
+                      <div class="bg-white p-20 pt-30 pb-50">
+                        <div class="d-flex flex-column gap-30 pb-30">
+                          <div class="row border-bottom-1 border-color-gray-100">
+                            <div class="col-lg-6">
+                              <div class="d-flex flex-column gap-15">
+                                <h2 class="sub-title">Контактные данные</h2>
+                                <form>
+                                  <div class="form-group">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      name="promotional-code"
+                                      autocomplete="off"
+                                      required=""
+                                    />
+                                    <label for="name" class="label-name">
+                                      <span class="content-name">Ваше имя*</span>
+                                    </label>
+                                  </div>
+                                  <div class="form-group">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      name="promotional-code"
+                                      autocomplete="off"
+                                      required=""
+                                    />
+                                    <label for="name" class="label-name">
+                                      <span class="content-name">Ваш номер*</span>
+                                    </label>
+                                  </div>
+                                  <div class="form-group">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      name="promotional-code"
+                                      autocomplete="off"
+                                      required=""
+                                    />
+                                    <label for="name" class="label-name">
+                                      <span class="content-name">Email*</span>
+                                    </label>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="d-flex flex-column gap-40">
+                            <div class="d-flex flex-column gap-15">
+                              <h2 class="sub-title">Доставка</h2>
+                              <div class="row">
+                                <div class="col-lg-4">
+                                  <div class="d-flex flex-row gap-10">
+                                    <input name="pickup" id="pickup" type="radio">
+                                    <label for="pickup" class="d-flex flex-column gap-2">
+                                      <p class="text size-16 color-gray-700">Самовывоз</p>
+                                      <p class="text size-12 color-gray-550">Выберите пункт самовывоза
+                                        в Самаре</p>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="d-flex flex-row gap-10">
+                                    <input name="delivery-point" id="delivery-point" type="radio">
+                                    <label for="delivery-point" class="d-flex flex-column gap-2">
+                                      <p class="text size-16 color-gray-700">До пункта выдачи</p>
+                                      <p class="text size-12 color-gray-550">Выберите пункт самовывоза
+                                        в Самаре</p>
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="d-flex flex-row gap-10">
+                                    <input name="adress" id="adress" type="radio">
+                                    <label for="adress" class="d-flex flex-column gap-2">
+                                      <p class="text size-16 color-gray-700">По адресу</p>
+                                      <p class="text size-12 color-gray-550">Выберите пункт самовывоза
+                                        в Самаре</p>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="d-flex flex-column gap-15">
+                              <h2 class="sub-title">Комментарий</h2>
+                              <div class="d-flex flex-column gap-10">
+                                <div class="form-group">
+                                  <textarea class="form-control" name="message" autocomplete="off" required=""></textarea>
+                                  <label for="message" class="label-name">
+                                    <span class="content-name"> Комментарий </span>
+                                  </label>
+                                </div>
+                                <button type="submit" class="btn">Отправить</button>
+                                <p class="text size-12 color-gray-550">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="d-flex flex-column gap-20 bg-white p-20 sticky">
+                      <form id="promotional-code-form">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            name="promotional-code"
+                            autocomplete="off"
+                            required=""
+                          />
+                          <label for="name" class="label-name">
+                            <span class="content-name">Промокод</span>
+                          </label>
+                        </div>
+                      </form>
+                      <div class="d-flex flex-column gap-15">
+                        <div class="d-flex flex-column gap-10">
+                          <p class="text d-flex flex-wrap gap-5">
                             <span>Товары: 3</span>
                             <span class="separator-dot"></span>
                             <span>2500 кг</span>
                             <span class="separator-dot"></span>
                             <span>6,5 м3</span>
+
+                            <span class="ms-auto d-inline-block">89 537,50 ₽</span>
                           </p>
-                          <p class="text">89 537,50 ₽</p>
+
+                          <div class="d-flex flex-row justify-content-between">
+                            <p class="text weight-700">Итого:</p>
+                            <p class="text weight-700">89 537,50 ₽</p>
+                          </div>
                         </div>
-                        <div class="d-flex flex-row justify-content-between">
-                          <p class="text weight-700">Итого:</p>
-                          <p class="text weight-700">89 537,50 ₽</p>
-                        </div>
+                        <p class="text size-12 color-gray-550">
+                          Дата и стоимость доставки рассчитываются после оформления заказа
+                        </p>
                       </div>
                     </div>
                   </div>
