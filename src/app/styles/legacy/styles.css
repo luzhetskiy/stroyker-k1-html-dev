@@ -472,18 +472,6 @@ p:last-child {
   }
 }
 
-.container {
-  width: 100%;
-  max-width: 1210px;
-  min-width: 320px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.container--small {
-  max-width: 1010px;
-}
-
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;

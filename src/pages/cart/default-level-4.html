@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="@src/../node_modules/mmenu-js/dist/mmenu.css" />
+    <link rel="stylesheet" href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css" />
+    <link rel="stylesheet" href="@src/../node_modules/nouislider/dist/nouislider.css" />
+    <link rel="stylesheet" href="@src/../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="@src/../node_modules/tippy.js/dist/tippy.css" />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+    <script defer src="@src/app/main.js"></script>
+  </head>
+
+  <body class="frontpage">
+    <div class="page">
+      <header><%~ include("/components/headers/header-default/header-default.html") %></header>
+
+      <main>
+        <section class="section-dark">
+          <div class="container">
+            <div class="page-head">
+              <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Главная" href="/">
+                    Главная
+                    <meta itemprop="name" content="Главная" />
+                  </a>
+                  <meta itemprop="position" content="1" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Корзина" href="/cart/">
+                    Корзина
+                    <meta itemprop="name" content="Корзина" />
+                  </a>
+                  <meta itemprop="position" content="2" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Доставка" href="/cart/delivery/">
+                    Доставка
+                    <meta itemprop="name" content="Доставка" />
+                  </a>
+                  <meta itemprop="position" content="3" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Оплата" href="/cart/payment/">
+                    Оплата
+                    <meta itemprop="name" content="Оплата" />
+                  </a>
+                  <meta itemprop="position" content="4" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                Завершение заказа
+              </div>
+            </div>
+
+            <div class="content-block">
+              <a href="/cart/" class="mobile-menu-item">
+                Шаг 1. Корзина
+                <span class="icon"
+                  ><svg class="icon-svg">
+                    <use xlink:href="#tab-arrow"></use></svg
+                ></span>
+              </a>
+
+              <a href="/cart/delivery/" class="mobile-menu-item">
+                Шаг 2. Доставка
+                <span class="icon"
+                  ><svg class="icon-svg">
+                    <use xlink:href="#tab-arrow"></use></svg
+                ></span>
+              </a>
+
+              <a href="/cart/payment/" class="mobile-menu-item">
+                Шаг 3. Оплата
+                <span class="icon"
+                  ><svg class="icon-svg">
+                    <use xlink:href="#tab-arrow"></use></svg
+                ></span>
+              </a>
+
+              <a href="" class="mobile-menu-item active">
+                Шаг 4. Завершение
+                <span class="icon"
+                  ><svg class="icon-svg">
+                    <use xlink:href="#tab-arrow"></use></svg
+                ></span>
+              </a>
+
+              <div class="delivery-container">
+                <div class="delivery-content">
+                  <div class="delivery-block delivery-block--order-succes">
+                    <div class="order-succes">
+                      <span class="content-title content-title--lg"> Ваш заказ успешно оформлен </span>
+                      <div class="order-number"><span>Заказ №</span>5</div>
+                      <div class="order-succes-item">
+                        <span class="order-succes-item__title">Доставка: </span>
+                        <p>
+                          Тип доставки —<br />
+                          самовывоз
+                        </p>
+
+                        <p>
+                          Адрес пункта самовывоза —<br />
+                          цукцук
+                        </p>
+                      </div>
+
+                      <div class="order-succes-item">
+                        <span class="order-succes-item__title">Оплата: </span>
+                        <p>картой при получении</p>
+                      </div>
+
+                      <div class="order-succes-total"><span>Итого:</span>45&nbsp;654,00 ₽</div>
+                    </div>
+
+                    <a href="/" class="btn btn--main btn--fixed-width btn--size-md">Вернуться в магазин</a>
+                  </div>
+                </div>
+                <div class="delivery-steps">
+                  <div class="step-item done"><span class="step-item__number">1</span><a href="/cart/">Корзина</a></div>
+                  <div class="step-item done">
+                    <span class="step-item__number">2</span><a href="/cart/delivery/">Доставка</a>
+                  </div>
+                  <div class="step-item done">
+                    <span class="step-item__number">3</span><a href="/cart/payment/">Оплата</a>
+                  </div>
+                  <div class="step-item current"><span class="step-item__number">4</span>Завершение</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%~ include("/components/footers/footer/footer.html") %> <%~ include("/components/general/svg-pack/svg-pack.html")
+      %> <%~ include("/components/modals/callme-modal/callme-modal.html") %>
+    </div>
+  </body>
+</html>

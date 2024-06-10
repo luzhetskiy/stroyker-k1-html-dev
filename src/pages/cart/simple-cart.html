@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="@src/../node_modules/mmenu-js/dist/mmenu.css" />
+    <link rel="stylesheet" href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css" />
+    <link rel="stylesheet" href="@src/../node_modules/nouislider/dist/nouislider.css" />
+    <link rel="stylesheet" href="@src/../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="@src/../node_modules/tippy.js/dist/tippy.css" />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+    <script defer src="@src/app/main.js"></script>
+  </head>
+
+  <body class="frontpage">
+    <div class="page">
+      <header><%~ include("/components/headers/header-default/header-default.html") %></header>
+
+      <main>
+        <section class="section simple-cart">
+          <div class="container">
+            <div class="page-head">
+              <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Главная" href="/">
+                    Главная
+                    <meta itemprop="name" content="Главная" />
+                  </a>
+                  <meta itemprop="position" content="1" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                Корзина
+              </div>
+            </div>
+
+            <div class="content-block">
+              <span class="content-title content-title--lg">Корзина</span>
+              <div class="simple-cart__content">
+                <div class="shopping-cart">
+                  <div class="shopping-cart-list">
+                    <div class="shopping-cart-item">
+                      <span data-cart-delete-url="/cart/del/3" class="shopping-cart-item__delete">
+                        <a>
+                          <svg class="icon-svg">
+                            <use xlink:href="#delete"></use>
+                          </svg>
+                        </a>
+                      </span>
+
+                      <span class="shopping-cart-item__name"> <span>234234</span>ваппп </span>
+                      <span class="shopping-cart-item__cost">45&nbsp;654,00 ₽</span>
+                      <span class="shopping-cart-item__numbers">
+                        <div class="input-number">
+                          <div class="cart-qty-control order-down" data-qty-update-url="/cart/upd/3?q=down"></div>
+                          <input
+                            class="cart-qty-control-input"
+                            data-qty-update-url="/cart/upd/3"
+                            type="number"
+                            min="1"
+                            max="inf"
+                            step="1"
+                            value="1"
+                            id="number"
+                            required=""
+                          />
+                          <div class="cart-qty-control order-up" data-qty-update-url="/cart/upd/3?q=up"></div>
+                        </div>
+                      </span>
+                      <span class="shopping-cart-item__total-cost"> 45&nbsp;654,00 ₽</span>
+                    </div>
+                  </div>
+
+                  <div class="delivery-cart">
+                    <div class="delivery-total delivery-total--cart">
+                      <ul>
+                        <li>
+                          <span class="delivery-total__sm">Общий вес, кг:</span>
+                          <span class="delivery-total__sm cart-total-weight">0</span>
+                        </li>
+                        <li>
+                          <span class="delivery-total__sm">Общий объём, м3: </span>
+                          <span class="delivery-total__sm cart-total-volume">534,0</span>
+                        </li>
+                        <li>
+                          <span class="delivery-total__lg">Итого:</span>
+                          <span class="delivery-total__lg cart-total-price"> 45&nbsp;654,00 ₽ </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="simple-cart__form">
+                <form class="simple-order-form" method="post">
+                  <input
+                    type="hidden"
+                    name="csrfmiddlewaretoken"
+                    value="dxvWIphNsZMSkUjJhLIlMbScsNCqDjuSZsUHxNeN663VpBw8AN2g0nXrugtHipAd"
+                  />
+
+                  <div class="simple-order-form__group simple-order-form__column">
+                    <h3 class="simple-order-form__title">Предпочтительный вариант доставки:</h3>
+                    <ul id="id_delivery_variant">
+                      <li>
+                        <div class="new-radio">
+                          <input
+                            type="radio"
+                            name="delivery_variant"
+                            value="самовывоз"
+                            class="new-radio__input"
+                            id="id_delivery_variant_0"
+                          />
+                          <label class="new-radio__label" for="id_delivery_variant_0"> самовывоз </label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="new-radio">
+                          <input
+                            type="radio"
+                            name="delivery_variant"
+                            value="доставка по адресу"
+                            class="new-radio__input"
+                            id="id_delivery_variant_1"
+                          />
+                          <label class="new-radio__label" for="id_delivery_variant_1"> доставка по адресу </label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="new-radio">
+                          <input
+                            type="radio"
+                            name="delivery_variant"
+                            value="доставка до ТК"
+                            class="new-radio__input"
+                            id="id_delivery_variant_2"
+                          />
+                          <label class="new-radio__label" for="id_delivery_variant_2"> доставка до ТК </label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="simple-order-form__group simple-order-form__column" style="display: none">
+                    <h3 class="simple-order-form__title">Предпочтительный вариант оплаты:</h3>
+                    <ul id="id_payment_variant">
+                      <li>
+                        <div class="new-radio">
+                          <input
+                            type="radio"
+                            name="payment_variant"
+                            value="0"
+                            class="new-radio__input"
+                            id="id_payment_variant_0"
+                          />
+                          <label class="new-radio__label" for="id_payment_variant_0">выставление счета</label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="new-radio">
+                          <input
+                            type="radio"
+                            name="payment_variant"
+                            value="1"
+                            class="new-radio__input"
+                            id="id_payment_variant_1"
+                          />
+                          <label class="new-radio__label" for="id_payment_variant_1">картой при получении</label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="new-radio">
+                          <input
+                            type="radio"
+                            name="payment_variant"
+                            value="2"
+                            class="new-radio__input"
+                            id="id_payment_variant_2"
+                          />
+                          <label class="new-radio__label" for="id_payment_variant_2">наличными при получении</label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="new-radio">
+                          <input
+                            type="radio"
+                            name="payment_variant"
+                            value="3"
+                            class="new-radio__input"
+                            id="id_payment_variant_3"
+                          />
+                          <label class="new-radio__label" for="id_payment_variant_3">он-лайн</label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="new-radio">
+                          <input
+                            type="radio"
+                            name="payment_variant"
+                            value="4"
+                            class="new-radio__input"
+                            id="id_payment_variant_4"
+                          />
+                          <label class="new-radio__label" for="id_payment_variant_4">кредит</label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="simple-order-form__group simple-order-form__inputs">
+                    <div class="form-group">
+                      <input type="text" name="name" maxlength="60" class="form-control" required="" id="id_name" />
+                      <label for="id_name" class="label-name">
+                        <span class="content-name"> Имя* </span>
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="phone"
+                        value="79277767575"
+                        maxlength="18"
+                        autocomplete="off"
+                        class="form-control phone"
+                        required=""
+                        id="id_phone"
+                        inputmode="text"
+                      />
+                      <label for="id_phone" class="label-name">
+                        <span class="content-name"> Телефон* </span>
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="email"
+                        value="info@nastroyker.ru"
+                        maxlength="60"
+                        class="form-control"
+                        required=""
+                        id="id_email"
+                      />
+                      <label for="id_email" class="label-name">
+                        <span class="content-name"> Email* </span>
+                      </label>
+                    </div>
+                    <div class="form-group comment">
+                      <textarea
+                        name="comment"
+                        cols="40"
+                        rows="10"
+                        class="form-control form-control"
+                        id="id_comment"
+                      ></textarea>
+                      <label for="id_comment" class="label-name">
+                        <span class="content-name"> Комментарий к заказу </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="simple-order-form__group simple-order-form__submit">
+                    <button class="btn btn--main-min button-theme button-theme_primary" type="submit">Отправить</button>
+
+                    <span class="form-text"
+                      >Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с нашей
+                      политикой конфиденциальности</span
+                    >
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%~ include("/components/footers/footer/footer.html") %> <%~ include("/components/general/svg-pack/svg-pack.html")
+      %> <%~ include("/components/modals/callme-modal/callme-modal.html") %>
+    </div>
+  </body>
+</html>

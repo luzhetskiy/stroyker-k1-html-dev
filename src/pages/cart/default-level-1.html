@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="@src/../node_modules/mmenu-js/dist/mmenu.css" />
+    <link rel="stylesheet" href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css" />
+    <link rel="stylesheet" href="@src/../node_modules/nouislider/dist/nouislider.css" />
+    <link rel="stylesheet" href="@src/../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="@src/../node_modules/tippy.js/dist/tippy.css" />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+    <script defer src="@src/app/main.js"></script>
+  </head>
+
+  <body class="frontpage">
+    <div class="page">
+      <header><%~ include("/components/headers/header-default/header-default.html") %></header>
+
+      <main>
+        <section class="section-dark">
+          <div class="container">
+            <div class="page-head">
+              <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Главная" href="/">
+                    Главная
+                    <meta itemprop="name" content="Главная" />
+                  </a>
+                  <meta itemprop="position" content="1" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                Корзина
+              </div>
+            </div>
+
+            <div class="content-block">
+              <h1>Корзина</h1>
+
+              <a href="" class="mobile-menu-item active">
+                Шаг 1. Корзина
+                <span class="icon"
+                  ><svg class="icon-svg">
+                    <use xlink:href="#tab-arrow"></use></svg
+                ></span>
+              </a>
+              <div class="delivery-container">
+                <div class="delivery-content">
+                  <div class="shopping-cart">
+                    <div class="shopping-cart-list">
+                      <div class="shopping-cart-item">
+                        <span data-cart-delete-url="/cart/del/3" class="shopping-cart-item__delete">
+                          <a>
+                            <svg class="icon-svg">
+                              <use xlink:href="#delete"></use>
+                            </svg>
+                          </a>
+                        </span>
+
+                        <span class="shopping-cart-item__name"> <span>234234</span>ваппп </span>
+                        <span class="shopping-cart-item__cost">45&nbsp;654,00 ₽</span>
+                        <span class="shopping-cart-item__numbers">
+                          <div class="input-number">
+                            <div class="cart-qty-control order-down" data-qty-update-url="/cart/upd/3?q=down"></div>
+                            <input
+                              class="cart-qty-control-input"
+                              data-qty-update-url="/cart/upd/3"
+                              type="number"
+                              min="1"
+                              max="inf"
+                              step="1"
+                              value="1"
+                              id="number"
+                              required=""
+                            />
+                            <div class="cart-qty-control order-up" data-qty-update-url="/cart/upd/3?q=up"></div>
+                          </div>
+                        </span>
+                        <span class="shopping-cart-item__total-cost"> 45&nbsp;654,00 ₽</span>
+                      </div>
+                    </div>
+
+                    <div class="delivery-cart">
+                      <div class="delivery-total delivery-total--cart">
+                        <ul>
+                          <li>
+                            <span class="delivery-total__sm">Общий вес, кг:</span>
+                            <span class="delivery-total__sm cart-total-weight">0</span>
+                          </li>
+                          <li>
+                            <span class="delivery-total__sm">Общий объём, м3:</span>
+                            <span class="delivery-total__sm cart-total-volume">534,0</span>
+                          </li>
+                          <li>
+                            <span class="delivery-total__lg">Итого:</span>
+                            <span class="delivery-total__lg cart-total-price">45&nbsp;654,00 ₽</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="account-radio">
+                      <div class="delivery-selection">
+                        <div class="radio">
+                          <input type="radio" id="shopping-cart-radio-1" name="shopping-cart-acc" />
+                          <label for="shopping-cart-radio-1"><span>У меня нет аккаунта</span></label>
+                          <div class="radio-content radio-content--sm"></div>
+                        </div>
+                        <div class="radio">
+                          <input type="radio" id="shopping-cart-radio-2" name="shopping-cart-acc" />
+                          <label for="shopping-cart-radio-2"><span>Есть аккаунт</span></label>
+                          <div class="radio-content radio-content--sm"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="delivery-choice shopping-cart-radio-1 authorization-cart" style="display: none">
+                      <a
+                        href="/cart/delivery/"
+                        class="btn btn--main btn--fixed-width button-theme button-theme_primary"
+                      >
+                        Далее
+                      </a>
+                    </div>
+                    <div class="delivery-choice shopping-cart-radio-2 authorization-cart" style="display: none">
+                      <a
+                        href="/account/login/?next=/cart/delivery/"
+                        class="btn btn--main btn--fixed-width button-theme button-theme_primary"
+                      >
+                        Далее
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="delivery-steps">
+                  <div class="step-item current"><span class="step-item__number">1</span>Корзина</div>
+                  <div class="step-item"><span class="step-item__number">2</span>Доставка</div>
+                  <div class="step-item"><span class="step-item__number">3</span>Оплата</div>
+                  <div class="step-item"><span class="step-item__number">4</span>Завершение</div>
+                </div>
+              </div>
+
+              <a href="" class="mobile-menu-item disabled">
+                Шаг 2. Доставка
+                <span class="icon"
+                  ><svg class="icon-svg">
+                    <use xlink:href="#tab-arrow"></use></svg
+                ></span>
+              </a>
+              <a href="" class="mobile-menu-item disabled">
+                Шаг 3. Оплата
+                <span class="icon"
+                  ><svg class="icon-svg">
+                    <use xlink:href="#tab-arrow"></use></svg
+                ></span>
+              </a>
+              <a href="" class="mobile-menu-item disabled">
+                Шаг 4. Завершение
+                <span class="icon"
+                  ><svg class="icon-svg">
+                    <use xlink:href="#tab-arrow"></use></svg
+                ></span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%~ include("/components/footers/footer/footer.html") %> <%~ include("/components/general/svg-pack/svg-pack.html")
+      %> <%~ include("/components/modals/callme-modal/callme-modal.html") %>
+    </div>
+  </body>
+</html>

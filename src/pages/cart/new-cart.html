@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="@src/../node_modules/mmenu-js/dist/mmenu.css" />
+    <link rel="stylesheet" href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css" />
+    <link rel="stylesheet" href="@src/../node_modules/nouislider/dist/nouislider.css" />
+    <link rel="stylesheet" href="@src/../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="@src/../node_modules/tippy.js/dist/tippy.css" />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+    <script defer src="@src/app/main.js"></script>
+  </head>
+
+  <body class="frontpage">
+    <div class="page">
+      <header><%~ include("/components/headers/header-default/header-default.html") %></header>
+
+      <main>
+        <section class="section-dark">
+          <div class="container">
+            <div class="page-head">
+              <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Главная" href="/">
+                    Главная
+                    <meta itemprop="name" content="Главная" />
+                  </a>
+                  <meta itemprop="position" content="1" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Корзина" href="/cart/">
+                    Корзина
+                    <meta itemprop="name" content="Корзина" />
+                  </a>
+                  <meta itemprop="position" content="2" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Доставка" href="/cart/delivery/">
+                    Доставка
+                    <meta itemprop="name" content="Доставка" />
+                  </a>
+                  <meta itemprop="position" content="3" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Оплата" href="/cart/payment/">
+                    Оплата
+                    <meta itemprop="name" content="Оплата" />
+                  </a>
+                  <meta itemprop="position" content="4" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                Завершение заказа
+              </div>
+            </div>
+
+            <div class="content-block">
+              <div class="row">
+                <div class="col-lg-9"></div>
+                <div class="col-lg-3">
+                  <div class="d-flex flex-column gap-20">
+                    <form id="promotional-code-form">
+                      <input class="promotional-code-input" type="text" name="promotional-code" id="promotional-code" />
+                    </form>
+                    <div class="d-flex flex-column gap-15">
+                      <div class="d-felx flex-column gap-10">
+                        <div class="d-flex flex-row justify-content-between">
+                          <p class="text">
+                            <span>Товары: 3</span>
+                            <span class="separator-dot"></span>
+                            <span>2500 кг</span>
+                            <span class="separator-dot"></span>
+                            <span>6,5 м3</span>
+                          </p>
+                          <p class="text">89 537,50 ₽</p>
+                        </div>
+                        <div class="d-flex flex-row justify-content-between">
+                          <p class="text weight-700">Итого:</p>
+                          <p class="text weight-700">89 537,50 ₽</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%~ include("/components/footers/footer/footer.html") %> <%~ include("/components/general/svg-pack/svg-pack.html")
+      %> <%~ include("/components/modals/callme-modal/callme-modal.html") %>
+    </div>
+  </body>
+</html>
