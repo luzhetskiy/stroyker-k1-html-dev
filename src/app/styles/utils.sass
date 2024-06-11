@@ -113,11 +113,17 @@
 .border-bottom-1
   border-bottom: 1px solid
 
+.border-0
+  border: 0
+
 .border-color-gray-100
   border-color: var(--gray-color-100)
 
 .p-20
   padding: 20px !important
+
+.p-0
+  padding: 0px !important
 
   
 .d-inline 
@@ -1449,6 +1455,21 @@
 
 
 @media (min-width: 768px) 
+  .p-md-20
+    padding: 20px !important
+  
+  .size-md-16
+    font-size: 16px
+
+  .border-bottom-md-1
+    border-bottom: 1px solid
+
+  .border-md-0
+    border: 0
+
+  .border-color-md-gray-100
+    border-color: var(--gray-color-100)
+
   .d-md-inline 
     display: inline !important
   
@@ -2006,7 +2027,6 @@
   
   .grid-span-md-6 
     grid-column: span 6 !important
-  
 
 
 @media (min-width: 1024px) 
@@ -2671,6 +2691,9 @@
     gap: 45px !important
   
   .gap-xl-50 
+    gap: 50px !important
+
+  .gap-xl-60 
     gap: 50px !important
   
   .justify-content-xl-start 

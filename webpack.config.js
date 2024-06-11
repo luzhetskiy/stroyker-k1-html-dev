@@ -15,7 +15,7 @@ module.exports = {
   stats: "minimal",
   // if sets 'source-map' memory will leak after changing big bundle file (css)
   // devtool: mode === 'production' ? false : 'source-map',
-  devtool: 'source-map',
+  devtool: false,
   resolve: {
     alias: {
       "@public": path.resolve(__dirname, "public"),
