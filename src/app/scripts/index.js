@@ -11,6 +11,7 @@ import '../../shared/libs/collapse/collapse'
 import '../../components/products/product-cards/product-cards'
 import '../../shared/libs/radioToggle/radioToggle'
 import '../../shared/libs/select/select'
+import '../../shared/libs/inputToggle/inputToggle'
 
 window.wNumb = wNumb
 window.noUiSlider = noUiSlider
