@@ -4,7 +4,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_default_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_default_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_default_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_header_default_0_document_0_phone.png",
         "label": "header default",
@@ -22,7 +22,7 @@ report({
           },
           "rawMisMatchPercentage": 0.010395010395010396,
           "misMatchPercentage": "0.01",
-          "analysisTime": 761
+          "analysisTime": 1369
         }
       },
       "status": "pass"
@@ -30,7 +30,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_default_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_default_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_default_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_header_default_0_document_1_tablet.png",
         "label": "header default",
@@ -48,7 +48,7 @@ report({
           },
           "rawMisMatchPercentage": 0.04952368233618234,
           "misMatchPercentage": "0.05",
-          "analysisTime": 1595
+          "analysisTime": 1610
         }
       },
       "status": "pass"
@@ -56,7 +56,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_default_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_default_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_default_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_header_default_0_document_2_desktop.png",
         "label": "header default",
@@ -74,7 +74,7 @@ report({
           },
           "rawMisMatchPercentage": 0.02283456486042693,
           "misMatchPercentage": "0.02",
-          "analysisTime": 2022
+          "analysisTime": 1645
         }
       },
       "status": "pass"
@@ -82,7 +82,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v1_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v1_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v1_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_header_v1_0_document_0_phone.png",
         "label": "header v1",
@@ -106,7 +106,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v1_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v1_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v1_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_header_v1_0_document_1_tablet.png",
         "label": "header v1",
@@ -122,9 +122,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.009957397092145015,
-          "misMatchPercentage": "0.01",
-          "analysisTime": 1872
+          "rawMisMatchPercentage": 0,
+          "misMatchPercentage": "0.00",
+          "analysisTime": 928
         }
       },
       "status": "pass"
@@ -132,7 +132,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v1_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v1_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v1_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_header_v1_0_document_2_desktop.png",
         "label": "header v1",
@@ -148,9 +148,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.005363503886010363,
-          "misMatchPercentage": "0.01",
-          "analysisTime": 1878
+          "rawMisMatchPercentage": 0,
+          "misMatchPercentage": "0.00",
+          "analysisTime": 772
         }
       },
       "status": "pass"
@@ -158,7 +158,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v1-location_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v1-location_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v1-location_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_header_v1-location_0_document_0_phone.png",
         "label": "header v1-location",
@@ -182,7 +182,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v1-location_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v1-location_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v1-location_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_header_v1-location_0_document_1_tablet.png",
         "label": "header v1-location",
@@ -198,9 +198,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.0017702039274924474,
-          "misMatchPercentage": "0.00",
-          "analysisTime": 1421
+          "rawMisMatchPercentage": 0.007597125188821753,
+          "misMatchPercentage": "0.01",
+          "analysisTime": 1318
         }
       },
       "status": "pass"
@@ -208,7 +208,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v1-location_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v1-location_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v1-location_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_header_v1-location_0_document_2_desktop.png",
         "label": "header v1-location",
@@ -226,7 +226,7 @@ report({
           },
           "rawMisMatchPercentage": 0,
           "misMatchPercentage": "0.00",
-          "analysisTime": 888
+          "analysisTime": 694
         }
       },
       "status": "pass"
@@ -234,7 +234,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v2-1_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v2-1_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v2-1_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_header_v2-1_0_document_0_phone.png",
         "label": "header v2-1",
@@ -258,7 +258,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v2-1_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v2-1_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v2-1_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_header_v2-1_0_document_1_tablet.png",
         "label": "header v2-1",
@@ -276,7 +276,7 @@ report({
           },
           "rawMisMatchPercentage": 0.0093673291163142,
           "misMatchPercentage": "0.01",
-          "analysisTime": 979
+          "analysisTime": 1285
         }
       },
       "status": "pass"
@@ -284,7 +284,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v2-1_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v2-1_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v2-1_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_header_v2-1_0_document_2_desktop.png",
         "label": "header v2-1",
@@ -300,9 +300,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0,
-          "misMatchPercentage": "0.00",
-          "analysisTime": 761
+          "rawMisMatchPercentage": 0.005363503886010363,
+          "misMatchPercentage": "0.01",
+          "analysisTime": 1296
         }
       },
       "status": "pass"
@@ -310,7 +310,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v2-2_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v2-2_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v2-2_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_header_v2-2_0_document_0_phone.png",
         "label": "header v2-2",
@@ -334,7 +334,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v2-2_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v2-2_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v2-2_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_header_v2-2_0_document_1_tablet.png",
         "label": "header v2-2",
@@ -350,9 +350,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0,
-          "misMatchPercentage": "0.00",
-          "analysisTime": 704
+          "rawMisMatchPercentage": 0.007597125188821753,
+          "misMatchPercentage": "0.01",
+          "analysisTime": 964
         }
       },
       "status": "pass"
@@ -360,7 +360,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v2-2_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v2-2_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v2-2_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_header_v2-2_0_document_2_desktop.png",
         "label": "header v2-2",
@@ -376,9 +376,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.0050936420552677025,
+          "rawMisMatchPercentage": 0.005363503886010363,
           "misMatchPercentage": "0.01",
-          "analysisTime": 1991
+          "analysisTime": 1434
         }
       },
       "status": "pass"
@@ -386,7 +386,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-fat_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-fat_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-fat_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-fat_0_document_0_phone.png",
         "label": "header v-2-fat",
@@ -410,7 +410,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-fat_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-fat_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-fat_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-fat_0_document_1_tablet.png",
         "label": "header v-2-fat",
@@ -428,7 +428,7 @@ report({
           },
           "rawMisMatchPercentage": 0.009092627382697947,
           "misMatchPercentage": "0.01",
-          "analysisTime": 1099
+          "analysisTime": 1138
         }
       },
       "status": "pass"
@@ -436,7 +436,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-fat_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-fat_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-fat_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-fat_0_document_2_desktop.png",
         "label": "header v-2-fat",
@@ -452,9 +452,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0,
-          "misMatchPercentage": "0.00",
-          "analysisTime": 747
+          "rawMisMatchPercentage": 0.005228061868686868,
+          "misMatchPercentage": "0.01",
+          "analysisTime": 1412
         }
       },
       "status": "pass"
@@ -462,7 +462,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-1_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-1_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-1_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-1_0_document_0_phone.png",
         "label": "header v-2-trapeze-1",
@@ -486,7 +486,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-1_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-1_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-1_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-1_0_document_1_tablet.png",
         "label": "header v-2-trapeze-1",
@@ -504,7 +504,7 @@ report({
           },
           "rawMisMatchPercentage": 0.009665391312316715,
           "misMatchPercentage": "0.01",
-          "analysisTime": 990
+          "analysisTime": 1032
         }
       },
       "status": "pass"
@@ -512,7 +512,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-1_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-1_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-1_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-1_0_document_2_desktop.png",
         "label": "header v-2-trapeze-1",
@@ -528,9 +528,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.004175873316498316,
+          "rawMisMatchPercentage": 0.00496501473063973,
           "misMatchPercentage": "0.00",
-          "analysisTime": 1851
+          "analysisTime": 1158
         }
       },
       "status": "pass"
@@ -538,7 +538,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-2_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-2_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-2_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-2_0_document_0_phone.png",
         "label": "header v-2-trapeze-2",
@@ -562,7 +562,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-2_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-2_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-2_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-2_0_document_1_tablet.png",
         "label": "header v-2-trapeze-2",
@@ -578,9 +578,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.009092627382697947,
+          "rawMisMatchPercentage": 0.009665391312316715,
           "misMatchPercentage": "0.01",
-          "analysisTime": 1006
+          "analysisTime": 1067
         }
       },
       "status": "pass"
@@ -588,7 +588,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-2_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-2_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-2_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-2_0_document_2_desktop.png",
         "label": "header v-2-trapeze-2",
@@ -604,9 +604,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.005228061868686868,
-          "misMatchPercentage": "0.01",
-          "analysisTime": 1040
+          "rawMisMatchPercentage": 0,
+          "misMatchPercentage": "0.00",
+          "analysisTime": 633
         }
       },
       "status": "pass"
@@ -614,7 +614,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-3_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-3_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-3_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-3_0_document_0_phone.png",
         "label": "header v-2-trapeze-3",
@@ -638,7 +638,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-3_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-3_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-3_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-3_0_document_1_tablet.png",
         "label": "header v-2-trapeze-3",
@@ -656,7 +656,7 @@ report({
           },
           "rawMisMatchPercentage": 0,
           "misMatchPercentage": "0.00",
-          "analysisTime": 669
+          "analysisTime": 513
         }
       },
       "status": "pass"
@@ -664,7 +664,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-3_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-3_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-3_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-3_0_document_2_desktop.png",
         "label": "header v-2-trapeze-3",
@@ -680,9 +680,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.005063657407407407,
-          "misMatchPercentage": "0.01",
-          "analysisTime": 1185
+          "rawMisMatchPercentage": 0,
+          "misMatchPercentage": "0.00",
+          "analysisTime": 638
         }
       },
       "status": "pass"
@@ -690,7 +690,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-4_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-4_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-4_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-4_0_document_0_phone.png",
         "label": "header v-2-trapeze-4",
@@ -714,7 +714,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-4_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-4_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-4_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-4_0_document_1_tablet.png",
         "label": "header v-2-trapeze-4",
@@ -730,9 +730,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.009665391312316715,
-          "misMatchPercentage": "0.01",
-          "analysisTime": 1194
+          "rawMisMatchPercentage": 0,
+          "misMatchPercentage": "0.00",
+          "analysisTime": 471
         }
       },
       "status": "pass"
@@ -740,7 +740,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-4_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-4_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-4_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-4_0_document_2_desktop.png",
         "label": "header v-2-trapeze-4",
@@ -756,9 +756,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.005063657407407407,
-          "misMatchPercentage": "0.01",
-          "analysisTime": 668
+          "rawMisMatchPercentage": 0.00496501473063973,
+          "misMatchPercentage": "0.00",
+          "analysisTime": 1239
         }
       },
       "status": "pass"
@@ -766,7 +766,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-5_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-5_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-5_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-5_0_document_0_phone.png",
         "label": "header v-2-trapeze-5",
@@ -790,7 +790,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-5_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-5_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-5_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-5_0_document_1_tablet.png",
         "label": "header v-2-trapeze-5",
@@ -806,9 +806,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0,
-          "misMatchPercentage": "0.00",
-          "analysisTime": 502
+          "rawMisMatchPercentage": 0.009092627382697947,
+          "misMatchPercentage": "0.01",
+          "analysisTime": 890
         }
       },
       "status": "pass"
@@ -816,7 +816,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-5_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-5_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-5_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-5_0_document_2_desktop.png",
         "label": "header v-2-trapeze-5",
@@ -832,9 +832,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.004175873316498316,
-          "misMatchPercentage": "0.00",
-          "analysisTime": 331
+          "rawMisMatchPercentage": 0.005228061868686868,
+          "misMatchPercentage": "0.01",
+          "analysisTime": 1194
         }
       },
       "status": "pass"
@@ -842,7 +842,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-6_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-6_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-6_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-6_0_document_0_phone.png",
         "label": "header v-2-trapeze-6",
@@ -866,7 +866,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-6_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-6_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-6_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-6_0_document_1_tablet.png",
         "label": "header v-2-trapeze-6",
@@ -884,7 +884,7 @@ report({
           },
           "rawMisMatchPercentage": 0.009665391312316715,
           "misMatchPercentage": "0.01",
-          "analysisTime": 1344
+          "analysisTime": 1164
         }
       },
       "status": "pass"
@@ -892,7 +892,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-2-trapeze-6_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-2-trapeze-6_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-2-trapeze-6_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-2-trapeze-6_0_document_2_desktop.png",
         "label": "header v-2-trapeze-6",
@@ -908,9 +908,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.09433527988215488,
+          "rawMisMatchPercentage": 0.09338173400673401,
           "misMatchPercentage": "0.09",
-          "analysisTime": 774
+          "analysisTime": 958
         }
       },
       "status": "pass"
@@ -918,7 +918,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-3-1_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-3-1_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-3-1_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-3-1_0_document_0_phone.png",
         "label": "header v-3-1",
@@ -942,7 +942,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-3-1_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-3-1_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-3-1_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-3-1_0_document_1_tablet.png",
         "label": "header v-3-1",
@@ -958,9 +958,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.009588604607250755,
-          "misMatchPercentage": "0.01",
-          "analysisTime": 1225
+          "rawMisMatchPercentage": 0,
+          "misMatchPercentage": "0.00",
+          "analysisTime": 532
         }
       },
       "status": "pass"
@@ -968,7 +968,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-3-1_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-3-1_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-3-1_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-3-1_0_document_2_desktop.png",
         "label": "header v-3-1",
@@ -984,9 +984,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.0050936420552677025,
+          "rawMisMatchPercentage": 0.005228572970639033,
           "misMatchPercentage": "0.01",
-          "analysisTime": 1618
+          "analysisTime": 1089
         }
       },
       "status": "pass"
@@ -994,7 +994,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-3-2_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-3-2_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-3-2_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-3-2_0_document_0_phone.png",
         "label": "header v-3-2",
@@ -1018,7 +1018,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-3-2_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-3-2_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-3-2_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-3-2_0_document_1_tablet.png",
         "label": "header v-3-2",
@@ -1036,7 +1036,7 @@ report({
           },
           "rawMisMatchPercentage": 0.0093673291163142,
           "misMatchPercentage": "0.01",
-          "analysisTime": 879
+          "analysisTime": 866
         }
       },
       "status": "pass"
@@ -1044,7 +1044,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_header_v-3-2_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_header_v-3-2_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_header_v-3-2_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_header_v-3-2_0_document_2_desktop.png",
         "label": "header v-3-2",
@@ -1060,9 +1060,9 @@ report({
             "width": 0,
             "height": 0
           },
-          "rawMisMatchPercentage": 0.005363503886010363,
-          "misMatchPercentage": "0.01",
-          "analysisTime": 396
+          "rawMisMatchPercentage": 0,
+          "misMatchPercentage": "0.00",
+          "analysisTime": 658
         }
       },
       "status": "pass"
@@ -1070,7 +1070,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_1-level_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_1-level_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_1-level_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_1-level_0_document_0_phone.png",
         "label": "catalog 1-level",
@@ -1094,7 +1094,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_1-level_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_1-level_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_1-level_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_1-level_0_document_1_tablet.png",
         "label": "catalog 1-level",
@@ -1112,7 +1112,7 @@ report({
           },
           "rawMisMatchPercentage": 0.05999795751633987,
           "misMatchPercentage": "0.06",
-          "analysisTime": 783
+          "analysisTime": 546
         }
       },
       "status": "pass"
@@ -1120,7 +1120,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_1-level_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_1-level_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_1-level_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_1-level_0_document_2_desktop.png",
         "label": "catalog 1-level",
@@ -1138,7 +1138,7 @@ report({
           },
           "rawMisMatchPercentage": 0.03199891067538126,
           "misMatchPercentage": "0.03",
-          "analysisTime": 932
+          "analysisTime": 630
         }
       },
       "status": "pass"
@@ -1146,7 +1146,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_2-level_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_2-level_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_2-level_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_2-level_0_document_0_phone.png",
         "label": "catalog 2-level",
@@ -1170,7 +1170,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_2-level_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_2-level_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_2-level_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_2-level_0_document_1_tablet.png",
         "label": "catalog 2-level",
@@ -1188,7 +1188,7 @@ report({
           },
           "rawMisMatchPercentage": 0.007971938775510204,
           "misMatchPercentage": "0.01",
-          "analysisTime": 782
+          "analysisTime": 773
         }
       },
       "status": "pass"
@@ -1196,7 +1196,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_2-level_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_2-level_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_2-level_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_2-level_0_document_2_desktop.png",
         "label": "catalog 2-level",
@@ -1214,7 +1214,7 @@ report({
           },
           "rawMisMatchPercentage": 0.004251700680272108,
           "misMatchPercentage": "0.00",
-          "analysisTime": 992
+          "analysisTime": 1055
         }
       },
       "status": "pass"
@@ -1222,7 +1222,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_3-level_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_3-level_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_3-level_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_3-level_0_document_0_phone.png",
         "label": "catalog 3-level",
@@ -1246,7 +1246,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_3-level_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_3-level_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_3-level_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_3-level_0_document_1_tablet.png",
         "label": "catalog 3-level",
@@ -1264,7 +1264,7 @@ report({
           },
           "rawMisMatchPercentage": 0.055848343228498076,
           "misMatchPercentage": "0.06",
-          "analysisTime": 652
+          "analysisTime": 795
         }
       },
       "status": "pass"
@@ -1272,7 +1272,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_3-level_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_3-level_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_3-level_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_3-level_0_document_2_desktop.png",
         "label": "catalog 3-level",
@@ -1290,7 +1290,7 @@ report({
           },
           "rawMisMatchPercentage": 0.02978578305519897,
           "misMatchPercentage": "0.03",
-          "analysisTime": 279
+          "analysisTime": 850
         }
       },
       "status": "pass"
@@ -1298,7 +1298,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_2-level_icons_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_2-level_icons_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_2-level_icons_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_2-level_icons_0_document_0_phone.png",
         "label": "catalog 2-level icons",
@@ -1322,7 +1322,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_2-level_icons_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_2-level_icons_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_2-level_icons_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_2-level_icons_0_document_1_tablet.png",
         "label": "catalog 2-level icons",
@@ -1340,7 +1340,7 @@ report({
           },
           "rawMisMatchPercentage": 0.007971938775510204,
           "misMatchPercentage": "0.01",
-          "analysisTime": 634
+          "analysisTime": 880
         }
       },
       "status": "pass"
@@ -1348,7 +1348,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_2-level_icons_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_2-level_icons_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_2-level_icons_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_2-level_icons_0_document_2_desktop.png",
         "label": "catalog 2-level icons",
@@ -1366,7 +1366,7 @@ report({
           },
           "rawMisMatchPercentage": 0.004251700680272108,
           "misMatchPercentage": "0.00",
-          "analysisTime": 1039
+          "analysisTime": 1287
         }
       },
       "status": "pass"
@@ -1374,7 +1374,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_2-level_icons-accordion_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_2-level_icons-accordion_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_2-level_icons-accordion_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_2-level_icons-accordion_0_document_0_phone.png",
         "label": "catalog 2-level icons-accordion",
@@ -1398,7 +1398,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_2-level_icons-accordion_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_2-level_icons-accordion_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_2-level_icons-accordion_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_2-level_icons-accordion_0_document_1_tablet.png",
         "label": "catalog 2-level icons-accordion",
@@ -1422,7 +1422,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_2-level_icons-accordion_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_2-level_icons-accordion_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_2-level_icons-accordion_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_2-level_icons-accordion_0_document_2_desktop.png",
         "label": "catalog 2-level icons-accordion",
@@ -1446,7 +1446,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_2-level_icons-links_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_2-level_icons-links_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_2-level_icons-links_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_2-level_icons-links_0_document_0_phone.png",
         "label": "catalog 2-level icons-links",
@@ -1470,7 +1470,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_2-level_icons-links_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_2-level_icons-links_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_2-level_icons-links_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_2-level_icons-links_0_document_1_tablet.png",
         "label": "catalog 2-level icons-links",
@@ -1494,7 +1494,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_catalog_2-level_icons-links_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_catalog_2-level_icons-links_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_catalog_2-level_icons-links_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_catalog_2-level_icons-links_0_document_2_desktop.png",
         "label": "catalog 2-level icons-links",
@@ -1518,7 +1518,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_teasers_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_teasers_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_teasers_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_product_teasers_0_document_0_phone.png",
         "label": "product teasers",
@@ -1536,7 +1536,7 @@ report({
           },
           "rawMisMatchPercentage": 0,
           "misMatchPercentage": "0.00",
-          "analysisTime": 118
+          "analysisTime": 109
         }
       },
       "status": "pass"
@@ -1544,7 +1544,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_teasers_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_teasers_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_teasers_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_product_teasers_0_document_1_tablet.png",
         "label": "product teasers",
@@ -1562,7 +1562,7 @@ report({
           },
           "rawMisMatchPercentage": 0,
           "misMatchPercentage": "0.00",
-          "analysisTime": 237
+          "analysisTime": 200
         }
       },
       "status": "pass"
@@ -1570,7 +1570,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_teasers_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_teasers_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_teasers_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_product_teasers_0_document_2_desktop.png",
         "label": "product teasers",
@@ -1594,7 +1594,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_sidebar_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_sidebar_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_sidebar_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_product_sidebar_0_document_0_phone.png",
         "label": "product sidebar",
@@ -1618,7 +1618,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_sidebar_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_sidebar_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_sidebar_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_product_sidebar_0_document_1_tablet.png",
         "label": "product sidebar",
@@ -1642,7 +1642,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_sidebar_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_sidebar_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_sidebar_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_product_sidebar_0_document_2_desktop.png",
         "label": "product sidebar",
@@ -1666,7 +1666,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_default_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_default_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_default_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_product_default_0_document_0_phone.png",
         "label": "product default",
@@ -1690,7 +1690,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_default_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_default_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_default_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_product_default_0_document_1_tablet.png",
         "label": "product default",
@@ -1714,7 +1714,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_default_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_default_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_default_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_product_default_0_document_2_desktop.png",
         "label": "product default",
@@ -1738,7 +1738,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_default_new_layout_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_default_new_layout_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_default_new_layout_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_product_default_new_layout_0_document_0_phone.png",
         "label": "product default new layout",
@@ -1762,7 +1762,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_default_new_layout_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_default_new_layout_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_default_new_layout_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_product_default_new_layout_0_document_1_tablet.png",
         "label": "product default new layout",
@@ -1780,7 +1780,7 @@ report({
           },
           "rawMisMatchPercentage": 0.028387127947429456,
           "misMatchPercentage": "0.03",
-          "analysisTime": 188
+          "analysisTime": 691
         }
       },
       "status": "pass"
@@ -1788,7 +1788,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_default_new_layout_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_default_new_layout_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_default_new_layout_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_product_default_new_layout_0_document_2_desktop.png",
         "label": "product default new layout",
@@ -1806,7 +1806,7 @@ report({
           },
           "rawMisMatchPercentage": 0.09457968114837398,
           "misMatchPercentage": "0.09",
-          "analysisTime": 890
+          "analysisTime": 638
         }
       },
       "status": "pass"
@@ -1814,7 +1814,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_v3_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_v3_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_v3_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_product_v3_0_document_0_phone.png",
         "label": "product v3",
@@ -1838,7 +1838,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_v3_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_v3_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_v3_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_product_v3_0_document_1_tablet.png",
         "label": "product v3",
@@ -1856,7 +1856,7 @@ report({
           },
           "rawMisMatchPercentage": 0.03720238095238095,
           "misMatchPercentage": "0.04",
-          "analysisTime": 561
+          "analysisTime": 651
         }
       },
       "status": "pass"
@@ -1864,7 +1864,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_product_v3_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_product_v3_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_product_v3_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_product_v3_0_document_2_desktop.png",
         "label": "product v3",
@@ -1888,7 +1888,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_order-status_form_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_order-status_form_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_order-status_form_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_order-status_form_0_document_0_phone.png",
         "label": "order-status form",
@@ -1912,7 +1912,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_order-status_form_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_order-status_form_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_order-status_form_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_order-status_form_0_document_1_tablet.png",
         "label": "order-status form",
@@ -1936,7 +1936,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_order-status_form_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_order-status_form_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_order-status_form_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_order-status_form_0_document_2_desktop.png",
         "label": "order-status form",
@@ -1960,7 +1960,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_order-status_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_order-status_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_order-status_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_order-status_0_document_0_phone.png",
         "label": "order-status",
@@ -1984,7 +1984,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_order-status_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_order-status_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_order-status_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_order-status_0_document_1_tablet.png",
         "label": "order-status",
@@ -2008,7 +2008,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_order-status_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_order-status_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_order-status_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_order-status_0_document_2_desktop.png",
         "label": "order-status",
@@ -2032,7 +2032,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart-simple_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart-simple_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart-simple_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_cart-simple_0_document_0_phone.png",
         "label": "cart-simple",
@@ -2056,7 +2056,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart-simple_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart-simple_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart-simple_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_cart-simple_0_document_1_tablet.png",
         "label": "cart-simple",
@@ -2080,7 +2080,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart-simple_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart-simple_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart-simple_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_cart-simple_0_document_2_desktop.png",
         "label": "cart-simple",
@@ -2104,7 +2104,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart_1-level_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart_1-level_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart_1-level_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_cart_1-level_0_document_0_phone.png",
         "label": "cart 1-level",
@@ -2128,7 +2128,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart_1-level_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart_1-level_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart_1-level_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_cart_1-level_0_document_1_tablet.png",
         "label": "cart 1-level",
@@ -2152,7 +2152,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart_1-level_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart_1-level_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart_1-level_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_cart_1-level_0_document_2_desktop.png",
         "label": "cart 1-level",
@@ -2176,7 +2176,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart_2-level_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart_2-level_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart_2-level_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_cart_2-level_0_document_0_phone.png",
         "label": "cart 2-level",
@@ -2200,7 +2200,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart_2-level_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart_2-level_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart_2-level_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_cart_2-level_0_document_1_tablet.png",
         "label": "cart 2-level",
@@ -2224,7 +2224,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart_2-level_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart_2-level_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart_2-level_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_cart_2-level_0_document_2_desktop.png",
         "label": "cart 2-level",
@@ -2248,7 +2248,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart_3-level_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart_3-level_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart_3-level_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_cart_3-level_0_document_0_phone.png",
         "label": "cart 3-level",
@@ -2272,7 +2272,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart_3-level_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart_3-level_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart_3-level_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_cart_3-level_0_document_1_tablet.png",
         "label": "cart 3-level",
@@ -2296,7 +2296,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart_3-level_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart_3-level_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart_3-level_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_cart_3-level_0_document_2_desktop.png",
         "label": "cart 3-level",
@@ -2320,7 +2320,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart_4-level_0_document_0_phone.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart_4-level_0_document_0_phone.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart_4-level_0_document_0_phone.png",
         "selector": "document",
         "fileName": "backstop_default_cart_4-level_0_document_0_phone.png",
         "label": "cart 4-level",
@@ -2344,7 +2344,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart_4-level_0_document_1_tablet.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart_4-level_0_document_1_tablet.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart_4-level_0_document_1_tablet.png",
         "selector": "document",
         "fileName": "backstop_default_cart_4-level_0_document_1_tablet.png",
         "label": "cart 4-level",
@@ -2368,7 +2368,7 @@ report({
     {
       "pair": {
         "reference": "../bitmaps_reference/backstop_default_cart_4-level_0_document_2_desktop.png",
-        "test": "../bitmaps_test/20240613-133735/backstop_default_cart_4-level_0_document_2_desktop.png",
+        "test": "../bitmaps_test/20240613-181555/backstop_default_cart_4-level_0_document_2_desktop.png",
         "selector": "document",
         "fileName": "backstop_default_cart_4-level_0_document_2_desktop.png",
         "label": "cart 4-level",
