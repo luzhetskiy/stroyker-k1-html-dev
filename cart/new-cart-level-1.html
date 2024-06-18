@@ -20,6 +20,17 @@
 <script defer src="../js/tippy.js.js"></script>
 <script defer src="../js/popperjs.js"></script>
 <script defer src="../js/main.js"></script>
+    <!-- Для демонстрации карты -->
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=c3161078-41ce-4809-936f-dd4c9bcc8a50&lang=ru_RU" type="text/javascript"></script>
+    <script defer type="text/javascript">
+        ymaps.ready(init);
+        function init(){
+            var myMap = new ymaps.Map("yamap_delivery", {
+                center: [55.76, 37.64],
+                zoom: 7
+            });
+        }
+    </script> -->
   </head>
 
   <body class="frontpage">
@@ -277,7 +288,7 @@
             <div class="content-block">
               <div class="d-flex flex-column gap-0 gap-md-20">
                 <h1 class="title size-22 size-md-30">Корзина</h1>
-                <div id="cart-form" class="d-grid grid-columns-lg-10 grid-columns-1 gap-20">
+                <div class="d-grid grid-columns-lg-10 grid-columns-1 gap-20">
                   <form id="cart-form" class="grid-span-lg-6 grid-span-xl-7">
                     <div class="d-flex flex-column gap-15 gap-md-20">
                       <div class="d-flex flex-column">
@@ -402,18 +413,16 @@
                       <div class="d-flex flex-column gap-20 bg-white d-lg-none p-md-20 p-0">
                         <div class="d-flex flex-column gap-20">
                           <div class="form-group mb-0">
-                            <div class="form-group mb-0">
-                              <input
-                                type="text"
-                                class="form-control"
-                                name="promotional-code"
-                                autocomplete="off"
-                                data-related-value="promotional-code"
-                                placeholder="Промокод"
-                              />
-                            </div>
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="promotional-code"
+                              autocomplete="off"
+                              data-related-value="promotional-code"
+                              placeholder="Промокод"
+                            />
                           </div>
-
+  
                           <div class="d-flex flex-column gap-15">
                             <div class="d-flex flex-column gap-10">
                               <p class="text d-flex flex-wrap gap-5">
@@ -422,10 +431,10 @@
                                 <span>2500 кг</span>
                                 <span class="separator-dot"></span>
                                 <span>6,5 м3</span>
-
+  
                                 <span class="ms-auto d-inline-block">89 537,50 ₽</span>
                               </p>
-
+  
                               <div class="d-flex flex-row justify-content-between">
                                 <p class="text weight-700 size-18">Итого:</p>
                                 <p class="text weight-700 size-20">89 537,50 ₽</p>
@@ -435,75 +444,92 @@
                               Дата и стоимость доставки рассчитываются после оформления заказа
                             </p>
                           </div>
-                        </div>
-                        <div data-input-content-container="name email phone" class="d-none d-flex flex-column gap-10">
-                          <p class="text weight-700 size-18">Данные получателя</p>
-                          <div
-                            data-input-content-container="name"
-                            class="d-none d-flex justify-content-between flex-wrap"
-                          >
-                            <p class="text">Имя:</p>
-                            <p data-input-content="name" class="text text-elepsis"></p>
-                          </div>
-                          <div
-                            data-input-content-container="phone"
-                            class="d-none d-flex justify-content-between flex-wrap"
-                          >
-                            <p class="text">Номер телефона:</p>
-                            <p data-input-content="phone" class="text text-elepsis"></p>
-                          </div>
-                          <div
-                            data-input-content-container="email"
-                            class="d-none d-flex justify-content-between flex-wrap"
-                          >
-                            <p class="text">Email:</p>
-                            <p data-input-content="email" class="text text-elepsis"></p>
-                          </div>
-                        </div>
-                        <div
-                          data-input-content-container="delivery payment comment"
-                          class="d-none d-flex flex-column gap-10"
-                        >
-                          <p class="text weight-700 size-18">Данные о заказе</p>
-                          <div
-                            data-input-content-container="delivery"
-                            class="d-none d-flex justify-content-between flex-wrap"
-                          >
-                            <p class="text">Доставка:</p>
-                            <p data-input-content-placeholder="delivery" class="text text-elepsis"></p>
-                          </div>
-                          <div
-                            data-input-content-container="payment"
-                            class="d-none d-flex justify-content-between flex-wrap"
-                          >
-                            <p class="text">Оплата:</p>
-                            <p data-input-content-placeholder="payment" class="text text-elepsis"></p>
-                          </div>
-                          <div
-                            data-input-content-container="comment"
-                            class="d-none d-flex justify-content-between flex-wrap"
-                          >
-                            <p class="text">Комментарий:</p>
-                            <p data-input-content="comment" class="text text-elepsis"></p>
+                          <div data-input-content-container="name email phone" class="d-none d-flex flex-column gap-10">
+                            <p class="text weight-700 size-18">Данные получателя</p>
+                            <div
+                              data-input-content-container="name"
+                              class="d-none d-flex justify-content-between flex-wrap"
+                            >
+                              <p class="text">Имя:</p>
+                              <p data-input-content="name" class="text text-elepsis"></p>
+                            </div>
+                            <div
+                              data-input-content-container="phone"
+                              class="d-none d-flex justify-content-between flex-wrap"
+                            >
+                              <p class="text">Номер телефона:</p>
+                              <p data-input-content="phone" class="text text-elepsis"></p>
+                            </div>
+                            <div
+                              data-input-content-container="email"
+                              class="d-none d-flex justify-content-between flex-wrap"
+                            >
+                              <p class="text">Email:</p>
+                              <p data-input-content="email" class="text text-elepsis"></p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                      <div class="bg-white ps-md-20 pt-15 pt-md-30 pb-50 d-flex flex-column gap-30">
-                        <div
-                          class="d-grid grid-columns-xl-2 grid-columns-1 border-0 border-bottom-md-1 border-color-md-gray-200 pe-lg-70 pe-md-20 pb-md-30 p-0"
-                        >
+                      <div class="d-flex flex-column gap-30 bg-white pt-30 pb-50 pe-md-20 ps-md-20">
+                        <div class="d-flex gap-45">
+                          <div class="d-flex gap-10 align-items-center">
+                            <input data-radio="1" checked class="cart-radio mt-3" name="login" id="login" type="radio">
+                            <label for="login" class="text size-16 color-gray-700">
+                              У меня есть аккаунт
+                            </label>
+                          </div>
+                          <div class="d-flex gap-10 align-items-center">
+                            <input data-radio="2" class="cart-radio mt-3" name="login" id="contacts" type="radio">
+                            <label for="contacts" class="text size-16 color-gray-700">
+                              У меня нет аккаунта
+                            </label>
+                          </div>
+                        </div>
+                        <div data-radio-content="1" class="d-grid grid-columns-lg-1 grid-columns-xl-2 grid-columns-md-2">
                           <div class="d-flex flex-column gap-15">
-                            <h2 class="sub-title">Контактные данные</h2>
-                            <div class="d-flex flex-column gap-10">
+                            <p class="sub-title size-20">
+                              Вход
+                            </p>
+                            <div class="d-flex flex-column gap-10 align-items-start">
+                              <div class="form-group mb-0">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  name="login"
+                                  autocomplete="off"
+                                  required=""
+                                  placeholder="Ваш логин*"
+                                />
+                              </div>
+                              <div class="form-group mb-0">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  name="password"
+                                  autocomplete="off"
+                                  required=""
+                                  placeholder="Ваш пароль*"
+                                />
+                              </div>
+                            </div>
+                            <button type="submit" class="btn">Продолжить</button>
+                          </div>
+                        </div>
+                        <div data-radio-content="2" class="d-none d-grid grid-columns-lg-1 grid-columns-xl-2 grid-columns-md-2">
+                          <div class="d-flex flex-column gap-15">
+                            <p class="sub-title size-20">
+                              Контактные данные
+                            </p>
+                            <div class="d-flex flex-column gap-10 align-items-start">
                               <div class="form-group mb-0">
                                 <input
                                   type="text"
                                   class="form-control"
                                   name="name"
                                   autocomplete="off"
-                                  required
-                                  data-input="name"
+                                  required=""
                                   placeholder="Ваше имя*"
+                                  data-input="name"
                                 />
                               </div>
                               <div class="form-group mb-0">
@@ -512,7 +538,7 @@
                                   class="form-control phone"
                                   name="phone"
                                   autocomplete="off"
-                                  required
+                                  required=""
                                   data-input="phone"
                                   placeholder="Ваш номер*"
                                 />
@@ -523,236 +549,13 @@
                                   class="form-control"
                                   name="email"
                                   autocomplete="off"
-                                  required
+                                  required=""
+                                  placeholder="Email*"
                                   data-input="email"
-                                  placeholder="Email"
                                 />
                               </div>
                             </div>
-                          </div>
-                        </div>
-                        <div class="d-flex flex-column gap-40">
-                          <div class="d-flex flex-column gap-15 pe-lg-70 pe-md-20">
-                            <h2 class="sub-title">Доставка</h2>
-                            <div class="d-grid grid-columns-md-3 grid-columns-xl-3 grid-columns-lg-1 gap-lg-30 gap-20">
-                              <div class="d-flex flex-row gap-10">
-                                <input
-                                  data-input="delivery"
-                                  data-radio="1"
-                                  class="cart-radio mt-3"
-                                  name="delivery"
-                                  id="pickup"
-                                  type="radio"
-                                />
-                                <label for="pickup" class="d-flex flex-column gap-2">
-                                  <p data-input-placeholder="delivery" class="text size-16 color-gray-700">Самовывоз</p>
-                                  <p class="text size-12 color-gray-550">Выберите пункт самовывоза в Самаре</p>
-                                </label>
-                              </div>
-                              <div class="d-flex flex-row gap-10">
-                                <input
-                                  data-radio="2"
-                                  class="cart-radio mt-3"
-                                  name="delivery"
-                                  id="delivery-point"
-                                  type="radio"
-                                  data-input="delivery"
-                                />
-                                <label for="delivery-point" class="d-flex flex-column gap-2">
-                                  <p data-input-placeholder="delivery" class="text size-16 color-gray-700">
-                                    До пункта выдачи
-                                  </p>
-                                  <p class="text size-12 color-gray-550">Доставка по городу бесплатная</p>
-                                </label>
-                              </div>
-                              <div class="d-flex flex-row gap-10">
-                                <input
-                                  data-input="delivery"
-                                  data-radio="3"
-                                  class="cart-radio mt-3"
-                                  name="delivery"
-                                  id="adress"
-                                  type="radio"
-                                />
-                                <label for="adress" class="d-flex flex-column gap-2">
-                                  <p data-input-placeholder="delivery" class="text size-16 color-gray-700">По адресу</p>
-                                  <p class="text size-12 color-gray-550">
-                                    Выберите любую транспортную компанию из списка
-                                  </p>
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                          <div data-radio-content="*" class="d-none d-flex flex-column gap-30">
-                            <div
-                              data-radio-content="1"
-                              class="d-none d-flex flex-column pe-lg-70 pe-md-20 gap-15 pb-md-30 border-bottom-md-1 border-color-md-gray-200 border-0"
-                            >
-                              <h2 class="sub-title">Укажите пункт самовывоза</h2>
-                              <div
-                                class="d-grid grid-columns-md-3 grid-columns-xl-3 grid-columns-lg-1 gap-lg-30 gap-20"
-                              >
-                                <div class="d-flex flex-row gap-10">
-                                  <input
-                                    data-input="6"
-                                    class="cart-radio mt-3"
-                                    name="delivery-point"
-                                    id="delivery-point-1"
-                                    type="radio"
-                                  />
-                                  <label for="delivery-point-1" class="d-flex flex-column gap-2">
-                                    <p class="text size-16 color-gray-700">Центральный склад</p>
-                                    <p class="text size-12 color-gray-550">ул. Олимпийская</p>
-                                  </label>
-                                </div>
-                                <div class="d-flex flex-row gap-10">
-                                  <input
-                                    class="cart-radio mt-3"
-                                    name="delivery-point"
-                                    id="delivery-point-2"
-                                    type="radio"
-                                  />
-                                  <label for="delivery-point-2" class="d-flex flex-column gap-2">
-                                    <p class="text size-16 color-gray-700">Южный склад</p>
-                                    <p class="text size-12 color-gray-550">ТЦ “Амбар”</p>
-                                  </label>
-                                </div>
-                                <div class="d-flex flex-row gap-10">
-                                  <input
-                                    class="cart-radio mt-3"
-                                    name="delivery-point"
-                                    id="delivery-point-3"
-                                    type="radio"
-                                  />
-                                  <label for="delivery-point-3" class="d-flex flex-column gap-2">
-                                    <p class="text size-16 color-gray-700">Северный склад</p>
-                                    <p class="text size-12 color-gray-550">ТЦ “Кубатура”</p>
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              data-radio-content="2"
-                              class="d-grid grid-columns-1 grid-columns-md-2 grid-columns-xl-2 grid-columns-lg-1 gap-20 gap-lg-20 gap-xl-40 pe-md-20 gap-grid border-0 border-top-md-1 border-bottom-md-1 border-color-md-gray-200"
-                            >
-                              <div class="d-flex flex-column gap-15 pt-20 pe-lg-40 pb-md-20">
-                                <h2 class="sub-title size-18">Укажите адрес доставки</h2>
-                                <div class="form-group mb-0">
-                                  <input
-                                    type="text"
-                                    class="form-control"
-                                    name="address"
-                                    autocomplete="off"
-                                    required
-                                    placeholder="Адрес"
-                                  />
-                                </div>
-                                <div class="d-flex flex-column gap-5">
-                                  <label class="text color-gray-550 size-11" for="id_stock">Выбрать склад:</label>
-                                  <select name="stock" autocomplete="off" class="custom-select" id="id_stock">
-                                    <option value="" selected="">---------</option>
-                                    <option value="1">test</option>
-                                  </select>
-                                </div>
-                                <div class="d-flex flex-column gap-5">
-                                  <label class="text color-gray-550 size-11" for="">Тип авто:</label>
-                                  <select name="stock" autocomplete="off" class="custom-select" id="id_stock">
-                                    <option value="" selected="">---------</option>
-                                    <option value="1">test</option>
-                                  </select>
-                                </div>
-                              </div>
-                            </div>
-                            <div
-                              data-radio-content="3"
-                              class="d-none d-flex flex-column gap-15 pb-md-30 border-bottom-md-1 border-color-md-gray-200 border-0 pe-lg-70 pe-md-20"
-                            >
-                              <p class="text size-16">Доставка рассчитывается индивидуально</p>
-                            </div>
-                            <div data-radio-content="*" class="d-none d-flex flex-column gap-15 pe-lg-70 pe-md-20">
-                              <h2 class="sub-title">Оплата</h2>
-                              <div
-                                class="d-grid grid-columns-md-3 grid-columns-xl-3 grid-columns-lg-1 gap-lg-30 gap-20"
-                              >
-                                <div class="d-flex flex-row gap-10">
-                                  <input
-                                    data-input="payment"
-                                    class="cart-radio mt-3"
-                                    name="payment"
-                                    id="payment-1"
-                                    type="radio"
-                                  />
-                                  <label for="payment-1" class="d-flex flex-column gap-2">
-                                    <p data-input-placeholder="payment" class="text size-16 color-gray-700">Онлайн</p>
-                                    <p class="text size-12 color-gray-550">Alfa Pay, Yandex Pay</p>
-                                  </label>
-                                </div>
-                                <div class="d-flex flex-row gap-10">
-                                  <input
-                                    data-input="payment"
-                                    class="cart-radio mt-3"
-                                    name="payment"
-                                    id="payment-2"
-                                    type="radio"
-                                  />
-                                  <label for="payment-2" class="d-flex flex-column gap-2">
-                                    <p data-input-placeholder="payment" class="text size-16 color-gray-700">Картой</p>
-                                    <p class="text size-12 color-gray-550">При получении</p>
-                                  </label>
-                                </div>
-                                <div class="d-flex flex-row gap-10">
-                                  <input
-                                    data-input="payment"
-                                    class="cart-radio mt-3"
-                                    name="payment"
-                                    id="payment-3"
-                                    type="radio"
-                                  />
-                                  <label for="payment-3" class="d-flex flex-column gap-2">
-                                    <p data-input-placeholder="payment" class="text size-16 color-gray-700">
-                                      Наличными
-                                    </p>
-                                    <p class="text size-12 color-gray-550">При получении</p>
-                                  </label>
-                                </div>
-                                <div class="d-flex flex-row gap-10">
-                                  <input
-                                    data-input="payment"
-                                    class="cart-radio mt-3"
-                                    name="payment"
-                                    id="payment-4"
-                                    type="radio"
-                                  />
-                                  <label for="payment-4" class="d-flex flex-column gap-2">
-                                    <p data-input-placeholder="payment" class="text size-16 color-gray-700">
-                                      Выписать счёт
-                                    </p>
-                                    <p class="text size-12 color-gray-550">Онлайн на сайте</p>
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="d-flex flex-column gap-15 pe-lg-80 pe-md-20">
-                            <h2 class="sub-title">Комментарий</h2>
-                            <div class="d-flex flex-column gap-10 align-items-start">
-                              <div class="form-group mb-0">
-                                <textarea
-                                  data-input="comment"
-                                  class="form-control"
-                                  name="message"
-                                  autocomplete="off"
-                                  placeholder="Комментарий"
-                                ></textarea>
-                              </div>
-                              <button type="submit" class="btn">Оформить заказ</button>
-                              <div class="d-grid grid-columns-lg-8 grid-columns-1 gap-grid">
-                                <div class="grid-span-lg-5 text size-12 color-gray-550">
-                                  Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с
-                                  нашей политикой конфиденциальности
-                                </div>
-                              </div>
-                            </div>
+                            <button type="submit" class="btn">Продолжить</button>
                           </div>
                         </div>
                       </div>
@@ -793,56 +596,29 @@
                             Дата и стоимость доставки рассчитываются после оформления заказа
                           </p>
                         </div>
-                      </div>
-                      <div data-input-content-container="name email phone" class="d-none d-flex flex-column gap-10">
-                        <p class="text weight-700 size-18">Данные получателя</p>
-                        <div
-                          data-input-content-container="name"
-                          class="d-none d-flex justify-content-between flex-wrap"
-                        >
-                          <p class="text">Имя:</p>
-                          <p data-input-content="name" class="text text-elepsis"></p>
-                        </div>
-                        <div
-                          data-input-content-container="phone"
-                          class="d-none d-flex justify-content-between flex-wrap"
-                        >
-                          <p class="text">Номер телефона:</p>
-                          <p data-input-content="phone" class="text text-elepsis"></p>
-                        </div>
-                        <div
-                          data-input-content-container="email"
-                          class="d-none d-flex justify-content-between flex-wrap"
-                        >
-                          <p class="text">Email:</p>
-                          <p data-input-content="email" class="text text-elepsis"></p>
-                        </div>
-                      </div>
-                      <div
-                        data-input-content-container="delivery payment comment"
-                        class="d-none d-flex flex-column gap-10"
-                      >
-                        <p class="text weight-700 size-18">Данные о заказе</p>
-                        <div
-                          data-input-content-container="delivery"
-                          class="d-none d-flex justify-content-between flex-wrap"
-                        >
-                          <p class="text">Доставка:</p>
-                          <p data-input-content-placeholder="delivery" class="text text-elepsis"></p>
-                        </div>
-                        <div
-                          data-input-content-container="payment"
-                          class="d-none d-flex justify-content-between flex-wrap"
-                        >
-                          <p class="text">Оплата:</p>
-                          <p data-input-content-placeholder="payment" class="text text-elepsis"></p>
-                        </div>
-                        <div
-                          data-input-content-container="comment"
-                          class="d-none d-flex justify-content-between flex-wrap"
-                        >
-                          <p class="text">Комментарий:</p>
-                          <p data-input-content="comment" class="text text-elepsis"></p>
+                        <div data-input-content-container="name email phone" class="d-none d-flex flex-column gap-10">
+                          <p class="text weight-700 size-18">Данные получателя</p>
+                          <div
+                            data-input-content-container="name"
+                            class="d-none d-flex justify-content-between flex-wrap"
+                          >
+                            <p class="text">Имя:</p>
+                            <p data-input-content="name" class="text text-elepsis"></p>
+                          </div>
+                          <div
+                            data-input-content-container="phone"
+                            class="d-none d-flex justify-content-between flex-wrap"
+                          >
+                            <p class="text">Номер телефона:</p>
+                            <p data-input-content="phone" class="text text-elepsis"></p>
+                          </div>
+                          <div
+                            data-input-content-container="email"
+                            class="d-none d-flex justify-content-between flex-wrap"
+                          >
+                            <p class="text">Email:</p>
+                            <p data-input-content="email" class="text text-elepsis"></p>
+                          </div>
                         </div>
                       </div>
                     </div>
