@@ -134,14 +134,14 @@
                             class="d-none d-flex justify-content-between flex-wrap"
                           >
                             <p class="text">Доставка:</p>
-                            <p data-input-content-placeholder="delivery" class="text text-elepsis"></p>
+                            <p data-input-content="delivery" class="text text-elepsis"></p>
                           </div>
                           <div
                             data-input-content-container="payment"
                             class="d-none d-flex justify-content-between flex-wrap"
                           >
                             <p class="text">Оплата:</p>
-                            <p data-input-content-placeholder="payment" class="text text-elepsis"></p>
+                            <p data-input-content="payment" class="text text-elepsis"></p>
                           </div>
                           <div
                             data-input-content-container="comment"
@@ -201,45 +201,46 @@
                             <div class="d-grid grid-columns-md-3 grid-columns-xl-3 grid-columns-lg-1 gap-lg-30 gap-20">
                               <div class="d-flex flex-row gap-10">
                                 <input
-                                  data-input="delivery"
-                                  data-radio="1"
+                                  data-input="delivery_type"
+                                  data-input-value="Самовывоз"
+                                  data-radio="pickup"
                                   class="cart-radio mt-3"
-                                  name="delivery"
+                                  name="delivery_type"
                                   id="pickup"
                                   type="radio"
                                 />
                                 <label for="pickup" class="d-flex flex-column gap-2">
-                                  <p data-input-placeholder="delivery" class="text size-16 color-gray-700">Самовывоз</p>
+                                  <p class="text size-16 color-gray-700">Самовывоз</p>
                                   <p class="text size-12 color-gray-550">Выберите пункт самовывоза в Самаре</p>
                                 </label>
                               </div>
                               <div class="d-flex flex-row gap-10">
                                 <input
-                                  data-radio="2"
+                                  data-radio="delivery-point"
                                   class="cart-radio mt-3"
-                                  name="delivery"
+                                  name="delivery_type"
                                   id="delivery-point"
                                   type="radio"
-                                  data-input="delivery"
+                                  data-input="delivery_type"
+                                  data-input-value="До пункта выдачи"
                                 />
                                 <label for="delivery-point" class="d-flex flex-column gap-2">
-                                  <p data-input-placeholder="delivery" class="text size-16 color-gray-700">
-                                    До пункта выдачи
-                                  </p>
+                                  <p class="text size-16 color-gray-700">До пункта выдачи</p>
                                   <p class="text size-12 color-gray-550">Доставка по городу бесплатная</p>
                                 </label>
                               </div>
                               <div class="d-flex flex-row gap-10">
                                 <input
-                                  data-input="delivery"
-                                  data-radio="3"
+                                  data-input="delivery_type"
+                                  data-input-value="По адресу"
+                                  data-radio="address"
                                   class="cart-radio mt-3"
-                                  name="delivery"
+                                  name="delivery_type"
                                   id="adress"
                                   type="radio"
                                 />
                                 <label for="adress" class="d-flex flex-column gap-2">
-                                  <p data-input-placeholder="delivery" class="text size-16 color-gray-700">По адресу</p>
+                                  <p class="text size-16 color-gray-700">По адресу</p>
                                   <p class="text size-12 color-gray-550">
                                     Выберите любую транспортную компанию из списка
                                   </p>
@@ -249,22 +250,21 @@
                           </div>
                           <div data-radio-content="*" class="d-none d-flex flex-column gap-30">
                             <div
-                              data-radio-content="1"
+                              data-radio-content="pickup"
                               class="d-none d-flex flex-column pe-lg-70 pe-md-20 gap-15 pb-md-30 border-bottom-md-1 border-color-md-gray-200 border-0"
                             >
                               <h2 class="sub-title">Укажите пункт самовывоза</h2>
-                              <div
-                                class="d-grid grid-columns-md-3 grid-columns-xl-3 grid-columns-lg-1 gap-lg-30 gap-20"
-                              >
+                              <div class="d-grid grid-columns-md-3 grid-columns-xl-3 grid-columns-lg-1 gap-lg-30 gap-20">
                                 <div class="d-flex flex-row gap-10">
                                   <input
-                                    data-input="6"
                                     class="cart-radio mt-3"
-                                    name="delivery-point"
-                                    id="delivery-point-1"
+                                    name="delivery_cost"
+                                    id="delivery_cost-1"
                                     type="radio"
+                                    data-input="delivery_cost"
+                                    data-input-value="Центральный склад"
                                   />
-                                  <label for="delivery-point-1" class="d-flex flex-column gap-2">
+                                  <label for="delivery_cost-1" class="d-flex flex-column gap-2">
                                     <p class="text size-16 color-gray-700">Центральный склад</p>
                                     <p class="text size-12 color-gray-550">ул. Олимпийская</p>
                                   </label>
@@ -272,11 +272,13 @@
                                 <div class="d-flex flex-row gap-10">
                                   <input
                                     class="cart-radio mt-3"
-                                    name="delivery-point"
-                                    id="delivery-point-2"
+                                    name="delivery_cost"
+                                    id="delivery_cost-2"
                                     type="radio"
+                                    data-input="delivery_cost"
+                                    data-input-value="Южный склад"
                                   />
-                                  <label for="delivery-point-2" class="d-flex flex-column gap-2">
+                                  <label for="delivery_cost-2" class="d-flex flex-column gap-2">
                                     <p class="text size-16 color-gray-700">Южный склад</p>
                                     <p class="text size-12 color-gray-550">ТЦ “Амбар”</p>
                                   </label>
@@ -284,11 +286,13 @@
                                 <div class="d-flex flex-row gap-10">
                                   <input
                                     class="cart-radio mt-3"
-                                    name="delivery-point"
-                                    id="delivery-point-3"
+                                    name="delivery_cost"
+                                    id="delivery_cost-3"
                                     type="radio"
+                                    data-input="delivery_cost"
+                                    data-input-value="Северный склад"
                                   />
-                                  <label for="delivery-point-3" class="d-flex flex-column gap-2">
+                                  <label for="delivery_cost-3" class="d-flex flex-column gap-2">
                                     <p class="text size-16 color-gray-700">Северный склад</p>
                                     <p class="text size-12 color-gray-550">ТЦ “Кубатура”</p>
                                   </label>
@@ -296,7 +300,7 @@
                               </div>
                             </div>
                             <div
-                              data-radio-content="2"
+                              data-radio-content="delivery-point"
                               class="d-grid grid-columns-1 grid-columns-md-2 grid-columns-xl-2 grid-columns-lg-1 gap-20 gap-lg-20 gap-xl-40 pe-md-20 gap-grid border-0 border-top-md-1 border-bottom-md-1 border-color-md-gray-200"
                             >
                               <div class="cart-map" id="yamap_delivery"></div>
@@ -310,26 +314,81 @@
                                     autocomplete="off"
                                     required
                                     placeholder="Адрес"
+                                    data-input="address"
                                   />
                                 </div>
                                 <div class="d-flex flex-column gap-5">
-                                  <label class="text color-gray-550 size-11" for="id_stock">Выбрать склад:</label>
-                                  <select name="stock" autocomplete="off" class="custom-select" id="id_stock">
-                                    <option value="" selected="">---------</option>
-                                    <option value="1">test</option>
-                                  </select>
+                                  <p class="text color-gray-550 size-11" for="id_stock">Выбрать склад:</p>
+                                  <div class="select">
+                                    <input
+                                      class="d-none"
+                                      data-select="stock"
+                                      name="stock"
+                                      value="0"
+                                      type="text"
+                                    />
+                                    <div data-select-value-container="stock" class="select__value-content form-control">
+                                      <p data-select-value="stock" class="text">---------</p>
+                                      <div class="select__icon">
+                                        <svg
+                                          width="12"
+                                          height="7"
+                                          viewBox="0 0 12 7"
+                                          fill="none"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <path
+                                            d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z"
+                                            fill="#2363D1"
+                                          />
+                                          <path
+                                            d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z"
+                                            fill="#2363D1"
+                                          />
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <div class="select__content d-none" data-select-content="stock">
+                                      <div class="select__option" data-select-option="stock" data-select-option-value="0">---------</div>
+                                      <div class="select__option" data-select-option="stock" data-select-option-value="1">test</div>
+                                    </div>
+                                  </div>
                                 </div>
                                 <div class="d-flex flex-column gap-5">
-                                  <label class="text color-gray-550 size-11" for="">Тип авто:</label>
-                                  <select name="stock" autocomplete="off" class="custom-select" id="id_stock">
-                                    <option value="" selected="">---------</option>
-                                    <option value="1">test</option>
-                                  </select>
+                                  <p class="text color-gray-550 size-11" for="">Тип авто:</p>
+                                  <div class="select">
+                                    <input class="d-none" data-select="car" name="car" value="0" type="text" />
+                                    <div data-select-value-container="car" class="select__value-content form-control">
+                                      <p data-select-value="car" class="text">---------</p>
+                                      <div class="select__icon">
+                                        <svg
+                                          width="12"
+                                          height="7"
+                                          viewBox="0 0 12 7"
+                                          fill="none"
+                                          xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                          <path
+                                            d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z"
+                                            fill="#2363D1"
+                                          />
+                                          <path
+                                            d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z"
+                                            fill="#2363D1"
+                                          />
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    <div class="select__content d-none" data-select-content="car">
+                                      <div class="select__option" data-select-option="car" data-select-option-value="0">---------</div>
+                                      <div class="select__option" data-select-option="car" data-select-option-value="1">test</div>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                             <div
-                              data-radio-content="3"
+                              data-radio-content="address"
                               class="d-none d-flex flex-column gap-15 pb-md-30 border-bottom-md-1 border-color-md-gray-200 border-0 pe-lg-70 pe-md-20"
                             >
                               <p class="text size-16">Доставка рассчитывается индивидуально</p>
@@ -346,9 +405,10 @@
                                     name="payment"
                                     id="payment-1"
                                     type="radio"
+                                    data-input-value="Онлайн"
                                   />
                                   <label for="payment-1" class="d-flex flex-column gap-2">
-                                    <p data-input-placeholder="payment" class="text size-16 color-gray-700">Онлайн</p>
+                                    <p class="text size-16 color-gray-700">Онлайн</p>
                                     <p class="text size-12 color-gray-550">Alfa Pay, Yandex Pay</p>
                                   </label>
                                 </div>
@@ -359,9 +419,10 @@
                                     name="payment"
                                     id="payment-2"
                                     type="radio"
+                                    data-input-value="Картой"
                                   />
                                   <label for="payment-2" class="d-flex flex-column gap-2">
-                                    <p data-input-placeholder="payment" class="text size-16 color-gray-700">Картой</p>
+                                    <p class="text size-16 color-gray-700">Картой</p>
                                     <p class="text size-12 color-gray-550">При получении</p>
                                   </label>
                                 </div>
@@ -372,9 +433,10 @@
                                     name="payment"
                                     id="payment-3"
                                     type="radio"
+                                    data-input-value="Наличными"
                                   />
                                   <label for="payment-3" class="d-flex flex-column gap-2">
-                                    <p data-input-placeholder="payment" class="text size-16 color-gray-700">
+                                    <p class="text size-16 color-gray-700">
                                       Наличными
                                     </p>
                                     <p class="text size-12 color-gray-550">При получении</p>
@@ -387,9 +449,10 @@
                                     name="payment"
                                     id="payment-4"
                                     type="radio"
+                                    data-input-value="Выписать счёт"
                                   />
                                   <label for="payment-4" class="d-flex flex-column gap-2">
-                                    <p data-input-placeholder="payment" class="text size-16 color-gray-700">
+                                    <p class="text size-16 color-gray-700">
                                       Выписать счёт
                                     </p>
                                     <p class="text size-12 color-gray-550">Онлайн на сайте</p>
@@ -484,23 +547,29 @@
                         </div>
                       </div>
                       <div
-                        data-input-content-container="delivery payment comment"
+                        data-input-content-container="delivery_type payment comment"
                         class="d-none d-flex flex-column gap-10"
                       >
                         <p class="text weight-700 size-18">Данные о заказе</p>
                         <div
-                          data-input-content-container="delivery"
+                          data-input-content-container="delivery_type"
                           class="d-none d-flex justify-content-between flex-wrap"
                         >
                           <p class="text">Доставка:</p>
-                          <p data-input-content-placeholder="delivery" class="text text-elepsis"></p>
+                          <p class="text text-elepsis d-flex w-50 flex-column align-items-end">
+                            <span data-input-content="delivery_type"></span>
+                            <span class="d-none" data-radio-content="pickup" data-input-content="delivery_cost"></span>
+                            <span class="d-none" data-radio-content="delivery-point" data-input-content="address"></span>
+                            <span class="d-none" data-radio-content="delivery-point" data-select-value="stock"></span>
+                            <span class="d-none" data-radio-content="delivery-point" data-select-value="car"></span>
+                          </p>
                         </div>
                         <div
                           data-input-content-container="payment"
                           class="d-none d-flex justify-content-between flex-wrap"
                         >
                           <p class="text">Оплата:</p>
-                          <p data-input-content-placeholder="payment" class="text text-elepsis"></p>
+                          <p data-input-content="payment" class="text text-elepsis"></p>
                         </div>
                         <div
                           data-input-content-container="comment"

@@ -6,8 +6,6 @@ $(() => {
     const value = target.attr('data-input-value') || target.val()
     const id = target.attr('data-input')
 
-    console.log(id, value);
-
     $(`[data-input-content-container*="${id}"]`).removeClass('d-none')
     $(`[data-input-content*="${id}"]`).html(value)
     // $(`[data-input-content-placeholder*="${id}"]`).text(placeholderValue)
