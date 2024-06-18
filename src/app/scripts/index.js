@@ -14,6 +14,7 @@ import '../../shared/libs/select/select'
 import '../../shared/libs/inputToggle/inputToggle'
 import '../../shared/libs/trigger/trigger'
 import '../../shared/libs/relatedValue/relatedValue'
+import '../../shared/libs/dataSelect/dataSelect'
 
 window.wNumb = wNumb
 window.noUiSlider = noUiSlider

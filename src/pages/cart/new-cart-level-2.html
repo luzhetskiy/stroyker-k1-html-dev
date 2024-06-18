@@ -60,31 +60,7 @@
                   <use xlink:href="#tab-arrow"></use>
                 </svg>
 
-                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                  <a itemprop="item" title="Доставка" href="/cart/delivery/">
-                    Доставка
-                    <meta itemprop="name" content="Доставка" />
-                  </a>
-                  <meta itemprop="position" content="3" />
-                </span>
-
-                <svg class="breadcrumbs__sep">
-                  <use xlink:href="#tab-arrow"></use>
-                </svg>
-
-                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                  <a itemprop="item" title="Оплата" href="/cart/payment/">
-                    Оплата
-                    <meta itemprop="name" content="Оплата" />
-                  </a>
-                  <meta itemprop="position" content="4" />
-                </span>
-
-                <svg class="breadcrumbs__sep">
-                  <use xlink:href="#tab-arrow"></use>
-                </svg>
-
-                Завершение заказа
+                Доставка
               </div>
             </div>
 
@@ -95,12 +71,13 @@
                   <form id="cart-form" class="grid-span-lg-6 grid-span-xl-7">
                     <div class="d-flex flex-column bg-white gap-20 pt-20 pb-40">
                       <div class="d-flex flex-column gap-40">
-                        <div class="d-flex flex-column gap-15 pe-md-70 ps-md-40">
+                        <div class="d-flex flex-column gap-15 pe-lg-70 pe-md-40 ps-md-40">
                           <h2 class="sub-title">Способ доставки</h2>
                           <div class="d-grid grid-columns-md-3 grid-columns-xl-3 grid-columns-lg-1 gap-lg-30 gap-20">
                             <div class="d-flex flex-row gap-10">
                               <input
-                                data-input="delivery"
+                                data-input="delivery-1"
+                                data-input-value="Самовывоз"
                                 data-radio="1"
                                 class="cart-radio mt-3"
                                 name="delivery"
@@ -108,7 +85,7 @@
                                 type="radio"
                               />
                               <label for="pickup" class="d-flex flex-column gap-2">
-                                <p data-input-placeholder="delivery" class="text size-16 color-gray-700">Самовывоз</p>
+                                <p class="text size-16 color-gray-700">Самовывоз</p>
                                 <p class="text size-12 color-gray-550">Выберите пункт самовывоза в Самаре</p>
                               </label>
                             </div>
@@ -119,18 +96,18 @@
                                 name="delivery"
                                 id="delivery-point"
                                 type="radio"
-                                data-input="delivery"
+                                data-input="delivery-1"
+                                data-input-value="До пункта выдачи"
                               />
                               <label for="delivery-point" class="d-flex flex-column gap-2">
-                                <p data-input-placeholder="delivery" class="text size-16 color-gray-700">
-                                  До пункта выдачи
-                                </p>
+                                <p class="text size-16 color-gray-700">До пункта выдачи</p>
                                 <p class="text size-12 color-gray-550">Доставка по городу бесплатная</p>
                               </label>
                             </div>
                             <div class="d-flex flex-row gap-10">
                               <input
-                                data-input="delivery"
+                                data-input="delivery-1"
+                                data-input-value="По адресу"
                                 data-radio="3"
                                 class="cart-radio mt-3"
                                 name="delivery"
@@ -138,7 +115,7 @@
                                 type="radio"
                               />
                               <label for="adress" class="d-flex flex-column gap-2">
-                                <p data-input-placeholder="delivery" class="text size-16 color-gray-700">По адресу</p>
+                                <p class="text size-16 color-gray-700">По адресу</p>
                                 <p class="text size-12 color-gray-550">
                                   Выберите любую транспортную компанию из списка
                                 </p>
@@ -147,16 +124,20 @@
                           </div>
                         </div>
                         <div data-radio-content="*" class="d-none d-flex flex-column gap-30">
-                          <div data-radio-content="1" class="d-none d-flex flex-column pe-md-70 ps-md-40 gap-15">
+                          <div
+                            data-radio-content="1"
+                            class="d-none d-flex flex-column pe-lg-70 pe-md-40 ps-md-40 gap-15"
+                          >
                             <h2 class="sub-title">Укажите пункт самовывоза</h2>
                             <div class="d-grid grid-columns-md-3 grid-columns-xl-3 grid-columns-lg-1 gap-lg-30 gap-20">
                               <div class="d-flex flex-row gap-10">
                                 <input
-                                  data-input="6"
                                   class="cart-radio mt-3"
                                   name="delivery-point"
                                   id="delivery-point-1"
                                   type="radio"
+                                  data-input="delivery-2"
+                                  data-input-value="Центральный склад"
                                 />
                                 <label for="delivery-point-1" class="d-flex flex-column gap-2">
                                   <p class="text size-16 color-gray-700">Центральный склад</p>
@@ -169,6 +150,8 @@
                                   name="delivery-point"
                                   id="delivery-point-2"
                                   type="radio"
+                                  data-input="delivery-2"
+                                  data-input-value="Южный склад"
                                 />
                                 <label for="delivery-point-2" class="d-flex flex-column gap-2">
                                   <p class="text size-16 color-gray-700">Южный склад</p>
@@ -181,6 +164,8 @@
                                   name="delivery-point"
                                   id="delivery-point-3"
                                   type="radio"
+                                  data-input="delivery-2"
+                                  data-input-value="Северный склад"
                                 />
                                 <label for="delivery-point-3" class="d-flex flex-column gap-2">
                                   <p class="text size-16 color-gray-700">Северный склад</p>
@@ -205,34 +190,91 @@
                                   autocomplete="off"
                                   required
                                   placeholder="Адрес"
+                                  data-input="delivery-2"
                                 />
                               </div>
                               <div class="d-flex flex-column gap-5">
-                                <label class="text color-gray-550 size-11" for="id_stock">Выбрать склад:</label>
-                                <select name="stock" autocomplete="off" class="custom-select" id="id_stock">
-                                  <option value="" selected="">---------</option>
-                                  <option value="1">test</option>
-                                </select>
+                                <p class="text color-gray-550 size-11" for="id_stock">Выбрать склад:</p>
+                                <div data-select-container class="select">
+                                  <input
+                                    class="d-none"
+                                    data-select
+                                    name="stock"
+                                    value="0"
+                                    type="text"
+                                    data-input="delivery-3"
+                                    data-input-value
+                                  />
+                                  <div data-select-value-container class="select__value-content form-control">
+                                    <p data-select-value class="text">---------</p>
+                                    <div class="select__icon">
+                                      <svg
+                                        width="12"
+                                        height="7"
+                                        viewBox="0 0 12 7"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z"
+                                          fill="#2363D1"
+                                        />
+                                        <path
+                                          d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z"
+                                          fill="#2363D1"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="select__content d-none" data-select-content>
+                                    <div class="select__option" data-select-option-value="0">---------</div>
+                                    <div class="select__option" data-select-option-value="1">test</div>
+                                  </div>
+                                </div>
                               </div>
                               <div class="d-flex flex-column gap-5">
-                                <label class="text color-gray-550 size-11" for="">Тип авто:</label>
-                                <select name="stock" autocomplete="off" class="custom-select" id="id_stock">
-                                  <option value="" selected="">---------</option>
-                                  <option value="1">test</option>
-                                </select>
+                                <p class="text color-gray-550 size-11" for="">Тип авто:</p>
+                                <div data-select-container class="select">
+                                  <input data-input="delivery-4" data-input-value class="d-none" data-select name="car" value="0" type="text" />
+                                  <div data-select-value-container class="select__value-content form-control">
+                                    <p data-select-value class="text">---------</p>
+                                    <div class="select__icon">
+                                      <svg
+                                        width="12"
+                                        height="7"
+                                        viewBox="0 0 12 7"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z"
+                                          fill="#2363D1"
+                                        />
+                                        <path
+                                          d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z"
+                                          fill="#2363D1"
+                                        />
+                                      </svg>
+                                    </div>
+                                  </div>
+                                  <div class="select__content d-none" data-select-content>
+                                    <div class="select__option" data-select-option-value="0">---------</div>
+                                    <div class="select__option" data-select-option-value="1">test</div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
 
                           <div
                             data-radio-content="3"
-                            class="d-none d-flex flex-column gap-15 pb-md-20 border-bottom-md-1 border-color-md-gray-200 border-0 pe-md-70 ps-md-40"
+                            class="d-none d-flex flex-column gap-15 pe-lg-70 pe-md-40 ps-md-40"
                           >
                             <p class="text size-16">Доставка рассчитывается индивидуально</p>
                           </div>
                         </div>
                       </div>
-                      <div class="ps-md-40 pe-md-70">
+                      <div class="ps-md-40 pe-lg-70 pe-md-40">
                         <button type="submit" class="btn">Продолжить</button>
                       </div>
                       <div class="d-flex flex-column gap-20 d-lg-none pe-md-65 ps-md-40">
@@ -244,46 +286,50 @@
                               <span>2500 кг</span>
                               <span class="separator-dot"></span>
                               <span>6,5 м3</span>
+
                               <span class="ms-auto d-inline-block">89 537,50 ₽</span>
                             </p>
 
                             <div class="d-flex flex-row justify-content-between">
-                              <p class="text weight-700">Итого:</p>
-                              <p class="text weight-700">89 537,50 ₽</p>
+                              <p class="text weight-700 size-18">Итого:</p>
+                              <p class="text weight-700 size-20">89 537,50 ₽</p>
                             </div>
                           </div>
                           <p class="text size-12 color-gray-550">
                             Дата и стоимость доставки рассчитываются после оформления заказа
                           </p>
                         </div>
-                        <div class="d-none d-flex flex-column gap-10">
+                        <div class="d-flex flex-column gap-10">
                           <p class="text weight-700 size-18">Данные получателя</p>
-                          <div class="d-none d-flex justify-content-between flex-wrap">
+                          <div class="d-flex justify-content-between flex-wrap column-gap-10">
                             <p class="text">Имя:</p>
-                            <p class="text text-elepsis"></p>
+                            <p class="text text-elepsis">Александр</p>
                           </div>
-                          <div class="d-none d-flex justify-content-between flex-wrap">
+                          <div class="d-flex justify-content-between flex-wrap column-gap-10">
                             <p class="text">Номер телефона:</p>
-                            <p class="text text-elepsis"></p>
+                            <p class="text text-elepsis">+7 (937) 765-80-56</p>
                           </div>
-                          <div class="d-none d-flex justify-content-between flex-wrap">
+                          <div class="d-flex justify-content-between flex-wrap column-gap-10">
                             <p class="text">Email:</p>
-                            <p class="text text-elepsis"></p>
+                            <p class="text text-elepsis">strelnikov2014@ya.ru</p>
                           </div>
                         </div>
-                        <div class="d-none d-flex flex-column gap-10">
+                        <div
+                          data-input-content-container="delivery-1 delivery-2 delivery-3 delivery-4"
+                          class="d-none d-flex flex-column gap-10"
+                        >
                           <p class="text weight-700 size-18">Данные о заказе</p>
-                          <div class="d-none d-flex justify-content-between flex-wrap">
+                          <div
+                            data-input-content-container="delivery-1 delivery-2 delivery-3 delivery-4"
+                            class="d-none d-flex justify-content-between flex-wrap"
+                          >
                             <p class="text">Доставка:</p>
-                            <p class="text text-elepsis"></p>
-                          </div>
-                          <div class="d-none d-flex justify-content-between flex-wrap">
-                            <p class="text">Оплата:</p>
-                            <p class="text text-elepsis"></p>
-                          </div>
-                          <div class="d-none d-flex justify-content-between flex-wrap">
-                            <p class="text">Комментарий:</p>
-                            <p class="text text-elepsis"></p>
+                            <p class="text text-elepsis d-flex w-50 flex-column align-items-end">
+                              <span data-input-content="delivery-1"></span>
+                              <span data-input-content="delivery-2"></span>
+                              <span data-input-content="delivery-3"></span>
+                              <span data-input-content="delivery-4"></span>
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -327,15 +373,22 @@
                           <p class="text text-elepsis">strelnikov2014@ya.ru</p>
                         </div>
                       </div>
-                      <div data-input-content-container="delivery"
+                      <div
+                        data-input-content-container="delivery-1 delivery-2 delivery-3 delivery-4"
                         class="d-none d-flex flex-column gap-10"
                       >
                         <p class="text weight-700 size-18">Данные о заказе</p>
-                        <div data-input-content-container="delivery"
+                        <div
+                          data-input-content-container="delivery-1 delivery-2 delivery-3 delivery-4"
                           class="d-none d-flex justify-content-between flex-wrap"
                         >
                           <p class="text">Доставка:</p>
-                          <p data-input-content-placeholder="delivery" class="text text-elepsis"></p>
+                          <p class="text text-elepsis d-flex w-50 flex-column align-items-end">
+                            <span data-input-content="delivery-1"></span>
+                            <span data-input-content="delivery-2"></span>
+                            <span data-input-content="delivery-3"></span>
+                            <span data-input-content="delivery-4"></span>
+                          </p>
                         </div>
                       </div>
                     </div>
