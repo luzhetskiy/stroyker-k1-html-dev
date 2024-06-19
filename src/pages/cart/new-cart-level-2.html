@@ -199,13 +199,7 @@
                               <div class="d-flex flex-column gap-5">
                                 <p class="text color-gray-550 size-11" for="id_stock">Выбрать склад:</p>
                                 <div class="select">
-                                  <input
-                                    class="d-none"
-                                    data-select="stock"
-                                    name="stock"
-                                    value="0"
-                                    type="text"
-                                  />
+                                  <input class="d-none" data-select="stock" name="stock" value="0" type="text" />
                                   <div data-select-value-container="stock" class="select__value-content form-control">
                                     <p data-select-value="stock" class="text">---------</p>
                                     <div class="select__icon">
@@ -228,8 +222,17 @@
                                     </div>
                                   </div>
                                   <div class="select__content d-none" data-select-content="stock">
-                                    <div class="select__option" data-select-option-selected data-select-option="stock" data-select-option-value="0">---------</div>
-                                    <div class="select__option" data-select-option="stock" data-select-option-value="1">test</div>
+                                    <div
+                                      class="select__option"
+                                      data-select-option-selected
+                                      data-select-option="stock"
+                                      data-select-option-value="0"
+                                    >
+                                      ---------
+                                    </div>
+                                    <div class="select__option" data-select-option="stock" data-select-option-value="1">
+                                      test
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -259,8 +262,17 @@
                                     </div>
                                   </div>
                                   <div class="select__content d-none" data-select-content="car">
-                                    <div class="select__option" data-select-option-selected data-select-option="car" data-select-option-value="0">---------</div>
-                                    <div class="select__option" data-select-option="car" data-select-option-value="1">test</div>
+                                    <div
+                                      class="select__option"
+                                      data-select-option-selected
+                                      data-select-option="car"
+                                      data-select-option-value="0"
+                                    >
+                                      ---------
+                                    </div>
+                                    <div class="select__option" data-select-option="car" data-select-option-value="1">
+                                      test
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -276,7 +288,15 @@
                         </div>
                       </div>
                       <div class="ps-md-40 pe-lg-70 pe-md-40">
-                        <button data-click-target="submit" disabled data-wait-requred="delivery" type="submit" class="btn size-16 ps-md-50 pe-md-50">Продолжить</button>
+                        <button
+                          data-click-target="submit"
+                          disabled
+                          data-wait-requred="delivery"
+                          type="submit"
+                          class="btn size-16 ps-md-50 pe-md-50"
+                        >
+                          Продолжить
+                        </button>
                       </div>
                       <div class="d-flex flex-column gap-20 d-lg-none pe-md-65 ps-md-40">
                         <div class="d-flex flex-column gap-15">
@@ -287,10 +307,10 @@
                               <span>2500 кг</span>
                               <span class="separator-dot"></span>
                               <span>6,5 м3</span>
-  
+
                               <span class="ms-auto d-inline-block">89 537,50 ₽</span>
                             </p>
-  
+
                             <div class="d-flex flex-row justify-content-between">
                               <p class="text weight-700 size-18">Итого:</p>
                               <p class="text weight-700 size-20">89 537,50 ₽</p>
@@ -299,40 +319,6 @@
                           <p class="text size-12 color-gray-550">
                             Дата и стоимость доставки рассчитываются после оформления заказа
                           </p>
-                        </div>
-                        <div class="d-flex flex-column gap-10">
-                          <p class="text weight-700 size-18">Данные получателя</p>
-                          <div class="d-flex justify-content-between flex-wrap column-gap-10">
-                            <p class="text text-elepsis mw-45">Имя:</p>
-                            <p class="text text-elepsis mw-50 text-right">Александр</p>
-                          </div>
-                          <div class="d-flex justify-content-between flex-wrap column-gap-10">
-                            <p class="text text-elepsis mw-45">Номер телефона:</p>
-                            <p class="text text-elepsis mw-50 text-right">+7 (937) 765-80-56</p>
-                          </div>
-                          <div class="d-flex justify-content-between flex-wrap column-gap-10">
-                            <p class="text text-elepsis mw-45">Email:</p>
-                            <p class="text text-elepsis mw-50 text-right">strelnikov2014@ya.ru</p>
-                          </div>
-                        </div>
-                        <div
-                          data-input-content-container="delivery_type"
-                          class="d-none d-flex flex-column gap-10"
-                        >
-                          <p class="text weight-700 size-18">Данные о заказе</p>
-                          <div
-                            data-input-content-container="delivery_type"
-                            class="d-none d-flex justify-content-between flex-wrap"
-                          >
-                            <p class="text text-elepsis mw-45">Доставка:</p>
-                            <div class="d-flex flex-column mw-50">
-                              <p class="text text-elepsis text-right" data-input-content="delivery_type"></p>
-                              <p class="d-none text text-elepsis text-right" data-radio-content="pickup" data-input-content="delivery_cost"></p>
-                              <p class="d-none text text-elepsis text-right" data-radio-content="delivery-point" data-input-content="address"></p>
-                              <p class="d-none text text-elepsis text-right" data-radio-content="delivery-point" data-select-value="stock"></p>
-                              <p class="d-none text text-elepsis text-right" data-radio-content="delivery-point" data-select-value="car"></p>
-                            </div>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -375,10 +361,7 @@
                           <p class="text text-elepsis mw-50 text-right">strelnikov2014@ya.ru</p>
                         </div>
                       </div>
-                      <div
-                        data-input-content-container="delivery_type"
-                        class="d-none d-flex flex-column gap-10"
-                      >
+                      <div data-input-content-container="delivery_type" class="d-none d-flex flex-column gap-10">
                         <p class="text weight-700 size-18">Данные о заказе</p>
                         <div
                           data-input-content-container="delivery_type"
@@ -387,10 +370,26 @@
                           <p class="text text-elepsis mw-45">Доставка:</p>
                           <div class="d-flex flex-column mw-50">
                             <p class="text text-elepsis text-right" data-input-content="delivery_type"></p>
-                            <p class="d-none text text-elepsis text-right" data-radio-content="pickup" data-input-content="delivery_cost"></p>
-                            <p class="d-none text text-elepsis text-right" data-radio-content="delivery-point" data-input-content="address"></p>
-                            <p class="d-none text text-elepsis text-right" data-radio-content="delivery-point" data-select-value="stock"></p>
-                            <p class="d-none text text-elepsis text-right" data-radio-content="delivery-point" data-select-value="car"></p>
+                            <p
+                              class="d-none text text-elepsis text-right"
+                              data-radio-content="pickup"
+                              data-input-content="delivery_cost"
+                            ></p>
+                            <p
+                              class="d-none text text-elepsis text-right"
+                              data-radio-content="delivery-point"
+                              data-input-content="address"
+                            ></p>
+                            <p
+                              class="d-none text text-elepsis text-right"
+                              data-radio-content="delivery-point"
+                              data-select-value="stock"
+                            ></p>
+                            <p
+                              class="d-none text text-elepsis text-right"
+                              data-radio-content="delivery-point"
+                              data-select-value="car"
+                            ></p>
                           </div>
                         </div>
                       </div>
@@ -410,7 +409,15 @@
               <p class="text">Товары: 3</p>
               <p class="text size-16 weight-700">89 537,50 ₽</p>
             </div>
-            <button data-wait-requred="name phone email payment delivery" disabled data-click-trigger="submit" type="button" class="btn w-50">Оформить</button>
+            <button
+              data-wait-requred="name phone email payment delivery"
+              disabled
+              data-click-trigger="submit"
+              type="button"
+              class="btn w-50"
+            >
+              Оформить
+            </button>
           </div>
         </div>
       </div>
