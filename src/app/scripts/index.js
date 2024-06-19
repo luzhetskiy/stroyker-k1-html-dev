@@ -15,6 +15,7 @@ import '../../shared/libs/inputToggle/inputToggle'
 import '../../shared/libs/trigger/trigger'
 import '../../shared/libs/relatedValue/relatedValue'
 import '../../shared/libs/dataSelect/dataSelect'
+import '../../components/cart/index'
 
 window.wNumb = wNumb
 window.noUiSlider = noUiSlider

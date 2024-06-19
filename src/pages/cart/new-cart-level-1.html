@@ -53,14 +53,177 @@
               <div class="d-flex flex-column gap-0 gap-md-20">
                 <h1 class="title size-22 size-md-30">Корзина</h1>
                 <div class="d-grid grid-columns-lg-10 grid-columns-1 gap-20">
-                  <form id="cart-form" class="grid-span-lg-6 grid-span-xl-7">
+                  <div class="grid-span-lg-6 grid-span-xl-7">
                     <div class="d-flex flex-column gap-15 gap-md-20">
                       <div class="d-flex flex-column">
                         <%~ include("/components/cart/cart-item/cart-item.html") %> <%~
                         include("/components/cart/cart-item/cart-item.html") %> <%~
                         include("/components/cart/cart-item/cart-item.html") %>
                       </div>
-                      <div class="d-flex flex-column gap-20 bg-white d-lg-none p-md-20 p-0">
+                      <form id="cart-form" data-wait-requred-form class="d-flex flex-column gap-15 gap-md-20">
+                        <div class="d-flex flex-column gap-20 bg-white d-lg-none p-md-20 p-0">
+                          <div class="d-flex flex-column gap-20">
+                            <div class="form-group mb-0">
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="promotional-code"
+                                autocomplete="off"
+                                data-related-value="promotional-code"
+                                placeholder="Промокод"
+                              />
+                            </div>
+                            <div class="d-flex flex-column gap-15">
+                              <div class="d-flex flex-column gap-10">
+                                <p class="text d-flex flex-wrap gap-5">
+                                  <span>Товары: 3</span>
+                                  <span class="separator-dot"></span>
+                                  <span>2500 кг</span>
+                                  <span class="separator-dot"></span>
+                                  <span>6,5 м3</span>
+    
+                                  <span class="ms-auto d-inline-block">89 537,50 ₽</span>
+                                </p>
+    
+                                <div class="d-flex flex-row justify-content-between">
+                                  <p class="text weight-700 size-18">Итого:</p>
+                                  <p class="text weight-700 size-20">89 537,50 ₽</p>
+                                </div>
+                              </div>
+                              <p class="text size-12 color-gray-550">
+                                Дата и стоимость доставки рассчитываются после оформления заказа
+                              </p>
+                            </div>
+                          </div>
+                          <div data-input-content-container="name email phone" class="d-none d-flex flex-column gap-10">
+                            <p class="text weight-700 size-18">Данные получателя</p>
+                            <div
+                              data-input-content-container="name"
+                              class="d-none d-flex justify-content-between flex-wrap"
+                            >
+                              <p class="text text-elepsis mw-45">Имя:</p>
+                              <p data-input-content="name" class="text text-elepsis mw-50 text-right"></p>
+                            </div>
+                            <div
+                              data-input-content-container="phone"
+                              class="d-none d-flex justify-content-between flex-wrap"
+                            >
+                              <p class="text text-elepsis mw-45">Номер телефона:</p>
+                              <p data-input-content="phone" class="text text-elepsis mw-50 text-right"></p>
+                            </div>
+                            <div
+                              data-input-content-container="email"
+                              class="d-none d-flex justify-content-between flex-wrap"
+                            >
+                              <p class="text text-elepsis mw-45">Email:</p>
+                              <p data-input-content="email" class="text text-elepsis mw-50 text-right"></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column gap-30 bg-white pt-30 pb-50 pe-md-20 ps-md-20">
+                          <div class="d-flex gap-md-45 gap-30 flex-column flex-md-row">
+                            <div class="d-flex gap-10 align-items-center">
+                              <input data-radio="login" checked class="cart-radio mt-3" name="login" id="login" type="radio">
+                              <label for="login" class="text size-16 color-gray-700">
+                                У меня есть аккаунт
+                              </label>
+                            </div>
+                            <div class="d-flex gap-10 align-items-center">
+                              <input data-radio="contacts" class="cart-radio mt-3" name="login" id="contacts" type="radio">
+                              <label for="contacts" class="text size-16 color-gray-700">
+                                У меня нет аккаунта
+                              </label>
+                            </div>
+                          </div>
+                          <div data-radio-content="login" class="d-grid grid-columns-lg-1 grid-columns-xl-2 grid-columns-md-2">
+                            <div class="d-flex flex-column gap-15">
+                              <p class="sub-title size-20">
+                                Вход
+                              </p>
+                              <div class="d-flex flex-column gap-10 align-items-start">
+                                <div class="form-group mb-0">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="login"
+                                    autocomplete="off"
+                                    required=""
+                                    placeholder="Ваш логин*"
+                                    data-required-field="login"
+                                  />
+                                </div>
+                                <div class="form-group mb-0">
+                                  <input
+                                    type="password"
+                                    class="form-control"
+                                    name="password"
+                                    autocomplete="off"
+                                    required=""
+                                    placeholder="Ваш пароль*"
+                                    data-required-field="password"
+                                  />
+                                </div>
+                              </div>
+                              <div>
+                                <button data-click-target="login-submit" contacts disabled data-wait-requred="login password" type="submit" class="btn size-16 ps-md-50 pe-md-50">Продолжить</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div data-radio-content="contacts" class="d-none d-grid grid-columns-lg-1 grid-columns-xl-2 grid-columns-md-2">
+                            <div class="d-flex flex-column gap-15">
+                              <p class="sub-title size-20">
+                                Контактные данные
+                              </p>
+                              <div class="d-flex flex-column gap-10 align-items-start">
+                                <div class="form-group mb-0">
+                                  <input
+                                    type="text"
+                                    class="form-control"
+                                    name="name"
+                                    autocomplete="off"
+                                    required=""
+                                    placeholder="Ваше имя*"
+                                    data-input="name"
+                                    data-required-field="name"
+                                  />
+                                </div>
+                                <div class="form-group mb-0">
+                                  <input
+                                    type="text"
+                                    class="form-control phone"
+                                    name="phone"
+                                    autocomplete="off"
+                                    required=""
+                                    data-input="phone"
+                                    placeholder="Ваш номер*"
+                                    data-required-field="phone"
+                                  />
+                                </div>
+                                <div class="form-group mb-0">
+                                  <input
+                                    type="email"
+                                    class="form-control"
+                                    name="email"
+                                    autocomplete="off"
+                                    required=""
+                                    placeholder="Email*"
+                                    data-input="email"
+                                    data-required-field="email"
+                                  />
+                                </div>
+                              </div>
+                              <div>
+                                <button data-click-target="contacts-submit" disabled data-wait-requred="email phone name" type="submit" class="btn size-16 ps-md-50 pe-md-50">Продолжить</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="grid-span-lg-4 grid-span-xl-3">
+                    <div class="d-lg-flex flex-column gap-30 bg-white p-20 pb-40 d-none">
+                      <div class="d-flex flex-column gap-20">
                         <div class="d-flex flex-column gap-20">
                           <div class="form-group mb-0">
                             <input
@@ -94,159 +257,6 @@
                               Дата и стоимость доставки рассчитываются после оформления заказа
                             </p>
                           </div>
-                          <div data-input-content-container="name email phone" class="d-none d-flex flex-column gap-10">
-                            <p class="text weight-700 size-18">Данные получателя</p>
-                            <div
-                              data-input-content-container="name"
-                              class="d-none d-flex justify-content-between flex-wrap"
-                            >
-                              <p class="text">Имя:</p>
-                              <p data-input-content="name" class="text text-elepsis"></p>
-                            </div>
-                            <div
-                              data-input-content-container="phone"
-                              class="d-none d-flex justify-content-between flex-wrap"
-                            >
-                              <p class="text">Номер телефона:</p>
-                              <p data-input-content="phone" class="text text-elepsis"></p>
-                            </div>
-                            <div
-                              data-input-content-container="email"
-                              class="d-none d-flex justify-content-between flex-wrap"
-                            >
-                              <p class="text">Email:</p>
-                              <p data-input-content="email" class="text text-elepsis"></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="d-flex flex-column gap-30 bg-white pt-30 pb-50 pe-md-20 ps-md-20">
-                        <div class="d-flex gap-md-45 gap-30 flex-column flex-md-row">
-                          <div class="d-flex gap-10 align-items-center">
-                            <input data-radio="1" checked class="cart-radio mt-3" name="login" id="login" type="radio">
-                            <label for="login" class="text size-16 color-gray-700">
-                              У меня есть аккаунт
-                            </label>
-                          </div>
-                          <div class="d-flex gap-10 align-items-center">
-                            <input data-radio="2" class="cart-radio mt-3" name="login" id="contacts" type="radio">
-                            <label for="contacts" class="text size-16 color-gray-700">
-                              У меня нет аккаунта
-                            </label>
-                          </div>
-                        </div>
-                        <div data-radio-content="1" class="d-grid grid-columns-lg-1 grid-columns-xl-2 grid-columns-md-2">
-                          <div class="d-flex flex-column gap-15">
-                            <p class="sub-title size-20">
-                              Вход
-                            </p>
-                            <div class="d-flex flex-column gap-10 align-items-start">
-                              <div class="form-group mb-0">
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  name="login"
-                                  autocomplete="off"
-                                  required=""
-                                  placeholder="Ваш логин*"
-                                />
-                              </div>
-                              <div class="form-group mb-0">
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  name="password"
-                                  autocomplete="off"
-                                  required=""
-                                  placeholder="Ваш пароль*"
-                                />
-                              </div>
-                            </div>
-                            <div>
-                              <button type="submit" class="btn">Продолжить</button>
-                            </div>
-                          </div>
-                        </div>
-                        <div data-radio-content="2" class="d-none d-grid grid-columns-lg-1 grid-columns-xl-2 grid-columns-md-2">
-                          <div class="d-flex flex-column gap-15">
-                            <p class="sub-title size-20">
-                              Контактные данные
-                            </p>
-                            <div class="d-flex flex-column gap-10 align-items-start">
-                              <div class="form-group mb-0">
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  name="name"
-                                  autocomplete="off"
-                                  required=""
-                                  placeholder="Ваше имя*"
-                                  data-input="name"
-                                />
-                              </div>
-                              <div class="form-group mb-0">
-                                <input
-                                  type="text"
-                                  class="form-control phone"
-                                  name="phone"
-                                  autocomplete="off"
-                                  required=""
-                                  data-input="phone"
-                                  placeholder="Ваш номер*"
-                                />
-                              </div>
-                              <div class="form-group mb-0">
-                                <input
-                                  type="email"
-                                  class="form-control"
-                                  name="email"
-                                  autocomplete="off"
-                                  required=""
-                                  placeholder="Email*"
-                                  data-input="email"
-                                />
-                              </div>
-                            </div>
-                            <button type="submit" class="btn">Продолжить</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                  <div class="grid-span-lg-4 grid-span-xl-3">
-                    <div class="d-lg-flex flex-column gap-30 bg-white p-20 pb-40 d-none">
-                      <div class="d-flex flex-column gap-20">
-                        <div class="form-group mb-0">
-                          <input
-                            type="text"
-                            class="form-control"
-                            name="promotional-code"
-                            autocomplete="off"
-                            data-related-value="promotional-code"
-                            placeholder="Промокод"
-                          />
-                        </div>
-
-                        <div class="d-flex flex-column gap-15">
-                          <div class="d-flex flex-column gap-10">
-                            <p class="text d-flex flex-wrap gap-5">
-                              <span>Товары: 3</span>
-                              <span class="separator-dot"></span>
-                              <span>2500 кг</span>
-                              <span class="separator-dot"></span>
-                              <span>6,5 м3</span>
-
-                              <span class="ms-auto d-inline-block">89 537,50 ₽</span>
-                            </p>
-
-                            <div class="d-flex flex-row justify-content-between">
-                              <p class="text weight-700 size-18">Итого:</p>
-                              <p class="text weight-700 size-20">89 537,50 ₽</p>
-                            </div>
-                          </div>
-                          <p class="text size-12 color-gray-550">
-                            Дата и стоимость доставки рассчитываются после оформления заказа
-                          </p>
                         </div>
                         <div data-input-content-container="name email phone" class="d-none d-flex flex-column gap-10">
                           <p class="text weight-700 size-18">Данные получателя</p>
@@ -254,22 +264,22 @@
                             data-input-content-container="name"
                             class="d-none d-flex justify-content-between flex-wrap"
                           >
-                            <p class="text">Имя:</p>
-                            <p data-input-content="name" class="text text-elepsis"></p>
+                            <p class="text text-elepsis mw-45">Имя:</p>
+                            <p data-input-content="name" class="text text-elepsis mw-50 text-right"></p>
                           </div>
                           <div
                             data-input-content-container="phone"
                             class="d-none d-flex justify-content-between flex-wrap"
                           >
-                            <p class="text">Номер телефона:</p>
-                            <p data-input-content="phone" class="text text-elepsis"></p>
+                            <p class="text text-elepsis mw-45">Номер телефона:</p>
+                            <p data-input-content="phone" class="text text-elepsis mw-50 text-right"></p>
                           </div>
                           <div
                             data-input-content-container="email"
                             class="d-none d-flex justify-content-between flex-wrap"
                           >
-                            <p class="text">Email:</p>
-                            <p data-input-content="email" class="text text-elepsis"></p>
+                            <p class="text text-elepsis mw-45">Email:</p>
+                            <p data-input-content="email" class="text text-elepsis mw-50 text-right"></p>
                           </div>
                         </div>
                       </div>
@@ -281,6 +291,19 @@
           </div>
         </section>
       </main>
+
+      <div class="bottom-mobile-menu d-block d-lg-none">
+        <div class="container bottom-mobile-menu__cart-content pt-15 pb-15">
+          <div class="d-flex align-items-center justify-content-between gap-20">
+            <div class="d-flex flex-column gap-0">
+              <p class="text">Товары: 3</p>
+              <p class="text size-16 weight-700">89 537,50 ₽</p>
+            </div>
+            <button data-wait-requred="name phone email" data-radio-content="contacts" disabled data-click-trigger="contacts-submit" type="button" class="d-none btn w-50">Оформить</button>
+            <button data-wait-requred="login password" data-radio-content="login" disabled data-click-trigger="login-submit" type="button" class="btn w-50">Оформить</button>
+          </div>
+        </div>
+      </div>
 
       <%~ include("/components/footers/footer/footer.html") %> <%~ include("/components/general/svg-pack/svg-pack.html")
       %> <%~ include("/components/modals/callme-modal/callme-modal.html") %>

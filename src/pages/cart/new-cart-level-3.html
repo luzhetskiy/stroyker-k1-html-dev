@@ -92,6 +92,7 @@
                               name="payment"
                               id="payment-1"
                               type="radio"
+                              data-required-field="payment"
                             />
                             <label for="payment-1" class="d-flex flex-column gap-2">
                               <p class="text size-16 color-gray-700">Онлайн</p>
@@ -106,6 +107,7 @@
                               name="payment"
                               id="payment-2"
                               type="radio"
+                              data-required-field="payment"
                             />
                             <label for="payment-2" class="d-flex flex-column gap-2">
                               <p class="text size-16 color-gray-700">Картой</p>
@@ -120,6 +122,7 @@
                               name="payment"
                               id="payment-3"
                               type="radio"
+                              data-required-field="payment"
                             />
                             <label for="payment-3" class="d-flex flex-column gap-2">
                               <p class="text size-16 color-gray-700">Наличными</p>
@@ -134,6 +137,7 @@
                               name="payment"
                               id="payment-4"
                               type="radio"
+                              data-required-field="payment"
                             />
                             <label for="payment-4" class="d-flex flex-column gap-2">
                               <p class="text size-16 color-gray-700">Выписать счёт</p>
@@ -154,7 +158,7 @@
                               placeholder="Комментарий"
                             ></textarea>
                           </div>
-                          <button data-click-target="1" type="submit" class="btn">Оформить заказ</button>
+                          <button disabled data-wait-requred="payment" data-click-target="submit" type="submit" class="btn size-16 ps-md-50 pe-md-50">Оформить заказ</button>
                           <div class="d-grid grid-columns-lg-7 grid-columns-1 gap-grid">
                             <div class="grid-span-lg-5 text size-12 color-gray-550">
                               Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с
@@ -173,10 +177,10 @@
                                 <span>2500 кг</span>
                                 <span class="separator-dot"></span>
                                 <span>6,5 м3</span>
-
+  
                                 <span class="ms-auto d-inline-block">89 537,50 ₽</span>
                               </p>
-
+  
                               <div class="d-flex flex-row justify-content-between">
                                 <p class="text weight-700 size-18">Итого:</p>
                                 <p class="text weight-700 size-20">89 537,50 ₽</p>
@@ -190,37 +194,37 @@
                         <div class="d-flex flex-column gap-10">
                           <p class="text weight-700 size-18">Данные получателя</p>
                           <div class="d-flex justify-content-between flex-wrap column-gap-10">
-                            <p class="text">Имя:</p>
-                            <p class="text text-elepsis">Александр</p>
+                            <p class="text text-elepsis mw-45">Имя:</p>
+                            <p class="text text-elepsis mw-50 text-right">Александр</p>
                           </div>
                           <div class="d-flex justify-content-between flex-wrap column-gap-10">
-                            <p class="text">Номер телефона:</p>
-                            <p class="text text-elepsis">+7 (937) 765-80-56</p>
+                            <p class="text text-elepsis mw-45">Номер телефона:</p>
+                            <p class="text text-elepsis mw-50 text-right">+7 (937) 765-80-56</p>
                           </div>
                           <div class="d-flex justify-content-between flex-wrap column-gap-10">
-                            <p class="text">Email:</p>
-                            <p class="text text-elepsis">strelnikov2014@ya.ru</p>
+                            <p class="text text-elepsis mw-45">Email:</p>
+                            <p class="text text-elepsis mw-50 text-right">strelnikov2014@ya.ru</p>
                           </div>
                         </div>
                         <div class="d-flex flex-column gap-10">
                           <p class="text weight-700 size-18">Данные о заказе</p>
                           <div class="d-flex justify-content-between flex-wrap">
-                            <p class="text">Доставка:</p>
-                            <p class="text text-elepsis">По адресу</p>
+                            <p class="text text-elepsis mw-45">Доставка:</p>
+                            <p class="text text-elepsis mw-50 text-right">По адресу</p>
                           </div>
                           <div
                             data-input-content-container="payment"
                             class="d-none d-flex justify-content-between flex-wrap"
                           >
-                            <p class="text">Оплата:</p>
-                            <p data-input-content-placeholder="payment" class="text text-elepsis"></p>
+                            <p class="text text-elepsis mw-45">Оплата:</p>
+                            <p data-input-content="payment" class="text text-elepsis mw-50 text-right"></p>
                           </div>
                           <div
                             data-input-content-container="comment"
                             class="d-none d-flex justify-content-between flex-wrap"
                           >
-                            <p class="text">Комментарий:</p>
-                            <p data-input-content="comment" class="text text-elepsis"></p>
+                            <p class="text text-elepsis mw-45">Комментарий:</p>
+                            <p data-input-content="comment" class="text text-elepsis mw-50 text-right"></p>
                           </div>
                         </div>
                       </div>
@@ -254,37 +258,37 @@
                       <div class="d-flex flex-column gap-10">
                         <p class="text weight-700 size-18">Данные получателя</p>
                         <div class="d-flex justify-content-between flex-wrap column-gap-10">
-                          <p class="text">Имя:</p>
-                          <p class="text text-elepsis">Александр</p>
+                          <p class="text text-elepsis mw-45">Имя:</p>
+                          <p class="text text-elepsis mw-50 text-right">Александр</p>
                         </div>
                         <div class="d-flex justify-content-between flex-wrap column-gap-10">
-                          <p class="text">Номер телефона:</p>
-                          <p class="text text-elepsis">+7 (937) 765-80-56</p>
+                          <p class="text text-elepsis mw-45">Номер телефона:</p>
+                          <p class="text text-elepsis mw-50 text-right">+7 (937) 765-80-56</p>
                         </div>
                         <div class="d-flex justify-content-between flex-wrap column-gap-10">
-                          <p class="text">Email:</p>
-                          <p class="text text-elepsis">strelnikov2014@ya.ru</p>
+                          <p class="text text-elepsis mw-45">Email:</p>
+                          <p class="text text-elepsis mw-50 text-right">strelnikov2014@ya.ru</p>
                         </div>
                       </div>
                       <div class="d-flex flex-column gap-10">
                         <p class="text weight-700 size-18">Данные о заказе</p>
                         <div class="d-flex justify-content-between flex-wrap">
-                          <p class="text">Доставка:</p>
-                          <p class="text text-elepsis">По адресу</p>
+                          <p class="text text-elepsis mw-45">Доставка:</p>
+                          <p class="text text-elepsis mw-50 text-right">По адресу</p>
                         </div>
                         <div
                           data-input-content-container="payment"
                           class="d-none d-flex justify-content-between flex-wrap"
                         >
-                          <p class="text">Оплата:</p>
-                          <p data-input-content="payment" class="text text-elepsis"></p>
+                          <p class="text text-elepsis mw-45">Оплата:</p>
+                          <p data-input-content="payment" class="text text-elepsis mw-50 text-right"></p>
                         </div>
                         <div
                           data-input-content-container="comment"
                           class="d-none d-flex justify-content-between flex-wrap"
                         >
-                          <p class="text">Комментарий:</p>
-                          <p data-input-content="comment" class="text text-elepsis"></p>
+                          <p class="text text-elepsis mw-45">Комментарий:</p>
+                          <p data-input-content="comment" class="text text-elepsis mw-50 text-right"></p>
                         </div>
                       </div>
                     </div>
@@ -303,7 +307,7 @@
               <p class="text">Товары: 3</p>
               <p class="text size-16 weight-700">89 537,50 ₽</p>
             </div>
-            <button data-click-trigger="1" type="button" class="btn w-50">Оформить</button>
+            <button disabled data-wait-requred="payment" data-click-trigger="submit" type="button" class="btn w-50">Оформить</button>
           </div>
         </div>
         <div class="bottom-mobile-menu__content">
