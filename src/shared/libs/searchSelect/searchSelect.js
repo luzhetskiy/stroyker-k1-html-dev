@@ -105,4 +105,17 @@ $(() => {
     history.pushState(null, null, url);  
   })
 
+  $('[data-params-submit]').on('submit', (event) => {
+    event.preventDefault()
+    const target = $(event.currentTarget)
+    const category = target.attr('data-params-submit')
+    const params = target.serializeArray()
+    const url = new URL(`/catalog/${category}`, window.location); 
+    for (const param of params) {
+      if (!param.value) continue 
+      url.searchParams.set(param.name, param.value)
+    }
+    window.location.href = url
+  })
+
 });

@@ -153,7 +153,7 @@
           </div>
         </div>
         <div class="filter-content">
-          <div class="parameter-block">
+          <form data-params-submit class="parameter-block">
             <div class="row">
               <div class="col-lg-3 col-md-3 col-12">
                 <div class="parameter-list">
@@ -161,7 +161,7 @@
                     <span class="parameter-title">Ширина:</span>
                     <div class="search-select">
                       <div data-search-select-input-container="1" class="search-select__input-container">
-                        <input class="d-none" data-search-select-input="1" name="1" value="Все" type="text" />
+                        <input class="d-none" data-search-select-input="1" name="1" type="text" />
                         <div data-search-select-value="1" contenteditable="true" class="search-select__input form-control">Все</div>
                         <div class="search-select__icon">
                           <svg
@@ -186,9 +186,8 @@
                         <div
                           class="search-select__option"
                           data-search-select-option-selected="1"
-                          data-search-select-option-value="0"
+                          data-search-select-option-value=""
                           data-search-select-option="1"
-                          data-delete-get-param="width"
                         >
                           Все
                         </div>
@@ -196,8 +195,6 @@
                           class="search-select__option"
                           data-search-select-option="1"
                           data-search-select-option-value="10"
-                          data-set-get-param="width"
-                          data-set-get-param-value="10"
                         >
                           10
                         </div>
@@ -205,16 +202,12 @@
                           class="search-select__option"
                           data-search-select-option="1"
                           data-search-select-option-value="15"
-                          data-set-get-param="width"
-                          data-set-get-param-value="15"
                         >
                         15
                         </div>
                         <div
                           class="search-select__option"
                           data-search-select-option="1"
-                          data-set-get-param="width"
-                          data-set-get-param-value="50"
                           data-search-select-option-value="50"
                         >
                         50
@@ -222,8 +215,6 @@
                         <div
                           class="search-select__option"
                           data-search-select-option="1"
-                          data-set-get-param="width"
-                          data-set-get-param-value="75"
                           data-search-select-option-value="75"
                         >
                         75
@@ -231,8 +222,6 @@
                         <div
                           class="search-select__option"
                           data-search-select-option="1"
-                          data-set-get-param="width"
-                          data-set-get-param-value="130"
                           data-search-select-option-value="130"
                         >
                         130
@@ -249,8 +238,6 @@
                         <div
                           class="search-select__option"
                           data-search-select-option="1"
-                          data-set-get-param="width"
-                          data-set-get-param-value="200"
                           data-search-select-option-value="200"
                         >
                         200
@@ -266,7 +253,7 @@
                     <span class="parameter-title">Профиль:</span>
                     <div class="search-select">
                       <div data-search-select-input-container="2" class="search-select__input-container">
-                        <input class="d-none" data-search-select-input="2" name="2" value="Все" type="text" />
+                        <input class="d-none" data-search-select-input="2" name="2" type="text" />
                         <div data-search-select-value="2" contenteditable="true" class="search-select__input form-control">Все</div>
                         <div class="search-select__icon">
                           <svg
@@ -291,7 +278,7 @@
                         <div
                           class="search-select__option"
                           data-search-select-option-selected="2"
-                          data-search-select-option-value="0"
+                          data-search-select-option-value=""
                           data-search-select-option="2"
                           data-delete-get-param="profile"
                         >
@@ -371,7 +358,7 @@
                     <span class="parameter-title">Радиус:</span>
                     <div class="search-select">
                       <div data-search-select-input-container="3" class="search-select__input-container">
-                        <input class="d-none" data-search-select-input="3" name="3" value="Все" type="text" />
+                        <input class="d-none" data-search-select-input="3" name="3"  type="text" />
                         <div data-search-select-value="3" contenteditable="true" class="search-select__input form-control">Все</div>
                         <div class="search-select__icon">
                           <svg
@@ -396,7 +383,7 @@
                         <div
                           class="search-select__option"
                           data-search-select-option-selected="3"
-                          data-search-select-option-value="0"
+                          data-search-select-option-value=""
                           data-search-select-option="3"
                           data-delete-get-param="radius"
                         >
@@ -476,7 +463,7 @@
                     <span class="parameter-title">Сезонность:</span>
                     <div class="search-select">
                       <div data-search-select-input-container="4" class="search-select__input-container">
-                        <input class="d-none" data-search-select-input="4" name="4" value="Все" type="text" />
+                        <input class="d-none" data-search-select-input="4" name="4"  type="text" />
                         <div data-search-select-value="4" contenteditable="true" class="search-select__input form-control">Все</div>
                         <div class="search-select__icon">
                           <svg
@@ -501,7 +488,7 @@
                         <div
                           class="search-select__option"
                           data-search-select-option-selected="4"
-                          data-search-select-option-value="0"
+                          data-search-select-option-value=""
                           data-search-select-option="4"
                           data-delete-get-param="season"
                         >
@@ -578,13 +565,13 @@
             </div>
             <div class="row parameter-buttons">
               <div class="col-lg-3 col-md-3 col-12">
-                <a href="#" class="button-parameter">Подобрать</a>
+                <button class="button-parameter" type="submit">Подобрать</button>
               </div>
               <div class="col-lg-3 col-md-3 col-12">
                 <button class="button-reset">Сбросить</button>
               </div>
             </div>
-          </div>
+          </form>
           <div class="auto-block">
             <div class="row">
               <div class="col-lg-3 col-md-3 col-12">
