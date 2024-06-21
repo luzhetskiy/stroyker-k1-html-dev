@@ -1,0 +1,51 @@
+.search-select
+  position: relative
+
+  &__icon
+    position: absolute
+    right: 15px
+    color: var(--accent-color-400)
+
+
+  &__input-container
+    position: relative
+    display: flex
+    align-items: center
+
+  &__input
+    background-color: var(--white-color)
+    border-radius: 2px
+    display: flex
+    align-items: center
+    padding: 0 15px
+    height: 40px
+
+  &__content
+    position: absolute
+    top: 40px
+    border: 1px solid var(--gray-color-260)
+    background-color: var(--white-color)
+    border-radius: 2px
+    width: 100%
+    z-index: 10
+    max-height: 160px
+    overflow: auto
+
+  &__option
+    border-top: 1px solid var(--gray-color-260)
+    background-color: var(--white-color)
+    border-radius: 2px
+    display: flex
+    align-items: center
+    padding: 0 15px
+    height: 40px
+    transition: var(--trs-1)
+    &:first-child
+      border-top: none
+    &:hover
+      background-color: var(--accent-color-400)
+      color: var(--white-color)
+
+[data-select-option-selected]
+  background-color: var(--accent-color-400)
+  color: var(--white-color)
