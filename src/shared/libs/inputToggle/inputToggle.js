@@ -8,6 +8,5 @@ $(() => {
 
     $(`[data-input-content-container*="${id}"]`).removeClass('d-none')
     $(`[data-input-content*="${id}"]`).html(value)
-    // $(`[data-input-content-placeholder*="${id}"]`).text(placeholderValue)
   })
 })

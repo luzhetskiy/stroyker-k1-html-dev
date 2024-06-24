@@ -6,10 +6,12 @@ $(() => {
     const value = optionElement.attr("data-search-select-option-value");
     const textValue = optionElement.text().trim();
     const options = $(`[data-search-select-option="${id}"]`);
+    const input = $(`[data-search-select-input="${id}"]`)
     options.removeAttr("data-search-select-option-selected");
     options.removeClass("d-none");
+    input.val(value);
+    input.trigger('change')
     optionElement.attr("data-search-select-option-selected", id);
-    $(`[data-search-select-input="${id}"]`).val(value);
     $(`[data-search-select-value="${id}"]`).text(textValue);
     $("[data-search-select-content]").addClass("d-none");
   }
@@ -20,10 +22,13 @@ $(() => {
     options.removeClass("d-none");
     if ($(`[data-search-select-content="${id}"]`).hasClass("d-none") || input.text()) {
       $("[data-search-select-content]").addClass("d-none");
+      $('[data-search-select-input-container-active]').removeAttr('data-search-select-input-container-active')
       $(`[data-search-select-content="${id}"]`).removeClass("d-none");
+      $(`[data-search-select-input-container="${id}"]`).attr('data-search-select-input-container-active', id)
       return;
     }
     $(`[data-search-select-content="${id}"]`).addClass("d-none");
+    $(`[data-search-select-input-container-active]`).removeAttr('data-search-select-input-container-active')
   }
 
   const closeSelect = (id) => {
@@ -31,7 +36,7 @@ $(() => {
     $(`[data-search-select-value="${id}"]`).text(value);
   }
 
-  const paramsStr = window.location.search.replace( '?', '')
+  const paramsStr = window.location.search.replace('?', '')
   const params = paramsStr.split('&')
 
   for (const param of params) {
@@ -39,6 +44,8 @@ $(() => {
     const paramSetterElement = $(`[data-set-get-param="${paramArray[0]}"][data-set-get-param-value="${paramArray[1]}"]`)
     if (paramSetterElement) {
       setValue(paramSetterElement)
+      const id = $(paramSetterElement).attr('data-search-select-option')
+      $(`[data-search-select-reset*="${id}"]`).removeClass('d-none')
     }
   }
 
@@ -85,6 +92,7 @@ $(() => {
       !event.target.closest("[data-search-select-input-container]")
     ) {
       $("[data-search-select-content]").addClass("d-none");
+      $('[data-search-select-input-container-active]').removeAttr('data-search-select-input-container-active')
     }
   });
 
@@ -99,9 +107,11 @@ $(() => {
 
   $('[data-delete-get-param]').on('click', (event) => {
     const target = $(event.currentTarget)
-    const name = target.attr('data-delete-get-param')
+    const names = target.attr('data-delete-get-param').split(' ')
     const url = new URL(window.location); 
-    url.searchParams.delete(name);
+    for (const name of names) {
+      url.searchParams.delete(name);
+    }
     history.pushState(null, null, url);  
   })
 
@@ -112,10 +122,46 @@ $(() => {
     const params = target.serializeArray()
     const url = new URL(`/catalog/${category}`, window.location); 
     for (const param of params) {
-      if (!param.value) continue 
-      url.searchParams.set(param.name, param.value)
+      if (!param.value) continue
+      const values = param.value.split(' ')
+      const names = param.name.split(' ')
+      for (let index = 0; index < names.length; index++) {
+        url.searchParams.set(names[index], values[index])
+      }
     }
     window.location.href = url
+  })
+
+  $('[data-search-select-reset]').on('click', (event) => {
+    event.preventDefault()
+    const target = $(event.currentTarget)
+    const ids = target.attr('data-search-select-reset')
+    const resettableInputs = []
+
+    for (const id of ids) {
+      resettableInputs.push($(`[data-search-select-show-reset="${id}"]`))
+    }
+
+    for (const input of resettableInputs) {
+      const inputObj = $(input)
+      const selectId = inputObj.attr('data-search-select-input')
+      const option = $(`[data-search-select-option-default="${selectId}"]`)
+      setValue(option)
+    }
+    target.addClass('d-none')
+  })
+
+  $('[data-search-select-show-reset]').on('change', (event) => {
+    const id = $(event.currentTarget).attr('data-search-select-show-reset')
+    const allShowResetInputs = $(`[data-search-select-show-reset*="${id}"]`)
+    for (const input of allShowResetInputs) {
+      const inputObj = $(input)
+      if (inputObj.val()) {
+        $(`[data-search-select-reset*="${id}"]`).removeClass('d-none')
+        return
+      }
+    }
+    $(`[data-search-select-reset*="${id}"]`).addClass('d-none')
   })
 
 });
