@@ -1,19 +1,21 @@
 $(() => {
   if ($("[data-search-select-input], [data-search-select]").length === 0) return;
 
-  const searchSelects = Array.from($('[data-search-select]'))
+  const searchSelects = Array.from($("[data-search-select]"));
 
   for (const select of searchSelects) {
-    const selectObj = $(select)
-    const id = selectObj.attr('data-search-select')
-    const options = Array.from(selectObj.find('option'))
-    const selectedOption = options.find(option => option.selected)
+    const selectObj = $(select);
+    const id = selectObj.attr("data-search-select");
+    const options = Array.from(selectObj.find("option"));
+    const selectedOption = options.find((option) => option.selected);
 
-    selectObj.wrapAll(`<div data-search-select-wrapper="${id}" class="search-select" />`)
-    selectObj.addClass('d-none').after(
+    selectObj.wrapAll(`<div data-search-select-wrapper="${id}" class="search-select" />`);
+    selectObj.addClass("d-none").after(
       `
       <div data-search-select-input-container="${id}" class="search-select__input-container">
-        <div data-search-select-value="${id}" contenteditable="true" class="search-select__input form-control">${selectedOption.text}</div>
+        <div data-search-select-value="${id}" tabindex="-1" contenteditable class="search-select__input form-control">${
+        selectedOption.text
+      }</div>
         <div class="search-select__icon">
           <svg
             width="12"
@@ -34,22 +36,25 @@ $(() => {
         </div>
       </div>
       <div class="search-select__content d-none" data-search-select-content="${id}">
-        ${options.map((option, index) => 
-          `
+        ${options
+        .map(
+          (option, index) =>
+            `
           <div
             class="search-select__option"
             data-search-select-option="${id}"
             data-search-select-option-value="${option.value}" 
-            ${index === 0 ? `data-search-select-option-default="${id}"` : ''}
-            ${option.selected ? `data-search-select-option-selected="${id}"` : ''}
+            ${index === 0 ? `data-search-select-option-default="${id}"` : ""}
+            ${option.selected ? `data-search-select-option-selected="${id}"` : ""}
           >
             ${option.text}
           </div>
           `
-        ).join('')}
+        )
+        .join("")}
       </div>
       `
-    )
+    );
   }
 
   const setValue = (optionElement) => {
@@ -58,11 +63,11 @@ $(() => {
     const textValue = optionElement.text().trim();
     const options = $(`[data-search-select-option="${id}"]`);
     const input = $(`[data-search-select-input="${id}"]`);
-    const select = $(`[data-search-select="${id}"]`)
+    const select = $(`[data-search-select="${id}"]`);
     options.removeAttr("data-search-select-option-selected");
     options.removeClass("d-none");
     input.val(value);
-    select.val(value)
+    select.val(value);
     optionElement.attr("data-search-select-option-selected", id);
     $(`[data-search-select-value="${id}"]`).text(textValue);
     $("[data-search-select-content]").addClass("d-none");
@@ -74,11 +79,13 @@ $(() => {
     options.removeClass("d-none");
     const allInputs = Array.from($(`[data-search-select-value]`));
     for (const input of allInputs) {
-      inputObj = $(input)
+      inputObj = $(input);
       const id = inputObj.attr("data-search-select-value");
       closeSelect(id);
     }
     input.text("");
+    input.attr('contenteditable', 'true')
+    input.trigger('focus')
     $(`[data-search-select-content="${id}"]`).removeClass("d-none");
     $(`[data-search-select-input-container="${id}"]`).attr("data-search-select-input-container-active", id);
     return;
@@ -86,9 +93,13 @@ $(() => {
 
   const closeSelect = (id) => {
     const value = $(`[data-search-select-option-selected="${id}"]`).text().trim();
-    $(`[data-search-select-value="${id}"]`).text(value); 
+    const input = $(`[data-search-select-value="${id}"]`)
+    console.log(input.attr('contenteditable'));
+    input.removeAttr('contenteditable')
+    input.trigger('blue')
+    input.text(value);
     $(`[data-search-select-content="${id}"]`).addClass("d-none");
-    $(`[data-search-select-input-container-active="${id}"]`).removeAttr('data-search-select-input-container-active')
+    $(`[data-search-select-input-container-active="${id}"]`).removeAttr("data-search-select-input-container-active");
   };
 
   $("[data-search-select-value]").on("input", (event) => {
@@ -113,25 +124,25 @@ $(() => {
     }
   });
 
-  $(document).on('click', (event) => {
-    if (event.target.closest('[data-search-select-value]')) {
-      const target = $(event.target.closest('[data-search-select-value]'));
+  $(document).on("click", (event) => {
+    if (event.target.closest("[data-search-select-value]")) {
+      const target = $(event.target.closest("[data-search-select-value]"));
       const id = target.attr("data-search-select-value");
       openSelect(id);
     }
-    if (event.target.closest('[data-search-select-option]')) {
-      const target = $(event.target.closest('[data-search-select-option]'));
+    if (event.target.closest("[data-search-select-option]")) {
+      const target = $(event.target.closest("[data-search-select-option]"));
       setValue(target);
-    };
-    if (!event.target.closest('[data-search-select-value]') && !event.target.closest('[data-search-select-content]')) {
-      const values = Array.from($('[data-search-select-value]'))
+    }
+    if (!event.target.closest("[data-search-select-value]") && !event.target.closest("[data-search-select-content]")) {
+      const values = Array.from($("[data-search-select-value]"));
       for (const value of values) {
-        valueObj = $(value)
+        valueObj = $(value);
         const id = valueObj.attr("data-search-select-value");
         closeSelect(id);
       }
     }
-  })
+  });
 
   $("[data-set-get-param]").on("mousedown", (event) => {
     const target = $(event.currentTarget);
