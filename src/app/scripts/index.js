@@ -822,6 +822,7 @@ const SliderConstructor = /*#__PURE__*/ (function () {
         this.params.centerMode = this.element.getAttribute("data-center") === null ? false : true;
         this.params.infinite = this.element.getAttribute("data-no-infinite") === null ? true : false;
         this.params.count = {};
+        this.params.loop = this.element.getAttribute("data-loop") === 'false' ? false : true;
         this.params.count.xs = +this.element.getAttribute("data-slides") || 1;
         this.params.count.sm = +this.element.getAttribute("data-sm-slides") || this.params.count.xs;
         this.params.count.md = +this.element.getAttribute("data-md-slides") || this.params.count.sm;
@@ -977,6 +978,7 @@ const SliderConstructor = /*#__PURE__*/ (function () {
           nextArrow: this.nextArrow,
           arrows: this.params.arrows,
           adaptiveHeight: this.params.adaptiveHeight,
+          // loop: this.params.loop,
           dots: this.params.dots,
           centerMode: this.params.centerMode,
           accessibility: false,
@@ -2233,5 +2235,13 @@ $(document).ready(function () {
   });
 });
 
-
-
+$(() => {
+  $(".tabs-slider-mobile").slick({
+    infinite: !1,
+    slidesToShow: 2.5,
+    slidesToScroll: 1,
+    arrows: !1,
+    variableWidth: !1,
+    centerMode: !1,
+  });
+})

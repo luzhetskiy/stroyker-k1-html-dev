@@ -78,9 +78,6 @@ form .delivery-contacts-data {
 .form-group.filter-select {
   padding-right: 20px;
 }
-.filter-item__content {
-  z-index: 55;
-}
 .filter-item__content .filter-range {
   padding-right: 20px;
 }

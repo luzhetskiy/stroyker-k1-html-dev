@@ -159,98 +159,15 @@
                 <div class="parameter-list">
                   <div class="parameter-select">
                     <span class="parameter-title">Ширина:</span>
-                    <div class="search-select">
-                      <div data-search-select-input-container="1" class="search-select__input-container">
-                        <input data-search-select-show-reset="1" class="d-none" data-search-select-input="1" name="1" type="text" />
-                        <div data-search-select-value="1" contenteditable="true" class="search-select__input form-control">Все</div>
-                        <div class="search-select__icon">
-                          <svg
-                            width="12"
-                            height="7"
-                            viewBox="0 0 12 7"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z"
-                              fill="currentColor"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                      <!-- data-search-select-content - указывает на контейнер с опциями селекта, агрумент - id селекта -->
-                      <div class="search-select__content d-none" data-search-select-content="1">
-                        <!-- 
-                          data-search-select-option-selected - указывает что выбрано, в качестве аргумента указывается id селекта
-                          data-search-select-option-value - значение которое будет передано в input селекта
-                          data-search-select-option - указывает что это селект и он может быть выбран по клику, аргумент - id селекта
-                         -->
-                        <div
-                          class="search-select__option"
-                          data-search-select-option-selected="1"
-                          data-search-select-option-value="" 
-                          data-search-select-option-default="1" 
-                          data-search-select-option="1"
-                        >
-                          Все
-                        </div>
-                        <div
-                          class="search-select__option"
-                          data-search-select-option="1"
-                          data-search-select-option-value="10"
-                        >
-                          10
-                        </div>
-                        <div
-                          class="search-select__option"
-                          data-search-select-option="1"
-                          data-search-select-option-value="15"
-                        >
-                        15
-                        </div>
-                        <div
-                          class="search-select__option"
-                          data-search-select-option="1"
-                          data-search-select-option-value="50"
-                        >
-                        50
-                        </div>
-                        <div
-                          class="search-select__option"
-                          data-search-select-option="1"
-                          data-search-select-option-value="75"
-                        >
-                        75
-                        </div>
-                        <div
-                          class="search-select__option"
-                          data-search-select-option="1"
-                          data-search-select-option-value="130"
-                        >
-                        130
-                        </div>
-                        <div
-                          class="search-select__option"
-                          data-search-select-option="1"
-                          data-set-get-param="width"
-                          data-set-get-param-value="170"
-                          data-search-select-option-value="170"
-                        >
-                        170
-                        </div>
-                        <div
-                          class="search-select__option"
-                          data-search-select-option="1"
-                          data-search-select-option-value="200"
-                        >
-                        200
-                        </div>
-                      </div>
-                    </div>
+                    <select data-search-select="width" name="width" id="width">
+                      <option value="">Все</option>
+                      <option value="10">10</option>
+                      <option value="15">15</option>
+                      <option value="50">50</option>
+                      <option value="75">75</option>
+                      <option selected value="130">130</option>
+                      <option value="170">170</option>
+                    </select>
                   </div>
                 </div>
               </div>
@@ -258,105 +175,15 @@
                 <div class="parameter-list">
                   <div class="parameter-select">
                     <span class="parameter-title">Профиль:</span>
-                    <div class="search-select">
-                      <div data-search-select-input-container="2" class="search-select__input-container">
-                        <input data-search-select-show-reset="2" class="d-none" data-search-select-input="2" name="height1 height2" type="text" />
-                        <div data-search-select-value="2" contenteditable="true" class="search-select__input form-control">Все</div>
-                        <div class="search-select__icon">
-                          <svg
-                            width="12"
-                            height="7"
-                            viewBox="0 0 12 7"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z"
-                              fill="currentColor"
-                            />
-                            <path
-                              d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z"
-                              fill="currentColor"
-                            />
-                          </svg>
-                        </div>
-                      </div>
-                      <div class="search-select__content d-none" data-search-select-content="2">
-                        <div
-                          class="search-select__option"
-                          data-search-select-option-selected="2"
-                          data-search-select-option-value=""
-                          data-search-select-option-default="2" 
-                          data-search-select-option="2"
-                          data-delete-get-param="profile"
-                        >
-                          Все
-                        </div>
-                        <div
-                          class="search-select__option"
-                          data-search-select-option="2"
-                          data-search-select-option-value="1 10"
-                          data-set-get-param="profile"
-                          data-set-get-param-value="1"
-                        >
-                          1
-                        </div>
-                        <div
-                          class="search-select__option"
-                          data-search-select-option="2"
-                          data-search-select-option-value="2 10"
-                          data-set-get-param="profile"
-                          data-set-get-param-value="2"
-                        >
-                        2
-                        </div>
-                        <div
-                          class="search-select__option"
-                          data-search-select-option="2"
-                          data-set-get-param="profile"
-                          data-set-get-param-value="3"
-                          data-search-select-option-value="3 10"
-                        >
-                        3
-                        </div>
-                        <div
-                          class="search-select__option"
-                          data-search-select-option="2"
-                          data-set-get-param="profile"
-                          data-set-get-param-value="4"
-                          data-search-select-option-value="4 10"
-                        >
-                        4
-                        </div>
-                        <div
-                          class="search-select__option"
-                          data-search-select-option="2"
-                          data-set-get-param="profile"
-                          data-set-get-param-value="5"
-                          data-search-select-option-value="5 10"
-                        >
-                        5
-                        </div>
-                        <div
-                          class="search-select__option"
-                          data-search-select-option="2"
-                          data-set-get-param="profile"
-                          data-set-get-param-value="6"
-                          data-search-select-option-value="6 10"
-                        >
-                        6
-                        </div>
-                        <div
-                          class="search-select__option"
-                          data-search-select-option="2"
-                          data-set-get-param="profile"
-                          data-set-get-param-value="7"
-                          data-search-select-option-value="7 10"
-                        >
-                        7
-                        </div>
-                      </div>
-                    </div>
+                    <select data-search-select="profile" name="height1 height2" id="profile">
+                      <option value="">Все</option>
+                      <option value="10 10">10</option>
+                      <option value="15 10">15</option>
+                      <option value="50 10">50</option>
+                      <option value="75 10">75</option>
+                      <option value="130 10">130</option>
+                      <option value="170 10">170</option>
+                    </select>
                   </div>
                 </div>
               </div>
