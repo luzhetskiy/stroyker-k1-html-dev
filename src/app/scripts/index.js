@@ -1,26 +1,28 @@
 import jQuery from "jquery";
 import wNumb from "wnumb";
 import noUiSlider from "nouislider";
-import tippy from 'tippy.js';
+import tippy from "tippy.js";
 import "owl.carousel";
 import "mmenu-js";
 import "slick-carousel";
 import "@fancyapps/fancybox";
 import "inputmask/dist/jquery.inputmask";
-import '../../shared/libs/collapse/collapse'
-import '../../components/products/product-cards/product-cards'
-import '../../shared/libs/radioToggle/radioToggle'
-import '../../shared/libs/select/select'
-import '../../shared/libs/inputToggle/inputToggle'
-import '../../shared/libs/trigger/trigger'
-import '../../shared/libs/relatedValue/relatedValue'
-import '../../shared/libs/dataSelect/dataSelect'
-import '../../components/cart/index'
-import '../../shared/libs/searchSelect/searchSelect'
+import "../../shared/libs/collapse/collapse";
+import "../../components/products/product-cards/product-cards";
+import "../../shared/libs/radioToggle/radioToggle";
+import "../../shared/libs/select/select";
+import "../../shared/libs/inputToggle/inputToggle";
+import "../../shared/libs/trigger/trigger";
+import "../../shared/libs/relatedValue/relatedValue";
+import "../../shared/libs/dataSelect/dataSelect";
+import "../../components/cart/index";
+import { initSearchSelects } from "../../shared/libs/searchSelect/searchSelect";
+import "../../shared/libs/checkBoxToggle/checkBoxToggle";
+import { initTiresCarsSelection } from "../../shared/libs/tiresCarsSelection/tiresCarsSelection";
 
-window.wNumb = wNumb
-window.noUiSlider = noUiSlider
-window.tippy = tippy
+window.wNumb = wNumb;
+window.noUiSlider = noUiSlider;
+window.tippy = tippy;
 
 window.breakpoints = {
   xs: 0,
@@ -30,6 +32,16 @@ window.breakpoints = {
   xl: 1280,
 };
 
+$(() => {
+
+  $("[data-cars-select]").on('change', () => {
+    console.log(89879789789);
+  })
+
+
+  initSearchSelects();
+  initTiresCarsSelection();
+});
 
 $(".acc__toggle:not(.not_toggle)").click(function (e) {
   // e.preventDefault();
@@ -822,7 +834,7 @@ const SliderConstructor = /*#__PURE__*/ (function () {
         this.params.centerMode = this.element.getAttribute("data-center") === null ? false : true;
         this.params.infinite = this.element.getAttribute("data-no-infinite") === null ? true : false;
         this.params.count = {};
-        this.params.loop = this.element.getAttribute("data-loop") === 'false' ? false : true;
+        this.params.loop = this.element.getAttribute("data-loop") === "false" ? false : true;
         this.params.count.xs = +this.element.getAttribute("data-slides") || 1;
         this.params.count.sm = +this.element.getAttribute("data-sm-slides") || this.params.count.xs;
         this.params.count.md = +this.element.getAttribute("data-md-slides") || this.params.count.sm;
@@ -2206,32 +2218,32 @@ function headerPhones() {
 // frontpage.js
 
 $(document).ready(function () {
-  $('.category-slider .owl-carousel').owlCarousel({
-      loop: true,
-      margin: 20,
-      nav: true,
-      items: 5,
-      responsive: {
-          0: {
-              nav: false,
-              dots: true,
-              items: 1
-          },
-          479: {
-              nav: false,
-              dots: true,
-              items: 3
-          },
-          768: {
-              nav: true,
-              dots: false,
-              items: 4
-          },
-          992: {
-              nav: true,
-              items: 5
-          }
-      }
+  $(".category-slider .owl-carousel").owlCarousel({
+    loop: true,
+    margin: 20,
+    nav: true,
+    items: 5,
+    responsive: {
+      0: {
+        nav: false,
+        dots: true,
+        items: 1,
+      },
+      479: {
+        nav: false,
+        dots: true,
+        items: 3,
+      },
+      768: {
+        nav: true,
+        dots: false,
+        items: 4,
+      },
+      992: {
+        nav: true,
+        items: 5,
+      },
+    },
   });
 });
 
@@ -2244,4 +2256,4 @@ $(() => {
     variableWidth: !1,
     centerMode: !1,
   });
-})
+});

@@ -1,5 +1,21 @@
-$(() => {
+import {
+  selectInputHandler,
+  documentClicksDelegate,
+  paramsSubmitHandler,
+  resetClickHandler,
+  showResetChangeHandler,
+} from "./searchSelect.handlers";
+
+export const initSearchSelects = () => {
   if ($("[data-search-select-input], [data-search-select]").length === 0) return;
+
+  if ($("[data-search-select-input-container]").length !== 0) {
+    $("[data-search-select-value]").off("input", selectInputHandler);
+    $(document).off("click", documentClicksDelegate);
+    $("[data-params-submit]").off("submit", paramsSubmitHandler);
+    $("[data-search-select-reset]").off("click", resetClickHandler);
+    $("[data-search-select-show-reset]").off("change", showResetChangeHandler);
+  }
 
   const searchSelects = Array.from($("[data-search-select]"));
 
@@ -8,12 +24,13 @@ $(() => {
     const id = selectObj.attr("data-search-select");
     const options = Array.from(selectObj.find("option"));
     const selectedOption = options.find((option) => option.selected);
+    const inert = selectObj.attr('data-inert')
 
     selectObj.wrapAll(`<div data-search-select-wrapper="${id}" class="search-select" />`);
     selectObj.addClass("d-none").after(
       `
       <div data-search-select-input-container="${id}" class="search-select__input-container">
-        <div data-search-select-value="${id}" tabindex="-1" contenteditable class="search-select__input form-control">${
+        <div ${inert !== undefined ? 'inert' : ''} data-search-select-value="${id}" tabindex="-1" contenteditable class="search-select__input form-control">${
         selectedOption.text
       }</div>
         <div class="search-select__icon">
@@ -57,157 +74,9 @@ $(() => {
     );
   }
 
-  const setValue = (optionElement) => {
-    const id = optionElement.attr("data-search-select-option");
-    const value = optionElement.attr("data-search-select-option-value");
-    const textValue = optionElement.text().trim();
-    const options = $(`[data-search-select-option="${id}"]`);
-    const input = $(`[data-search-select-input="${id}"]`);
-    const select = $(`[data-search-select="${id}"]`);
-    options.removeAttr("data-search-select-option-selected");
-    options.removeClass("d-none");
-    input.val(value);
-    select.val(value);
-    optionElement.attr("data-search-select-option-selected", id);
-    $(`[data-search-select-value="${id}"]`).text(textValue);
-    $("[data-search-select-content]").addClass("d-none");
-  };
-
-  const openSelect = (id) => {
-    const options = $(`[data-search-select-option="${id}"]`);
-    const input = $(`[data-search-select-value="${id}"]`);
-    options.removeClass("d-none");
-    const allInputs = Array.from($(`[data-search-select-value]`));
-    for (const input of allInputs) {
-      inputObj = $(input);
-      const id = inputObj.attr("data-search-select-value");
-      closeSelect(id);
-    }
-    input.text("");
-    input.attr('contenteditable', 'true')
-    input.trigger('focus')
-    $(`[data-search-select-content="${id}"]`).removeClass("d-none");
-    $(`[data-search-select-input-container="${id}"]`).attr("data-search-select-input-container-active", id);
-    return;
-  };
-
-  const closeSelect = (id) => {
-    const value = $(`[data-search-select-option-selected="${id}"]`).text().trim();
-    const input = $(`[data-search-select-value="${id}"]`)
-    console.log(input.attr('contenteditable'));
-    input.removeAttr('contenteditable')
-    input.trigger('blue')
-    input.text(value);
-    $(`[data-search-select-content="${id}"]`).addClass("d-none");
-    $(`[data-search-select-input-container-active="${id}"]`).removeAttr("data-search-select-input-container-active");
-  };
-
-  $("[data-search-select-value]").on("input", (event) => {
-    const target = $(event.currentTarget);
-    const id = target.attr("data-search-select-value");
-    const value = target.text().trim().toLowerCase();
-    const options = $(`[data-search-select-option="${id}"]`);
-
-    if (!value) {
-      options.removeClass("d-none");
-      return;
-    }
-
-    for (const option of options) {
-      const currentOption = $(option);
-      const optionValue = currentOption.text().trim().toLowerCase();
-      if (optionValue.indexOf(value) === -1) {
-        currentOption.addClass("d-none");
-        continue;
-      }
-      currentOption.removeClass("d-none");
-    }
-  });
-
-  $(document).on("click", (event) => {
-    if (event.target.closest("[data-search-select-value]")) {
-      const target = $(event.target.closest("[data-search-select-value]"));
-      const id = target.attr("data-search-select-value");
-      openSelect(id);
-    }
-    if (event.target.closest("[data-search-select-option]")) {
-      const target = $(event.target.closest("[data-search-select-option]"));
-      setValue(target);
-    }
-    if (!event.target.closest("[data-search-select-value]") && !event.target.closest("[data-search-select-content]")) {
-      const values = Array.from($("[data-search-select-value]"));
-      for (const value of values) {
-        valueObj = $(value);
-        const id = valueObj.attr("data-search-select-value");
-        closeSelect(id);
-      }
-    }
-  });
-
-  $("[data-set-get-param]").on("mousedown", (event) => {
-    const target = $(event.currentTarget);
-    const value = target.attr("data-set-get-param-value");
-    const name = target.attr("data-set-get-param");
-    const url = new URL(window.location);
-    url.searchParams.set(name, value);
-    history.pushState(null, null, url);
-  });
-
-  $("[data-delete-get-param]").on("mousedown", (event) => {
-    const target = $(event.currentTarget);
-    const names = target.attr("data-delete-get-param").split(" ");
-    const url = new URL(window.location);
-    for (const name of names) {
-      url.searchParams.delete(name);
-    }
-    history.pushState(null, null, url);
-  });
-
-  $("[data-params-submit]").on("submit", (event) => {
-    event.preventDefault();
-    const target = $(event.currentTarget);
-    const category = target.attr("data-params-submit");
-    const params = target.serializeArray();
-    const url = new URL(`/catalog/${category}`, window.location);
-    for (const param of params) {
-      if (!param.value) continue;
-      const values = param.value.split(" ");
-      const names = param.name.split(" ");
-      for (let index = 0; index < names.length; index++) {
-        url.searchParams.set(names[index], values[index]);
-      }
-    }
-    window.location.href = url;
-  });
-
-  $("[data-search-select-reset]").on("click", (event) => {
-    event.preventDefault();
-    const target = $(event.currentTarget);
-    const ids = target.attr("data-search-select-reset").split(" ");
-    const resettableInputs = [];
-
-    for (const id of ids) {
-      resettableInputs.push($(`[data-search-select-show-reset="${id}"]`));
-    }
-
-    for (const input of resettableInputs) {
-      const inputObj = $(input);
-      const selectId = inputObj.attr("data-search-select-input");
-      const option = $(`[data-search-select-option-default="${selectId}"]`);
-      setValue(option);
-    }
-    target.addClass("d-none");
-  });
-
-  $("[data-search-select-show-reset]").on("change", (event) => {
-    const allShowResetInputs = Array.from($(`[data-search-select-show-reset]`));
-    for (const input of allShowResetInputs) {
-      const inputObj = $(input);
-      if (inputObj.val()) {
-        $(`[data-search-select-reset]`).removeClass("d-none");
-        return;
-      }
-    }
-    $(`[data-search-select-reset]`).addClass("d-none");
-  });
-});
+  $("[data-search-select-value]").on("input", selectInputHandler);
+  $(document).on("click", documentClicksDelegate);
+  $("[data-params-submit]").on("submit", paramsSubmitHandler);
+  $("[data-search-select-reset]").on("click", resetClickHandler);
+  $("[data-search-select-show-reset]").on("change", showResetChangeHandler);
+};
