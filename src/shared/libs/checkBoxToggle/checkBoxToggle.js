@@ -1,7 +1,6 @@
 $(() => {
 
   $('[data-check-box-toggle]').on('change', (event) => {
-    console.log(123);
     const target = $(event.currentTarget)
     const id = target.attr('data-check-box-toggle')
     const checked = event.currentTarget.checked

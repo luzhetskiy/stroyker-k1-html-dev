@@ -409,81 +409,176 @@
               </div>
             </div>
           </form>
-          <form data-tires-form data-check-box-toggle-content-on="1" class="auto-block d-none">
-            <div class="row">
-              <div class="col-lg-3 col-md-3 col-12">
-                <div class="parameter-list">
-                  <div class="parameter-select">
-                    <span class="parameter-title">Марка:</span>
-                    <select data-cars-select data-select-default="Все" data-search-select="mark" name="mark" id="mark">
-                      <option selected value="">Все</option>
-                      <option value="10">10 <span>2</span></option>
-                      <option value="15">15 <span>2</span></option>
-                      <option value="50">50 <span>2</span></option>
-                      <option value="75">75 <span>2</span></option>
-                      <option value="130">130</option>
-                      <option value="170">170</option>
-                    </select>
-                  </div>
+          <form data-tires-form data-check-box-toggle-content-on="1" class="d-grid grid-columns-4 gap-10 auto-block d-none">
+            <div class="search-select">
+              <div data-search-select-input-container="mark" class="search-select__input-container">
+                <input class="d-none" data-cars-select data-select-default="Модель" data-search-select-input="mark" name="mark"  type="text" />
+                <div data-search-select-value="mark" contenteditable="true" class="search-select__input form-control">Бренды</div>
+                <div class="search-select__icon">
+                  <svg
+                    width="12"
+                    height="7"
+                    viewBox="0 0 12 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z"
+                      fill="currentColor"
+                    />
+                  </svg>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-3 col-12">
-                <div class="parameter-list">
-                  <div class="parameter-select">
-                    <span class="parameter-title">Модель:</span>
-                    <select data-inert data-select-default="Все" data-models-select data-search-select="model" name="model" id="model">
-                      <option selected value="">Все</option>
-                      <option value="10">10 <span>2</span></option>
-                      <option value="15">15 <span>2</span></option>
-                      <option value="50">50 <span>2</span></option>
-                      <option value="75">75 <span>2</span></option>
-                      <option value="130">130</option>
-                      <option value="170">170</option>
-                    </select>
-                  </div>
+              <div class="search-select__content d-none" data-search-select-content="mark">
+                <div
+                  class="search-select__option"
+                  data-search-select-option-selected="mark"
+                  data-search-select-option-value=""
+                  data-search-select-option-default="mark" 
+                  data-search-select-option="mark"
+                >
+                  Бренды
                 </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-12">
-                <div class="parameter-list">
-                  <div class="parameter-select">
-                    <span class="parameter-title">Модификация:</span>
-                    <select data-inert data-select-default="Все" data-modifications-select data-search-select="modification" name="modification" id="modification">
-                      <option selected value="">Все</option>
-                      <option value="10">10 <span>2</span></option>
-                      <option value="15">15 <span>2</span></option>
-                      <option value="50">50 <span>2</span></option>
-                      <option value="75">75 <span>2</span></option>
-                      <option value="130">130</option>
-                      <option value="170">170</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-3 col-12">
-                <div class="parameter-list">
-                  <div class="parameter-select">
-                    <span class="parameter-title">Комплектация:</span>
-                    <select data-inert data-select-default="Все" data-configurations-select data-search-select="configurations" name="configurations" id="configurations">
-                      <option selected value="">Все</option>
-                      <option value="10">10 <span>2</span></option>
-                      <option value="15">15 <span>2</span></option>
-                      <option value="50">50 <span>2</span></option>
-                      <option value="75">75 <span>2</span></option>
-                      <option value="130">130</option>
-                      <option value="170">170</option>
-                    </select>
-                  </div>
+                <div
+                  class="search-select__option"
+                  data-search-select-option-value="10"
+                  data-search-select-option="mark"
+                >
+                  test
                 </div>
               </div>
             </div>
-            <div class="row parameter-buttons">
-              <div class="col-lg-3 col-md-3 col-12">
-                <button data-tires-submit disabled class="button-parameter">Подобрать</button>
+            <div class="search-select">
+              <div data-search-select-input-container="model" class="search-select__input-container">
+                <input class="d-none" data-models-select data-select-default="Модель" data-search-select-input="model" name="model"  type="text" />
+                <div inert data-search-select-value="model" contenteditable="true" class="search-select__input form-control">Все</div>
+                <div class="search-select__icon">
+                  <svg
+                    width="12"
+                    height="7"
+                    viewBox="0 0 12 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
               </div>
-              <div class="col-lg-3 col-md-3 col-12">
-                <button type="button" data-search-select-reset="mark model generation modification" class="d-none d-flex button-reset">Сбросить</button>
+              <div class="search-select__content d-none" data-search-select-content="model">
+                <div
+                  class="search-select__option"
+                  data-search-select-option-selected="model"
+                  data-search-select-option-value=""
+                  data-search-select-option-default="model" 
+                  data-search-select-option="model"
+                >
+                  Модель
+                </div>
+                <div
+                  class="search-select__option"
+                  data-search-select-option-value="10"
+                  data-search-select-option="model"
+                >
+                  test
+                </div>
               </div>
             </div>
+            <div class="search-select">
+              <div data-search-select-input-container="modification" class="search-select__input-container">
+                <input class="d-none" data-modifications-select data-select-default="Модификация" data-search-select-input="modification" name="modification"  type="text" />
+                <div inert data-search-select-value="modification" contenteditable="true" class="search-select__input form-control">Все</div>
+                <div class="search-select__icon">
+                  <svg
+                    width="12"
+                    height="7"
+                    viewBox="0 0 12 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="search-select__content d-none" data-search-select-content="modification">
+                <div
+                  class="search-select__option"
+                  data-search-select-option-selected="modification"
+                  data-search-select-option-value=""
+                  data-search-select-option-default="modification" 
+                  data-search-select-option="modification"
+                >
+                Модификация
+                </div>
+                <div
+                  class="search-select__option"
+                  data-search-select-option-value="10"
+                  data-search-select-option="modification"
+                >
+                  test
+                </div>
+              </div>
+            </div>
+            <div class="search-select">
+              <div data-search-select-input-container="configurations" class="search-select__input-container">
+                <input class="d-none" data-configurations-select data-select-default="Комплектация" data-search-select-input="configurations" name="configurations"  type="text" />
+                <div inert data-search-select-value="configurations" contenteditable="true" class="search-select__input form-control">Все</div>
+                <div class="search-select__icon">
+                  <svg
+                    width="12"
+                    height="7"
+                    viewBox="0 0 12 7"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="search-select__content d-none" data-search-select-content="configurations">
+                <div
+                  class="search-select__option"
+                  data-search-select-option-selected="configurations"
+                  data-search-select-option-value=""
+                  data-search-select-option-default="configurations" 
+                  data-search-select-option="configurations"
+                >
+                Комплектация
+                </div>
+                <div
+                  class="search-select__option"
+                  data-search-select-option-value="10"
+                  data-search-select-option="configurations"
+                >
+                  test
+                </div>
+              </div>
+            </div>
+            <button disabled type="submit" class="button-parameter">Подобрать</button>
           </form>
         </div>
       </div>

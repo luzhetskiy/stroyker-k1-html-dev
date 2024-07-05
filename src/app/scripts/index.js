@@ -33,12 +33,6 @@ window.breakpoints = {
 };
 
 $(() => {
-
-  $("[data-cars-select]").on('change', () => {
-    console.log(89879789789);
-  })
-
-
   initSearchSelects();
   initTiresCarsSelection();
 });

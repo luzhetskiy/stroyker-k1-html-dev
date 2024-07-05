@@ -8,6 +8,7 @@ export const setValue = (optionElement) => {
   options.removeAttr("data-search-select-option-selected");
   options.removeClass("d-none");
   input.val(value);
+  input.trigger('change')
   select.val(value);
   select.trigger('change')
   optionElement.attr("data-search-select-option-selected", id);

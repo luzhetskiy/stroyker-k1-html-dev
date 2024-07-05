@@ -1,104 +1,118 @@
-import {getApiQuery} from '@src/shared/libs/api/api'
+import { getApiQuery } from "@src/shared/libs/api/api";
 
-const renderNextOptions = (selectAttribute, apiPath, value) => {
+export const renderNextOptions = (selectAttribute, apiPath, value) => {
   const select = $(`[${selectAttribute}]`);
-  const selectId = select.attr('data-search-select')
-  const input = $(`[data-search-select-value="${selectId}"]`)
-  const optionsContainer = $(`[data-search-select-content="${selectId}"]`)
-  const defaultValue = select.attr('data-models-select-default')
+  const selectId = select.attr("data-search-select-input");
+  const input = $(`[data-search-select-value="${selectId}"]`);
+  const optionsContainer = $(`[data-search-select-content="${selectId}"]`);
+  const defaultValue = select.attr("data-select-default");
 
   getApiQuery(apiPath + value)
-  .then((response) => {
-    const responseItems = JSON.parse(response);
-    input.text(defaultValue)
+  .then((response) => response.json())
+  .then((responseItems) => {
+    input.text(defaultValue);
     optionsContainer.html(`
       <div class="search-select__option" data-search-select-option-selected="${selectId}" data-search-select-option-value="" data-search-select-option-default="${selectId}" data-search-select-option="${selectId}">
         ${defaultValue}
       </div>
-      ${responseItems.map((item) => `
+      ${responseItems
+      .map(
+        (item) => `
         <div class="search-select__option" data-search-select-option-value="${item.id}" data-search-select-option="${selectId}">
-          ${item.name}
+          ${item.name ? item.name : `${item.begin} - ${item.end}`}
         </div>
-      `).join("")}
+      `
+      )
+      .join("")}
     `);
-    input.removeAttr('inert')
+    input.removeAttr("inert");
   })
-  .catch((error) => console.log(error));
-}
+  .catch((error) => {
+    input.removeAttr("inert");
+    console.log(error);
+  });
+};
 
 const disableSelect = (selectAttribute) => {
   const select = $(`[${selectAttribute}]`);
-  const selectId = select.attr('data-search-select')
-  const input = $(`[data-search-select-value="${selectId}"]`)
-  const defaultValue = select.attr('data-select-default')
-  const content = $(`[data-search-select-content="${selectId}"]`)
-  input.text(defaultValue)
-  input.attr('inert', '')
-  select.val('')
+  const selectId = select.attr("data-search-select-input");
+  const input = $(`[data-search-select-value="${selectId}"]`);
+  const defaultValue = select.attr("data-select-default");
+  const content = $(`[data-search-select-content="${selectId}"]`);
+  input.text(defaultValue);
+  input.attr("inert", "");
+  select.val("");
   content.html(`
     <div class="search-select__option" data-search-select-option-selected="${selectId}" data-search-select-option-value="" data-search-select-option-default="${selectId}" data-search-select-option="${selectId}">
       ${defaultValue}
     </div>
-  `)
-}
+  `);
+};
 
 export const carsSelectionChangeHandler = (event) => {
   const target = $(event.currentTarget);
-  const value = target.val()
+  const value = target.val();
+
+  console.log(value);
 
   if (!value) {
-    disableSelect('data-models-select')
-    disableSelect('data-modifications-select')
-    disableSelect('data-configurations-select')
+    disableSelect("data-models-select");
+    disableSelect("data-modifications-select");
+    disableSelect("data-configurations-select");
     return;
   }
 
-  renderNextOptions('data-models-select', `/cars/models/?brand_id=`, value)
+  renderNextOptions("data-models-select", `/cars/models/?brand_id=`, value);
 };
 
 export const modelsSelectionChangeHandler = (event) => {
   const target = $(event.currentTarget);
-  const value = target.val()
+  const value = target.val();
+
+  console.log(value);
 
   if (!value) {
-    disableSelect('data-modifications-select')
-    disableSelect('data-configurations-select')
+    disableSelect("data-modifications-select");
+    disableSelect("data-configurations-select");
     return;
   }
 
-  renderNextOptions('data-modifications-select', `/cars/modifications/?model_id=`, value)
+  console.log(1234);
+
+  renderNextOptions("data-modifications-select", `/cars/modifications/?model_id=`, value);
 };
 
 export const modificationsSelectionChangeHandler = (event) => {
   const target = $(event.currentTarget);
-  const value = target.val()
+  const value = target.val();
+
+  console.log(value);
 
   if (!value) {
-    disableSelect('data-configurations-select')
+    disableSelect("data-configurations-select");
     return;
   }
 
-  renderNextOptions('data-configurations-select', `/cars/configurations/?modification_id=`, value)
+  renderNextOptions("data-configurations-select", `/cars/configurations/?modification_id=`, value);
 };
 
 export const configurationsSelectionChangeHandler = (event) => {
-  const target = $(event.currentTarget)
-  const value = target.val()
+  const target = $(event.currentTarget);
+  const value = target.val();
+
+  console.log(value);
 
   if (!value) {
-    $('[data-tires-submit]').attr('disabled', '')
-    return
+    $("[data-tires-submit]").attr("disabled", "");
+    return;
   }
-  $('[data-tires-submit]').removeAttr('disabled')
-}
-
+  $("[data-tires-submit]").removeAttr("disabled");
+};
 
 export const submitHandler = (event) => {
-  event.preventDefault()
+  event.preventDefault();
   const target = $(event.currentTarget);
   const values = target.serializeArray();
-  const configuration = values.find(value => 
-    value.name === 'configurations'
-  )
+  const configuration = values.find((value) => value.name === "configurations");
   window.location.href = `${window.location.origin}/tires/search/?configuration_id=${configuration.value}`;
 };
