@@ -1690,6 +1690,18 @@ p:last-child {
   background-color: var(--callme-button-fill-hover-color, #fff);
 }
 
+.callme-button {
+  min-width: max-content;
+}
+
+.city-selection {
+  margin-right: 20px;
+}
+
+.top-header__phones {
+  min-width: max-content;
+}
+
 @media (max-width: 767px) {
   .btn-border {
     width: 100%;

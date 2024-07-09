@@ -467,6 +467,7 @@ body {
   display: block;
   text-decoration: none;
   transition: color 0.15s ease-out;
+  text-wrap: nowrap;
 }
 .header-phones__phone[data-touch],
 .header-phones__phone[data-hover] {

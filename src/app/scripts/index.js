@@ -19,6 +19,7 @@ import "../../components/cart/index";
 import { initSearchSelects } from "../../shared/libs/searchSelect/searchSelect";
 import "../../shared/libs/checkBoxToggle/checkBoxToggle";
 import { initTiresCarsSelection } from "../../shared/libs/tiresCarsSelection/tiresCarsSelection";
+import {initSearchInput} from '../../shared/libs/searchInput/searchInput'
 
 window.wNumb = wNumb;
 window.noUiSlider = noUiSlider;
@@ -35,6 +36,7 @@ window.breakpoints = {
 $(() => {
   initSearchSelects();
   initTiresCarsSelection();
+  initSearchInput();
 });
 
 $(".acc__toggle:not(.not_toggle)").click(function (e) {

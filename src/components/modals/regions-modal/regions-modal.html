@@ -1,0 +1,216 @@
+<div class="city-selection-modal-wrapper d-none">
+  <div id="city-selection" class="city-selection-modal bg-white pt-50 pb-50 pe-15 ps-50">
+    <div class="d-flex flex-column gap-20 h-100">
+      <p class="title size-22 weight-500">Выберите свой город</p>
+      <div class="d-flex align-items-center form-group">
+        <input data-search-input type="text" class="city-selection-modal__search-input form-control" name="city" autocomplete="off" placeholder="Введите название города">
+        <svg class="city-selection-modal__search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.0179 9.96808L10.8005 10.2445L11.0494 10.4929L15.44 14.876L14.876 15.44L10.4929 11.0494L10.2445 10.8005L9.96808 11.0179C8.93225 11.8324 7.65206 12.2739 6.33434 12.2712H6.3335C5.15914 12.2712 4.01116 11.9229 3.03472 11.2705C2.05827 10.618 1.29723 9.69071 0.847823 8.60574C0.398416 7.52078 0.280831 6.32691 0.509937 5.17512C0.739042 4.02333 1.30455 2.96534 2.13495 2.13495C2.96534 1.30455 4.02333 0.739042 5.17512 0.509937C6.32691 0.280831 7.52078 0.398416 8.60574 0.847823C9.69071 1.29723 10.618 2.05827 11.2705 3.03472C11.9229 4.01116 12.2712 5.15914 12.2712 6.3335L12.2712 6.33434C12.2739 7.65206 11.8324 8.93225 11.0179 9.96808ZM3.47455 10.6122C4.3208 11.1777 5.31572 11.4795 6.3335 11.4795C7.6983 11.4795 9.00719 10.9373 9.97225 9.97225C10.9373 9.00719 11.4795 7.6983 11.4795 6.3335C11.4795 5.31572 11.1777 4.3208 10.6122 3.47456C10.0468 2.6283 9.24308 1.96873 8.30278 1.57925C7.36247 1.18976 6.32779 1.08785 5.32957 1.28641C4.33135 1.48497 3.41443 1.97508 2.69475 2.69475C1.97508 3.41443 1.48497 4.33135 1.28641 5.32957C1.08785 6.32779 1.18976 7.36247 1.57925 8.30278C1.96873 9.24308 2.6283 10.0468 3.47455 10.6122Z" stroke="#767676" stroke-width="0.791687"/>
+        </svg>          
+      </div>
+      <div data-search-list class="city-selection-modal__city-list row">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="d-flex flex-column gap-10">
+            <div class="d-flex flex-column gap-10 mb-20">
+              <a data-search-item class="weight-600 transition color-black hover-color-accent-400" href="#">Москва</a>
+              <a data-search-item class="weight-600 transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+              <a data-search-item class="weight-600 transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+              <a data-search-item class="weight-600 transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+              <a data-search-item class="weight-600 transition color-black hover-color-accent-400" href="#">Краснодар</a>
+              <a data-search-item class="weight-600 transition color-black hover-color-accent-400" href="#">Пермь</a>
+              <a data-search-item class="weight-600 transition color-black hover-color-accent-400" href="#">Воронеж</a>
+              <a data-search-item class="weight-600 transition color-black hover-color-accent-400" href="#">Казань</a>
+              <a data-search-item class="weight-600 transition color-black hover-color-accent-400" href="#">Самара</a>
+            </div>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Воронеж</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Казань</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Самара</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="d-flex flex-column gap-10">
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Воронеж</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Казань</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Самара</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Воронеж</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Казань</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Самара</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="d-flex flex-column gap-10">
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Воронеж</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Казань</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Самара</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Воронеж</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Казань</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Самара</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="d-flex flex-column gap-10">
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Воронеж</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Казань</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Самара</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Воронеж</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Казань</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Самара</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="d-flex flex-column gap-10">
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Воронеж</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Казань</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Самара</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Воронеж</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Казань</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Самара</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="d-flex flex-column gap-10">
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Воронеж</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Казань</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Самара</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Воронеж</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Казань</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Самара</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Москва</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Санкт-Петербург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Нижний Новгород</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Екатеринбург</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Краснодар</a>
+            <a data-search-item class="transition color-black hover-color-accent-400" href="#">Пермь</a>
+          </div>
+        </div>
+      </div>
+      <div data-search-result-list class="city-selection-modal__city-list d-none d-flex flex-column gap-10"></div>
+    </div>
+  </div>
+</div>
