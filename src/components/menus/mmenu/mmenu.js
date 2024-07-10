@@ -1,4 +1,6 @@
-$(document).ready(() => {
+import { initMmenuRegions } from "./mmenu-region";
+
+export const initMmenu = () => {
   const srcMenu = $("#menu");
   const srcNavbar = $("#menu-navbar");
   if (!srcMenu || !srcNavbar) return;
@@ -22,6 +24,9 @@ $(document).ready(() => {
       "initMenu:before": () => {
         srcNavbar.remove();
       },
+      "initMenu:after": () => {
+        initMmenuRegions();
+      },
     },
   });
 
@@ -39,4 +44,4 @@ $(document).ready(() => {
   $("#my-button").on("click", () => {
     menuApi.open();
   });
-});
+}

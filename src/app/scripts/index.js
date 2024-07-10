@@ -19,7 +19,8 @@ import "../../components/cart/index";
 import { initSearchSelects } from "../../shared/libs/searchSelect/searchSelect";
 import "../../shared/libs/checkBoxToggle/checkBoxToggle";
 import { initTiresCarsSelection } from "../../shared/libs/tiresCarsSelection/tiresCarsSelection";
-import {initSearchInput} from '../../shared/libs/searchInput/searchInput'
+import { initSearchInput } from "../../shared/libs/searchInput/searchInput";
+import { initMmenu } from "../../components/menus/mmenu/mmenu";
 
 window.wNumb = wNumb;
 window.noUiSlider = noUiSlider;
@@ -37,6 +38,7 @@ $(() => {
   initSearchSelects();
   initTiresCarsSelection();
   initSearchInput();
+  initMmenu();
 });
 
 $(".acc__toggle:not(.not_toggle)").click(function (e) {
