@@ -3,7 +3,7 @@ import { initMmenuRegions } from "./mmenu-region";
 export const initMmenu = () => {
   const srcMenu = $("#menu");
   const srcNavbar = $("#menu-navbar");
-  if (!srcMenu || !srcNavbar) return;
+  if (!srcMenu.length || !srcNavbar.length) return;
 
   const menu = new Mmenu("#menu", {
     offCanvas: {

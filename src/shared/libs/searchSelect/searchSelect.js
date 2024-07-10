@@ -7,7 +7,7 @@ import {
 } from "./searchSelect.handlers";
 
 export const initSearchSelects = () => {
-  if ($("[data-search-select-input], [data-search-select]").length === 0) return;
+  if (!$("[data-search-select-input], [data-search-select]").length) return;
 
   if ($("[data-search-select-input-container]").length !== 0) {
     $("[data-search-select-value]").off("input", selectInputHandler);
