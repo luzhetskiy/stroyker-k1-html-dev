@@ -8,6 +8,7 @@ import {
 } from "./tiresCarsSelection.handlers";
 
 export const initTiresCarsSelection = () => {
+  if (!$('[data-cars-select]').length) return
 
   renderNextOptions('data-cars-select', '/cars/brands/', '')
 
@@ -15,9 +16,9 @@ export const initTiresCarsSelection = () => {
 
   $("[data-models-select]").on("change", modelsSelectionChangeHandler);
 
-  $("[data-modifications-select]").on("change", modificationsSelectionChangeHandler);
-
   $("[data-configurations-select]").on("change", configurationsSelectionChangeHandler);
+
+  $("[data-modifications-select]").on("change", modificationsSelectionChangeHandler);
 
   $("[data-tires-form]").on("submit", submitHandler);
 };

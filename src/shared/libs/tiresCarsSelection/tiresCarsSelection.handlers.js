@@ -53,54 +53,47 @@ export const carsSelectionChangeHandler = (event) => {
   const target = $(event.currentTarget);
   const value = target.val();
 
-  console.log(value);
-
   if (!value) {
     disableSelect("data-models-select");
-    disableSelect("data-modifications-select");
     disableSelect("data-configurations-select");
+    disableSelect("data-modifications-select");
     return;
   }
 
   renderNextOptions("data-models-select", `/cars/models/?brand_id=`, value);
+  disableSelect("data-configurations-select");
+  disableSelect("data-modifications-select");
 };
 
 export const modelsSelectionChangeHandler = (event) => {
   const target = $(event.currentTarget);
   const value = target.val();
 
-  console.log(value);
-
   if (!value) {
+    disableSelect("data-configurations-select");
     disableSelect("data-modifications-select");
-    disableSelect("data-configurations-select");
     return;
   }
 
-  console.log(1234);
-
-  renderNextOptions("data-modifications-select", `/cars/modifications/?model_id=`, value);
-};
-
-export const modificationsSelectionChangeHandler = (event) => {
-  const target = $(event.currentTarget);
-  const value = target.val();
-
-  console.log(value);
-
-  if (!value) {
-    disableSelect("data-configurations-select");
-    return;
-  }
-
-  renderNextOptions("data-configurations-select", `/cars/configurations/?modification_id=`, value);
+  renderNextOptions("data-configurations-select", `/cars/configurations/?model_id=`, value);
+  disableSelect("data-modifications-select");
 };
 
 export const configurationsSelectionChangeHandler = (event) => {
   const target = $(event.currentTarget);
   const value = target.val();
 
-  console.log(value);
+  if (!value) {
+    disableSelect("data-modifications-select");
+    return;
+  }
+
+  renderNextOptions("data-modifications-select", `/cars/modifications/?configuration_id=`, value);
+};
+
+export const modificationsSelectionChangeHandler = (event) => {
+  const target = $(event.currentTarget);
+  const value = target.val();
 
   if (!value) {
     $("[data-tires-submit]").attr("disabled", "");
