@@ -2,8 +2,8 @@ export const initMmenuRegions = () => {
   if (!$("[data-mmenu-regions]").length) return;
 
   $(document).on("click", (event) => {
-    const target = event.target
-    if (target.closest('[data-mmenu-regions-ignore]')) return
+    const target = event.target;
+    if (target.closest("[data-mmenu-regions-ignore]")) return;
     if (target.closest("[data-mmenu-regions-link]")) {
       $("[data-mmenu-search]").addClass("d-none");
       $("[data-mmenu-regions-search]").removeClass("d-none");
@@ -23,6 +23,14 @@ export const initMmenuRegions = () => {
 
   $("[data-mmenu-regions-search-input]").on("input", (event) => {
     const value = $(event.currentTarget).val().toLocaleLowerCase().trim();
+
+    if (value.length === 0) {
+      $('[data-clear-input-button="mmenu-regions-search"]').addClass("opacity-0");
+      return;
+    }
+
+    $('[data-clear-input-button="mmenu-regions-search"]').removeClass("opacity-0");
+
     for (const item of Array.from($("[data-mmenu-regions-item]"))) {
       const itemObj = $(item);
       const text = itemObj.text().toLocaleLowerCase().trim();

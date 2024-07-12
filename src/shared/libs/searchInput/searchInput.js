@@ -9,13 +9,19 @@ export const initSearchInput = () => {
     if (value.length === 0) {
       $("[data-search-result-list]").addClass("d-none");
       $("[data-search-list]").removeClass("d-none");
+      $('[data-clear-input-button="regions-search"]').addClass('opacity-0')
       $("[data-search-result-list]").html("");
+      $('[data-search-icon]').removeClass('opacity-0')
+      target.addClass('ps-40')
       return;
     }
 
     $("[data-search-result-list]").html("");
     $("[data-search-list]").addClass("d-none");
     $("[data-search-result-list]").removeClass("d-none");
+    $('[data-clear-input-button="regions-search"]').removeClass('opacity-0')
+    $('[data-search-icon]').addClass('opacity-0')
+    target.removeClass('ps-40')
 
     for (let index = 0; index < items.length; index++) {
       if (index >= 25) break;
@@ -29,3 +35,4 @@ export const initSearchInput = () => {
     }
   });
 };
+
