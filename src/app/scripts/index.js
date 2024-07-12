@@ -21,6 +21,7 @@ import "../../shared/libs/checkBoxToggle/checkBoxToggle";
 import { initTiresCarsSelection } from "../../shared/libs/tiresCarsSelection/tiresCarsSelection";
 import { initSearchInput } from "../../shared/libs/searchInput/searchInput";
 import { initMmenu } from "../../components/menus/mmenu/mmenu";
+import { initClearInput, initRadioToggle } from "../../shared";
 
 window.wNumb = wNumb;
 window.noUiSlider = noUiSlider;
@@ -39,6 +40,8 @@ $(() => {
   initTiresCarsSelection();
   initSearchInput();
   initMmenu();
+  clearInputInit()
+  initRadioToggle()
 });
 
 $(".acc__toggle:not(.not_toggle)").click(function (e) {
