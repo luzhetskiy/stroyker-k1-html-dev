@@ -1,2 +1,37 @@
-export {initClearInput} from './libs/clearInput/clearInput'
-export {initRadioToggle} from './libs/radioToggle/radioToggle'
+import { initClearInput } from "./libs/clearInput/clearInput";
+import { initRadioToggle } from "./libs/radioToggle/radioToggle";
+import { initCollapse } from "./libs/collapse/collapse";
+import { initSelect } from "./libs/select/select";
+import { initInputToggle } from "./libs/inputToggle/inputToggle";
+import { initTrigger } from "./libs/trigger/trigger";
+import { initRelatedValue } from "./libs/relatedValue/relatedValue";
+import { initDataSelect } from "./libs/dataSelect/dataSelect";
+import { initCheckBoxToggle } from "./libs/checkBoxToggle/checkBoxToggle";
+import { initSearchSelects } from "./libs/searchSelect/searchSelect";
+import { initTiresCarsSelection } from "./libs/tiresCarsSelection/tiresCarsSelection";
+import { initSearchInput } from "./libs/searchInput/searchInput";
+import { initMmenu } from "./libs/mmenu/mmenu";
+import { initRequaredField } from "./libs/requaredField/requaredField";
+import { initSliderConstructor } from "./libs/sliderConstructor/sliderConstructor";
+import { initCustomInteraction } from "./libs/customInteraction/customInteraction";
+import { initCscrlb } from "./libs/cscrlb/cscrlb";
+
+export const initShared = () => {
+  initClearInput();
+  initRadioToggle();
+  initCollapse();
+  initSelect();
+  initInputToggle();
+  initTrigger();
+  initRelatedValue();
+  initDataSelect();
+  initCheckBoxToggle();
+  initSearchSelects();
+  initTiresCarsSelection();
+  initSearchInput();
+  initMmenu();
+  initRequaredField();
+  initSliderConstructor();
+  initCustomInteraction();
+  initCscrlb();
+};

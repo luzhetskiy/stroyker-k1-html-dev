@@ -1,4 +1,4 @@
-$(() => {
+export const initCollapse = () => {
   $('[data-collapse]').each((index, element) => {
     const collapse = $(element)
     const id = collapse.attr('data-collapse')
@@ -64,4 +64,4 @@ $(() => {
     target.addClass('d-none')
     collapseOpen.removeClass('d-none')
   })
-});
+}

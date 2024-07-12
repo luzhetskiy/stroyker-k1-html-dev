@@ -1,4 +1,4 @@
-$(() => {
+export const initInputToggle = () => {
   if ($('[data-input]').length === 0) return
 
   $('[data-input]').on('input', (event) => {
@@ -9,4 +9,4 @@ $(() => {
     $(`[data-input-content-container*="${id}"]`).removeClass('d-none')
     $(`[data-input-content*="${id}"]`).html(value)
   })
-})
+}

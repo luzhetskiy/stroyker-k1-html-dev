@@ -1,4 +1,4 @@
-import { initMmenuRegions } from "./mmenu-region";
+import { initMmenuRegions } from "./mmenuRegions";
 
 export const initMmenu = () => {
   const srcMenu = $("#menu");

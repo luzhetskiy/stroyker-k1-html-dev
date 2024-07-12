@@ -1,5 +1,7 @@
-$(() => {
+export const initSelect = () => {
   var customSelect = $("select.custom-select"); // FIRST, create the custom select menus from the existing select
+
+  if (!customSelect.length) return
 
   customSelect.each(function () {
     var that = $(this);
@@ -105,4 +107,4 @@ $(() => {
       thisdd.children("span").html(lihtml);
     }
   });
-})
+};
