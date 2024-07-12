@@ -4,12 +4,13 @@ import {
   modelsSelectionChangeHandler,
   modificationsSelectionChangeHandler,
   configurationsSelectionChangeHandler,
-  renderNextOptions
+  renderNextOptions,
 } from "./tiresCarsSelection.handlers";
 
 export const initTiresCarsSelection = () => {
+  if (!$("[data-cars-select]").length) return;
 
-  renderNextOptions('data-cars-select', '/cars/brands/', '')
+  renderNextOptions("data-cars-select", "/cars/brands/", "");
 
   $("[data-cars-select]").on("change", carsSelectionChangeHandler);
 
