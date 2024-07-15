@@ -1,0 +1,518 @@
+<div class="product-v1-new" itemscope="" itemtype="http://schema.org/Product">
+  <div class="product-card g-content g-content_frameless">
+    <div class="product-card__navigation">
+      <a href="" class="product-card__nav-prev">
+        <span class="icon">
+          <svg class="icon-svg">
+            <use xlink:href="#product-nav-arrow"></use>
+          </svg>
+        </span>
+        Предыдущий товар
+      </a>
+      <a href="" class="product-card__nav-next">
+        Следующий товар
+        <span class="icon">
+          <svg class="icon-svg">
+            <use xlink:href="#product-nav-arrow"></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <div class="product-card__head">
+      <h1 class="product-card__title" itemprop="name">Товар 1</h1>
+      <span class="product-card__artikul" itemprop="sku">001</span>
+    </div>
+    <div class="product-card__inner-content">
+      <div class="row">
+        <div class="col-md-5 col-xl-4">
+          <div class="product-card__slideshow-wrapper">
+            <%~ include("/components/products/templates/product-slideshow/product-slideshow.html") %>
+          </div>
+        </div>
+        <div class="col-md-7 col-xl-4">
+          <div class="product-card__main-column-content">
+            <div class="product-card__short-description">dsgdsgsdfgdsfgdsg</div>
+
+            <div class="product-card__price-block">
+              <div
+                class="product-card__personal-cost orig-price"
+                itemprop="offers"
+                itemtype="http://schema.org/Offer"
+                itemscope=""
+              >
+                <span> цена: </span>
+                <meta itemprop="price" content="12313123" />
+                <meta itemprop="priceCurrency" content="RUB" />
+
+                <link itemprop="availability" href="http://schema.org/InStock" />
+
+                <strong> 12&nbsp;313&nbsp;123,00 ₽/шт. </strong>
+              </div>
+
+              <div
+                class="product-card__modification-container"
+                data-ajax-url="/catalog/ajax-get-mod-for-product/2/test/"
+              >
+                <div class="product-card__modification-item">
+                  <p class="product-card__modification-title">toshiba</p>
+                  <div
+                    class="product-card__modification-params product-card__radio-options product-modification-params"
+                  >
+                    <a
+                      class="product-card__product-mod-param product-mod-param"
+                      data-param-id="6"
+                      data-param-value="199"
+                      href="javascript:void(0)"
+                      >199</a
+                    >
+
+                    <a
+                      class="product-card__product-mod-param product-card__product-mod-param_active product-mod-param active"
+                      data-param-id="6"
+                      data-param-value="65"
+                      href="javascript:void(0)"
+                      >65</a
+                    >
+                  </div>
+                </div>
+                <div class="product-card__modification-item">
+                  <p class="product-card__modification-title">toshiba</p>
+                  <div
+                    class="product-card__modification-params product-card__radio-options product-modification-params"
+                  >
+                    <a
+                      class="product-card__product-mod-param product-mod-param"
+                      data-param-id="6"
+                      data-param-value="199"
+                      href="javascript:void(0)"
+                      >199</a
+                    >
+
+                    <a
+                      class="product-card__product-mod-param product-card__product-mod-param_active product-mod-param active"
+                      data-param-id="6"
+                      data-param-value="65"
+                      href="javascript:void(0)"
+                      >65</a
+                    >
+                  </div>
+                </div>
+                <div class="product-card__modification-item">
+                  <p class="product-card__modification-title">eyertert</p>
+                  <select class="product-card__modification-select" name="" id="" autocomplete="off">
+                    <option
+                      class="product-card__modification-option"
+                      data-param-id="12"
+                      data-param-value="456546"
+                      class="product-mod-param"
+                      value=""
+                    >
+                      456546
+                    </option>
+                    <option
+                      class="product-card__modification-option"
+                      data-param-id="12"
+                      data-param-value="234234"
+                      class="product-mod-param active"
+                      value=""
+                      selected=""
+                    >
+                      234234
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="shopping-cart-product">
+                <div class="input-number input-number--lg">
+                  <div class="order-down"></div>
+                  <input
+                    type="number"
+                    min="0"
+                    max="inf"
+                    step="1"
+                    value="1"
+                    id="number"
+                    required=""
+                    data-product-counter="2"
+                  />
+                  <div class="order-up"></div>
+                </div>
+
+                <a
+                  href="/cart/add/2"
+                  class="shopping-cart-btn shopping-cart-btn--lg add-to-cart button-theme button-theme_cart custom-icon"
+                >
+                  <svg
+                    class="cart-icon"
+                    width="23"
+                    height="22"
+                    viewBox="0 0 23 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.97933 18.6555C6.69755 18.6555 6.42209 18.7391 6.1878 18.8956C5.9535 19.0522 5.77089 19.2747 5.66305 19.535C5.55522 19.7954 5.52701 20.0818 5.58198 20.3582C5.63695 20.6346 5.77265 20.8884 5.9719 21.0877C6.17115 21.2869 6.42501 21.4226 6.70138 21.4776C6.97775 21.5326 7.26422 21.5044 7.52456 21.3965C7.78489 21.2887 8.0074 21.1061 8.16396 20.8718C8.32051 20.6375 8.40407 20.362 8.40407 20.0802C8.40407 19.7024 8.25396 19.34 7.98677 19.0728C7.71958 18.8056 7.3572 18.6555 6.97933 18.6555ZM19.517 18.6555C19.2352 18.6555 18.9597 18.7391 18.7254 18.8956C18.4911 19.0522 18.3085 19.2747 18.2007 19.535C18.0929 19.7954 18.0646 20.0818 18.1196 20.3582C18.1746 20.6346 18.3103 20.8884 18.5095 21.0877C18.7088 21.2869 18.9626 21.4226 19.239 21.4776C19.5154 21.5326 19.8019 21.5044 20.0622 21.3965C20.3225 21.2887 20.545 21.1061 20.7016 20.8718C20.8581 20.6375 20.9417 20.362 20.9417 20.0802C20.9417 19.7024 20.7916 19.34 20.5244 19.0728C20.2572 18.8056 19.8948 18.6555 19.517 18.6555ZM20.6568 17.5157V15.2361H8.41546L8.05073 13.7544L22.9363 11.0873V2.69852H5.30385L4.69976 0.418945H0.140625V2.69852H2.95589L6.6374 17.5157H20.6568Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  В корзину
+                </a>
+              </div>
+            </div>
+
+            <div class="product-card__btns ya-share-block">
+              <a class="btn-radius share-btn">
+                <span class="icon-svg">
+                  <svg class="icon">
+                    <use xlink:href="#share-icon"></use>
+                  </svg> </span
+                >Поделиться</a
+              >
+              <div class="share-block__show">
+                <p>Чтобы поделиться ссылкой, нажмите на иконку вашей соцсети</p>
+                <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                <script src="https://yastatic.net/share2/share.js"></script>
+                <div
+                  class="ya-share2 ya-share2_inited"
+                  data-services="vkontakte,twitter,odnoklassniki,telegram,whatsapp,viber"
+                >
+                  <div
+                    class="ya-share2__container ya-share2__container_size_m ya-share2__container_color-scheme_normal ya-share2__container_shape_normal"
+                  >
+                    <ul class="ya-share2__list ya-share2__list_direction_horizontal">
+                      <li class="ya-share2__item ya-share2__item_service_vkontakte">
+                        <a
+                          class="ya-share2__link"
+                          href="https://vk.com/share.php?url=http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;title=test2&amp;utm_source=share2"
+                          rel="nofollow noopener"
+                          target="_blank"
+                          title="ВКонтакте"
+                          ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                          ><span class="ya-share2__title">ВКонтакте</span></a
+                        >
+                      </li>
+                      <li class="ya-share2__item ya-share2__item_service_twitter">
+                        <a
+                          class="ya-share2__link"
+                          href="https://twitter.com/intent/tweet?text=test2&amp;url=http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;utm_source=share2"
+                          rel="nofollow noopener"
+                          target="_blank"
+                          title="Twitter"
+                          ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                          ><span class="ya-share2__title">Twitter</span></a
+                        >
+                      </li>
+                      <li class="ya-share2__item ya-share2__item_service_odnoklassniki">
+                        <a
+                          class="ya-share2__link"
+                          href="https://connect.ok.ru/offer?url=http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;title=test2&amp;utm_source=share2"
+                          rel="nofollow noopener"
+                          target="_blank"
+                          title="Одноклассники"
+                          ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                          ><span class="ya-share2__title">Одноклассники</span></a
+                        >
+                      </li>
+                      <li class="ya-share2__item ya-share2__item_service_telegram">
+                        <a
+                          class="ya-share2__link"
+                          href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;text=test2&amp;utm_source=share2"
+                          rel="nofollow noopener"
+                          target="_blank"
+                          title="Telegram"
+                          ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                          ><span class="ya-share2__title">Telegram</span></a
+                        >
+                      </li>
+                      <li class="ya-share2__item ya-share2__item_service_whatsapp">
+                        <a
+                          class="ya-share2__link"
+                          href="https://api.whatsapp.com/send?text=test2%20http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;utm_source=share2"
+                          rel="nofollow noopener"
+                          target="_blank"
+                          title="WhatsApp"
+                          ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                          ><span class="ya-share2__title">WhatsApp</span></a
+                        >
+                      </li>
+                      <li class="ya-share2__item ya-share2__item_service_viber">
+                        <a
+                          class="ya-share2__link"
+                          href="viber://forward?text=test2%20http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;utm_source=share2"
+                          rel="nofollow"
+                          target="_blank"
+                          title="Viber"
+                          ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                          ><span class="ya-share2__title">Viber</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="product-card__rating"
+              itemprop="aggregateRating"
+              itemscope=""
+              itemtype="http://schema.org/AggregateRating"
+            >
+              <span class="product-card__rating">
+                <meta itemprop="bestRating" content="5" />
+                <meta itemprop="worstRating" content="1" />
+                <meta itemprop="ratingValue" content="4,0" />
+
+                <span class="star star--full"></span>
+
+                <span class="star star--full"></span>
+
+                <span class="star star--full"></span>
+
+                <span class="star star--full"></span>
+
+                <span class="star star--empty"></span>
+              </span>
+
+              <meta itemprop="ratingCount" content="1" />
+
+              <span class="product-card__review-link">
+                <a rel="tab3">Отзывы (1)</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-xl-4">
+          <div class="product-card__secondary-column-content">
+            <div class="product-card__accessibility">
+              <p class="product-card__accessibility-title">Наличие:</p>
+
+              <div class="product-card__accessibility-status product-card__status--many common-status">oloooloo</div>
+            </div>
+
+            <div class="product__static-text-wrapper">
+              <div class="product-static-text">
+                <p class="g-title g-title_small mb-10">Оплата:</p>
+
+                ertertertertertertertertertretertert
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="product-card-secondary-content">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="tabs-content">
+          <ul class="tabs">
+            <li class="active" rel="tab1">Описание</li>
+
+            <li rel="tab2">Характеристики</li>
+
+            <li rel="tab3" class="review-tab-link">Отзывы</li>
+
+            <li rel="tab5" class="tab_last">Документы</li>
+          </ul>
+          <div class="tabsgroup">
+            <span class="d_active tab_drawer_heading" rel="tab1">
+              <span class="icon"
+                ><svg class="icon-svg">
+                  <use xlink:href="#tab-arrow"></use></svg
+              ></span>
+              Описание
+            </span>
+            <div id="tab1" class="tab-content" style="display: block">
+              <div class="text-page" itemprop="description">
+                <p>sdifoidsfjsdifjosidfjiosdfiosdjfoisdfoijsdjfsdfsdjoif</p>
+              </div>
+            </div>
+
+            <!-- #tab1 -->
+            <span class="tab_drawer_heading" rel="tab2">
+              <span class="icon"
+                ><svg class="icon-svg">
+                  <use xlink:href="#tab-arrow"></use></svg
+              ></span>
+              Характеристики
+            </span>
+            <div id="tab2" class="tab-content" style="display: none">
+              <ul class="char">
+                <li>
+                  <span class="char-text"><span class="char-text__mask">Объем, м3</span></span
+                  ><span class="char-text">9,0</span>
+                </li>
+
+                <li>
+                  <span class="char-text"><span class="char-text__mask">Длина, мм</span></span
+                  ><span class="char-text">9,0</span>
+                </li>
+
+                <li>
+                  <span class="char-text"><span class="char-text__mask">Ширина, мм</span></span
+                  ><span class="char-text">9,0</span>
+                </li>
+
+                <li>
+                  <span class="char-text"><span class="char-text__mask">Высота, мм</span></span
+                  ><span class="char-text">9,0</span>
+                </li>
+
+                <li>
+                  <span class="char-text"><span class="char-text__mask">testbox</span></span
+                  ><span class="char-text"> 1 </span>
+                </li>
+
+                <li>
+                  <span class="char-text"><span class="char-text__mask">toshiba</span></span
+                  ><span class="char-text"> 345543,0 </span>
+                </li>
+              </ul>
+            </div>
+            <!-- #tab2 -->
+            <span class="tab_drawer_heading" rel="tab3">
+              <span class="icon"
+                ><svg class="icon-svg">
+                  <use xlink:href="#tab-arrow"></use></svg
+              ></span>
+              Отзывы
+            </span>
+            <div id="tab3" class="tab-content" style="display: none">
+              <div class="rate-product">
+                <div class="rate-product__title">Пожалуйста, оцените:</div>
+                <div class="rate-product__content">
+                  <div class="rating-stars text-center">
+                    <ul id="stars">
+                      <li class="star" title="Poor" data-value="1">
+                        <i class="fa fa-star fa-fw"></i>
+                      </li>
+                      <li class="star" title="Fair" data-value="2">
+                        <i class="fa fa-star fa-fw"></i>
+                      </li>
+                      <li class="star" title="Good" data-value="3">
+                        <i class="fa fa-star fa-fw"></i>
+                      </li>
+                      <li class="star" title="Excellent" data-value="4">
+                        <i class="fa fa-star fa-fw"></i>
+                      </li>
+                      <li class="star" title="WOW!!!" data-value="5">
+                        <i class="fa fa-star fa-fw"></i>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <form action="/reviews/add/2/" method="post" id="review_form">
+                <div class="review-textarea">
+                  <div class="form-group">
+                    <textarea class="form-control" name="review_text" autocomplete="off" required=""></textarea>
+                    <label for="text" class="label-name">
+                      <span class="content-name"> Ваш отзыв* </span>
+                    </label>
+                  </div>
+                  <input type="hidden" name="rating_value" value="0" id="id_rating_value" />
+
+                  <button class="btn btn--main-min btn--fixed-small">Отправить</button>
+                </div>
+              </form>
+
+              <h2>Отзывы на товар</h2>
+
+              <div class="reviews">
+                <div class="reviews product-review">
+                  <div class="review-item" itemprop="review" itemscope="" itemtype="https://schema.org/Review">
+                    <div class="review-item__head">
+                      <div class="review-item__head-info">
+                        <span itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+                          <span itemprop="name" class="review-item__name"> info@nastroyker.ru </span>
+                        </span>
+                        <span class="review-item__date" itemprop="datePublished">20 февраля 2024 г. 12:37</span>
+                        <span itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                          <span class="product-card__rating">
+                            <meta itemprop="bestRating" content="5" />
+                            <meta itemprop="worstRating" content="1" />
+                            <meta itemprop="ratingValue" content="4" />
+
+                            <span class="star star--full"></span>
+
+                            <span class="star star--full"></span>
+
+                            <span class="star star--full"></span>
+
+                            <span class="star star--full"></span>
+
+                            <span class="star star--empty"></span>
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                    <div itemprop="reviewBody">
+                      <p>dfgdfgdfgdfgdfgdgdfgd</p>
+                    </div>
+                    <div class="review-item__footer">
+                      <div class="review-item__links">
+                        <span>Отзыв полезен?</span>
+                        <span class="review_advantage"> 0 </span>
+                        <a href="#" class="review__footer__yes" data-url="/reviews/usefully/1/">Да</a>
+                        /
+                        <a href="#" class="review__footer__no" data-url="/reviews/useless/1/">Нет</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- #tab3 -->
+
+            <span class="tab_drawer_heading" rel="tab5">
+              <span class="icon"
+                ><svg class="icon-svg">
+                  <use xlink:href="#tab-arrow"></use></svg
+              ></span>
+              Документы
+            </span>
+            <div id="tab5" class="tab-content" style="display: none">
+              <h2>Документы и сертификаты</h2>
+
+              <div class="documents">
+                <div class="document-item">
+                  <span class="document-item__text">rwrwr</span>
+                  <span class="document-item__format">jpg</span>
+                  <span class="document-item__size">77.9 Кб</span>
+                  <span class="document-item__btn"
+                    ><a href="/media/product/certificates/photo_2024-02-07_11-16-48_2.jpg" class="btn" download=""
+                      >Скачать</a
+                    ></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="product-banners">
+          <div class="product-banners__item">
+            <a class="product-banners__link" href="#"
+              ><img
+                class="product-banners__image"
+                src="@images/add.jpg"
+                alt=""
+            /></a>
+          </div>
+          <div class="product-banners__item">
+            <a class="product-banners__link" href="#"
+              ><img
+                class="product-banners__image"
+                src="@images/add.jpg"
+                alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
