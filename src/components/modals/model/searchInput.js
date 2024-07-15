@@ -9,7 +9,7 @@ export const initSearchInput = () => {
     if (value.length === 0) {
       $("[data-search-result-list]").addClass("d-none");
       $("[data-search-list]").removeClass("d-none");
-      $('[data-clear-input-button="regions-search"]').addClass('opacity-0')
+      $('[data-clear-input-button="city-search"]').addClass('opacity-0')
       $("[data-search-result-list]").html("");
       $('[data-search-icon]').removeClass('opacity-0')
       target.addClass('ps-40')
@@ -19,7 +19,7 @@ export const initSearchInput = () => {
     $("[data-search-result-list]").html("");
     $("[data-search-list]").addClass("d-none");
     $("[data-search-result-list]").removeClass("d-none");
-    $('[data-clear-input-button="regions-search"]').removeClass('opacity-0')
+    $('[data-clear-input-button="city-search"]').removeClass('opacity-0')
     $('[data-search-icon]').addClass('opacity-0')
     target.removeClass('ps-40')
 

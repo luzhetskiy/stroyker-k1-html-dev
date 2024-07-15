@@ -1,4 +1,4 @@
-import { initMmenuRegions } from "./mmenuRegions";
+import { initMmenuCities } from "./mmenuCities";
 
 export const initMmenu = () => {
   const srcMenu = $("#menu");
@@ -25,7 +25,7 @@ export const initMmenu = () => {
         srcNavbar.remove();
       },
       "initMenu:after": () => {
-        initMmenuRegions();
+        initMmenuCities();
       },
     },
   });
