@@ -143,10 +143,11 @@
     display: inline-flex
     padding: 5px 0
     padding-right: 15px
-    gap: 15px
     align-items: center
     padding-left: 0 !important
     white-space: normal !important
+    span
+      color: var(--accent-color-400)
   &__link-language::after
     content: ''
     position: absolute
@@ -271,3 +272,6 @@
     border-radius: 0
     border-top-right-radius: 2px
     border-bottom-right-radius: 2px
+
+[data-mmenu-cities-item] .mm-listitem__text:first-letter
+  text-transform: uppercase

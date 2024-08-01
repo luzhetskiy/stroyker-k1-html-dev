@@ -3,15 +3,13 @@
     <div class="d-flex flex-column gap-20 h-100">
       <p class="title size-22 weight-500">Выберите свой город</p>
       <div class="d-flex align-items-center form-group city-selection-modal__search">
-        <input
-          data-search-input
-          data-clear-input="city-search"
-          type="text"
-          class="city-selection-modal__search-input form-control ps-40"
-          name="city"
-          autocomplete="off"
-          placeholder="Введите название города"
-        />
+        <div class="form-group mb-0">
+          <input data-search-input
+          data-clear-input="city-search" type="text" autocomplete="off" name="city" maxlength="60" class="city-selection-modal__search-input form-control ps-40 form-control" required="" id="id_name">
+          <label for="id_name" class="label-name">
+            <span class="content-name">Введите название города</span>
+          </label>
+        </div>
         <svg
           data-search-icon
           class="city-selection-modal__search-icon"
