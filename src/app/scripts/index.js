@@ -363,6 +363,7 @@ function homeBanner() {
       autoplay: true,
       autoplayTimeout: (+$slider.data("autoplay-timeout") || 5) * 1000,
       navText: [arrowPrev, arrowNext],
+      autoplayHoverPause: true,
     });
   }
 }
@@ -613,8 +614,6 @@ jQuery(document).ready(function () {
   });
 }); //slideshow
 
-
-
 $(document).ready(() => {
   let touchstartX = 0;
   let touchendX = 0;
@@ -669,7 +668,6 @@ $(document).ready(() => {
   );
   $(".product-card-slideshow .product-card-slideshow__dot:first-child").addClass("product-card-slideshow__dot_active");
 });
-
 
 $(document).ready(function () {
   homeBanner();
