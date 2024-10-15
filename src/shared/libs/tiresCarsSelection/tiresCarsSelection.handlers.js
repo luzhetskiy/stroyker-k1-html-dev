@@ -8,37 +8,38 @@ export const renderNextOptions = (selectAttribute, apiPath, value) => {
   const defaultValue = select.attr("data-select-default");
 
   getApiQuery(apiPath + value)
-  .then((response) => response.json())
-  .then((responseItems) => {
-    input.text(defaultValue);
-    optionsContainer.html(`
+    .then((response) => response.json())
+    .then((responseItems) => {
+      input.text(defaultValue);
+      optionsContainer.html(`
       <div class="search-select__option" data-search-select-option-selected="${selectId}" data-search-select-option-value="" data-search-select-option-default="${selectId}" data-search-select-option="${selectId}">
         ${defaultValue}
       </div>
       ${responseItems
-      .map(
-        (item) => `
+          .map(
+            (item) => `
         <div class="search-select__option" data-search-select-option-value="${item.id}" data-search-select-option="${selectId}">
           ${item.name ? item.name : `${item.begin} - ${item.end}`}
         </div>
       `
-      )
-      .join("")}
+          )
+          .join("")}
     `);
-    input.removeAttr("inert");
-  })
-  .catch((error) => {
-    input.removeAttr("inert");
-    console.log(error);
-  });
+      input.removeAttr("inert");
+    })
+    .catch((error) => {
+      input.removeAttr("inert");
+      console.log(error);
+    });
 };
 
-const disableSelect = (selectAttribute) => {
-  const select = $(`[${selectAttribute}]`);
+const disableSelect = (selectAttribute, $form) => {
+  const select = $form.find(`[${selectAttribute}]`);
   const selectId = select.attr("data-search-select-input");
-  const input = $(`[data-search-select-value="${selectId}"]`);
+  const input = $form.find(`[data-search-select-value="${selectId}"]`);
   const defaultValue = select.attr("data-select-default");
-  const content = $(`[data-search-select-content="${selectId}"]`);
+  const content = $form.find(`[data-search-select-content="${selectId}"]`);
+
   input.text(defaultValue);
   input.attr("inert", "");
   select.val("");
@@ -49,20 +50,23 @@ const disableSelect = (selectAttribute) => {
   `);
 };
 
-export const carsSelectionChangeHandler = (event) => {
+
+export const carsSelectionChangeHandler = (event, $form) => {
   const target = $(event.currentTarget);
   const value = target.val();
 
   if (!value) {
-    disableSelect("data-models-select");
-    disableSelect("data-configurations-select");
-    disableSelect("data-modifications-select");
+    disableSelect("data-models-select", $form);
+    disableSelect("data-configurations-select", $form);
+    disableSelect("data-modifications-select", $form);
     return;
   }
 
-  renderNextOptions("data-models-select", `/cars/models/?brand_id=`, value);
-  disableSelect("data-configurations-select");
-  disableSelect("data-modifications-select");
+  $form.find("[data-models-select]").each(function () {
+    renderNextOptions($(this), `/cars/models/?brand_id=`, value);
+  });
+  disableSelect("data-configurations-select", $form);
+  disableSelect("data-modifications-select", $form);
 };
 
 export const modelsSelectionChangeHandler = (event) => {
