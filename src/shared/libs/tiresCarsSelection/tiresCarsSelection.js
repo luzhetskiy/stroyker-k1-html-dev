@@ -10,7 +10,9 @@ import {
 export const initTiresCarsSelection = () => {
   if (!$('[data-cars-select]').length) return
 
-  renderNextOptions("data-cars-select", "/cars/brands/", "");
+  $("[data-cars-select]").each(function() {
+    renderNextOptions($(this), "/cars/brands/", "");
+  });
 
   $("[data-cars-select]").on("change", carsSelectionChangeHandler);
 
