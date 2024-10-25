@@ -11,7 +11,7 @@ export const initTiresCarsSelection = () => {
   // Находим все формы с data-tires-form
   $("[data-tires-form]").each(function() {
     const $form = $(this);
-    
+
     // Внутри каждой формы находим элементы и привязываем к ним обработчики событий
     $form.find("[data-cars-select]").each(function() {
       renderNextOptions($(this), "/cars/brands/", "");

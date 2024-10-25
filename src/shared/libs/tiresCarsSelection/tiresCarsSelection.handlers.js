@@ -1,30 +1,36 @@
 import { getApiQuery } from "@src/shared/libs/api/api";
 
-export const renderNextOptions = (selectAttribute, apiPath, value) => {
-  const select = $(`[${selectAttribute}]`);
-  const selectId = select.attr("data-search-select-input");
+export const renderNextOptions = ($select, apiPath, value) => {
+  // Получаем ID напрямую из переданного jQuery объекта
+  const selectId = $select.attr("data-search-select-input");
   const input = $(`[data-search-select-value="${selectId}"]`);
   const optionsContainer = $(`[data-search-select-content="${selectId}"]`);
-  const defaultValue = select.attr("data-select-default");
+  const defaultValue = $select.attr("data-select-default");
 
   getApiQuery(apiPath + value)
     .then((response) => response.json())
     .then((responseItems) => {
       input.text(defaultValue);
       optionsContainer.html(`
-      <div class="search-select__option" data-search-select-option-selected="${selectId}" data-search-select-option-value="" data-search-select-option-default="${selectId}" data-search-select-option="${selectId}">
-        ${defaultValue}
-      </div>
-      ${responseItems
+        <div class="search-select__option" 
+          data-search-select-option-selected="${selectId}" 
+          data-search-select-option-value="" 
+          data-search-select-option-default="${selectId}" 
+          data-search-select-option="${selectId}">
+          ${defaultValue}
+        </div>
+        ${responseItems
           .map(
             (item) => `
-        <div class="search-select__option" data-search-select-option-value="${item.id}" data-search-select-option="${selectId}">
-          ${item.name ? item.name : `${item.begin} - ${item.end}`}
-        </div>
-      `
+              <div class="search-select__option" 
+                data-search-select-option-value="${item.id}" 
+                data-search-select-option="${selectId}">
+                ${item.name ? item.name : `${item.begin} - ${item.end}`}
+              </div>
+            `
           )
           .join("")}
-    `);
+      `);
       input.removeAttr("inert");
     })
     .catch((error) => {
@@ -49,7 +55,6 @@ const disableSelect = (selectAttribute, $form) => {
     </div>
   `);
 };
-
 
 export const carsSelectionChangeHandler = (event, $form) => {
   const target = $(event.currentTarget);

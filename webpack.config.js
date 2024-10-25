@@ -117,7 +117,15 @@ module.exports = {
       },
       {
         test: /\.(css|sass|scss)$/,
-        use: ["css-loader", "sass-loader"],
+        use: [
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              api: "modern"
+            }
+          }
+        ],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
