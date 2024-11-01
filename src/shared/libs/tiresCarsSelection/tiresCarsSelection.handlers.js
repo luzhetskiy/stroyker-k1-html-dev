@@ -1,7 +1,14 @@
 import { getApiQuery } from "@src/shared/libs/api/api";
 
+const BASE_API_URL = "https://corsproxy.io/?https://shintorg.nastroyker.ru";
+
 export const renderNextOptions = ($select, apiPath, value) => {
-  // Получаем ID напрямую из переданного jQuery объекта
+  if (!($select instanceof jQuery)) {
+    $select = $(`[data-search-select-input="${$select}"]`);
+  }
+
+  const fullApiPath = `${BASE_API_URL}${apiPath}${value}`;
+
   const selectId = $select.attr("data-search-select-input");
   const input = $(`[data-search-select-value="${selectId}"]`);
   const optionsContainer = $(`[data-search-select-content="${selectId}"]`);
@@ -21,13 +28,27 @@ export const renderNextOptions = ($select, apiPath, value) => {
         </div>
         ${responseItems
           .map(
-            (item) => `
-              <div class="search-select__option" 
-                data-search-select-option-value="${item.id}" 
-                data-search-select-option="${selectId}">
-                ${item.name ? item.name : `${item.begin} - ${item.end}`}
-              </div>
-            `
+            (item) => {
+              if (item.year) {
+                // Если это данные по годам
+                return `
+                  <div class="search-select__option" 
+                    data-search-select-option-value="${item.year}" 
+                    data-search-select-option="${selectId}">
+                    ${item.year}
+                  </div>
+                `;
+              } else if (item.id && item.name) {
+                // Если это данные с id и name
+                return `
+                  <div class="search-select__option" 
+                    data-search-select-option-value="${item.id}" 
+                    data-search-select-option="${selectId}">
+                    ${item.name}
+                  </div>
+                `;
+              }
+            }
           )
           .join("")}
       `);
@@ -74,30 +95,35 @@ export const carsSelectionChangeHandler = (event, $form) => {
   disableSelect("data-modifications-select", $form);
 };
 
-export const modelsSelectionChangeHandler = (event) => {
+export const modelsSelectionChangeHandler = (event, $form) => {
   const target = $(event.currentTarget);
   const value = target.val();
 
   if (!value) {
-    disableSelect("data-configurations-select");
-    disableSelect("data-modifications-select");
+    disableSelect("data-configurations-select", $form);
+    disableSelect("data-modifications-select", $form);
     return;
   }
 
-  renderNextOptions("data-configurations-select", `/cars/configurations/?model_id=`, value);
-  disableSelect("data-modifications-select");
+  $form.find("[data-configurations-select]").each(function () {
+    renderNextOptions($(this), `/cars/configurations/?model_id=`, value);
+  });
+  disableSelect("data-modifications-select", $form);
 };
 
-export const configurationsSelectionChangeHandler = (event) => {
+export const configurationsSelectionChangeHandler = (event, $form) => {
   const target = $(event.currentTarget);
   const value = target.val();
+  console.log(target);
 
   if (!value) {
-    disableSelect("data-modifications-select");
+    disableSelect("data-modifications-select", $form);
     return;
   }
 
-  renderNextOptions("data-modifications-select", `/cars/modifications/?configuration_id=`, value);
+  $form.find("[data-modifications-select]").each(function () {
+    renderNextOptions($(this), `/cars/modifications/?model_id=`, value);
+  });
 };
 
 export const modificationsSelectionChangeHandler = (event) => {
