@@ -8,13 +8,14 @@ export const renderNextOptions = ($select, apiPath, value) => {
   }
 
   const fullApiPath = `${BASE_API_URL}${apiPath}${value}`;
+  // const fullApiPath = `${apiPath}${value}`;
 
   const selectId = $select.attr("data-search-select-input");
   const input = $(`[data-search-select-value="${selectId}"]`);
   const optionsContainer = $(`[data-search-select-content="${selectId}"]`);
   const defaultValue = $select.attr("data-select-default");
 
-  getApiQuery(apiPath + value)
+  getApiQuery(fullApiPath)
     .then((response) => response.json())
     .then((responseItems) => {
       input.text(defaultValue);
@@ -113,34 +114,36 @@ export const modelsSelectionChangeHandler = (event, $form) => {
 
 export const configurationsSelectionChangeHandler = (event, $form) => {
   const target = $(event.currentTarget);
-  const value = target.val();
-  console.log(target);
+  const year = target.val();
+  const modelId = $form.find("[data-models-select]").val();
 
-  if (!value) {
+  if (!year || !modelId) {
     disableSelect("data-modifications-select", $form);
     return;
   }
 
   $form.find("[data-modifications-select]").each(function () {
-    renderNextOptions($(this), `/cars/modifications/?model_id=`, value);
+    renderNextOptions($(this), `/cars/modifications/?model_id=${modelId}&year=`, year);
   });
 };
 
-export const modificationsSelectionChangeHandler = (event) => {
+export const modificationsSelectionChangeHandler = (event, $form) => {
   const target = $(event.currentTarget);
   const value = target.val();
+  const $submitButton = $form.find("[data-tires-submit]");
 
   if (!value) {
-    $("[data-tires-submit]").attr("disabled", "");
+    $submitButton.attr("disabled", "");
     return;
   }
-  $("[data-tires-submit]").removeAttr("disabled");
+  $submitButton.removeAttr("disabled");
 };
 
-export const submitHandler = (event) => {
+export const submitHandler = (event, $form) => {
   event.preventDefault();
-  const target = $(event.currentTarget);
+  const target = $form;
   const values = target.serializeArray();
   const configuration = values.find((value) => value.name === "configurations");
+  console.log(values, configuration);
   window.location.href = `${window.location.origin}/tires/search/?configuration_id=${configuration.value}`;
 };
