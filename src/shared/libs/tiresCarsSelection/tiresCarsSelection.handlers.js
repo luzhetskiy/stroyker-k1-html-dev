@@ -143,7 +143,7 @@ export const submitHandler = (event, $form) => {
   event.preventDefault();
   const target = $form;
   const values = target.serializeArray();
-  const configuration = values.find((value) => value.name === "configurations");
-  console.log(values, configuration);
-  window.location.href = `${window.location.origin}/tires/search/?configuration_id=${configuration.value}`;
+  const modification = values.find((value) => value.name === "modification");
+  // console.log(values, modification);
+  window.location.href = `${window.location.origin}/tires/search/?modification_id=${modification.value}`;
 };
