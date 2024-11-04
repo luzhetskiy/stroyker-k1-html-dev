@@ -7,8 +7,8 @@ export const renderNextOptions = ($select, apiPath, value) => {
     $select = $(`[data-search-select-input="${$select}"]`);
   }
 
-  // const fullApiPath = `${BASE_API_URL}${apiPath}${value}`;
-  const fullApiPath = `${apiPath}${value}`;
+  const fullApiPath = `${BASE_API_URL}${apiPath}${value}`;
+  // const fullApiPath = `${apiPath}${value}`;
 
   const selectId = $select.attr("data-search-select-input");
   const input = $(`[data-search-select-value="${selectId}"]`);
@@ -143,7 +143,9 @@ export const submitHandler = (event, $form) => {
   event.preventDefault();
   const target = $form;
   const values = target.serializeArray();
+  const isRimsForm = $form.attr("data-tires-form") === "rims";
+  const slug = isRimsForm ? "&slug=rims" : "";
+  
   const modification = values.find((value) => value.name === "modification");
-  // console.log(values, modification);
-  window.location.href = `${window.location.origin}/tires/search/?modification_id=${modification.value}`;
+  window.location.href = `${window.location.origin}/tires/search/?modification_id=${modification.value}${slug}`;
 };
