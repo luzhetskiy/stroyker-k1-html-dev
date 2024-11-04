@@ -7,8 +7,8 @@ export const renderNextOptions = ($select, apiPath, value) => {
     $select = $(`[data-search-select-input="${$select}"]`);
   }
 
-  const fullApiPath = `${BASE_API_URL}${apiPath}${value}`;
-  // const fullApiPath = `${apiPath}${value}`;
+  // const fullApiPath = `${BASE_API_URL}${apiPath}${value}`;
+  const fullApiPath = `${apiPath}${value}`;
 
   const selectId = $select.attr("data-search-select-input");
   const input = $(`[data-search-select-value="${selectId}"]`);
