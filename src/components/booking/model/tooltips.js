@@ -35,20 +35,16 @@ export const initTooltips = () => {
         if (!form.length) return;
         form.find("input, textarea, button").removeAttr("disabled");
         form.attr("action", action);
+
+        let guestText = "";
+        if (!form.find('[name="message"]').is("[data-not-guests]")) {
+          guestText = "\nКол-во гостей: -";
+        }
+
         if (isTime && date) {
           form
           .find('[name="message"]')
-          .val(`Хочу забронировать: ${title}, дата: ${date}, время: ${time} \nКол-во гостей: -`);
-          $("html, body").animate(
-            {
-              scrollTop: $("[data-booking-form]").offset().top - 200,
-            },
-            500
-          );
-          return;
-        }
-        if (date) {
-          form.find('[name="message"]').val(`Хочу забронировать: ${title}, дата: ${date} \nКол-во гостей: -`);
+          .val(`Хочу забронировать: ${title}, дата: ${date}, время: ${time} ${guestText}`);
           $("html, body").animate(
             {
               scrollTop: $("[data-booking-form]").offset().top - 200,
@@ -58,7 +54,18 @@ export const initTooltips = () => {
           return;
         }
 
-        form.find('[name="message"]').val(`Хочу забронировать: ${title}, ${time}  \nКол-во гостей: -`);
+        if (date) {
+          form.find('[name="message"]').val(`Хочу забронировать: ${title}, дата: ${date} ${guestText}`);
+          $("html, body").animate(
+            {
+              scrollTop: $("[data-booking-form]").offset().top - 200,
+            },
+            500
+          );
+          return;
+        }
+
+        form.find('[name="message"]').val(`Хочу забронировать: ${title}, ${time}  ${guestText}`);
         $("html, body").animate(
           {
             scrollTop: $("[data-booking-form]").offset().top - 200,
