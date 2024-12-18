@@ -1,6 +1,15 @@
 @use './portfolio-card'
 @use './portfolio-filter'
 
+.portfolio-set-title
+	font-size: 22px
+	font-weight: 700
+	line-height: 1.2
+	margin-bottom: 0
+
+	@media (min-width: 576px)
+		margin-bottom: 30px
+
 .portfolio-content
 	display: grid
 	grid-template-columns: repeat(12, minmax(0, 1fr))
@@ -84,3 +93,201 @@
 			@media (min-width: 992px)
 				min-height: 460px
 				grid-column: span 6
+
+.portfolio-widget
+	--_padding-y: 0px
+	--_padding-x: 0px
+
+	margin-bottom: 60px
+	padding: var(--_padding-y) var(--_padding-x)
+
+	@media (min-width: 992px)
+		--_padding-y: 30px
+		--_padding-x: 48px
+
+		margin-bottom: 0
+		border: 1px solid #e5e5ea
+
+	h1
+		font-size: 22px
+		font-weight: 700
+		line-height: 1.2
+		color: #000
+		margin-bottom: 25px
+
+		@media (min-width: 992px)
+			font-size: 30px
+			margin-bottom: 30px
+
+	&-pictures
+		display: grid
+		grid-template-columns: repeat(12, minmax(0, 1fr))
+		gap: 10px
+
+		@media (min-width: 992px)
+			gap: 16px
+
+		&--third
+
+			.portfolio-widget-picture
+
+				@media (min-width: 767px)
+					grid-column: span 4
+
+		&--half
+
+			.portfolio-widget-picture
+
+				@media (min-width: 576px)
+					grid-column: span 6
+
+		&--full
+
+			.portfolio-widget-picture
+
+				@media (min-width: 576px)
+					grid-column: span 12
+
+		&--type-4
+
+			.portfolio-widget-picture
+				grid-column: span 12
+
+				&:nth-child(1),
+				&:nth-child(2)
+					grid-column: span 6
+
+		&--type-5
+
+			.portfolio-widget-picture
+
+				&,
+				&:nth-child(3)
+					grid-column: span 12
+
+				&:nth-child(1),
+				&:nth-child(2)
+					grid-column: span 6
+
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3)
+
+					@media (min-width: 576px)
+						grid-column: span 4
+
+		&--type-6
+
+			.portfolio-widget-picture
+				grid-column: span 12
+
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4)
+					grid-column: span 6
+
+					@media (min-width: 576px)
+						grid-column: span 3
+
+		&--type-7
+
+			.portfolio-widget-picture
+				grid-column: span 6
+
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3)
+
+					@media (min-width: 576px)
+						grid-column: span 4
+
+		&--type-8
+
+			.portfolio-widget-picture
+				grid-column: span 6
+
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4)
+
+					@media (min-width: 576px)
+						grid-column: span 3
+
+		&--type-9
+
+			.portfolio-widget-picture
+				grid-column: span 6
+
+				@media (min-width: 992px)
+					grid-column: span 4
+
+				&:last-child
+
+					@media (max-width: 991px)
+						grid-column: span 12
+
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(4)
+
+					@media (min-width: 576px)
+						grid-column: span 3
+
+	&-picture
+		grid-column: span 6
+
+		@media (min-width: 576px)
+			grid-column: span 4
+
+		@media (min-width: 767px)
+			grid-column: span 3
+
+	&-image
+		width: 100%
+		height: 100%
+		display: block
+		object-fit: cover
+		object-position: center
+
+.portfolio-slider
+	margin-inline: calc( var(--container-padding-x) * -1 )
+	overflow: hidden
+	position: relative
+
+	@media (min-width: 992px)
+		margin-inline: unset
+		overflow: unset
+		position: unset
+	
+	.slider-constructor
+		width: calc( 100% + var(--container-padding-x) * 2 + var(--grid-gutter-width))
+		margin-inline: calc( (var(--container-padding-x) + var(--grid-gutter-width) / 2) * -1 )
+		padding-block: 0px 40px
+
+		@media (min-width: 992px)
+			width: 100%
+			margin-inline: 0px
+
+		.slick-list
+			width: calc(100% + var(--_padding-x) * 2)
+			margin: 0 calc(var(--_padding-x) / -1)
+
+		.slick-dots
+			justify-content: center
+			bottom: 0
+
+	&-image
+		max-width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: center
+
+.portfolio-share
+	display: flex
+	justify-content: flex-end
+
+	&:not(:first-child)
+		margin-top: 20px

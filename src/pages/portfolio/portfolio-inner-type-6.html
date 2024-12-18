@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="@src/../node_modules/mmenu-js/dist/mmenu.css" />
+    <link rel="stylesheet" href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css" />
+    <link rel="stylesheet" href="@src/../node_modules/nouislider/dist/nouislider.css" />
+    <link rel="stylesheet" href="@src/../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="@src/../node_modules/tippy.js/dist/tippy.css" />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+    <script defer src="@src/app/main.js"></script>
+  </head>
+
+  <body class="inner-page">
+    <div class="page">
+      <header><%~ include("/components/headers/templates/header-default/header-default.html") %></header>
+
+      <main>
+        <section class="section-dark">
+          <div class="container">
+            <div class="page-head">
+              <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Главная" href="/">
+                    Главная
+                    <meta itemprop="name" content="Главная" />
+                  </a>
+                  <meta itemprop="position" content="1" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span>
+                  Портфолио
+                </span>
+              </div>
+            </div>
+
+            <div class="content-block">
+              <div class="portfolio-widget">
+                <h1>
+                  Туристический комплекс "Волжская ривьера"
+                </h1>
+
+                <div class="portfolio-widget-pictures portfolio-widget-pictures--type-6">
+                  <div class="portfolio-widget-picture">
+                    <img src="@images/portfolio-1.jpg" loading="lazy" class="portfolio-widget-image" width="258" height="186" alt="Картинка">
+                  </div>
+                  <div class="portfolio-widget-picture">
+                    <img src="@images/portfolio-1.jpg" loading="lazy" class="portfolio-widget-image" width="258" height="186" alt="Картинка">
+                  </div>
+                  <div class="portfolio-widget-picture">
+                    <img src="@images/portfolio-1.jpg" loading="lazy" class="portfolio-widget-image" width="258" height="186" alt="Картинка">
+                  </div>
+                  <div class="portfolio-widget-picture">
+                    <img src="@images/portfolio-1.jpg" loading="lazy" class="portfolio-widget-image" width="258" height="186" alt="Картинка">
+                  </div>
+                  <div class="portfolio-widget-picture">
+                    <img src="@images/portfolio-1.jpg" loading="lazy" class="portfolio-widget-image" width="258" height="186" alt="Картинка">
+                  </div>
+                </div>
+
+                <div class="response-content">
+                  <h2>
+                    Общее описание объекта, характеристики
+                  </h2>
+                  <p>
+                    Дом одноэтажный 113 м2 из бруса камерной сушки сечением 190х140.
+                  </p>
+                  <p>
+                    Габариты строения по осям без учета террас 9,5х17,5 м.
+                  </p>
+                  <p>
+                    Данный проект рассчитан на семью из 4-6 человек для постоянного проживания.
+                  </p>
+                  <p>
+                    Данный проект может быть реализован в данном виде, либо с внесением изменений под задачи заказчика.
+                  </p>
+                  <br>
+                  <p>
+                    Для более подробной информации обращайтесь в архитектурный отдел компании.
+                  </p>
+                </div>
+
+                <div class="portfolio-share">
+                  <a href="#" class="btn btn-share">
+                    <span class="icon">
+                      <svg>
+                          <use xlink:href="#share-link"></use>
+                      </svg>
+                    </span>
+
+                    Поделиться
+                  </a>
+                </div>
+              </div>
+
+              <span class="content-title portfolio-set-title h2">Другие проекты</span>
+              <div class="product-slider product-slider--4 product-slider--5 related-products-main">
+                <div
+                  class="slider-constructor"
+                  data-slides="1"
+                  data-sm-slides="2"
+                  data-md-slides="2"
+                  data-lg-slides="3"
+                  data-test="3"
+                  data-xl-slides="4"
+                >
+                  <%~ include("components/portfolio/templates/portfolio-card.html") %>
+                  <%~ include("components/portfolio/templates/portfolio-card.html") %>
+                  <%~ include("components/portfolio/templates/portfolio-card.html") %>
+                  <%~ include("components/portfolio/templates/portfolio-card.html") %>
+                  <%~ include("components/portfolio/templates/portfolio-card.html") %>
+                  <%~ include("components/portfolio/templates/portfolio-card.html") %>
+                  <%~ include("components/portfolio/templates/portfolio-card.html") %>
+                  <%~ include("components/portfolio/templates/portfolio-card.html") %>
+                  <%~ include("components/portfolio/templates/portfolio-card.html") %>
+                  <%~ include("components/portfolio/templates/portfolio-card.html") %>
+                  <%~ include("components/portfolio/templates/portfolio-card.html") %>
+                  <%~ include("components/portfolio/templates/portfolio-card.html") %>
+                  <%~ include("components/portfolio/templates/portfolio-card.html") %>
+                  <%~ include("components/portfolio/templates/portfolio-card.html") %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <%~ include("components/general/templates/feedback-form.html") %>
+      </main>
+
+      <%~ include("/components/footers/templates/footer.html") %>
+    </div>
+
+    <%~ include("/components/general/templates/svg-pack.html") %>
+    <%~ include("/components/modals/templates/callme-modal.html") %>
+  </body>
+</html>

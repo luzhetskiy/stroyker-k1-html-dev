@@ -40,8 +40,14 @@ export const initSliderConstructor = () => {
             this.params.dots = true;
           }
 
+          this.params.variableWidth = this.element.getAttribute("data-variable-width") === "true" ? true : false;
           this.params.adaptiveHeight = this.element.getAttribute("data-adaptive-height") !== null;
-          this.params.centerMode = this.element.getAttribute("data-center") === null ? false : true;
+          this.params.centerMode = {};
+          this.params.centerMode.xs = this.element.getAttribute("data-center") === "true";
+          this.params.centerMode.sm = this.element.getAttribute("data-sm-center") === "true" || this.params.centerMode.xs;
+          this.params.centerMode.md = this.element.getAttribute("data-md-center") === "true" || this.params.centerMode.sm;
+          this.params.centerMode.lg = this.element.getAttribute("data-lg-center") === "true" || this.params.centerMode.md;
+          this.params.centerMode.xl = this.element.getAttribute("data-xl-center") === "true" || this.params.centerMode.lg;
           this.params.infinite = this.element.getAttribute("data-no-infinite") === null ? true : false;
           this.params.count = {};
           this.params.loop = this.element.getAttribute("data-loop") === "false" ? false : true;
@@ -192,6 +198,7 @@ export const initSliderConstructor = () => {
           $(this.element).slick({
             autoplay: this.params.autoplay,
             autoplaySpeed: this.params.autoplayTimeout,
+            variableWidth: this.params.variableWidth,
             mobileFirst: true,
             slidesToShow: this.params.count.xs,
             slidesToScroll: this.params.count.xs,
@@ -202,7 +209,7 @@ export const initSliderConstructor = () => {
             adaptiveHeight: this.params.adaptiveHeight,
             // loop: this.params.loop,
             dots: this.params.dots,
-            centerMode: this.params.centerMode,
+            centerMode: this.params.centerMode.xs,
             accessibility: false,
             infinite: this.params.infinite,
             responsive: [
@@ -212,6 +219,7 @@ export const initSliderConstructor = () => {
                   slidesToShow: this.params.count.sm,
                   slidesToScroll: this.params.count.sm,
                   rows: this.params.rows.sm,
+                  centerMode: this.params.centerMode.sm,
                 },
               },
               {
@@ -220,6 +228,7 @@ export const initSliderConstructor = () => {
                   slidesToShow: this.params.count.md,
                   slidesToScroll: this.params.count.md,
                   rows: this.params.rows.md,
+                  centerMode: this.params.centerMode.md,
                 },
               },
               {
@@ -228,6 +237,7 @@ export const initSliderConstructor = () => {
                   slidesToShow: this.params.count.lg,
                   slidesToScroll: this.params.count.lg,
                   rows: this.params.rows.lg,
+                  centerMode: this.params.centerMode.lg,
                 },
               },
               {
@@ -236,6 +246,7 @@ export const initSliderConstructor = () => {
                   slidesToShow: this.params.count.xl,
                   slidesToScroll: this.params.count.xl,
                   rows: this.params.rows.xl,
+                  centerMode: this.params.centerMode.xl,
                 },
               },
             ],

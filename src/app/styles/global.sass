@@ -195,6 +195,28 @@ button[disabled]
   &_frameless
     border: none
 
+.response-content
+  font-size: 14px
+  line-height: 1.4
+  color: #000
+
+  &:not(:first-child)
+    margin-top: 40px
+
+  &:not(:last-child)
+    margin-bottom: 20px
+
+  h2
+    font-size: 18px
+    font-weight: 700
+    line-height: 1.3
+    color: #000
+    margin-bottom: 20px
+
+  p
+    &:not(:last-child)
+      margin-bottom: 6px
+
 .icon
   --_size: 1rem
   --_color: currentColor
@@ -222,6 +244,25 @@ button[disabled]
   position: absolute
   inset: 0
   z-index: 10
+
+.btn.btn-share
+  height: auto
+  gap: 4px
+  color: #333
+  background-color: transparent
+  border-radius: unset
+  padding: unset
+
+  @media (max-width: 767px)
+    width: initial
+
+  &:is(:hover, :active)
+    color: #2363d1
+    background-color: transparent
+
+  .icon
+    --_size: 22px
+    --_color: #2363D1
 
 @media (max-width: 1279px)
   .g-content
