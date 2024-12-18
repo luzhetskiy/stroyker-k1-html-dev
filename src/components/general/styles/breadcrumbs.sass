@@ -14,6 +14,34 @@
   color: #767676
   padding-top: 20px
 
+  :first-child
+
+    a
+      &::before
+
+        @media (max-width: 767px)
+          content: ''
+          width: 12px
+          height: 12px
+          display: inline-block
+          flex-shrink: 0
+          margin-right: 4px
+          background-repeat: no-repeat
+          background-size: contain
+          background-position: center
+          background-image: url(@images/slideshow-arrow.svg)
+          transform: rotate(180deg)
+
+  &__sep
+
+    @media (max-width: 767px)
+      display: none
+
+    &:last-child
+
+      @media (min-width: 767px)
+        display: block
+
 @media (max-width: 767px)
   .breadcrumbs
     padding-bottom: 0
@@ -45,22 +73,10 @@
 
 @media (max-width: 767px)
   .breadcrumbs a:first-child
-    display: block
+    display: inline-flex
     font-size: 13px
     border: none
     position: relative
-
-  .breadcrumbs a:first-child:before
-    content: ""
-    background: url(@images/slideshow-arrow.svg)
-    width: 15px
-    height: 16px
-    position: absolute
-    left: 0
-    top: 0px
-    -webkit-transform: rotate(-180deg)
-    -ms-transform: rotate(-180deg)
-    transform: rotate(-180deg)
 
 .breadcrumbs a:hover
   text-decoration: underline
@@ -88,3 +104,10 @@
 
 .breadcrumbs .sep:last-child
   display: none
+
+.breadcrumbs__sep
+
+  &:first-child
+    
+    @media (min-wdith: 768px)
+      display: none

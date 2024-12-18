@@ -1,0 +1,86 @@
+@use './portfolio-card'
+@use './portfolio-filter'
+
+.portfolio-content
+	display: grid
+	grid-template-columns: repeat(12, minmax(0, 1fr))
+	gap: 10px
+
+	&--sham
+
+		&:nth-child(8n + 1),
+		&:nth-child(8n + 4),
+		&:nth-child(8n + 7),
+		&:nth-child(8n + 8)
+
+			@media (min-width: 576px)
+				grid-column: span 6
+
+		&:nth-child(8n + 1),
+		&:nth-child(8n + 7)
+
+			@media (min-width: 992px)
+				grid-row: span 2
+
+			.portfolio-card-info
+
+				@media (min-width: 992px)
+					gap: 20px
+					padding: 30px
+
+			.portfolio-card-title
+
+				@media (min-width: 992px)
+					font-size: 18px
+
+			.portfolio-card-placeholder
+
+				@media (min-width: 992px)
+					font-size: 16px
+
+	&--equally
+		
+		.portfolio-card
+
+			&:nth-child(4n+1),
+			&:nth-child(4n+4)
+
+				@media (min-width: 992px)
+					grid-column: span 6
+
+			&:nth-child(4n+1)
+
+				@media (min-width: 992px)
+					grid-row: span 2
+
+				.portfolio-card-info
+
+					@media (min-width: 992px)
+						gap: 20px
+						padding: 30px
+
+				.portfolio-card-title
+
+					@media (min-width: 992px)
+						font-size: 18px
+
+				.portfolio-card-placeholder
+
+					@media (min-width: 992px)
+						font-size: 16px
+
+	&--third
+
+		.portfolio-card
+
+			@media (min-width: 992px)
+				min-height: 302px
+				grid-column: span 4
+
+	&--half
+
+		.portfolio-card
+
+			@media (min-width: 992px)
+				min-height: 460px
+				grid-column: span 6

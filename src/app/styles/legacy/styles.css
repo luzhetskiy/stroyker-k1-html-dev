@@ -12819,13 +12819,14 @@ canvas {
 }
 
 .catalog__links-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-bottom: 25px;
   padding-bottom: 30px;
 }
 
 .catalog__links-block a {
-  margin-right: 15px;
-  margin-bottom: 5px;
   border-radius: 2px;
   font-family: "Golos";
   font-size: 14px;

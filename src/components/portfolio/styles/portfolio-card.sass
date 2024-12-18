@@ -1,0 +1,88 @@
+.portfolio-card
+	grid-column: -1 / 1
+	min-height: 224px
+	display: flex
+	flex-direction: column
+	color: #fff
+	background-color: #E4E4E4
+	position: relative
+	overflow: hidden
+	z-index: 1
+
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+
+	@media (min-width: 576px)
+		grid-column: span 6
+		min-height: 50vw
+
+	@media (min-width: 992px)
+		grid-column: span 3
+		min-height: 224px
+
+	.stretched-link
+
+		@media (hover: hover)
+
+			&:is(:hover, :focus-visible)
+
+				~ .portfolio-card-info
+
+						.portfolio-card-placeholder .icon
+							transform: translateX(.25em)
+
+		&:is(:active, .is-active)
+
+			~ .portfolio-card-info
+
+				.portfolio-card-placeholder .icon
+					transform: translateX(.25em)
+
+	&-info
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		gap: 12px
+		margin-top: auto
+		padding: 20px
+
+		&::after
+			content: ''
+			pointer-events: none
+			user-select: none
+			background-color: #2C2C2C
+			opacity: 0.8
+			filter: blur(70px)
+			position: absolute
+			top: 70%
+			left: 0
+			right: 0
+			bottom: -64px
+			z-index: -1
+
+	&-type
+		font-size: 12px
+		text-align: center
+		background-color: #2363D1
+		border-radius: 2px
+		padding: 8px 10px
+
+	&-title
+		font-size: 14px
+		line-height: 1.2
+		margin-bottom: 0
+
+	&-placeholder
+		display: flex
+		align-items: center
+		gap: 10px
+		font-size: 14px
+		line-height: 1.7
+
+		.icon
+			--_size: 14px
+
+			transition-property: transform
+			transition-duration: 300ms
+			transition-timing-function: ease-in-out
