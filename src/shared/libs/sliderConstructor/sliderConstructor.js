@@ -40,7 +40,12 @@ export const initSliderConstructor = () => {
             this.params.dots = true;
           }
 
-          this.params.variableWidth = this.element.getAttribute("data-variable-width") === "true" ? true : false;
+          this.params.variableWidth = {};
+          this.params.variableWidth.xs = this.element.getAttribute("data-variable-width") === "true";
+          this.params.variableWidth.sm = this.element.getAttribute("ddata-sm-variable-width") === "true" || this.params.variableWidth.xs;
+          this.params.variableWidth.md = this.element.getAttribute("data-md-variable-width") === "true" || this.params.variableWidth.sm;
+          this.params.variableWidth.lg = this.element.getAttribute("data-lg-variable-width") === "true" || this.params.variableWidth.md;
+          this.params.variableWidth.xl = this.element.getAttribute("data-xl-variable-width") === "true" || this.params.variableWidth.lg;
           this.params.adaptiveHeight = this.element.getAttribute("data-adaptive-height") !== null;
           this.params.centerMode = {};
           this.params.centerMode.xs = this.element.getAttribute("data-center") === "true";
@@ -198,7 +203,7 @@ export const initSliderConstructor = () => {
           $(this.element).slick({
             autoplay: this.params.autoplay,
             autoplaySpeed: this.params.autoplayTimeout,
-            variableWidth: this.params.variableWidth,
+            variableWidth: this.params.variableWidth.xs,
             mobileFirst: true,
             slidesToShow: this.params.count.xs,
             slidesToScroll: this.params.count.xs,
@@ -216,6 +221,7 @@ export const initSliderConstructor = () => {
               {
                 breakpoint: breakpoints.sm - 1,
                 settings: {
+                  variableWidth: this.params.variableWidth.sm,
                   slidesToShow: this.params.count.sm,
                   slidesToScroll: this.params.count.sm,
                   rows: this.params.rows.sm,
@@ -225,6 +231,7 @@ export const initSliderConstructor = () => {
               {
                 breakpoint: breakpoints.md - 1,
                 settings: {
+                  variableWidth: this.params.variableWidth.md,
                   slidesToShow: this.params.count.md,
                   slidesToScroll: this.params.count.md,
                   rows: this.params.rows.md,
@@ -234,6 +241,7 @@ export const initSliderConstructor = () => {
               {
                 breakpoint: breakpoints.lg - 1,
                 settings: {
+                  variableWidth: this.params.variableWidth.lg,
                   slidesToShow: this.params.count.lg,
                   slidesToScroll: this.params.count.lg,
                   rows: this.params.rows.lg,
@@ -243,6 +251,7 @@ export const initSliderConstructor = () => {
               {
                 breakpoint: breakpoints.xl - 1,
                 settings: {
+                  variableWidth: this.params.variableWidth.xl,
                   slidesToShow: this.params.count.xl,
                   slidesToScroll: this.params.count.xl,
                   rows: this.params.rows.xl,

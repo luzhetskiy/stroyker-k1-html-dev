@@ -2,19 +2,22 @@
 	grid-column: -1 / 1
 	min-height: 224px
 	height: 100%
-	color: #fff
-	background-color: #E4E4E4
+	color: var(--white-color)
+	background-color: var(--gray-color-250)
 	position: relative
 	overflow: hidden
 	z-index: 1
 
 	@media (min-width: 576px)
 		grid-column: span 6
-		min-height: 50vw
+		min-height: 195px
+
+	@media (min-width: 768px)
+		min-height: 38vw
 
 	@media (min-width: 992px)
-		grid-column: span 3
 		min-height: 224px
+		grid-column: span 3
 
 	.stretched-link
 
@@ -57,6 +60,7 @@
 
 		&::after
 			content: ''
+			width: 200%
 			pointer-events: none
 			user-select: none
 			background-color: #2C2C2C
@@ -64,15 +68,15 @@
 			filter: blur(70px)
 			position: absolute
 			top: 70%
-			left: 0
-			right: 0
+			left: 50%
 			bottom: -64px
+			transform: translateX(-50%)
 			z-index: -1
 
 	&-type
 		font-size: 12px
 		text-align: center
-		background-color: #2363D1
+		background-color: var(--accent-color-400)
 		border-radius: 2px
 		padding: 8px 10px
 
