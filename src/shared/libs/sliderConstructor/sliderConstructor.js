@@ -42,7 +42,7 @@ export const initSliderConstructor = () => {
 
           this.params.variableWidth = {};
           this.params.variableWidth.xs = this.element.getAttribute("data-variable-width") === "true";
-          this.params.variableWidth.sm = this.element.getAttribute("ddata-sm-variable-width") === "true" || this.params.variableWidth.xs;
+          this.params.variableWidth.sm = this.element.getAttribute("data-sm-variable-width") === "true" || this.params.variableWidth.xs;
           this.params.variableWidth.md = this.element.getAttribute("data-md-variable-width") === "true" || this.params.variableWidth.sm;
           this.params.variableWidth.lg = this.element.getAttribute("data-lg-variable-width") === "true" || this.params.variableWidth.md;
           this.params.variableWidth.xl = this.element.getAttribute("data-xl-variable-width") === "true" || this.params.variableWidth.lg;

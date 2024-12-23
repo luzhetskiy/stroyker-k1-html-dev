@@ -1,4 +1,4 @@
-import { _classCallCheck } from "../utils/utils";
+import { _classCallCheck, _createForOfIteratorHelper } from "../utils/utils";
 
 export const initCustomInteraction = () => {
   var СustomInteraction = function СustomInteraction() {

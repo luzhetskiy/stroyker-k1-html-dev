@@ -92,7 +92,7 @@
 		.portfolio-card
 
 			@media (min-width: 992px)
-				min-height: 460px
+				min-height: 320px
 				grid-column: span 6
 
 			.portfolio-card-info
@@ -196,10 +196,20 @@
 		.slick-list
 			width: calc(100% + var(--_padding-x) * 2)
 			margin: 0 calc(var(--_padding-x) / -1)
+			padding-inline: calc( var(--container-padding-x) - 10px ) 40px
+
+			@media (min-width: 992px)
+				padding-inline: 0
 
 		.slick-dots
 			justify-content: center
 			bottom: 0
+
+		.slick-slide
+			padding-inline: 10px
+
+			@media (min-width: 992px)
+				padding-inline: 5px
 
 	&-image
 		max-width: 100%
