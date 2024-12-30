@@ -3,7 +3,7 @@
   bottom: 0
   left: 0
   width: 100%
-  background-color: var(--bottom-mobile-menu-background, var(--white-color))
+  background-color: var(--bottom-mobile-menu-background, #fff)
   z-index: 99
   &_radius
     background-color: transparent
@@ -12,11 +12,11 @@
         border-radius: 40px
         margin-bottom: 13px
         margin-inline: 13px
-        background-color: var(--bottom-mobile-menu-background, var(--white-color))
+        background-color: var(--bottom-mobile-menu-background, #fff)
         box-shadow: 0px -2px 15px 2px #DADADA80
 
   &__content
-    background-color: var(--bottom-mobile-menu-background, var(--white-color))
+    background-color: var(--bottom-mobile-menu-background, #fff)
     position: relative
     z-index: 1
     box-shadow: 0px -1px 15px 2px #DADADA80
@@ -40,29 +40,29 @@
     &:hover
       .bottom-mobile-menu-button
         &__inner
-          background-color: var(--bottom-mobile-menu-background-circle-hover, var(--accent-color-400))
+          background-color: var(--bottom-mobile-menu-background-circle-hover, #2363d1)
 
     &.bottom-mobile-menu-button_active
       .bottom-mobile-menu-button
         &__inner
-          background-color: var(--bottom-mobile-menu-background-circle-hover, var(--accent-color-400))
+          background-color: var(--bottom-mobile-menu-background-circle-hover, #2363d1)
 
     .bottom-mobile-menu-button
       &__inner
         border-radius: 100%
-        background-color: var(--bottom-mobile-menu-background-circle, var(--white-color))
+        background-color: var(--bottom-mobile-menu-background-circle, #fff)
         transition: .3s
 
   &_underline
     &:hover
       .bottom-mobile-menu-button
         &__icon-wrapper::after
-          color: var(--bottom-mobile-menu-active, var(--accent-color-400))
+          color: var(--bottom-mobile-menu-active, #2363d1)
 
     &.bottom-mobile-menu-button_active
       .bottom-mobile-menu-button
         &__icon-wrapper::after
-          color: var(--bottom-mobile-menu-active, var(--accent-color-400))
+          color: var(--bottom-mobile-menu-active, #2363d1)
 
     .bottom-mobile-menu-button
       &__icon-wrapper
@@ -79,7 +79,7 @@
   &_active
     .bottom-mobile-menu-button
       &__text
-        color: var(--bottom-mobile-menu-active, var(--accent-color-400))
+        color: var(--bottom-mobile-menu-active, #2363d1)
 
       &__icon
         opacity: 0
@@ -91,7 +91,7 @@
   &:hover
     .bottom-mobile-menu-button
       &__text
-        color: var(--bottom-mobile-menu-active, var(--accent-color-400))
+        color: var(--bottom-mobile-menu-active, #2363d1)
 
       &__icon
         opacity: 0
@@ -115,7 +115,7 @@
     font-size: 10px
     font-weight: 400
     line-height: 10px
-    color: var(--bottom-mobile-menu-inactive, var(--gray-color-400))
+    color: var(--bottom-mobile-menu-inactive, #cccccc)
     transition: .3s
     text-align: center
 
@@ -142,7 +142,7 @@
     height: 18px
     border-radius: 100%
     overflow: hidden
-    background-color: var(--bottom-mobile-menu-active, var(--accent-color-400))
+    background-color: var(--bottom-mobile-menu-active, #2363d1)
     color: #fff
     font-size: 10px
     font-weight: 400
@@ -164,7 +164,7 @@
 
 .bottom-mobile-menu-list
   position: absolute
-  background-color: var(--bottom-mobile-menu-list-background, var(--white-color))
+  background-color: var(--bottom-mobile-menu-list-background, #fff)
   bottom: 0
   left: 0
   width: 100%
@@ -184,31 +184,31 @@
     .bottom-mobile-menu-list
       &__link
         display: inline-flex
-        background-color: var(--bottom-mobile-menu-list-plates-link-text-color, var(--accent-color-400))
+        background-color: var(--bottom-mobile-menu-list-plates-link-text-color, #2363d1)
         height: 40px
         text-align: center
         border: none
         border-radius: 6px
         transition: .3s
         &:hover
-          background-color: var(--bottom-mobile-menu-list-plates-link-background-color, var(--accent-color-400))
-          color: var(--bottom-mobile-menu-list-plates-link-text-color, var(--white-color))
+          background-color: var(--bottom-mobile-menu-list-plates-link-background-color, #2363d1)
+          color: var(--bottom-mobile-menu-list-plates-link-text-color, #fff)
 
   &_active
     transform: translateY(0%)
 
   &__icon-arrow-fill
-    fill: var(--bottom-mobile-menu-list-link-icon-color, var(--gray-color-400))
+    fill: var(--bottom-mobile-menu-list-link-icon-color, #cccccc)
 
   &__link
     padding: 10px 20px
     display: flex
     justify-content: space-between
     align-items: center
-    color: var(--bottom-mobile-menu-list-link-text-color, var(--accent-color-500))
-    border-bottom: 1px solid var(--bottom-mobile-menu-list-link-border-color, var(--gray-color-300))
+    color: var(--bottom-mobile-menu-list-link-text-color, #A7A7AB)
+    border-bottom: 1px solid var(--bottom-mobile-menu-list-link-border-color, #dadada)
     transition: .3s
-    background-color: var(--bottom-mobile-menu-list-link-background, var(--white-color))
+    background-color: var(--bottom-mobile-menu-list-link-background, #fff)
     &:hover
-      background-color: var(--bottom-mobile-menu-list-link-background-hover, var(--accent-color-400))
-      color: var(--bottom-mobile-menu-list-link-text-color, var(--accent-color-400))
+      background-color: var(--bottom-mobile-menu-list-link-background-hover, #2363d1)
+      color: var(--bottom-mobile-menu-list-link-text-color, #2363d1)

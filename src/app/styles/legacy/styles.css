@@ -730,7 +730,7 @@ p:last-child {
   right: 0;
   z-index: 99;
   width: 380px;
-  background: var(--white-color)fff;
+  background: var(--white-color);
   border: 1px solid #d9d9de;
   -webkit-box-shadow: 0px 2px 25px rgba(118, 118, 118, 0.15);
   box-shadow: 0px 2px 25px rgba(118, 118, 118, 0.15);
@@ -2535,7 +2535,7 @@ p:last-child {
   font-weight: bold;
   font-size: 22px;
   line-height: 28px;
-  color: var(--white-color)fff;
+  color: var(--white-color);
   margin-bottom: 25px;
 }
 
@@ -2797,7 +2797,7 @@ p:last-child {
   font-weight: bold;
   font-size: 30px;
   line-height: 38px;
-  color: var(--white-color)fff;
+  color: var(--white-color);
   margin-bottom: 25px;
   max-height: 112px;
   overflow: hidden;
@@ -4016,7 +4016,7 @@ p:last-child {
 .product-comparison {
   width: 52px;
   height: 40px;
-  background: var(--white-color)fff;
+  background: var(--white-color);
   border: 1px solid var(--main-elements-color, var(--accent-color-400));
   border-radius: 2px;
   display: -webkit-box;
@@ -4200,7 +4200,7 @@ p:last-child {
   padding: 0 20px;
   border-radius: 18px;
   font-size: 11px;
-  color: var(--white-color)fff;
+  color: var(--white-color);
 }
 
 .action-item__type--action span {
@@ -4221,7 +4221,7 @@ p:last-child {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  color: var(--white-color)fff;
+  color: var(--white-color);
 }
 
 .new-slide-item {
@@ -4445,7 +4445,7 @@ p:last-child {
 }
 
 .question-form {
-  background: var(--white-color)fff;
+  background: var(--white-color);
   border: 2px solid var(--main-elements-color, var(--accent-color-400));
   border-radius: 10px;
   padding: 23px 100px;
@@ -4635,7 +4635,7 @@ p:last-child {
 
 .form-control {
   width: 100%;
-  background: var(--white-color)fff;
+  background: var(--white-color);
   border: 1px solid #e0e0e0;
   -webkit-box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.05);
@@ -4770,7 +4770,7 @@ footer {
   display: block;
   font-size: 14px;
   line-height: 20px;
-  color: var(--white-color)fff;
+  color: var(--white-color);
   margin-bottom: 30px;
 }
 
@@ -4838,7 +4838,7 @@ footer {
   display: block;
   font-weight: bold;
   font-size: 14px;
-  color: var(--white-color)fff;
+  color: var(--white-color);
   min-height: 20px;
   margin-bottom: 4px;
 }
@@ -4899,7 +4899,7 @@ footer {
 
 .footer-content__column a {
   font-size: 12px;
-  color: var(--white-color)fff;
+  color: var(--white-color);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -5118,7 +5118,7 @@ footer {
 
 .unsubscribe-link a {
   font-size: 12px;
-  color: var(--white-color)fff;
+  color: var(--white-color);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -5222,7 +5222,7 @@ footer {
 
 .footer-bottom__left a {
   font-size: 12px;
-  color: var(--white-color)fff;
+  color: var(--white-color);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -5624,7 +5624,7 @@ footer {
   -ms-flex-align: center;
   align-items: center;
   background: var(--accent-color-300);
-  color: var(--white-color)fff;
+  color: var(--white-color);
 }
 
 @media (max-width: 767px) {
@@ -6103,7 +6103,7 @@ footer {
   -webkit-transition: 0.2s ease;
   -o-transition: 0.2s ease;
   transition: 0.2s ease;
-  background: var(--white-color)fff;
+  background: var(--white-color);
   mix-blend-mode: normal;
   border: 1px solid #d9d9de;
   -webkit-box-sizing: border-box;
@@ -6246,7 +6246,7 @@ footer {
   -webkit-transition: 0.2s ease;
   -o-transition: 0.2s ease;
   transition: 0.2s ease;
-  background: var(--white-color)fff;
+  background: var(--white-color);
   mix-blend-mode: normal;
   border: 1px solid #d9d9de;
   -webkit-box-sizing: border-box;
@@ -6807,7 +6807,7 @@ select::-ms-expand {
   font-size: 12px;
   line-height: 20px;
   color: #767676;
-  background: var(--white-color)fff;
+  background: var(--white-color);
   border: 1px solid #767676;
 }
 
@@ -7615,7 +7615,7 @@ ol.number-list li:before {
   background: var(--main-elements-color, var(--accent-color-400));
   font-weight: bold;
   font-size: 18px;
-  color: var(--white-color)fff;
+  color: var(--white-color);
   border-radius: 2px;
   height: 48px;
   -webkit-transition: 0.5s;
@@ -7661,7 +7661,7 @@ ol.number-list li:before {
   background: #d74853;
   font-weight: bold;
   font-size: 18px;
-  color: var(--white-color)fff;
+  color: var(--white-color);
   border-radius: 2px;
   height: 48px;
   -webkit-transition: 0.5s;
@@ -7887,7 +7887,7 @@ ol.number-list li:before {
   background: #a9b1b9;
   font-size: 15px;
   line-height: 24px;
-  color: var(--white-color)fff;
+  color: var(--white-color);
 }
 
 .review-item__avatar img {
@@ -10559,7 +10559,7 @@ canvas {
 .catalog-filter .catalog-filter-body {
   padding: 20px 0px;
   margin-bottom: 30px;
-  background: var(--white-color)fff;
+  background: var(--white-color);
   border: 1px solid #d9d9de;
   -webkit-box-shadow: 0px 2px 25px rgba(118, 118, 118, 0.15);
   box-shadow: 0px 2px 25px rgba(118, 118, 118, 0.15);
@@ -11477,7 +11477,7 @@ canvas {
   padding: 0 35px;
   border-radius: 20px;
   font-size: 18px;
-  color: var(--white-color)fff;
+  color: var(--white-color);
 }
 
 .main-action__type--action span {
@@ -12383,7 +12383,7 @@ canvas {
   font-style: italic;
   font-size: 10px;
   line-height: 150%;
-  color: var(--white-color)fff;
+  color: var(--white-color);
   height: 19px;
   padding: 0 15px 0 10px;
   min-width: 51px;
@@ -12712,7 +12712,7 @@ canvas {
 .product-comparison {
   width: 52px;
   height: 40px;
-  background: var(--white-color)fff;
+  background: var(--white-color);
   border: 1px solid var(--main-elements-color, var(--accent-color-400));
   border-radius: 2px;
   display: -webkit-box;
@@ -12794,7 +12794,7 @@ canvas {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background: var(--white-color)fff;
+  background: var(--white-color);
   border: 1px solid #000000;
   transition: 0.2s;
   white-space: nowrap;
@@ -12847,7 +12847,7 @@ canvas {
   white-space: nowrap;
   text-overflow: ellipsis;
   color: #333333;
-  background: var(--white-color)fff;
+  background: var(--white-color);
   position: relative;
   overflow: hidden;
   display: inline-block;
