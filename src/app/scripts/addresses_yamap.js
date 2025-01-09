@@ -1,88 +1,57 @@
-$(document).ready(function() {
-    // Инициализация наблюдателя за изменением списка
-    const addressLocationSelect = $('ul[data-role="address-location-select"]');
-    if (addressLocationSelect.length) {
-        const observer = new MutationObserver((mutationsList) => {
-            mutationsList.forEach((mutation) => {
-                if (mutation.type === 'childList') {
-                    const selectedItem = addressLocationSelect.find('li.selected');
-                    const locationSlug = selectedItem.data('value');
-                    if (locationSlug) {
-                        window.location = `${window.location.pathname}?location=${locationSlug}`;
-                    }
-                }
-            });
-        });
+document.addEventListener('DOMContentLoaded', () => {
+    const addressList = document.querySelector('ul[data-role="address-location-select"]')
 
-        observer.observe(addressLocationSelect[0], {
-            childList: true,
-            subtree: true
-        });
+    if (addressList) {
+        addressList.addEventListener('DOMSubtreeModified', (event) => {
+            const selectedItem = addressList.querySelector('li.selected')
+
+            if (selectedItem) {
+                const locationSlug = selectedItem.dataset.value
+                if (locationSlug) {
+                    window.location = `${window.location.pathname}?location=${locationSlug}`
+                }
+            }
+        })
     }
 
-    // Инициализация Яндекс.Карт
-    ymaps.ready(init);
-});
+    ymaps.ready(init)
+})
 
-const YAMAP_CONTAINER_ID = 'yamap_addresses';
+const YAMAP_CONTAINER_ID = 'yamap_addresses'
+let myMap
 
 function init() {
-    const yamapContainer = $(`#${YAMAP_CONTAINER_ID}`);
-    if (!yamapContainer.length) {
-        console.error(`Контейнер с id="${YAMAP_CONTAINER_ID}" не найден.`);
-        return;
-    }
+    const yamapContainer = document.getElementById(YAMAP_CONTAINER_ID)
 
-    // Проверка данных контейнера
-    const centerLat = parseFloat(yamapContainer.data('center-latitude'));
-    const centerLng = parseFloat(yamapContainer.data('center-longitude'));
-    const zoomLevel = parseInt(yamapContainer.data('center-zoom'), 10);
+    if (!yamapContainer) return
 
-    if (isNaN(centerLat) || isNaN(centerLng)) {
-        console.error('Некорректные координаты центра карты.');
-        return;
-    }
+    const centerLatitude = parseFloat(yamapContainer.dataset.centerLatitude)
+    const centerLongitude = parseFloat(yamapContainer.dataset.centerLongitude)
+    const centerZoom = parseInt(yamapContainer.dataset.centerZoom, 10)
 
-    if (isNaN(zoomLevel)) {
-        console.error('Некорректный уровень масштабирования.');
-        return;
-    }
-
-    // Создание карты
-    const myMap = new ymaps.Map(YAMAP_CONTAINER_ID, {
-        center: [centerLat, centerLng],
-        zoom: zoomLevel
+    myMap = new ymaps.Map(YAMAP_CONTAINER_ID, {
+        center: [centerLatitude, centerLongitude],
+        zoom: centerZoom
     }, {
         searchControlProvider: 'yandex#search'
-    });
+    })
 
-    // Добавление точек на карту
-    add_points(myMap, '.address-data');
+    addPoints(myMap, '.address-data')
 }
 
-function add_points(map, elementSelector) {
-    $(elementSelector).each(function() {
-        const $this = $(this);
+function addPoints(map, selector) {
+    document.querySelectorAll(selector).forEach((element) => {
+        const latitude = parseFloat(element.dataset.latitude)
+        const longitude = parseFloat(element.dataset.longitude)
+        const balloonContent = element.dataset.balloonContent
+        const hintContent = element.dataset.hintContent
+        const iconPreset = element.dataset.iconPreset
+        const glyphIconName = element.dataset.glyphIconName
+        const glyphIconColor = element.dataset.glyphIconColor
 
-        // Проверка данных для точки
-        const latitude = parseFloat($this.data('latitude'));
-        const longitude = parseFloat($this.data('longitude'));
-
-        if (isNaN(latitude) || isNaN(longitude)) {
-            console.error('Некорректные координаты точки:', $this);
-            return;
-        }
-
-        const balloonContent = $this.data('balloon-content') || '';
-        const hintContent = $this.data('hint-content') || '';
-        const iconPreset = $this.data('icon-preset') || 'default';
-        const glyphIconName = $this.data('glyph-icon-name') || '';
-        const glyphIconColor = $this.data('glyph-icon-color') || '#000';
-
-        // Создание геообъекта
-        const myGeoObject = new ymaps.GeoObject({
+        const geoObject = new ymaps.GeoObject({
             geometry: {
-                type: "Point",
+                type: 'Point',
                 coordinates: [latitude, longitude]
             },
             properties: {
@@ -94,9 +63,8 @@ function add_points(map, elementSelector) {
             iconGlyph: glyphIconName,
             iconGlyphColor: glyphIconColor,
             draggable: false
-        });
+        })
 
-        // Добавление точки на карту
-        map.geoObjects.add(myGeoObject);
-    });
+        map.geoObjects.add(geoObject)
+    })
 }
