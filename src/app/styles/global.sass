@@ -10,6 +10,12 @@
   src: url("@public/fonts/GolosText-Regular.woff")
 
 @font-face
+  font-family: "Golos"
+  font-weight: 700
+  font-style: normal
+  src: url("@public/fonts/GolosText-Bold.woff2")
+
+@font-face
   font-family: "Montserrat-SemiBold"
   src: url("@public/fonts/Montserrat-SemiBold.ttf") format("truetype")
   font-weight: normal
@@ -263,6 +269,52 @@ button[disabled]
   .icon
     --_size: 22px
     --_color: var(--accent-color-400)
+
+.btn.btn-plaintext
+  min-height: unset
+  height: unset
+  width: unset
+  display: inline-flex
+  align-items: center
+  gap: 5px
+  font-size: 12px
+  color: var(--gray-color-550)
+  background-color: transparent
+  border: none
+  padding: 0
+
+  .icon
+    --_size: 20px
+    --_color: var(--gray-color-550)
+
+    transition-property: color
+    transition-duration: 300ms
+    transition-timing-function: ease-in-out
+
+  &:is(:hover, :active)
+    color: var(--black-color)
+    background-color: transparent
+
+    .icon
+      --_color: var(--accent-color-400)
+
+.widget
+  background-color: #fff
+  margin-inline: -16px
+
+  @media (min-width: 992px)
+    margin-inline: 0
+    border: 1px solid var(--gray-color-200)
+
+  &-content
+    width: 100%
+    max-width: 1062px
+    margin-inline: auto
+    padding: 15px 16px
+
+    @media (min-width: 992px)
+      padding-block: 40px
+
 
 @media (max-width: 1279px)
   .g-content

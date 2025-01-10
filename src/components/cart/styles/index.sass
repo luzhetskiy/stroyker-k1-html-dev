@@ -9,21 +9,68 @@
     width: 100%
     height: 75px
     aspect-ratio: 1/1
-      
+
   &__image
     width: 100%
     height: auto
     object-fit: contain
     aspect-ratio: 1/1
 
-  &__delete-button
+  &__delete-button,
+  &__shop-button
+    display: flex
+    align-items: center
+    justify-content: center
     position: absolute
-    right: 0
-    bottom: 30px
+
+  &__delete-button
+    left: 0
+    bottom: 10px
+
+  &__shop-button
+    left: 30px
+    bottom: 8px
+
+    svg
+      width: 20px
+      height: 20px
 
   &__description
     max-width: 100%
 
+.cart-item--favorite
+  border-bottom: 1px solid var(--gray-color-200)
+
+  &:last-child
+    border: none
+
+  .cart-item
+
+    &__checkbox
+      width: 18px
+      height: 75px
+      flex-shrink: 0
+      padding-left: 0
+
+      @media (min-width: 768px)
+        height: auto
+
+      [type="checkbox"]
+
+        + label
+          position: static
+
+          &::before,
+          &::after
+            width: 18px
+            height: 18px
+            left: auto
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+
+    &__image-wrapper
+      margin-bottom: 30px
 
 .promotional-code-input
   width: 100%
@@ -79,6 +126,132 @@
 .section-cart
   background-color: var(--white-color)
 
+.section-favorite
+
+  .catalog-sorting ul li a,
+  .catalog-right .price-download
+    color: var(--black-color)
+
+    &:hover
+      color: var(--accent-color-400)
+
+      .icon-sort-price span,
+      .icon-sort-price span:before,
+      .icon-sort-price span:after
+        background-color: var(--accent-color-400)
+
+
+  .icon-sort-price span,
+  .icon-sort-price span:before,
+  .icon-sort-price span:after
+    background-color: var(--black-color)
+    transition-property: background
+    transition-duration: 300ms
+    transition-timing-function: ease-in-out
+
+.favorite-aside
+  display: none
+
+  @media (min-width: 1024px)
+    display: block
+    background-color: var(--gray-color-100)
+    padding: 20px 30px 40px
+
+  .btn-link
+    background-color: transparent
+    border: none
+
+  &-bottom
+    display: flex
+    flex-direction: column
+    gap: 20px
+    margin-top: 30px
+
+    &-actions
+      display: flex
+      flex-direction: column
+      gap: 12px
+
+    &-buttons
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-between
+      gap: 12px 10px
+
+      &--mobile
+        justify-content: start
+        margin-top: 10px
+
+        @media (min-width: 1024px)
+          display: none
+
+        .checkbox [type=checkbox]:not(:checked) + label,
+        .checkbox [type=checkbox]:checked + label,
+        .btn
+          font-size: 14px
+
+        .checkbox [type=checkbox]:not(:checked) + label,
+        .btn
+          color: var(--gray-color-700)
+
+        .favorite-aside-bottom-remove
+
+          .icon
+            --_size: 18px
+
+    &-checkbox
+
+      [type=checkbox]:not(:checked),
+      [type=checkbox]:checked
+
+        + label
+          line-height: 18px
+          color: var(--gray-color-550)
+          transition-property: color
+          transition-duration: 300ms
+          transition-timing-function: ease-in-out
+
+          &::before,
+          &::after
+            width: 18px
+            height: 18px
+            border-radius: 2px
+
+      [type=checkbox]:not(:checked)
+
+        + label
+
+          &::before
+            border-color: var(--gray-color-450)
+
+      [type=checkbox]:checked
+
+        + label
+          color: var(--black-color)
+
+  &-btn
+    font-size: 16px
+    color: var(--accent-color-500)
+
+    &:is(:hover, :active)
+      color: var(--white-color)
+      background-color: var(--accent-color-400)
+
+    .icon
+      --_size: 24px
+
+      svg
+        width: 100%
+        height: 100%
+        transition: none
+
+.favorite-aside--mobile
+  display: block
+
+  @media (min-width: 1024px)
+    display: none
+
 @media (min-width: 768px)
   .section-cart
     background-color: var(--gray-color-100)
@@ -90,13 +263,34 @@
       max-width: 85px
       width: 100%
       height: 85px
-        
+
+    &__delete-button,
+    &__shop-button
+      left: auto
+      bottom: auto
+
     &__delete-button
       right: 20px
-      bottom: auto
+
+    &__shop-button
+      right: 38px
+
+      svg
+        width: 24px
+        height: 24px
 
     &__description
       max-width: 250px
+
+  .cart-item--favorite
+
+    .cart-item
+
+      &__image-wrapper
+        margin-bottom: 0
+
+      &__delete-button
+        right: 0
 
   .input-number_gray
     .order-down, .order-up
