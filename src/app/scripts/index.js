@@ -27,6 +27,169 @@ $(() => {
   initComponents();
 });
 
+const $compareCarousel = $(".owl-carousel--compare")
+const $detailCarousel = $(".owl-carousel--detail")
+
+if ($compareCarousel.length && $detailCarousel.length) {
+  const $pagination = $(".owl-pagination--compare")
+  const $counter = $pagination.find(".counter")
+  const $prev = $pagination.find(".prev")
+  const $next = $pagination.find(".next")
+
+  function updatePagination(event) {
+    const itemsPerPage = event.page.size // Количество слайдов на странице
+    const totalItems = event.item.count  // Всего слайдов
+    const startIndex = event.item.index + 1 // Номер первого отображаемого слайда
+    const endIndex = Math.min(startIndex + itemsPerPage - 1, totalItems) // Номер последнего отображаемого слайда
+
+    // Обновляем текст пагинации
+    $counter.text(`${startIndex}-${endIndex}/${totalItems}`)
+
+    // Проверяем, первый ли это слайд
+    if (event.item.index === 0) { // Начало слайдера
+      $prev.prop("disabled", true).attr("inert", "")
+    } else {
+      $prev.prop("disabled", false).removeAttr("inert")
+    }
+
+    // Проверяем, последний ли это слайд
+    const isLastPage = event.item.index + itemsPerPage >= totalItems
+    if (isLastPage) { // Конец слайдера
+      $next.prop("disabled", true).attr("inert", "")
+    } else {
+      $next.prop("disabled", false).removeAttr("inert")
+    }
+  }
+
+  // Инициализация Owl Carousel
+  $compareCarousel.owlCarousel({
+    items: 4,
+    margin: 0,
+    nav: false,
+    dots: false,
+    responsive: {
+      0: {
+        items: 2,
+        margin: 0,
+      },
+      992: {
+        items: 4,
+        margin: 0,
+      }
+    },
+    onInitialized: updatePagination, // Обновить пагинацию при инициализации
+    onTranslated: updatePagination   // Обновить пагинацию при смене слайдов
+  })
+
+  $detailCarousel.owlCarousel({
+    items: 4,
+    margin: 0,
+    nav: false,
+    dots: false,
+    responsive: {
+      0: {
+        items: 2,
+        margin: 0,
+      },
+      992: {
+        items: 4,
+        margin: 0,
+      }
+    }
+  })
+
+  // Синхронизация двух каруселей
+  function syncCarousels(event) {
+    const targetIndex = event.item.index
+    const syncedCarousel = event.currentTarget === $compareCarousel[0]
+      ? $detailCarousel
+      : $compareCarousel
+
+    syncedCarousel.trigger('to.owl.carousel', [targetIndex, 300, true])
+  }
+
+  $compareCarousel.on('changed.owl.carousel', syncCarousels)
+  $detailCarousel.on('changed.owl.carousel', syncCarousels)
+
+  // Кнопки навигации
+  $prev.on("click", function () {
+    $compareCarousel.trigger("prev.owl.carousel")
+    $detailCarousel.trigger("prev.owl.carousel")
+  })
+
+  $next.on("click", function () {
+    $compareCarousel.trigger("next.owl.carousel")
+    $detailCarousel.trigger("next.owl.carousel")
+  })
+
+  function setEqualHeights() {
+    const allProducts = document.querySelectorAll('.detail-product')
+
+    // Сбрасываем высоты перед пересчётом
+    allProducts.forEach(product =>
+      Array.from(product.children).forEach(item => (item.style.minHeight = ''))
+    )
+
+    const maxItems = Math.max(...Array.from(allProducts).map(product => product.children.length))
+
+    // Пройдём по каждому индексу
+    for (let i = 0; i < maxItems; i++) {
+      const heights = []
+
+      // Собираем высоты всех элементов с текущим индексом
+      allProducts.forEach(product => {
+        const item = product.children[i]
+        if (item) heights.push(item.offsetHeight)
+      })
+
+      // Определяем максимальную высоту
+      const maxHeight = Math.max(...heights)
+
+      // Устанавливаем максимальную высоту для всех элементов с этим индексом
+      allProducts.forEach(product => {
+        const item = product.children[i]
+        if (item) item.style.minHeight = `${maxHeight}px`
+      })
+    }
+  }
+
+  const throttle = (func, delay = 300) => {
+    let isThrottled = false;
+    let savedArgs = null;
+    let savedThis = null;
+
+    return function wrap(...args) {
+      if (isThrottled) {
+        savedArgs = args,
+          savedThis = this;
+        return;
+      }
+
+      func.apply(this, args);
+      isThrottled = true;
+
+      setTimeout(() => {
+        isThrottled = false;
+
+        if (savedThis) {
+          wrap.apply(savedThis, savedArgs);
+          savedThis = null;
+          savedArgs = null;
+        }
+
+      }, delay);
+    }
+  };
+
+  // Добавляем обработчик события resize
+  window.addEventListener('resize', throttle(() => {
+    setTimeout(setEqualHeights, 300)
+  }))
+
+  // Инициализация при загрузке
+  setEqualHeights()
+}
+
 $(".acc__toggle:not(.not_toggle)").click(function (e) {
   // e.preventDefault();
 
