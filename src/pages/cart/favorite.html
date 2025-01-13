@@ -35,11 +35,11 @@
                 </svg>
 
                 <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                  <a itemprop="item" title="КАТАЛОГ" href="/">
-                    КАТАЛОГ
-                    <meta itemprop="name" content="КАТАЛОГ" />
+                  <a itemprop="item" title="Каталог" href="/catalog/">
+                    Каталог
+                    <meta itemprop="name" content="Каталог">
                   </a>
-                  <meta itemprop="position" content="2" />
+                  <meta itemprop="position" content="2">
                 </span>
 
                 <svg class="breadcrumbs__sep">
@@ -98,9 +98,9 @@
 
                     <div class="favorite-aside-bottom-buttons favorite-aside-bottom-buttons--mobile">
                       <div class="checkbox favorite-aside-bottom-checkbox">
-                        <input type="checkbox" name="favorite-choice" value="all" id="id_choice_all">
+                        <input type="checkbox" name="favorite-choice" value="all" id="id_choice_all_2">
 
-                        <label for="id_choice_all">
+                        <label for="id_choice_all_2">
                           Выделить всё
                         </label>
                       </div>
@@ -130,7 +130,9 @@
                     <div class="grid-span-lg-6 grid-span-xl-7">
                       <div class="d-flex flex-column gap-15 gap-md-20">
                         <div class="d-flex flex-column">
+                          <%~ include("/components/cart/templates/cartItemFavoriteBadge.html") %>
                           <%~ include("/components/cart/templates/cartItemFavorite.html") %>
+                          <%~ include("/components/cart/templates/cartItemFavoriteEmpty.html") %>
                         </div>
                       </div>
                     </div>
