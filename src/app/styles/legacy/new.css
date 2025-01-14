@@ -2270,7 +2270,7 @@ header .header-fixed-content .header-phone {
   position: absolute;
   right: -25px;
   top: 5px;
-  color: var(--main-elements-color);
+  color: var(--accent-color-400);
 }
 
 .mobile-ul li .submenu li a .icon {
