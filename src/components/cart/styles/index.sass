@@ -28,6 +28,7 @@
     bottom: 10px
 
   &__buttons
+    min-height: 22px
     display: flex
     align-items: center
     gap: 20px
@@ -74,7 +75,7 @@
       padding-left: 0
 
       @media (min-width: 768px)
-        height: auto
+        height: 85px
 
       [type="checkbox"]
 
@@ -103,10 +104,10 @@
 
     &:is(:hover, :focus-visible, .active)
 
-      .icon
+      .svg-icon
         --_color: var(--white-color)
 
-    .icon
+    .svg-icon
       --_color: var(--gray-color-450)
 
       transition-property: color
@@ -124,7 +125,7 @@
         background-color: transparent
         border-color: transparent
 
-        .icon
+        .svg-icon
           --_color: var(--accent-color-400)
 
 .compare-filter
@@ -154,13 +155,17 @@
 
   .owl-item
 
-    &:not(:first-child)
+    .detail-product-title
 
-      .detail-product-title
+      @media (min-width: 992px)
+        opacity: 0
+        visibility: hidden
 
-        @media (min-width: 992px)
-          opacity: 0
-          visibility: hidden
+  .owl-active-first
+
+    .detail-product-title
+      opacity: 1
+      visibility: visible
 
 .owl-pagination--compare
   flex-shrink: 0
@@ -180,7 +185,7 @@
     justify-content: end
     align-self: end
 
-  .icon
+  .svg-icon
     @media (min-width: 992px)
       --_size: 16px
 
@@ -220,7 +225,7 @@
       opacity: 0.5
       pointer-events: none
 
-    .icon
+    .svg-icon
       flex-shrink: 0
 
       svg
@@ -254,6 +259,9 @@
     font-size: 14px
     font-weight: 700
     line-height: 1.2
+    transition-property: opacity, visibility
+    transition-duration: 300ms
+    transition-timing-function: ease-in-out
 
     &:not(.no-point)
       position: relative
@@ -407,7 +415,7 @@
 
         .favorite-aside-bottom-remove
 
-          .icon
+          .svg-icon
             --_size: 18px
 
     &-checkbox
@@ -441,6 +449,7 @@
           color: var(--black-color)
 
   &-btn
+    gap: 10px
     font-size: 16px
     color: var(--accent-color-500)
 
@@ -448,7 +457,7 @@
       color: var(--white-color)
       background-color: var(--accent-color-400)
 
-    .icon
+    .svg-icon
       --_size: 24px
 
       svg
@@ -494,6 +503,12 @@
 
     &__description
       max-width: 250px
+
+      display: -webkit-box
+      -webkit-box-orient: vertical
+      -webkit-line-clamp: 3
+      overflow: hidden
+      text-overflow: ellipsis
 
   .cart-item--favorite
 

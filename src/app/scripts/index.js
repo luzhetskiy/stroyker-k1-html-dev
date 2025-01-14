@@ -98,6 +98,19 @@ if ($compareCarousel.length && $detailCarousel.length) {
     }
   })
 
+  function updateFirstVisibleClass(carousel) {
+    // Удаляем класс со всех элементов
+    carousel.find('.owl-item').removeClass('owl-active-first')
+
+    // Находим текущие видимые элементы
+    const visibleItems = carousel.find('.owl-item.active')
+
+    // Добавляем класс только к первому
+    if (visibleItems.length) {
+      visibleItems.first().addClass('owl-active-first')
+    }
+  }
+
   // Синхронизация двух каруселей
   function syncCarousels(event) {
     const targetIndex = event.item.index
@@ -110,6 +123,14 @@ if ($compareCarousel.length && $detailCarousel.length) {
 
   $compareCarousel.on('changed.owl.carousel', syncCarousels)
   $detailCarousel.on('changed.owl.carousel', syncCarousels)
+
+  // Добавляем класс после инициализации
+  updateFirstVisibleClass($detailCarousel)
+
+  // Добавляем класс при изменении активного слайда
+  $detailCarousel.on('changed.owl.carousel', function () {
+    updateFirstVisibleClass($detailCarousel)
+  })
 
   // Кнопки навигации
   $prev.on("click", function () {
@@ -664,33 +685,33 @@ $(document).ready(function () {
 
   var syncedSecondary = true;
   sync1
-  .owlCarousel({
-    items: 1,
-    slideSpeed: 2000,
-    nav: true,
-    autoplay: false,
-    dots: true,
-    loop: true,
-    responsiveRefreshRate: 200,
-    margin: 10,
-  })
-  .on("changed.owl.carousel", syncPosition);
+    .owlCarousel({
+      items: 1,
+      slideSpeed: 2000,
+      nav: true,
+      autoplay: false,
+      dots: true,
+      loop: true,
+      responsiveRefreshRate: 200,
+      margin: 10,
+    })
+    .on("changed.owl.carousel", syncPosition);
   sync2
-  .on("initialized.owl.carousel", function () {
-    sync2.find(".owl-item").eq(0).addClass("current");
-  })
-  .owlCarousel({
-    items: slidesPerPage,
-    dots: true,
-    nav: true,
-    margin: 10,
-    smartSpeed: 200,
-    slideSpeed: 500,
-    slideBy: slidesPerPage,
-    //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
-    responsiveRefreshRate: 100,
-  })
-  .on("changed.owl.carousel", syncPosition2);
+    .on("initialized.owl.carousel", function () {
+      sync2.find(".owl-item").eq(0).addClass("current");
+    })
+    .owlCarousel({
+      items: slidesPerPage,
+      dots: true,
+      nav: true,
+      margin: 10,
+      smartSpeed: 200,
+      slideSpeed: 500,
+      slideBy: slidesPerPage,
+      //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+      responsiveRefreshRate: 100,
+    })
+    .on("changed.owl.carousel", syncPosition2);
 
   function syncPosition(el) {
     //if you set loop to false, you have to restore this next line

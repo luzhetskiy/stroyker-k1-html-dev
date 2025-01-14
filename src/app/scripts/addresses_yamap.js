@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addressList = document.querySelector('ul[data-role="address-location-select"]')
 
     if (addressList) {
-        addressList.addEventListener('DOMSubtreeModified', (event) => {
+        const observer = new MutationObserver(() => {
             const selectedItem = addressList.querySelector('li.selected')
 
             if (selectedItem) {
@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     window.location = `${window.location.pathname}?location=${locationSlug}`
                 }
             }
+        })
+
+        observer.observe(addressList, {
+            childList: true, // Наблюдение за изменениями в дочерних элементах
+            subtree: true   // Наблюдение за вложенными элементами
         })
     }
 
