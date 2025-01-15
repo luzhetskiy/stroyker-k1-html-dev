@@ -336,7 +336,7 @@ section.feedback-form .form-control {
   background-color: var(--search-field-btn-color, var(--search-field-border-color, #ffffff1a));
 }
 .section-dark.feedback-form {
-  background-color: #f5f5f5 !important;
+  background-color: #f5f5f5;
 }
 .catalog-inner-btn {
   background-color: var(--catalog-menu-button_bg, var(--color-main-dropdown-menu-bg, #333));

@@ -129,7 +129,7 @@ if ($compareCarousel.length && $detailCarousel.length) {
 
   // Добавляем класс при изменении активного слайда
   $detailCarousel.on('changed.owl.carousel', function () {
-    updateFirstVisibleClass($detailCarousel)
+    setTimeout(() => updateFirstVisibleClass($detailCarousel));
   })
 
   // Кнопки навигации

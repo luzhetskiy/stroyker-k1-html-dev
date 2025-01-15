@@ -120,6 +120,18 @@
   margin: 0
   padding: 0
 
+  @media (max-width: 767px)
+
+  .catalog__links-item
+    flex-shrink: 0
+
+  > .catalog__links-item
+
+    &:last-child
+
+      @media (min-width: 768px)
+        display: none
+
   .catalog-item__link
 
     &:is(:hover, :focus-visible, .active)
@@ -147,6 +159,30 @@
 
         .svg-icon
           --_color: var(--accent-color-400)
+
+.buttons-filter-srollable
+  display: flex
+  flex-wrap: wrap
+  gap: 10px
+
+  @media (max-width: 767px)
+    flex-wrap: nowrap
+    gap: 5px
+    margin-inline: -16px
+    padding: 0 16px 4px
+    overflow-y: hidden
+    overflow-x: auto
+
+  &::-webkit-scrollbar
+    height: 6px
+
+  > .catalog__links-item
+
+    &:last-child
+      display: none
+
+      @media (min-width: 768px)
+        display: block
 
 .compare-filter
   display: flex
