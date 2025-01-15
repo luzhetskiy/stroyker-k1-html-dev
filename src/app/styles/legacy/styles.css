@@ -4641,6 +4641,11 @@ p:last-child {
   display: block;
 }
 
+.label-name {
+  user-select: none;
+  pointer-events: none;
+}
+
 .form-group--error label {
   color: #d74853;
 }
