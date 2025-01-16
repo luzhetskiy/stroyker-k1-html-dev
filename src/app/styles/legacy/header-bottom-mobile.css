@@ -25,16 +25,21 @@
     align-items: center;
 }
 
+.header--bottom-mob .option-items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 6px;
+}
 
 .header--bottom-mob .custom-mob-cart{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     font-family: var(--rb);
     font-size: 10px;
-    line-height: 12px;
+    line-height: normal;
     letter-spacing: -0.025em;
     color: #FFFFFF;
-    margin-left: auto;
     height: 26px;
     width: fit-content;
     transition: 0.2s;

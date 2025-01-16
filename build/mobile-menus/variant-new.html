@@ -27,398 +27,82 @@
   <body class="inner-page">
     <div class="page">
       <header>
-        <section class="__header">
+        <section class="mobile-header d-flex d-lg-none">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-2">
-        <div class="logo">
-          <a href="#"><img src="../images/logo.svg"
-              alt="" /></a>
-        </div>
-      </div>
-      <div class="col-lg-6 pl--0">
-        <div class="custom-block">
-          <button class="btn catalog-btn">
-            <span></span> Каталог товаров
-          </button>
-          <div class="search-box general--width">
-            <div id="overlay" onclick="javascript: close_all();"></div>
-            <form action="">
-              <input type="text" autocomplete="off" id="edit_search" onkeyup="javascript: find_my_div();"
-                placeholder="Название магазина" />
-              <button class="btn submit">
-                <img src="../images/search-icon.svg"
-                  alt="" />
-              </button>
-            </form>
-            <div id="search-result">
-              <a href="#" id="user_0" class="s-item-link">
-                <div class="s-item-img">
-                  <img
-                    src="../images/30851ff8e294859c3b812fef189cce5b.jpeg"
-                    alt="" />
-                </div>
-                <div class="s-item-info">
-                  <span class="s-item-title">Золотое яблоко</span>
-                  <span class="s-item-price">247$</span>
-                </div>
-              </a>
-              <a href="#" id="user_1" class="s-item-link">
-                <div class="s-item-img">
-                  <img
-                    src="../images/30851ff8e294859c3b812fef189cce5b.jpeg"
-                    alt="" />
-                </div>
-                <div class="s-item-info">
-                  <span class="s-item-title">доска asd asd asd asdas </span>
-                  <span class="s-item-price">247$</span>
-                </div>
-              </a>
-              <a href="#" id="user_2" class="s-item-link">
-                <div class="s-item-img">
-                  <img
-                    src="../images/30851ff8e294859c3b812fef189cce5b.jpeg"
-                    alt="" />
-                </div>
-                <div class="s-item-info">
-                  <span class="s-item-title">корзина</span>
-                  <span class="s-item-price">247$</span>
-                </div>
-              </a>
-              <a href="#" id="user_3" class="s-item-link">
-                <div class="s-item-img">
-                  <img
-                    src="../images/30851ff8e294859c3b812fef189cce5b.jpeg"
-                    alt="" />
-                </div>
-                <div class="s-item-info">
-                  <span class="s-item-title">Золотое яблоко</span>
-                  <span class="s-item-price">247$</span>
-                </div>
-              </a>
-              <a href="#" id="user_4" class="s-item-link">
-                <div class="s-item-img">
-                  <img
-                    src="../images/30851ff8e294859c3b812fef189cce5b.jpeg"
-                    alt="" />
-                </div>
-                <div class="s-item-info">
-                  <span class="s-item-title">доска asd asd asd asdas </span>
-                  <span class="s-item-price">247$</span>
-                </div>
-              </a>
-              <a href="#" id="user_5" class="s-item-link">
-                <div class="s-item-img">
-                  <img
-                    src="../images/30851ff8e294859c3b812fef189cce5b.jpeg"
-                    alt="" />
-                </div>
-                <div class="s-item-info">
-                  <span class="s-item-title">корзина</span>
-                  <span class="s-item-price">247$</span>
-                </div>
-              </a>
-
-              <a href="#" class="all-items-link">Все каталоги</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2">
-        <div class="options-box">
-          <ul class="option-items v-white">
-            <li>
-              <a href="#">
-                <img src="../images/item.svg" alt="" />
-                3
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="../images/cart-icon-orange.svg" alt="" />
-                123 456
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="../images/favorite-icon.svg" alt="" />
-                359
-              </a>
-            </li>
-          </ul>
-          <ul class="nav-items">
-            <li><a href="#">Пункт меню</a></li>
-            <li><a class="active" href="#">Пункт меню 2</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-2">
-        <div class="contact-box">
-          <p>
-            <span class="circle"></span><span class="show-number">Показать .. 10-53-28</span><a href="#">+7(960)
-              810-53-28</a>
-          </p>
-          <a href="#" data-fancybox="callme-modal" data-src="#callme-modal" href="javascript:;"><img
-              src="../images/order-call-arrow.svg" alt="" />
-            Запросить звонок</a>
-        </div>
+    <div class="mobile-header__row">
+      <a class="logo-link" href="#">
+        <img class="logo-link__image" src="../images/logo.svg" alt="">
+      </a>
+      <div class="mobile-header__item">
+        <button data-open-search-modal="" class="mobile-header__search-button">
+          <svg class="mobile-header__search-icon" width="17" height="17" viewBox="0 0 17 17" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M1.26564 6.42777C1.26564 9.29027 3.5638 11.5925 6.37631 11.5925C9.18882 11.5925 11.487 9.29027 11.487 6.42777C11.487 3.56527 9.18882 1.26301 6.37631 1.26301C3.5638 1.26301 1.26564 3.56527 1.26564 6.42777Z"
+              stroke="black" stroke-width="2.52602"></path>
+            <line y1="-1.26301" x2="7.5559" y2="-1.26301"
+              transform="matrix(0.749811 0.661652 0.655349 -0.755326 11.3359 10.001)" stroke="black"
+              stroke-width="2.52602"></line>
+          </svg>
+        </button>
+        <a href="#menu" id="my-button" data-open-menu="" class="mobile-header__hamburger-button">
+          <div class="mobile-header__hamburger-line"></div>
+        </a>
       </div>
     </div>
   </div>
-
-  <div class="catalog-box">
+</section> <div class="search-modal-window">
+  <div class="search-modal-window__header">
     <div class="container">
-      <ul class="hover--color hover--underline link--arrow-left">
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Образец выделения активного пункта 1</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Образец выделения активного пункта 2</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Образец выделения активного пункта 3</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">В одну строку название</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Название пункта меню в 2 строки</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Пример, когда иконка слева от текста</a>
-        </li>
-
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Образец выделения активного пункта 1</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Образец выделения активного пункта 2</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Образец выделения активного пункта 3</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">В одну строку название</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Название пункта меню в 2 строки</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Название пункта меню в 2 строки</a>
-        </li>
-
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Категория товара или раздел сайта Три стр...</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Категория товара или раздел сайта Три стр...</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Категория товара или раздел сайта Три стр...</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Категория товара или раздел сайта Три стр...</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Категория товара или раздел сайта Три стр...</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Категория товара или раздел сайта Три стр...</a>
-        </li>
-
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Категория товара или раздел сайта Три стр...</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Категория товара или раздел сайта Три стр...</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Категория товара или раздел сайта Три стр...</a>
-        </li>
-        <li>
-          <span><img src="../images/link-arrow.svg"
-              alt="" /></span>
-          <a href="#">Категория товара или раздел сайта Три стр...</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="header--mob">
-  <div class="container">
-    <div class="row">
-      <div class="col-3">
-        <div class="logo">
-          <a href="#"><img src="../images/logo.svg"
-              alt="" /></a>
-        </div>
-      </div>
-      <div class="col-5">
-        <div class="phone--box">
-          <a href="#">+7-927-711-9393</a>
-          <a href="#">+7-927-711-9393</a>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="burger-box">
-          <a class="tel-mob" href="#" data-fancybox="callme-modal-menu" data-src="#callme-modal"><img
-              src="../images/tel-mob-icon.svg" alt="" />
-            Заказать звонок</a>
-          <button class="btn" id="my-button">
-            <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="17" height="2" rx="1" fill="#2363D1" />
-              <rect y="6" width="17" height="2" rx="1" fill="#2363D1" />
-              <rect y="12" width="17" height="2" rx="1" fill="#2363D1" />
+      <div class="g-row search-modal-window__row">
+        <form class="search-modal-window__input-form">
+          <input data-clear-input="search-menu" name="q" data-min-chars="3" data-search-url="/search" value
+            autocomplete="off" data-search-input="search-modal" class="search-modal-window__input" type="text">
+          <button data-clear-input-button="search-menu" type="button" data-clear-input
+            class="search-modal-window__clear-input"><svg width="9" height="9" viewBox="0 0 9 9" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 8L7.99998 1" stroke="#E5E5EA" stroke-width="0.991667" stroke-linecap="round" />
+              <path d="M8 8L1 1" stroke="#E5E5EA" stroke-width="0.991667" stroke-linecap="round" />
             </svg>
           </button>
-        </div>
+        </form>
+        <button type="button" data-close-search-modal class="g-link search-modal-window__cancel">Отмена</button>
       </div>
     </div>
   </div>
-</section>
-
-<section class="header--bottom-mob">
-  <div class="container">
-    <div class="row">
-      <div class="col-7">
-        <div class="search--box">
-          <div id="overlay_mob" onclick="javascript: close_all_mob();"></div>
-          <form action="" class="s-icon-right">
-            <input type="text" autocomplete="off" id="edit_search_mob" onkeyup="javascript: find_my_div_mob();" />
-            <button class="btn submit">
-              <img src="../images/s-icon-mob.svg" alt="" />
-            </button>
-          </form>
-          <div id="search-result-mob">
-            <a href="#" id="user_0" class="s-item-link">
-              <div class="s-item-img">
-                <img
-                  src="../images/30851ff8e294859c3b812fef189cce5b.jpeg"
-                  alt="" />
-              </div>
-              <div class="s-item-info">
-                <span class="s-item-title">Золотое яблоко</span>
-                <span class="s-item-price">247$</span>
-              </div>
-            </a>
-            <a href="#" id="user_1" class="s-item-link">
-              <div class="s-item-img">
-                <img
-                  src="../images/30851ff8e294859c3b812fef189cce5b.jpeg"
-                  alt="" />
-              </div>
-              <div class="s-item-info">
-                <span class="s-item-title">доска asd asd asd asdas </span>
-                <span class="s-item-price">247$</span>
-              </div>
-            </a>
-            <a href="#" id="user_2" class="s-item-link">
-              <div class="s-item-img">
-                <img
-                  src="../images/30851ff8e294859c3b812fef189cce5b.jpeg"
-                  alt="" />
-              </div>
-              <div class="s-item-info">
-                <span class="s-item-title">корзина</span>
-                <span class="s-item-price">247$</span>
-              </div>
-            </a>
-            <a href="#" id="user_3" class="s-item-link">
-              <div class="s-item-img">
-                <img
-                  src="../images/30851ff8e294859c3b812fef189cce5b.jpeg"
-                  alt="" />
-              </div>
-              <div class="s-item-info">
-                <span class="s-item-title">Золотое яблоко</span>
-                <span class="s-item-price">247$</span>
-              </div>
-            </a>
-            <a href="#" id="user_4" class="s-item-link">
-              <div class="s-item-img">
-                <img
-                  src="../images/30851ff8e294859c3b812fef189cce5b.jpeg"
-                  alt="" />
-              </div>
-              <div class="s-item-info">
-                <span class="s-item-title">доска asd asd asd asdas </span>
-                <span class="s-item-price">247$</span>
-              </div>
-            </a>
-            <a href="#" id="user_5" class="s-item-link">
-              <div class="s-item-img">
-                <img
-                  src="../images/30851ff8e294859c3b812fef189cce5b.jpeg"
-                  alt="" />
-              </div>
-              <div class="s-item-info">
-                <span class="s-item-title">корзина</span>
-                <span class="s-item-price">247$</span>
-              </div>
-            </a>
-
-            <a href="#" class="all-items-link">Все каталоги</a>
-          </div>
+  <div class="search-modal-window__search-results">
+    <div class="container" data-search-results="search-modal">
+      <a href="/catalog/product/tovar-1/" class="s-item-link" style="display: flex">
+        <div class="s-item-info">
+          <span class="s-item-title">Товар 1</span>
+          <span class="s-item-price">
+            1&nbsp;000,00 ₽/шт.
+          </span>
         </div>
-      </div>
-      <div class="col-5">
-        <div class="option-items">
-          <a href="#" class="custom-mob-cart">
-            <span>157356</span>
-            <img src="../images/favorite-icon-white.svg" alt="" />
-          </a>
-          <a href="#" class="custom-mob-cart">
-            <span>15735622</span>
-            <img src="../images/cart-icon-white.svg" alt="" />
-          </a>
+      </a>
+      <a href="/catalog/product/tovar-1/" class="s-item-link" style="display: flex">
+        <div class="s-item-info">
+          <span class="s-item-title">Товар 1</span>
+          <span class="s-item-price">
+            1&nbsp;000,00 ₽/шт.
+          </span>
         </div>
-      </div>
+      </a>
+      <a href="/catalog/product/tovar-1/" class="s-item-link" style="display: flex">
+        <div class="s-item-img">
+          <img src="http://stage.nastroyker.ru/media/stage_cache/43/e7/43e76b625aa4040e081cf0a11ffe0ca8.png"
+            alt="Товар 1">
+        </div>
+        <div class="s-item-info">
+          <span class="s-item-title">Товар 1</span>
+          <span class="s-item-price">
+            1&nbsp;000,00 ₽/шт.
+          </span>
+        </div>
+      </a>
     </div>
   </div>
-</section> <nav data-position="left-front" id="menu">
+</div> <nav data-position="right-front" id="menu">
   <ul>
     <li class="menu-list__item">
       <a href="#" class="menu-list__link">Каталог</a>
@@ -920,8 +604,100 @@
     </div>
   </div>
 </footer>    </div>
+    <div class="bottom-mobile-menu d-block d-lg-none">
+  <div class="bottom-mobile-menu-list bottom-mobile-menu-list_plates">
+    <a class="g-link bottom-mobile-menu-list__link" href="#">О компании
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">Портфолио
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">Реквизиты
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">Контакты
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">О компании
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">Портфолио
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">Реквизиты
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">Контакты
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">О компании
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">Портфолио
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">Реквизиты
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">Контакты
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">О компании
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">Портфолио
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">Реквизиты
+    </a>
+    <a class="g-link bottom-mobile-menu-list__link" href="#">Контакты
+    </a>
+  </div>
 
-    <svg width="0" height="0" class="hidden">
+  <div class="bottom-mobile-menu__content">
+    <div class="bottom-mobile-menu__row">
+      <a class="bottom-mobile-menu-button bottom-mobile-menu-button_active" href="#">
+        <div class="bottom-mobile-menu-button__inner">
+          <div class="bottom-mobile-menu-button__icon-wrapper">
+            <img class="bottom-mobile-menu-button__icon bottom-mobile-menu-button__icon_hidden"
+              src="../images/home.svg" alt="">
+            <img class="bottom-mobile-menu-button__icon bottom-mobile-menu-button__icon_always-active"
+              src="../images/home-active.svg" alt="">
+          </div>
+        </div>
+      </a>
+      <a href="#" class="bottom-mobile-menu-button">
+        <div class="bottom-mobile-menu-button__inner">
+          <div class="bottom-mobile-menu-button__icon-wrapper">
+            <img class="bottom-mobile-menu-button__icon"
+              src="../images/search.svg" alt="">
+            <img class="bottom-mobile-menu-button__icon bottom-mobile-menu-button__icon_active"
+              src="../images/search-active.svg" alt="">
+          </div>
+        </div>
+      </a>
+      <a class="bottom-mobile-menu-button" href="#">
+        <div class="bottom-mobile-menu-button__inner">
+          <div class="bottom-mobile-menu-button__icon-wrapper">
+            <span class="bottom-mobile-menu-button__counter">99</span>
+            <img class="bottom-mobile-menu-button__icon"
+              src="../images/cart.svg" alt="">
+            <img class="bottom-mobile-menu-button__icon bottom-mobile-menu-button__icon_active"
+              src="../images/cart-active.svg" alt="">
+          </div>
+        </div>
+      </a>
+      <a class="bottom-mobile-menu-button" href="#">
+        <div class="bottom-mobile-menu-button__inner">
+          <div class="bottom-mobile-menu-button__icon-wrapper">
+            <span class="bottom-mobile-menu-button__counter">99</span>
+            <img class="bottom-mobile-menu-button__icon"
+              src="../images/favorite.svg" alt="">
+            <img class="bottom-mobile-menu-button__icon bottom-mobile-menu-button__icon_active"
+              src="../images/favorite-active.svg" alt="">
+          </div>
+        </div>
+      </a>
+      <button data-toggle-bottom-dropdown="" class="bottom-mobile-menu-button">
+        <div class="bottom-mobile-menu-button__inner">
+          <div class="bottom-mobile-menu-button__icon-wrapper">
+            <img class="bottom-mobile-menu-button__icon"
+              src="../images/other.svg" alt="">
+            <img class="bottom-mobile-menu-button__icon bottom-mobile-menu-button__icon_active"
+              src="../images/other-active.svg" alt="">
+          </div>
+        </div>
+      </button>
+    </div>
+  </div>
+
+</div> <svg width="0" height="0" class="hidden">
   <symbol id="share-link" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5334 2.19123L12.999 2.76039L5.60707 9.35089L12.9867 15.3582L12.5457 15.9485L4.47343 9.37725L12.5334 2.19123Z"/>
     <path d="M14 2.87126C14 3.90473 13.1974 4.74252 12.2074 4.74252C11.2173 4.74252 10.4147 3.90473 10.4147 2.87126C10.4147 1.83779 11.2173 1 12.2074 1C13.1974 1 14 1.83779 14 2.87126Z"/>
@@ -1078,40 +854,5 @@
     <path fill-rule="evenodd" clip-rule="evenodd" d="M48.775.103L11.293 0l45.251 13.358L59 10.547 48.775.103z"
       fill="currentColor"></path>
   </symbol>
-</svg> <div id="callme-modal" class="modal" style="display: none">
-  <div class="modal-content">
-    <span class="content-title content-title--min center h2">Заказать обратный звонок</span>
-    <form id="crm-callme-request-form" class="card-body form-inline callme-request-form" method="post"
-      action="/crm/callme-request/" onsubmit="">
-      <input type="hidden" name="csrfmiddlewaretoken"
-        value="FcUv0c8WVshb8HUBRqDXG302JnlqVjKR1s8yOz8Y3ZpCgASjJDa2utFsWNmSwlmR" />
-
-      <input type="hidden" name="url" value="/" />
-
-      <div class="form-group">
-        <input type="text" class="form-control" name="name" autocomplete="off" required />
-        <label for="name" class="label-name">
-          <span class="content-name"> Как Вас зовут </span>
-        </label>
-      </div>
-
-      <div class="form-group">
-        <input type="tel" class="form-control phone" name="phone" autocomplete="off" required />
-        <label for="phone" class="label-name">
-          <span class="content-name"> Ваш Телефон </span>
-        </label>
-      </div>
-
-      <div class="form-group-inline">
-        <button type="submit" class="btn btn--main-min button-theme button-theme_primary">
-          Отправить
-        </button>
-        <a class="form-close btn-close" data-fancybox-close>Закрыть</a>
-      </div>
-
-      <span class="form-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с
-        нашей политикой конфиденциальности</span>
-    </form>
-  </div>
-</div>  </body>
+</svg>  </body>
 </html>

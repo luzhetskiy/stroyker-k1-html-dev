@@ -53,7 +53,7 @@
   }
 
   .__header .options-box {
-    width: 182px;
+    width: 180px;
   }
 
   .__header .options-box .nav-items li {
@@ -61,15 +61,20 @@
   }
 
   .__header .options-box .nav-items li a {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .__header .option-items li {
-    padding-right: 8px;
+    padding-right: 6px;
+  }
+
+  .__header .option-items li img {
+    max-width: 14px;
   }
 
   .__header .option-items li a {
-    font-size: 11px;
+    font-size: 10px;
+    padding-left: 16px;
   }
 
   .__header .option-items li:last-child {

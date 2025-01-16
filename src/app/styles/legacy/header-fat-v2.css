@@ -82,8 +82,7 @@
 }
 
 .__fat-v2-options ul li a {
-  font-size: 14px;
-  line-height: 15px;
+  font-size: 12px;
   color: #fff;
   font-family: var(--rb);
   transition: 0.2s;
@@ -93,7 +92,8 @@
 }
 
 .__fat-v2-options ul li img {
-  margin-right: 8px;
+  flex-shrink: 0;
+  margin-right: 6px;
 }
 
 .__fat-v2-options ul li a.active,

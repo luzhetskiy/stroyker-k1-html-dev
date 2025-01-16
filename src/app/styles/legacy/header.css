@@ -210,7 +210,7 @@
   justify-content: space-between;
   max-height: 48px;
   height: 100%;
-  width: 226px;
+  width: 232px;
   margin-left: -30px;
   align-items: flex-start;
 }
@@ -268,11 +268,11 @@
 }
 
 .__header .option-items li {
-  padding-right: 13px;
+  padding-right: 10px;
 }
 
 .__header .option-items li a {
-  font-size: 14px;
+  font-size: 12px;
   color: #000;
   font-family: var(--rb);
   transition: 0.2s;

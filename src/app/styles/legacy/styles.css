@@ -1284,9 +1284,12 @@ p:last-child {
 
 @media (max-width: 767px) {
   .header-cart {
-    margin-left: 15px;
+    margin-left: 10px;
     padding-left: 0;
-    margin-right: 10px;
+  }
+
+  .header-cart img {
+    width: 23px;
   }
 }
 
@@ -1349,7 +1352,7 @@ p:last-child {
     font-size: 8px;
     position: absolute;
     top: -5px;
-    right: -10px;
+    right: -5px;
     background: #d74853;
   }
 }
