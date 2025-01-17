@@ -48,16 +48,16 @@
     bottom: 10px
 
   &__buttons
-    min-height: 22px
+    min-height: 40px
     display: flex
     align-items: center
-    gap: 20px
+    gap: 10px
     position: absolute
-    left: 0
-    bottom: 10px
+    right: 0
+    bottom: 20px
 
     @media (min-width: 768px)
-      right: 0
+      right: 20px
       left: auto
       bottom: auto
 
@@ -69,6 +69,15 @@
     svg
       width: 20px
       height: 20px
+
+  &__favorite-button
+    display: flex
+    align-items: center
+    justify-content: center
+
+    svg
+      width: 18px
+      height: 18px
 
   &__description
     max-width: 100%
@@ -87,6 +96,15 @@
     border: none
 
   .cart-item
+
+    &__buttons
+      gap: 20px
+      min-height: 22px
+      left: 0
+      bottom: 10px
+
+      @media (min-width: 768px)
+        right: 0
 
     &__checkbox
       width: 18px

@@ -215,7 +215,11 @@
   width: 100%
 
   &--btn
-    width: calc(100% - 65px)
+    width: auto
+    flex: 1
+    font-weight: 400
+    margin: 0 !important
+
 
 @media (max-width: 767px)
   .shopping-cart-product .not-available
@@ -261,6 +265,45 @@
 .st-button_add-to-favorite
   min-width: 52px
   max-width: 52px
+
+  &:is(:hover, .active)
+    fill: var(--color-button-secondary-text, #2363D1)
+    color: var(--color-button-secondary-text, #2363D1)
+    background-color: var(--color-button-secondary-background, #fff)
+    border-color: var(--color-button-secondary-border, #B7CBE5)
+
+    .icon-container
+
+      .st-button__icon_favorite
+
+        &:first-child
+          opacity: 0
+          visibility: hidden
+
+        &:last-child
+          opacity: 1
+          visibility: visible
+
+  .icon-container
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    position: relative
+
+    .st-button__icon_favorite
+      // transition-property: opacity, visibility
+      // transition-duration: 300ms
+      // transition-timing-function: ease-in-out
+
+      &:last-child
+        position: absolute
+        opacity: 0
+        visibility: hidden
+
+  &--lg
+    min-width: 82px
+    max-width: 82px
+    height: 48px
 
 .st-button_without-price
   width: 100%

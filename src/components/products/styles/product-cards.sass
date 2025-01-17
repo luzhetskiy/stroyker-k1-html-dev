@@ -282,7 +282,7 @@
   &__price-block
     display: flex
     flex-direction: column
-    gap: 15px
+    gap: 20px
 
   &__personal-cost
     font-weight: 400
@@ -373,7 +373,7 @@
   &__modification-container
     display: flex
     flex-direction: column
-    gap: 5px
+    gap: 20px
 
   &__rating
     display: -webkit-box
@@ -448,6 +448,22 @@
     display: flex
     flex-direction: column
     gap: 5px
+
+    &--row
+      flex-direction: row
+      align-items: center
+      gap: 20px
+
+      .product-card__modification-title
+        width: auto
+
+    .product-card__accessibility-title
+      font-weight: 400
+
+  &__accessibility-title
+    font-weight: 700
+    color: var(--gray-color-550)
+    margin-bottom: 4px
 
   &__select-options
     display: flex
