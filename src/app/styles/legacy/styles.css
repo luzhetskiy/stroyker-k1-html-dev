@@ -1287,15 +1287,17 @@ p:last-child {
     margin-left: 10px;
     padding-left: 0;
   }
-
-  .header-cart img {
-    width: 23px;
-  }
 }
 
-.header-cart .icon {
+.header-cart .icon,
+.header-cart .icon-img {
   position: absolute;
   left: 0;
+}
+
+.header-cart .icon-img {
+  width: auto;
+  height: 24px;
 }
 
 @media (max-width: 767px) {
@@ -1304,6 +1306,11 @@ p:last-child {
     top: 0px;
     position: relative;
     height: 30px;
+  }
+
+  .header-cart .icon-img {
+    height: 20px;
+    position: static;
   }
 }
 
