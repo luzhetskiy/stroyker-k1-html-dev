@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         observer.observe(addressList, {
-            childList: true, // Наблюдение за изменениями в дочерних элементах
-            subtree: true   // Наблюдение за вложенными элементами
+            subtree: true,
+            attributes: true
         })
     }
 
