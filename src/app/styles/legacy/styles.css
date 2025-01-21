@@ -7241,7 +7241,11 @@ ol.number-list li:before {
 }
 
 .tab-content {
-  display: none;
+  display: none !important;
+}
+
+.tab-content.active {
+  display: block !important;
 }
 
 .tab_drawer_heading {
