@@ -2220,6 +2220,11 @@ header .header-fixed-content .header-phone {
   .breadcrumbs__sep:first-child {
     margin-left: -3px;
   }
+
+  .breadcrumbs a {
+    align-items: stretch;
+  }
+
   .breadcrumbs a::before {
     display: none;
   }

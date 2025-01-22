@@ -2473,6 +2473,14 @@ p:last-child {
   right: 15px;
 }
 
+.home-banner .tabs-content {
+  display: none !important;
+}
+
+.home-banner .tabs-content.active {
+  display: block !important;
+}
+
 @media only screen and (max-width: 1024px) {
 }
 
@@ -7241,11 +7249,7 @@ ol.number-list li:before {
 }
 
 .tab-content {
-  display: none !important;
-}
-
-.tab-content.active {
-  display: block !important;
+  display: none;
 }
 
 .tab_drawer_heading {
@@ -11115,9 +11119,14 @@ canvas {
   color: var(--white-color);
 }
 
+.recaptcha-terms {
+  font-size: 12px;
+}
+
 .header-search-results {
   height: 400px;
   max-height: 400px;
+  overflow-x: auto;
   position: absolute;
   top: 53px;
   left: 0;
