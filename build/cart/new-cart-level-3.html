@@ -93,14 +93,19 @@
           <div class="mobile-menu__item mobile-show"></div>
           <div class="mobile-menu__item mobile-show">
             <div class="header-search search--box">
-              <input name="q" type="text" autocomplete="off" class="search_input_mobile" value="" data-min-chars="3"
-                data-search-url="/search" placeholder="Поиск..." />
-              <button>
+              <input name="q" type="text" autocomplete="off" class="search_input_mobile" placeholder="Поиск..."
+                data-search-url="/search"
+                data-search-input="header-search-mobile"
+                data-min-chars="3"
+              />
+              <button
+                data-search-button="header-search-mobile">
                 <svg class="icon-svg">
                   <use xlink:href="#search-icon"></use>
                 </svg>
               </button>
-              <div class="header-search-results" id="search-result-mob" style="display: none"></div>
+              <div class="header-search-results" id="search-result-mob" style="display: none"
+                data-search-results="header-search-mobile"></div>
             </div>
           </div>
           <div class="mobile-ul">
@@ -210,14 +215,19 @@
           Проекты домов
         </a>
         <div class="header-search mobile-hide header-search--inner">
-          <input name="q" type="text" autocomplete="off" class="search_input" value="" data-min-chars="3"
-            data-search-url="/search" placeholder="Поиск..." />
-          <button>
+          <input name="q" type="text" autocomplete="off" class="search_input" placeholder="Поиск..."
+            data-search-url="/search"
+            data-search-input="header-search"
+            data-min-chars="3"
+          />
+          <button
+            data-search-button="header-search">
             <svg class="icon-svg">
               <use xlink:href="#search-icon"></use>
             </svg>
           </button>
-          <div id="search-result-container" style="display: none" class="header-search-results"></div>
+          <div id="search-result-container" style="display: none" class="header-search-results"
+            data-search-results="header-search"></div>
         </div>
         <div class="header-body__content-right">
           <div class="header-user mobile-hide">

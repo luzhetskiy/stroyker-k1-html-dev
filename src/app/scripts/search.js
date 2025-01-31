@@ -1,5 +1,6 @@
 $(document).ready(function ($) {
   $("[data-search-button]").on("click", (event) => {
+    console.log('click');
     const id = $(event.currentTarget).attr("data-search-button");
     const input = $(`[data-search-input="${id}"]`);
     const value = input.val();
@@ -8,6 +9,7 @@ $(document).ready(function ($) {
   });
 
   $("[data-search-input]").on("focus keyup paste", (event) => {
+    console.log('focus keyup paste');
     const input = $(event.currentTarget);
     const value = input.val();
     const id = input.attr("data-search-input");
@@ -21,7 +23,11 @@ $(document).ready(function ($) {
       }
     };
 
-    if (event.key === "Enter") return (window.location = searchUrl + "?q=" + value);
+    if (event.key === "Enter") {
+      console.log('Enter');
+      
+      return (window.location = searchUrl + "?q=" + value)
+    }
 
     if (value.length < searchMinChars) return;
 
