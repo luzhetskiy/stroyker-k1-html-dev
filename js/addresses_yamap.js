@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     const addressList = document.querySelector('ul[data-role="address-location-select"]')
 
     if (addressList) {
