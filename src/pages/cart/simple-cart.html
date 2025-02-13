@@ -104,49 +104,133 @@
                     value="dxvWIphNsZMSkUjJhLIlMbScsNCqDjuSZsUHxNeN663VpBw8AN2g0nXrugtHipAd"
                   />
 
-                  <div class="simple-order-form__group simple-order-form__column">
-                    <h3 class="simple-order-form__title">Предпочтительный вариант доставки:</h3>
-                    <ul id="id_delivery_variant">
-                      <li>
-                        <div class="new-radio">
-                          <input
-                            type="radio"
-                            name="delivery_variant"
-                            value="самовывоз"
-                            class="new-radio__input"
-                            id="id_delivery_variant_0"
-                          />
-                          <label class="new-radio__label" for="id_delivery_variant_0"> самовывоз </label>
+                  <!-- Предпочтительный вариант доставки:, Выберите пункт самовывоза:, Предпочтительный вариант оплаты: -->
+                  <div class="d-gridgrid-columns-1 gap-10">
+                    <div class="simple-order-form__group simple-order-form__column d-flex flex-column gap-15">
+                      <h3 class="simple-order-form__title mb-0">Предпочтительный вариант доставки:</h3>
+                        <div class="d-grid grid-columns-sm-2 grid-columns-md-2 grid-columns-xl-2 grid-columns-lg-2 gap-10">
+                          <div class="d-flex flex-row gap-10">
+                            <input
+                              data-input="delivery_type"
+                              data-input-value="Самовывоз"
+                              data-radio="pickup"
+                              class="cart-radio mt-3"
+                              name="delivery"
+                              id="pickup"
+                              type="radio"
+                              data-required-field="delivery"/>
+                            <label for="pickup" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">Самовывоз</p>
+                            </label>
+                          </div>
+                          <div class="d-flex flex-row gap-10">
+                            <input
+                              class="cart-radio mt-3"
+                              name="delivery"
+                              data-radio=""
+                              id="delivery-point"
+                              type="radio"
+                              data-input-value="До пункта выдачи"
+                              data-required-field="delivery"
+                            />
+                            <label for="delivery-point" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">До пункта выдачи</p>
+                            </label>
+                          </div>
+                          <div class="d-flex flex-row gap-10">
+                            <input
+                              data-input="delivery_type"
+                              data-input-value="По адресу"
+                              class="cart-radio mt-3"
+                              data-radio=""
+                              name="delivery"
+                              id="adress"
+                              type="radio"
+                              data-required-field="delivery"
+                            />
+                            <label for="adress" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">По адресу</p>
+                            </label>
+                          </div>
                         </div>
-                      </li>
-
-                      <li>
-                        <div class="new-radio">
+                    </div>
+                    <div data-radio-content="pickup" class="d-none d-flex flex-column gap-15">
+                      <h3 class="simple-order-form__title mb-0">Выберите пункт самовывоза:</h3>
+                      <div class="simple-order-form__column d-grid grid-columns-sm-2 grid-columns-md-2 grid-columns-xl-2 grid-columns-lg-2 gap-10">
+                        <div class="d-flex flex-row gap-10">
                           <input
-                            type="radio"
-                            name="delivery_variant"
-                            value="доставка по адресу"
-                            class="new-radio__input"
-                            id="id_delivery_variant_1"
-                          />
-                          <label class="new-radio__label" for="id_delivery_variant_1"> доставка по адресу </label>
+                          class="cart-radio mt-3"
+                          name="delivery-point"
+                          id="delivery-point-1"
+                          type="radio"
+                          data-input="delivery_cost"
+                          data-input-value="Самара"
+                        />
+                        <label for="delivery-point-1" class="d-flex flex-column gap-2">
+                          <p class="text size-16 color-gray-700">Самара</p>
+                          <p class="text size-12 color-gray-550">Ракитовское шоссе, 1</p>
+                        </label>
                         </div>
-                      </li>
-
-                      <li>
-                        <div class="new-radio">
+                        <div class="d-flex flex-row gap-10">
                           <input
-                            type="radio"
-                            name="delivery_variant"
-                            value="доставка до ТК"
-                            class="new-radio__input"
-                            id="id_delivery_variant_2"
-                          />
-                          <label class="new-radio__label" for="id_delivery_variant_2"> доставка до ТК </label>
+                          class="cart-radio mt-3"
+                          name="delivery-point"
+                          id="delivery-point-2"
+                          type="radio"
+                          data-input="delivery_cost"
+                          data-input-value="Тольятти"
+                        />
+                        <label for="delivery-point-2" class="d-flex flex-column gap-2">
+                          <p class="text size-16 color-gray-700">Тольятти</p>
+                          <p class="text size-12 color-gray-550">Московское шоссе, 143Б</p>
+                        </label>
                         </div>
-                      </li>
-                    </ul>
-                  </div>
+                        <div class="d-flex flex-row gap-10">
+                          <input
+                          class="cart-radio mt-3"
+                          name="delivery-point"
+                          id="delivery-point-3"
+                          type="radio"
+                          data-input="delivery_cost"
+                          data-input-value="Пункт без коммента"
+                        />
+                        <label for="delivery-point-3" class="d-flex flex-column gap-2">
+                          <p class="text size-16 color-gray-700">Пункт без коммента</p>
+                        </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-radio-content="*" class="d-none d-flex flex-column gap-15">
+                        <h3 class="simple-order-form__title mb-0">Предпочтительный вариант оплаты:</h3>
+                        <div class="simple-order-form__column d-grid grid-columns-sm-2 grid-columns-md-2 grid-columns-xl-2 grid-columns-lg-2 gap-10">
+                          <div class="d-flex flex-row gap-10">
+                            <input data-input="payment" class="cart-radio mt-3" name="payment" id="payment-1" type="radio" data-input-value="Онлайн" data-required-field="payment">
+                            <label for="payment-1" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">Онлайн</p>
+                            </label>
+                          </div>
+                          <div class="d-flex flex-row gap-10">
+                            <input data-input="payment" class="cart-radio mt-3" name="payment" id="payment-2" type="radio" data-input-value="Картой" data-required-field="payment">
+                            <label for="payment-2" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">Картой</p>
+                            </label>
+                          </div>
+                          <div class="d-flex flex-row gap-10">
+                            <input data-input="payment" class="cart-radio mt-3" name="payment" id="payment-3" type="radio" data-input-value="Наличными" data-required-field="payment">
+                            <label for="payment-3" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">Наличными</p>
+                            </label>
+                          </div>
+                          <div class="d-flex flex-row gap-10">
+                            <input data-input="payment" class="cart-radio mt-3" name="payment" id="payment-4" type="radio" data-input-value="Выписать счёт" data-required-field="payment">
+                            <label for="payment-4" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">Выписать счёт</p>
+                            </label>
+                          </div>
+                        </div>
+                    </div>
+                  </div> 
+                  <!-- КОНЕЦ Предпочтительный вариант доставки:, Выберите пункт самовывоза:, Предпочтительный вариант оплаты: -->
 
                   <div class="simple-order-form__group simple-order-form__column" style="display: none">
                     <h3 class="simple-order-form__title">Предпочтительный вариант оплаты:</h3>
