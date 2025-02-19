@@ -344,34 +344,35 @@ section.feedback-form .form-control {
 .catalog-menu-item {
   height: var(--category-preview-height, 140px);
 }
-.advertise {
-  margin: 40px 0;
-}
-.advertise__container {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-.advertise__block {
-  display: block;
-  width: calc(25% - 15px);
-  height: auto;
-  background: #fff;
-  position: relative;
-  overflow: hidden;
-}
-.advertise__block img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition: transform .15s ease-out;
-}
-.advertise__block:hover img {
-  transform: scale(1.05);
+.advertise-mobile {
+  display: none;
 }
 @media screen and (max-width: 575px) {
-  .advertise__block {
-      width: calc(50% - 15px);
+  .advertise-mobile {
+    display: block;
+    margin: 40px 0;
+  }
+  .advertise-mobile__container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .advertise-mobile__block {
+    display: block;
+    width: calc(50% - 15px);
+    height: auto;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .advertise-mobile__block img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform .15s ease-out;
+  }
+  .advertise-mobile__block:hover img {
+    transform: scale(1.05);
   }
 }
 .filter-item-title {
