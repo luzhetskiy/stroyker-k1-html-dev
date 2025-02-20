@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="@src/../node_modules/mmenu-js/dist/mmenu.css" />
+    <link rel="stylesheet" href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css" />
+    <link rel="stylesheet" href="@src/../node_modules/nouislider/dist/nouislider.css" />
+    <link rel="stylesheet" href="@src/../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="@src/../node_modules/tippy.js/dist/tippy.css" />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+    <script defer src="@src/app/main.js"></script>
+    <!-- Для демонстрации карты -->
+    <!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=c3161078-41ce-4809-936f-dd4c9bcc8a50&lang=ru_RU" type="text/javascript"></script>
+    <script defer type="text/javascript">
+        ymaps.ready(init);
+        function init(){
+            var myMap = new ymaps.Map("yamap_delivery", {
+                center: [55.76, 37.64],
+                zoom: 7
+            });
+        }
+    </script> -->
+  </head>
+
+  <body class="frontpage">
+    <div class="page">
+      <header><%~ include("/components/headers/templates/header-default/header-default.html") %></header>
+
+      <main>
+        <section class="section-dark section-cart">
+          <div class="container">
+            <div class="page-head">
+              <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Главная" href="/">
+                    Главная
+                    <meta itemprop="name" content="Главная" />
+                  </a>
+                  <meta itemprop="position" content="1" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Корзина" href="/cart/">
+                    Корзина
+                    <meta itemprop="name" content="Корзина" />
+                  </a>
+                  <meta itemprop="position" content="2" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Доставка" href="/cart/delivery/">
+                    Доставка
+                    <meta itemprop="name" content="Доставка" />
+                  </a>
+                  <meta itemprop="position" content="3" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                Оплата
+              </div>
+            </div>
+
+            <div class="content-block">
+              <div class="d-flex flex-column gap-0 gap-md-20">
+                <h1 class="title size-22 size-md-30">Оплата</h1>
+                <div class="d-grid grid-columns-lg-10 grid-columns-1 gap-20">
+                  <form id="cart-form" class="grid-span-lg-6 grid-span-xl-7">
+                    <div class="d-flex flex-column bg-white pt-20 pb-40 gap-40">
+                      <div class="d-flex flex-column gap-15 pe-lg-65 pe-md-40 ps-md-40">
+                        <h2 class="sub-title">Способ оплаты</h2>
+                        <div
+                          class="d-grid grid-columns-1 grid-columns-md-3 grid-columns-xl-3 grid-columns-lg-1 gap-lg-30 gap-20"
+                        >
+                          <div class="d-flex flex-row gap-10">
+                            <input
+                              data-input="payment"
+                              data-input-value="Онлайн"
+                              class="cart-radio mt-3"
+                              name="payment"
+                              id="payment-1"
+                              type="radio"
+                              data-required-field="payment"
+                            />
+                            <label for="payment-1" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">Онлайн</p>
+                              <p class="text size-12 color-gray-550">Alfa Pay, Yandex Pay</p>
+                            </label>
+                          </div>
+                          <div class="d-flex flex-row gap-10">
+                            <input
+                              data-input="payment"
+                              data-input-value="Картой"
+                              class="cart-radio mt-3"
+                              name="payment"
+                              id="payment-2"
+                              type="radio"
+                              data-required-field="payment"
+                            />
+                            <label for="payment-2" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">Картой</p>
+                              <p class="text size-12 color-gray-550">При получении</p>
+                            </label>
+                          </div>
+                          <div class="d-flex flex-row gap-10">
+                            <input
+                              data-input="payment"
+                              data-input-value="Наличными"
+                              class="cart-radio mt-3"
+                              name="payment"
+                              id="payment-3"
+                              type="radio"
+                              data-required-field="payment"
+                            />
+                            <label for="payment-3" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">Наличными</p>
+                              <p class="text size-12 color-gray-550">При получении</p>
+                            </label>
+                          </div>
+                          <div class="d-flex flex-row gap-10">
+                            <input
+                              data-input="payment"
+                              data-input-value="Выписать счёт"
+                              class="cart-radio mt-3"
+                              name="payment"
+                              id="payment-4"
+                              type="radio"
+                              data-required-field="payment"
+                            />
+                            <label for="payment-4" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">Выписать счёт</p>
+                              <p class="text size-12 color-gray-550">Онлайн на сайте</p>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column gap-10 pe-md-40 ps-md-40">
+                        <h2 class="sub-title">Комментарий</h2>
+                        <div class="d-flex flex-column gap-10 align-items-start">
+                          <div class="form-group mb-0">
+                            <textarea
+                              data-input="comment"
+                              class="form-control"
+                              name="message"
+                              autocomplete="off"
+                              placeholder="Комментарий"
+                            ></textarea>
+                          </div>
+                          <button disabled data-wait-requred="payment" data-click-target="submit" type="submit" class="btn size-16 ps-md-50 pe-md-50">Оформить заказ</button>
+                          <div class="d-grid grid-columns-lg-7 grid-columns-1 gap-grid">
+                            <div class="grid-span-lg-5 text size-12 color-gray-550">
+                              Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с
+                              нашей политикой конфиденциальности
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column gap-20 d-lg-none pe-lg-65 pe-md-40 ps-md-40">
+                        <div class="d-flex flex-column gap-20">
+                          <div class="d-flex flex-column gap-15">
+                            <div class="d-flex flex-column gap-10">
+                              <p class="text d-flex flex-wrap gap-5">
+                                <span>Товары: 3</span>
+                                <span class="separator-dot"></span>
+                                <span>2500 кг</span>
+                                <span class="separator-dot"></span>
+                                <span>6,5 м3</span>
+  
+                                <span class="ms-auto d-inline-block">89 537,50 ₽</span>
+                              </p>
+  
+                              <div class="d-flex flex-row justify-content-between">
+                                <p class="text weight-700 size-18">Итого:</p>
+                                <p class="text weight-700 size-20">89 537,50 ₽</p>
+                              </div>
+                            </div>
+                            <p class="text size-12 color-gray-550">
+                              Дата и стоимость доставки рассчитываются после оформления заказа
+                            </p>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column gap-10">
+                          <p class="text weight-700 size-18">Данные получателя</p>
+                          <div class="d-flex justify-content-between flex-wrap column-gap-10">
+                            <p class="text text-elepsis mw-45">Имя:</p>
+                            <p class="text text-elepsis mw-50 text-right">Александр</p>
+                          </div>
+                          <div class="d-flex justify-content-between flex-wrap column-gap-10">
+                            <p class="text text-elepsis mw-45">Номер телефона:</p>
+                            <p class="text text-elepsis mw-50 text-right">+7 (937) 765-80-56</p>
+                          </div>
+                          <div class="d-flex justify-content-between flex-wrap column-gap-10">
+                            <p class="text text-elepsis mw-45">Email:</p>
+                            <p class="text text-elepsis mw-50 text-right">strelnikov2014@ya.ru</p>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-column gap-10">
+                          <p class="text weight-700 size-18">Данные о заказе</p>
+                          <div class="d-flex justify-content-between flex-wrap">
+                            <p class="text text-elepsis mw-45">Доставка:</p>
+                            <p class="text text-elepsis mw-50 text-right">По адресу</p>
+                          </div>
+                          <div
+                            data-input-content-container="payment"
+                            class="d-none d-flex justify-content-between flex-wrap"
+                          >
+                            <p class="text text-elepsis mw-45">Оплата:</p>
+                            <p data-input-content="payment" class="text text-elepsis mw-50 text-right"></p>
+                          </div>
+                          <div
+                            data-input-content-container="comment"
+                            class="d-none d-flex justify-content-between flex-wrap"
+                          >
+                            <p class="text text-elepsis mw-45">Комментарий:</p>
+                            <p data-input-content="comment" class="text text-elepsis mw-50 text-right"></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="grid-span-lg-4 grid-span-xl-3">
+                    <div class="d-lg-flex flex-column gap-30 bg-white p-20 pb-40 d-none">
+                      <div class="d-flex flex-column gap-20">
+                        <div class="d-flex flex-column gap-15">
+                          <div class="d-flex flex-column gap-10">
+                            <p class="text d-flex flex-wrap gap-5">
+                              <span>Товары: 3</span>
+                              <span class="separator-dot"></span>
+                              <span>2500 кг</span>
+                              <span class="separator-dot"></span>
+                              <span>6,5 м3</span>
+
+                              <span class="ms-auto d-inline-block">89 537,50 ₽</span>
+                            </p>
+
+                            <div class="d-flex flex-row justify-content-between">
+                              <p class="text weight-700 size-18">Итого:</p>
+                              <p class="text weight-700 size-20">89 537,50 ₽</p>
+                            </div>
+                          </div>
+                          <p class="text size-12 color-gray-550">
+                            Дата и стоимость доставки рассчитываются после оформления заказа
+                          </p>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column gap-10">
+                        <p class="text weight-700 size-18">Данные получателя</p>
+                        <div class="d-flex justify-content-between flex-wrap column-gap-10">
+                          <p class="text text-elepsis mw-45">Имя:</p>
+                          <p class="text text-elepsis mw-50 text-right">Александр</p>
+                        </div>
+                        <div class="d-flex justify-content-between flex-wrap column-gap-10">
+                          <p class="text text-elepsis mw-45">Номер телефона:</p>
+                          <p class="text text-elepsis mw-50 text-right">+7 (937) 765-80-56</p>
+                        </div>
+                        <div class="d-flex justify-content-between flex-wrap column-gap-10">
+                          <p class="text text-elepsis mw-45">Email:</p>
+                          <p class="text text-elepsis mw-50 text-right">strelnikov2014@ya.ru</p>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-column gap-10">
+                        <p class="text weight-700 size-18">Данные о заказе</p>
+                        <div class="d-flex justify-content-between flex-wrap">
+                          <p class="text text-elepsis mw-45">Доставка:</p>
+                          <p class="text text-elepsis mw-50 text-right">По адресу</p>
+                        </div>
+                        <div
+                          data-input-content-container="payment"
+                          class="d-none d-flex justify-content-between flex-wrap"
+                        >
+                          <p class="text text-elepsis mw-45">Оплата:</p>
+                          <p data-input-content="payment" class="text text-elepsis mw-50 text-right"></p>
+                        </div>
+                        <div
+                          data-input-content-container="comment"
+                          class="d-none d-flex justify-content-between flex-wrap"
+                        >
+                          <p class="text text-elepsis mw-45">Комментарий:</p>
+                          <p data-input-content="comment" class="text text-elepsis mw-50 text-right"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div class="bottom-mobile-menu d-block d-lg-none">
+        <div class="container bottom-mobile-menu__cart-content pt-15 pb-15">
+          <div class="d-flex align-items-center justify-content-between gap-20">
+            <div class="d-flex flex-column gap-0">
+              <p class="text">Товары: 3</p>
+              <p class="text size-16 weight-700">89 537,50 ₽</p>
+            </div>
+            <button disabled data-wait-requred="payment" data-click-trigger="submit" type="button" class="btn w-50">Оформить</button>
+          </div>
+        </div>
+        <div class="bottom-mobile-menu__content">
+          <div class="bottom-mobile-menu__row">
+            <a class="bottom-mobile-menu-button bottom-mobile-menu-button_active" href="#">
+              <div class="bottom-mobile-menu-button__inner">
+                <div class="bottom-mobile-menu-button__icon-wrapper">
+                  <img
+                    class="bottom-mobile-menu-button__icon bottom-mobile-menu-button__icon_hidden"
+                    src="@images/home.svg"
+                    alt=""
+                  />
+                  <img
+                    class="bottom-mobile-menu-button__icon bottom-mobile-menu-button__icon_always-active"
+                    src="@images/home-active.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="bottom-mobile-menu-button__text">Главная</span>
+              </div>
+            </a>
+            <a href="#" class="bottom-mobile-menu-button">
+              <div class="bottom-mobile-menu-button__inner">
+                <div class="bottom-mobile-menu-button__icon-wrapper">
+                  <img class="bottom-mobile-menu-button__icon" src="@images/search.svg" alt="" />
+                  <img
+                    class="bottom-mobile-menu-button__icon bottom-mobile-menu-button__icon_active"
+                    src="@images/search-active.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="bottom-mobile-menu-button__text">Главная</span>
+              </div>
+            </a>
+            <a class="bottom-mobile-menu-button" href="#">
+              <div class="bottom-mobile-menu-button__inner">
+                <div class="bottom-mobile-menu-button__icon-wrapper">
+                  <span class="bottom-mobile-menu-button__counter">99</span>
+                  <img class="bottom-mobile-menu-button__icon" src="@images/cart.svg" alt="" />
+                  <img
+                    class="bottom-mobile-menu-button__icon bottom-mobile-menu-button__icon_active"
+                    src="@images/cart-active.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="bottom-mobile-menu-button__text">Корзина</span>
+              </div>
+            </a>
+            <a class="bottom-mobile-menu-button" href="#">
+              <div class="bottom-mobile-menu-button__inner">
+                <div class="bottom-mobile-menu-button__icon-wrapper">
+                  <img class="bottom-mobile-menu-button__icon" src="@images/profile.svg" alt="" />
+                  <img
+                    class="bottom-mobile-menu-button__icon bottom-mobile-menu-button__icon_active"
+                    src="@images/profile-active.svg"
+                    alt=""
+                  />
+                </div>
+                <span class="bottom-mobile-menu-button__text">Мой ЛК</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <%~ include("/components/footers/templates/footer.html") %> <%~ include("/components/general/templates/svg-pack.html")
+      %> <%~ include("/components/modals/templates/callme-modal.html") %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,313 @@
+
+.product-item_new,
+.product-item_wide,
+.product-item_max-heigth,
+.product-item_max-width,
+.product-card-v2
+  .input-number
+    width: 100%
+    max-width: 80px
+    min-width: 80px
+    height: 40px
+    display: flex
+    border: 1px solid var(--color-button-secondary-border, #B7CBE5)
+    border-radius: 2px
+    justify-content: center
+    overflow: hidden
+    padding: 0
+    margin-right: 0
+
+    input[type="number"]
+      width: 40px
+      -webkit-appearance: none
+      text-align: center
+      border: none
+      height: 100%
+      color: var(--color-button-secondary-text)
+      font-size: 12px
+      font-weight: 400
+      line-height: 18px
+      padding-bottom: 2px
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+
+    .order-down, .order-up
+      width: 23px
+      border: none
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 0
+      &:hover
+        background: var(--color-button-secondary-background-hover, #e7eef6)
+
+    .order-up:after, .order-up:before, .order-down:before
+      top: auto
+      left: auto
+
+    .order-up:before
+      width: 1px
+      height: 7px
+
+    .order-up:after, .order-down:before
+      width: 7px
+      height: 1px
+
+@media ( max-width: 767px )
+  .product-item_new,
+  .product-item_wide,
+  .product_max-height,
+  .product_max-width,
+  .product-card-v2
+    .input-number
+      display: none
+
+  .product-item
+    border-left: 1px solid var(--color-card-border, #D9D9DE)
+    border-right: 1px solid var(--color-card-border, #D9D9DE)
+
+.st-button
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  white-space: break-spaces
+  overflow: hidden
+  text-overflow: ellipsis
+  width: auto
+  padding: 8px 14px
+  transition: var(--trs-1)
+  border: 1px solid transparent
+  font-size: 14px
+  height: 40px
+  cursor: pointer
+  white-space-collapse: collapse
+  &:not(&:has(&__icon))
+    .st-button__title
+      margin-left: 0
+
+    .st-button__sub-title
+      margin-left: 0
+
+  &__icon
+    fill: inherit
+    &_cart
+      min-width: 22px
+      height: auto
+    &_favorite
+      min-width: 20px
+      height: auto
+    &_comparison
+      min-width: 17px
+      height: auto
+
+  &__text
+    color: inherit
+    font-size: 14px
+    display: flex
+    flex-direction: column
+    white-space: wrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+  &__title
+    color: inherit
+    font-weight: 400
+    font-size: 14px
+    line-height: 18px
+    margin-left: 7px
+    overflow: hidden
+    text-overflow: ellipsis
+    text-align: left
+    &:empty
+      margin-left: 0
+
+  &__sub-title
+    color: inherit
+    font-weight: 400
+    font-size: 10px
+    line-height: 12px
+    margin-left: 7px
+    width: 100%
+    text-align: left
+    &:empty
+      margin-left: 0
+
+  &_add-to-cart
+    .st-button__title
+      white-space: nowrap
+
+    .st-button__title
+      white-space: nowrap
+
+  &_primary
+    fill: var(--color-button-primary-text, #fff)
+    color: var(--color-button-primary-text, #fff)
+    background-color: var(--color-button-primary-background, #2363D1)
+    border-color: var(--color-button-primary-border, #2363D1)
+    &:hover
+      fill: var(--color-button-primary-text-hover, var(--color-button-primary-text, #fff))
+      color: var(--color-button-primary-text-hover, var(--color-button-primary-text, #fff))
+      background-color: var(--color-button-primary-background-hover, #1C52AC)
+      border-color: var(--color-button-primary-border-hover, #1C52AC)
+
+  &_secondary
+    fill: var(--color-button-secondary-text, #2363D1)
+    color: var(--color-button-secondary-text, #2363D1)
+    background-color: var(--color-button-secondary-background, #fff)
+    border-color: var(--color-button-secondary-border, #B7CBE5)
+    &:hover
+      fill: var(--color-button-secondary-text-hover, #1C52AC)
+      color: var(--color-button-secondary-text-hover, #1C52AC)
+      background-color: var(--color-button-secondary-background-hover, #E7EEF6)
+      border-color: var(--color-button-secondary-border-hover, #1C52AC)
+
+  &_muted
+    fill: var(--color-button-muted-text, #fff)
+    color: var(--color-button-muted-text, #fff)
+    background-color: var(--color-button-muted-background, #767676)
+    border-color: var(--color-button-muted-border, #767676)
+    &:hover
+      fill: var(--color-button-muted-text-hover, var(--color-button-muted-text, #fff))
+      color: var(--color-button-muted-text-hover, var(--color-button-muted-text, #fff))
+      background-color: var(--color-button-muted-background-hover, #818181)
+      border-color: var(--color-button-muted-border-hover, #818181)
+
+@media ( max-width: 767px )
+  .st-button
+    font-size: 12px
+    &__text
+      font-size: 12px
+    &__title
+      font-size: 12px
+    &__sub-title
+      font-size: 10px
+    &__icon + &__text
+      display: none
+
+    &_comparison
+      display: none
+
+.st-button-header-favorite
+  color: var(--accent-color-400)
+  border: none
+  padding: 5px
+  position: absolute
+  top: 0
+  right: 0
+  z-index: 1
+
+  @media (min-width: 768px)
+    padding: 10px
+    top: auto
+    bottom: 0
+
+  .st-button__icon
+    fill: currentColor
+
+.shopping-cart-product
+  display: flex
+  gap: 10px
+  width: 100%
+
+  &--btn
+    width: auto
+    flex: 1
+    font-weight: 400
+    margin: 0 !important
+
+
+@media (max-width: 767px)
+  .shopping-cart-product .not-available
+    width: 100% !important
+
+@media (max-width: 767px)
+  .shopping-cart-product
+    width: 100%
+    -webkit-box-pack: end
+    -ms-flex-pack: end
+    justify-content: flex-end
+
+.shopping-cart-product .btn
+  width: 130px
+  padding: 0
+  border: 1px solid var(--main-elements-color, #2363d1)
+
+@media (max-width: 767px)
+  .shopping-cart-product .btn
+    width: 100%
+
+.shopping-cart-product .btn-border
+  min-width: 130px
+  flex: 1
+  padding: 0
+  text-align: center
+
+.shopping-cart-product .btn-checkout
+  width: 100%
+  line-height: normal
+  height: 48px
+  text-align: center
+  border: 0 !important
+  padding: 0 10px
+
+@media (max-width: 767px)
+  .shopping-cart-product .btn-checkout
+    width: calc(100% - 80px)
+
+.st-button_add-to-cart
+  flex: 1
+
+.st-button_add-to-favorite
+  min-width: 52px
+  max-width: 52px
+
+  &:is(:hover, .active)
+    fill: var(--color-button-secondary-text, #2363D1)
+    color: var(--color-button-secondary-text, #2363D1)
+    background-color: var(--color-button-secondary-background, #fff)
+    border-color: var(--color-button-secondary-border, #B7CBE5)
+
+    .icon-container
+
+      .st-button__icon_favorite
+
+        &:first-child
+          opacity: 0
+          visibility: hidden
+
+        &:last-child
+          opacity: 1
+          visibility: visible
+
+  .icon-container
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    position: relative
+
+    .st-button__icon_favorite
+      // transition-property: opacity, visibility
+      // transition-duration: 300ms
+      // transition-timing-function: ease-in-out
+
+      &:last-child
+        position: absolute
+        opacity: 0
+        visibility: hidden
+
+  &--lg
+    min-width: 82px
+    max-width: 82px
+    height: 48px
+
+.st-button_without-price
+  width: 100%
+
+.product-item__flag--offer, .card-label_style-offer
+  background-color: #4FA22E
+  color: #fff

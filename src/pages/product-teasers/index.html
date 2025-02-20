@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="@src/../node_modules/mmenu-js/dist/mmenu.css" />
+    <link rel="stylesheet" href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css" />
+    <link rel="stylesheet" href="@src/../node_modules/nouislider/dist/nouislider.css" />
+    <link rel="stylesheet" href="@src/../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="@src/../node_modules/tippy.js/dist/tippy.css" />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+    <script defer src="@src/app/main.js"></script>
+  </head>
+
+  <body class="inner-page">
+    <div class="page">
+      <header><%~ include("/components/headers/templates/header-default/header-default.html") %></header>
+
+      <main>
+        <%~ include("/components/general/templates/catalog-side.html") %>
+
+        <section class="section">
+          <div class="container">
+            <div class="page-head"><%~ include("/components/general/templates/breadcrumbs.html") %></div>
+
+            <div class="content-block">
+              <h1>Одноэтажные дома до 150м2</h1>
+
+              <div class="catalog">
+                <%~ include("/components/general/templates/catalog-head.html") %>
+
+                <div class="catalog-container">
+                  <div class="catalog-body catalog-body--wide">
+                    <%~ include("/components/general/templates/product-items-header.html") %>
+
+                    <h1 class="mt-50 mb-30">v1</h1>
+
+                    <div
+                      class="d-grid gap-grid grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5"
+                    >
+                      <%~ include("/components/product-teasers/templates/product-item/product-item.html") %> <%~
+                      include("/components/product-teasers/templates/product-item/product-item__slides.html") %> <%~
+                      include("/components/product-teasers/templates/product-item/product-item__range.html") %> <%~
+                      include("/components/product-teasers/templates/product-item/product-item__double-image.html") %> <%~
+                      include("/components/product-teasers/templates/product-item/product-item__range-from.html") %>
+                    </div>
+
+                    <div style="padding-top: 80px">
+                      <div
+                        class="slider-constructor slick-dotted"
+                        data-sm-rows="1"
+                        data-slides="1"
+                        data-md-slides="2"
+                        data-lg-slides="3"
+                        data-xl-slides="5"
+                      >
+                        <%~ include("/components/product-teasers/templates/product-item/product-item.html") %> <%~
+                        include("/components/product-teasers/templates/product-item/product-item__slides.html") %> <%~
+                        include("/components/product-teasers/templates/product-item/product-item__range.html") %> <%~
+                        include("/components/product-teasers/templates/product-item/product-item__double-image.html") %> <%~
+                        include("/components/product-teasers/templates/product-item/product-item__range-from.html") %> <%~
+                        include("/components/product-teasers/templates/product-item/product-item.html") %> <%~
+                        include("/components/product-teasers/templates/product-item/product-item__slides.html") %> <%~
+                        include("/components/product-teasers/templates/product-item/product-item__range.html") %> <%~
+                        include("/components/product-teasers/templates/product-item/product-item__double-image.html") %> <%~
+                        include("/components/product-teasers/templates/product-item/product-item__range-from.html") %>
+                      </div>
+                    </div>
+
+                    <h1 class="mt-50 mb-30">v1 new</h1>
+
+                    <div
+                      class="d-grid gap-grid grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5"
+                    >
+                      <%~ include("/components/product-teasers/templates/product-item_new/product-item_new.html") %> <%~
+                      include("/components/product-teasers/templates/product-item_new/product-item_new__slides.html") %> <%~
+                      include("/components/product-teasers/templates/product-item_new/product-item_new__range.html") %> <%~
+                      include("/components/product-teasers/templates/product-item_new/product-item_new__double-image.html") %> <%~
+                      include("/components/product-teasers/templates/product-item_new/product-item_new__range-from.html") %>
+                    </div>
+
+                    <div style="padding-top: 80px">
+                      <div
+                        class="slider-constructor slick-dotted"
+                        data-sm-rows="1"
+                        data-slides="1"
+                        data-md-slides="2"
+                        data-lg-slides="3"
+                        data-xl-slides="5"
+                      >
+                        <%~ include("/components/product-teasers/templates/product-item_new/product-item_new.html") %> <%~
+                        include("/components/product-teasers/templates/product-item_new/product-item_new__slides.html") %> <%~
+                        include("/components/product-teasers/templates/product-item_new/product-item_new__range.html") %> <%~
+                        include("/components/product-teasers/templates/product-item_new/product-item_new__double-image.html") %>
+                        <%~ include("/components/product-teasers/templates/product-item_new/product-item_new__range-from.html") %>
+                        <%~ include("/components/product-teasers/templates/product-item_new/product-item_new.html") %> <%~
+                        include("/components/product-teasers/templates/product-item_new/product-item_new__slides.html") %> <%~
+                        include("/components/product-teasers/templates/product-item_new/product-item_new__range.html") %> <%~
+                        include("/components/product-teasers/templates/product-item_new/product-item_new__double-image.html") %>
+                        <%~ include("/components/product-teasers/templates/product-item_new/product-item_new__range-from.html") %>
+                      </div>
+                    </div>
+
+                    <h1 class="mt-50 mb-30">v1 max-wide</h1>
+
+                    <div
+                      class="d-grid gap-grid grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5"
+                    >
+                      <%~ include("/components/product-teasers/templates/product-item_wide/product-item_wide.html") %> <%~
+                      include("/components/product-teasers/templates/product-item_wide/product-item_wide__slides.html") %> <%~
+                      include("/components/product-teasers/templates/product-item_wide/product-item_wide__range.html") %> <%~
+                      include("/components/product-teasers/templates/product-item_wide/product-item_wide__double-image.html") %>
+                      <%~ include("/components/product-teasers/templates/product-item_wide/product-item_wide__range-from.html") %>
+                    </div>
+
+                    <div style="padding-top: 80px">
+                      <div
+                        class="slider-constructor slick-dotted"
+                        data-sm-rows="1"
+                        data-slides="1"
+                        data-md-slides="2"
+                        data-lg-slides="3"
+                        data-xl-slides="5"
+                      >
+                        <%~ include("/components/product-teasers/templates/product-item_wide/product-item_wide.html") %> <%~
+                        include("/components/product-teasers/templates/product-item_wide/product-item_wide__slides.html") %> <%~
+                        include("/components/product-teasers/templates/product-item_wide/product-item_wide__range.html") %> <%~
+                        include("/components/product-teasers/templates/product-item_wide/product-item_wide__double-image.html") %>
+                        <%~ include("/components/product-teasers/templates/product-item_wide/product-item_wide__range-from.html")
+                        %> <%~ include("/components/product-teasers/templates/product-item_wide/product-item_wide.html") %> <%~
+                        include("/components/product-teasers/templates/product-item_wide/product-item_wide__slides.html") %> <%~
+                        include("/components/product-teasers/templates/product-item_wide/product-item_wide__range.html") %> <%~
+                        include("/components/product-teasers/templates/product-item_wide/product-item_wide__double-image.html") %>
+                        <%~ include("/components/product-teasers/templates/product-item_wide/product-item_wide__range-from.html")
+                        %>
+                      </div>
+                    </div>
+
+                    <h1 class="mt-50 mb-30">v1 max-wide-parameters</h1>
+                    <div
+                      class="d-grid gap-grid grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5"
+                    >
+                      <%~
+                      include("/components/product-teasers/templates/product-item_wide__parameters/product-item_wide__parameters.html")
+                      %>
+                    </div>
+
+                    <h1 class="mt-50 mb-30">v1 max-width</h1>
+
+                    <div
+                      class="d-grid gap-grid grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5"
+                    >
+                      <%~ include("/components/product-teasers/templates/product-item_max-width/product-item_max-width.html") %>
+                      <%~
+                      include("/components/product-teasers/templates/product-item_max-width/product-item_max-width__slides.html")
+                      %> <%~
+                      include("/components/product-teasers/templates/product-item_max-width/product-item_max-width__range.html")
+                      %> <%~
+                      include("/components/product-teasers/templates/product-item_max-width/product-item_max-width__double-image.html")
+                      %> <%~
+                      include("/components/product-teasers/templates/product-item_max-width/product-item_max-width__range-from.html")
+                      %>
+                    </div>
+
+                    <div style="padding-top: 80px">
+                      <div
+                        class="slider-constructor slick-dotted"
+                        data-sm-rows="1"
+                        data-slides="1"
+                        data-md-slides="2"
+                        data-lg-slides="3"
+                        data-xl-slides="5"
+                      >
+                        <%~ include("/components/product-teasers/templates/product-item_max-width/product-item_max-width.html") %>
+                        <%~
+                        include("/components/product-teasers/templates/product-item_max-width/product-item_max-width__slides.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-width/product-item_max-width__range.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-width/product-item_max-width__double-image.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-width/product-item_max-width__range-from.html")
+                        %> <%~ include("/components/product-teasers/templates/product-item_max-width/product-item_max-width.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-width/product-item_max-width__slides.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-width/product-item_max-width__range.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-width/product-item_max-width__double-image.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-width/product-item_max-width__range-from.html")
+                        %>
+                      </div>
+                    </div>
+
+                    <h1 class="mt-50 mb-30">v1 max-height</h1>
+
+                    <div
+                      class="d-grid gap-grid grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5"
+                    >
+                      <%~ include("/components/product-teasers/templates/product-item_max-height/product-item_max-height.html") %>
+                      <%~
+                      include("/components/product-teasers/templates/product-item_max-height/product-item_max-height__slides.html")
+                      %> <%~
+                      include("/components/product-teasers/templates/product-item_max-height/product-item_max-height__range.html")
+                      %> <%~
+                      include("/components/product-teasers/templates/product-item_max-height/product-item_max-height__double-image.html")
+                      %> <%~
+                      include("/components/product-teasers/templates/product-item_max-height/product-item_max-height__range-from.html")
+                      %>
+                    </div>
+
+                    <div style="padding-top: 80px">
+                      <div
+                        class="slider-constructor slick-dotted"
+                        data-sm-rows="1"
+                        data-slides="1"
+                        data-md-slides="2"
+                        data-lg-slides="3"
+                        data-xl-slides="5"
+                      >
+                        <%~ include("/components/product-teasers/templates/product-item_max-height/product-item_max-height.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-height/product-item_max-height__slides.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-height/product-item_max-height__range.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-height/product-item_max-height__double-image.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-height/product-item_max-height__range-from.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-height/product-item_max-height.html") %>
+                        <%~
+                        include("/components/product-teasers/templates/product-item_max-height/product-item_max-height__slides.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-height/product-item_max-height__range.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-height/product-item_max-height__double-image.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-item_max-height/product-item_max-height__range-from.html")
+                        %>
+                      </div>
+                    </div>
+
+                    <h1 class="mt-50 mb-30">v2</h1>
+
+                    <div
+                      class="d-grid gap-grid grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5"
+                    >
+                      <%~ include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1.html") %> <%~
+                      include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1__slides.html") %> <%~
+                      include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1__range.html") %> <%~
+                      include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1__double-image.html")
+                      %> <%~
+                      include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1__range-from.html") %>
+                    </div>
+
+                    <div style="padding-top: 80px">
+                      <div
+                        class="slider-constructor slick-dotted"
+                        data-sm-rows="1"
+                        data-slides="1"
+                        data-md-slides="2"
+                        data-lg-slides="3"
+                        data-xl-slides="5"
+                      >
+                        <%~ include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1.html") %> <%~
+                        include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1__slides.html") %>
+                        <%~ include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1__range.html") %>
+                        <%~
+                        include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1__double-image.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1__range-from.html")
+                        %> <%~ include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1.html") %> <%~
+                        include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1__slides.html") %>
+                        <%~ include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1__range.html") %>
+                        <%~
+                        include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1__double-image.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2/product-card-v2_type-1__range-from.html")
+                        %>
+                      </div>
+                    </div>
+
+                    <h1 class="mt-50 mb-30">v2-1</h1>
+
+                    <div
+                      class="d-grid gap-grid grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5"
+                    >
+                      <%~ include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2.html") %>
+                      <%~
+                      include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2__slides.html")
+                      %> <%~
+                      include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2__range.html")
+                      %> <%~
+                      include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2__double-image.html")
+                      %> <%~
+                      include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2__range-from.html")
+                      %>
+                    </div>
+                    <div style="padding-top: 80px">
+                      <div
+                        class="slider-constructor slick-dotted"
+                        data-sm-rows="1"
+                        data-slides="1"
+                        data-md-slides="2"
+                        data-lg-slides="3"
+                        data-xl-slides="5"
+                      >
+                        <%~ include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2.html") %>
+                        <%~
+                        include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2__slides.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2__range.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2__double-image.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2__range-from.html")
+                        %> <%~ include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2__slides.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2__range.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2__double-image.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2_type-2/product-card-v2_type-2__range-from.html")
+                        %>
+                      </div>
+                    </div>
+
+                    <h1 class="mt-50 mb-30">v2-2</h1>
+
+                    <div
+                      class="d-grid gap-grid grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5"
+                    >
+                      <%~ include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover.html") %> <%~
+                      include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover__empty.html") %>
+                      <%~ include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover__range.html")
+                      %> <%~
+                      include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover__double-image.html")
+                      %> <%~
+                      include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover__range-from.html")
+                      %>
+                    </div>
+
+                    <div style="padding-top: 80px">
+                      <div
+                        class="slider-constructor slick-dotted"
+                        data-sm-rows="1"
+                        data-slides="1"
+                        data-md-slides="2"
+                        data-lg-slides="3"
+                        data-xl-slides="5"
+                      >
+                        <%~ include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover.html") %>
+                        <%~
+                        include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover__empty.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover__range.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover__double-image.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover__range-from.html")
+                        %> <%~ include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover__empty.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover__range.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover__double-image.html")
+                        %> <%~
+                        include("/components/product-teasers/templates/product-card-v2_hover/product-card-v2_hover__range-from.html")
+                        %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%~ include("/components/footers/templates/footer.html") %>
+    </div>
+
+    <%~ include("/components/general/templates/svg-pack.html") %> <%~
+    include("/components/modals/templates/callme-modal.html") %>
+  </body>
+</html>

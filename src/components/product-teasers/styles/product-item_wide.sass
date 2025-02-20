@@ -1,0 +1,37 @@
+.product-item_wide
+  height: auto
+  .product-item
+    &__image
+      aspect-ratio: 220/200
+
+    &__btns
+      justify-content: flex-start
+
+    &__flag-content
+      width: 64px
+
+  .shopping-cart-product
+    justify-content: flex-start
+
+@media (max-width: 767px)
+  .product-item_wide
+    height: auto
+    .product-item
+      flex-direction: column
+      &__image
+        aspect-ratio: 160/145
+        max-width: 100%
+        min-width: 0
+        width: 100%
+        height: auto
+
+      &__link
+        flex-direction: column
+        height: auto
+
+      &__content-top
+        height: auto
+
+      &__content-bottom
+        width: 100%
+        right: 0

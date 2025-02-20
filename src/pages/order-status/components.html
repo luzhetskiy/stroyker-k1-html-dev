@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="@src/../node_modules/mmenu-js/dist/mmenu.css" />
+    <link rel="stylesheet" href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css" />
+    <link rel="stylesheet" href="@src/../node_modules/nouislider/dist/nouislider.css" />
+    <link rel="stylesheet" href="@src/../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="@src/../node_modules/tippy.js/dist/tippy.css" />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+  <script defer src="@src/app/main.js"></script>
+</head>
+
+<body class="frontpage">
+  <div class="order-status-block">
+    <div>
+      <span class="order-status-block__badge order-status-block__badge_red">Отменено</span>
+      <span class="order-status-block__badge order-status-block__badge_blue">Новый</span>
+      <span class="order-status-block__badge order-status-block__badge_blue">Обработан</span>
+      <span class="order-status-block__badge order-status-block__badge_green">Завершён</span>
+      <span class="order-status-block__badge order-status-block__badge_green">В доставке</span>
+    </div>
+    <div>
+      <p class="order-status-block__grid-element order-status-block__grid-element_red">
+        <img class="order-status-block__icon" src="@images/cross.svg" alt="" />Не оплачено
+      </p>
+    </div>
+    <div>
+      <p class="order-status-block__grid-element order-status-block__grid-element_green">
+        <img class="order-status-block__icon" src="@images/payment.svg" alt="" />Оплачено
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

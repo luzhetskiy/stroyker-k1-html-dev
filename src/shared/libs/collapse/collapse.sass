@@ -1,0 +1,31 @@
+[data-collapse]
+  max-height: 200px
+  overflow: hidden
+
+[data-collapse-initialized]
+  max-height: max-content
+  
+[data-collapse-initialized][data-collapse]
+  position: relative
+
+  &::after
+    content: ''
+    display: block
+    transition: .3s
+    height: 20px
+    width: 100%
+    background: linear-gradient(0deg, #ffffff, #ffffff00)
+    position: absolute
+    opacity: 1
+    bottom: 0
+    left: 0
+
+[data-collapse-initialized][data-collapse-active]
+  &::after
+    background: linear-gradient(0deg, #ffffff00, #ffffff00)
+
+@media (min-width: 768px)
+  [data-collapse-initialized][data-collapse]
+    height: auto !important
+    &::after
+      display: none

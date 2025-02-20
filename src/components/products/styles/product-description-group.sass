@@ -1,0 +1,42 @@
+.product-description-group
+
+  &__collapse
+    position: relative
+    &_inactive
+      height: auto !important
+      &::after
+        display: none !important
+
+    &::after
+      content: ''
+      transition: .3s
+      height: 20px
+      width: 100%
+      background: linear-gradient(0deg, #ffffff, #ffffff00)
+      position: absolute
+      opacity: 1
+      bottom: 0
+      left: 0
+
+    &.show::after
+      opacity: 0
+
+    &.collapsing::after
+      opacity: 0
+
+  .collapse:not(.show)
+    display: block
+    height: 85px
+    overflow: hidden
+
+  .collapsing
+    position: relative
+    height: 85px
+    overflow: hidden
+    transition: height 0.35s ease
+
+@media (min-width: 768px)
+  .product-description-group
+    .collapse:not(.show)
+      display: block
+      height: auto

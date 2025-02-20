@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="@src/../node_modules/mmenu-js/dist/mmenu.css" />
+    <link rel="stylesheet" href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css" />
+    <link rel="stylesheet" href="@src/../node_modules/nouislider/dist/nouislider.css" />
+    <link rel="stylesheet" href="@src/../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="@src/../node_modules/tippy.js/dist/tippy.css" />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+    <script defer src="@src/app/main.js"></script>
+  </head>
+
+  <body class="inner-page">
+    <div class="page">
+      <header><%~ include("/components/headers/templates/header-default/header-default.html") %></header>
+
+      <main>
+        <section class="section mobile-show header-top-bg-color">
+          <div class="container">
+            <div class="catalog-side mobile-show">
+              <span class="catalog-side__title">
+                <span class="icon">
+                  <svg width="16" height="14" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z"></path>
+                  </svg>
+                </span>
+                Проекты домов
+              </span>
+              <div class="catalog-side__content">
+                <ul>
+                  <li class="menu-item">
+                    <a href="/catalog/kategoriya-tovarov-1/">Проекты домов до 150м2</a>
+                  </li>
+
+                  <li class="menu-item">
+                    <a href="/catalog/kategoriya-tovarov-2/">Проекты домов до 300м2</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-dark">
+          <div class="container">
+            <div class="page-head">
+              <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Главная" href="/">
+                    Главная
+                    <meta itemprop="name" content="Главная" />
+                  </a>
+                  <meta itemprop="position" content="1" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Проекты домов" href="/catalog/">
+                    Проекты домов
+                    <meta itemprop="name" content="Проекты домов" />
+                  </a>
+                  <meta itemprop="position" content="2" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Проекты домов до 150м2" href="/catalog/kategoriya-tovarov-1/">
+                    Проекты домов до 150м2
+                    <meta itemprop="name" content="Проекты домов до 150м2" />
+                  </a>
+                  <meta itemprop="position" content="3" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a
+                    itemprop="item"
+                    title="Одноэтажные дома до 150м2"
+                    href="/catalog/category/kategoriya-tovarov-1/podkategoriya-tovarov-1/"
+                  >
+                    Одноэтажные дома до 150м2
+                    <meta itemprop="name" content="Одноэтажные дома до 150м2" />
+                  </a>
+                  <meta itemprop="position" content="4" />
+                </span>
+              </div>
+            </div>
+
+            <div class="content-block">
+              <%~ include("/components/products/templates/product-v3/product-v3.html") %>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-dark feedback-form">
+          <div class="container">
+            <div class="question-main" id="question-main">
+              <div class="question-form">
+                <span class="content-title center h2">Остались вопросы?</span>
+                <form action="/crm/message/" method="post" id="feedback-message-request-form" onsubmit="">
+                  <input
+                    type="hidden"
+                    name="csrfmiddlewaretoken"
+                    value="HcLUoatDfdqRQI35R2T1ZAsvBaH3NGRX0ho0zsVy4dG7nu5WCxcKLE0UBpevtShR"
+                  />
+                  <div class="question-form__column">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="name" autocomplete="off" required="" />
+                      <label for="name" class="label-name">
+                        <span class="content-name"> Имя* </span>
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="phone"
+                        value="79277767575"
+                        class="form-control phone"
+                        name="phone"
+                        autocomplete="off"
+                        required=""
+                        maxlength="18"
+                      />
+                      <label for="phone" class="label-name">
+                        <span class="content-name"> Телефон </span>
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="mail"
+                        value="info@nastroyker.ru"
+                        class="form-control"
+                        name="email"
+                        autocomplete="off"
+                        required=""
+                      />
+                      <label for="text" class="label-name">
+                        <span class="content-name"> e-mail </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="question-form__column">
+                    <div class="form-group">
+                      <textarea class="form-control" name="message" autocomplete="off" required=""></textarea>
+                      <label for="message" class="label-name">
+                        <span class="content-name"> Комментарий </span>
+                      </label>
+                    </div>
+                    <input type="hidden" name="url" id="id_url" />
+
+                    <button type="submit" class="btn btn--main-min">Отправить</button>
+                  </div>
+                </form>
+
+                <span class="form-text"
+                  >Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с нашей
+                  политикой конфиденциальности</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%~ include("/components/footers/templates/footer.html") %>
+    </div>
+
+    <%~ include("/components/general/templates/svg-pack.html") %> <%~
+    include("/components/modals/templates/callme-modal.html") %>
+  </body>
+</html>

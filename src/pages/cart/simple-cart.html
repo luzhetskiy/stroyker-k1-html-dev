@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="@src/../node_modules/mmenu-js/dist/mmenu.css" />
+    <link rel="stylesheet" href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css" />
+    <link rel="stylesheet" href="@src/../node_modules/nouislider/dist/nouislider.css" />
+    <link rel="stylesheet" href="@src/../node_modules/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="@src/../node_modules/tippy.js/dist/tippy.css" />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+    <script defer src="@src/app/main.js"></script>
+  </head>
+
+  <body class="frontpage">
+    <div class="page">
+      <header><%~ include("/components/headers/templates/header-default/header-default.html") %></header>
+
+      <main>
+        <section class="section simple-cart">
+          <div class="container">
+            <div class="page-head">
+              <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Главная" href="/">
+                    Главная
+                    <meta itemprop="name" content="Главная" />
+                  </a>
+                  <meta itemprop="position" content="1" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                Корзина
+              </div>
+            </div>
+
+            <div class="content-block">
+              <span class="content-title content-title--lg">Корзина</span>
+              <div class="simple-cart__content">
+                <div class="shopping-cart">
+                  <div class="shopping-cart-list">
+                    <div class="shopping-cart-item">
+                      <span data-cart-delete-url="/cart/del/3" class="shopping-cart-item__delete">
+                        <a>
+                          <svg class="icon-svg">
+                            <use xlink:href="#delete"></use>
+                          </svg>
+                        </a>
+                      </span>
+
+                      <span class="shopping-cart-item__name"> <span>234234</span>ваппп </span>
+                      <span class="shopping-cart-item__cost">45&nbsp;654,00 ₽</span>
+                      <span class="shopping-cart-item__numbers">
+                        <div class="input-number">
+                          <div class="cart-qty-control order-down" data-qty-update-url="/cart/upd/3?q=down"></div>
+                          <input
+                            class="cart-qty-control-input"
+                            data-qty-update-url="/cart/upd/3"
+                            type="number"
+                            min="1"
+                            max="inf"
+                            step="1"
+                            value="1"
+                            id="number"
+                            required=""
+                          />
+                          <div class="cart-qty-control order-up" data-qty-update-url="/cart/upd/3?q=up"></div>
+                        </div>
+                      </span>
+                      <span class="shopping-cart-item__total-cost"> 45&nbsp;654,00 ₽</span>
+                    </div>
+                  </div>
+
+                  <div class="delivery-cart">
+                    <div class="delivery-total delivery-total--cart">
+                      <ul>
+                        <li>
+                          <span class="delivery-total__sm">Общий вес, кг:</span>
+                          <span class="delivery-total__sm cart-total-weight">0</span>
+                        </li>
+                        <li>
+                          <span class="delivery-total__sm">Общий объём, м3: </span>
+                          <span class="delivery-total__sm cart-total-volume">534,0</span>
+                        </li>
+                        <li>
+                          <span class="delivery-total__lg">Итого:</span>
+                          <span class="delivery-total__lg cart-total-price"> 45&nbsp;654,00 ₽ </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="simple-cart__form">
+                <form class="simple-order-form" method="post">
+                  <input
+                    type="hidden"
+                    name="csrfmiddlewaretoken"
+                    value="dxvWIphNsZMSkUjJhLIlMbScsNCqDjuSZsUHxNeN663VpBw8AN2g0nXrugtHipAd"
+                  />
+
+                  <!-- Предпочтительный вариант доставки:, Выберите пункт самовывоза:, Предпочтительный вариант оплаты: -->
+                  <div class="d-gridgrid-columns-1 gap-10">
+                    <div class="simple-order-form__group simple-order-form__column d-flex flex-column gap-15">
+                      <h3 class="simple-order-form__title mb-0">Предпочтительный вариант доставки:</h3>
+                        <div class="d-grid grid-columns-sm-2 grid-columns-md-2 grid-columns-xl-2 grid-columns-lg-2 gap-10">
+                          <div class="d-flex flex-row gap-10">
+                            <input
+                              data-input="delivery_type"
+                              data-input-value="Самовывоз"
+                              data-radio="pickup"
+                              class="cart-radio mt-3"
+                              name="delivery"
+                              id="pickup"
+                              type="radio"
+                              data-required-field="delivery"/>
+                            <label for="pickup" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">Самовывоз</p>
+                            </label>
+                          </div>
+                          <div class="d-flex flex-row gap-10">
+                            <input
+                              class="cart-radio mt-3"
+                              name="delivery"
+                              data-radio=""
+                              id="delivery-point"
+                              type="radio"
+                              data-input-value="До пункта выдачи"
+                              data-required-field="delivery"
+                            />
+                            <label for="delivery-point" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">До пункта выдачи</p>
+                            </label>
+                          </div>
+                          <div class="d-flex flex-row gap-10">
+                            <input
+                              data-input="delivery_type"
+                              data-input-value="По адресу"
+                              class="cart-radio mt-3"
+                              data-radio=""
+                              name="delivery"
+                              id="adress"
+                              type="radio"
+                              data-required-field="delivery"
+                            />
+                            <label for="adress" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">По адресу</p>
+                            </label>
+                          </div>
+                        </div>
+                    </div>
+                    <div data-radio-content="pickup" class="d-none d-flex flex-column gap-15">
+                      <h3 class="simple-order-form__title mb-0">Выберите пункт самовывоза:</h3>
+                      <div class="simple-order-form__column d-grid grid-columns-sm-2 grid-columns-md-2 grid-columns-xl-2 grid-columns-lg-2 gap-10">
+                        <div class="d-flex flex-row gap-10">
+                          <input
+                          class="cart-radio mt-3"
+                          name="delivery-point"
+                          id="delivery-point-1"
+                          type="radio"
+                          data-input="delivery_cost"
+                          data-input-value="Самара"
+                        />
+                        <label for="delivery-point-1" class="d-flex flex-column gap-2">
+                          <p class="text size-16 color-gray-700">Самара</p>
+                          <p class="text size-12 color-gray-550">Ракитовское шоссе, 1</p>
+                        </label>
+                        </div>
+                        <div class="d-flex flex-row gap-10">
+                          <input
+                          class="cart-radio mt-3"
+                          name="delivery-point"
+                          id="delivery-point-2"
+                          type="radio"
+                          data-input="delivery_cost"
+                          data-input-value="Тольятти"
+                        />
+                        <label for="delivery-point-2" class="d-flex flex-column gap-2">
+                          <p class="text size-16 color-gray-700">Тольятти</p>
+                          <p class="text size-12 color-gray-550">Московское шоссе, 143Б</p>
+                        </label>
+                        </div>
+                        <div class="d-flex flex-row gap-10">
+                          <input
+                          class="cart-radio mt-3"
+                          name="delivery-point"
+                          id="delivery-point-3"
+                          type="radio"
+                          data-input="delivery_cost"
+                          data-input-value="Пункт без коммента"
+                        />
+                        <label for="delivery-point-3" class="d-flex flex-column gap-2">
+                          <p class="text size-16 color-gray-700">Пункт без коммента</p>
+                        </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-radio-content="*" class="d-none d-flex flex-column gap-15">
+                        <h3 class="simple-order-form__title mb-0">Предпочтительный вариант оплаты:</h3>
+                        <div class="simple-order-form__column d-grid grid-columns-sm-2 grid-columns-md-2 grid-columns-xl-2 grid-columns-lg-2 gap-10">
+                          <div class="d-flex flex-row gap-10">
+                            <input data-input="payment" class="cart-radio mt-3" name="payment" id="payment-1" type="radio" data-input-value="Онлайн" data-required-field="payment">
+                            <label for="payment-1" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">Онлайн</p>
+                            </label>
+                          </div>
+                          <div class="d-flex flex-row gap-10">
+                            <input data-input="payment" class="cart-radio mt-3" name="payment" id="payment-2" type="radio" data-input-value="Картой" data-required-field="payment">
+                            <label for="payment-2" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">Картой</p>
+                            </label>
+                          </div>
+                          <div class="d-flex flex-row gap-10">
+                            <input data-input="payment" class="cart-radio mt-3" name="payment" id="payment-3" type="radio" data-input-value="Наличными" data-required-field="payment">
+                            <label for="payment-3" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">Наличными</p>
+                            </label>
+                          </div>
+                          <div class="d-flex flex-row gap-10">
+                            <input data-input="payment" class="cart-radio mt-3" name="payment" id="payment-4" type="radio" data-input-value="Выписать счёт" data-required-field="payment">
+                            <label for="payment-4" class="d-flex flex-column gap-2">
+                              <p class="text size-16 color-gray-700">Выписать счёт</p>
+                            </label>
+                          </div>
+                        </div>
+                    </div>
+                  </div> 
+                  <!-- КОНЕЦ Предпочтительный вариант доставки:, Выберите пункт самовывоза:, Предпочтительный вариант оплаты: -->
+
+                  <div class="simple-order-form__group simple-order-form__column" style="display: none">
+                    <h3 class="simple-order-form__title">Предпочтительный вариант оплаты:</h3>
+                    <ul id="id_payment_variant">
+                      <li>
+                        <div class="new-radio">
+                          <input
+                            type="radio"
+                            name="payment_variant"
+                            value="0"
+                            class="new-radio__input"
+                            id="id_payment_variant_0"
+                          />
+                          <label class="new-radio__label" for="id_payment_variant_0">выставление счета</label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="new-radio">
+                          <input
+                            type="radio"
+                            name="payment_variant"
+                            value="1"
+                            class="new-radio__input"
+                            id="id_payment_variant_1"
+                          />
+                          <label class="new-radio__label" for="id_payment_variant_1">картой при получении</label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="new-radio">
+                          <input
+                            type="radio"
+                            name="payment_variant"
+                            value="2"
+                            class="new-radio__input"
+                            id="id_payment_variant_2"
+                          />
+                          <label class="new-radio__label" for="id_payment_variant_2">наличными при получении</label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="new-radio">
+                          <input
+                            type="radio"
+                            name="payment_variant"
+                            value="3"
+                            class="new-radio__input"
+                            id="id_payment_variant_3"
+                          />
+                          <label class="new-radio__label" for="id_payment_variant_3">он-лайн</label>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="new-radio">
+                          <input
+                            type="radio"
+                            name="payment_variant"
+                            value="4"
+                            class="new-radio__input"
+                            id="id_payment_variant_4"
+                          />
+                          <label class="new-radio__label" for="id_payment_variant_4">кредит</label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="simple-order-form__group simple-order-form__inputs">
+                    <div class="form-group">
+                      <input type="text" name="name" maxlength="60" class="form-control" required="" id="id_name" />
+                      <label for="id_name" class="label-name">
+                        <span class="content-name"> Имя* </span>
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="phone"
+                        value="79277767575"
+                        maxlength="18"
+                        autocomplete="off"
+                        class="form-control phone"
+                        required=""
+                        id="id_phone"
+                        inputmode="text"
+                      />
+                      <label for="id_phone" class="label-name">
+                        <span class="content-name"> Телефон* </span>
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="email"
+                        value="info@nastroyker.ru"
+                        maxlength="60"
+                        class="form-control"
+                        required=""
+                        id="id_email"
+                      />
+                      <label for="id_email" class="label-name">
+                        <span class="content-name"> Email* </span>
+                      </label>
+                    </div>
+
+                    <!-- Лейбл инпута 1  -->
+                    <div class="cart-extra-field">
+                      <div class="form-group-input-label">Лейбл инпута 1</div><!-- ИНПУТ ЛЕЙБЛ -->
+                      <div class="form-group">
+                        <input type="text" name="name" maxlength="60" class="form-control" required="" id="id_name" />
+                        <label for="id_name" class="label-name">
+                          <span class="content-name"> Лейбл инпута 1* </span>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- Лейбл списка 2  -->
+                    <div class="cart-extra-field">
+                      <div class="form-group-list-label">Лейбл списка 2</div><!-- ЛИСТ ЛЕЙБЛ -->
+                      <div class="form-group">
+                        <div class="select">
+                          <input class="d-none" data-select="stock" name="stock" value="0" type="text">
+                          <div data-select-value-container="stock" class="select__value-content form-control">
+                            <p data-select-value="stock" class="text">Новый список 2</p>
+                            <div class="select__icon">
+                              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z" fill="#2363D1"></path>
+                                <path d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z" fill="#2363D1"></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="select__content d-none" data-select-content="stock">
+                            <div class="select__option" data-select-option-selected="" data-select-option="stock" data-select-option-value="0">
+                              Новый список 2
+                            </div>
+                            <div class="select__option" data-select-option="stock" data-select-option-value="1">
+                              test
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- НОВЫЙ ЛЕЙБЛ -->
+                    <div class="cart-extra-field">
+                      <div class="form-group-label">Новый лейбл 3</div>
+                    </div>
+                    <!-- Новый лейбл 3  -->
+                    <div class="cart-extra-field">
+                      <div class="form-group">
+                        <input type="text" name="name" maxlength="60" class="form-control" required="" id="id_name" />
+                        <label for="id_name" class="label-name">
+                          <span class="content-name"> Новый лейбл 3* </span>
+                        </label>
+                      </div>
+                    </div>
+                    <!-- список без лейбл  -->
+                    <div class="cart-extra-field">
+                      <div class="form-group">
+                        <div class="select">
+                          <input class="d-none" data-select="stock-2" name="stock" value="0" type="text">
+                          <div data-select-value-container="stock-2" class="select__value-content form-control">
+                            <p data-select-value="stock-2" class="text">Новый список 2 без лейбла</p>
+                            <div class="select__icon">
+                              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z" fill="#2363D1"></path>
+                                <path d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z" fill="#2363D1"></path>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="select__content d-none" data-select-content="stock-2">
+                            <div class="select__option" data-select-option-selected="" data-select-option="stock-2" data-select-option-value="0">
+                              Новый список 2
+                            </div>
+                            <div class="select__option" data-select-option="stock-2" data-select-option-value="1">
+                              test
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group comment">
+                      <textarea
+                        name="comment"
+                        cols="40"
+                        rows="10"
+                        class="form-control form-control"
+                        id="id_comment"
+                      ></textarea>
+                      <label for="id_comment" class="label-name">
+                        <span class="content-name"> Комментарий к заказу </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="simple-order-form__group simple-order-form__submit">
+                    <button class="btn btn--main-min button-theme button-theme_primary" type="submit">Отправить</button>
+
+                    <span class="form-text"
+                      >Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с нашей
+                      политикой конфиденциальности</span
+                    >
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%~ include("/components/footers/templates/footer.html") %> <%~ include("/components/general/templates/svg-pack.html")
+      %> <%~ include("/components/modals/templates/callme-modal.html") %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<div class="product-card__price-block">
+  <div
+    class="product-card__personal-cost orig-price"
+    itemprop="offers"
+    itemtype="http://schema.org/Offer"
+    itemscope=""
+  >
+    <span> цена: </span>
+    <meta itemprop="price" content="12313123" />
+    <meta itemprop="priceCurrency" content="RUB" />
+
+    <link itemprop="availability" href="http://schema.org/InStock" />
+
+    <strong> 12&nbsp;313&nbsp;123,00 ₽/шт. </strong>
+  </div>
+
+  <div class="product-card__modification-container" data-ajax-url="/catalog/ajax-get-mod-for-product/2/test/">
+    <div class="product-card__modification-item">
+      <p class="product-card__modification-title">eyertert</p>
+      <select class="product-card__modification-select" name="" id="" autocomplete="off">
+        <option
+          class="product-card__modification-option"
+          data-param-id="12"
+          data-param-value="456546"
+          class="product-mod-param"
+          value=""
+        >
+          456546
+        </option>
+        <option
+          class="product-card__modification-option"
+          data-param-id="12"
+          data-param-value="234234"
+          class="product-mod-param active"
+          value=""
+          selected=""
+        >
+          234234
+        </option>
+      </select>
+    </div>
+
+    <div class="product-card__modification-item">
+      <p class="product-card__modification-title">toshiba</p>
+      <div class="product-card__radio-options">
+        <a class="product-card__product-mod-param" data-param-id="6" data-param-value="199" href="javascript:void(0)">199</a>
+
+        <a class="product-card__product-mod-param product-card__product-mod-param_active" data-param-id="6" data-param-value="65" href="javascript:void(0)">
+          65
+        </a>
+      </div>
+    </div>
+
+    <div class="product-card__modification-item">
+      <div class="product-card__accessibility">
+        <p class="product-card__accessibility-title">Наличие:</p>
+  
+        <div class="product-card__accessibility-status product-item__status--none common-status">Товар едет</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="shopping-cart-product">
+    <a href="#" data-product-code="001" data-product-name="Товар 1" class="shopping-cart-product--btn btn-border btn-border--lg not-for-sale not-available btn-small button-theme button-theme_secondary">
+      Узнать о наличии
+    </a>
+
+    <%~ include("/components/general/templates/btn-favorite--lg.html") %>
+  </div>
+</div>
