@@ -11830,6 +11830,38 @@ canvas {
   width: 225px;
 }
 
+.advertise-mobile {
+  display: none;
+}
+@media screen and (max-width: 575px) {
+  .advertise-mobile {
+    display: block;
+    margin: 40px 0;
+  }
+  .advertise-mobile__container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .advertise-mobile__block {
+    display: block;
+    width: calc(50% - 15px);
+    height: auto;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .advertise-mobile__block img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform .15s ease-out;
+  }
+  .advertise-mobile__block:hover img {
+    transform: scale(1.05);
+  }
+}
+
 @media (max-width: 767px) {
   .catalog-menu__side {
     display: none;
