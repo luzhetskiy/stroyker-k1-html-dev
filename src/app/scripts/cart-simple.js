@@ -28,10 +28,8 @@
               }
           })
       }
-
       $("input[name=delivery_variant]").click(toggleExtraFields);
       $("input[name=payment_variant]").click(toggleExtraFields);
-
       toggleExtraFields();
   });
 })(jQuery);
