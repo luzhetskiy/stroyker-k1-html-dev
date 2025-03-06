@@ -1,27 +1,37 @@
 (function ($) {
   $(document).ready(function () {
-    var delivery_payment_mapping = JSON.parse(document.getElementById("delivery_payment_mapping").textContent);
-    var current_delivery = $("input[name=delivery_variant]:checked").val();
-    var payment_block = $("#id_payment_variant").parent();
+      let pickupSection = document.getElementById("pickup-section");  // pickup section
 
-    function change_delivery_variant(e) {
-      if (e) {
-        current_delivery = $(this).val();
-      }
-      if (current_delivery) {
-        payment_block.show().find("li").show();
-        payment_block
-        .show()
-        .find("input")
-        .each(function () {
-          var current_element = $(this);
-          if (!delivery_payment_mapping[current_delivery].includes(current_element.val())) {
-            current_element.prop("checked", false).parent().parent().hide();
+      function toggleExtraFields() {
+          let delivery_selected = document.querySelector('input[name="delivery_variant"]:checked');
+          let payment_selected = document.querySelector('input[name="payment_variant"]:checked');
+          let delivery_id = parseInt(delivery_selected.getAttribute("id").slice(-1));
+          let payment_id = parseInt(payment_selected.getAttribute("id").slice(-1));
+          switch (delivery_id) {
+              case 0:
+                  pickupSection.style.display = "block";
+                  break;
+              case 1:
+                  pickupSection.style.display = "none";
+                  break;
+              case 2:
+                  pickupSection.style.display = "none";
+                  break;
           }
-        });
+
+          $('.cart-extra-field').each(function (index, element) {
+              let element_bind = parseInt(element.getAttribute("binded"));
+              if ([payment_id + 5, delivery_id + 2, 0].includes(element_bind)) {
+                  $(element).show();
+              } else {
+                  $(element).hide();
+              }
+          })
       }
-    }
-    $("input[name=delivery_variant]").click(change_delivery_variant);
-    change_delivery_variant(undefined);
+
+      $("input[name=delivery_variant]").click(toggleExtraFields);
+      $("input[name=payment_variant]").click(toggleExtraFields);
+
+      toggleExtraFields();
   });
 })(jQuery);

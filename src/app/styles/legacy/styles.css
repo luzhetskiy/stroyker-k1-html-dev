@@ -4770,6 +4770,8 @@ p:last-child {
   color: var(--main-elements-color, var(--accent-color-400));
 }
 
+
+
 .form-control:focus + .label-name::after,
 .form-control:valid + .label-name::after {
   font-size: 9px;
