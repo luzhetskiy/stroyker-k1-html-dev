@@ -322,6 +322,15 @@ body {
   .new-slide-item--wide .new-slide-item__content {
     padding-top: 0;
   }
+
+  .breadcrumbs :first-child a::before {
+    display: none !important;
+  }
+
+  .breadcrumbs__sep {
+    display: block !important;
+    color: var(--main-elements-color) !important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -330,6 +339,10 @@ body {
     top: -12px !important;
     left: 0;
   }
+}
+
+.st-button_add-to-cart {
+  flex: none;
 }
 
 .footer-content__menu {
@@ -2200,15 +2213,6 @@ header .header-fixed-content .header-phone {
   transform: rotate(-90deg);
   margin-right: 15px;
   color: var(--main-elements-color);
-}
-.breadcrumbs__sep:last-child {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .breadcrumbs__sep:first-child {
-    display: none;
-  }
 }
 
 @media (max-width: 767px) {
