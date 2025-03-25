@@ -342,7 +342,7 @@ body {
 }
 
 .st-button_add-to-cart {
-  flex: none;
+  flex: none !important;
 }
 
 .footer-content__menu {
