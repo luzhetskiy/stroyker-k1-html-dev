@@ -7045,11 +7045,13 @@ select::-ms-expand {
   margin-bottom: 25px;
 }
 
-.text-page ul {
+.text-page ul,
+.o-product-tab ul {
   margin-bottom: 15px;
 }
 
-.text-page ul li {
+.text-page ul li,
+.o-product-tab ul li {
   position: relative;
   color: #000;
   font-size: 14px;
@@ -7058,7 +7060,8 @@ select::-ms-expand {
   padding-left: 23px;
 }
 
-.text-page ul li:before {
+.text-page ul li:before,
+.o-product-tab ul li:before {
   content: "";
   width: 12px;
   height: 2px;
@@ -7069,14 +7072,16 @@ select::-ms-expand {
   top: 8px;
 }
 
-.text-page ol {
+.text-page ol,
+.o-product-tab ol {
   margin-bottom: 40px;
   counter-reset: myCounter;
   list-style-type: none;
   padding-top: 10px;
 }
 
-.text-page ol li {
+.text-page ol li,
+.o-product-tab ol li {
   position: relative;
   font-size: 14px;
   line-height: 18px;
@@ -7084,7 +7089,8 @@ select::-ms-expand {
   padding-left: 50px;
 }
 
-.text-page ol li:before {
+.text-page ol li:before,
+.o-product-tab ol li:before {
   content: "";
   counter-increment: myCounter;
   content: counter(myCounter) !important;
@@ -13425,3 +13431,4 @@ canvas {
 .menu-item.active a {
   color: #bdbdbd;
 }
+
