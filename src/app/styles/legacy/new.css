@@ -2712,3 +2712,11 @@ main {
     height: 80px;
   }
 }
+
+.form-group.comment .content-name {
+  font-size: 9px !important;
+  left: 0px !important;
+  top: -15px !important;
+  text-transform: uppercase !important;
+  color: var(--main-elements-color, var(--accent-color-400)) !important;
+}
