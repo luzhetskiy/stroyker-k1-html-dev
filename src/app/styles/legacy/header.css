@@ -177,6 +177,7 @@
 .__header .options-box .login-register {
   margin-bottom: 0;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   font-family: var(--rb);
   font-size: 14px;
