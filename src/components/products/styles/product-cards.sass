@@ -7,10 +7,15 @@
 .product-content
   background-color: #fff
   border: none
+  flex-direction: row !important
+  gap: 60px !important
   
   &_inner
     padding: 40px 80px
   
+@media (max-width: 768px)
+  .product-content
+    flex-direction: column !important
 
 @media (min-width: 575px)
   .product-content
