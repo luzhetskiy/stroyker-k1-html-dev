@@ -7,15 +7,9 @@
 .product-content
   background-color: #fff
   border: none
-  flex-direction: row !important
-  gap: 60px !important
   
   &_inner
     padding: 40px 80px
-  
-@media (max-width: 768px)
-  .product-content
-    flex-direction: column !important
 
 @media (min-width: 575px)
   .product-content
@@ -66,12 +60,19 @@
   background: url(@images/dot.png) 0 0 repeat-x
 
 .char-text:last-child
-  width: 40%
+  width: 40% !important
 
 .char-text:last-child
   width: auto
   font-size: 14px
   color: #000
+
+.product-content ul
+  display: flex
+  flex-direction: column
+  gap: 10px
+  margin-bottom: 30px
+
 
 @media (max-width: 767px)
   .char
