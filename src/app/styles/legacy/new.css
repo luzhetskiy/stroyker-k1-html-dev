@@ -2721,14 +2721,9 @@ main {
   color: var(--main-elements-color, var(--accent-color-400)) !important;
 }
 
-.form-group.privacy-policy label {
-  color: #767676 !important;
-}
-
-.form-group.privacy-policy .checkbox [type=checkbox]:not(:checked) + label:before, .checkbox [type=checkbox]:checked + label:before {
-  top: 8px;
-}
-
-.form-group.privacy-policy .checkbox [type=checkbox]:not(:checked) + label:after, .checkbox [type=checkbox]:checked + label:after {
-  top: 8px;
+.form-group.privacy-policy label p {
+font-size: 12px;
+padding-left: 0px;
+line-height: 120%;
+color: #767676 !important;
 }
