@@ -2721,7 +2721,7 @@ main {
   color: var(--main-elements-color, var(--accent-color-400)) !important;
 }
 
-.form-group.privacy-policy label p {
+.checkbox span {
 font-size: 12px;
 padding-left: 0px;
 line-height: 120%;
