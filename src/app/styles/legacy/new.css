@@ -834,6 +834,51 @@ header .header-fixed-content .header-phone {
   transition: opacity 0.15s ease-out;
 }
 
+.simple-order-form__column .cart-radio {
+  display: none;
+}
+
+.simple-order-form__column .d-flex.flex-row {
+  position: relative;
+}
+
+.simple-order-form__column .d-flex.flex-row label {
+  display: block;
+  padding: 0 24px 0 30px;
+  line-height: 20px;
+}
+
+.simple-order-form__column .d-flex.flex-row label:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--main-elements-color, #2363d1);
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.simple-order-form__column .d-flex.flex-row label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: var(--main-elements-color, #2363d1);
+  opacity: 0;
+  transition: opacity 0.15s ease-out;
+}
+
+.cart-radio[type="radio"]:checked + label:after {
+    opacity :1 ;
+}
+
 .contact-text-line p {
   margin: 0 0 12px 0;
 }
