@@ -1526,3 +1526,25 @@ $(() => {
     centerMode: !1,
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Проверяем, был ли уже показан модальный
+  if (!localStorage.getItem('cookieModalShown')) {
+    var cookieModal = document.getElementById('cookie-modal');
+      
+    // Показываем модальное окно
+    cookieModal.style.display = 'flex';
+
+    // Находим кнопку внутри модального окна
+    var button = cookieModal.querySelector('button');
+
+    // Обрабатываем клик по кнопке
+    button.addEventListener('click', function() {
+      // Скрываем модальное окно
+      cookieModal.style.display = 'none';
+
+      // Запоминаем, что модальное было показано
+      localStorage.setItem('cookieModalShown', 'true');
+    });
+  }
+});
