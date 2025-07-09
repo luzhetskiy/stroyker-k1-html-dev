@@ -2776,11 +2776,11 @@ color: #767676 !important;
 /* Cookie modal */
 .cookie-modal {
   position: fixed;
-  width: 100%;
-  height: 100%;
+  width: fit-content;
+  height: fit-content;
   z-index: 9992;
-  top: 0;
-  left: 0;
+  bottom: 0;
+  right: 0;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -2832,7 +2832,7 @@ color: #767676 !important;
 
 @media (max-width: 767px) {
   .cookie-modal {
-    background-color: #00000041;
+    width: 100%;
   }
 
   .cookie-modal__content {
