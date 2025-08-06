@@ -2820,6 +2820,10 @@ color: #767676 !important;
   padding: 0;
 }
 
+.user-data__content {
+  display: flex;
+}
+
 @media (max-width: 767px) {
   .cookie-modal {
     width: 100%;
