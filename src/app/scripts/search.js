@@ -54,3 +54,35 @@ $(document).ready(function ($) {
     }
   });
 });
+
+// мобильный скролл результатов поиска
+document.addEventListener('DOMContentLoaded', function() {
+    function activateMobileScroll() {
+        const searchContainer = document.querySelector('.search-modal-window__search-results');
+        if (searchContainer) {
+            searchContainer.style.maxHeight = '400px';
+            searchContainer.style.overflowY = 'scroll';
+            searchContainer.style.webkitOverflowScrolling = 'touch';
+            
+            searchContainer.addEventListener('touchstart', function(e) {
+                e.stopPropagation();
+            });
+            
+            searchContainer.addEventListener('touchmove', function(e) {
+                e.stopPropagation();
+            });
+            
+            console.log('Мобильный скролл активирован для:', searchContainer);
+        }
+    }
+    
+    // Проверяем каждые 500мс пока не найдем контейнер
+    const interval = setInterval(function() {
+        activateMobileScroll();
+    }, 500);
+    
+    // Останавливаем через 10 секунд
+    setTimeout(function() {
+        clearInterval(interval);
+    }, 10000);
+});
