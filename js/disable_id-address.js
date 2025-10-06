@@ -3,7 +3,8 @@ function disableAddressInput() {
     
     if (addressInput) {
         addressInput.disabled = true;
-        console.log('Атрибут disabled добавлен к элементу с id="id_address"');
+        addressInput.placeholder = "Укажите точку на карте";
+        console.log('Атрибут disabled и placeholder добавлены к элементу с id="id_address"');
     } else {
         console.log('Элемент с id="id_address" не найден');
     }
