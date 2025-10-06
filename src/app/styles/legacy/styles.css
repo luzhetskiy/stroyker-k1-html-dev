@@ -972,7 +972,10 @@ p:last-child {
     background-size: 20px 20px;
     width: 48px;
     height: 40px;
-    background-color: var(--main-elements-color, var(--accent-color-400)) !important;
+    background-color: var(
+      --main-elements-color,
+      var(--accent-color-400)
+    ) !important;
   }
 }
 
@@ -1330,7 +1333,10 @@ p:last-child {
 }
 
 .header-cart:hover .icon-svg {
-  color: var(--catalog-menu-burger-color, var(--header-top-icon-color, var(--accent-color-400)));
+  color: var(
+    --catalog-menu-burger-color,
+    var(--header-top-icon-color, var(--accent-color-400))
+  );
 }
 
 .header-cart span.cart-number {
@@ -1733,7 +1739,8 @@ p:last-child {
 }
 
 .btn-border {
-  border: 1px solid var(--colorless-buttons-border-color, var(--accent-color-300));
+  border: 1px solid
+    var(--colorless-buttons-border-color, var(--accent-color-300));
   border-radius: 2px;
   font-size: 14px;
   display: -webkit-inline-box;
@@ -1764,8 +1771,15 @@ p:last-child {
 }
 
 .btn-border.callme-button:hover {
-  border: 1px solid var(--callme-button-hover-color, var(--callme-button-color, var(--accent-color-300)));
-  color: var(--callme-button-hover-color, var(--callme-button-color, var(--accent-color-400)));
+  border: 1px solid
+    var(
+      --callme-button-hover-color,
+      var(--callme-button-color, var(--accent-color-300))
+    );
+  color: var(
+    --callme-button-hover-color,
+    var(--callme-button-color, var(--accent-color-400))
+  );
   background-color: var(--callme-button-fill-hover-color, var(--white-color));
 }
 
@@ -2372,7 +2386,10 @@ p:last-child {
 .catalog-side__content ul li a:hover,
 .catalog-side__content .submenu a:hover {
   background-color: var(--catalog-menu-hover-bg-color, #f5f5f5) !important;
-  color: var(--catalog-menu-font-hover-color, var(--catalog-menu-font-color, #333));
+  color: var(
+    --catalog-menu-font-hover-color,
+    var(--catalog-menu-font-color, #333)
+  );
 }
 
 .catalog-side__content ul li a:before {
@@ -2915,9 +2932,23 @@ p:last-child {
   cursor: pointer;
   width: 60px;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.75)));
-  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(0, 0, 0, 0.1)),
+    to(rgba(0, 0, 0, 0.75))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
   -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
   transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -2945,9 +2976,23 @@ p:last-child {
 }
 
 .main-slider .owl-nav [class*="owl-"]:last-child {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.75)));
-  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(0, 0, 0, 0.1)),
+    to(rgba(0, 0, 0, 0.75))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
   -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
   -ms-transform: matrix(1, 0, 0, -1, 0, 0);
   transform: matrix(1, 0, 0, -1, 0, 0);
@@ -3358,7 +3403,9 @@ p:last-child {
     height: 326px;
   }
 
-  .item__fixed-height .product-item-comparison__link .product-item-comparison__name {
+  .item__fixed-height
+    .product-item-comparison__link
+    .product-item-comparison__name {
     max-height: 52px;
     font-size: 12px;
     line-height: 1.5;
@@ -3541,7 +3588,8 @@ p:last-child {
   cursor: pointer;
   width: 38px;
   height: 38px;
-  background: var(--white-color) url(@images/icons/slider-nav-arrow.svg) 55% 50% no-repeat;
+  background: var(--white-color) url(@images/icons/slider-nav-arrow.svg) 55% 50%
+    no-repeat;
   background-size: 15px 15px;
   font-size: 0;
   margin-left: 10px;
@@ -3737,9 +3785,23 @@ p:last-child {
   cursor: pointer;
   width: 60px;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.75)));
-  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(0, 0, 0, 0.1)),
+    to(rgba(0, 0, 0, 0.75))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
   -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
   transform: matrix(-1, 0, 0, 1, 0, 0);
@@ -3767,9 +3829,23 @@ p:last-child {
 }
 
 .slider .owl-nav [class*="owl-"]:last-child {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.75)));
-  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(rgba(0, 0, 0, 0.1)),
+    to(rgba(0, 0, 0, 0.75))
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
   -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
   -ms-transform: matrix(1, 0, 0, -1, 0, 0);
   transform: matrix(1, 0, 0, -1, 0, 0);
@@ -3852,7 +3928,8 @@ p:last-child {
   cursor: pointer;
   width: 38px;
   height: 38px;
-  background: var(--white-color) url(@images/icons/slider-nav-arrow.svg) 55% 50% no-repeat;
+  background: var(--white-color) url(@images/icons/slider-nav-arrow.svg) 55% 50%
+    no-repeat;
   background-size: 15px 15px;
   font-size: 0;
   border-radius: 50%;
@@ -4769,8 +4846,6 @@ p:last-child {
   text-transform: uppercase;
   color: var(--main-elements-color, var(--accent-color-400));
 }
-
-
 
 .form-control:focus + .label-name::after,
 .form-control:valid + .label-name::after {
@@ -6045,7 +6120,8 @@ footer {
   position: relative;
   padding: 100px 35px 10px 35px;
   color: #000;
-  background: #f3f6fb url(@images/arrow-lk-main.svg) calc(100% - 15px) calc(100% - 15px) no-repeat;
+  background: #f3f6fb url(@images/arrow-lk-main.svg) calc(100% - 15px)
+    calc(100% - 15px) no-repeat;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -7219,7 +7295,10 @@ ol.number-list li:before {
 .tabs li:hover,
 .tabs li.active {
   background: var(--white-color);
-  color: var(--product-tab-link-hover-color, var(--product-tab-link-color, var(--accent-color-400)));
+  color: var(
+    --product-tab-link-hover-color,
+    var(--product-tab-link-color, var(--accent-color-400))
+  );
 }
 
 .tabs li:last-child {
@@ -8704,7 +8783,8 @@ canvas {
   left: -25px;
   width: 16px;
   height: 16px;
-  background: var(--main-elements-color, var(--accent-color-400)) url(@images/checkbox-check.svg) 50% 50% no-repeat;
+  background: var(--main-elements-color, var(--accent-color-400))
+    url(@images/checkbox-check.svg) 50% 50% no-repeat;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
@@ -9102,7 +9182,8 @@ canvas {
 .step-item.done .step-item__number {
   border-color: var(--main-elements-color, var(--accent-color-400));
   text-indent: -9999px;
-  background: var(--main-elements-color, var(--accent-color-400)) url(@images/step-done.svg) 50% 50% no-repeat;
+  background: var(--main-elements-color, var(--accent-color-400))
+    url(@images/step-done.svg) 50% 50% no-repeat;
 }
 
 .order-succes {
@@ -10129,7 +10210,8 @@ canvas {
   bottom: 0;
   width: 40px;
   height: 40px;
-  background: var(--main-elements-color, var(--accent-color-400)) url(@images/filter-btn.svg) 50% 50% no-repeat;
+  background: var(--main-elements-color, var(--accent-color-400))
+    url(@images/filter-btn.svg) 50% 50% no-repeat;
   background-size: 20px 16px;
   border-radius: 2px;
   cursor: pointer;
@@ -10286,7 +10368,8 @@ canvas {
   bottom: 0;
   width: 40px;
   height: 40px;
-  background: var(--main-elements-color, var(--accent-color-400)) url(@images/sort-icon.svg) 50% 50% no-repeat;
+  background: var(--main-elements-color, var(--accent-color-400))
+    url(@images/sort-icon.svg) 50% 50% no-repeat;
   background-size: 20px 16px;
   border-radius: 2px;
   cursor: pointer;
@@ -10337,7 +10420,10 @@ canvas {
 .icon-sort-price span,
 .icon-sort-price span:before,
 .icon-sort-price span:after {
-  background-color: var(--product-list-header-link-color, var(--accent-color-400));
+  background-color: var(
+    --product-list-header-link-color,
+    var(--accent-color-400)
+  );
 }
 
 .catalog-right {
@@ -10535,11 +10621,17 @@ canvas {
   width: calc(100% / 5 - 15px);
 }
 
-.catalog-container .catalog-body--wide .catalog-content .product-item:nth-child(4n + 4) {
+.catalog-container
+  .catalog-body--wide
+  .catalog-content
+  .product-item:nth-child(4n + 4) {
   margin-right: 15px;
 }
 
-.catalog-container .catalog-body--wide .catalog-content .product-item:nth-child(5n + 5) {
+.catalog-container
+  .catalog-body--wide
+  .catalog-content
+  .product-item:nth-child(5n + 5) {
   margin-right: 0;
 }
 
@@ -11133,6 +11225,10 @@ canvas {
   z-index: 99;
   -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-search-results[data-search-results-active] {
+  display: block;
 }
 
 .search-result-item {
@@ -11850,7 +11946,7 @@ canvas {
     display: block;
     width: 100%;
     height: 100%;
-    transition: transform .15s ease-out;
+    transition: transform 0.15s ease-out;
   }
   .advertise-mobile__block:hover img {
     transform: scale(1.05);
@@ -12984,7 +13080,7 @@ canvas {
   display: inline-block;
   max-width: 100%;
   padding: 10px 20px;
-  border: 1px solid #BDBDBD;
+  border: 1px solid #bdbdbd;
 }
 
 .catalog__links-block a:is(:hover, :focus-visible, .active) {
@@ -13418,4 +13514,3 @@ canvas {
 .menu-item.active a {
   color: #bdbdbd;
 }
-
