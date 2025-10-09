@@ -380,34 +380,15 @@
           <p>Продукцию вы можете купить у одного из наших партнеров.</p>
 
           <div class="catalog-links-wrapper">
-            <div
-              class="catalog__links-block catalog__links-block--portfolio city-select"
-            >
-              <div class="catalog__links-item">
-                <a
-                  class="catalog-item__link active"
-                  href="/addresses/partners/"
-                >
-                  Все города
-                </a>
-              </div>
-
-              <div class="catalog__links-item">
-                <a
-                  class="catalog-item__link"
-                  href="/addresses/partners/?city=samara"
-                >
-                  Самара
-                </a>
-              </div>
-
-              <div class="catalog__links-item">
-                <a
-                  class="catalog-item__link"
-                  href="/addresses/partners/?city=voronezh"
-                >
-                  Воронеж
-                </a>
+            <div class="catalog__links-block catalog__links-block--portfolio city-select">
+              <div class="custom-select-wrapper">
+                <select class="city-select-dropdown"">
+                      <option>Все города</option>
+                      <option>Самара</option>
+                      <option>Волгоград</option>
+                      <option>Саратов</option>
+                      <option>Москва</option>
+                  </select>
               </div>
             </div>
 
@@ -440,7 +421,9 @@
               </div>
             </div>
 
-            <a href="/" class="btn">Стать дилером</a>
+            <div class="dealer-btn">
+              <a href="/" class="btn">Стать дилером</a>
+            </div>
           </div>
 
           <div class="affiliate-network">
