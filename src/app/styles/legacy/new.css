@@ -2824,6 +2824,11 @@ color: #767676 !important;
   display: flex;
 }
 
+.catalog-links-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (max-width: 767px) {
   .cookie-modal {
     width: 100%;
