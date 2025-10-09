@@ -2832,14 +2832,13 @@ color: #767676 !important;
 .custom-select-wrapper {
   position: relative;
   width: 100%;
-  max-width: 200px;
 }
 
 .custom-select-wrapper::after {
   content: "▼";
   font-size: 12px;
   position: absolute;
-  right: 0;
+  right: 5px;
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
@@ -2852,7 +2851,7 @@ color: #767676 !important;
   color: var(--custom-black-color);
   background: var(--custom-gray-color-100);
   border-radius: 2px;
-  padding: 0 30px;
+  padding: 10px 20px;
   border: 1px solid #bdbdbd;
   width: 100%;
   appearance: none;
