@@ -13,7 +13,7 @@ $(document).ready(function ($) {
     const input = $(event.currentTarget);
     const value = input.val();
     const id = input.attr("data-search-input");
-    const searchMinChars = input.attr("data-min-chars");
+    const searchMinChars = parseInt(input.attr("data-min-chars")) || 0;
     const searchUrl = input.attr("data-search-url");
     const resultContainer = $(`[data-search-results="${id}"]`);
     const clickOuterHandler = (event) => {
@@ -25,11 +25,15 @@ $(document).ready(function ($) {
 
     if (event.key === "Enter") {
       console.log('Enter');
-      
       return (window.location = searchUrl + "?q=" + value)
     }
 
-    if (value.length < searchMinChars) return;
+    // Очищаем результаты если текст слишком короткий или пустой
+    if (value.length < searchMinChars) {
+      resultContainer.html("");
+      resultContainer.removeAttr("data-search-results-active");
+      return;
+    }
 
     try {
       $.ajax({
