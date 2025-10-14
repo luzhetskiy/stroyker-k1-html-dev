@@ -155,41 +155,80 @@ function prepareFilterForm() {
 function handleFilterChange(elem) {
   var $this = $(elem);
 
+  // Временно отключаем обработчики изменений чтобы избежать рекурсии
+  filterForm.off('keyup change paste', 'input, select, textarea');
+
   filterForm
-   .find(":input")
-   .not("button")
-   .filter(function () {
-     if (this.classList.contains("range-input")) {
-       return parseInt(this.dataset.initValue) === parseInt(this.value);
-     }
-     return !this.value;
-   })
-   .attr("disabled", "disabled");
+    .find(":input")
+    .not("button")
+    .filter(function () {
+      if (this.classList.contains("range-input")) {
+        return parseInt(this.dataset.initValue) === parseInt(this.value);
+      }
+      return !this.value;
+    })
+    .attr("disabled", "disabled");
 
-   prepareFilterForm();
+  prepareFilterForm();
 
-   var formData = filterForm.serialize();
-   var url = filterForm.attr("action");
-   if (formData.length) {
-     url += "?" + formData;
-   }
+  var formData = filterForm.serialize();
+  var url = filterForm.attr("action");
+  if (formData.length) {
+    url += "?" + formData;
+  }
 
-   $.getJSON(url, function (response) {
-     var filterShowAll = $(".filter-show-all");
-     if (filterShowAll.length > 0) {
-       filterShowAll.hide();
-       filterShowAll.show();
-       filterShowAll.insertAfter($this.parent());
-       if (response.count) {
-         filterShowAll.html('<a href="' + url + '">Показать ' + response.count + "</a>");
-       } else {
-         filterShowAll.html('<a href="#">Найдено 0</a>');
-       }
-       setTimeout(function () {
-         filterShowAll.not(":hover").fadeOut("fast");
-       }, 5000);
-     }
-   });
+  $.getJSON(url, function (response) {
+    var filterShowAll = $(".filter-show-all");
+    if (filterShowAll.length > 0) {
+      // Убираем предыдущие таймауты для этой кнопки
+      filterShowAll.data('timeout-id') && clearTimeout(filterShowAll.data('timeout-id'));
+      
+      // Всегда показываем кнопку перед обновлением контента
+      filterShowAll.stop(true, true).show();
+      
+      // Обновляем содержимое
+      if (response.count && response.count > 0) {
+        filterShowAll.html('<a href="' + url + '">Показать ' + response.count + "</a>");
+      } else {
+        filterShowAll.html('<a href="#">Найдено 0</a>');
+      }
+      
+      // Позиционируем кнопку относительно измененного элемента
+      filterShowAll.insertAfter($this.closest('.filter-field, .filter-group').length ? 
+                               $this.closest('.filter-field, .filter-group') : $this.parent());
+      
+      // Устанавливаем новый таймаут для скрытия
+      var timeoutId = setTimeout(function () {
+        filterShowAll.not(":hover").fadeOut("slow");
+      }, 10000);
+      
+      // Сохраняем ID таймаута для возможности отмены
+      filterShowAll.data('timeout-id', timeoutId);
+      
+      // Обработчик hover для отмены скрытия при наведении
+      filterShowAll.off('mouseenter mouseleave').hover(
+        function() {
+          // При наведении отменяем таймаут скрытия
+          clearTimeout($(this).data('timeout-id'));
+        },
+        function() {
+          // При уходе курсора устанавливаем новый таймаут
+          var $this = $(this);
+          var timeoutId = setTimeout(function() {
+            $this.fadeOut("slow");
+          }, 2000); // Скрываем через 2 секунды после ухода курсора
+          $this.data('timeout-id', timeoutId);
+        }
+      );
+    }
+  }).always(function() {
+    // Восстанавливаем обработчики после завершения запроса
+    setTimeout(function() {
+      filterForm.on("keyup change paste", "input, select, textarea", function () {
+        handleFilterChange(this);
+      });
+    }, 100);
+  });
 }
 
 function updRangeSliders() {
