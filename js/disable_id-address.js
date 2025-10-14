@@ -11,7 +11,11 @@ function configureAddressInput() {
             backgroundColor: 'transparent',
             color: '#000',
             border: 'none',
-            cursor: 'not-allowed'
+            padding: '0',
+            fontSize: '14px',
+            color: '#000',
+            height: '40px',
+            cursor: 'default'
         });
         
         // Функция для обновления адреса из карты
@@ -24,4 +28,3 @@ function configureAddressInput() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', configureAddressInput);
