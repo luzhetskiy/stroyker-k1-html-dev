@@ -2865,6 +2865,11 @@ color: #767676 !important;
   background: var(--custom-gray-color-200);
 }
 
+#search-result-container[data-search-results-active],
+#search-result-mob[data-search-results-active] {
+  display: block !important;
+}
+
 @media (max-width: 767px) {
     .partner-wrapper {
         display: flex;
