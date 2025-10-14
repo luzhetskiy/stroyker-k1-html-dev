@@ -1,52 +1,27 @@
-function replaceInputsWithLabels() {
-    const addressInputs = document.querySelectorAll('input[id="id_address"]');
+function configureAddressInput() {
+    const addressInput = document.getElementById('id_address');
     
-    addressInputs.forEach((input) => {
-        const container = input.parentElement;
-        const originalName = input.name;
-        const originalId = input.id;
-        const currentValue = input.value;
+    if (addressInput) {
+        // Блокируем инпут
+        addressInput.disabled = true;
+        addressInput.placeholder = "Укажите точку на карте";
         
-        // Создаем скрытое поле
-        const hiddenInput = document.createElement('input');
-        hiddenInput.type = 'hidden';
-        hiddenInput.name = originalName;
-        hiddenInput.id = originalId;
-        hiddenInput.value = currentValue;
-        
-        // Создаем label для отображения
-        const label = document.createElement('label');
-        label.textContent = currentValue || "Укажите точку на карте";
-        label.htmlFor = originalId;
-        label.className = 'address-display-label';
-        
-        // Стилизация
-        Object.assign(label.style, {
-            display: 'flex',
-            alignItems: 'center',
-            padding: '0',
-            fontSize: '14px',
+        // Стили
+        Object.assign(addressInput.style, {
+            backgroundColor: 'transparent',
             color: '#000',
-            height: '40px',
-            cursor: 'default'
+            border: 'none',
+            cursor: 'not-allowed'
         });
         
-        // Заменяем input
-        container.replaceChild(label, input);
-        container.appendChild(hiddenInput);
-    });
-    
-    // Функция для обновления адреса
-    window.updateAddressFromMap = function(address) {
-        const hiddenInput = document.getElementById('id_address');
-        const label = document.querySelector('label[for="id_address"]');
+        // Функция для обновления адреса из карты
+        window.updateAddressFromMap = function(address) {
+            addressInput.value = address;
+            console.log('Адрес установлен:', address);
+        };
         
-        if (hiddenInput && label) {
-            hiddenInput.value = address;
-            label.textContent = address;
-            console.log('Адрес обновлен:', address);
-        }
-    };
+        console.log('Инпут адреса настроен');
+    }
 }
 
-document.addEventListener('DOMContentLoaded', replaceInputsWithLabels);
+document.addEventListener('DOMContentLoaded', configureAddressInput);
