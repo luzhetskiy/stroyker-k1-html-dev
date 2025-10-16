@@ -13,7 +13,6 @@ function configureAddressInput() {
             border: 'none',
             padding: '0',
             fontSize: '14px',
-            color: '#000',
             height: '40px',
             cursor: 'default'
         });
@@ -28,3 +27,4 @@ function configureAddressInput() {
     }
 }
 
+document.addEventListener('DOMContentLoaded', configureAddressInput);
