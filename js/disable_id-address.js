@@ -55,7 +55,7 @@
                 width: '100%',
                 minHeight: '40px',
                 maxHeight: '120px',
-                padding: '10px 0px',
+                padding: '10px 12px',
                 whiteSpace: 'pre-wrap',
                 wordWrap: 'break-word',
                 overflowWrap: 'break-word',
