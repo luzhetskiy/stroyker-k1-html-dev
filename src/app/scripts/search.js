@@ -1,4 +1,6 @@
 $(document).ready(function ($) {
+  let clickOuterHandler = null;
+
   $("[data-search-button]").on("click", (event) => {
     console.log('click');
     const id = $(event.currentTarget).attr("data-search-button");
@@ -16,15 +18,32 @@ $(document).ready(function ($) {
     const searchMinChars = parseInt(input.attr("data-min-chars")) || 0;
     const searchUrl = input.attr("data-search-url");
     const resultContainer = $(`[data-search-results="${id}"]`);
-    const clickOuterHandler = (event) => {
-      if (!event.target.closest("[data-search-results-active]")) {
-        $(event.target).removeAttr("data-search-results-active");
+    
+    // Удаляем предыдущий обработчик, если он есть
+    if (clickOuterHandler) {
+      $(document).off("click", clickOuterHandler);
+    }
+    
+    // Создаем новый обработчик для закрытия при клике вне области
+    clickOuterHandler = (clickEvent) => {
+      if (!clickEvent.target.closest("[data-search-results-active]") && 
+          !clickEvent.target.closest("[data-search-input]")) {
+        resultContainer.removeAttr("data-search-results-active");
+        resultContainer.html("");
         $(document).off("click", clickOuterHandler);
+        clickOuterHandler = null;
       }
     };
 
     if (event.key === "Enter") {
       console.log('Enter');
+      // Закрываем результаты перед переходом
+      resultContainer.removeAttr("data-search-results-active");
+      resultContainer.html("");
+      if (clickOuterHandler) {
+        $(document).off("click", clickOuterHandler);
+        clickOuterHandler = null;
+      }
       return (window.location = searchUrl + "?q=" + value)
     }
 
@@ -32,6 +51,10 @@ $(document).ready(function ($) {
     if (value.length < searchMinChars) {
       resultContainer.html("");
       resultContainer.removeAttr("data-search-results-active");
+      if (clickOuterHandler) {
+        $(document).off("click", clickOuterHandler);
+        clickOuterHandler = null;
+      }
       return;
     }
 
@@ -45,11 +68,19 @@ $(document).ready(function ($) {
         if (result.replace(/\s/g, "").length <= 0) {
           resultContainer.html("");
           resultContainer.removeAttr("data-search-results-active");
+          if (clickOuterHandler) {
+            $(document).off("click", clickOuterHandler);
+            clickOuterHandler = null;
+          }
           return;
         }
         resultContainer.html(result);
         resultContainer.attr("data-search-results-active", "");
-        $(document).on("click", clickOuterHandler);
+        
+        // Добавляем обработчик после показа результатов
+        setTimeout(() => {
+          $(document).on("click", clickOuterHandler);
+        }, 0);
       });
     } catch {
       (error) => {
