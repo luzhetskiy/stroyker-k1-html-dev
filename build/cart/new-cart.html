@@ -990,113 +990,151 @@
                       </form>
                     </div>
                   </div>
-                  <div class="grid-span-lg-4 grid-span-xl-3">
-                    <div class="d-lg-flex flex-column gap-30 bg-white p-20 pb-40 d-none">
-                      <div class="d-flex flex-column gap-20">
-                        <div class="form-group mb-0">
-                          <input
-                            type="text"
-                            class="form-control"
-                            name="promotional-code"
-                            autocomplete="off"
-                            data-related-value="promotional-code"
-                            placeholder="Промокод"
-                          />
-                        </div>
-
+                  <div class="position-absolute">
+                    <div class="grid-span-lg-4 grid-span-xl-3 position-fixed">
+                      <div class="d-lg-flex flex-column gap-30 bg-white p-20 border-1 border-secondary mb-20">
                         <div class="d-flex flex-column gap-15">
-                          <div class="d-flex flex-column gap-10">
-                            <p class="text d-flex flex-wrap gap-5">
-                              <span>Товары: 3</span>
-                              <span class="separator-dot"></span>
-                              <span>2500 кг</span>
-                              <span class="separator-dot"></span>
-                              <span>6,5 м3</span>
+                          <span>Чтобы получить скидку -5%, войдите в личный кабинет</span>
+                          <div class="d-flex gap-10">
+                            <a href="/" class="color-accent-400">Войти</a>
+                            <span class="color-accent-400">/</span>
+                            <a href="/" class="color-accent-400">Зарегистрироваться</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-lg-flex flex-column gap-30 bg-white pb-40 d-none">
+                        <div class="d-flex flex-column gap-20 p-20 border-1 border-secondary">
+                          <div class="form-group mb-0 d-flex gap-10">
+                            <input
+                              type="text"
+                              class="form-control"
+                              name="promotional-code"
+                              autocomplete="off"
+                              data-related-value="promotional-code"
+                              placeholder="Ввести промокод"
+                            />
+                            <button class="btn-border size-16 ps-md-15 pe-md-15 flex-shrink-0">Применить</button>
+                          </div>
+                          <span class="text-color-light">Примените промокод на скидку</span>
+                          
 
-                              <span class="ms-auto d-inline-block">89 537,50 ₽</span>
-                            </p>
+                          <div class="d-flex flex-column gap-15">
+                            <div class="d-flex flex-column gap-10">
+                              <p class="text d-flex flex-wrap gap-5">
+                                <span>Товары: 3</span>
+                                <span class="separator-dot"></span>
+                                <span>2500 кг</span>
+                                <span class="separator-dot"></span>
+                                <span>6,5 м3</span>
 
-                            <div class="d-flex flex-row justify-content-between">
-                              <p class="text weight-700 size-18">Итого:</p>
-                              <p class="text weight-700 size-20">89 537,50 ₽</p>
+                                <span class="ms-auto d-inline-block">89 537,50 ₽</span>
+                              </p>
+                            </div>
+                            <div class="d-flex flex-column gap-15 p-20 border-1 border-secondary" style="background-color: #F8F9FA;">
+                              <div class="d-flex justify-content-between">
+                                <span>Бонусов на счету:</span>
+                                <span>300</span>
+                              </div>
+                              <div class="d-flex justify-content-between">
+                                <span>Доступно бонусов к списанию:</span>
+                                <span>300</span>
+                              </div>
+                              <div class="form-group mb-0 d-flex gap-10">
+                                <input
+                                  type="text"
+                                  class="form-control"
+                                  name="bonus-quantity"
+                                  autocomplete="off"
+                                  data-related-value="bonus-quantity"
+                                  placeholder="Ввести кол-во бонусов"
+                                />
+                                <button class="btn-border size-16 ps-md-15 pe-md-15 flex-shrink-0">Списать</button>
+                              </div>
+                            </div>
+                            <div class="d-flex flex-column gap-15 p-20 border-1 border-secondary">
+                              <div class="d-flex flex-row justify-content-between">
+                                <p class="text weight-700 size-18">Итого:</p>
+                                <p class="text weight-700 size-20">89 537,50 ₽</p>
+                              </div>
+                              <a href="#order" class="button-theme w-100">Оформить заказ</a>
+                              <p class="text size-12 color-gray-550">
+                                Дата и стоимость доставки рассчитываются после оформления заказа
+                              </p>
                             </div>
                           </div>
-                          <p class="text size-12 color-gray-550">
-                            Дата и стоимость доставки рассчитываются после оформления заказа
-                          </p>
                         </div>
-                      </div>
-                      <div data-input-content-container="name email phone" class="d-none d-flex flex-column gap-10">
-                        <p class="text weight-700 size-18">Данные получателя</p>
-                        <div
-                          data-input-content-container="name"
-                          class="d-none d-flex justify-content-between flex-wrap"
-                        >
-                          <p class="text text-elepsis mw-45">Имя:</p>
-                          <p data-input-content="name" class="text text-elepsis mw-50 text-right"></p>
-                        </div>
-                        <div
-                          data-input-content-container="phone"
-                          class="d-none d-flex justify-content-between flex-wrap"
-                        >
-                          <p class="text text-elepsis mw-45">Номер телефона:</p>
-                          <p data-input-content="phone" class="text text-elepsis mw-50 text-right"></p>
-                        </div>
-                        <div
-                          data-input-content-container="email"
-                          class="d-none d-flex justify-content-between flex-wrap"
-                        >
-                          <p class="text text-elepsis mw-45">Email:</p>
-                          <p data-input-content="email" class="text text-elepsis mw-50 text-right"></p>
-                        </div>
-                      </div>
-                      <div
-                        data-input-content-container="delivery_type payment comment"
-                        class="d-none d-flex flex-column gap-10"
-                      >
-                        <p class="text weight-700 size-18">Данные о заказе</p>
-                        <div
-                          data-input-content-container="delivery_type"
-                          class="d-none d-flex justify-content-between flex-wrap"
-                        >
-                          <p class="text text-elepsis mw-45">Доставка:</p>
-                          <div class="d-flex flex-column mw-50">
-                            <p class="text text-elepsis text-right" data-input-content="delivery_type"></p>
-                            <p
-                              class="d-none text text-elepsis text-right"
-                              data-radio-content="pickup"
-                              data-input-content="delivery_cost"
-                            ></p>
-                            <p
-                              class="d-none text text-elepsis text-right"
-                              data-radio-content="delivery-point"
-                              data-input-content="address"
-                            ></p>
-                            <p
-                              class="d-none text text-elepsis text-right"
-                              data-radio-content="delivery-point"
-                              data-select-value="stock"
-                            ></p>
-                            <p
-                              class="d-none text text-elepsis text-right"
-                              data-radio-content="delivery-point"
-                              data-select-value="car"
-                            ></p>
+                        <div data-input-content-container="name email phone" class="d-none d-flex flex-column gap-10">
+                          <p class="text weight-700 size-18">Данные получателя</p>
+                          <div
+                            data-input-content-container="name"
+                            class="d-none d-flex justify-content-between flex-wrap"
+                          >
+                            <p class="text text-elepsis mw-45">Имя:</p>
+                            <p data-input-content="name" class="text text-elepsis mw-50 text-right"></p>
+                          </div>
+                          <div
+                            data-input-content-container="phone"
+                            class="d-none d-flex justify-content-between flex-wrap"
+                          >
+                            <p class="text text-elepsis mw-45">Номер телефона:</p>
+                            <p data-input-content="phone" class="text text-elepsis mw-50 text-right"></p>
+                          </div>
+                          <div
+                            data-input-content-container="email"
+                            class="d-none d-flex justify-content-between flex-wrap"
+                          >
+                            <p class="text text-elepsis mw-45">Email:</p>
+                            <p data-input-content="email" class="text text-elepsis mw-50 text-right"></p>
                           </div>
                         </div>
                         <div
-                          data-input-content-container="payment"
-                          class="d-none d-flex justify-content-between flex-wrap"
+                          data-input-content-container="delivery_type payment comment"
+                          class="d-none d-flex flex-column gap-10"
                         >
-                          <p class="text text-elepsis mw-45">Оплата:</p>
-                          <p data-input-content="payment" class="text text-elepsis text-right mw-50"></p>
-                        </div>
-                        <div
-                          data-input-content-container="comment"
-                          class="d-none d-flex justify-content-between flex-wrap"
-                        >
-                          <p class="text text-elepsis mw-45">Комментарий:</p>
-                          <p data-input-content="comment" class="text text-elepsis text-right mw-50"></p>
+                          <p class="text weight-700 size-18">Данные о заказе</p>
+                          <div
+                            data-input-content-container="delivery_type"
+                            class="d-none d-flex justify-content-between flex-wrap"
+                          >
+                            <p class="text text-elepsis mw-45">Доставка:</p>
+                            <div class="d-flex flex-column mw-50">
+                              <p class="text text-elepsis text-right" data-input-content="delivery_type"></p>
+                              <p
+                                class="d-none text text-elepsis text-right"
+                                data-radio-content="pickup"
+                                data-input-content="delivery_cost"
+                              ></p>
+                              <p
+                                class="d-none text text-elepsis text-right"
+                                data-radio-content="delivery-point"
+                                data-input-content="address"
+                              ></p>
+                              <p
+                                class="d-none text text-elepsis text-right"
+                                data-radio-content="delivery-point"
+                                data-select-value="stock"
+                              ></p>
+                              <p
+                                class="d-none text text-elepsis text-right"
+                                data-radio-content="delivery-point"
+                                data-select-value="car"
+                              ></p>
+                            </div>
+                          </div>
+                          <div
+                            data-input-content-container="payment"
+                            class="d-none d-flex justify-content-between flex-wrap"
+                          >
+                            <p class="text text-elepsis mw-45">Оплата:</p>
+                            <p data-input-content="payment" class="text text-elepsis text-right mw-50"></p>
+                          </div>
+                          <div
+                            data-input-content-container="comment"
+                            class="d-none d-flex justify-content-between flex-wrap"
+                          >
+                            <p class="text text-elepsis mw-45">Комментарий:</p>
+                            <p data-input-content="comment" class="text text-elepsis text-right mw-50"></p>
+                          </div>
                         </div>
                       </div>
                     </div>
