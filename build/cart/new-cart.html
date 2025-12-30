@@ -598,7 +598,7 @@
                                   />
                                 </div>
                                 <!-- Лейбл инпута текстового  -->
-                                 <div class="cart-extra-field">
+                                 <div class="cart-extra-field d-flex flex-column gap-10">
                                   <div class="form-group-input-label">Инпута текстовый</div><!-- ИНПУТ ЛЕЙБЛ -->
                                   <div class="form-group mb-0">
                                     <input type="text" name="cart-text-1" class="form-control" required="" id="cart-text-1" />
@@ -608,9 +608,9 @@
                                   </div>
                                 </div>
                                 <!-- Лейбл инпута текстового 2  -->
-                                 <div class="cart-extra-field">
+                                 <div class="cart-extra-field d-flex flex-column gap-10">
                                   <div class="form-group-input-label">Лейбл инпута текстового 2</div><!-- ИНПУТ ЛЕЙБЛ -->
-                                  <div class="form-group">
+                                  <div class="form-group mb-0">
                                     <input type="text" name="cart-text-2" class="form-control" required="" id="cart-text-2" />
                                     <label for="id_name" class="label-name">
                                       <span class="content-name">Инпут текстовый 2*</span>
@@ -621,9 +621,9 @@
                                   </div>
                                 </div>                              
                                 <!-- Инпут с датой 2  -->
-                                <div class="cart-extra-field">
+                                <div class="cart-extra-field d-flex flex-column gap-10">
                                   <div class="form-group-list-label">Лейбл инпута с датой 2</div><!-- ЛИСТ ЛЕЙБЛ -->
-                                  <div class="form-group">
+                                  <div class="form-group mb-0">
                                     <div class="select">
                                       <input class="d-none" data-select="stock" name="stock" value="0" type="text">
                                       <div data-select-value-container="stock" class="select__value-content form-control">
@@ -650,9 +650,9 @@
                                   </div>
                                 </div>
                                 <!-- Лейбл выпадающего списка 2  -->
-                                <div class="cart-extra-field">
+                                <div class="cart-extra-field d-flex flex-column gap-10">
                                   <div class="form-group-list-label">Лейбл выпадающего списка 2</div><!-- ЛИСТ ЛЕЙБЛ -->
-                                  <div class="form-group">
+                                  <div class="form-group mb-0">
                                     <div class="select">
                                       <input class="d-none" data-select="stock" name="stock" value="0" type="text">
                                       <div data-select-value-container="stock" class="select__value-content form-control">
@@ -685,7 +685,7 @@
                                   </div>
                                 </div>
                                 <!-- Лейбл текстовой области 2  -->
-                                <div class="cart-extra-field">
+                                <div class="cart-extra-field d-flex flex-column gap-10">
                                   <div class="form-group-list-label">Лейбл текстовой области 2</div><!-- ЛИСТ ЛЕЙБЛ -->
                                   <div class="form-group mb-0">
                                     <textarea
@@ -811,6 +811,12 @@
                                 data-radio-content="delivery-point"
                                 class="d-grid grid-columns-1 grid-columns-md-2 grid-columns-xl-2 grid-columns-lg-1 gap-20 gap-lg-20 gap-xl-40 pe-md-20 gap-grid border-0 border-top-md-1 border-bottom-md-1 border-color-md-gray-200"
                               >
+                                <p class="text size-16">Доставка рассчитывается индивидуально</p>
+                              </div>
+                              <div
+                                data-radio-content="address"
+                                class="d-none d-flex flex-column gap-15 pb-md-30 border-bottom-md-1 border-color-md-gray-200 border-0 pe-lg-70 pe-md-20"
+                              >
                                 <div class="cart-map" id="yamap_delivery"></div>
                                 <div class="d-flex flex-column gap-15 pt-20 pe-lg-40 pb-md-20">
                                   <h2 class="sub-title size-18">Укажите адрес доставки</h2>
@@ -911,12 +917,6 @@
                                     </div>
                                   </div>
                                 </div>
-                              </div>
-                              <div
-                                data-radio-content="address"
-                                class="d-none d-flex flex-column gap-15 pb-md-30 border-bottom-md-1 border-color-md-gray-200 border-0 pe-lg-70 pe-md-20"
-                              >
-                                <p class="text size-16">Доставка рассчитывается индивидуально</p>
                               </div>
                               <div data-radio-content="*" class="d-none d-flex flex-column gap-15 pe-lg-70 pe-md-20">
                                 <h2 class="sub-title">Оплата</h2>
