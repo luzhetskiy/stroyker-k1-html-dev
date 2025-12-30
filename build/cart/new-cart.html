@@ -782,6 +782,16 @@
                                 class="d-grid grid-columns-1 grid-columns-md-2 grid-columns-xl-2 grid-columns-lg-1 gap-20 gap-lg-20 gap-xl-40 pe-md-20 gap-grid border-0 border-top-md-1 border-bottom-md-1 border-color-md-gray-200"
                               >
                                 <p class="text size-16">Доставка рассчитывается индивидуально</p>
+                                <div class="cart-extra-field d-flex flex-column gap-10">
+                                  
+                                  <div class="form-group mb-0">
+                                    <input type="text" name="cart-time-delivery" class="form-control" required="" id="cart-time-delivery" />
+                                    <label for="cart-time-delivery" class="label-name">
+                                      <span class="content-name">Укажите время доставки</span>
+                                    </label>
+                                  </div>
+                                </div> 
+
                               </div>
                               <div
                                 data-radio-content="address"
@@ -967,6 +977,12 @@
                                     autocomplete="off"
                                     placeholder="Комментарий"
                                   ></textarea>
+                                </div>
+                                <div class="form-group privacy-policy">
+                                  <div class="checkbox">
+                                    <input type="checkbox" name="privacy-policy" id="privacy">
+                                    <label for="privacy">Нажимая на кнопку, вы даете согласие на обработку <a href="/">персональных данных</a> и соглашаетесь с нашей <a href="/">политикой конфиденциальности</a></label>
+                                  </div>
                                 </div>
                                 <button data-click-target="submit" data-wait-requred="name phone email payment delivery" disabled type="submit" class="btn size-16 ps-md-50 pe-md-50">Оформить заказ</button>
                                 <div class="d-grid grid-columns-lg-7 grid-columns-1 gap-grid">
