@@ -21,9 +21,9 @@
 }
 
 /* Показываем hover-иконку ТОЛЬКО если она есть */
-.add-to-cart:has(.icon-svg.hover):hover .icon-svg.hover {
+.header-cart:has(.icon-svg.hover):hover .icon-svg.hover {
   opacity: 1;
-  display: block;
+  display: flex;
 }
 
 .inner-page section.header--bottom-mob, .inner-page section.__h-fat-v2-bottom {

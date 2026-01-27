@@ -1193,7 +1193,7 @@ p:last-child {
 /* Показываем hover-иконку ТОЛЬКО если она есть */
 .header-user__link:has(.icon-svg.hover):hover .icon-svg.hover {
   opacity: 1;
-  display: block;
+  display: flex;
 }
 
 .header-compare,

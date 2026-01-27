@@ -392,7 +392,27 @@ section.feedback-form .form-control {
 /* Показываем hover-иконку ТОЛЬКО если она есть */
 .add-to-cart:has(img.cart-icon.hover):hover img.cart-icon.hover {
   opacity: 1;
-  display: block;
+  display: flex;
+}
+
+.st-button_add-to-cart .st-button__icon_cart {
+  transition: all 0.2s ease-in-out;
+}
+
+.st-button_add-to-cart .st-button__icon_cart.hover {
+  opacity: 0;
+  display: none;
+}
+
+/* Скрываем основную иконку при ховере ТОЛЬКО если есть .hover-иконка */
+.st-button_add-to-cart:has(.st-button__icon_cart.hover):hover .st-button__icon_cart {
+  display: none;
+}
+
+/* Показываем hover-иконку ТОЛЬКО если она есть */
+.st-button_add-to-cart:has(.st-button__icon_cart.hover):hover .st-button__icon_cart.hover {
+  opacity: 1;
+  display: flex;
 }
 
 .owl-carousel .owl-item img.custom-icon {
