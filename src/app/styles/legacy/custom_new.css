@@ -8,6 +8,19 @@
 }
 .header-cart .icon img.icon-svg {
   right: 0;
+  transition: all 0.2s ease-in-out;
+}
+.header-cart .icon-svg.hover {
+  opacity: 0;
+  display: none;
+}
+.header-cart:hover .icon-svg {
+  opacity: 0;
+  display: none;
+}
+.header-cart:hover .icon-svg.hover {
+  opacity: 1;
+  display: block;
 }
 .inner-page section.header--bottom-mob, .inner-page section.__h-fat-v2-bottom {
   background-color: #000 !important;

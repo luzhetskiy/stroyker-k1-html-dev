@@ -376,7 +376,23 @@ section.feedback-form .form-control {
 
 .add-to-cart img.cart-icon {
   padding-right: 1rem;
+  transition: all 0.2s ease-in-out;
 }
+
+.add-to-cart img.cart-icon.hover {
+  opacity: 0;
+  display: none;
+}
+
+.add-to-cart:hover img.cart-icon {
+  display: none;
+}
+
+.add-to-cart:hover img.cart-icon.hover {
+  opacity: 1;
+  display: block;
+}
+
 .owl-carousel .owl-item img.custom-icon {
   width: auto;
 }

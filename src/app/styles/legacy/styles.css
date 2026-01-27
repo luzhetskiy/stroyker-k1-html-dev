@@ -1176,6 +1176,24 @@ p:last-child {
   color: var(--main-elements-color, var(--accent-color-400));
 }
 
+.header-user__link .icon-svg {
+  transition: all 0.2s ease-in-out;
+}
+
+.header-user__link .icon-svg.hover {
+  opacity: 0;
+  display: none;
+}
+
+.header-user__link:hover .icon-svg {
+  opacity: 0;
+  display: none;
+}
+.header-user__link:hover .icon-svg.hover {
+  opacity: 1;
+  display: block;
+}
+
 .header-compare,
 .header-favorite {
   position: relative;
