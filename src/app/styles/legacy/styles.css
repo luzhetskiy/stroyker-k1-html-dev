@@ -1185,11 +1185,13 @@ p:last-child {
   display: none;
 }
 
-.header-user__link:hover .icon-svg {
-  opacity: 0;
+/* Скрываем основную иконку при ховере ТОЛЬКО если есть .hover-иконка */
+.header-user__link:has(.icon-svg.hover):hover .icon-svg {
   display: none;
 }
-.header-user__link:hover .icon-svg.hover {
+
+/* Показываем hover-иконку ТОЛЬКО если она есть */
+.header-user__link:has(.icon-svg.hover):hover .icon-svg.hover {
   opacity: 1;
   display: block;
 }

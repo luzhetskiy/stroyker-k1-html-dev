@@ -384,11 +384,13 @@ section.feedback-form .form-control {
   display: none;
 }
 
-.add-to-cart:hover img.cart-icon {
+/* Скрываем основную иконку при ховере ТОЛЬКО если есть .hover-иконка */
+.add-to-cart:has(img.cart-icon.hover):hover img.cart-icon {
   display: none;
 }
 
-.add-to-cart:hover img.cart-icon.hover {
+/* Показываем hover-иконку ТОЛЬКО если она есть */
+.add-to-cart:has(img.cart-icon.hover):hover img.cart-icon.hover {
   opacity: 1;
   display: block;
 }
