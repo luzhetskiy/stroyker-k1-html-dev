@@ -369,9 +369,29 @@ section.feedback-form .form-control {
 
 .shopping-cart-btn.custom-icon {
   background-image: none;
+  transition: all 0.2s ease-in-out;
 }
 .shopping-cart-btn--lg.custom-icon {
   padding-left: 0;
+}
+
+.shopping-cart-btn.custom-icon.hover,
+.shopping-cart-btn.custom-cart-icon.hover {
+  opacity: 0;
+  display: none;
+}
+
+/* Скрываем основную иконку при ховере ТОЛЬКО если есть .hover-иконка */
+.shopping-cart-btn:has(img.custom-icon.hover):hover img.custom-icon,
+.shopping-cart-btn:has(img.custom-cart-icon.hover):hover img.custom-cart-icon {
+  display: none;
+}
+
+/* Показываем hover-иконку ТОЛЬКО если она есть */
+.shopping-cart-btn:has(img.custom-icon.hover):hover img.custom-icon.hover,
+.shopping-cart-btn:has(img.custom-cart-icon.hover):hover img.custom-cart-icon {
+  opacity: 1;
+  display: flex;
 }
 
 .add-to-cart img.cart-icon {
