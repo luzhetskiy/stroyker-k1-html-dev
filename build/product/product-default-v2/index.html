@@ -133,6 +133,8 @@
       border-bottom: 1px solid #E5E5EA;
       background-color: transparent;
       padding-left: 0;
+      display: flex;
+      align-items: center;
     }
 
     .product-v2 .product-card__title {
@@ -150,6 +152,20 @@
 
     .product-v2 .tab-content {
       padding: 20px 0;
+    }
+
+    .product-v2 .product-card__sidebar-top {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+    }
+
+    .product-v2 .d_active .icon .icon-svg path {
+      fill: #2363D1;
+    }
+
+    .product-v2 .btn {
+      padding: 0 20px;
     }
   }
 </style>
@@ -429,9 +445,6 @@
               <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList">
                 <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
                   <a itemprop="item" title="Главная" href="/">
-                    <svg class="breadcrumbs__sep">
-                      <use xlink:href="#tab-arrow"></use>
-                    </svg>
                     Главная
                     <meta itemprop="name" content="Главная" />
                   </a>
@@ -701,47 +714,28 @@
                             <div>
                               <div class="tabs-content">
                                 <ul class="tabs">
-                                  <li rel="tab2">Характеристики</li>
+                                  <li rel="tab1">Характеристики</li>
 
-                                  <li class="active" rel="tab1">Описание</li>
+                                  <li class="active" rel="tab2">Описание</li>
 
-                                  <li rel="tab3" class="review-tab-link">Отзывы</li>
+                                  <li class="active" rel="tab3">Описание 2</li>
+
+                                  <li rel="tab4" class="review-tab-link">Отзывы</li>
 
                                   <li rel="tab5" class="tab_last">Документы</li>
                                 </ul>
                                 <div class="tabsgroup">
-                                  <span class="d_active tab_drawer_heading" rel="tab1">
-                                    <span class="icon"
-                                      ><svg class="icon-svg">
-                                        <use xlink:href="#tab-arrow"></use></svg
-                                    ></span>
-                                    Описание
-                                  </span>
-                                  <div id="tab1" class="tab-content" style="display: block">
-                                    <div class="text-page" itemprop="description">
-                                      <h3>Перфоратор RAWLPLUG SDS Plus 850 Вт модели R-PRH-26850</h3>
-                                      <p>Надежный инструмент для осуществления профессиональных работ по обработке твердых материалов, таких как бетон, кирпич и природный камень. Оснащенный мощным электродвигателем на 850 Вт, перфоратор обеспечивает стабильную производительность и легкость сверления отверстий вплоть до диаметра 26 мм.</p>
-                                      <h3>Особенности</h3>
-                                      <ul>
-                                        <li>Хорошо изолированный двигатель мощностью 850 Вт обеспечивает высокую эффективность механизма, продлевая срок бесперебойной работы электроинструмента</li>
-                                        <li>Хвостовик SDS-Plus обеспечивает полную совместимость с широким спектром аксессуаров, доступных на рынке, и позволяет эффективно передавать энергию удара</li>
-                                        <li>4 функции — сверление / ударное сверление / долбление / установка долота — делают перфоратор чрезвычайно универсальным электроинструментом</li>
-                                        <li>Эргономичный переключатель режимов обеспечивает удобное и быстрое переключение между функциями электроинструмента</li>
-                                        <li>Пыленепроницаемые роликовые подшипники обеспечивают долгий срок службы и бесперебойную работу электроинструментов</li>
-                                        <li>Функция вращения влево позволяет извлекать сверло из материала при работе с металлом и деревом попеременно</li>
-                                      </ul>
-                                    </div>
-                                  </div>
-
                                   <!-- #tab1 -->
-                                  <span class="tab_drawer_heading" rel="tab2">
-                                    <span class="icon"
-                                      ><svg class="icon-svg">
-                                        <use xlink:href="#tab-arrow"></use></svg
-                                    ></span>
+                                  <span class="d_active tab_drawer_heading" rel="tab1">
+                                    <span class="icon">
+                                      <svg class="icon-svg" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z" fill="#767676"/>
+                                        <path d="M-9.89374e-09 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L-9.89374e-09 1.41421Z" fill="#767676"/>
+                                      </svg>
+                                    </span>
                                     Характеристики
                                   </span>
-                                  <div id="tab2" class="tab-content" style="display: none">
+                                  <div id="tab1" class="tab-content" style="display: none">
                                     <ul class="char">
                                       <li>
                                         <span class="char-text"><span class="char-text__mask">Объем, м3</span></span
@@ -774,15 +768,65 @@
                                       </li>
                                     </ul>
                                   </div>
+
                                   <!-- #tab2 -->
+                                  <span class="tab_drawer_heading" rel="tab2">
+                                    <span class="icon"
+                                      ><svg class="icon-svg" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z" fill="#767676"/>
+                                        <path d="M-9.89374e-09 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L-9.89374e-09 1.41421Z" fill="#767676"/>
+                                      </svg>
+                                    </span>
+                                    Описание
+                                  </span>
+                                  <div id="tab2" class="tab-content" style="display: block">
+                                    <div class="text-page" itemprop="description">
+                                      <h3>Перфоратор RAWLPLUG SDS Plus 850 Вт модели R-PRH-26850</h3>
+                                      <p>Надежный инструмент для осуществления профессиональных работ по обработке твердых материалов, таких как бетон, кирпич и природный камень. Оснащенный мощным электродвигателем на 850 Вт, перфоратор обеспечивает стабильную производительность и легкость сверления отверстий вплоть до диаметра 26 мм.</p>
+                                      <h3>Особенности</h3>
+                                      <ul>
+                                        <li>Хорошо изолированный двигатель мощностью 850 Вт обеспечивает высокую эффективность механизма, продлевая срок бесперебойной работы электроинструмента</li>
+                                        <li>Хвостовик SDS-Plus обеспечивает полную совместимость с широким спектром аксессуаров, доступных на рынке, и позволяет эффективно передавать энергию удара</li>
+                                        <li>4 функции — сверление / ударное сверление / долбление / установка долота — делают перфоратор чрезвычайно универсальным электроинструментом</li>
+                                        <li>Эргономичный переключатель режимов обеспечивает удобное и быстрое переключение между функциями электроинструмента</li>
+                                        <li>Пыленепроницаемые роликовые подшипники обеспечивают долгий срок службы и бесперебойную работу электроинструментов</li>
+                                        <li>Функция вращения влево позволяет извлекать сверло из материала при работе с металлом и деревом попеременно</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+
+                                  <!-- #tab3 -->
                                   <span class="tab_drawer_heading" rel="tab3">
                                     <span class="icon"
-                                      ><svg class="icon-svg">
-                                        <use xlink:href="#tab-arrow"></use></svg
-                                    ></span>
+                                      ><svg class="icon-svg" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z" fill="#767676"/>
+                                        <path d="M-9.89374e-09 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L-9.89374e-09 1.41421Z" fill="#767676"/>
+                                      </svg></span>
+                                    Описание 2
+                                  </span>
+                                  <div id="tab3" class="tab-content" style="display: block">
+                                    <div class="text-page" itemprop="description">
+                                       <ul>
+                                        <li>Хорошо изолированный двигатель мощностью 850 Вт обеспечивает высокую эффективность механизма, продлевая срок бесперебойной работы электроинструмента</li>
+                                        <li>Хвостовик SDS-Plus обеспечивает полную совместимость с широким спектром аксессуаров, доступных на рынке, и позволяет эффективно передавать энергию удара</li>
+                                        <li>4 функции — сверление / ударное сверление / долбление / установка долота — делают перфоратор чрезвычайно универсальным электроинструментом</li>
+                                        <li>Эргономичный переключатель режимов обеспечивает удобное и быстрое переключение между функциями электроинструмента</li>
+                                        <li>Пыленепроницаемые роликовые подшипники обеспечивают долгий срок службы и бесперебойную работу электроинструментов</li>
+                                        <li>Функция вращения влево позволяет извлекать сверло из материала при работе с металлом и деревом попеременно</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+
+                                  <!-- #tab4 -->
+                                  <span class="tab_drawer_heading" rel="tab4">
+                                    <span class="icon"
+                                      ><svg class="icon-svg" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z" fill="#767676"/>
+                                        <path d="M-9.89374e-09 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L-9.89374e-09 1.41421Z" fill="#767676"/>
+                                      </svg></span>
                                     Отзывы
                                   </span>
-                                  <div id="tab3" class="tab-content" style="display: none">
+                                  <div id="tab4" class="tab-content" style="display: none">
                                     <div class="rate-product">
                                       <div class="rate-product__title">Пожалуйста, оцените:</div>
                                       <div class="rate-product__content">
@@ -868,13 +912,14 @@
                                       </div>
                                     </div>
                                   </div>
-                                  <!-- #tab3 -->
 
+                                  <!-- #tab5 -->
                                   <span class="tab_drawer_heading" rel="tab5">
                                     <span class="icon"
-                                      ><svg class="icon-svg">
-                                        <use xlink:href="#tab-arrow"></use></svg
-                                    ></span>
+                                      ><svg class="icon-svg" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z" fill="#767676"/>
+                                        <path d="M-9.89374e-09 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L-9.89374e-09 1.41421Z" fill="#767676"/>
+                                      </svg></span>
                                     Документы
                                   </span>
                                   <div id="tab5" class="tab-content" style="display: none">
