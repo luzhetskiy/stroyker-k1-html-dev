@@ -2874,20 +2874,9 @@ color: #767676 !important;
   display: block !important;
 }
 
-@media (max-width: 767px) {
-    .partner-wrapper {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 30px;
-    }
-
-    .content-background-box__background-image__desktop-img {
-      display: none;
-    }
-
-    .content-background-box__background-image__mobile-img {
-      display: block;
-    }
+.partner-search-wrapper {
+  margin: 20px 0;
+  max-width: 283px;
 }
 
 @media (max-width: 767px) {
@@ -2938,4 +2927,18 @@ color: #767676 !important;
   .user-data__content {
     display: flex;
   }
+
+  .partner-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    .home-banner__desktop-img {
+      display: none;
+    }
+
+    .home-banner__mobile-img {
+      display: block;
+    }
 }
