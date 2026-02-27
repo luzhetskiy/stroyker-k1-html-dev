@@ -488,7 +488,7 @@
                               </p>
                             </div>
                           </div>
-                          <div data-input-content-container="name email phone" class="d-none d-flex flex-column gap-10">
+                          <div data-input-content-container="name email phone" class="d-none d-flex flex-column gap-10 p-20">
                             <p class="text weight-700 size-18">Данные получателя</p>
                             <div
                               data-input-content-container="name"
@@ -514,7 +514,7 @@
                           </div>
                           <div
                             data-input-content-container="delivery_type payment comment"
-                            class="d-none d-flex flex-column gap-10"
+                            class="d-none d-flex flex-column gap-10 p-20"
                           >
                             <p class="text weight-700 size-18">Данные о заказе</p>
                             <div
@@ -575,17 +575,18 @@
                                 </div>
                                 <div class="form-group mb-0">
                                   <input
-                                    type="text"
+                                    type="tel"
                                     class="form-control phone"
                                     name="phone"
-                                    autocomplete="off"
+                                    autocomplete="tel"
                                     required
                                     data-input="phone"
                                     placeholder="Ваш номер*"
                                     data-required-field="phone"
+                                    inputmode="tel"
                                   />
                                 </div>
-                                <div class="form-group mb-0">
+                                <div class="form-group mb-20">
                                   <input
                                     type="email"
                                     class="form-control"
@@ -599,7 +600,7 @@
                                 </div>
                                 <!-- Лейбл инпута текстового  -->
                                  <div class="cart-extra-field d-flex flex-column gap-10">
-                                  <div class="form-group-input-label">Инпута текстовый</div><!-- ИНПУТ ЛЕЙБЛ -->
+                                  <div class="form-group-input-label mb-0">Инпута текстовый</div><!-- ИНПУТ ЛЕЙБЛ -->
                                   <div class="form-group mb-0">
                                     <input type="text" name="cart-text-1" class="form-control" required="" id="cart-text-1" />
                                     <label for="id_name" class="label-name">
@@ -609,7 +610,7 @@
                                 </div>
                                 <!-- Лейбл инпута текстового 2  -->
                                  <div class="cart-extra-field d-flex flex-column gap-10">
-                                  <div class="form-group-input-label">Лейбл инпута текстового 2</div><!-- ИНПУТ ЛЕЙБЛ -->
+                                  <div class="form-group-input-label mb-0">Лейбл инпута текстового 2</div><!-- ИНПУТ ЛЕЙБЛ -->
                                   <div class="form-group mb-0">
                                     <input type="text" name="cart-text-2" class="form-control" required="" id="cart-text-2" />
                                     <label for="id_name" class="label-name">
@@ -813,88 +814,28 @@
                                     />
                                   </div>
                                   <div class="d-flex flex-column gap-5">
-                                    <p class="text color-gray-550 size-11" for="id_stock">Выбрать склад:</p>
-                                    <div class="select">
-                                      <input class="d-none" data-select="stock" name="stock" value="0" type="text" />
-                                      <div data-select-value-container="stock" class="select__value-content form-control">
-                                        <p data-select-value="stock" class="text">---------</p>
-                                        <div class="select__icon">
-                                          <svg
-                                            width="12"
-                                            height="7"
-                                            viewBox="0 0 12 7"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                          >
-                                            <path
-                                              d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z"
-                                              fill="currentColor"
-                                            />
-                                            <path
-                                              d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z"
-                                              fill="currentColor"
-                                            />
-                                          </svg>
-                                        </div>
-                                      </div>
-                                      <div class="select__content d-none" data-select-content="stock">
-                                        <div
-                                          class="select__option"
-                                          data-select-option-selected
-                                          data-select-option="stock"
-                                          data-select-option-value="0"
-                                        >
-                                          ---------
-                                        </div>
-                                        <div
-                                          class="select__option"
-                                          data-select-option="stock"
-                                          data-select-option-value="1"
-                                        >
-                                          test
-                                        </div>
-                                      </div>
-                                    </div>
+                                    <label class="text color-gray-550 size-11" for="id_stock">Выбрать склад:</label>
+                                    <select
+                                      class="select__value-content form-control"
+                                      data-select="stock"
+                                      name="stock"
+                                      id="id_stock"
+                                    >
+                                      <option value="0" selected>---------</option>
+                                      <option value="1">test</option>
+                                    </select>
                                   </div>
                                   <div class="d-flex flex-column gap-5">
-                                    <p class="text color-gray-550 size-11" for="">Тип авто:</p>
-                                    <div class="select">
-                                      <input class="d-none" data-select="car" name="car" value="0" type="text" />
-                                      <div data-select-value-container="car" class="select__value-content form-control">
-                                        <p data-select-value="car" class="text">---------</p>
-                                        <div class="select__icon">
-                                          <svg
-                                            width="12"
-                                            height="7"
-                                            viewBox="0 0 12 7"
-                                            fill="none"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                          >
-                                            <path
-                                              d="M9.72606 -1.19209e-07L11.1403 1.41421L5.57036 6.98453L4.15614 5.57031L9.72606 -1.19209e-07Z"
-                                              fill="#2363D1"
-                                            />
-                                            <path
-                                              d="M0 1.41421L1.41421 1.19209e-07L6.98434 5.57047L5.57036 6.98453L0 1.41421Z"
-                                              fill="#2363D1"
-                                            />
-                                          </svg>
-                                        </div>
-                                      </div>
-                                      <div class="select__content d-none" data-select-content="car">
-                                        <div
-                                          class="select__option"
-                                          data-select-option-selected
-                                          data-select-option="car"
-                                          data-select-option-value="0"
-                                        >
-                                          ---------
-                                        </div>
-                                        <div class="select__option" data-select-option="car" data-select-option-value="1">
-                                          test
-                                        </div>
-                                      </div>
-                                    </div>
+                                    <label class="text color-gray-550 size-11" for="id_car">Тип авто:</label>
+                                    <select
+                                      class="select__value-content form-control"
+                                      data-select="car"
+                                      name="car"
+                                      id="id_car"
+                                    >
+                                      <option value="0" selected>---------</option>
+                                      <option value="1">test</option>
+                                    </select>
                                   </div>
                                 </div>
                               </div>
@@ -1040,12 +981,12 @@
                             </div>
                             <div class="d-flex flex-column gap-15 border-1 border-secondary">
                               <div class="d-flex justify-content-between">
-                                <span>Бонусов на счету:</span>
-                                <span>300</span>
+                                <span class="size-14">Бонусов на счету:</span>
+                                <span class="size-14">300</span>
                               </div>
                               <div class="d-flex justify-content-between">
-                                <span>Доступно бонусов к списанию:</span>
-                                <span>300</span>
+                                <span class="size-14">Доступно бонусов к списанию:</span>
+                                <span class="size-14">300</span>
                               </div>
                               <div class="form-group mb-0 d-flex gap-10">
                                 <input
@@ -1072,58 +1013,58 @@
                           </div>
                         </div>
                         <div data-input-content-container="name email phone" class="d-none d-flex flex-column gap-10">
-                          <p class="text weight-700 size-18">Данные получателя</p>
+                          <p class="text weight-700 size-14">Данные получателя</p>
                           <div
                             data-input-content-container="name"
                             class="d-none d-flex justify-content-between flex-wrap"
                           >
-                            <p class="text text-elepsis mw-45">Имя:</p>
-                            <p data-input-content="name" class="text text-elepsis mw-50 text-right"></p>
+                            <p class="text text-elepsis mw-45 size-14">Имя:</p>
+                            <p data-input-content="name" class="text text-elepsis mw-50 text-right size-14"></p>
                           </div>
                           <div
                             data-input-content-container="phone"
                             class="d-none d-flex justify-content-between flex-wrap"
                           >
-                            <p class="text text-elepsis mw-45">Номер телефона:</p>
-                            <p data-input-content="phone" class="text text-elepsis mw-50 text-right"></p>
+                            <p class="text text-elepsis mw-45 size-14">Номер телефона:</p>
+                            <p data-input-content="phone" class="text text-elepsis mw-50 text-right size-14"></p>
                           </div>
                           <div
                             data-input-content-container="email"
                             class="d-none d-flex justify-content-between flex-wrap"
                           >
-                            <p class="text text-elepsis mw-45">Email:</p>
-                            <p data-input-content="email" class="text text-elepsis mw-50 text-right"></p>
+                            <p class="text text-elepsis mw-45 size-14">Email:</p>
+                            <p data-input-content="email" class="text text-elepsis mw-50 text-right size-14"></p>
                           </div>
                         </div>
                         <div
                           data-input-content-container="delivery_type payment comment"
                           class="d-none d-flex flex-column gap-10"
                         >
-                          <p class="text weight-700 size-18">Данные о заказе</p>
+                          <p class="text weight-700 size-14">Данные о заказе</p>
                           <div
                             data-input-content-container="delivery_type"
                             class="d-none d-flex justify-content-between flex-wrap"
                           >
-                            <p class="text text-elepsis mw-45">Доставка:</p>
+                            <p class="text text-elepsis mw-45 size-14">Доставка:</p>
                             <div class="d-flex flex-column mw-50">
-                              <p class="text text-elepsis text-right" data-input-content="delivery_type"></p>
+                              <p class="text text-elepsis text-right size-14" data-input-content="delivery_type"></p>
                               <p
-                                class="d-none text text-elepsis text-right"
+                                class="d-none text text-elepsis text-right size-14"
                                 data-radio-content="pickup"
                                 data-input-content="delivery_cost"
                               ></p>
                               <p
-                                class="d-none text text-elepsis text-right"
+                                class="d-none text text-elepsis text-right size-14"
                                 data-radio-content="delivery-point"
                                 data-input-content="address"
                               ></p>
                               <p
-                                class="d-none text text-elepsis text-right"
+                                class="d-none text text-elepsis text-right size-14"
                                 data-radio-content="delivery-point"
                                 data-select-value="stock"
                               ></p>
                               <p
-                                class="d-none text text-elepsis text-right"
+                                class="d-none text text-elepsis text-right size-14"
                                 data-radio-content="delivery-point"
                                 data-select-value="car"
                               ></p>
@@ -1133,15 +1074,15 @@
                             data-input-content-container="payment"
                             class="d-none d-flex justify-content-between flex-wrap"
                           >
-                            <p class="text text-elepsis mw-45">Оплата:</p>
-                            <p data-input-content="payment" class="text text-elepsis text-right mw-50"></p>
+                            <p class="text text-elepsis mw-45 size-14">Оплата:</p>
+                            <p data-input-content="payment" class="text text-elepsis text-right mw-50 size-14"></p>
                           </div>
                           <div
                             data-input-content-container="comment"
                             class="d-none d-flex justify-content-between flex-wrap"
                           >
-                            <p class="text text-elepsis mw-45">Комментарий:</p>
-                            <p data-input-content="comment" class="text text-elepsis text-right mw-50"></p>
+                            <p class="text text-elepsis mw-45 size-14">Комментарий:</p>
+                            <p data-input-content="comment" class="text text-elepsis text-right mw-50 size-14"></p>
                           </div>
                         </div>
                       </div>
