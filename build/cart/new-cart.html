@@ -11,15 +11,15 @@
     <link rel="stylesheet" href="../css/tippy.css" />
     <link rel="stylesheet" href="../css/main.css" />
     <script defer src="../js/jquery.js"></script>
-<script defer src="../js/inputmask.js"></script>
-<script defer src="../js/fancyapps.js"></script>
-<script defer src="../js/app.js"></script>
-<script defer src="../js/mmenu-js.js"></script>
-<script defer src="../js/owl.carousel.js"></script>
-<script defer src="../js/slick-carousel.js"></script>
-<script defer src="../js/tippy.js.js"></script>
-<script defer src="../js/popperjs.js"></script>
-<script defer src="../js/main.js"></script>
+    <script defer src="../js/inputmask.js"></script>
+    <script defer src="../js/fancyapps.js"></script>
+    <script defer src="../js/app.js"></script>
+    <script defer src="../js/mmenu-js.js"></script>
+    <script defer src="../js/owl.carousel.js"></script>
+    <script defer src="../js/slick-carousel.js"></script>
+    <script defer src="../js/tippy.js.js"></script>
+    <script defer src="../js/popperjs.js"></script>
+    <script defer src="../js/main.js"></script>
     <!-- Для демонстрации карты -->
     <script
       src="https://api-maps.yandex.ru/2.1/?apikey=c3161078-41ce-4809-936f-dd4c9bcc8a50&lang=ru_RU"
@@ -919,19 +919,21 @@
                                     placeholder="Комментарий"
                                   ></textarea>
                                 </div>
-                                <div class="form-group privacy-policy">
+                                <div class="form-group privacy-policy mb-0">
                                   <div class="checkbox">
                                     <input type="checkbox" name="privacy-policy" id="privacy">
-                                    <label for="privacy">Нажимая на кнопку, вы даете согласие на обработку <a href="/">персональных данных</a> и соглашаетесь с нашей <a href="/">политикой конфиденциальности</a></label>
+                                    <label for="privacy"><span class="form-text">Нажимая на кнопку, вы даете согласие на обработку <a href="/">персональных данных</a> и соглашаетесь с нашей <a href="/">политикой конфиденциальности</a></span></label>
+                                  </div>
+                                </div>
+                                <div class="form-group privacy-policy agree-two mb-0">
+                                  <div class="checkbox">
+                                    <input type="checkbox" name="privacy-policy-2" id="privacy-feedbackmessageform" required="" autocomplete="off">
+                                    <label for="privacy-feedbackmessageform">
+                                      <span class="form-text">Текст второго чекбокса</span>
+                                    </label>
                                   </div>
                                 </div>
                                 <button data-click-target="submit" data-wait-requred="name phone email payment delivery" disabled type="submit" class="btn size-16 ps-md-50 pe-md-50">Оформить заказ</button>
-                                <div class="d-grid grid-columns-lg-7 grid-columns-1 gap-grid">
-                                  <div class="grid-span-lg-5 text size-12 color-gray-550">
-                                    Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с
-                                    нашей политикой конфиденциальности
-                                  </div>
-                                </div>
                               </div>
                             </div>
                           </div>
@@ -943,32 +945,30 @@
                     <div class="position-fixed">
                       <div class="d-lg-flex flex-column gap-30 bg-white p-20 border-1 border-secondary mb-20">
                         <div class="d-flex flex-column gap-15">
-                          <span>Чтобы получить скидку -5%, войдите в личный кабинет</span>
+                          <span class="size-14">Чтобы получить скидку -5%, войдите в личный кабинет</span>
                           <div class="d-flex gap-10">
-                            <a href="/" class="color-accent-400">Войти</a>
-                            <span class="color-accent-400">/</span>
-                            <a href="/" class="color-accent-400">Зарегистрироваться</a>
+                            <a href="/" class="color-accent-400 size-14">Войти</a>
+                            <span class="color-accent-400 size-14">/</span>
+                            <a href="/" class="color-accent-400 size-14">Зарегистрироваться</a>
                           </div>
                         </div>
                       </div>
-                      <div class="d-lg-flex flex-column gap-30 bg-white pb-40 d-none">
-                        <div class="d-flex flex-column gap-20 p-20 border-1 border-secondary">
-                          <div class="form-group mb-0 d-flex gap-10">
-                            <input
-                              type="text"
-                              class="form-control"
-                              name="promotional-code"
-                              autocomplete="off"
-                              data-related-value="promotional-code"
-                              placeholder="Ввести промокод"
-                            />
-                            <button class="btn-border size-16 ps-md-15 pe-md-15 flex-shrink-0">Применить</button>
-                          </div>
-                          <span class="text-color-light">Примените промокод на скидку</span>
-                          
-
-                          <div class="d-flex flex-column gap-15">
-                            <div class="d-flex flex-column gap-10">
+                      <div class="d-lg-flex flex-column bg-white pb-40 d-none" style="border: 1px solid #E5E5EA;">
+                        <div class="d-flex flex-column border-1 border-secondary">
+                          <div class="p-20">
+                            <div class="form-group mb-10 d-flex gap-10">
+                              <input
+                                type="text"
+                                class="form-control"
+                                name="promotional-code"
+                                autocomplete="off"
+                                data-related-value="promotional-code"
+                                placeholder="Ввести промокод"
+                              />
+                              <button class="btn-border size-14 ps-md-15 pe-md-15 flex-shrink-0">Применить</button>
+                            </div>
+                            <span class="text-color-light size-14">Примените промокод на скидку</span>
+                            <div class="d-flex flex-column gap-10 mt-20">
                               <p class="text d-flex flex-wrap gap-5">
                                 <span>Товары: 3</span>
                                 <span class="separator-dot"></span>
@@ -979,7 +979,9 @@
                                 <span class="ms-auto d-inline-block">89 537,50 ₽</span>
                               </p>
                             </div>
-                            <div class="d-flex flex-column gap-15 border-1 border-secondary">
+                          </div>
+
+                          <div class="d-flex flex-column gap-10 p-20" style="background-color: #F8F9FA; border-top: 1px solid #E5E5EA; border-bottom: 1px solid #E5E5EA;">
                               <div class="d-flex justify-content-between">
                                 <span class="size-14">Бонусов на счету:</span>
                                 <span class="size-14">300</span>
@@ -997,10 +999,10 @@
                                   data-related-value="bonus-quantity"
                                   placeholder="Ввести кол-во бонусов"
                                 />
-                                <button class="btn-border size-16 ps-md-15 pe-md-15 flex-shrink-0">Списать</button>
+                                <button class="btn-border size-14 ps-md-15 pe-md-15 flex-shrink-0">Списать</button>
                               </div>
-                            </div>
-                            <div class="d-flex flex-column gap-15 border-1 border-secondary">
+                          </div>
+                          <div class="d-flex flex-column gap-15 border-1 border-secondary p-20">
                               <div class="d-flex flex-row justify-content-between">
                                 <p class="text weight-700 size-18">Итого:</p>
                                 <p class="text weight-700 size-20">89 537,50 ₽</p>
@@ -1009,10 +1011,9 @@
                               <p class="text size-12 color-gray-550">
                                 Дата и стоимость доставки рассчитываются после оформления заказа
                               </p>
-                            </div>
                           </div>
                         </div>
-                        <div data-input-content-container="name email phone" class="d-none d-flex flex-column gap-10">
+                        <div data-input-content-container="name email phone" class="d-none d-flex flex-column gap-10 mb-20" style="padding: 0 20px;">
                           <p class="text weight-700 size-14">Данные получателя</p>
                           <div
                             data-input-content-container="name"
@@ -1038,7 +1039,7 @@
                         </div>
                         <div
                           data-input-content-container="delivery_type payment comment"
-                          class="d-none d-flex flex-column gap-10"
+                          class="d-none d-flex flex-column gap-10 style="padding: 0 20px;""
                         >
                           <p class="text weight-700 size-14">Данные о заказе</p>
                           <div
@@ -1431,5 +1432,163 @@
     </form>
   </div>
 </div>    </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var phoneInputs = document.querySelectorAll('input.phone, input[type="tel"]');
+        
+        phoneInputs.forEach(function(input) {
+          if (input.dataset.phoneMaskApplied) return;
+          input.dataset.phoneMaskApplied = 'true';
+          
+          input.addEventListener('input', function(e) {
+            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+            
+            if (!x[2] && x[1]) {
+              e.target.value = '+7 ' + x[1];
+            } else if (x[2] && !x[3]) {
+              e.target.value = '+7 (' + x[2];
+            } else if (x[3] && !x[4]) {
+              e.target.value = '+7 (' + x[2] + ') ' + x[3];
+            } else if (x[4] && !x[5]) {
+              e.target.value = '+7 (' + x[2] + ') ' + x[3] + '-' + x[4];
+            } else if (x[5]) {
+              e.target.value = '+7 (' + x[2] + ') ' + x[3] + '-' + x[4] + '-' + x[5];
+            } else {
+              e.target.value = '';
+            }
+          });
+          
+          input.addEventListener('focus', function(e) {
+            if (!e.target.value) {
+              e.target.value = '+7 ';
+            }
+          });
+          
+          input.addEventListener('blur', function(e) {
+            if (e.target.value === '+7 ' || e.target.value === '+7') {
+              e.target.value = '';
+            }
+          });
+        });
+
+        var requiredInputs = document.querySelectorAll('input[required], textarea[required], select[required]');
+        
+        requiredInputs.forEach(function(input) {
+          var formGroup = input.closest('.form-group');
+          var touched = false;
+
+          input.addEventListener('focus', function() {
+            touched = true;
+          });
+
+          input.addEventListener('blur', function() {
+            if (touched) {
+              validateField(input, formGroup);
+            }
+          });
+
+          input.addEventListener('input', function() {
+            if (touched) {
+              validateField(input, formGroup);
+            }
+          });
+
+          input.addEventListener('change', function() {
+            if (touched) {
+              validateField(input, formGroup);
+            }
+          });
+        });
+
+        function validateField(input, formGroup) {
+          if (!formGroup) return;
+
+          var value = input.value.trim();
+          var isValid = true;
+          var errorMessage = '';
+
+          var existingError = formGroup.querySelector('.error-text');
+          if (existingError) {
+            existingError.remove();
+          }
+
+          if (input.hasAttribute('required') && value === '') {
+            isValid = false;
+            errorMessage = 'Это поле обязательно для заполнения';
+          }
+
+          if (isValid && input.type === 'email' && value !== '') {
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(value)) {
+              isValid = false;
+              errorMessage = 'Введите корректный email';
+            }
+          }
+
+          if (isValid && (input.type === 'tel' || input.classList.contains('phone')) && value !== '') {
+            var digitsOnly = value.replace(/\D/g, '');
+            if (digitsOnly.length < 11) {
+              isValid = false;
+              errorMessage = 'Введите полный номер телефона';
+            }
+          }
+
+          if (!isValid) {
+            formGroup.classList.add('form-group--error');
+            
+            var errorSpan = document.createElement('span');
+            errorSpan.className = 'error-text';
+            errorSpan.textContent = errorMessage;
+            formGroup.appendChild(errorSpan);
+          } else {
+            formGroup.classList.remove('form-group--error');
+          }
+        }
+
+        var cartItems = document.querySelectorAll('.cart-item');
+        
+        cartItems.forEach(function(item) {
+          var inputNumber = item.querySelector('.cart-qty-control-input');
+          var btnUp = item.querySelector('.order-up');
+          var btnDown = item.querySelector('.order-down');
+          
+          if (!inputNumber || !btnUp || !btnDown) return;
+          
+          btnUp.addEventListener('click', function() {
+            var currentValue = parseInt(inputNumber.value) || 1;
+            var max = inputNumber.getAttribute('max');
+            
+            if (max !== 'inf' && currentValue >= parseInt(max)) return;
+            
+            inputNumber.value = currentValue + 1;
+            inputNumber.dispatchEvent(new Event('change'));
+          });
+          
+          btnDown.addEventListener('click', function() {
+            var currentValue = parseInt(inputNumber.value) || 1;
+            var min = parseInt(inputNumber.getAttribute('min')) || 1;
+            
+            if (currentValue <= min) return;
+            
+            inputNumber.value = currentValue - 1;
+            inputNumber.dispatchEvent(new Event('change'));
+          });
+          
+          inputNumber.addEventListener('input', function() {
+            var value = parseInt(this.value) || 1;
+            var min = parseInt(this.getAttribute('min')) || 1;
+            var max = this.getAttribute('max');
+            
+            if (value < min) {
+              this.value = min;
+            }
+            
+            if (max !== 'inf' && value > parseInt(max)) {
+              this.value = max;
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
