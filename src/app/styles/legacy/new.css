@@ -2914,6 +2914,10 @@ color: #767676 !important;
   padding: 10px 15px;
 }
 
+.form-text a {
+  color: var(--main-elements-color, var(--accent-color-400));
+}
+
 @media (max-width: 767px) {
   .cookie-modal {
     width: 100%;
