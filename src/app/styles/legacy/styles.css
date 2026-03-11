@@ -10403,7 +10403,9 @@ canvas {
 }
 
 .icon-sort-price {
-  width: 12px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
   margin-right: 7px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
