@@ -1,4 +1,17 @@
 /* Кастомный селект с поиском */
+
+/* Стили для родительского контейнера */
+.catalog__links-block.city-select {
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 250px;
+}
+
+.custom-select-wrapper {
+  width: 100%;
+  position: relative;
+}
+
 .custom-select {
   position: relative;
   width: 100%;
