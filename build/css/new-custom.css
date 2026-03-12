@@ -1,25 +1,22 @@
-/* Кастомный селект с поиском */
-
-/* Стили для родительского контейнера */
 .catalog__links-block.city-select {
   flex: 0 0 auto;
   width: auto;
   min-width: 250px;
 }
 
-.custom-select-wrapper {
+.city-select-wrapper {
   width: 100%;
   position: relative;
 }
 
-.custom-select {
+.city-select-box {
   position: relative;
   width: 100%;
   min-width: 250px;
   font-family: inherit;
 }
 
-.custom-select__trigger {
+.city-select-box__trigger {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,38 +30,38 @@
   min-height: 42px;
 }
 
-.custom-select__trigger:hover {
+.city-select-box__trigger:hover {
   border-color: #2363d1;
   background: #f8f9fa;
 }
 
-.custom-select.open .custom-select__trigger {
+.city-select-box.open .city-select-box__trigger {
   border-color: #2363d1;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   background: #ffffff;
 }
 
-.custom-select__value {
+.city-select-box__value {
   font-size: 14px;
   color: #333333;
   font-weight: 400;
   line-height: 1.4;
 }
 
-.custom-select__arrow {
+.city-select-box__arrow {
   transition: transform 0.3s ease;
   color: #666666;
   flex-shrink: 0;
   margin-left: 10px;
 }
 
-.custom-select.open .custom-select__arrow {
+.city-select-box.open .city-select-box__arrow {
   transform: rotate(180deg);
   color: #2363d1;
 }
 
-.custom-select__dropdown {
+.city-select-box__dropdown {
   position: absolute;
   top: 100%;
   left: 0;
@@ -84,13 +81,13 @@
   flex-direction: column;
 }
 
-.custom-select.open .custom-select__dropdown {
+.city-select-box.open .city-select-box__dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-.custom-select__search {
+.city-select-box__search {
   position: relative;
   padding: 10px 12px;
   border-bottom: 1px solid #e8e8e8;
@@ -98,7 +95,7 @@
   background: #f8f9fa;
 }
 
-.custom-select__search-input {
+.city-select-box__search-input {
   width: 100%;
   padding: 8px 36px 8px 12px;
   border: 1px solid #d8d8d8;
@@ -111,17 +108,17 @@
   font-family: inherit;
 }
 
-.custom-select__search-input:focus {
+.city-select-box__search-input:focus {
   border-color: #2363d1;
   box-shadow: 0 0 0 2px rgba(35, 99, 209, 0.1);
 }
 
-.custom-select__search-input::placeholder {
+.city-select-box__search-input::placeholder {
   color: #999999;
   font-size: 13px;
 }
 
-.custom-select__search-icon {
+.city-select-box__search-icon {
   position: absolute;
   right: 24px;
   top: 50%;
@@ -130,7 +127,7 @@
   pointer-events: none;
 }
 
-.custom-select__options {
+.city-select-box__options {
   list-style: none;
   margin: 0;
   padding: 6px 0;
@@ -139,24 +136,24 @@
   max-height: 250px;
 }
 
-.custom-select__options::-webkit-scrollbar {
+.city-select-box__options::-webkit-scrollbar {
   width: 5px;
 }
 
-.custom-select__options::-webkit-scrollbar-track {
+.city-select-box__options::-webkit-scrollbar-track {
   background: #f5f5f5;
 }
 
-.custom-select__options::-webkit-scrollbar-thumb {
+.city-select-box__options::-webkit-scrollbar-thumb {
   background: #d0d0d0;
   border-radius: 3px;
 }
 
-.custom-select__options::-webkit-scrollbar-thumb:hover {
+.city-select-box__options::-webkit-scrollbar-thumb:hover {
   background: #b0b0b0;
 }
 
-.custom-select__option {
+.city-select-box__option {
   padding: 10px 16px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -165,19 +162,19 @@
   line-height: 1.4;
 }
 
-.custom-select__option:hover {
+.city-select-box__option:hover {
   background: #f0f4ff;
   color: #2363d1;
 }
 
-.custom-select__option.selected {
+.city-select-box__option.selected {
   background: #e5efff;
   color: #2363d1;
   font-weight: 500;
   position: relative;
 }
 
-.custom-select__option.selected::after {
+.city-select-box__option.selected::after {
   content: '✓';
   position: absolute;
   right: 16px;
@@ -185,11 +182,11 @@
   font-weight: bold;
 }
 
-.custom-select__option.hidden {
+.city-select-box__option.hidden {
   display: none;
 }
 
-.custom-select__option.no-results {
+.city-select-box__option.no-results {
   padding: 20px 16px;
   text-align: center;
   color: #999999;
@@ -198,51 +195,51 @@
   font-size: 13px;
 }
 
-.custom-select__option.no-results:hover {
+.city-select-box__option.no-results:hover {
   background: transparent;
   color: #999999;
 }
 
 /* Адаптивность */
 @media (max-width: 768px) {
-  .custom-select {
+  .city-select-box {
     min-width: 200px;
   }
 
-  .custom-select__trigger {
+  .city-select-box__trigger {
     padding: 9px 12px;
     min-height: 40px;
   }
 
-  .custom-select__value {
+  .city-select-box__value {
     font-size: 13px;
   }
 
-  .custom-select__dropdown {
+  .city-select-box__dropdown {
     max-height: 300px;
   }
 
-  .custom-select__options {
+  .city-select-box__options {
     max-height: 200px;
   }
 
-  .custom-select__search {
+  .city-select-box__search {
     padding: 8px 10px;
   }
 
-  .custom-select__search-input {
+  .city-select-box__search-input {
     padding: 7px 32px 7px 10px;
     font-size: 13px;
   }
 
-  .custom-select__option {
+  .city-select-box__option {
     padding: 9px 12px;
     font-size: 13px;
   }
 }
 
 /* Анимация появления */
-@keyframes slideDown {
+@keyframes slideDownCity {
   from {
     opacity: 0;
     transform: translateY(-10px);
@@ -253,6 +250,6 @@
   }
 }
 
-.custom-select.open .custom-select__dropdown {
-  animation: slideDown 0.3s ease;
+.city-select-box.open .city-select-box__dropdown {
+  animation: slideDownCity 0.3s ease;
 }
