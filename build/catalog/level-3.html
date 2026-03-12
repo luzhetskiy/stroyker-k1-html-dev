@@ -1403,47 +1403,115 @@
     <script>
       (function() {
         const searchInput = document.getElementById('productSearch');
-        const productContainer = document.querySelector('.d-grid.gap-grid');
+        const catalogFilter = document.querySelector('.catalog-filter');
         
-        if (!searchInput || !productContainer) return;
+        if (!searchInput || !catalogFilter) return;
         
-        const productItems = Array.from(productContainer.querySelectorAll('.product-item'));
+        // Получаем все элементы фильтра для поиска
+        const filterSelects = catalogFilter.querySelectorAll('select[data-search-select]');
+        const filterCheckboxes = catalogFilter.querySelectorAll('.form-group .checkbox');
+        
+        // Сохраняем оригинальное состояние для восстановления
+        const originalState = new Map();
+        
+        // Сохраняем опции select
+        filterSelects.forEach(select => {
+          const options = Array.from(select.options);
+          originalState.set(select, options.map(opt => ({
+            value: opt.value,
+            text: opt.text,
+            element: opt.cloneNode(true)
+          })));
+        });
+        
+        // Сохраняем checkbox элементы
+        filterCheckboxes.forEach(checkbox => {
+          const parent = checkbox.closest('.form-group');
+          if (parent) {
+            originalState.set(parent, {
+              display: parent.style.display || ''
+            });
+          }
+        });
         
         searchInput.addEventListener('input', function() {
           const searchTerm = this.value.toLowerCase().trim();
           
-          productItems.forEach(function(item) {
-            const productName = item.querySelector('.product-item__name');
-            const productArt = item.querySelector('.product-item__art');
+          // Если поиск пустой - показываем все
+          if (searchTerm === '') {
+            // Восстанавливаем select опции
+            filterSelects.forEach(select => {
+              const original = originalState.get(select);
+              if (original) {
+                // Очищаем select
+                while (select.options.length > 0) {
+                  select.remove(0);
+                }
+                // Восстанавливаем все опции
+                original.forEach(opt => {
+                  select.add(opt.element.cloneNode(true));
+                });
+              }
+            });
             
-            if (!productName) return;
+            // Показываем все checkbox
+            filterCheckboxes.forEach(checkbox => {
+              const parent = checkbox.closest('.form-group');
+              if (parent) {
+                parent.style.display = '';
+              }
+            });
             
-            const name = productName.textContent.toLowerCase();
-            const art = productArt ? productArt.textContent.toLowerCase() : '';
+            return;
+          }
+          
+          // Фильтруем опции в select
+          filterSelects.forEach(select => {
+            const original = originalState.get(select);
+            if (!original) return;
             
-            if (name.includes(searchTerm) || art.includes(searchTerm)) {
-              item.style.display = '';
-            } else {
-              item.style.display = 'none';
+            // Очищаем select
+            while (select.options.length > 0) {
+              select.remove(0);
+            }
+            
+            // Добавляем только совпадающие опции
+            let hasMatches = false;
+            original.forEach(opt => {
+              if (opt.text.toLowerCase().includes(searchTerm) || opt.value === '') {
+                select.add(opt.element.cloneNode(true));
+                if (opt.value !== '') hasMatches = true;
+              }
+            });
+            
+            // Если нет совпадений, показываем пустой вариант
+            if (!hasMatches && select.options.length === 0) {
+              const emptyOption = document.createElement('option');
+              emptyOption.value = '';
+              emptyOption.text = 'Нет совпадений';
+              select.add(emptyOption);
             }
           });
           
-          const visibleItems = productItems.filter(item => item.style.display !== 'none');
-          
-          const existingMessage = productContainer.parentElement.querySelector('.no-results-message');
-          if (existingMessage) {
-            existingMessage.remove();
-          }
-          
-          if (visibleItems.length === 0 && searchTerm !== '') {
-            const noResultsMessage = document.createElement('div');
-            noResultsMessage.className = 'no-results-message';
-            noResultsMessage.style.cssText = 'padding: 20px; text-align: center; color: #666; font-size: 16px;';
-            noResultsMessage.textContent = 'Товары не найдены';
-            productContainer.parentElement.insertBefore(noResultsMessage, productContainer);
-          }
+          // Фильтруем checkbox элементы
+          filterCheckboxes.forEach(checkbox => {
+            const parent = checkbox.closest('.form-group');
+            if (!parent) return;
+            
+            const label = checkbox.querySelector('label');
+            if (!label) return;
+            
+            const labelText = label.textContent.toLowerCase();
+            
+            if (labelText.includes(searchTerm)) {
+              parent.style.display = '';
+            } else {
+              parent.style.display = 'none';
+            }
+          });
         });
         
+        // Очистка поиска по Escape
         searchInput.addEventListener('keydown', function(e) {
           if (e.key === 'Escape') {
             this.value = '';
