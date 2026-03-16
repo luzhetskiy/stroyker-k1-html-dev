@@ -192,12 +192,15 @@
   color: #999999;
 }
 
-
 .section-favorite .catalog-sorting ul li a {
   display: flex;
 }
 
-.cart-item__buttons {
+.section-favorite .icon-sort-price {
+  display: inline-block;
+}
+
+.section-favorite .cart-item__buttons {
   right: 0;
   left: auto;
   bottom: auto;
