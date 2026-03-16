@@ -194,6 +194,7 @@
 
 .section-favorite .catalog-sorting ul li a {
   display: flex;
+  align-items: center;
 }
 
 .section-favorite .icon-sort-price {
