@@ -13536,3 +13536,15 @@ canvas {
 .menu-item.active a {
   color: #bdbdbd;
 }
+
+.section-favorite .catalog-sorting ul li a {
+  display: flex;
+}
+
+.cart-item__buttons {
+  right: 0;
+  left: auto;
+  bottom: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
