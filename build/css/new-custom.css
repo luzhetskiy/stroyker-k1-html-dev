@@ -209,6 +209,10 @@
   transform: translateY(-50%);
 }
 
+.cart-item--info {
+  padding-right: 180px;
+}
+
 /* Адаптивность */
 @media (max-width: 768px) {
   .city-select-box {
@@ -244,6 +248,22 @@
   .city-select-box__option {
     padding: 9px 12px;
     font-size: 13px;
+  }
+
+  .cart-item--info {
+    padding-right: 0;
+  } 
+
+  .section-favorite .cart-item__buttons {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  .catalog-sorting ul {
+    display: flex !important;
   }
 }
 
