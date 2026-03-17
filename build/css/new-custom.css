@@ -199,6 +199,7 @@
 
 .section-favorite .icon-sort-price {
   display: inline-block;
+  flex-shrink: 0;
 }
 
 .section-favorite .cart-item__buttons {
@@ -264,6 +265,10 @@
 
   .catalog-sorting ul {
     display: flex !important;
+  }
+
+  .catalog-sorting {
+    flex-direction: column;
   }
 }
 
