@@ -261,6 +261,8 @@
     left: 0;
     bottom: 0;
     right: 0;
+    transform: none;
+    flex-direction: row-reverse;
   }
 
   .catalog-sorting ul {
