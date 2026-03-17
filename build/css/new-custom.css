@@ -273,6 +273,18 @@
     align-items: flex-start;
     flex-direction: column;
   }
+
+  .cart-item--favorite .cart-item__image-wrapper {
+    margin-bottom: 0;
+  }
+
+  .st-button_add-to-cart .st-button__icon_cart {
+    display: none;
+  }
+
+  .st-button__icon+.st-button__text {
+    display: block;
+  }
 }
 
 /* Анимация появления */
