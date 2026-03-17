@@ -273,6 +273,12 @@
   }
 }
 
+@media (max-width: 991px) {
+  .section-favorite .cart-item--favorite > div:last-child {
+    flex-direction: column !important;
+  }
+}
+
 /* Анимация появления */
 @keyframes slideDownCity {
   from {
