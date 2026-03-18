@@ -2392,7 +2392,7 @@ header .header-fixed-content .header-phone {
 }
 
 .simple-order-form {
-  margin: 0 -20px -40px 0;
+  margin: 0;
   max-width: 520px;
 }
 .simple-order-form .form-group.comment {
@@ -2964,6 +2964,10 @@ main {
 
 .home-banner__mobile-img {
   display: none;
+}
+
+.user-data__avatar {
+  overflow: hidden;
 }
 
 @media (max-width: 767px) {
