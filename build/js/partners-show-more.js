@@ -25,16 +25,25 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!partnersContainer) return;
       
       const allCards = partnersContainer.querySelectorAll('[data-partner-card]');
+      
+      if (allCards.length > 8) {
+        allCards.forEach(function(card, index) {
+          if (index >= 8) {
+            card.setAttribute('data-hidden', '');
+          }
+        });
+      }
+      
       const hiddenCards = partnersContainer.querySelectorAll('[data-partner-card][data-hidden]');
       
-      if (allCards.length <= 8) {
+      if (allCards.length <= 8 || hiddenCards.length === 0) {
         if (showMoreWrapper) {
           showMoreWrapper.style.display = 'none';
         }
         return;
       }
       
-      if (showMoreWrapper && hiddenCards.length > 0) {
+      if (showMoreWrapper) {
         showMoreWrapper.style.display = 'flex';
       }
       
