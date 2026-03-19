@@ -2959,11 +2959,11 @@ main {
 }
 
 .home-banner__desktop-img {
-  display: block;
+  display: block !important;
 }
 
 .home-banner__mobile-img {
-  display: none;
+  display: none !important;
 }
 
 .user-data__avatar {
@@ -3026,10 +3026,10 @@ main {
   }
 
   .home-banner__desktop-img {
-    display: none;
+    display: none !important;
   }
 
   .home-banner__mobile-img {
-    display: block;
+    display: block !important;
   }
 }
