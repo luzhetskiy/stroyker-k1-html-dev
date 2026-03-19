@@ -1,74 +1,104 @@
-/**
- * Функциональность кнопки "Смотреть все" для партнеров
- * Показывает скрытые карточки партнеров при клике
- */
-
 document.addEventListener('DOMContentLoaded', function() {
-  // Находим все секции с партнерами по городам
-  const affiliateNetworks = document.querySelectorAll('[data-city]');
-  
-  affiliateNetworks.forEach(function(network) {
-    const partnersContainer = network.querySelector('[data-partners-container]');
-    const showMoreBtn = network.querySelector('[data-show-more-btn]');
-    const showMoreWrapper = network.querySelector('.partners-show-more');
-    
-    if (!partnersContainer || !showMoreBtn) return;
-    
-    // Получаем все карточки партнеров
-    const allCards = partnersContainer.querySelectorAll('[data-partner-card]');
-    const hiddenCards = partnersContainer.querySelectorAll('[data-partner-card][data-hidden]');
-    
-    // Если карточек 6 или меньше, скрываем кнопку
-    if (allCards.length <= 6) {
-      if (showMoreWrapper) {
-        showMoreWrapper.style.display = 'none';
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
       }
-      return;
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+  `;
+  document.head.appendChild(style);
+
+  function initShowMoreButtons() {
+    const affiliateNetworks = document.querySelectorAll('[data-city]');
     
-    // Обработчик клика на кнопку
-    showMoreBtn.addEventListener('click', function() {
-      const isExpanded = showMoreBtn.classList.contains('expanded');
+    affiliateNetworks.forEach(function(network) {
+      const partnersContainer = network.querySelector('[data-partners-container]');
+      const showMoreBtn = network.querySelector('[data-show-more-btn]');
+      const showMoreWrapper = network.querySelector('.partners-show-more');
       
-      if (!isExpanded) {
-        // Показываем скрытые карточки
-        hiddenCards.forEach(function(card) {
-          card.removeAttribute('data-hidden');
-          card.style.animation = 'fadeInUp 0.5s ease forwards';
+      if (!partnersContainer) return;
+      
+      const allCards = partnersContainer.querySelectorAll('[data-partner-card]');
+      const hiddenCards = partnersContainer.querySelectorAll('[data-partner-card][data-hidden]');
+      
+      if (allCards.length <= 6) {
+        if (showMoreWrapper) {
+          showMoreWrapper.style.display = 'none';
+        }
+        return;
+      }
+      
+      if (showMoreWrapper && hiddenCards.length > 0) {
+        showMoreWrapper.style.display = 'flex';
+      }
+      
+      if (showMoreBtn) {
+        showMoreBtn.addEventListener('click', function() {
+          const isExpanded = showMoreBtn.classList.contains('expanded');
+          
+          if (!isExpanded) {
+            hiddenCards.forEach(function(card) {
+              card.removeAttribute('data-hidden');
+              card.style.animation = 'fadeInUp 0.5s ease forwards';
+            });
+            
+            showMoreBtn.textContent = 'Скрыть';
+            showMoreBtn.classList.add('expanded');
+          } else {
+            hiddenCards.forEach(function(card) {
+              card.setAttribute('data-hidden', '');
+            });
+            
+            showMoreBtn.textContent = 'Смотреть все';
+            showMoreBtn.classList.remove('expanded');
+            
+            network.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
         });
-        
-        // Меняем текст кнопки
-        showMoreBtn.textContent = 'Скрыть';
-        showMoreBtn.classList.add('expanded');
-      } else {
-        // Скрываем карточки обратно
-        hiddenCards.forEach(function(card) {
-          card.setAttribute('data-hidden', '');
-        });
-        
-        // Меняем текст кнопки обратно
-        showMoreBtn.textContent = 'Смотреть все';
-        showMoreBtn.classList.remove('expanded');
-        
-        // Прокручиваем к началу секции города
-        network.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
-  });
-});
+  }
 
-// CSS анимация для появления карточек (добавляется динамически)
-const style = document.createElement('style');
-style.textContent = `
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
+  function initCityFilter() {
+    const citySelect = document.querySelector('.city-select-dropdown');
+    const cityOptions = document.querySelectorAll('.city-select-box__option');
+    const affiliateNetworks = document.querySelectorAll('[data-city]');
+    
+    function filterCities(selectedCity) {
+      affiliateNetworks.forEach(function(network) {
+        const cityValue = network.getAttribute('data-city');
+        
+        if (selectedCity === '' || selectedCity === cityValue) {
+          network.classList.remove('city-filtered');
+        } else {
+          network.classList.add('city-filtered');
+        }
+      });
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    
+    if (citySelect) {
+      citySelect.addEventListener('change', function() {
+        const selectedValue = this.value;
+        filterCities(selectedValue);
+      });
+    }
+    
+    if (cityOptions.length > 0) {
+      cityOptions.forEach(function(option) {
+        option.addEventListener('click', function() {
+          const selectedValue = this.getAttribute('data-value');
+          filterCities(selectedValue);
+        });
+      });
     }
   }
-`;
-document.head.appendChild(style);
+
+  initShowMoreButtons();
+  initCityFilter();
+});

@@ -303,7 +303,14 @@
   animation: slideDownCity 0.3s ease;
 }
 
-/* Стили для группировки партнеров по городам */
+.partners-map-wrapper {
+  margin-bottom: 40px;
+}
+
+.partners-cities-wrapper {
+  margin-top: 40px;
+}
+
 .affiliate-network {
   margin-bottom: 60px;
 }
@@ -320,49 +327,24 @@
   margin-bottom: 20px;
 }
 
-/* Скрытие карточек партнеров (больше 6) */
 .partner-item[data-hidden] {
   display: none;
 }
 
-/* Кнопка "Смотреть все" */
+.affiliate-network.city-filtered {
+  display: none;
+}
+
 .partners-show-more {
   display: flex;
   justify-content: center;
   margin-top: 30px;
 }
 
-.btn-show-more {
-  padding: 14px 40px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #2363d1;
-  background: #ffffff;
-  border: 2px solid #2363d1;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-transform: none;
-  letter-spacing: 0;
-}
-
-.btn-show-more:hover {
-  background: #2363d1;
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(35, 99, 209, 0.3);
-}
-
-.btn-show-more:active {
-  transform: translateY(0);
-}
-
-/* Скрытие кнопки когда все карточки показаны */
 .partners-show-more.hidden {
   display: none;
 }
 
-/* Адаптивность для заголовков городов */
 @media (max-width: 768px) {
   .affiliate-network__city-title {
     font-size: 24px;
@@ -375,5 +357,13 @@
   .btn-show-more {
     padding: 12px 32px;
     font-size: 14px;
+  }
+  
+  .partners-map-wrapper {
+    margin-bottom: 30px;
+  }
+  
+  .partners-cities-wrapper {
+    margin-top: 30px;
   }
 }
