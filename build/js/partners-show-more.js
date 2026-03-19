@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const allCards = partnersContainer.querySelectorAll('[data-partner-card]');
       const hiddenCards = partnersContainer.querySelectorAll('[data-partner-card][data-hidden]');
       
-      if (allCards.length <= 6) {
+      if (allCards.length <= 8) {
         if (showMoreWrapper) {
           showMoreWrapper.style.display = 'none';
         }
