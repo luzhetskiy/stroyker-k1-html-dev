@@ -9,6 +9,7 @@ import "@fancyapps/fancybox";
 import "inputmask/dist/jquery.inputmask.js";
 import { initShared } from "../../shared";
 import { initComponents } from "../../components";
+import "./city-select";
 
 window.wNumb = wNumb;
 window.noUiSlider = noUiSlider;
