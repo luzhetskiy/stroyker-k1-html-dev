@@ -10,6 +10,7 @@ import "inputmask/dist/jquery.inputmask.js";
 import { initShared } from "../../shared";
 import { initComponents } from "../../components";
 import "./city-select";
+import "./partners-show-more";
 
 window.wNumb = wNumb;
 window.noUiSlider = noUiSlider;
