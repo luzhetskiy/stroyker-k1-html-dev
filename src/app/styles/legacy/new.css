@@ -3098,19 +3098,13 @@ main {
   border-radius: 0 0 2px 2px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-  max-height: 350px;
-  display: flex;
+  display: none;
   flex-direction: column;
+  max-height: 350px;
 }
 
 .city-select-box.open .city-select-box__dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  display: flex;
 }
 
 .city-select-box__search {

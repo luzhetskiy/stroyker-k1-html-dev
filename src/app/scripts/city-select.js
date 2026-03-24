@@ -58,6 +58,11 @@ function initCitySelect() {
         
         searchInput.value = '';
         filterOptions('');
+        
+        // Navigate to the URL
+        if (selectedValue) {
+          window.location.href = selectedValue;
+        }
       });
     });
     
