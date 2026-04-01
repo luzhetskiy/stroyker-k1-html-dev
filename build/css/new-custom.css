@@ -358,6 +358,11 @@
   background-color: transparent;
 }
 
+.favorite-in-img:hover,
+.favorite-in-img:active {
+  background-color: transparent;
+}
+
 @media (max-width: 768px) {
   .affiliate-network__city-title {
     font-size: 24px;
