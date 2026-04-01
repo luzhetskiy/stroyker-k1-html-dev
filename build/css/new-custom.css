@@ -345,6 +345,18 @@
   display: none;
 }
 
+.favorite-in-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  border: none;
+  width: auto;
+  max-width: none;
+  min-width: none;
+  height: auto;
+}
+
 @media (max-width: 768px) {
   .affiliate-network__city-title {
     font-size: 24px;
