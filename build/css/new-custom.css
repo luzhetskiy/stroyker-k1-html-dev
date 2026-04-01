@@ -356,6 +356,7 @@
   min-width: auto;
   height: auto;
   background-color: transparent;
+  z-index: 10;
 }
 
 .favorite-in-img:hover,
