@@ -263,8 +263,17 @@
   flex: 1
 
 .st-button_add-to-favorite
-  min-width: 52px
-  max-width: 52px
+  position: absolute
+  bottom: 10px
+  right: 10px
+  padding: 0
+  border: none
+  width: auto
+  max-width: 24px
+  min-width: 24px
+  height: auto
+  background-color: transparent
+  z-index: 10
 
   &:is(:hover, .active)
     fill: var(--color-button-secondary-text, #2363D1)
