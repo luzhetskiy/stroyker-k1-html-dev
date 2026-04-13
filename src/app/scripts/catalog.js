@@ -12,6 +12,7 @@ jQuery(document).ready(function ($) {
     var $this = $(this);
     $this
       .find(":input")
+      .not(":checkbox") // Исключаем чекбоксы - они не должны отключаться
       .filter(function () {
         return !this.value;
       })
