@@ -3365,6 +3365,21 @@ main {
   display: none;
 }
 
+.partner-item__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.partner-item__link::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: url(@images/partner-item-arrow.svg) 50% 50% no-repeat;
+  background-size: contain;
+}
+
 @media (max-width: 768px) {
   .affiliate-network__city-title {
     font-size: 24px;
