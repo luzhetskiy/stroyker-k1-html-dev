@@ -10,11 +10,21 @@ jQuery(document).ready(function ($) {
   // Remove empty fields from GET forms
   filterForm.submit(function () {
     var $this = $(this);
+    
+    // Отключаем только НЕчекбоксы с пустыми значениями
     $this
       .find(":input")
-      .not(":checkbox") // Исключаем чекбоксы - они не должны отключаться
+      .not(":checkbox")
       .filter(function () {
         return !this.value;
+      })
+      .attr("disabled", "disabled");
+    
+    // Для чекбоксов отключаем только неотмеченные
+    $this
+      .find(":checkbox")
+      .filter(function () {
+        return !this.checked;
       })
       .attr("disabled", "disabled");
 
@@ -24,6 +34,15 @@ jQuery(document).ready(function ($) {
 
   // Un-disable form fields when page loads, in case they click back after submission
   filterForm.find(":input").not(".range-input").prop("disabled", false);
+  
+  // Восстанавливаем состояние чекбоксов из URL после загрузки страницы
+  var urlParams = new URLSearchParams(window.location.search);
+  filterForm.find(":checkbox").each(function() {
+    var paramValues = urlParams.getAll(this.name);
+    if (paramValues.includes(this.value)) {
+      this.checked = true;
+    }
+  });
 
   $(".found-cheaper-panel").on("click", ".close-panel", function () {
     document.cookie = "found_chaper_panel_closed=1; path=/";
@@ -162,6 +181,7 @@ function handleFilterChange(elem) {
   filterForm
     .find(":input")
     .not("button")
+    .not(":checkbox") // Чекбоксы не отключаем - пользователь должен иметь возможность выбрать несколько
     .filter(function () {
       if (this.classList.contains("range-input")) {
         return parseInt(this.dataset.initValue) === parseInt(this.value);
