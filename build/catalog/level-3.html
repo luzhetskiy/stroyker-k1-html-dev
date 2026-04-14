@@ -12,66 +12,16 @@
     <link rel="stylesheet" href="../css/font-awesome.css" />
     <link rel="stylesheet" href="../css/tippy.css" />
     <link rel="stylesheet" href="../css/main.css" />
-    <style>
-      .catalog-filter__search {
-        position: relative;
-        margin-bottom: 20px;
-        padding: 0 20px;
-      }
-      
-      .catalog-filter__search-input {
-        width: 100%;
-        padding: 0 40px 0 15px;
-        border: 1px solid #e0e0e0;
-        border-radius: 2px;
-        font-size: 14px;
-        line-height: 1.5;
-        color: #333;
-        background-color: #fff;
-        transition: border-color 0.3s ease;
-        height: 40px;
-      }
-      
-      .catalog-filter__search-input:focus {
-        outline: none;
-        border-color: #2363D1;
-      }
-      
-      .catalog-filter__search-input::placeholder {
-        color: #999;
-      }
-      
-      .catalog-filter__search-icon {
-        position: absolute;
-        right: 30px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 18px;
-        height: 18px;
-        color: #666;
-        pointer-events: none;
-      }
-      
-      .no-results-message {
-        padding: 20px;
-        text-align: center;
-        color: #666;
-        font-size: 16px;
-        background-color: #f5f5f5;
-        border-radius: 4px;
-        margin-bottom: 20px;
-      }
-    </style>
     <script defer src="../js/jquery.js"></script>
-    <script defer src="../js/inputmask.js"></script>
-    <script defer src="../js/fancyapps.js"></script>
-    <script defer src="../js/app.js"></script>
-    <script defer src="../js/mmenu-js.js"></script>
-    <script defer src="../js/owl.carousel.js"></script>
-    <script defer src="../js/slick-carousel.js"></script>
-    <script defer src="../js/tippy.js.js"></script>
-    <script defer src="../js/popperjs.js"></script>
-    <script defer src="../js/main.js"></script>
+<script defer src="../js/inputmask.js"></script>
+<script defer src="../js/fancyapps.js"></script>
+<script defer src="../js/app.js"></script>
+<script defer src="../js/mmenu-js.js"></script>
+<script defer src="../js/owl.carousel.js"></script>
+<script defer src="../js/slick-carousel.js"></script>
+<script defer src="../js/tippy.js.js"></script>
+<script defer src="../js/popperjs.js"></script>
+<script defer src="../js/main.js"></script>
   </head>
 
   <body class="inner-page">
@@ -119,7 +69,12 @@
             <div class="header-user">
               <a href="/user/profile/" class="header-user__link">
                 <span class="icon">
-                  <svg width="25" height="25" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg class="icon-svg" width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.9987 13.3346C17.0535 13.3346 18.0847 13.0218 18.9617 12.4358C19.8388 11.8498 20.5224 11.0168 20.9261 10.0423C21.3297 9.06774 21.4353 7.99539 21.2296 6.96082C21.0238 5.92626 20.5158 4.97595 19.7699 4.23007C19.0241 3.48419 18.0737 2.97624 17.0392 2.77045C16.0046 2.56466 14.9323 2.67028 13.9577 3.07395C12.9832 3.47761 12.1502 4.1612 11.5642 5.03826C10.9782 5.91533 10.6654 6.94647 10.6654 8.0013C10.6654 9.41579 11.2273 10.7723 12.2275 11.7725C13.2277 12.7727 14.5842 13.3346 15.9987 13.3346ZM26.2787 21.6013C23.5494 18.8802 19.8527 17.3522 15.9987 17.3522C12.1447 17.3522 8.44796 18.8802 5.7187 21.6013L5.33203 22.0013V28.0013H26.6654V22.0013L26.2787 21.6013Z"
+                    ></path>
+                  </svg>
+                  <svg class="icon-svg hover" width="25" height="25" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M15.9987 13.3346C17.0535 13.3346 18.0847 13.0218 18.9617 12.4358C19.8388 11.8498 20.5224 11.0168 20.9261 10.0423C21.3297 9.06774 21.4353 7.99539 21.2296 6.96082C21.0238 5.92626 20.5158 4.97595 19.7699 4.23007C19.0241 3.48419 18.0737 2.97624 17.0392 2.77045C16.0046 2.56466 14.9323 2.67028 13.9577 3.07395C12.9832 3.47761 12.1502 4.1612 11.5642 5.03826C10.9782 5.91533 10.6654 6.94647 10.6654 8.0013C10.6654 9.41579 11.2273 10.7723 12.2275 11.7725C13.2277 12.7727 14.5842 13.3346 15.9987 13.3346ZM26.2787 21.6013C23.5494 18.8802 19.8527 17.3522 15.9987 17.3522C12.1447 17.3522 8.44796 18.8802 5.7187 21.6013L5.33203 22.0013V28.0013H26.6654V22.0013L26.2787 21.6013Z">
                     </path>
@@ -272,13 +227,18 @@
         <div class="header-body__content-right">
           <div class="header-user mobile-hide">
             <a href="/user/profile/" class="header-user__link">
-              <span class="icon">
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M15.9987 13.3346C17.0535 13.3346 18.0847 13.0218 18.9617 12.4358C19.8388 11.8498 20.5224 11.0168 20.9261 10.0423C21.3297 9.06774 21.4353 7.99539 21.2296 6.96082C21.0238 5.92626 20.5158 4.97595 19.7699 4.23007C19.0241 3.48419 18.0737 2.97624 17.0392 2.77045C16.0046 2.56466 14.9323 2.67028 13.9577 3.07395C12.9832 3.47761 12.1502 4.1612 11.5642 5.03826C10.9782 5.91533 10.6654 6.94647 10.6654 8.0013C10.6654 9.41579 11.2273 10.7723 12.2275 11.7725C13.2277 12.7727 14.5842 13.3346 15.9987 13.3346ZM26.2787 21.6013C23.5494 18.8802 19.8527 17.3522 15.9987 17.3522C12.1447 17.3522 8.44796 18.8802 5.7187 21.6013L5.33203 22.0013V28.0013H26.6654V22.0013L26.2787 21.6013Z">
-                  </path>
-                </svg>
-              </span>
+                <span class="icon">
+                  <svg class="icon-svg" width="26" height="26" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.9987 13.3346C17.0535 13.3346 18.0847 13.0218 18.9617 12.4358C19.8388 11.8498 20.5224 11.0168 20.9261 10.0423C21.3297 9.06774 21.4353 7.99539 21.2296 6.96082C21.0238 5.92626 20.5158 4.97595 19.7699 4.23007C19.0241 3.48419 18.0737 2.97624 17.0392 2.77045C16.0046 2.56466 14.9323 2.67028 13.9577 3.07395C12.9832 3.47761 12.1502 4.1612 11.5642 5.03826C10.9782 5.91533 10.6654 6.94647 10.6654 8.0013C10.6654 9.41579 11.2273 10.7723 12.2275 11.7725C13.2277 12.7727 14.5842 13.3346 15.9987 13.3346ZM26.2787 21.6013C23.5494 18.8802 19.8527 17.3522 15.9987 17.3522C12.1447 17.3522 8.44796 18.8802 5.7187 21.6013L5.33203 22.0013V28.0013H26.6654V22.0013L26.2787 21.6013Z"
+                    ></path>
+                  </svg>
+                  <svg class="icon-svg hover" width="25" height="25" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.9987 13.3346C17.0535 13.3346 18.0847 13.0218 18.9617 12.4358C19.8388 11.8498 20.5224 11.0168 20.9261 10.0423C21.3297 9.06774 21.4353 7.99539 21.2296 6.96082C21.0238 5.92626 20.5158 4.97595 19.7699 4.23007C19.0241 3.48419 18.0737 2.97624 17.0392 2.77045C16.0046 2.56466 14.9323 2.67028 13.9577 3.07395C12.9832 3.47761 12.1502 4.1612 11.5642 5.03826C10.9782 5.91533 10.6654 6.94647 10.6654 8.0013C10.6654 9.41579 11.2273 10.7723 12.2275 11.7725C13.2277 12.7727 14.5842 13.3346 15.9987 13.3346ZM26.2787 21.6013C23.5494 18.8802 19.8527 17.3522 15.9987 17.3522C12.1447 17.3522 8.44796 18.8802 5.7187 21.6013L5.33203 22.0013V28.0013H26.6654V22.0013L26.2787 21.6013Z">
+                    </path>
+                  </svg>
+                </span>
 
               info@nastroyker.ru
             </a>
@@ -495,18 +455,6 @@
                     autocomplete="off"
                     data-gtm-form-interact-id="0"
                   >
-                    <div class="catalog-filter__search">
-                      <input
-                        type="text"
-                        id="productSearch"
-                        class="catalog-filter__search-input"
-                        placeholder="Поиск по значениям"
-                        autocomplete="off"
-                      />
-                      <svg class="catalog-filter__search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke="currentColor" stroke-width="2" d="M17.062 16.768l-5-5M14.165 7.5c-.09 3.592-3.07 6.5-6.651 6.5a6.303 6.303 0 0 1-6.326-6.5C1.278 3.908 4.257 1 7.838 1a6.303 6.303 0 0 1 6.327 6.5z"></path>
-                      </svg>
-                    </div>
                     <ul class="catalog-filter-accordion">
                       <li>
                         <span class="opener">Ширина</span>
@@ -1399,127 +1347,5 @@
         </form>
       </div>
     </div>
-
-    <script>
-      (function() {
-        const searchInput = document.getElementById('productSearch');
-        const catalogFilter = document.querySelector('.catalog-filter');
-        
-        if (!searchInput || !catalogFilter) return;
-        
-        // Получаем все элементы фильтра для поиска
-        const filterSelects = catalogFilter.querySelectorAll('select[data-search-select]');
-        const filterCheckboxes = catalogFilter.querySelectorAll('.form-group .checkbox');
-        
-        // Сохраняем оригинальное состояние для восстановления
-        const originalState = new Map();
-        
-        // Сохраняем опции select
-        filterSelects.forEach(select => {
-          const options = Array.from(select.options);
-          originalState.set(select, options.map(opt => ({
-            value: opt.value,
-            text: opt.text,
-            element: opt.cloneNode(true)
-          })));
-        });
-        
-        // Сохраняем checkbox элементы
-        filterCheckboxes.forEach(checkbox => {
-          const parent = checkbox.closest('.form-group');
-          if (parent) {
-            originalState.set(parent, {
-              display: parent.style.display || ''
-            });
-          }
-        });
-        
-        searchInput.addEventListener('input', function() {
-          const searchTerm = this.value.toLowerCase().trim();
-          
-          // Если поиск пустой - показываем все
-          if (searchTerm === '') {
-            // Восстанавливаем select опции
-            filterSelects.forEach(select => {
-              const original = originalState.get(select);
-              if (original) {
-                // Очищаем select
-                while (select.options.length > 0) {
-                  select.remove(0);
-                }
-                // Восстанавливаем все опции
-                original.forEach(opt => {
-                  select.add(opt.element.cloneNode(true));
-                });
-              }
-            });
-            
-            // Показываем все checkbox
-            filterCheckboxes.forEach(checkbox => {
-              const parent = checkbox.closest('.form-group');
-              if (parent) {
-                parent.style.display = '';
-              }
-            });
-            
-            return;
-          }
-          
-          // Фильтруем опции в select
-          filterSelects.forEach(select => {
-            const original = originalState.get(select);
-            if (!original) return;
-            
-            // Очищаем select
-            while (select.options.length > 0) {
-              select.remove(0);
-            }
-            
-            // Добавляем только совпадающие опции
-            let hasMatches = false;
-            original.forEach(opt => {
-              if (opt.text.toLowerCase().includes(searchTerm) || opt.value === '') {
-                select.add(opt.element.cloneNode(true));
-                if (opt.value !== '') hasMatches = true;
-              }
-            });
-            
-            // Если нет совпадений, показываем пустой вариант
-            if (!hasMatches && select.options.length === 0) {
-              const emptyOption = document.createElement('option');
-              emptyOption.value = '';
-              emptyOption.text = 'Нет совпадений';
-              select.add(emptyOption);
-            }
-          });
-          
-          // Фильтруем checkbox элементы
-          filterCheckboxes.forEach(checkbox => {
-            const parent = checkbox.closest('.form-group');
-            if (!parent) return;
-            
-            const label = checkbox.querySelector('label');
-            if (!label) return;
-            
-            const labelText = label.textContent.toLowerCase();
-            
-            if (labelText.includes(searchTerm)) {
-              parent.style.display = '';
-            } else {
-              parent.style.display = 'none';
-            }
-          });
-        });
-        
-        // Очистка поиска по Escape
-        searchInput.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape') {
-            this.value = '';
-            this.dispatchEvent(new Event('input'));
-            this.blur();
-          }
-        });
-      })();
-    </script>
   </body>
 </html>

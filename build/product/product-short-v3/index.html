@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../css/mmenu.css" />
+    <link rel="stylesheet" href="../../css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="../../css/nouislider.css" />
+    <link rel="stylesheet" href="../../css/font-awesome.css" />
+    <link rel="stylesheet" href="../../css/tippy.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <script defer src="../../js/jquery.js"></script>
+<script defer src="../../js/inputmask.js"></script>
+<script defer src="../../js/fancyapps.js"></script>
+<script defer src="../../js/app.js"></script>
+<script defer src="../../js/mmenu-js.js"></script>
+<script defer src="../../js/owl.carousel.js"></script>
+<script defer src="../../js/slick-carousel.js"></script>
+<script defer src="../../js/tippy.js.js"></script>
+<script defer src="../../js/popperjs.js"></script>
+<script defer src="../../js/main.js"></script>
+  </head>
 
-  <title>Главная</title>
-
-  <link rel="stylesheet" href="../css/mmenu.css" />
-    <link rel="stylesheet" href="../css/jquery.fancybox.css" />
-    <link rel="stylesheet" href="../css/nouislider.css" />
-    <link rel="stylesheet" href="../css/font-awesome.css" />
-    <link rel="stylesheet" href="../css/tippy.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-  <script defer src="../js/jquery.js"></script>
-<script defer src="../js/inputmask.js"></script>
-<script defer src="../js/fancyapps.js"></script>
-<script defer src="../js/app.js"></script>
-<script defer src="../js/mmenu-js.js"></script>
-<script defer src="../js/owl.carousel.js"></script>
-<script defer src="../js/slick-carousel.js"></script>
-<script defer src="../js/tippy.js.js"></script>
-<script defer src="../js/popperjs.js"></script>
-<script defer src="../js/main.js"></script>
-</head>
-
-<body class="inner-page">
-
-  <div class="page">
-    <header>
-      <section class="header-default">
+  <body class="inner-page">
+    <div class="page">
+      <header><section class="header-default">
   <div class="top-header">
     <div class="container">
       <div class="top-header__content">
         <div class="top-header__content-left">
           <a href="/" class="logo">
-            <img src="../images/logo.svg" alt="" />
+            <img src="../../images/logo.svg" alt="" />
           </a>
           <div class="main-menu">
             <ul>
@@ -56,6 +51,14 @@
 
           <a data-fancybox="callme-modal" data-src="#callme-modal" href="javascript:;"
             class="btn-border callme-button mobile-hide button-theme button-theme_callme">Заказать звонок</a>
+          <a href="#" class="header-cart">
+            <img src="../../images/favorite-icon.svg" class="icon-img" alt="" />
+            <span class="cart-number">0</span>
+          </a>
+          <a href="/cart/" class="header-cart">
+            <img src="../../images/cart-icon-orange.svg" class="icon-img" alt="" />
+            <span class="cart-number">0</span>
+          </a>
         </div>
         <div class="burger-menu">
           <div class="burger"></div>
@@ -76,7 +79,6 @@
                     </path>
                   </svg>
                 </span>
-
                 info@nastroyker.ru
               </a>
             </div>
@@ -85,19 +87,19 @@
           <div class="mobile-menu__item mobile-show"></div>
           <div class="mobile-menu__item mobile-show">
             <div class="header-search search--box">
-              <input name="q" type="text" autocomplete="off" class="search_input_mobile" placeholder="Поиск..." 
+              <input name="q" type="text" autocomplete="off" class="search_input_mobile" placeholder="Поиск..."
                 data-search-url="/search"
-                data-search-input="header-search"
+                data-search-input="header-search-mobile"
                 data-min-chars="3"
               />
               <button
-                data-search-button="header-search">
+                data-search-button="header-search-mobile">
                 <svg class="icon-svg">
                   <use xlink:href="#search-icon"></use>
                 </svg>
               </button>
               <div class="header-search-results" id="search-result-mob" style="display: none"
-                data-search-results="header-search"></div>
+                data-search-results="header-search-mobile"></div>
             </div>
           </div>
           <div class="mobile-ul">
@@ -127,11 +129,64 @@
                       </svg>
                     </a>
                   </li>
+
                 </ul>
               </li>
             </ul>
 
-            <ul></ul>
+            <ul>
+              <li>
+                <a href="#">
+                  Сотрудничество
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Доставка
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Акции
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Партнеры
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Контакты
+                </a>
+              </li>
+
+              <li class="menu-item">
+                <a class="menu-item__link" href="/catalog/kategoriya-tovarov-2/">
+                  <svg width="24" height="22" viewBox="0 0 24 22" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.0009 2.23701C14.6697 -0.158936 18.7937 -0.0794119 21.3648 2.49603C23.9346 5.07261 24.0233 9.17605 21.6329 11.8526L11.9987 21.5L2.3667 11.8526C-0.0236744 9.17605 0.0660787 5.06579 2.63483 2.49603C5.20812 -0.0760038 9.32425 -0.162344 12.0009 2.23701Z"
+                      fill="#2363D1" />
+                  </svg>
+                  Отложенные товары
+                </a>
+              </li>
+
+              <li class="menu-item">
+                <a class="menu-item__link" href="/catalog/kategoriya-tovarov-2/">
+                  <svg width="24" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.778 11H17.1113V22.0001H20.778V11Z" fill="#2363D1" />
+                    <path d="M3.6667 5.49993H0V22.0001H3.6667V5.49993Z" fill="#2363D1" />
+                    <path d="M12.2223 -0.0001297H8.55564V22.0001H12.2223V-0.0001297Z" fill="#2363D1" />
+                  </svg>
+                  Сравнить товары
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mobile-phone  mobile-show">
+            <a href="tel:+79372101220">+7 987 443-37-77</a>
           </div>
 
           <div class="mobile-btn mobile-show">
@@ -154,7 +209,7 @@
           Проекты домов
         </a>
         <div class="header-search mobile-hide header-search--inner">
-          <input name="q" type="text" autocomplete="off" class="search_input" placeholder="Поиск..." 
+          <input name="q" type="text" autocomplete="off" class="search_input" placeholder="Поиск..."
             data-search-url="/search"
             data-search-input="header-search"
             data-min-chars="3"
@@ -165,75 +220,8 @@
               <use xlink:href="#search-icon"></use>
             </svg>
           </button>
-          <div id="search-result-container" class="header-search-results"
-            data-search-results="header-search">
-            <a class="search-result-item" href="/catalog/product/pila/">
-              <div class="search-result-item__content">
-                <span class="search-result-item__name">Grand Line Professional Герметик полиуретановый PU-40 серый
-                  310мл
-                </span>
-                <span class="search-result-item__article">423877</span>
-                <span class="search-result-item__cost">
-                  8000,00 ₽/шт.
-                </span>
-              </div>
-            </a>
-            <a class="search-result-item" href="/catalog/product/pila/">
-              <div class="search-result-item__content">
-                <span class="search-result-item__name">Grand Line Professional Герметик полиуретановый PU-40 серый
-                  310мл
-                </span>
-                <span class="search-result-item__article">423877</span>
-                <span class="search-result-item__cost">
-                  8000,00 ₽/шт.
-                </span>
-              </div>
-            </a>
-            <a class="search-result-item" href="/catalog/product/pila/">
-              <div class="search-result-item__content">
-                <span class="search-result-item__name">Grand Line Professional Герметик полиуретановый PU-40 серый
-                  310мл
-                </span>
-                <span class="search-result-item__article">423877</span>
-                <span class="search-result-item__cost">
-                  8000,00 ₽/шт.
-                </span>
-              </div>
-            </a>
-            <a class="search-result-item" href="/catalog/product/pila/">
-              <div class="search-result-item__content">
-                <span class="search-result-item__name">Grand Line Professional Герметик полиуретановый PU-40 серый
-                  310мл
-                </span>
-                <span class="search-result-item__article">423877</span>
-                <span class="search-result-item__cost">
-                  8000,00 ₽/шт.
-                </span>
-              </div>
-            </a>
-            <a class="search-result-item" href="/catalog/product/pila/">
-              <div class="search-result-item__content">
-                <span class="search-result-item__name">Grand Line Professional Герметик полиуретановый PU-40 серый
-                  310мл
-                </span>
-                <span class="search-result-item__article">423877</span>
-                <span class="search-result-item__cost">
-                  8000,00 ₽/шт.
-                </span>
-              </div>
-            </a>
-            <a class="search-result-item" href="/catalog/product/pila/">
-              <div class="search-result-item__content">
-                <span class="search-result-item__name">Grand Line Professional Герметик полиуретановый PU-40 серый
-                  310мл
-                </span>
-                <span class="search-result-item__article">423877</span>
-                <span class="search-result-item__cost">
-                  8000,00 ₽/шт.
-                </span>
-              </div>
-            </a>
-          </div>
+          <div id="search-result-container" style="display: none" class="header-search-results"
+            data-search-results="header-search"></div>
         </div>
         <div class="header-body__content-right">
           <div class="header-user mobile-hide">
@@ -254,18 +242,6 @@
               info@nastroyker.ru
             </a>
           </div>
-
-          <a href="/cart/" class="header-cart">
-            <i class="icon">
-              <svg class="icon-svg">
-                <use xlink:href="#shopping-cart"></use>
-              </svg>
-              <svg class="icon-svg hover">
-                <use xlink:href="#shopping-cart"></use>
-              </svg>
-            </i>
-            <span class="cart-number">0</span>
-          </a>
         </div>
         <div class="header-fixed-content">
           <div class="header-phones top-header__phones">
@@ -295,214 +271,519 @@
       </div>
     </div>
   </div>
-</section>    </header>
+</section></header>
 
-    <main>
-      <section class="section section-first mobile-show">
-  <div class="container">
-    <div class="catalog-side mobile-show">
-      <span class="catalog-side__title">
+      <main>
+        <section class="section mobile-show header-top-bg-color">
+          <div class="container">
+            <div class="catalog-side mobile-show">
+              <span class="catalog-side__title">
+                <span class="icon">
+                  <svg width="16" height="14" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z"></path>
+                  </svg>
+                </span>
+                Проекты домов
+              </span>
+              <div class="catalog-side__content">
+                <ul>
+                  <li class="menu-item">
+                    <a href="/catalog/kategoriya-tovarov-1/">Проекты домов до 150м2</a>
+                  </li>
+
+                  <li class="menu-item">
+                    <a href="/catalog/kategoriya-tovarov-2/">Проекты домов до 300м2</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-dark">
+          <div class="container">
+            <div class="page-head">
+              <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Главная" href="/">
+                    <svg class="breadcrumbs__sep">
+                      <use xlink:href="#tab-arrow"></use>
+                    </svg>
+                    Главная
+                    <meta itemprop="name" content="Главная" />
+                  </a>
+                  <meta itemprop="position" content="1" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Проекты домов" href="/catalog/">
+                    Проекты домов
+                    <meta itemprop="name" content="Проекты домов" />
+                  </a>
+                  <meta itemprop="position" content="2" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a itemprop="item" title="Проекты домов до 150м2" href="/catalog/kategoriya-tovarov-1/">
+                    Проекты домов до 150м2
+                    <meta itemprop="name" content="Проекты домов до 150м2" />
+                  </a>
+                  <meta itemprop="position" content="3" />
+                </span>
+
+                <svg class="breadcrumbs__sep">
+                  <use xlink:href="#tab-arrow"></use>
+                </svg>
+
+                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a
+                    itemprop="item"
+                    title="Одноэтажные дома до 150м2"
+                    href="/catalog/category/kategoriya-tovarov-1/podkategoriya-tovarov-1/"
+                  >
+                    Одноэтажные дома до 150м2
+                    <meta itemprop="name" content="Одноэтажные дома до 150м2" />
+                  </a>
+                  <meta itemprop="position" content="4" />
+                </span>
+              </div>
+            </div>
+
+            <div class="content-block">
+              <div class="product-v3" itemscope="" itemtype="http://schema.org/Product">
+  <div class="product-card g-content">
+    <div class="product-card__navigation">
+      <a href="" class="product-card__nav-prev">
         <span class="icon">
-          <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z" fill="currentColor" />
+          <svg class="icon-svg">
+            <use xlink:href="#product-nav-arrow"></use>
           </svg>
         </span>
-        Проекты домов
+        Предыдущий товар
+      </a>
+      <a href="" class="product-card__nav-next">
+        Следующий товар
+        <span class="icon">
+          <svg class="icon-svg">
+            <use xlink:href="#product-nav-arrow"></use>
+          </svg>
+        </span>
+      </a>
+    </div>
+
+    <div class="product-card__head">
+      <h1 class="product-card__title" itemprop="name">Товар 1</h1>
+      <span class="product-card__artikul" itemprop="sku">001</span>
+    </div>
+    <div class="g-content g-content_frameless product-card__main-content">
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="product-slideshow">
+  <div id="sync1" class="owl-carousel owl-theme owl-loaded owl-drag">
+    <a class="item" href="@images/banner-content-1.png" data-fancybox="images" target="_blank">
+      <img itemprop="image" src="../../images/banner-content-1.png" alt="Товар 1 (фото 1)" />
+      <span class="product-item__flag-content">
+        <span class="product-item__flag product-item__flag--hit">Хит</span>
+        <span class="product-item__flag product-item__flag--sale">sale</span>
+        <span class="product-item__flag product-item__flag--new">new</span>
+        <span class="product-card-sell-badge d-md-none">-30%</span>
       </span>
-      <div class="catalog-side__content">
-        <ul>
-          <li class="menu-item">
-            <a href="/catalog/kategoriya-tovarov-1/">Проекты домов до 150м2</a>
-          </li>
+    </a>
+    <a class="item" href="@images/banner-content-1.png" data-fancybox="images" target="_blank">
+      <img itemprop="image" src="../../images/banner-content-1.png" alt="Товар 1 (фото 1)" />
+      <span class="product-item__flag-content">
+        <span class="product-item__flag product-item__flag--hit">Хит</span>
+        <span class="product-item__flag product-item__flag--sale">sale</span>
+        <span class="product-item__flag product-item__flag--new">new</span>
+        <span class="product-card-sell-badge d-md-none">-30%</span>
+      </span>
+    </a>
+    <a class="item" href="@images/banner-content-1.png" data-fancybox="images" target="_blank">
+      <img itemprop="image" src="../../images/banner-content-1.png" alt="Товар 1 (фото 1)" />
+      <span class="product-item__flag-content">
+        <span class="product-item__flag product-item__flag--hit">Хит</span>
+        <span class="product-item__flag product-item__flag--sale">sale</span>
+        <span class="product-item__flag product-item__flag--new">new</span>
+        <span class="product-card-sell-badge d-md-none">-30%</span>
+      </span>
+    </a>
+  </div>
 
-          <li class="menu-item">
-            <a href="/catalog/kategoriya-tovarov-2/">Проекты домов до 300м2</a>
-          </li>
-        </ul>
-      </div>
+  <div id="sync2" class="owl-carousel owl-theme owl-loaded owl-drag">
+    <div class="item">
+      <img src="../../images/banner-content-1.png" alt="" />
+    </div>
+    <div class="item">
+      <img src="../../images/banner-content-1.png" alt="" />
+    </div>
+    <div class="item">
+      <img src="../../images/banner-content-1.png" alt="" />
     </div>
   </div>
-</section>
+</div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="product-card__main-column-content">
+            <div class="product-card__static-text-wrapper">dsgdsgsdfgdsfgdsg</div>
 
-<section class="conditional-section offer-big-slider big_banners wide-container">
-  <div class="container">
-    <!-- это ширина на весь экран  -->
+            <div class="product-card__accessibility">
+              <span class="product-card__accessibility-title">Наличие:</span>
 
-    <!-- обрезка влево -  cropped--left -->
-    <!-- обрезка вправо - cropped--right -->
-    <!-- без обрезки - убираем классы cropped--left и cropped--right -->
-    <div class="home-banner cropped--nocrop inner-block__active">
-      <div class="owl-carousel" data-autoplay-timeout="5">
-        <!--slide-->
+              <div class="product-card__accessibility-status product-card__status--many common-status">oloooloo</div>
+            </div>
 
-        <div class="home-banner__slide">
-          <!--image-->
+            <div class="product-card__price-block">
+              <div
+                class="product-card__personal-cost orig-price"
+                itemprop="offers"
+                itemtype="http://schema.org/Offer"
+                itemscope=""
+              >
+                <span> цена: </span>
+                <meta itemprop="price" content="12313123" />
+                <meta itemprop="priceCurrency" content="RUB" />
 
-          <div class="image image_cover" title="Оффер">
-            <img src="../images/offer-img.svg" alt="Оффер" />
-          </div>
+                <link itemprop="availability" href="http://schema.org/InStock" />
 
-          <div class="container content-container">
-            <div class="slide-content align--right">
-              <div>
-                <p style="font-weight: 800; font-size: 30px; line-height: 100%">
-                  Оффер - большой слайдер
-                </p>
+                <strong> 12&nbsp;313&nbsp;123,00 ₽/шт. </strong>
+              </div>
 
-                <li>
-                  можно выбрать варианты - широкий баннер, до 1180px, баннер с каталогом слева
-                </li>
-                <li>высота настраивается в зависимости от контента</li>
-                <li>
-                  загружается фон (изображение, возможно, текст, который нет возможности
-                  внедрить в рамках админки)
-                </li>
-                <br />
-                <li>можно выбрать расположение информации в левой или правой колонке</li>
-                <li>можно выбрать пагинацию кружками снизу или стрелками по сторонам</li>
-                <br />
-                <li>
-                  в блоке можно уместить: изображение; текст; кнопки; внутреннее разделение на
-                  колонки; любые сочетания вышеперечисленного контента
-                </li>
+              <div
+                class="product-card__modification-container"
+                data-ajax-url="/catalog/ajax-get-mod-for-product/2/test/"
+              >
+                <p class="product-card__modification-title">toshiba</p>
+                <div class="product-card__radio-options">
+                  <a
+                    class="product-card__product-mod-param"
+                    data-param-id="6"
+                    data-param-value="199"
+                    href="javascript:void(0)"
+                    >199</a
+                  >
+
+                  <a
+                    class="product-card__product-mod-param product-card__product-mod-param_active"
+                    data-param-id="6"
+                    data-param-value="65"
+                    href="javascript:void(0)"
+                    >65</a
+                  >
+                </div>
+              </div>
+
+              <div class="shopping-cart-product">
+                <div class="input-number input-number--lg">
+                  <div class="order-down"></div>
+                  <input
+                    type="number"
+                    min="0"
+                    max="inf"
+                    step="1"
+                    value="1"
+                    id="number"
+                    required=""
+                    data-product-counter="2"
+                  />
+                  <div class="order-up"></div>
+                </div>
+
+                <a
+                  href="/cart/add/2"
+                  class="shopping-cart-btn shopping-cart-btn--lg add-to-cart button-theme button-theme_cart custom-icon"
+                >
+                  <svg
+                    class="cart-icon"
+                    width="23"
+                    height="22"
+                    viewBox="0 0 23 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.97933 18.6555C6.69755 18.6555 6.42209 18.7391 6.1878 18.8956C5.9535 19.0522 5.77089 19.2747 5.66305 19.535C5.55522 19.7954 5.52701 20.0818 5.58198 20.3582C5.63695 20.6346 5.77265 20.8884 5.9719 21.0877C6.17115 21.2869 6.42501 21.4226 6.70138 21.4776C6.97775 21.5326 7.26422 21.5044 7.52456 21.3965C7.78489 21.2887 8.0074 21.1061 8.16396 20.8718C8.32051 20.6375 8.40407 20.362 8.40407 20.0802C8.40407 19.7024 8.25396 19.34 7.98677 19.0728C7.71958 18.8056 7.3572 18.6555 6.97933 18.6555ZM19.517 18.6555C19.2352 18.6555 18.9597 18.7391 18.7254 18.8956C18.4911 19.0522 18.3085 19.2747 18.2007 19.535C18.0929 19.7954 18.0646 20.0818 18.1196 20.3582C18.1746 20.6346 18.3103 20.8884 18.5095 21.0877C18.7088 21.2869 18.9626 21.4226 19.239 21.4776C19.5154 21.5326 19.8019 21.5044 20.0622 21.3965C20.3225 21.2887 20.545 21.1061 20.7016 20.8718C20.8581 20.6375 20.9417 20.362 20.9417 20.0802C20.9417 19.7024 20.7916 19.34 20.5244 19.0728C20.2572 18.8056 19.8948 18.6555 19.517 18.6555ZM20.6568 17.5157V15.2361H8.41546L8.05073 13.7544L22.9363 11.0873V2.69852H5.30385L4.69976 0.418945H0.140625V2.69852H2.95589L6.6374 17.5157H20.6568Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <svg
+                    class="cart-icon hover"
+                    width="23"
+                    height="22"
+                    viewBox="0 0 23 22"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.97933 18.6555C6.69755 18.6555 6.42209 18.7391 6.1878 18.8956C5.9535 19.0522 5.77089 19.2747 5.66305 19.535C5.55522 19.7954 5.52701 20.0818 5.58198 20.3582C5.63695 20.6346 5.77265 20.8884 5.9719 21.0877C6.17115 21.2869 6.42501 21.4226 6.70138 21.4776C6.97775 21.5326 7.26422 21.5044 7.52456 21.3965C7.78489 21.2887 8.0074 21.1061 8.16396 20.8718C8.32051 20.6375 8.40407 20.362 8.40407 20.0802C8.40407 19.7024 8.25396 19.34 7.98677 19.0728C7.71958 18.8056 7.3572 18.6555 6.97933 18.6555ZM19.517 18.6555C19.2352 18.6555 18.9597 18.7391 18.7254 18.8956C18.4911 19.0522 18.3085 19.2747 18.2007 19.535C18.0929 19.7954 18.0646 20.0818 18.1196 20.3582C18.1746 20.6346 18.3103 20.8884 18.5095 21.0877C18.7088 21.2869 18.9626 21.4226 19.239 21.4776C19.5154 21.5326 19.8019 21.5044 20.0622 21.3965C20.3225 21.2887 20.545 21.1061 20.7016 20.8718C20.8581 20.6375 20.9417 20.362 20.9417 20.0802C20.9417 19.7024 20.7916 19.34 20.5244 19.0728C20.2572 18.8056 19.8948 18.6555 19.517 18.6555ZM20.6568 17.5157V15.2361H8.41546L8.05073 13.7544L22.9363 11.0873V2.69852H5.30385L4.69976 0.418945H0.140625V2.69852H2.95589L6.6374 17.5157H20.6568Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  В корзину
+                </a>
+              </div>
+            </div>
+
+            <div class="d-flex flex-column gap-10">
+              <a class="btn-radius share-btn">
+                <span class="icon-svg">
+                  <svg class="icon">
+                    <use xlink:href="#share-icon"></use>
+                  </svg> </span
+                >Поделиться</a
+              >
+              <div class="share-block__show">
+                <p>Чтобы поделиться ссылкой, нажмите на иконку вашей соцсети</p>
+                <script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+                <script src="https://yastatic.net/share2/share.js"></script>
+                <div
+                  class="ya-share2 ya-share2_inited"
+                  data-services="vkontakte,twitter,odnoklassniki,telegram,whatsapp,viber"
+                >
+                  <div
+                    class="ya-share2__container ya-share2__container_size_m ya-share2__container_color-scheme_normal ya-share2__container_shape_normal"
+                  >
+                    <ul class="ya-share2__list ya-share2__list_direction_horizontal">
+                      <li class="ya-share2__item ya-share2__item_service_vkontakte">
+                        <a
+                          class="ya-share2__link"
+                          href="https://vk.com/share.php?url=http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;title=test2&amp;utm_source=share2"
+                          rel="nofollow noopener"
+                          target="_blank"
+                          title="ВКонтакте"
+                          ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                          ><span class="ya-share2__title">ВКонтакте</span></a
+                        >
+                      </li>
+                      <li class="ya-share2__item ya-share2__item_service_twitter">
+                        <a
+                          class="ya-share2__link"
+                          href="https://twitter.com/intent/tweet?text=test2&amp;url=http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;utm_source=share2"
+                          rel="nofollow noopener"
+                          target="_blank"
+                          title="Twitter"
+                          ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                          ><span class="ya-share2__title">Twitter</span></a
+                        >
+                      </li>
+                      <li class="ya-share2__item ya-share2__item_service_odnoklassniki">
+                        <a
+                          class="ya-share2__link"
+                          href="https://connect.ok.ru/offer?url=http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;title=test2&amp;utm_source=share2"
+                          rel="nofollow noopener"
+                          target="_blank"
+                          title="Одноклассники"
+                          ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                          ><span class="ya-share2__title">Одноклассники</span></a
+                        >
+                      </li>
+                      <li class="ya-share2__item ya-share2__item_service_telegram">
+                        <a
+                          class="ya-share2__link"
+                          href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;text=test2&amp;utm_source=share2"
+                          rel="nofollow noopener"
+                          target="_blank"
+                          title="Telegram"
+                          ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                          ><span class="ya-share2__title">Telegram</span></a
+                        >
+                      </li>
+                      <li class="ya-share2__item ya-share2__item_service_whatsapp">
+                        <a
+                          class="ya-share2__link"
+                          href="https://api.whatsapp.com/send?text=test2%20http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;utm_source=share2"
+                          rel="nofollow noopener"
+                          target="_blank"
+                          title="WhatsApp"
+                          ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                          ><span class="ya-share2__title">WhatsApp</span></a
+                        >
+                      </li>
+                      <li class="ya-share2__item ya-share2__item_service_viber">
+                        <a
+                          class="ya-share2__link"
+                          href="viber://forward?text=test2%20http%3A%2F%2Flocalhost%2Fcatalog%2Fproduct%2Ftest2%2F&amp;utm_source=share2"
+                          rel="nofollow"
+                          target="_blank"
+                          title="Viber"
+                          ><span class="ya-share2__badge"><span class="ya-share2__icon"></span></span
+                          ><span class="ya-share2__title">Viber</span></a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="d-flex align-items-center gap-20"
+                itemprop="aggregateRating"
+                itemscope=""
+                itemtype="http://schema.org/AggregateRating"
+              >
+                <span class="g-link product-reviews-button" href="#">Отзывы (1)</span>
+
+                <span class="product-card__rating">
+                  <meta itemprop="bestRating" content="5" />
+                  <meta itemprop="worstRating" content="1" />
+                  <meta itemprop="ratingValue" content="4,0" />
+
+                  <span class="star star--full"></span>
+
+                  <span class="star star--full"></span>
+
+                  <span class="star star--full"></span>
+
+                  <span class="star star--full"></span>
+
+                  <span class="star star--empty"></span>
+                </span>
+
+                <meta itemprop="ratingCount" content="1" />
               </div>
             </div>
           </div>
         </div>
-
-        <div class="home-banner__slide">
-          <!--image-->
-
-          <div class="image image_cover" title="Оффер">
-            <img src="../images/offer-img.svg" alt="Оффер" />
-          </div>
-
-          <div class="container content-container">
-            <div class="slide-content align--right">
-              <div>
-                <p style="font-weight: 800; font-size: 30px; line-height: 100%">
-                  Оффер - большой слайдер
-                </p>
-
-                <li>
-                  можно выбрать варианты - широкий баннер, до 1180px, баннер с каталогом слева
-                </li>
-                <li>высота настраивается в зависимости от контента</li>
-                <li>
-                  загружается фон (изображение, возможно, текст, который нет возможности
-                  внедрить в рамках админки)
-                </li>
-                <br />
-                <li>можно выбрать расположение информации в левой или правой колонке</li>
-                <li>можно выбрать пагинацию кружками снизу или стрелками по сторонам</li>
-                <br />
-                <li>
-                  в блоке можно уместить: изображение; текст; кнопки; внутреннее разделение на
-                  колонки; любые сочетания вышеперечисленного контента
-                </li>
-              </div>
+        <div class="col-lg-4">
+          <div class="product-card__secondary-column-content">
+            <div class="product-card__static-text-wrapper">
+              <p>sdifoidsfjsdifjosidfjiosdfiosdjfoisdfoijsdjfsdfsdjoif</p>
             </div>
-          </div>
-        </div>
 
-        <div class="home-banner__slide">
-          <!--image-->
+            <ul class="char">
+              <li>
+                <span class="char-text"><span class="char-text__mask">Объем, м3</span></span
+                ><span class="char-text">9,0</span>
+              </li>
 
-          <div class="image image_cover" title="Оффер">
-            <img src="../images/offer-img.svg" alt="Оффер" />
-          </div>
+              <li>
+                <span class="char-text"><span class="char-text__mask">Длина, мм</span></span
+                ><span class="char-text">9,0</span>
+              </li>
 
-          <div class="container content-container">
-            <div class="slide-content align--right">
-              <div>
-                <p style="font-weight: 800; font-size: 30px; line-height: 100%">
-                  Оффер - большой слайдер
-                </p>
+              <li>
+                <span class="char-text"><span class="char-text__mask">Ширина, мм</span></span
+                ><span class="char-text">9,0</span>
+              </li>
 
-                <li>
-                  можно выбрать варианты - широкий баннер, до 1180px, баннер с каталогом слева
-                </li>
-                <li>высота настраивается в зависимости от контента</li>
-                <li>
-                  загружается фон (изображение, возможно, текст, который нет возможности
-                  внедрить в рамках админки)
-                </li>
-                <br />
-                <li>можно выбрать расположение информации в левой или правой колонке</li>
-                <li>можно выбрать пагинацию кружками снизу или стрелками по сторонам</li>
-                <br />
-                <li>
-                  в блоке можно уместить: изображение; текст; кнопки; внутреннее разделение на
-                  колонки; любые сочетания вышеперечисленного контента
-                </li>
-              </div>
-            </div>
-          </div>
-        </div>
+              <li>
+                <span class="char-text"><span class="char-text__mask">Высота, мм</span></span
+                ><span class="char-text">9,0</span>
+              </li>
 
+              <li>
+                <span class="char-text"><span class="char-text__mask">testbox</span></span
+                ><span class="char-text"> 1 </span>
+              </li>
 
-      </div>
-    </div>
-  </div>
-</section>
+              <li>
+                <span class="char-text"><span class="char-text__mask">toshiba</span></span
+                ><span class="char-text"> 345543,0 </span>
+              </li>
+            </ul>
 
-<section class="conditional-section offer-banner-two-col multirow_banner_set">
-  <div class="container">
-    <div class="b-multirows-row d-grid row-gap-25 column-gap-grid grid-columns-md-2 grid-columns-lg-2">
-      <div class="content-standard-box">
-        <div class="content-standard-box__container">
-          <div class="content-background-box__text-content">
-            <div>
-              <p style="font-weight: 800; font-size: 30px; line-height: 100%">
-                Оффер - набор строк с баннерами - 2 колонки
-              </p>
-
-              <li>ширина колонки 580px</li>
-              <li>высота любая</li>
-              <br />
-              <p>в колонке можно уместить:</p>
-
-              <li>изображение</li>
-              <li>текст</li>
-              <li>кнопки</li>
-              <li>внутреннее разделение на колонки</li>
-              <li>оставить одну из колонок пустой</li>
-              <li>любые сочетания вышеперечисленного контента</li>
-              <li>колонки могут быть разной высоты</li>
-              <br />
-              <p>
-                Изначально, если изображение загружается через админку, оно автоматически
-                будет отображаться выше контента, прописываемого в поле “Текст”, на таких фото
-                стоит зум, но есть проблемы с вставлением ссылок на фото
-              </p>
-
-              <p>
-                Кодом можно поправить отображение текста, например, сделать его на фото снизу
-              </p>
-
-              <p>
-                Если положение фото должно быть другим - его внутри контента вставить ссылкой,
-                предварительно добавив в менеджер файлов
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="content-standard-box">
-        <div class="content-standard-box__container">
-          <div class="content-image image-zoom">
-            <div class="image">
-              <img src="../images/example-banner.svg" />
-            </div>
+            <p>ertertertertertertertertertretertert</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>    </main>
+  <div class="product-card-secondary">
+    <div class="row">
+      <div class="col-lg-9"></div>
+      <div class="col-lg-3">
+        <div class="product-banner-group">
+          <img
+            class="g-image product-banner-group__image"
+            src="../../images/add.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </section>
 
-    <footer>
+        <section class="section-dark feedback-form">
+          <div class="container">
+            <div class="question-main" id="question-main">
+              <div class="question-form">
+                <span class="content-title center h2">Остались вопросы?</span>
+                <form action="/crm/message/" method="post" id="feedback-message-request-form" onsubmit="">
+                  <input
+                    type="hidden"
+                    name="csrfmiddlewaretoken"
+                    value="HcLUoatDfdqRQI35R2T1ZAsvBaH3NGRX0ho0zsVy4dG7nu5WCxcKLE0UBpevtShR"
+                  />
+                  <div class="question-form__column">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="name" autocomplete="off" required="" />
+                      <label for="name" class="label-name">
+                        <span class="content-name"> Имя* </span>
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="phone"
+                        value="79277767575"
+                        class="form-control phone"
+                        name="phone"
+                        autocomplete="off"
+                        required=""
+                        maxlength="18"
+                      />
+                      <label for="phone" class="label-name">
+                        <span class="content-name"> Телефон </span>
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="mail"
+                        value="info@nastroyker.ru"
+                        class="form-control"
+                        name="email"
+                        autocomplete="off"
+                        required=""
+                      />
+                      <label for="text" class="label-name">
+                        <span class="content-name"> e-mail </span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="question-form__column">
+                    <div class="form-group">
+                      <textarea class="form-control" name="message" autocomplete="off" required=""></textarea>
+                      <label for="message" class="label-name">
+                        <span class="content-name"> Комментарий </span>
+                      </label>
+                    </div>
+                    <input type="hidden" name="url" id="id_url" />
+
+                    <button type="submit" class="btn btn--main-min">Отправить</button>
+                  </div>
+                </form>
+
+                <span class="form-text"
+                  >Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с нашей
+                  политикой конфиденциальности</span
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
   <div id="cookie-modal" class="cookie-modal" style="display: none;">
     <div class="cookie-modal__content">
         <p>Этот сайт использует cookies чтобы облегчить вам пользование сайтом. Продолжая использовать этот веб сайт, вы даете согласие на использование файлов cookies. Подробнее о cookies вы можете почитать <a href="">здесь</a>.</p>
@@ -513,7 +794,7 @@
       <div class="footer-first-column">
         <span class="footer-contact"> Контактные данные сайта (нужно настроить) </span>
         <a href="/" class="logo">
-          <img src="../images/footer-logo.svg" alt="" />
+          <img src="../../images/footer-logo.svg" alt="" />
         </a>
         <div class="mobile-show">
           <div class="developer-link">
@@ -601,36 +882,35 @@
       <div class="footer-social">
         <span>
           <a href="#">
-            <img src="../images/instagram-icon.svg"
+            <img src="../../images/instagram-icon.svg"
               alt="Мы в Instagram" />
           </a>
         </span>
 
         <span>
           <a href="#">
-            <img src="../images/twitter-icon.svg" alt="Мы в Twitter" />
+            <img src="../../images/twitter-icon.svg" alt="Мы в Twitter" />
           </a>
         </span>
 
         <span>
           <a href="#">
-            <img src="../images/youtube-icon.svg" alt="Мы на YouTube" />
+            <img src="../../images/youtube-icon.svg" alt="Мы на YouTube" />
           </a>
         </span>
 
         <span>
           <a href="#">
-            <img src="../images/vk-icon.svg"
+            <img src="../../images/vk-icon.svg"
               alt="Наша страница ВКонтакте" />
           </a>
         </span>
       </div>
     </div>
   </div>
-</footer>
-  </div>
+</footer>    </div>
 
-  <svg width="0" height="0" class="hidden">
+    <svg width="0" height="0" class="hidden">
   <symbol id="share-link" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5334 2.19123L12.999 2.76039L5.60707 9.35089L12.9867 15.3582L12.5457 15.9485L4.47343 9.37725L12.5334 2.19123Z"/>
     <path d="M14 2.87126C14 3.90473 13.1974 4.74252 12.2074 4.74252C11.2173 4.74252 10.4147 3.90473 10.4147 2.87126C10.4147 1.83779 11.2173 1 12.2074 1C13.1974 1 14 1.83779 14 2.87126Z"/>
@@ -787,8 +1067,7 @@
     <path fill-rule="evenodd" clip-rule="evenodd" d="M48.775.103L11.293 0l45.251 13.358L59 10.547 48.775.103z"
       fill="currentColor"></path>
   </symbol>
-</svg>
-    <div id="callme-modal" class="modal" style="display: none">
+</svg> <div id="callme-modal" class="modal" style="display: none">
   <div class="modal-content">
     <span class="content-title content-title--min center h2">Заказать обратный звонок</span>
     <form id="crm-callme-request-form" class="card-body form-inline callme-request-form" method="post"
@@ -833,6 +1112,5 @@
         </div>
     </form>
   </div>
-</div></body>
-
+</div>  </body>
 </html>
