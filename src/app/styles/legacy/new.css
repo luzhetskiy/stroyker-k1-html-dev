@@ -3380,6 +3380,18 @@ main {
   background-size: contain;
 }
 
+.product-v2 .compare-btn {
+  display: none;
+}
+
+.product-v2 .tab-content {
+  padding: 0;
+}
+
+.product-v2 .tabs li {
+  padding-left: 0;
+}
+
 @media (max-width: 768px) {
   .affiliate-network__city-title {
     font-size: 24px;
