@@ -3,6 +3,7 @@
     var delivery_payment_mapping = JSON.parse(document.getElementById("delivery_payment_mapping").textContent);
     var current_delivery = $("input[name=delivery_variant]:checked").val();
     var payment_block = $("#id_payment_variant").parent();
+    var cart_extra_fields = $(".cart-extra-field");
 
     function change_delivery_variant(e) {
       if (e) {
@@ -19,6 +20,12 @@
             current_element.prop("checked", false).parent().parent().hide();
           }
         });
+
+        if (current_delivery === "доставка по адресу") {
+          cart_extra_fields.show();
+        } else {
+          cart_extra_fields.hide();
+        }
       }
     }
     $("input[name=delivery_variant]").click(change_delivery_variant);
