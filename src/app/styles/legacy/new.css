@@ -3392,6 +3392,15 @@ main {
   padding-left: 0;
 }
 
+.product-card .st-button_add-to-favorite {
+  position: static;
+  padding: 0 23px;
+  border: 1px solid var(--catalog-btn__borderColor);
+  max-width: 70px;
+  min-width: 70px;
+  flex-shrink: 0;
+}
+
 @media (max-width: 768px) {
   .affiliate-network__city-title {
     font-size: 24px;
