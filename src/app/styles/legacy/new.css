@@ -3302,7 +3302,7 @@ main {
     display: none;
   }
 
-  .st-button__icon+.st-button__text {
+  .st-button__icon + .st-button__text {
     display: block;
   }
 }
@@ -3405,20 +3405,20 @@ main {
   .affiliate-network__city-title {
     font-size: 24px;
   }
-  
+
   .affiliate-network {
     margin-bottom: 40px;
   }
-  
+
   .btn-show-more {
     padding: 12px 32px;
     font-size: 14px;
   }
-  
+
   .partners-map-wrapper {
     margin-bottom: 30px;
   }
-  
+
   .partners-cities-wrapper {
     margin-top: 30px;
   }
