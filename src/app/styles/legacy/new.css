@@ -3395,7 +3395,7 @@ main {
 .product-card .st-button_add-to-favorite {
   position: static;
   padding: 0 23px;
-  border: 1px solid var(--catalog-btn__borderColor);
+  border: 1px solid var(--catalog-btn__borderColor, #B7CBE5);
   max-width: 70px;
   min-width: 70px;
   flex-shrink: 0;
