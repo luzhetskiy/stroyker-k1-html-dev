@@ -29,37 +29,39 @@ $(() => {
   initComponents();
 });
 
-const $compareCarousel = $(".owl-carousel--compare")
-const $detailCarousel = $(".owl-carousel--detail")
+const $compareCarousel = $(".owl-carousel--compare");
+const $detailCarousel = $(".owl-carousel--detail");
 
 if ($compareCarousel.length && $detailCarousel.length) {
-  const $pagination = $(".owl-pagination--compare")
-  const $counter = $pagination.find(".counter")
-  const $prev = $pagination.find(".prev")
-  const $next = $pagination.find(".next")
+  const $pagination = $(".owl-pagination--compare");
+  const $counter = $pagination.find(".counter");
+  const $prev = $pagination.find(".prev");
+  const $next = $pagination.find(".next");
 
   function updatePagination(event) {
-    const itemsPerPage = event.page.size // Количество слайдов на странице
-    const totalItems = event.item.count  // Всего слайдов
-    const startIndex = event.item.index + 1 // Номер первого отображаемого слайда
-    const endIndex = Math.min(startIndex + itemsPerPage - 1, totalItems) // Номер последнего отображаемого слайда
+    const itemsPerPage = event.page.size; // Количество слайдов на странице
+    const totalItems = event.item.count; // Всего слайдов
+    const startIndex = event.item.index + 1; // Номер первого отображаемого слайда
+    const endIndex = Math.min(startIndex + itemsPerPage - 1, totalItems); // Номер последнего отображаемого слайда
 
     // Обновляем текст пагинации
-    $counter.text(`${startIndex}-${endIndex}/${totalItems}`)
+    $counter.text(`${startIndex}-${endIndex}/${totalItems}`);
 
     // Проверяем, первый ли это слайд
-    if (event.item.index === 0) { // Начало слайдера
-      $prev.prop("disabled", true).attr("inert", "")
+    if (event.item.index === 0) {
+      // Начало слайдера
+      $prev.prop("disabled", true).attr("inert", "");
     } else {
-      $prev.prop("disabled", false).removeAttr("inert")
+      $prev.prop("disabled", false).removeAttr("inert");
     }
 
     // Проверяем, последний ли это слайд
-    const isLastPage = event.item.index + itemsPerPage >= totalItems
-    if (isLastPage) { // Конец слайдера
-      $next.prop("disabled", true).attr("inert", "")
+    const isLastPage = event.item.index + itemsPerPage >= totalItems;
+    if (isLastPage) {
+      // Конец слайдера
+      $next.prop("disabled", true).attr("inert", "");
     } else {
-      $next.prop("disabled", false).removeAttr("inert")
+      $next.prop("disabled", false).removeAttr("inert");
     }
   }
 
@@ -77,11 +79,11 @@ if ($compareCarousel.length && $detailCarousel.length) {
       992: {
         items: 4,
         margin: 0,
-      }
+      },
     },
     onInitialized: updatePagination, // Обновить пагинацию при инициализации
-    onTranslated: updatePagination   // Обновить пагинацию при смене слайдов
-  })
+    onTranslated: updatePagination, // Обновить пагинацию при смене слайдов
+  });
 
   $detailCarousel.owlCarousel({
     items: 4,
@@ -96,83 +98,88 @@ if ($compareCarousel.length && $detailCarousel.length) {
       992: {
         items: 4,
         margin: 0,
-      }
-    }
-  })
+      },
+    },
+  });
 
   function updateFirstVisibleClass(carousel) {
     // Удаляем класс со всех элементов
-    carousel.find('.owl-item').removeClass('owl-active-first')
+    carousel.find(".owl-item").removeClass("owl-active-first");
 
     // Находим текущие видимые элементы
-    const visibleItems = carousel.find('.owl-item.active')
+    const visibleItems = carousel.find(".owl-item.active");
 
     // Добавляем класс только к первому
     if (visibleItems.length) {
-      visibleItems.first().addClass('owl-active-first')
+      visibleItems.first().addClass("owl-active-first");
     }
   }
 
   // Синхронизация двух каруселей
   function syncCarousels(event) {
-    const targetIndex = event.item.index
-    const syncedCarousel = event.currentTarget === $compareCarousel[0]
-      ? $detailCarousel
-      : $compareCarousel
+    const targetIndex = event.item.index;
+    const syncedCarousel =
+      event.currentTarget === $compareCarousel[0]
+        ? $detailCarousel
+        : $compareCarousel;
 
-    syncedCarousel.trigger('to.owl.carousel', [targetIndex, 300, true])
+    syncedCarousel.trigger("to.owl.carousel", [targetIndex, 300, true]);
   }
 
-  $compareCarousel.on('changed.owl.carousel', syncCarousels)
-  $detailCarousel.on('changed.owl.carousel', syncCarousels)
+  $compareCarousel.on("changed.owl.carousel", syncCarousels);
+  $detailCarousel.on("changed.owl.carousel", syncCarousels);
 
   // Добавляем класс после инициализации
-  updateFirstVisibleClass($detailCarousel)
+  updateFirstVisibleClass($detailCarousel);
 
   // Добавляем класс при изменении активного слайда
-  $detailCarousel.on('changed.owl.carousel', function () {
+  $detailCarousel.on("changed.owl.carousel", function () {
     setTimeout(() => updateFirstVisibleClass($detailCarousel));
-  })
+  });
 
   // Кнопки навигации
   $prev.on("click", function () {
-    $compareCarousel.trigger("prev.owl.carousel")
-    $detailCarousel.trigger("prev.owl.carousel")
-  })
+    $compareCarousel.trigger("prev.owl.carousel");
+    $detailCarousel.trigger("prev.owl.carousel");
+  });
 
   $next.on("click", function () {
-    $compareCarousel.trigger("next.owl.carousel")
-    $detailCarousel.trigger("next.owl.carousel")
-  })
+    $compareCarousel.trigger("next.owl.carousel");
+    $detailCarousel.trigger("next.owl.carousel");
+  });
 
   function setEqualHeights() {
-    const allProducts = document.querySelectorAll('.detail-product')
+    const allProducts = document.querySelectorAll(".detail-product");
 
     // Сбрасываем высоты перед пересчётом
-    allProducts.forEach(product =>
-      Array.from(product.children).forEach(item => (item.style.minHeight = ''))
-    )
+    allProducts.forEach((product) =>
+      Array.from(product.children).forEach(
+        (item) => (item.style.minHeight = ""),
+      ),
+    );
 
-    const maxItems = Math.max(...Array.from(allProducts).map(product => product.children.length))
+    const maxItems = Math.max(
+      ...Array.from(allProducts).map((product) => product.children.length),
+    );
 
     // Пройдём по каждому индексу
     for (let i = 0; i < maxItems; i++) {
-      const heights = []
+      const heights = [];
 
       // Собираем высоты всех элементов с текущим индексом
-      allProducts.forEach(product => {
-        const item = product.children[i]
-        if (item) heights.push(item.offsetHeight)
-      })
+      allProducts.forEach((product) => {
+        const item = product.children[i];
+        if (item) heights.push(item.offsetHeight);
+      });
 
       // Определяем максимальную высоту
-      const maxHeight = Math.max(...heights)
+      const maxHeight = Math.max(...heights);
 
       // Устанавливаем максимальную высоту для всех элементов с этим индексом
-      allProducts.forEach(product => {
-        const item = product.children[i]
-        if (item) item.style.minHeight = `${maxHeight}px`
-      })
+      allProducts.forEach((product) => {
+        const item = product.children[i];
+        if (item) item.style.minHeight = `${maxHeight}px`;
+      });
     }
   }
 
@@ -183,8 +190,7 @@ if ($compareCarousel.length && $detailCarousel.length) {
 
     return function wrap(...args) {
       if (isThrottled) {
-        savedArgs = args,
-          savedThis = this;
+        ((savedArgs = args), (savedThis = this));
         return;
       }
 
@@ -199,18 +205,20 @@ if ($compareCarousel.length && $detailCarousel.length) {
           savedThis = null;
           savedArgs = null;
         }
-
       }, delay);
-    }
+    };
   };
 
   // Добавляем обработчик события resize
-  window.addEventListener('resize', throttle(() => {
-    setTimeout(setEqualHeights, 300)
-  }))
+  window.addEventListener(
+    "resize",
+    throttle(() => {
+      setTimeout(setEqualHeights, 300);
+    }),
+  );
 
   // Инициализация при загрузке
-  setEqualHeights()
+  setEqualHeights();
 }
 
 $(".acc__toggle:not(.not_toggle)").click(function (e) {
@@ -246,13 +254,18 @@ bigSlides.owlCarousel({
     '<svg class="icon" viewBox="0 0 10.5 18.1"><path stroke="none" d="M1.4,18.1L0,16.7l7.6-7.6L0,1.5L1.4,0l9,9.1C10.4,9.1,1.3,18.1,1.4,18.1z"></path></svg>',
   ],
 });
-var radioButtons = document.querySelectorAll('.delivery-selection input[type="radio"]');
+var radioButtons = document.querySelectorAll(
+  '.delivery-selection input[type="radio"]',
+);
 var choices = document.querySelectorAll(".delivery-choice");
 radioButtons.forEach(function (btn) {
   btn.addEventListener("change", function () {
     var clicked = this;
     choices.forEach(function (choice) {
-      if (choice.classList.contains(clicked.id) || choice.classList.contains("delivery-type-" + clicked.value)) {
+      if (
+        choice.classList.contains(clicked.id) ||
+        choice.classList.contains("delivery-type-" + clicked.value)
+      ) {
         choice.style.display = "block";
       } else {
         choice.style.display = "none";
@@ -387,9 +400,16 @@ $(".partners-slider .owl-carousel").owlCarousel({
 
 $(document).ready(function () {
   $(document).on("click", (event) => {
-    if (!event.target.closest(".bottom-mobile-menu") && $(".bottom-mobile-menu-list_active")) {
-      $(".bottom-mobile-menu-list_active").removeClass("bottom-mobile-menu-list_active");
-      $(".bottom-mobile-menu-button_active").removeClass("bottom-mobile-menu-button_active");
+    if (
+      !event.target.closest(".bottom-mobile-menu") &&
+      $(".bottom-mobile-menu-list_active")
+    ) {
+      $(".bottom-mobile-menu-list_active").removeClass(
+        "bottom-mobile-menu-list_active",
+      );
+      $(".bottom-mobile-menu-button_active").removeClass(
+        "bottom-mobile-menu-button_active",
+      );
     }
   });
 
@@ -488,14 +508,16 @@ $(document).ready(function () {
 function gallery() {
   if ($.fancybox) {
     $(".owl-item [data-fancybox]").on("click", function () {
-      var $selector = $(this).parents(".owl-carousel").find(".owl-item:not(.cloned) [data-fancybox]");
+      var $selector = $(this)
+        .parents(".owl-carousel")
+        .find(".owl-item:not(.cloned) [data-fancybox]");
       $.fancybox.open(
         $selector,
         {
           selector: $selector,
           backFocus: false,
         },
-        $selector.index(this)
+        $selector.index(this),
       );
       return false;
     });
@@ -660,7 +682,8 @@ $(function () {
   // This should prevent problems with carousel, scrollspy, etc...
   $(".smoothScroll").click(function () {
     if (
-      location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") &&
+      location.pathname.replace(/^\//, "") ==
+        this.pathname.replace(/^\//, "") &&
       location.hostname == this.hostname
     ) {
       var target = $(this.hash);
@@ -671,7 +694,7 @@ $(function () {
           {
             scrollTop: target.offset().top,
           },
-          1000
+          1000,
         ); // The number here represents the speed of the scroll in milliseconds
 
         return false;
@@ -730,7 +753,11 @@ $(document).ready(function () {
       current = 0;
     } //end block
 
-    sync2.find(".owl-item").removeClass("current").eq(current).addClass("current");
+    sync2
+      .find(".owl-item")
+      .removeClass("current")
+      .eq(current)
+      .addClass("current");
     var onscreen = sync2.find(".owl-item.active").length - 1;
     var start = sync2.find(".owl-item.active").first().index();
     var end = sync2.find(".owl-item.active").last().index();
@@ -808,10 +835,18 @@ $(document).ready(() => {
     const target = $(event.currentTarget);
     const id = target.attr("data-sector");
     const parent = target.parent().parent();
-    parent.find(".product-card-slideshow__image_active").removeClass("product-card-slideshow__image_active");
-    parent.find(".product-card-slideshow__dot_active").removeClass("product-card-slideshow__dot_active");
-    parent.find(`[data-sector-image="${id}"]`).addClass("product-card-slideshow__image_active");
-    parent.find(`[data-sector-dot="${id}"]`).addClass("product-card-slideshow__dot_active");
+    parent
+      .find(".product-card-slideshow__image_active")
+      .removeClass("product-card-slideshow__image_active");
+    parent
+      .find(".product-card-slideshow__dot_active")
+      .removeClass("product-card-slideshow__dot_active");
+    parent
+      .find(`[data-sector-image="${id}"]`)
+      .addClass("product-card-slideshow__image_active");
+    parent
+      .find(`[data-sector-dot="${id}"]`)
+      .addClass("product-card-slideshow__dot_active");
   });
 
   $(".product-card-slideshow__sectors").on("touchstart", (event) => {
@@ -826,33 +861,63 @@ $(document).ready(() => {
     const length = parent.find(".product-card-slideshow__image").length;
 
     if (touchendX < touchstartX) {
-      parent.find(".product-card-slideshow__image_active").removeClass("product-card-slideshow__image_active");
-      parent.find(".product-card-slideshow__dot_active").removeClass("product-card-slideshow__dot_active");
+      parent
+        .find(".product-card-slideshow__image_active")
+        .removeClass("product-card-slideshow__image_active");
+      parent
+        .find(".product-card-slideshow__dot_active")
+        .removeClass("product-card-slideshow__dot_active");
       if (id >= length) {
-        parent.find(`[data-sector-image]:nth-child(1)`).addClass("product-card-slideshow__image_active");
-        parent.find(`[data-sector-dot]:nth-child(1)`).addClass("product-card-slideshow__dot_active");
+        parent
+          .find(`[data-sector-image]:nth-child(1)`)
+          .addClass("product-card-slideshow__image_active");
+        parent
+          .find(`[data-sector-dot]:nth-child(1)`)
+          .addClass("product-card-slideshow__dot_active");
         return;
       }
-      parent.find(`[data-sector-image="${id}"]`).next().addClass("product-card-slideshow__image_active");
-      parent.find(`[data-sector-dot="${id}"]`).next().addClass("product-card-slideshow__dot_active");
+      parent
+        .find(`[data-sector-image="${id}"]`)
+        .next()
+        .addClass("product-card-slideshow__image_active");
+      parent
+        .find(`[data-sector-dot="${id}"]`)
+        .next()
+        .addClass("product-card-slideshow__dot_active");
     }
     if (touchendX > touchstartX) {
-      parent.find(".product-card-slideshow__image_active").removeClass("product-card-slideshow__image_active");
-      parent.find(".product-card-slideshow__dot_active").removeClass("product-card-slideshow__dot_active");
+      parent
+        .find(".product-card-slideshow__image_active")
+        .removeClass("product-card-slideshow__image_active");
+      parent
+        .find(".product-card-slideshow__dot_active")
+        .removeClass("product-card-slideshow__dot_active");
       if (id <= 1) {
-        parent.find(`[data-sector-image]:nth-child(${length})`).addClass("product-card-slideshow__image_active");
-        parent.find(`[data-sector-dot]:nth-child(${length})`).addClass("product-card-slideshow__dot_active");
+        parent
+          .find(`[data-sector-image]:nth-child(${length})`)
+          .addClass("product-card-slideshow__image_active");
+        parent
+          .find(`[data-sector-dot]:nth-child(${length})`)
+          .addClass("product-card-slideshow__dot_active");
         return;
       }
-      parent.find(`[data-sector-image="${id}"]`).prev().addClass("product-card-slideshow__image_active");
-      parent.find(`[data-sector-dot="${id}"]`).prev().addClass("product-card-slideshow__dot_active");
+      parent
+        .find(`[data-sector-image="${id}"]`)
+        .prev()
+        .addClass("product-card-slideshow__image_active");
+      parent
+        .find(`[data-sector-dot="${id}"]`)
+        .prev()
+        .addClass("product-card-slideshow__dot_active");
     }
   });
 
-  $(".product-card-slideshow .product-card-slideshow__image:first-child").addClass(
-    "product-card-slideshow__image_active"
-  );
-  $(".product-card-slideshow .product-card-slideshow__dot:first-child").addClass("product-card-slideshow__dot_active");
+  $(
+    ".product-card-slideshow .product-card-slideshow__image:first-child",
+  ).addClass("product-card-slideshow__image_active");
+  $(
+    ".product-card-slideshow .product-card-slideshow__dot:first-child",
+  ).addClass("product-card-slideshow__dot_active");
 });
 
 $(document).ready(function () {
@@ -958,7 +1023,11 @@ function toggle() {
       $(document).on("click touchstart", function (event) {
         var $target = $(event.target);
 
-        if (!$target.closest($content).length && !$target.closest($toggle).length && state) {
+        if (
+          !$target.closest($content).length &&
+          !$target.closest($toggle).length &&
+          state
+        ) {
           state = false;
           check();
         }
@@ -1019,7 +1088,7 @@ function up() {
       {
         scrollTop: 0,
       },
-      500
+      500,
     );
   });
 }
@@ -1264,10 +1333,14 @@ $(() => {
       $(".catalog-content--search-results .product-item").slice(0, 4).show();
       $(".btn-download-7").on("click", function (e) {
         e.preventDefault();
-        $(".catalog-content--search-results .product-item:hidden").slice(0, 2).show();
+        $(".catalog-content--search-results .product-item:hidden")
+          .slice(0, 2)
+          .show();
         goTo(".catalog-content--search-results .product-item:nth-child(4)");
 
-        if ($(".catalog-content--search-results .product-item:hidden").length == 0) {
+        if (
+          $(".catalog-content--search-results .product-item:hidden").length == 0
+        ) {
           $("#load").show();
         }
       });
@@ -1287,7 +1360,9 @@ $(() => {
     $(".city-selection__link").click(function () {
       $(".city-selection__list").toggle(0);
     });
-    var $banners = $(".product-slider__banners.owl-carousel, .new-banners.owl-carousel");
+    var $banners = $(
+      ".product-slider__banners.owl-carousel, .new-banners.owl-carousel",
+    );
     $banners.each(function () {
       console.log($(this));
       var $this = $(this); //
@@ -1385,9 +1460,13 @@ $(() => {
     }
 
     function moveCompareToHeadright() {
-      if (!document.querySelector(".top-header__content-right > .header-compare")) {
+      if (
+        !document.querySelector(".top-header__content-right > .header-compare")
+      ) {
         var compareBlock = document.querySelector(".header-compare");
-        var headrightBlock = document.querySelector(".top-header__content-right");
+        var headrightBlock = document.querySelector(
+          ".top-header__content-right",
+        );
 
         if (headrightBlock && compareBlock) {
           headrightBlock.appendChild(compareBlock);
@@ -1396,9 +1475,13 @@ $(() => {
     }
 
     function moveCartToHeadright() {
-      if (!document.querySelector(".top-header__content-right > .header-cart")) {
+      if (
+        !document.querySelector(".top-header__content-right > .header-cart")
+      ) {
         var cartBlock = document.querySelector(".header-cart");
-        var headrightBlock = document.querySelector(".top-header__content-right");
+        var headrightBlock = document.querySelector(
+          ".top-header__content-right",
+        );
 
         if (headrightBlock && cartBlock) {
           headrightBlock.appendChild(cartBlock);
@@ -1529,24 +1612,24 @@ $(() => {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Проверяем, был ли уже показан модальный
-  if (!localStorage.getItem('cookieModalShown')) {
-    var cookieModal = document.getElementById('cookie-modal');
-      
+  if (!localStorage.getItem("cookieModalShown")) {
+    var cookieModal = document.getElementById("cookie-modal");
+
     // Показываем модальное окно
-    cookieModal.style.display = 'flex';
+    cookieModal.style.display = "flex";
 
     // Находим кнопку внутри модального окна
-    var button = cookieModal.querySelector('button');
+    var button = cookieModal.querySelector("button");
 
     // Обрабатываем клик по кнопке
-    button.addEventListener('click', function() {
+    button.addEventListener("click", function () {
       // Скрываем модальное окно
-      cookieModal.style.display = 'none';
+      cookieModal.style.display = "none";
 
       // Запоминаем, что модальное было показано
-      localStorage.setItem('cookieModalShown', 'true');
+      localStorage.setItem("cookieModalShown", "true");
     });
   }
 });
