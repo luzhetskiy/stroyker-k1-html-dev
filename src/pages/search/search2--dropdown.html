@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/mmenu-js/dist/mmenu.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/nouislider/dist/nouislider.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/font-awesome/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/tippy.js/dist/tippy.css"
+    />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+    <script defer src="@src/app/main.js"></script>
+  </head>
+
+  <body class="inner-page">
+    <div class="page">
+      <header>
+        <%~
+        include("/components/headers/templates/headers-custom/header-v-1-search-results.html")
+        %>
+      </header>
+
+      <main>
+        <%~ include("/components/general/templates/catalog-side.html") %>
+
+        <section class="section">
+          <div class="container">
+            <div class="page-head">
+              <%~ include("/components/general/templates/breadcrumbs.html") %>
+            </div>
+
+            <div class="content-block">
+              <h1>Результаты по запросу <span>анкер</span></h1>
+              <h2 class="h1">Найдено товаров: <span>19</span></h2>
+
+              <div
+                class="d-grid gap-grid grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-5"
+              >
+                <%~
+                include("/components/product-teasers/templates/product-item/product-item__coming.html")
+                %> <%~
+                include("/components/product-teasers/templates/product-item/product-item__coming.html")
+                %> <%~
+                include("/components/product-teasers/templates/product-item/product-item__coming.html")
+                %> <%~
+                include("/components/product-teasers/templates/product-item/product-item__compare-coming.html")
+                %> <%~
+                include("/components/product-teasers/templates/product-item/product-item__compare.html")
+                %>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <h2 class="h1">Найдено страниц: <span>2</span></h2>
+
+            <div class="d-flex flex-column">
+              <%~
+              include("/components/search/templates/result-search_page-onlyheader.html")
+              %> <%~
+              include("/components/search/templates/result-search_page.html") %>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+            <h2 class="h1">Найдено документов: <span>4</span></h2>
+
+            <div class="d-flex flex-column">
+              <%~ include("/components/search/templates/result-search_doc.html")
+              %> <%~
+              include("/components/search/templates/result-search_doc.html") %>
+              <%~ include("/components/search/templates/result-search_doc.html")
+              %> <%~
+              include("/components/search/templates/result-search_doc.html") %>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%~ include("/components/footers/templates/footer.html") %>
+    </div>
+
+    <%~ include("/components/general/templates/svg-pack.html") %> <%~
+    include("/components/modals/templates/callme-modal.html") %>
+  </body>
+</html>
