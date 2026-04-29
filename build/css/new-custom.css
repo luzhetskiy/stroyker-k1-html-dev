@@ -263,7 +263,7 @@
 }
 
 .projects-search-container {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .projects-search {
@@ -331,7 +331,6 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  background: #ffffff;
   border-radius: 4px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -357,14 +356,14 @@
 
 .project-card-badge {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 15px;
+  left: 15px;
   background: #2363d1;
   color: #ffffff;
-  padding: 8px 16px;
+  padding: 8px 10px;
   border-radius: 2px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 400;
   z-index: 2;
 }
 
@@ -372,17 +371,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding-top: 10px;
   gap: 15px;
 }
 
 .project-card-title {
   flex: 1;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
   color: #333333;
   margin: 0;
-  line-height: 1.4;
+  line-height: 130%;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
