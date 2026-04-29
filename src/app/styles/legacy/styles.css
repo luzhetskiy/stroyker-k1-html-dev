@@ -337,8 +337,8 @@ h4 small,
 }
 
 .pagination span.active {
-  background-color: var(--color-button-primary-background);
-  border-color: var(--color-button-primary-border);
+  background-color: var(--color-button-primary-background, #2363d1);
+  border-color: var(--color-button-primary-border, #2363d1);
 }
 
 .pagination span a {

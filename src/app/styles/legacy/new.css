@@ -3401,6 +3401,14 @@ main {
   flex-shrink: 0;
 }
 
+.projects {
+  margin-bottom: 20px;
+}
+
+.projects .catalog__links-block {
+  padding-bottom: 0;
+}
+
 @media (max-width: 768px) {
   .affiliate-network__city-title {
     font-size: 24px;
@@ -3421,5 +3429,18 @@ main {
 
   .partners-cities-wrapper {
     margin-top: 30px;
+  }
+
+  .projects {
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .city-select-box {
+    max-width: none;
+  }
+
+  .projects-search {
+    width: 100%;
   }
 }
