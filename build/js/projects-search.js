@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
   const searchInput = document.getElementById('projects-search-input');
   const searchButton = document.querySelector('.projects-search__button');
-  const portfolioContent = document.querySelector('.portfolio-content');
+  const projectsContent = document.querySelector('.projects-content');
   
-  if (!searchInput || !portfolioContent) {
+  if (!searchInput || !projectsContent) {
     return;
   }
   
-  const projectCards = portfolioContent.querySelectorAll('.project-card');
+  const projectCards = projectsContent.querySelectorAll('.project-card');
   
   function performSearch() {
     const searchTerm = searchInput.value.toLowerCase().trim();
