@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/mmenu-js/dist/mmenu.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/nouislider/dist/nouislider.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/font-awesome/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/tippy.js/dist/tippy.css"
+    />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+    <script defer src="@src/app/main.js"></script>
+  </head>
+
+  <body class="inner-page">
+    <div class="page">
+      <header>
+        <%~
+        include("/components/headers/templates/header-default/header-default.html")
+        %>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="container">
+            <div class="page-head">
+              <%~ include("/components/general/templates/breadcrumbs.html") %>
+            </div>
+
+            <div class="content-block">
+              <h1>Новости и акции</h1>
+
+              <div class="catalog">
+                <div class="catalog-head">
+                  <div
+                    class="catalog__links-block catalog__links-block--portfolio pb-0 mb-0"
+                  >
+                    <div class="catalog__links-item">
+                      <a class="catalog-item__link active" href="#"> Все </a>
+                    </div>
+                    <div class="catalog__links-item">
+                      <a class="catalog-item__link" href="#"> Новости </a>
+                    </div>
+                    <div class="catalog__links-item">
+                      <a class="catalog-item__link" href="#"> Акции </a>
+                    </div>
+                  </div>
+                  <div class="catalog-right">
+                    <div class="view-sorting">
+                      <span class="view-sorting__title">Вид</span>
+                      <button
+                        data-list-view-mode="1"
+                        class="view-sort-item select-product-list-view view-sort-item--1 button1 current"
+                      >
+                        <svg class="icon-svg">
+                          <use xlink:href="#view-sort-1"></use>
+                        </svg>
+                      </button>
+                      <button
+                        data-list-view-mode="2"
+                        class="view-sort-item select-product-list-view view-sort-item--2 button2"
+                      >
+                        <svg class="icon-svg">
+                          <use xlink:href="#view-sort-2"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="d-grid column-gap-md-10 row-gap-md-20 grid-columns-1 grid-columns-sm-1 grid-columns-md-2 grid-columns-lg-3 grid-columns-xl-4"
+              >
+                <%~
+                include("/components/product-teasers/templates/product-article/product-article.html")
+                %> <%~
+                include("/components/product-teasers/templates/product-article/product-article.html")
+                %> <%~
+                include("/components/product-teasers/templates/product-article/product-article.html")
+                %> <%~
+                include("/components/product-teasers/templates/product-article/product-article.html")
+                %> <%~
+                include("/components/product-teasers/templates/product-article/product-article.html")
+                %> <%~
+                include("/components/product-teasers/templates/product-article/product-article.html")
+                %><%~
+                include("/components/product-teasers/templates/product-article/product-article.html")
+                %> <%~
+                include("/components/product-teasers/templates/product-article/product-article.html")
+                %>
+              </div>
+
+              <%~ include("components/general/templates/pagination.html") %>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%~ include("/components/footers/templates/footer.html") %>
+    </div>
+
+    <%~ include("/components/general/templates/svg-pack.html") %> <%~
+    include("/components/modals/templates/callme-modal.html") %>
+  </body>
+</html>

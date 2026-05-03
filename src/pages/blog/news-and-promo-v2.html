@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/mmenu-js/dist/mmenu.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/nouislider/dist/nouislider.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/font-awesome/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/tippy.js/dist/tippy.css"
+    />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+    <script defer src="@src/app/main.js"></script>
+  </head>
+
+  <body class="inner-page">
+    <div class="page">
+      <header>
+        <%~
+        include("/components/headers/templates/header-default/header-default.html")
+        %>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="container">
+            <div class="page-head">
+              <%~ include("/components/general/templates/breadcrumbs.html") %>
+            </div>
+
+            <div class="content-block">
+              <h2 class="h1">Новости</h2>
+
+              <div class="d-grid column-gap-md-10 row-gap-md-20 grid-columns-1">
+                <%~
+                include("/components/product-teasers/templates/product-article/product-article__compact.html")
+                %> <%~
+                include("/components/product-teasers/templates/product-article/product-article__compact.html")
+                %> <%~
+                include("/components/product-teasers/templates/product-article/product-article__compact.html")
+                %>
+              </div>
+
+              <div
+                class="d-flex flex-md-row flex-column mt-md-20 border-top-1 border-color-gray-200 pt-20"
+              >
+                <a href="#" class="st-button st-button_secondary"
+                  >Все новости</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="content-block">
+              <h2 class="h1">Новости</h2>
+
+              <div class="d-grid column-gap-md-10 row-gap-md-20 grid-columns-1">
+                <%~
+                include("/components/product-teasers/templates/product-article/product-article__compact-wide.html")
+                %> <%~
+                include("/components/product-teasers/templates/product-article/product-article__compact.html")
+                %> <%~
+                include("/components/product-teasers/templates/product-article/product-article__compact-wide.html")
+                %>
+              </div>
+
+              <div
+                class="d-flex flex-md-row flex-column mt-md-20 border-top-1 border-color-gray-200 pt-20"
+              >
+                <a href="#" class="st-button st-button_secondary"
+                  >Все новости</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <div class="content-block">
+              <span class="content-title portfolio-set-title h2">Новости</span>
+              <div
+                class="product-slider product-slider--4 product-slider--5 related-products-main"
+              >
+                <div
+                  class="slider-constructor"
+                  data-slides="1"
+                  data-sm-slides="2"
+                  data-md-slides="2"
+                  data-lg-slides="3"
+                  data-test="3"
+                  data-xl-slides="4"
+                >
+                  <%~
+                  include("/components/product-teasers/templates/product-article/product-article.html")
+                  %> <%~
+                  include("/components/product-teasers/templates/product-article/product-article.html")
+                  %> <%~
+                  include("/components/product-teasers/templates/product-article/product-article.html")
+                  %> <%~
+                  include("/components/product-teasers/templates/product-article/product-article.html")
+                  %> <%~
+                  include("/components/product-teasers/templates/product-article/product-article.html")
+                  %>
+                </div>
+              </div>
+
+              <div class="d-flex flex-md-row flex-column pt-20">
+                <a href="#" class="st-button st-button_secondary"
+                  >Все новости</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%~ include("/components/footers/templates/footer.html") %>
+    </div>
+
+    <%~ include("/components/general/templates/svg-pack.html") %> <%~
+    include("/components/modals/templates/callme-modal.html") %>
+  </body>
+</html>
