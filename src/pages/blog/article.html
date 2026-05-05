@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/mmenu-js/dist/mmenu.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/nouislider/dist/nouislider.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/font-awesome/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="@src/../node_modules/tippy.js/dist/tippy.css"
+    />
+    <link rel="stylesheet" href="@src/app/main.sass" />
+    <script defer src="@src/app/main.js"></script>
+  </head>
+
+  <body class="inner-page">
+    <div class="page">
+      <header>
+        <%~
+        include("/components/headers/templates/header-default/header-default.html")
+        %>
+      </header>
+
+      <main>
+        <section class="section">
+          <div class="container">
+            <div class="page-head">
+              <%~ include("/components/general/templates/breadcrumbs.html") %>
+            </div>
+
+            <div class="content-block">
+              <h1>
+                ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай
+              </h1>
+
+              <div class="blog-container">
+                <div class="blog-content">
+                  <time datetime="2026-01-27">27 января</time>
+                  <p>
+                    В зимнем сезоне 2026 курорт Роза Хутор совместно с ГЛК «СОК»
+                    (г. Самара) открывает федеральную инициативу для детей от 7
+                    до 14 лет — рассчитанный на 15 дней катания детский
+                    абонемент «Горный кристалл» с доступной фиксированной
+                    стоимостью. Десять дней можно будет кататься на курорте ГЛК
+                    «СОК» (г. Самара). И еще пять дней на горном курорте Роза
+                    Хутор. Абонемент действует весь сезон. 
+                  </p>
+                  <p>
+                    Включено: ✅ 10 дней катания на ГЛК «СОК» (г. Самара) ✅ 5
+                    дней катания на Роза Хутор
+                  </p>
+                  <p>
+                    Приобретайте абонемент: ➡️ в кассах ГЛК «СОК» (г. Самара) ➡️
+                    в кассах курорта Роза Хутор
+                  </p>
+                  <p>Стоимость: 15.000 рублей</p>
+                  <p>
+                    Как этот работает и где приобрести абонемент — подробнее на
+                    сайте glksok.ru
+                  </p>
+                  <img
+                    src="@images/blog.jpg"
+                    loading="lazy"
+                    width="920"
+                    height="410"
+                    alt="Картинка"
+                  />
+                </div>
+                <aside class="blog-aside">
+                  <div class="blog-aside-content">
+                    <h3>Последние новости</h3>
+
+                    <div class="d-flex flex-column gap-10">
+                      <article class="blog-aside-article">
+                        <a href="" class="blog-aside-article-stretched"></a>
+                        <time
+                          class="blog-aside-article-time"
+                          datetime="2026-01-27"
+                          >27 января</time
+                        >
+                        <h4 class="blog-aside-article-title">
+                          ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй,
+                          побеждай
+                        </h4>
+                      </article>
+                      <article class="blog-aside-article">
+                        <a href="" class="blog-aside-article-stretched"></a>
+                        <time
+                          class="blog-aside-article-time"
+                          datetime="2026-01-27"
+                          >14 января</time
+                        >
+                        <h4 class="blog-aside-article-title">
+                          Оснежение сноупарка 15-16 января
+                        </h4>
+                      </article>
+                      <article class="blog-aside-article">
+                        <a href="" class="blog-aside-article-stretched"></a>
+                        <time
+                          class="blog-aside-article-time"
+                          datetime="2026-01-27"
+                          >14 января</time
+                        >
+                        <h4 class="blog-aside-article-title">
+                          Бесплатный автобус начал работу 13 января 2026 года
+                        </h4>
+                      </article>
+                      <article class="blog-aside-article">
+                        <a href="" class="blog-aside-article-stretched"></a>
+                        <time
+                          class="blog-aside-article-time"
+                          datetime="2026-01-27"
+                          >05 января</time
+                        >
+                        <h4 class="blog-aside-article-title">
+                          Контрольные тренировки любителей 2025-2026
+                        </h4>
+                      </article>
+                    </div>
+                  </div>
+
+                  <a href="#" class="st-button st-button_secondary"
+                    >Все новости</a
+                  >
+                </aside>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <%~ include("/components/footers/templates/footer.html") %>
+    </div>
+
+    <%~ include("/components/general/templates/svg-pack.html") %> <%~
+    include("/components/modals/templates/callme-modal.html") %>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+.blog 
+
+	&-container
+		display: flex
+		flex-direction: column
+		gap: 20px
+
+		@media (min-width: 767px)
+			flex-direction: row
+			gap: 40px
+
+	&-content
+
+		time
+			display: block
+			font-size: 14px
+			font-weight: 400
+			color: var(--gray-color-540)
+			margin-bottom: 10px
+
+		img
+			max-width: 100%
+			height: auto
+			object-fit: contain
+
+	&-aside
+		flex-shrink: 0
+		width: 100%
+		display: flex
+		flex-direction: column
+		align-self: start
+		gap: 10px
+
+		@media (min-width: 767px)
+			width: 220px
+
+		&-content
+			background-color: #F8F9FA
+			border: 1px solid var(--gray-color-200)
+			border-radius: 2px
+			padding: 16px
+
+		&-article
+			display: flex
+			flex-direction: column
+			position: relative
+
+			&-time
+				display: block
+				font-size: 12px
+				font-weight: 400
+				line-height: 1.5
+				color: var(--gray-color-540)
+				margin-bottom: 5px
+
+			&-title
+				font-size: 14px
+				font-weight: 400
+				line-height: 1.4
+				margin: 0
+
+				@media (hover: hover)
+					transition-property: color
+					transition-duration: 200ms
+					transition-timing-function: ease-in-out
+
+			&-stretched
+				display: block
+				background-color: transparent
+				border: none
+				outline: none
+				position: absolute
+				inset: 0
+				z-index: 1
+
+				@media (hover: hover)
+
+					&:is(:hover, :focus-visible)
+						
+						~ .blog-aside-article-title
+							color: var(--accent-color-400)
+
+			+ .blog-aside-article
+				border-top: 1px solid var(--gray-color-200)
+				padding-top: 10px
