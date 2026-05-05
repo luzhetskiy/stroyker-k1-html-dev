@@ -292,14 +292,113 @@
       <main>
         <section class="section">
           <div class="container">
+            <div class="page-head">
+              <div class="breadcrumbs breadcrumbs--lk" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+  <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <a itemprop="item" title="Главная" href="/">
+      <svg class="breadcrumbs__sep">
+        <use xlink:href="#tab-arrow"></use>
+      </svg>
+      Главная
+      <meta itemprop="name" content="Главная">
+    </a>
+    <meta itemprop="position" content="1">
+  </span>
+
+  <svg class="breadcrumbs__sep">
+    <use xlink:href="#tab-arrow"></use>
+  </svg>
+
+  <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <a itemprop="item" title="Проекты домов" href="/catalog/">
+      Проекты домов
+      <meta itemprop="name" content="Проекты домов">
+    </a>
+    <meta itemprop="position" content="2">
+  </span>
+
+  <svg class="breadcrumbs__sep">
+    <use xlink:href="#tab-arrow"></use>
+  </svg>
+
+  <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+    <a itemprop="item" title="Проекты домов до 150м2" href="/catalog/kategoriya-tovarov-1/">
+      Проекты домов до 150м2
+      <meta itemprop="name" content="Проекты домов до 150м2">
+    </a>
+    <meta itemprop="position" content="3">
+  </span>
+
+  <svg class="breadcrumbs__sep">
+    <use xlink:href="#tab-arrow"></use>
+  </svg>
+
+  Одноэтажные дома до 150м2
+</div>            </div>
+
             <div class="content-block">
               <h1>Статьи</h1>
+
+              <div class="d-flex flex-column gap-10 mb-20">
+                <div class="search-default">
+                  <div class="search-default-wrapper">
+                    <input
+                      name="q"
+                      type="text"
+                      autocomplete="off"
+                      class="search-default-input"
+                      value=""
+                      placeholder="Поиск..."
+                    />
+                    <button type="button" class="search-default-btn">
+                      <svg class="icon-svg">
+                        <use xlink:href="#search-icon"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-20">
+                <h2>
+                  Результаты по запросу: <span class="primary">бесплатный</span>
+                </h2>
+                <h2>Найдено статей: 3</h2>
+              </div>
 
               <div class="d-grid column-gap-md-10 row-gap-md-20 grid-columns-1">
                 <div
   class="product-item product-item--article product-item--article-compact product-item--wide"
 >
   <a href="/catalog/product/tovar-1/" class="product-item__link">
+    <div class="product-item__image">
+      <div class="product-item__image-inner">
+        <img src="../images/banner-content-1.png" alt="Товар 1" />
+      </div>
+    </div>
+    <span class="product-item__content-top">
+      <span class="product-item__head">
+        <span class="product-item__time">27 января</span>
+        <span class="product-item__tag"> / Новость</span>
+      </span>
+
+      <span class="product-item__name"
+        >ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай</span
+      >
+      <span class="product-item__text"
+        >ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай</span
+      >
+    </span>
+  </a>
+</div>
+ <div
+  class="product-item product-item--article product-item--article-compact product-item--wide"
+>
+  <a href="/catalog/product/tovar-1/" class="product-item__link">
+    <div class="product-item__image">
+      <div class="product-item__image-inner">
+        <img src="../images/banner-content-1.png" alt="Товар 1" />
+      </div>
+    </div>
     <span class="product-item__content-top">
       <span class="product-item__head">
         <span class="product-item__time">27 января</span>
@@ -343,25 +442,6 @@
   class="product-item product-item--article product-item--article-compact product-item--wide"
 >
   <a href="/catalog/product/tovar-1/" class="product-item__link">
-    <span class="product-item__content-top">
-      <span class="product-item__head">
-        <span class="product-item__time">27 января</span>
-        <span class="product-item__tag"> / Новость</span>
-      </span>
-
-      <span class="product-item__name"
-        >ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай</span
-      >
-      <span class="product-item__text"
-        >ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай</span
-      >
-    </span>
-  </a>
-</div>
- <div
-  class="product-item product-item--article product-item--article-compact product-item--wide"
->
-  <a href="/catalog/product/tovar-1/" class="product-item__link">
     <div class="product-item__image">
       <div class="product-item__image-inner">
         <img src="../images/banner-content-1.png" alt="Товар 1" />
@@ -384,145 +464,29 @@
 </div>
               </div>
 
-              <div class="d-flex flex-md-row flex-column mt-md-20 border-top-1 border-color-gray-200 pt-20">
-                <a href="#" class="st-button st-button_secondary">Все новости</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="container">
-            <div class="content-block">
-              <span class="content-title portfolio-set-title h2">Статьи</span>
-              <div
-                class="product-slider product-slider--4 product-slider--5 related-products-main"
-              >
-                <div
-                  class="slider-constructor"
-                  data-slides="1"
-                  data-sm-slides="2"
-                  data-md-slides="2"
-                  data-lg-slides="3"
-                  data-test="3"
-                  data-xl-slides="4"
-                >
-                  <div class="product-item product-item--article">
-  <a href="/catalog/product/tovar-1/" class="product-item__link">
-    <div class="product-item__image">
-      <div class="product-item__image-inner">
-        <img src="../images/banner-content-1.png" alt="Товар 1" />
-      </div>
-    </div>
-    <span class="product-item__content-top">
-      <span class="product-item__head">
-        <span class="product-item__time">27 января</span>
-        <span class="product-item__tag"> / Новость</span>
-      </span>
-
-      <span class="product-item__name"
-        >ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай</span
-      >
-      <span class="product-item__text"
-        >ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай</span
-      >
-    </span>
-  </a>
-</div>
- <div class="product-item product-item--article">
-  <a href="/catalog/product/tovar-1/" class="product-item__link">
-    <div class="product-item__image">
-      <div class="product-item__image-inner">
-        <img src="../images/banner-content-1.png" alt="Товар 1" />
-      </div>
-    </div>
-    <span class="product-item__content-top">
-      <span class="product-item__head">
-        <span class="product-item__time">27 января</span>
-        <span class="product-item__tag"> / Новость</span>
-      </span>
-
-      <span class="product-item__name"
-        >ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай</span
-      >
-      <span class="product-item__text"
-        >ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай</span
-      >
-    </span>
-  </a>
-</div>
- <div class="product-item product-item--article">
-  <a href="/catalog/product/tovar-1/" class="product-item__link">
-    <div class="product-item__image">
-      <div class="product-item__image-inner">
-        <img src="../images/banner-content-1.png" alt="Товар 1" />
-      </div>
-    </div>
-    <span class="product-item__content-top">
-      <span class="product-item__head">
-        <span class="product-item__time">27 января</span>
-        <span class="product-item__tag"> / Новость</span>
-      </span>
-
-      <span class="product-item__name"
-        >ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай</span
-      >
-      <span class="product-item__text"
-        >ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай</span
-      >
-    </span>
-  </a>
-</div>
- <div class="product-item product-item--article">
-  <a href="/catalog/product/tovar-1/" class="product-item__link">
-    <div class="product-item__image">
-      <div class="product-item__image-inner">
-        <img src="../images/banner-content-1.png" alt="Товар 1" />
-      </div>
-    </div>
-    <span class="product-item__content-top">
-      <span class="product-item__head">
-        <span class="product-item__time">27 января</span>
-        <span class="product-item__tag"> / Новость</span>
-      </span>
-
-      <span class="product-item__name"
-        >ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай</span
-      >
-      <span class="product-item__text"
-        >ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай</span
-      >
-    </span>
-  </a>
-</div>
- <div class="product-item product-item--article">
-  <a href="/catalog/product/tovar-1/" class="product-item__link">
-    <div class="product-item__image">
-      <div class="product-item__image-inner">
-        <img src="../images/banner-content-1.png" alt="Товар 1" />
-      </div>
-    </div>
-    <span class="product-item__content-top">
-      <span class="product-item__head">
-        <span class="product-item__time">27 января</span>
-        <span class="product-item__tag"> / Новость</span>
-      </span>
-
-      <span class="product-item__name"
-        >ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай</span
-      >
-      <span class="product-item__text"
-        >ГЛК СОК и РОЗА ХУТОР: Горный кристалл: расти, сияй, побеждай</span
-      >
-    </span>
-  </a>
-</div>
-                </div>
-              </div>
-
-              <div class="d-flex d-md-none flex-column pt-20">
-                <a href="#" class="st-button st-button_secondary">Все статьи</a>
-              </div>
+              <div class="mt-10">
+                <div class="pagination">
+	<span class="active">
+		<a href="#">1</a>
+	</span>
+	<span>
+		<a href="#">
+			2
+		</a>
+	</span>
+	<span>
+		<a href="#">
+			3
+		</a>
+	</span>
+	<span class="dot">...</span>
+	<span>
+		<a href="#">
+			7
+		</a>
+	</span>
+	<a class="next" href="#"></a>
+</div>              </div>
             </div>
           </div>
         </section>
