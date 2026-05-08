@@ -915,6 +915,7 @@
                                     <input
                                       data-input="payment"
                                       data-radio="payment-online"
+                                      data-radio-group="payment"
                                       class="cart-radio mt-3"
                                       name="payment"
                                       id="payment-1"
@@ -931,6 +932,7 @@
                                     <input
                                       data-input="payment"
                                       data-radio="payment-card"
+                                      data-radio-group="payment"
                                       class="cart-radio mt-3"
                                       name="payment"
                                       id="payment-2"
@@ -947,6 +949,7 @@
                                     <input
                                       data-input="payment"
                                       data-radio="payment-cash"
+                                      data-radio-group="payment"
                                       class="cart-radio mt-3"
                                       name="payment"
                                       id="payment-3"
@@ -963,6 +966,7 @@
                                     <input
                                       data-input="payment"
                                       data-radio="payment-invoice"
+                                      data-radio-group="payment"
                                       class="cart-radio mt-3"
                                       name="payment"
                                       id="payment-4"
@@ -976,9 +980,10 @@
                                     </label>
                                   </div>
                                 </div>
-                                <div data-radio-content="*" class="d-none d-flex flex-column gap-15">
+                                <div data-radio-content="*" data-radio-group="payment" class="d-none d-flex flex-column gap-15">
                                   <div
                                     data-radio-content="payment-online"
+                                    data-radio-group="payment"
                                     class="d-none d-flex flex-column gap-15 pb-md-30 border-bottom-md-1 border-color-md-gray-200 border-0"
                                   >
                                     <p class="text size-16">После оформления заказа вы будете перенаправлены на страницу оплаты</p>
@@ -997,18 +1002,21 @@
                                   </div>
                                   <div
                                     data-radio-content="payment-card"
+                                    data-radio-group="payment"
                                     class="d-none d-flex flex-column gap-15 pb-md-30 border-bottom-md-1 border-color-md-gray-200 border-0"
                                   >
                                     <p class="text size-16">Оплата картой при получении заказа</p>
                                   </div>
                                   <div
                                     data-radio-content="payment-cash"
+                                    data-radio-group="payment"
                                     class="d-none d-flex flex-column gap-15 pb-md-30 border-bottom-md-1 border-color-md-gray-200 border-0"
                                   >
                                     <p class="text size-16">Оплата наличными при получении заказа</p>
                                   </div>
                                   <div
                                     data-radio-content="payment-invoice"
+                                    data-radio-group="payment"
                                     class="d-none d-flex flex-column gap-15 pb-md-30 border-bottom-md-1 border-color-md-gray-200 border-0"
                                   >
                                     <h2 class="sub-title size-18">Реквизиты для выставления счёта</h2>
