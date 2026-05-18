@@ -2913,6 +2913,11 @@ main {
 
 .partner-search-wrapper {
   margin: 20px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.partner-search-wrapper .form-control {
   max-width: 283px;
 }
 
@@ -3033,6 +3038,13 @@ main {
 .city-select-wrapper {
   width: 100%;
   position: relative;
+  max-width: 283px;
+}
+
+#partner-search-results-inline {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .city-select-box {
