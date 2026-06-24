@@ -50,3 +50,9 @@
 .conditional-section.mb-0 {
   margin-top: 0 !important;
 }
+
+@media (max-width: 767px) {
+  .partner-search-wrapper {
+    flex-direction: column;
+  }
+}
