@@ -461,6 +461,12 @@ $(document).ready(function () {
   $(".share-btn").click(function () {
     $(".share-block__show").toggle(0);
   });
+  $(document).on("click.shareOutside", function (e) {
+    var $target = $(e.target);
+    if ($target.closest(".share-btn").length) return;
+    if ($target.closest(".share-block__show").length) return;
+    $(".share-block__show:visible").hide(0);
+  });
   $(".close-panel").click(function () {
     $(".bottom-panel").toggle(0);
   });
