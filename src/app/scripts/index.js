@@ -1198,6 +1198,18 @@ $(document).ready(() => {
       return;
     }
   });
+
+  // catalog close on outside click
+  document.addEventListener("click", function (e) {
+    var openCatalogBox = document.querySelector(".catalog-box.show");
+    if (!openCatalogBox) return;
+
+    // клик внутри меню или по кнопке-переключателе — не трогаем
+    if (e.target.closest(".catalog-box") || e.target.closest(".catalog-btn")) return;
+
+    openCatalogBox.classList.remove("show");
+    if (catalogBtn) catalogBtn.classList.remove("toggled");
+  });
 });
 
 // scripts-desktop.js
