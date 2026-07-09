@@ -1129,15 +1129,29 @@ $(document).ready(() => {
   });
 
   // catalog close on outside click
-  document.addEventListener("click", function (e) {
-    var openCatalogBox = document.querySelector(".catalog-box.show");
-    if (!openCatalogBox) return;
+  $(document).on("click.catalogOutside", function (e) {
+    var $target = $(e.target);
 
-    // клик внутри меню или по кнопке-переключателе — не трогаем
-    if (e.target.closest(".catalog-box") || e.target.closest(".catalog-btn")) return;
+    // Шаблон A: .catalog-box.show + .catalog-btn
+    var $boxA = $(".catalog-box.show");
+    if (
+      $boxA.length &&
+      !$target.closest(".catalog-box").length &&
+      !$target.closest(".catalog-btn").length
+    ) {
+      $boxA.removeClass("show");
+      $(".catalog-btn").removeClass("toggled");
+    }
 
-    openCatalogBox.classList.remove("show");
-    if (catalogBtn) catalogBtn.classList.remove("toggled");
+    // Шаблон B: .catalog-header-content (inline display) + .catalog-inner-btn
+    if (
+      $(".catalog-inner-btn.open").length &&
+      !$target.closest(".catalog-header-content").length &&
+      !$target.closest(".catalog-inner-btn").length
+    ) {
+      $(".catalog-header-content").hide(0);
+      $(".catalog-inner-btn").removeClass("open");
+    }
   });
 });
 
