@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -280,7 +280,7 @@
           <div class="catalog-side mobile-show">
             <span class="catalog-side__title">
               <span class="icon">
-                <svg width="16" height="14" viewbox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 0V2H16V0H0ZM0 8H16V6H0V8ZM0 14H16V12H0V14Z" fill="currentColor"></path>
                 </svg>
               </span>
@@ -349,9 +349,7 @@
           </div>
 
           <div class="content-block">
-            <h1>
-              Одноэтажные дома до 150м2
-            </h1>
+            <h1>Одноэтажные дома до 150м2</h1>
 
             <div class="catalog">
               <div class="catalog-head">
@@ -413,7 +411,6 @@
                   <div class="view-sorting">
                     <span class="view-sorting__title">Вид</span>
                     <button
-                      type="button"
                       data-list-view-mode="1"
                       class="view-sort-item select-product-list-view view-sort-item--1 button1 current"
                     >
@@ -422,7 +419,6 @@
                       </svg>
                     </button>
                     <button
-                      type="button"
                       data-list-view-mode="2"
                       class="view-sort-item select-product-list-view view-sort-item--2 button2"
                     >
@@ -430,7 +426,7 @@
                         <use xlink:href="#view-sort-2"></use>
                       </svg>
                     </button>
-                    <button type="button" data-list-view-mode="3" class="view-sort-item view-sort-item--3 button3">
+                    <button data-list-view-mode="3" class="view-sort-item view-sort-item--3 button3">
                       <svg class="icon-svg">
                         <use xlink:href="#view-sort-3"></use>
                       </svg>
@@ -438,14 +434,14 @@
                   </div>
                 </div>
 
-                <a class="filter-btn" href="javascript:void(0);"></a>
+                <a class="filter-btn"></a>
               </div>
 
               <div class="catalog-container">
                 <div class="catalog-filter sidebar-position-left">
                   <div class="mobile-menu-head">
                     <div class="mobile-menu-head__title">Фильтры</div>
-                    <a class="mobile-menu-head__close-btn close-btn-2" href="javascript:void(0);">
+                    <a class="mobile-menu-head__close-btn close-btn-2">
                       <svg class="icon">
                         <use xlink:href="#delete"></use>
                       </svg>
@@ -457,6 +453,7 @@
                     method="get"
                     class="catalog-filter-body"
                     autocomplete="off"
+                    data-gtm-form-interact-id="0"
                   >
                     <ul class="catalog-filter-accordion">
                       <li>
@@ -645,6 +642,7 @@
                               data-current-value="900"
                               data-max-value="9200"
                               id="id_price_range_1"
+                              data-gtm-form-interact-field-id="0"
                             />
                           </div>
                         </div>
@@ -652,7 +650,7 @@
                     </div>
 
                     <div class="catalog-filter__btns">
-                      <button type="submit" class="btn btn--main-min button-theme button-theme_primary">Применить</button>
+                      <button class="btn btn--main-min button-theme button-theme_primary">Применить</button>
                       <a
                         href="/catalog/category/elektrosvarnye-fitingi/otvod-elektrosvarnoj/"
                         class="btn-border btn-link"
@@ -680,7 +678,7 @@
                       <a href="/catalog/product/tovar-1/" class="product-item__link">
                         <div class="product-item__image">
                           <div class="product-item__image-inner">
-                            <img src="../images/banner-content-1.png" alt="" />
+                            <img src="../images/banner-content-1.png" alt="Товар 1" />
                           </div>
 
                           <span class="product-item__flag-content"> </span>
@@ -734,7 +732,7 @@
           <div class="question-main" id="question-main">
             <div class="question-form">
               <span class="content-title center h2">Остались вопросы?</span>
-              <form action="/crm/message/" method="post" id="feedback-message-request-form">
+              <form action="/crm/message/" method="post" id="feedback-message-request-form" onsubmit="">
                 <input
                   type="hidden"
                   name="csrfmiddlewaretoken"
@@ -742,7 +740,7 @@
                 />
                 <div class="question-form__column">
                   <div class="form-group">
-                    <input type="text" id="name" class="form-control" name="name" autocomplete="off" required="" />
+                    <input type="text" class="form-control" name="name" autocomplete="off" required="" />
                     <label for="name" class="label-name">
                       <span class="content-name"> Имя* </span>
                     </label>
@@ -750,7 +748,6 @@
                   <div class="form-group">
                     <input
                       type="phone"
-                      id="phone"
                       value="79277767575"
                       class="form-control phone"
                       name="phone"
@@ -765,22 +762,21 @@
                   <div class="form-group">
                     <input
                       type="mail"
-                      id="email"
                       value="info@nastroyker.ru"
                       class="form-control"
                       name="email"
                       autocomplete="off"
                       required=""
                     />
-                    <label for="phone" class="label-name">
+                    <label for="text" class="label-name">
                       <span class="content-name"> e-mail </span>
                     </label>
                   </div>
                 </div>
                 <div class="question-form__column">
                   <div class="form-group">
-                    <textarea id="message" class="form-control" name="message" autocomplete="off" required=""></textarea>
-                    <label for="phone" class="label-name">
+                    <textarea class="form-control" name="message" autocomplete="off" required=""></textarea>
+                    <label for="message" class="label-name">
                       <span class="content-name"> Комментарий </span>
                     </label>
                   </div>
@@ -810,7 +806,7 @@
             </a>
             <div class="mobile-show">
               <div class="developer-link">
-                <a href="https://nastroyker.ru/" target="_blank" rel="noopener noreferrer">Разработка сайта: NASTROYKER</a>
+                <a href="https://nastroyker.ru/" target="_blank">Разработка сайта: NASTROYKER</a>
               </div>
             </div>
           </div>
@@ -869,6 +865,7 @@
               method="POST"
               action="/subscription/new/"
               class="footer-subscribe"
+              onsubmit=""
             >
               <input
                 type="hidden"
@@ -881,7 +878,7 @@
             </form>
 
             <div class="developer-link">
-              <a href="https://nastroyker.ru/" target="_blank" rel="noopener noreferrer">Разработка сайта: NASTROYKER</a>
+              <a href="https://nastroyker.ru/" target="_blank">Разработка сайта: NASTROYKER</a>
             </div>
           </div>
         </div>
@@ -894,25 +891,25 @@
           <div class="footer-social">
             <span>
               <a href="#">
-                <img src="../images/instagram-icon.svg" alt="" />
+                <img src="../images/instagram-icon.svg" alt="Мы в Instagram" />
               </a>
             </span>
 
             <span>
               <a href="#">
-                <img src="../images/twitter-icon.svg" alt="" />
+                <img src="../images/twitter-icon.svg" alt="Мы в Twitter" />
               </a>
             </span>
 
             <span>
               <a href="#">
-                <img src="../images/youtube-icon.svg" alt="" />
+                <img src="../images/youtube-icon.svg" alt="Мы на YouTube" />
               </a>
             </span>
 
             <span>
               <a href="#">
-                <img src="../images/vk-icon.svg" alt="" />
+                <img src="../images/vk-icon.svg" alt="Наша страница ВКонтакте" />
               </a>
             </span>
           </div>
@@ -922,7 +919,7 @@
 
     <!--кнопка вверх-->
     <a class="js-up fixed-btn" href="javascript:void(0);">
-      <svg class="icon" fill="currentColor" viewbox="0 0 22.1 19.5" xmlns="http://www.w3.org/2000/svg">
+      <svg class="icon" fill="currentColor" viewBox="0 0 22.1 19.5" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M12.1,0.4c-0.6-0.6-1.5-0.6-2.1,0L0.4,10c-0.6,0.6-0.6,1.5,0,2.1c0.6,0.6,1.5,0.6,2.1,0L11,3.6l8.5,8.5c0.6,0.6,1.5,0.6,2.1,0s0.6-1.5,0-2.1L12.1,0.4z M12.5,19.5v-18h-3v18H12.5z"
         ></path>
@@ -932,7 +929,7 @@
 
     <div class="safety-message-fixed toggle-section">
       <a class="fixed-btn toggle-section__trigger safety-message-fixed__btn" href="javascript:void(0);">
-        <svg class="icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 29.2 32.6">
+        <svg class="icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29.2 32.6">
           <path
             d="M13.2,9.6c5.6-0.6,11.2,2.8,12.7,8.3c0.6,2.3,0.6,4.2-1,5.3c-1.9,1.3-4,0.5-4.9-0.9c-0.8-1.3-0.1-2.3-1.2-4.1          c-2.5-3.8-8.7-2.6-9.3,1.9c-0.3,1.9,0.4,4.3,1.1,5.8c1.5,3.1,4.2,5.4,7.5,6.5c0.4,0.1,1,0.4,1.4,0.2c0.4-0.2,0.6-0.7,0.4-1.1          c-0.2-0.5-1.5-0.6-2.4-1.1c-3-1.3-5.5-3.9-6.3-7.8c-0.2-1-0.3-2.3,0.1-3.2c1.2-2.7,5.4-2.6,6.4,0.2c0.4,1.1-0.1,3.2,2.2,4.9          c1.5,1.1,3.7,1.3,5.5,0.3c3.7-2.1,2.7-6.9,1.1-10C25,12,22.3,9.7,18.7,8.5c-4-1.3-8.4-0.5-11.4,1.4c-2.6,1.6-5.1,4.2-5.9,8.1          c-0.5,2.6-0.1,6.8,1,9.2c0.4,0.9,1.9,0.6,1.4-0.9C2.3,22.4,2.3,18,4.4,14.8C6,12.3,9,10.1,13.2,9.6z"
           ></path>
@@ -984,7 +981,7 @@
           clip-rule="evenodd"
         ></path>
       </symbol>
-      <symbol viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" id="compare-icon">
+      <symbol viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" id="compare-icon">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -992,38 +989,38 @@
           fill="currentColor"
         ></path>
       </symbol>
-      <symbol viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" id="shopping-cart">
+      <symbol viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" id="shopping-cart">
         <path
           d="M9.332 25.333a1.667 1.667 0 1 0 0 3.334 1.667 1.667 0 0 0 0-3.334zm14.667 0a1.667 1.667 0 1 0 0 3.335 1.667 1.667 0 0 0 0-3.335zM25.332 24v-2.667h-14.32l-.427-1.733L28 16.48V6.667H7.372L6.665 4H1.332v2.667h3.293L8.932 24h16.4z"
           fill="currentColor"
         ></path>
       </symbol>
-      <symbol viewbox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" id="compare-icon-2">
+      <symbol viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" id="compare-icon-2">
         <path
           d="M17 8.237h-3v8.002h3V8.237zM3 4.236H0v12.003h3V4.236zm7-4.002H7V16.24h3V.234z"
           fill="currentColor"
         ></path>
       </symbol>
-      <symbol viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" id="user-icon">
+      <symbol viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" id="user-icon">
         <path
           d="M15.999 13.335a5.333 5.333 0 1 0 0-10.667 5.333 5.333 0 0 0 0 10.667zm10.28 8.266a14.56 14.56 0 0 0-20.56 0l-.387.4v6h21.333v-6l-.386-.4z"
           fill="currentColor"
         ></path>
       </symbol>
-      <symbol viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" id="search-icon">
+      <symbol viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" id="search-icon">
         <path
           stroke="currentColor"
           stroke-width="2"
           d="M17.062 16.768l-5-5M14.165 7.5c-.09 3.592-3.07 6.5-6.651 6.5a6.303 6.303 0 0 1-6.326-6.5C1.278 3.908 4.257 1 7.838 1a6.303 6.303 0 0 1 6.327 6.5z"
         ></path>
       </symbol>
-      <symbol viewbox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" id="1">
+      <symbol viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" id="1">
         <path d="M22 10h-4v10h4V10zM4 5H0v15h4V5zm9-5H9v20h4V0z" fill="currentColor"></path>
       </symbol>
-      <symbol viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" id="product-nav-arrow">
+      <symbol viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" id="product-nav-arrow">
         <path d="M5.092 11l5.093-5.093L5.091.815" stroke="currentColor" stroke-width="2"></path>
       </symbol>
-      <symbol viewbox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg" id="tab-arrow">
+      <symbol viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg" id="tab-arrow">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1031,11 +1028,11 @@
           fill="currentColor"
         ></path>
       </symbol>
-      <symbol viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" id="delete">
+      <symbol viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" id="delete">
         <path fill="currentColor" d="M5.656 18.656L18.384 5.928l1.414 1.415L7.07 20.07z"></path>
         <path fill="currentColor" d="M7.07 5.93l12.728 12.728-1.414 1.414L5.656 7.344z"></path>
       </symbol>
-      <symbol viewbox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg" id="schedule-icon">
+      <symbol viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg" id="schedule-icon">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1043,37 +1040,37 @@
           fill="currentColor"
         ></path>
       </symbol>
-      <symbol viewbox="0 0 16 23" fill="none" xmlns="http://www.w3.org/2000/svg" id="share-icon">
+      <symbol viewBox="0 0 16 23" fill="none" xmlns="http://www.w3.org/2000/svg" id="share-icon">
         <path d="M12.606 2.97L2.203 12.174l10.403 8.403" stroke="currentColor"></path>
         <circle cx="12.906" cy="3.07" r="2.5" fill="currentColor"></circle>
         <circle cx="3.303" cy="11.873" r="2.5" fill="currentColor"></circle>
         <circle cx="12.906" cy="19.875" r="2.5" fill="currentColor"></circle>
       </symbol>
-      <symbol viewbox="0 0 48 31" fill="none" xmlns="http://www.w3.org/2000/svg" id="delivery-white">
+      <symbol viewBox="0 0 48 31" fill="none" xmlns="http://www.w3.org/2000/svg" id="delivery-white">
         <path
           d="M14.77 26.5c0 2.485-1.86 4.5-4.155 4.5-2.294 0-4.153-2.015-4.153-4.5s1.86-4.5 4.153-4.5c2.294 0 4.154 2.015 4.154 4.5zm24.846 0c0 2.485-1.86 4.5-4.154 4.5-2.294 0-4.153-2.015-4.153-4.5s1.86-4.5 4.153-4.5c2.294 0 4.154 2.015 4.154 4.5z"
           fill="currentColor"
         ></path>
         <path d="M6.5 0H35l-1.77 7h7.462L48 13.848 45 26H0L6.5 0z" fill="currentColor"></path>
       </symbol>
-      <symbol viewbox="0 0 47 30" fill="none" xmlns="http://www.w3.org/2000/svg" id="check-btn">
+      <symbol viewBox="0 0 47 30" fill="none" xmlns="http://www.w3.org/2000/svg" id="check-btn">
         <path d="M5.176 9H0l5.824 21H11L5.176 9z" fill="currentColor"></path>
         <path d="M47 0h-8L8 26l3.033 4L47 0z" fill="currentColor"></path>
       </symbol>
-      <symbol viewbox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="view-sort-2">
+      <symbol viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="view-sort-2">
         <path stroke="currentColor" d="M6 7.5h8m-8-6h8m-8 12h8"></path>
         <path fill="currentColor" d="M0 12h3v3H0zm0-6h3v3H0zm0-6h3v3H0z"></path>
       </symbol>
-      <symbol viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="view-sort-1">
+      <symbol viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" id="view-sort-1">
         <path
           fill="currentColor"
           d="M12 12h3v3h-3zm-6 0h3v3H6zm-6 0h3v3H0zm12-6h3v3h-3zM6 6h3v3H6zM0 6h3v3H0zm12-6h3v3h-3zM6 0h3v3H6zM0 0h3v3H0z"
         ></path>
       </symbol>
-      <symbol viewbox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg" id="view-sort-3">
+      <symbol viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg" id="view-sort-3">
         <path stroke="currentColor" d="M0 5.5h13M0 .5h13m-13 10h13"></path>
       </symbol>
-      <symbol viewbox="0 0 29 27" fill="none" xmlns="http://www.w3.org/2000/svg" id="shopping-cart-full">
+      <symbol viewBox="0 0 29 27" fill="none" xmlns="http://www.w3.org/2000/svg" id="shopping-cart-full">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1082,7 +1079,7 @@
         ></path>
         <path d="M9.617 19.5l-2-17-7.5-.5" stroke="currentColor" stroke-width="3"></path>
       </symbol>
-      <symbol viewbox="0 0 23 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" id="review-heart">
+      <symbol viewBox="0 0 23 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg" id="review-heart">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1092,7 +1089,7 @@
           stroke-miterlimit="22.926"
         ></path>
       </symbol>
-      <symbol viewbox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg" id="review-comment">
+      <symbol viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg" id="review-comment">
         <path d="M6 6h11M6 10h7" stroke="#1C52AC" stroke-width="2"></path>
         <path
           fill-rule="evenodd"
@@ -1104,10 +1101,10 @@
         ></path>
       </symbol>
 
-      <symbol viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="comparison-delete">
+      <symbol viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="comparison-delete">
         <path d="M6.344 6.343l11.314 11.314m-11.313 0L17.658 6.343" stroke="currentColor" stroke-width="2"></path>
       </symbol>
-      <symbol viewbox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="delivery-icon">
+      <symbol viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="delivery-icon">
         <path
           fill-rule="evenodd"
           clip-rule="evenodd"
@@ -1115,19 +1112,19 @@
           fill="currentColor"
         ></path>
       </symbol>
-      <symbol viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" id="document-icon">
+      <symbol viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" id="document-icon">
         <path d="M30.82 4H8v40h32V13.18L30.82 4zM26 30H16v-3.8h10V30zm6-8H16v-3.9h16V22z" fill="currentColor"></path>
       </symbol>
-      <symbol viewbox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" id="edit-icon">
+      <symbol viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" id="edit-icon">
         <path
           d="M6 33.518v8.48h8.48l20.34-20.34-8.48-8.48L6 33.518zm34.76-23.52L38 7.238a4.12 4.12 0 0 0-5.78 0l-3.04 3.1 8.48 8.48 3.1-3.08a4.12 4.12 0 0 0 0-5.74z"
           fill="currentColor"
         ></path>
       </symbol>
-      <symbol viewbox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrow-client">
+      <symbol viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg" id="arrow-client">
         <path d="M2.18 19.05L.77 17.64 8.4 10 .77 2.36 2.18.95 11.23 10l-9.05 9.05z" fill="currentColor"></path>
       </symbol>
-      <symbol viewbox="0 0 336 45" fill="none" xmlns="http://www.w3.org/2000/svg" id="dev-logo">
+      <symbol viewBox="0 0 336 45" fill="none" xmlns="http://www.w3.org/2000/svg" id="dev-logo">
         <path
           d="M87.027 34.632c12.732 0 15.011-4.175 15.011-8.231v-.459c0-4.885-3.582-7.032-12.79-7.298l-4.367-.09c-4.56-.103-5.27-.887-5.27-1.864v-.03c0-.947.488-1.791 5.344-1.791h.325c5.241 0 5.76 1.687 5.848 2.576h10.067v-.267c0-3.834-2.74-7.654-14.715-7.654h-2.902c-11.296 0-13.93 3.45-13.93 7.402v.282c0 3.745 2.501 7.032 11.887 7.298l4.486.133c5.077.163 5.7.948 5.7 2.177v.03c0 1.169-.756 2.279-5.922 2.279h-.297c-5.27 0-5.95-2.117-6.054-3.42H69.292v.326c0 3.168 1.392 8.601 14.774 8.601h2.961zm26.04-.458h9.253V16.557h10.452V9.954h-30.156v6.603h10.451v17.617zm31.341-18.328h10.614c2.088 0 2.798.918 2.798 2.058v.03c0 1.17-.74 2.072-2.798 2.072h-10.614v-4.16zm0 10.023h8.853c3.656 0 4.915 1.436 4.915 4.204V32.9c0 .695.074 1.02.296 1.273h9.445v-.163c-.237-.415-.459-1.037-.459-2.739v-3.583c0-3.123-1.984-5.077-4.974-5.758 1.82-.415 4.87-1.88 4.87-5.404v-.355c0-3.938-3.124-6.218-10.185-6.218h-22.014v24.22h9.253v-8.305zm42.339-16.374c-15.692 0-17.676 7.461-17.676 12.021v.977c0 4.515 1.984 12.14 17.676 12.14h1.465c15.663 0 17.647-7.625 17.647-12.14v-.977c0-4.56-2.014-12.02-17.647-12.02h-1.465zm9.534 12.702c0 2.606-1.658 5.892-8.824 5.892-7.15 0-8.823-3.42-8.823-5.966v-.385c0-2.576 1.54-5.729 8.823-5.729 7.166 0 8.824 3.153 8.824 5.73v.458z"
           fill="currentColor"
@@ -1341,7 +1338,7 @@
           </div>
 
           <div class="catalog-filter__btns">
-            <button type="submit" class="btn btn--main-min button-theme button-theme_primary">Применить</button>
+            <button class="btn btn--main-min button-theme button-theme_primary">Применить</button>
             <a href="/catalog/category/elektrosvarnye-fitingi/otvod-elektrosvarnoj/" class="btn-border btn-link"
               >Очистить</a
             >
