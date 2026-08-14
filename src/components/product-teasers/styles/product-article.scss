@@ -132,6 +132,7 @@
 
 				&__head {
 					padding: 0;
+					margin-bottom: 10px;
 				}
 
 				&__name {
@@ -181,6 +182,16 @@
 					padding-top: 20px;
 				}
 			}
+		}
+	}
+}
+
+.product-slider:has(.product-item--article) {
+
+	.slider-constructor {
+
+		.slick-slide {
+			padding: 0 var(--grid-gutter-width);
 		}
 	}
 }
