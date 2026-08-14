@@ -105,3 +105,55 @@
 
 		&-body
 			padding: 12px
+
+
+.search-default
+	flex: 1 1
+	display: flex
+	position: relative
+
+	&-wrapper
+		flex: 1 1
+		display: flex
+		position: relative
+
+	&-input
+		flex: 1 1
+		max-width: 100%
+		min-width: 0
+		font-size: 14px
+		font-weight: 400
+		line-height: normal
+		color: var(--gray-color-700)
+		border: 1px solid var(--gray-color-450)
+		border-radius: 2px
+		padding: 10.5px 20px
+		padding-right: 64px
+
+	&-btn
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		background-color: transparent
+		border: none
+		padding: 4px 20px
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		z-index: 1
+
+		@media (hover: hover)
+			transition-property: color
+			transition-duration: 200ms
+			transition-timing-function: ease-in-out
+
+			&:is(:hover, :focus-visible)
+				color: var(--accent-color-400)
+
+		&:active
+			color: var(--accent-color-400)
+
+		.icon-svg
+			width: 18px
+			height: 18px
