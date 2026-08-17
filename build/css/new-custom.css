@@ -239,6 +239,11 @@
   background-color: transparent;
 }
 
+.product-item--article .product-item__image-inner img[src*="banner-content-1"] {
+  aspect-ratio: 1.84;
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
   .affiliate-network__city-title {
     font-size: 24px;
