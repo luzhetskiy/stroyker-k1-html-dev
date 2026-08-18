@@ -561,3 +561,7 @@
     -webkit-line-clamp: 3;
   }
 }
+
+.content-block .d-grid .product-item--article.product-item--article-compact.product-item--wide {
+  max-width: 75%;
+}
