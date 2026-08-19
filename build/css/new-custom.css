@@ -620,13 +620,20 @@
 }
 
 .d-grid--blog-v2 .product-item--article.product-item--article-compact.product-item--wide {
-  width: 74%;
-  max-width: 74%;
+  width: 100%;
+  max-width: 100%;
   justify-self: start;
   border-top: none !important;
   border-bottom: 1px solid var(--gray-color-200);
   padding-bottom: 35px;
   margin-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+  .d-grid--blog-v2 .product-item--article.product-item--article-compact.product-item--wide {
+    width: 74%;
+    max-width: 74%;
+  }
 }
 
 .d-grid--blog-v2 .product-item--article.product-item--article-compact.product-item--wide + .product-item--article.product-item--article-compact.product-item--wide {
