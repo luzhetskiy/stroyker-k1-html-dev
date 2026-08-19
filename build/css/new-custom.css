@@ -568,14 +568,12 @@
   justify-self: start;
   border-top: none !important;
   border-bottom: 1px solid var(--gray-color-200);
-}
-
-.content-block .d-grid .product-item--article.product-item--article-compact.product-item--wide:last-child {
-  border-bottom: none;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .content-block .d-grid .product-item--article.product-item--article-compact.product-item--wide + .product-item--article.product-item--article-compact.product-item--wide {
-  padding-top: 20px;
+  padding-top: 10px;
   border-top: none !important;
 }
 
