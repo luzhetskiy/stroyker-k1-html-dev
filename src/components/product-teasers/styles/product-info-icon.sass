@@ -1,3 +1,50 @@
+.product-item__icons
+  position: absolute
+  right: 12px
+  bottom: 12px
+  z-index: 5
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  gap: 8px
+
+  .product-info-icon
+    position: static
+
+  .st-button_add-to-favorite
+    position: static
+    width: 26px
+    height: 26px
+    min-width: 26px
+    max-width: 26px
+    padding: 0
+    border: none
+    border-radius: 50%
+    background-color: rgba(255, 255, 255, 0.9)
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-shrink: 0
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+
+    &:hover, &.active
+      background-color: var(--accent-color-500)
+
+    &:hover .st-button__icon_favorite, &.active .st-button__icon_favorite
+      fill: var(--white-color)
+
+    .icon-container
+      display: inline-flex
+      align-items: center
+      justify-content: center
+
+    .st-button__icon_favorite
+      width: 16px
+      height: 16px
+
+    .st-button__text
+      display: none
+
 .product-info-icon
   position: absolute
   right: 12px
