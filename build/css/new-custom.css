@@ -564,4 +564,5 @@
 
 .content-block .d-grid .product-item--article.product-item--article-compact.product-item--wide {
   max-width: 78%;
+  justify-self: start;
 }
