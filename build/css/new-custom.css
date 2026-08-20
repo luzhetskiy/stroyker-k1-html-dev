@@ -273,7 +273,10 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  line-height: 1;
 }
 
 .product-item__icons .st-button_add-to-favorite:hover,
