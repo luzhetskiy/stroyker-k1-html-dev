@@ -139,6 +139,12 @@
 
 @media (max-width: 767px)
   .product-item__link
+    align-items: center !important
+
+  .product-item_wide .product-item__link,
+  .product-item_max-width .product-item__link,
+  .product-item_max-heigth .product-item__link,
+  .product-item_new .product-item__link
     align-items: stretch !important
 
   .product-info-icon__popup
@@ -189,3 +195,12 @@
 
   .st-button_add-to-cart .st-button__text
     display: flex !important
+
+  .product-card-v2 .st-button_add-to-cart
+    width: auto !important
+    min-width: 48px
+    padding: 0 12px
+    justify-content: center
+
+  .product-card-v2 .st-button_add-to-cart .st-button__text
+    display: none !important
