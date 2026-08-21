@@ -713,11 +713,15 @@
     right: 0;
   }
 
-  .shopping-cart-btn .icon {
-    display: flex !important;
-    width: 30px;
-    height: 26px;
-  }
+.shopping-cart-btn .icon {
+  display: flex !important;
+  width: 30px;
+  height: 26px;
+}
+
+.shopping-cart-btn {
+  flex: 1 !important;
+}
 
   .st-button_add-to-cart .st-button__icon_cart {
     display: flex !important;
