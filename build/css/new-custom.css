@@ -726,6 +726,10 @@
   }
 }
 
+.st-button_add-to-cart {
+  flex: 1 !important;
+}
+
 .shopping-cart-btn .icon {
   display: flex !important;
   width: 30px;
