@@ -685,9 +685,9 @@
   }
 
   .product-card-v2 .product-item__icons {
-    top: auto;
-    right: 12px;
-    bottom: 12px;
+    top: 8px;
+    right: 8px;
+    bottom: auto;
   }
 
   .product-item_wide .product-item__image,
@@ -719,14 +719,14 @@
     display: flex !important;
   }
 
-  .product-card-v2 .st-button_add-to-cart {
+  .product-card-v2 .st-button_add-to-cart .st-button__text {
+    display: none !important;
+  }
+
+  .product-card-v2 .st-button_add-to-cart:has(.st-button__title:empty) {
     width: auto !important;
     min-width: 48px;
     padding: 0 12px;
     justify-content: center;
-  }
-
-  .product-card-v2 .st-button_add-to-cart .st-button__text {
-    display: none !important;
   }
 }
