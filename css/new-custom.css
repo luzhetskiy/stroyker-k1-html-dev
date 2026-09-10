@@ -451,3 +451,86 @@
     -webkit-line-clamp: 3;
   }
 }
+.product-slider:has(.product-item--article) .slider-constructor .slick-slide {
+  padding: 0 var(--grid-gutter-width);
+}
+
+.product-item.product-item--article.product-item--wide .product-item__head {
+  margin-bottom: 10px;
+}
+
+.product-item--article .product-item__image-inner img[src*="banner-content-1"] {
+  aspect-ratio: 1.84;
+  object-fit: cover;
+}
+
+.d-grid--blog-v2 .product-item--article.product-item--article-compact.product-item--wide {
+  width: 100%;
+  max-width: 100%;
+  justify-self: start;
+  border-top: none !important;
+  border-bottom: 1px solid var(--gray-color-200);
+  padding-bottom: 35px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+  .d-grid--blog-v2 .product-item--article.product-item--article-compact.product-item--wide {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.d-grid--blog-v2 .product-item--article.product-item--article-compact.product-item--wide + .product-item--article.product-item--article-compact.product-item--wide {
+  padding-top: 5px;
+  border-top: none !important;
+}
+
+.d-grid--blog-v2 ~ .d-flex.flex-md-row.border-top-1.border-color-gray-200 {
+  border-top: none !important;
+}
+
+.d-grid--blog-v2 .product-item.product-item--article.product-item--wide .product-item__image img {
+  object-fit: cover;
+}
+
+/* Override CDN custom-styles for article cards (news) */
+.product-item--article .product-item__head,
+.product-item--article-compact .product-item__head {
+    padding-bottom: 0 !important;
+}
+
+.product-item--article .product-item__name,
+.product-item--article-compact .product-item__name {
+    position: static !important;
+    bottom: auto !important;
+    background-color: transparent !important;
+    -webkit-line-clamp: initial !important;
+    -webkit-box-orient: initial !important;
+    padding-right: 0 !important;
+}
+
+@media (max-width: 767px) {
+    .catalog-right .view-sorting,
+    .view-sorting {
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .article-inner__content:not(.article-inner__content--wide) {
+        width: 100%;
+        padding: 40px 0;
+    }
+
+    .article-inner__content:not(.article-inner__content--wide) + .article-inner__side {
+        display: none;
+    }
+}
+
+/* Override CDN custom-styles: .slick-slider * { width: 100% } - возвращаем иконкам попапа нормальный размер */
+.slick-slider .product-info-icon,
+.slick-slider .product-info-icon__btn {
+    width: 26px !important;
+    height: 26px !important;
+}
