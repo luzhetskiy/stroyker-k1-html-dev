@@ -534,3 +534,55 @@
     width: 26px !important;
     height: 26px !important;
 }
+
+/* Статьи/новости: одинаковый размер картинок в широких карточках */
+.product-item--article.product-item--wide .product-item__image {
+    aspect-ratio: 210 / 140;
+}
+.product-item--article.product-item--wide .product-item__image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center;
+}
+
+/* Слайдеры на главной: одинаковые по высоте карточки (фото+текст) */
+.product-slider .product-item--article .product-item__name {
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    -moz-box-orient: vertical !important;
+    box-orient: vertical !important;
+    overflow: hidden !important;
+    white-space: normal !important;
+    min-height: 2.4em !important;
+    line-height: 1.2 !important;
+}
+.product-slider .product-item--article .product-item__text {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    min-height: 2.4em !important;
+    line-height: 1.2 !important;
+}
+.product-slider .product-item--article .product-item__content-top {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 !important;
+}
+.product-slider .product-item--article .product-item__link {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+.product-slider .product-item--article {
+    height: 100% !important;
+}
+
+/* Перебиваем CDN custom-styles: .product-item--wide .product-item__image { top: 32px } - картинка прижата к низу */
+.product-item--wide .product-item__image {
+  top: auto !important;
+}
