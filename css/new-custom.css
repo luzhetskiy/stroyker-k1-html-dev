@@ -586,3 +586,21 @@
 .product-item--wide .product-item__image {
   top: auto !important;
 }
+.article-inner {
+    align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+    .article-inner__content {
+        box-sizing: border-box;
+        flex: 1 1 auto;
+        min-width: 0;
+        width: auto;
+    }
+
+    .article-inner__side {
+        flex: 0 0 225px;
+        margin-left: 30px;
+        width: 225px;
+    }
+}
