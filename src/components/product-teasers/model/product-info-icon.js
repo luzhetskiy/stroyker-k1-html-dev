@@ -3,12 +3,31 @@ const CARD_GAP = 12;
 const MAX_POPUP_HEIGHT = 280;
 const MIN_POPUP_HEIGHT = 40;
 const CLOSE_DELAY_MS = 250;
+const INLINE_VARIANT_SELECTOR = '[data-product-info-variant="inline"]';
+const CARD_TITLE_SELECTOR = ".product-item__name, .product-card-v2__title";
 
 const findPopup = (icon) => icon.querySelector(".product-info-icon__popup");
 const findCard = (icon) =>
   icon.closest(".product-item, .product-card-v2");
 const clamp = (value, min, max) =>
   Math.min(Math.max(value, min), Math.max(min, max));
+
+const prepareInlineVariant = () => {
+  document
+    .querySelectorAll(`${INLINE_VARIANT_SELECTOR} .product-info-icon`)
+    .forEach((icon) => {
+      if (icon.dataset.inlineReady) return;
+
+      const popup = findPopup(icon);
+      const title = findCard(icon)?.querySelector(CARD_TITLE_SELECTOR);
+      if (!popup || !title) return;
+
+      popup.classList.add("product-info-icon__popup--inline");
+      title.insertAdjacentElement("afterend", popup);
+      icon.hidden = true;
+      icon.dataset.inlineReady = "true";
+    });
+};
 
 const positionPopup = (icon, popup) => {
   popup.style.display = "block";
@@ -58,6 +77,8 @@ const positionPopup = (icon, popup) => {
 };
 
 export const productInfoIconInit = () => {
+  prepareInlineVariant();
+
   let openIcon = null;
   let activePopup = null;
   let closeTimer = null;

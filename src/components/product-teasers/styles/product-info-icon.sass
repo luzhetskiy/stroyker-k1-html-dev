@@ -136,6 +136,32 @@
       border-radius: 50%
       background-color: var(--gray-color-700)
 
+.product-info-icon__popup--inline
+  display: block
+  position: static
+  width: 100%
+  max-height: none
+  overflow: hidden
+  margin: 10px 0 16px
+  padding: 0
+  background: transparent
+  border-radius: 0
+  box-shadow: none
+  pointer-events: none
+
+  .product-info-icon__list
+    gap: 6px
+
+    li
+      display: -webkit-box
+      overflow: hidden
+      -webkit-box-orient: vertical
+      -webkit-line-clamp: 2
+      line-height: 140%
+
+    li:nth-child(n + 5)
+      display: none
+
 
 @media (max-width: 767px)
   .product-item__link
@@ -149,6 +175,9 @@
 
   .product-info-icon__popup
     width: 180px
+
+  .product-info-icon__popup--inline
+    width: 100%
 
 .product-card-v2__buttons .st-button_add-to-cart
   width: auto !important
