@@ -162,6 +162,49 @@
     li:nth-child(n + 5)
       display: none
 
+[data-product-info-variant="inline"]
+  .product-item__name,
+  .product-card-v2__title
+    height: auto
+    min-height: 0
+    margin-bottom: 0
+
+  .product-item:has(.product-price-range) .product-item__name
+    height: auto
+
+  .product-item__parameters
+    display: none
+
+  .product-card-v2__content
+    justify-content: flex-start
+
+  .product-card-v2__content-bottom
+    margin-top: auto
+
+  .product-card-v2_hover
+    padding-bottom: 0
+
+    &:hover
+      .product-card-v2__title,
+      .product-card-v2__content
+        height: auto
+
+    .product-card-v2__content
+      position: relative
+      bottom: auto
+      height: auto
+      padding-bottom: 15px
+
+    .product-card-v2__pricing
+      position: static
+      width: 100%
+      flex-flow: column nowrap
+      align-items: flex-start
+
+    .product-card-v2__buttons
+      position: static
+      width: 100%
+
 
 @media (max-width: 767px)
   .product-item__link
