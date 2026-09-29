@@ -221,12 +221,15 @@
     margin: 14px 0 28px
 
     .product-info-icon__list
+      display: flex !important
       flex-flow: row wrap
       gap: 6px 8px
 
       li
         display: block
-        width: auto
+        flex: 0 0 auto
+        width: max-content !important
+        max-width: 100%
         padding: 4px 10px
         overflow: visible
         border: 1px solid var(--color-card-border, #d9d9de)
@@ -234,6 +237,7 @@
         color: var(--gray-color-700)
         font-size: 14px
         line-height: 1.2
+        white-space: nowrap
 
         &::before
           display: none
@@ -242,6 +246,9 @@
         display: block
 
     .product-info-icon__label
+      display: none
+
+    .product-info-icon__chip-unit
       display: none
 
 
