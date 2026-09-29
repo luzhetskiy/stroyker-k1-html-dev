@@ -528,6 +528,12 @@
     }
 }
 
+@media (max-width: 767px) {
+    .articles-block .item {
+        display: block;
+    }
+}
+
 /* Override CDN custom-styles: .slick-slider * { width: 100% } - возвращаем иконкам попапа нормальный размер */
 .slick-slider .product-info-icon,
 .slick-slider .product-info-icon__btn {
