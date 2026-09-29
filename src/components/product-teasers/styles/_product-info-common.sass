@@ -1,0 +1,25 @@
+.product-info-icon__list
+  display: flex
+  flex-direction: column
+  gap: 6px
+  margin: 0
+  padding: 0
+  list-style: none
+
+  li
+    position: relative
+    padding-left: 12px
+    color: var(--gray-color-800)
+    font-size: 13px
+    line-height: 140%
+    text-align: left
+
+    &::before
+      content: ""
+      position: absolute
+      top: 7px
+      left: 0
+      width: 4px
+      height: 4px
+      border-radius: 50%
+      background-color: var(--gray-color-700)

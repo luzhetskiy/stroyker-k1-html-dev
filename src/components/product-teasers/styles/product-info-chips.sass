@@ -1,0 +1,44 @@
+@use './product-info-list'
+
+[data-product-info-variant="chips"]
+  .product-item__head,
+  .product-item__status,
+  .product-item__parameters,
+  .product-item__flag-content,
+  .product-item__img-text,
+  .product-card-sell-badge,
+  .product-card-v2__labels,
+  .product-card-v2__text-rating_container
+    display: none
+
+  .product-info-icon__popup--inline
+    margin: 14px 0 28px
+
+    .product-info-icon__list
+      display: flex !important
+      flex-flow: row wrap
+      gap: 6px 8px
+
+      li
+        display: block
+        flex: 0 0 auto
+        width: max-content !important
+        max-width: 100%
+        padding: 4px 10px
+        overflow: visible
+        border: 1px solid var(--color-card-border, #d9d9de)
+        border-radius: 0
+        color: var(--gray-color-700)
+        font-size: 14px
+        line-height: 1.2
+        white-space: nowrap
+
+        &::before
+          display: none
+
+      li:nth-child(n + 5)
+        display: block
+
+    .product-info-icon__label,
+    .product-info-icon__chip-unit
+      display: none

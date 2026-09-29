@@ -1,0 +1,111 @@
+.product-item__icons
+  position: absolute
+  right: 12px
+  bottom: 12px
+  z-index: 5
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  gap: 8px
+
+  .st-button_add-to-favorite
+    position: static
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-shrink: 0
+    width: 26px
+    min-width: 26px
+    max-width: 26px
+    height: 26px
+    padding: 0
+    border: none
+    border-radius: 50%
+    background-color: rgba(255, 255, 255, 0.9)
+    color: inherit
+    cursor: pointer
+    font: inherit
+    line-height: 1
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+
+    &:hover, &.active
+      background-color: var(--accent-color-500)
+
+    &:hover .st-button__icon_favorite, &.active .st-button__icon_favorite
+      fill: var(--white-color)
+
+    .icon-container
+      display: inline-flex
+      align-items: center
+      justify-content: center
+
+    .st-button__icon_favorite
+      width: 16px
+      height: 16px
+
+    .st-button__text
+      display: none
+
+@media (max-width: 767px)
+  .product-item__link
+    align-items: center !important
+
+  .product-item_wide .product-item__link,
+  .product-item_max-width .product-item__link,
+  .product-item_max-heigth .product-item__link,
+  .product-item_new .product-item__link
+    align-items: stretch !important
+
+.product-card-v2__buttons .st-button_add-to-cart
+  width: auto !important
+  flex: 1 !important
+  min-width: 48px
+  padding: 0 12px
+  justify-content: center
+
+.product-item__icons
+  top: 8px
+  right: 8px
+  bottom: auto
+
+  .product-item_wide .product-item__icons,
+  .product-item_max-width .product-item__icons,
+  .product-item_max-heigth .product-item__icons
+    top: auto
+    right: 12px
+    bottom: 12px
+
+  .product-item_new .product-item__icons,
+  .product-card-v2 .product-item__icons
+    top: 8px
+    right: 8px
+    bottom: auto
+
+  .product-item_wide .product-item__image,
+  .product-item_max-width .product-item__image,
+  .product-item_max-heigth .product-item__image
+    width: 100%
+    max-width: 100%
+    min-width: 0
+
+  .product-item_wide .product-item__content-bottom,
+  .product-item_max-width .product-item__content-bottom,
+  .product-item_max-heigth .product-item__content-bottom
+    right: 0
+    width: 100%
+
+  .st-button_add-to-cart .st-button__icon_cart,
+  .st-button_add-to-cart .st-button__text
+    display: flex !important
+
+  .product-card-v2 .st-button_add-to-cart .st-button__text
+    display: none !important
+
+.st-button_add-to-cart,
+.shopping-cart-btn
+  flex: 1 !important
+
+.shopping-cart-btn .icon
+  display: flex !important
+  width: 30px
+  height: 26px
