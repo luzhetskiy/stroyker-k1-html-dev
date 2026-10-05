@@ -1,3 +1,11 @@
+ (function waitForJQuery() {
+    if (!window.jQuery) {
+        setTimeout(waitForJQuery, 50);
+        return;
+    }
+
+    const $ = window.jQuery;
+
 function ajax_send_crm_form(form, key, run_onsubmit = false) {
     var data = form.serializeArray();
     $.ajax({
@@ -114,3 +122,9 @@ GET_PARAMS.forEach((value, key) => {
         }
     });
 });
+
+window.ajax_send_crm_form = ajax_send_crm_form;
+window.feedback_form_ajax_submit = feedback_form_ajax_submit;
+window.callme_form_ajax_submit = callme_form_ajax_submit;
+window.formDoneAction = formDoneAction;
+})();
