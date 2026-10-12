@@ -1,0 +1,6 @@
+/* CDN custom styles stretch all Slick children; keep the popup trigger compact. */
+.slick-slider .product-info-icon,
+.slick-slider .product-info-icon__btn {
+    width: 26px !important;
+    height: 26px !important;
+}
