@@ -596,6 +596,18 @@
     align-items: flex-start;
 }
 
+.partner-item[data-partner-id] {
+    cursor: pointer;
+    scroll-margin-top: 20px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.partner-item[data-partner-id].partner-item_active {
+    border-color: var(--main-elements-color, #2363d1);
+    box-shadow: 0 0 0 2px rgba(35, 99, 209, 0.2);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--main-elements-color, #2363d1) 20%, transparent);
+}
+
 @media (min-width: 768px) {
     .article-inner__content {
         box-sizing: border-box;
