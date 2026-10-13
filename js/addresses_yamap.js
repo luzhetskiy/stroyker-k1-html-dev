@@ -47,6 +47,10 @@ function init() {
     addPoints(myMap, '.address-data')
     initPartnerCards(myMap)
     initPartnerDetailsButtons()
+
+    myMap.events.add('click', (event) => {
+        if (event.get('target') === myMap) closePartnerBalloons()
+    })
 }
 
 function addPoints(map, selector) {
@@ -100,8 +104,14 @@ function initPartnerDetailsButtons() {
         if (!partnerItem || !partnerItem.geoObjects.length) return
 
         const geoObject = partnerItem.geoObjects[0]
-        geoObject.balloon.close()
+        closePartnerBalloons()
         selectPartner(button.dataset.partnerDetails, geoObject, true)
+    })
+}
+
+function closePartnerBalloons() {
+    partnerMapItems.forEach((partnerItem) => {
+        partnerItem.geoObjects.forEach((geoObject) => geoObject.balloon.close())
     })
 }
 
