@@ -608,6 +608,59 @@
     box-shadow: 0 0 0 2px color-mix(in srgb, var(--main-elements-color, #2363d1) 20%, transparent);
 }
 
+.partner-map-card {
+    box-sizing: border-box;
+    width: 280px;
+    padding: 16px;
+    border: 2px solid var(--main-elements-color, #2363d1);
+    border-radius: 4px;
+    background: #fff;
+    color: #333;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.partner-map-card__title {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.partner-map-card__address {
+    margin-bottom: 10px;
+}
+
+.partner-map-card__phone,
+.partner-map-card__website {
+    display: block;
+    margin-top: 6px;
+    overflow-wrap: anywhere;
+    color: var(--main-elements-color, #2363d1);
+}
+
+.partner-map-card__details {
+    margin-top: 14px;
+    padding: 8px 16px;
+    border: 0;
+    border-radius: 2px;
+    background: var(--main-elements-color, #2363d1);
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+}
+
+.partner-map-card__details:hover {
+    background: var(--main-elements-hover-color, #1c52ac);
+}
+
+@media (max-width: 479px) {
+    .partner-map-card {
+        width: 230px;
+    }
+}
+
 @media (min-width: 768px) {
     .article-inner__content {
         box-sizing: border-box;

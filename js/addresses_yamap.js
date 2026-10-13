@@ -46,13 +46,16 @@ function init() {
 
     addPoints(myMap, '.address-data')
     initPartnerCards(myMap)
+    initPartnerDetailsButtons()
 }
 
 function addPoints(map, selector) {
     document.querySelectorAll(selector).forEach((element) => {
         const latitude = parseFloat(element.dataset.latitude)
         const longitude = parseFloat(element.dataset.longitude)
-        const balloonContent = element.dataset.balloonContent
+        const balloonContent = element.dataset.partnerId
+            ? createPartnerBalloonContent(element)
+            : element.dataset.balloonContent
         const hintContent = element.dataset.hintContent
         const iconPreset = element.dataset.iconPreset
         const glyphIconName = element.dataset.glyphIconName
@@ -82,10 +85,83 @@ function addPoints(map, selector) {
             partnerItem.geoObjects.push(geoObject)
 
             geoObject.events.add('click', () => {
-                selectPartner(partnerId, geoObject, true)
+                selectPartner(partnerId, geoObject, false)
             })
         }
     })
+}
+
+function initPartnerDetailsButtons() {
+    document.addEventListener('click', (event) => {
+        const button = event.target.closest('[data-partner-details]')
+        if (!button) return
+
+        const partnerItem = partnerMapItems.get(button.dataset.partnerDetails)
+        if (!partnerItem || !partnerItem.geoObjects.length) return
+
+        const geoObject = partnerItem.geoObjects[0]
+        geoObject.balloon.close()
+        selectPartner(button.dataset.partnerDetails, geoObject, true)
+    })
+}
+
+function createPartnerBalloonContent(element) {
+    const content = document.createElement('div')
+    content.className = 'partner-map-card'
+
+    const title = document.createElement('div')
+    title.className = 'partner-map-card__title'
+    title.textContent = element.dataset.partnerName
+    content.appendChild(title)
+
+    const address = document.createElement('div')
+    address.className = 'partner-map-card__address'
+    address.textContent = element.dataset.partnerAddress
+    content.appendChild(address)
+
+    if (element.dataset.partnerPhone) {
+        content.appendChild(createPartnerBalloonLink(
+            `tel:${element.dataset.partnerPhone}`,
+            formatPartnerPhone(element.dataset.partnerPhone),
+            'partner-map-card__phone'
+        ))
+    }
+
+    if (element.dataset.partnerWebsite) {
+        const website = createPartnerBalloonLink(
+            element.dataset.partnerWebsite,
+            element.dataset.partnerWebsiteName || element.dataset.partnerWebsite,
+            'partner-map-card__website'
+        )
+        website.target = '_blank'
+        website.rel = 'noopener noreferrer nofollow'
+        content.appendChild(website)
+    }
+
+    const detailsButton = document.createElement('button')
+    detailsButton.type = 'button'
+    detailsButton.className = 'partner-map-card__details'
+    detailsButton.dataset.partnerDetails = element.dataset.partnerId
+    detailsButton.textContent = 'Подробнее'
+    content.appendChild(detailsButton)
+
+    return content.outerHTML
+}
+
+function createPartnerBalloonLink(href, text, className) {
+    const link = document.createElement('a')
+    link.className = className
+    link.href = href
+    link.textContent = text
+    return link
+}
+
+function formatPartnerPhone(phone) {
+    const digits = phone.replace(/\D/g, '')
+    if (digits.length !== 11) return phone
+
+    const countryCode = digits[0] === '8' ? '8' : '+7'
+    return `${countryCode} (${digits.slice(1, 4)}) ${digits.slice(4, 7)}-${digits.slice(7, 9)}-${digits.slice(9)}`
 }
 
 function initPartnerCards(map) {
