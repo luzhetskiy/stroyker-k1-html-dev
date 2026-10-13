@@ -46,7 +46,6 @@ function init() {
 
     addPoints(myMap, '.address-data')
     initPartnerCards(myMap)
-    initPartnerDetailsButtons()
 
     myMap.events.add('click', (event) => {
         if (event.get('target') === myMap) closePartnerBalloons()
@@ -95,20 +94,6 @@ function addPoints(map, selector) {
     })
 }
 
-function initPartnerDetailsButtons() {
-    document.addEventListener('click', (event) => {
-        const button = event.target.closest('[data-partner-details]')
-        if (!button) return
-
-        const partnerItem = partnerMapItems.get(button.dataset.partnerDetails)
-        if (!partnerItem || !partnerItem.geoObjects.length) return
-
-        const geoObject = partnerItem.geoObjects[0]
-        closePartnerBalloons()
-        selectPartner(button.dataset.partnerDetails, geoObject, true)
-    })
-}
-
 function closePartnerBalloons() {
     partnerMapItems.forEach((partnerItem) => {
         partnerItem.geoObjects.forEach((geoObject) => geoObject.balloon.close())
@@ -148,12 +133,13 @@ function createPartnerBalloonContent(element) {
         content.appendChild(website)
     }
 
-    const detailsButton = document.createElement('button')
-    detailsButton.type = 'button'
-    detailsButton.className = 'partner-map-card__details'
-    detailsButton.dataset.partnerDetails = element.dataset.partnerId
-    detailsButton.textContent = 'Подробнее'
-    content.appendChild(detailsButton)
+    if (element.dataset.partnerPageUrl) {
+        content.appendChild(createPartnerBalloonLink(
+            element.dataset.partnerPageUrl,
+            'Подробнее',
+            'partner-map-card__details'
+        ))
+    }
 
     return content.outerHTML
 }

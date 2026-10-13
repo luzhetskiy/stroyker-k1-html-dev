@@ -640,6 +640,7 @@
 }
 
 .partner-map-card__details {
+    display: inline-block;
     margin-top: 14px;
     padding: 8px 16px;
     border: 0;
@@ -649,10 +650,13 @@
     cursor: pointer;
     font: inherit;
     font-weight: 600;
+    text-decoration: none;
 }
 
 .partner-map-card__details:hover {
     background: var(--main-elements-hover-color, #1c52ac);
+    color: #fff;
+    text-decoration: none;
 }
 
 @media (max-width: 479px) {
