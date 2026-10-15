@@ -53,8 +53,6 @@ function init() {
 }
 
 function addPoints(map, selector) {
-    const geoObjects = []
-
     document.querySelectorAll(selector).forEach((element) => {
         const latitude = parseFloat(element.dataset.latitude)
         const longitude = parseFloat(element.dataset.longitude)
@@ -83,7 +81,7 @@ function addPoints(map, selector) {
             draggable: false
         })
 
-        geoObjects.push(geoObject)
+        map.geoObjects.add(geoObject)
 
         if (partnerId) {
             const partnerItem = getPartnerMapItem(partnerId)
@@ -94,16 +92,6 @@ function addPoints(map, selector) {
             })
         }
     })
-
-    const clusterer = new ymaps.Clusterer({
-        groupByCoordinates: false,
-        clusterDisableClickZoom: false,
-        clusterOpenBalloonOnClick: false,
-        gridSize: 64
-    })
-
-    clusterer.add(geoObjects)
-    map.geoObjects.add(clusterer)
 }
 
 function closePartnerBalloons() {
@@ -188,9 +176,8 @@ function initPartnerCards(map) {
 
             const coordinates = geoObject.geometry.getCoordinates()
             const zoom = Math.max(map.getZoom(), 15)
-            map.setCenter(coordinates, zoom, { duration: 300 }).then(() => {
-                geoObject.balloon.open()
-            })
+            map.setCenter(coordinates, zoom, { duration: 300 })
+            geoObject.balloon.open()
             document.getElementById(YAMAP_CONTAINER_ID).scrollIntoView({ behavior: 'smooth', block: 'center' })
         })
     })
