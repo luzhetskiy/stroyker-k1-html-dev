@@ -74,7 +74,8 @@
 
       fields.each(function () {
         const binding = Number($(this).attr("binded")) || 1;
-        $(this).toggle(visibility[binding] === true);
+        const visible = visibility[binding] === true;
+        $(this).toggle(visible).find(":input").prop("disabled", !visible);
       });
     }
 
