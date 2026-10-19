@@ -4,8 +4,13 @@
     var delivery_payment_mapping = delivery_payment_mapping_node
       ? JSON.parse(delivery_payment_mapping_node.textContent)
       : null;
+    var delivery_binding_mapping_node = document.getElementById("delivery_binding_mapping");
+    var delivery_binding_mapping = delivery_binding_mapping_node
+      ? JSON.parse(delivery_binding_mapping_node.textContent)
+      : {};
     var payment_block = $("#id_payment_variant").parent();
     var cart_extra_fields = $(".cart-extra-field");
+    var pickup_section = $("#pickup-section");
 
     function checkedValue(selector) {
       var node = $(selector).filter(":checked").first();
@@ -26,42 +31,60 @@
     }
 
     function updateExtraFields(currentDelivery, currentPayment) {
-      const PAYMENT_ALIASES = {
-        "выписать счёт": "через счет",
-        картой: "картой при получении",
-        наличными: "наличными при получении",
-        "он-лайн": "онлайн",
-        кредит: "в кредит"
+      const normalizedDelivery = String(currentDelivery || "")
+        .trim()
+        .toLowerCase()
+        .replace(/ё/g, "е")
+        .replace(/\s+/g, " ");
+      const fallbackDeliveryBindings = {
+        самовывоз: 2,
+        "по адресу": 3,
+        "доставка по адресу": 3,
+        "до тк": 4,
+        "доставка до тк": 4
       };
-      const DELIVERY_ALIASES = {
-        "по адресу": "доставка по адресу",
-        "до пункта выдачи": "доставка до пвз"
+      const deliveryBinding =
+        Number(delivery_binding_mapping[currentDelivery]) ||
+        fallbackDeliveryBindings[normalizedDelivery] ||
+        null;
+      const paymentValue = Number.parseInt(currentPayment, 10);
+      const normalizedPayment = String(currentPayment || "")
+        .trim()
+        .toLowerCase()
+        .replace(/ё/g, "е")
+        .replace(/\s+/g, " ");
+      const fallbackPaymentBindings = {
+        "выписать счет": 5,
+        "через счет": 5,
+        картой: 6,
+        "картой при получении": 6,
+        наличными: 7,
+        "наличными при получении": 7,
+        "он-лайн": 8,
+        онлайн: 8,
+        кредит: 9,
+        "в кредит": 9,
+        "через yookassa": 10
       };
-
-      const normalize = value =>
-        String(value ?? "")
-          .trim()
-          .toLowerCase()
-          .replace(/ё/g, "е")
-          .replace(/\s+/g, " ");
-
-      let delivery = normalize(currentDelivery);
-      let payment = normalize(currentPayment);
-      delivery = DELIVERY_ALIASES[delivery] || delivery;
-      payment = PAYMENT_ALIASES[payment] || payment;
+      const paymentBinding = Number.isNaN(paymentValue)
+        ? fallbackPaymentBindings[normalizedPayment] || null
+        : paymentValue + 5;
 
       const visibility = {
         1: true,
-        2: delivery === "самовывоз",
-        3: delivery === "доставка по адресу",
-        4: delivery === "доставка до тк",
-        5: payment === "через счет",
-        6: payment === "картой при получении",
-        7: payment === "наличными при получении",
-        8: payment === "онлайн",
-        9: payment === "в кредит",
-        10: payment === "через yookassa"
+        2: deliveryBinding === 2,
+        3: deliveryBinding === 3,
+        4: deliveryBinding === 4,
+        5: paymentBinding === 5,
+        6: paymentBinding === 6,
+        7: paymentBinding === 7,
+        8: paymentBinding === 8,
+        9: paymentBinding === 9,
+        10: paymentBinding === 10
       };
+
+      const isPickup = deliveryBinding === 2;
+      pickup_section.toggle(isPickup).find(":input").prop("disabled", !isPickup);
 
       // Показываем общий контейнер, если раньше он был скрыт.
       cart_extra_fields.show();
