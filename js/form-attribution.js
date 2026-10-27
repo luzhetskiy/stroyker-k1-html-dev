@@ -2,6 +2,7 @@
     "use strict";
 
     var clientID = "";
+    var firstTouch;
 
     function getParams() {
         var params = {};
@@ -19,8 +20,7 @@
         return new RegExp("(^|\\.)" + domain + "\\.[a-z]{2,}(\\.[a-z]{2})?$", "i").test(hostname);
     }
 
-    function detectSource() {
-        var params = getParams();
+    function detectSource(params) {
         var keys = Object.keys(params);
 
         if (params.utm_source || params.utm_medium) return "";
@@ -53,17 +53,40 @@
         return "Переход с сайта";
     }
 
+    function getAttribution() {
+        if (firstTouch === undefined) {
+            var dataElement = document.getElementById("form-attribution-data");
+            try {
+                firstTouch = dataElement ? JSON.parse(dataElement.textContent) : null;
+            } catch (error) {
+                firstTouch = null;
+            }
+        }
+
+        if (firstTouch && typeof firstTouch === "object") return firstTouch;
+
+        var params = getParams();
+        return {
+            utm_campaign: params.utm_campaign || "",
+            utm_content: params.utm_content || "",
+            utm_medium: params.utm_medium || "",
+            utm_source: params.utm_source || "",
+            utm_term: params.utm_term || "",
+            source: detectSource(params),
+        };
+    }
+
     function fillForm(form) {
         var sourceInput = form.querySelector('input[name="source"]');
         var clientIDInput = form.querySelector('input[name="ym_client_id"]');
         if (!sourceInput || !clientIDInput) return;
 
-        var params = getParams();
+        var attribution = getAttribution();
         ["utm_campaign", "utm_content", "utm_medium", "utm_source", "utm_term"].forEach(function (name) {
             var input = form.querySelector('input[name="' + name + '"]');
-            if (input && params[name]) input.value = params[name].slice(0, 128);
+            if (input) input.value = String(attribution[name] || "").slice(0, 128);
         });
-        sourceInput.value = detectSource();
+        sourceInput.value = String(attribution.source || "").slice(0, 128);
         clientIDInput.value = clientID;
     }
 

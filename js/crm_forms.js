@@ -95,34 +95,6 @@ $("form.git-for-phone-form").on("submit", function (event) {
 // https://redmine.fancymedia.ru/issues/12839
 $('input[name="page_url"]').val(window.location.href.split('?')[0]);
 
-const GET_PARAMS = new URLSearchParams(document.location.search);
-GET_PARAMS.forEach((value, key) => {
-    // Находим все input с заданным name
-    const inputs = $('input[name="' + key + '"]');
-
-    inputs.each(function (index, element) {
-        const $input = $(element);
-        const type = $input.attr('type');
-
-        if (type === 'checkbox' || type === 'radio') {
-            // Для чекбоксов и радиокнопок
-            if ($input.val() === value) {
-                $input.prop('checked', true); // Устанавливаем состояние checked
-            } else {
-                $input.prop('checked', false); // Снимаем состояние checked
-            }
-        } else {
-            if (index === 0) {
-                // Первый input получает значение
-                $input.val(value);
-            } else {
-                // Остальным значения добавляются через атрибут data
-                $input.data('value', value);
-            }
-        }
-    });
-});
-
 window.ajax_send_crm_form = ajax_send_crm_form;
 window.feedback_form_ajax_submit = feedback_form_ajax_submit;
 window.callme_form_ajax_submit = callme_form_ajax_submit;
