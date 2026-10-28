@@ -95,6 +95,29 @@ $("form.git-for-phone-form").on("submit", function (event) {
 // https://redmine.fancymedia.ru/issues/12839
 $('input[name="page_url"]').val(window.location.href.split('?')[0]);
 
+const ATTRIBUTION_FIELDS = [
+    'utm_campaign', 'utm_content', 'utm_medium', 'utm_source', 'utm_term',
+    'source', 'ym_client_id',
+];
+const GET_PARAMS = new URLSearchParams(document.location.search);
+GET_PARAMS.forEach((value, key) => {
+    if (ATTRIBUTION_FIELDS.includes(key.toLowerCase())) return;
+
+    const inputs = $('input[name="' + key + '"]');
+    inputs.each(function (index, element) {
+        const $input = $(element);
+        const type = $input.attr('type');
+
+        if (type === 'checkbox' || type === 'radio') {
+            $input.prop('checked', $input.val() === value);
+        } else if (index === 0) {
+            $input.val(value);
+        } else {
+            $input.data('value', value);
+        }
+    });
+});
+
 window.ajax_send_crm_form = ajax_send_crm_form;
 window.feedback_form_ajax_submit = feedback_form_ajax_submit;
 window.callme_form_ajax_submit = callme_form_ajax_submit;
