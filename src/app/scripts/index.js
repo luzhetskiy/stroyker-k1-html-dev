@@ -1645,23 +1645,49 @@ $(() => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Проверяем, был ли уже показан модальный
-  if (!localStorage.getItem("cookieModalShown")) {
-    var cookieModal = document.getElementById("cookie-modal");
+  var cookieModal = document.getElementById("cookie-modal");
 
-    // Показываем модальное окно
-    cookieModal.style.display = "flex";
-
-    // Находим кнопку внутри модального окна
-    var button = cookieModal.querySelector("button");
-
-    // Обрабатываем клик по кнопке
-    button.addEventListener("click", function () {
-      // Скрываем модальное окно
-      cookieModal.style.display = "none";
-
-      // Запоминаем, что модальное было показано
-      localStorage.setItem("cookieModalShown", "true");
-    });
+  if (!cookieModal) {
+    return;
   }
+
+  var cookieConsent;
+
+  try {
+    cookieConsent = localStorage.getItem("cookieModalShown");
+  } catch (error) {
+    cookieConsent = null;
+  }
+
+  if (cookieConsent === "true" || cookieConsent === "declined") {
+    return;
+  }
+
+  cookieModal.hidden = false;
+  cookieModal.style.display = "flex";
+
+  cookieModal.addEventListener("click", function (event) {
+    var button = event.target.closest("[data-cookie-action], button");
+
+    if (!button || !cookieModal.contains(button)) {
+      return;
+    }
+
+    var value = button.dataset.cookieAction === "decline" ? "declined" : "true";
+
+    cookieModal.hidden = true;
+    cookieModal.style.display = "none";
+
+    try {
+      localStorage.setItem("cookieModalShown", value);
+    } catch (error) {
+      // Consent still applies for the current page when storage is unavailable.
+    }
+
+    document.dispatchEvent(
+      new CustomEvent("cookieConsentChanged", {
+        detail: { value: value },
+      }),
+    );
+  });
 });
