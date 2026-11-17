@@ -61,8 +61,8 @@ function formDoneAction(form, response, key) {
             const obj = form.serializeArray().reduce((acc, item) => ((acc[item.name] = item.value), acc), {});
             roistat.event.send(key, obj);
         }
-        // дальше очистка полей, без понятия зачем если и так из dom удаляется модалка
-        form.find("input, textarea").val("");
+        // Keep the CSRF token for a possible repeated native form submission.
+        form.find("input, textarea").not('[name="csrfmiddlewaretoken"]').val("");
         $.fancybox.close();
         msg = response.msg ? response.msg : "<h3>Ваше сообщение отправлено!</h3>";
         $.fancybox.open(msg);
