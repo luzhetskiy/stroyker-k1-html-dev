@@ -6,7 +6,7 @@ const vm = require("node:vm");
 
 const script = fs.readFileSync(path.join(__dirname, "form-attribution.js"), "utf8");
 
-function detectSource(search, referrer = "") {
+function runAttribution(search, referrer = "", clientID = "") {
     const values = {};
     const form = {
         querySelector(selector) {
@@ -19,11 +19,17 @@ function detectSource(search, referrer = "") {
     const clientIDInput = {form};
     const context = {
         URL,
+        URLS: {yandexMetrikaCounterId: 123},
         URLSearchParams,
         window: {
             location: {search, hostname: "example.com"},
             setInterval() { return 1; },
             clearInterval() {},
+            ym(counterID, method, callback) {
+                assert.equal(counterID, 123);
+                assert.equal(method, "getClientID");
+                callback(clientID);
+            },
         },
         document: {
             referrer,
@@ -34,7 +40,11 @@ function detectSource(search, referrer = "") {
     };
 
     vm.runInNewContext(script, context);
-    return values.source.value;
+    return values;
+}
+
+function detectSource(search, referrer = "") {
+    return runAttribution(search, referrer).source.value;
 }
 
 test("explicit Bitrix source IDs match backend catalog", () => {
@@ -97,6 +107,10 @@ test("click IDs override generic UTM heuristics", () => {
         detectSource("?utm_source=bing&utm_medium=cpc"),
         "Реклама: прочая платная",
     );
+    assert.equal(
+        detectSource("?utm_source=web&gclid=click"),
+        "Реклама: прочая платная",
+    );
 });
 
 test("RSYA requires a complete UTM token", () => {
@@ -123,4 +137,14 @@ test("non-search Google and Yandex properties are not organic search", () => {
         detectSource("", "https://www.google.com/search?q=test"),
         "SEO: поиск Google",
     );
+});
+
+test("prototype properties are not accepted as explicit source aliases", () => {
+    assert.equal(detectSource("?utm_source=toString"), "Сайт: прямое обращение");
+});
+
+test("Yandex Metrika ClientID is written to the hidden form field", () => {
+    const values = runAttribution("", "", "1234567890");
+
+    assert.equal(values.ym_client_id.value, "1234567890");
 });

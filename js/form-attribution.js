@@ -145,7 +145,6 @@
         var utmSource = normalize(params.utm_source);
         var utmMedium = normalize(params.utm_medium);
 
-        if (EXPLICIT_SOURCE_ALIASES[utmSource]) return EXPLICIT_SOURCE_ALIASES[utmSource];
         if (params.gclid) return SOURCE.otherPaid;
         if (params.srsltid) return SOURCE.googleOrganic;
         if (params.yclid || keys.some(function (key) { return key.indexOf("yclid_") === 0; })) {
@@ -154,6 +153,9 @@
         }
         if (params.fbclid) {
             return PAID_MEDIUMS.includes(utmMedium) ? SOURCE.otherPaid : SOURCE.otherSocial;
+        }
+        if (Object.prototype.hasOwnProperty.call(EXPLICIT_SOURCE_ALIASES, utmSource)) {
+            return EXPLICIT_SOURCE_ALIASES[utmSource];
         }
         if (["vk", "vkontakte", "вконтакте"].includes(utmSource)) {
             if (MAILING_MEDIUMS.includes(utmMedium)) return SOURCE.vkCampaign;
