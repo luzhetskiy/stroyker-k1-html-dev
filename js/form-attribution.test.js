@@ -97,7 +97,7 @@ test("explicit Bitrix source IDs match backend catalog", () => {
 test("click IDs override generic UTM heuristics", () => {
     assert.equal(
         detectSource("?utm_source=google&gclid=click"),
-        "Реклама: прочая платная",
+        "Реклама: Google Ads",
     );
     assert.equal(
         detectSource("?utm_source=yandex&yclid=click"),
@@ -109,7 +109,40 @@ test("click IDs override generic UTM heuristics", () => {
     );
     assert.equal(
         detectSource("?utm_source=web&gclid=click"),
+        "Реклама: Google Ads",
+    );
+});
+
+test("RSYA alias refines a yclid click", () => {
+    assert.equal(
+        detectSource("?yclid=click&utm_source=26"),
+        "Реклама: Яндекс Директ — РСЯ",
+    );
+    assert.equal(
+        detectSource("?yclid=click&utm_source=rsya"),
+        "Реклама: Яндекс Директ — РСЯ",
+    );
+});
+
+test("generic alias does not mask a paid medium", () => {
+    assert.equal(
+        detectSource("?utm_source=other&utm_medium=cpc"),
         "Реклама: прочая платная",
+    );
+    assert.equal(
+        detectSource("?utm_source=web&utm_medium=cpc"),
+        "Реклама: прочая платная",
+    );
+});
+
+test("search subdomains and regional Bing are organic", () => {
+    assert.equal(
+        detectSource("", "https://search.yandex.ru/search/?text=test"),
+        "SEO: поиск Яндекс",
+    );
+    assert.equal(
+        detectSource("", "https://cn.bing.com/search?q=test"),
+        "SEO: поиск Bing",
     );
 });
 

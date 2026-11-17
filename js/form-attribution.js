@@ -8,6 +8,7 @@
         yandexSearch: "Реклама: Яндекс Директ — Поиск",
         yandexNetwork: "Реклама: Яндекс Директ — РСЯ",
         otherPaid: "Реклама: прочая платная",
+        googleAds: "Реклама: Google Ads",
         yandexOrganic: "SEO: поиск Яндекс",
         googleOrganic: "SEO: поиск Google",
         bingOrganic: "SEO: поиск Bing",
@@ -137,6 +138,9 @@
 
     function isSearchHost(hostname, domain) {
         if (hostname.indexOf("www.") === 0) hostname = hostname.slice(4);
+        // A "search." subdomain (e.g. search.yandex.ru) is a search host; other
+        // subdomains (market.yandex.ru, mail.google.com) are not.
+        if (hostname.indexOf("search.") === 0) hostname = hostname.slice(7);
         return hostname.indexOf(domain + ".") === 0 && searchDomainMatches(hostname, domain);
     }
 
@@ -145,14 +149,21 @@
         var utmSource = normalize(params.utm_source);
         var utmMedium = normalize(params.utm_medium);
 
-        if (params.gclid) return SOURCE.otherPaid;
+        if (params.gclid) return SOURCE.googleAds;
         if (params.srsltid) return SOURCE.googleOrganic;
         if (params.yclid || keys.some(function (key) { return key.indexOf("yclid_") === 0; })) {
-            return hasUtmMarker(params, ["network", "rsya", "rsy", "рся"])
+            // An explicit RSYA alias (utm_source=26/rsya) refines the click as a
+            // network click; hasUtmMarker alone ignores utm_source.
+            return (EXPLICIT_SOURCE_ALIASES[utmSource] === SOURCE.yandexNetwork
+                || hasUtmMarker(params, ["network", "rsya", "rsy", "рся"]))
                 ? SOURCE.yandexNetwork : SOURCE.yandexSearch;
         }
         if (params.fbclid) {
             return PAID_MEDIUMS.includes(utmMedium) ? SOURCE.otherPaid : SOURCE.otherSocial;
+        }
+        // A generic alias (web/other) must not mask a paid medium.
+        if (PAID_MEDIUMS.includes(utmMedium) && ["web", "other"].includes(utmSource)) {
+            return SOURCE.otherPaid;
         }
         if (Object.prototype.hasOwnProperty.call(EXPLICIT_SOURCE_ALIASES, utmSource)) {
             return EXPLICIT_SOURCE_ALIASES[utmSource];
@@ -169,7 +180,7 @@
             return SOURCE.yandexOrganic;
         }
         if (["google", "google_ads", "adwords"].includes(utmSource)) {
-            return PAID_MEDIUMS.includes(utmMedium) ? SOURCE.otherPaid : SOURCE.googleOrganic;
+            return PAID_MEDIUMS.includes(utmMedium) ? SOURCE.googleAds : SOURCE.googleOrganic;
         }
         if (utmSource === "bing") {
             return PAID_MEDIUMS.includes(utmMedium) ? SOURCE.otherPaid : SOURCE.bingOrganic;
@@ -205,7 +216,7 @@
         if (domainMatches(hostname, "e.mail.ru")) return SOURCE.emailCampaign;
         if (isSearchHost(hostname, "google")) return SOURCE.googleOrganic;
         if (isSearchHost(hostname, "yandex") || ["ya.ru", "www.ya.ru"].includes(hostname)) return SOURCE.yandexOrganic;
-        if (["bing.com", "www.bing.com"].includes(hostname)) return SOURCE.bingOrganic;
+        if (domainMatches(hostname, "bing.com")) return SOURCE.bingOrganic;
         if (domainMatches(hostname, "go.mail.ru") || domainMatches(hostname, "mail.ru")) return SOURCE.otherSearch;
         if (domainMatches(hostname, "duckduckgo.com")) return SOURCE.otherSearch;
         if (domainMatches(hostname, "rambler.ru") || domainMatches(hostname, "search.marsu.ru")) return SOURCE.otherSearch;
