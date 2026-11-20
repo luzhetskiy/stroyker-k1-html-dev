@@ -1662,6 +1662,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Запоминаем, что модальное было показано
       localStorage.setItem("cookieModalShown", "true");
+
+      document.dispatchEvent(
+        new CustomEvent("cookieConsentChanged", {
+          detail: { value: "true" },
+        }),
+      );
     });
   }
 });
