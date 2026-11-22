@@ -633,3 +633,16 @@
         width: 225px !important;
     }
 }
+
+@media (min-width: 768px) {
+    .article-inner .blog-content {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .article-inner .blog-aside {
+        flex: 0 0 220px;
+        width: 220px;
+        margin-left: auto;
+    }
+}
