@@ -646,3 +646,18 @@
         margin-left: auto;
     }
 }
+
+/* Blog pages already contain their own sidebar inside the text-page. */
+.article-inner:has(> .article-inner__content > .text-page > .blog-container)
+    > .article-inner__side:has(.side-menu > ul):not(:has(ul > *, a, img, form, .product-item)) {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    .article-inner > .article-inner__content:has(> .text-page > .blog-container) {
+        padding: 0;
+        min-width: 0;
+        flex: 1 1 0;
+        width: auto !important;
+    }
+}
