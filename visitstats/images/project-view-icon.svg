@@ -1,0 +1,9 @@
+<svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#project-view-clip)">
+<mask id="project-view-outline" fill="white"><path d="M21.909 8C21.909 8 17.8181 0.5 10.9999 0.5C4.18173 0.5 0.0908203 8 0.0908203 8C0.0908203 8 4.18173 15.5 10.9999 15.5C17.8181 15.5 21.909 8 21.909 8Z"/></mask>
+<path d="M21.909 8C21.909 8 17.8181 0.5 10.9999 0.5C4.18173 0.5 0.0908203 8 0.0908203 8C0.0908203 8 4.18173 15.5 10.9999 15.5C17.8181 15.5 21.909 8 21.909 8Z" stroke-width="2" stroke="white" mask="url(#project-view-outline)"/>
+<mask id="project-view-pupil" fill="white"><path d="M6.22754 8C6.22754 5.36409 8.36418 3.22727 11.0003 3.22727C13.6363 3.22727 15.773 5.36409 15.773 8C15.773 10.6359 13.6363 12.7727 11.0003 12.7727C8.36418 12.7727 6.22754 10.6359 6.22754 8Z"/></mask>
+<path d="M6.22754 8C6.22754 5.36409 8.36418 3.22727 11.0003 3.22727C13.6363 3.22727 15.773 5.36409 15.773 8C15.773 10.6359 13.6363 12.7727 11.0003 12.7727C8.36418 12.7727 6.22754 10.6359 6.22754 8Z" stroke-width="2" stroke="white" mask="url(#project-view-pupil)"/>
+</g>
+<defs><clipPath id="project-view-clip"><rect width="22" height="16" fill="white"/></clipPath></defs>
+</svg>
