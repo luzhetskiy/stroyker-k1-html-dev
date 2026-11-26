@@ -661,3 +661,29 @@
         width: auto !important;
     }
 }
+
+/* Keep text-only search results aligned and long titles inside the dropdown. */
+.s-item-link .s-item-img {
+    flex: 0 0 50px;
+}
+
+.s-item-link .s-item-info {
+    flex: 1 1 0;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.s-item-link .search-match {
+    background: transparent;
+    color: inherit;
+    font-weight: 700;
+    padding: 0;
+}
+
+.s-item-link:hover .s-item-title,
+.s-item-link:focus-visible .s-item-title,
+.__header #search-result .s-item-link:hover .s-item-title,
+.__header #search-result .s-item-link:focus-visible .s-item-title {
+    color: var(--main-elements-color, var(--accent-color-400, #1c52ac));
+    text-decoration: underline;
+}
